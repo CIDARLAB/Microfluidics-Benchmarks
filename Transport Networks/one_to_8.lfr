@@ -1,0 +1,12 @@
+#This example has 1 to 8 mux
+module one_to_8(finput in, foutput out[0:7], control c1[0:2], c2[0:2])
+
+    distribute@(c1, c2)
+    begin
+        out[0:7] = in * ((!c1[0] && c2[0]) || ((!c1[1] && c2[1]) || (!c1[2] && c2[2])); 
+    end
+
+endmodule
+
+
+

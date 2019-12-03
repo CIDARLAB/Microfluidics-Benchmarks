@@ -1,0 +1,19 @@
+module ligation(finput ligase_buffer, vector_dna, insert_dna, 
+    nfwater, ligase, foutput result)
+
+    fluid temp1, temp2, temp3, temp4;
+    storage temp5;
+
+    # This should probably generate a 5 input mixing tree    
+    assign temp1 = ligase_buffer % <somevolume1>;
+    assign temp2 = vector_dna % <somevolume2> + temp1;
+    assign temp3 = insert_dna % <somevolume3> + temp2;
+    assign temp4 = nfwater % <somevolume4> + temp3;
+    
+    #MAP '&' to incubate
+    assign temp5 = &(temp4 + ligase % <somevolume5> );
+
+    assign result = temp5;
+
+endmodule
+

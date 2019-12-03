@@ -1,0 +1,24 @@
+module cell_lysis(lysing_buffer, suspended_cells, neutralization_buffer, elution_buffer, result)
+
+    finput genes, pcr_mastermix, tx_tl_sol, ethanol;
+    foutput result;
+
+    fluid/wire lysed_cells, neutralized_solution;
+    storage captured_cells;
+
+    #number/signal/time a, b, n;
+
+    assign lysed_cells = lysing_buffer + suspended_cells;
+    assign neutralized_solution = lysed_cells + neutralization_buffer;
+
+    #MAP Magnetic Separation to operator here
+    #This should be a storing statement
+    assign captured_cells = %eluted_solution;
+
+    assign result = captured_cells + elution_buffer;
+
+
+endmodule
+
+
+

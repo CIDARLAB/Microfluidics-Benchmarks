@@ -1,0 +1,16 @@
+module fluorescence(finput toehold, trigger_rna, mastermix)
+
+    fluid toehold_vol, trigger_rna_vol, 
+    number volume1, volume2;
+    storage fchamber;
+
+    # % does sampling via metering
+    assign toehold_vol = toehold % volume1;
+    assign trigger_toehold_mix = trigger_rna % volume2 + toehold_vol;
+    assign fchamber = trigger_toehold_mix;
+
+    assign fchamber = mastermix;
+
+endmodule
+
+

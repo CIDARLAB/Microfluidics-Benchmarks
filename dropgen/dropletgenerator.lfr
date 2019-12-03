@@ -1,0 +1,14 @@
+module dropletgenerator(waterin, oilin1, oilin2, dropletout);
+
+    finput oilin1, oilin2, waterin;
+    foutput dropletout;
+
+    # MAP 'DROPLET GENERATOR' &
+    # DROPLET_RATE = 30 Hz & DROPLET_SIZE = 85 um
+    assign dropletout = oilin1 & oilin2 & waterin ;
+
+endmodule
+
+
+
+

@@ -1,0 +1,32 @@
+module dropletx(analyte, reagent1, reagent2)
+
+    finput analyte, reagent1, reagent2;
+
+    fluid/wire/storage temp1, temp2, incubated_samples;
+    
+    number/signal/time droplet_volume;
+    
+    assign analyte_measured = analyte % droplet_volume
+    assign temp1 = analyte_measured + reagent1;
+    assign temp2 = temp1 + reagent2;
+
+    #MAP Incubation to '&'
+    assign incubated_samples = &temp2;
+
+    # Well how do we map detection ?
+    #MAP detection to '&'
+    assign measured_sample = &incubated_samples;
+
+    # Well I'm trying map '&' to sorting
+    # In this scenario we know that its a sorting/selection system because we have 2 different
+    # assign statements using the same operator for different results.
+    assign result = &measured_sample;
+    assign waste = &measured_sample;
+
+    # Well I'm trying to map the reult imaging chamber
+    assign another_waste = &result;
+
+endmodule
+
+
+

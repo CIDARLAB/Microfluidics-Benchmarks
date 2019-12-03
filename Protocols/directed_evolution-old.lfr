@@ -1,0 +1,42 @@
+module directed_evolution(genes, pcr_mastermix, tx_tl_sol, ethanol, result)
+
+    finput genes, pcr_mastermix, tx_tl_sol, ethanol;
+    foutput result;
+    control initial;
+    control found_candidate;
+    control found_result;
+
+    fluid pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
+    number a, b, n;
+
+    distribute@(initial)
+    begin
+        if (initial)
+            pcr_mix = a*genes + b*pcr_mastermix;
+        else
+            pcr_mix = a*candidates + b*pcr_mastermix;
+    end
+
+    # DELAY 50 ms (This is how they specify delay in verilog)
+    assign pcr_mix_t1 = pcr_mix_t0;
+    assign tx_tl_mix = tx_tl_sol + pcr_mix_t1;
+    assign reaction_samples[n:0] = sample_solution(tx_tl_mix, n)
+
+    # DELAY 4 hrs
+    assign reaction_samples_2 = reaction_samples;
+
+    assign washed, waste = separate(reaction_samples_2 + ethanol);
+
+    assign washed = detect(washed) # If we give signal out of this, we are talking about the electronic integration
+
+    distribute@(found_candidate, found_result)
+    begin
+        case({found_candidate, found_result})
+            b'10 : candidates = washed;
+            b'01 : result = washed;
+        endcase
+    end
+
+endmodule
+
+
