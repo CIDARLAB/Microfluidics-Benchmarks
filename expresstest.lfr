@@ -1,12 +1,17 @@
-module transformation(finput plasmid, cell_suspension, foutput result);
+module expressiontest(finput plasmid, cell_suspension, foutput result);
 
     fluid reaction_mix, plasmid_vol;
     storage incubator;
 
     // This is the metering network
     assign plasmid_vol = plasmid % 50.88;
+    assign plasmid_vol = plasmid % 100;
 
     assign reaction_mix = plasmid_vol + cell_suspension % 50;
+    assign reaction_mix = &(foo + bar + foobar) ;
+    assign reaction_mix = foo + (foo + (bar + foo)) ;
+    assign reaction_mix = foo + (foo + (bar + &foo)) ;
+    assign reaction_mix = foo + (foo + (bar + &(foo + bar))) ;
 
     // This is sort of a hybrid store and process system so it
     // also has a delay associated with it

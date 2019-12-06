@@ -3,7 +3,7 @@ module dna_digest(dna_suspension, buffer_enzyme_solution, water)
     finput dna_suspension, buffer_enzyme_solution, water;
     storage result, incubation_mix;
 
-    fluid/wire/storage dna_suspension_vol, buffer_enzyme_solution_vol, digestion_mix;
+    fluid dna_suspension_vol, buffer_enzyme_solution_vol, digestion_mix;
 
     assign dna_suspension_vol = dna_suspension % <somenumber>; 
     assign buffer_enzyme_solution_vol = buffer_enzyme_solution % <somenumber>;
