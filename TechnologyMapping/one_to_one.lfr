@@ -1,0 +1,18 @@
+module one_to_one(in, out);
+
+    finput in;
+    foutput out;
+    
+    fluid temp1;
+    fluid temp2;
+    
+    assign temp1 = in;
+
+    #MAP  'MIXER' '~'
+    assign temp2 = ~temp1;
+    assign out = temp2;
+
+endmodule
+
+
+
