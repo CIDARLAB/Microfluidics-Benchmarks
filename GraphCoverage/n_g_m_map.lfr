@@ -3,8 +3,8 @@ module n_g_m_map(i1, out);
     finput i1;
     foutput out;
 
-    fluid [0:4] temp1;
-    fluid [0:3] temp2;
+    flow [0:4] temp1;
+    flow [0:3] temp2;
 
     assign temp1[0:3] = i1;
     assign temp2[0:3] = temp1[0:4];

@@ -7,9 +7,9 @@ module directed_evolution(genes, pcr_mastermix, tx_tl_sol, ethanol, result,
     control found_candidate;
     control found_result;
 
-    fluid pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
+    flow pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
     number a, b, n;
-    fluid pcr_mix, geneinput;
+    flow pcr_mix, geneinput;
 
     distribute@(initial)
     begin

@@ -1,6 +1,6 @@
 module expression8(finput in1, in2, in3, in4, foutput out1, out2);
 
-    fluid temp_out1, temp_out2;
+    flow temp_out1, temp_out2;
 
     assign {temp_out1, temp_out2} = {in1, in1, in1} + { in2, in3, in4 } ;
 

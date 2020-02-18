@@ -8,7 +8,7 @@ module ring(input, input2, input3, output);
     # TODO: How do we deal with wastes ?
     foutput [3:0] waste;
     
-    fluid/wire/storage temp1, temp2, temp3;
+    flow/wire/storage temp1, temp2, temp3;
 
     assign temp1 = input + input2 + temp3;
 
