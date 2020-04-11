@@ -1,0 +1,25 @@
+module dist_expression2(in, out1, out2, c1);
+
+    finput in;
+    foutput out1, out2;
+    control c1;
+    
+    flow temp1;
+    flow temp2;
+    flow temp3;
+    
+    assign temp1 = in;
+    
+    // assign temp2 = temp1
+    distribute@(c1)
+    begin
+        case(c1)
+            0 : temp2 <= temp1; 
+            1 : temp3 <= temp1;
+        endcase
+    end
+
+    assign out = temp2;
+
+endmodule
+
