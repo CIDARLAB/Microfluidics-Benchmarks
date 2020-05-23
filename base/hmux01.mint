@@ -2,9 +2,9 @@ DEVICE hmux01
 
 LAYER FLOW
 H MUX m1 1 to 8 spacing=1000 flowChannelWidth=100 controlChannelWidth=20;
-PORT p1 r=200;
+ PORT p1 portRadius=200;
 
-H BANK pb of 8 PORT r=100  spacing=1000 channelWidth=100;
+ H BANK pb of 8  PORT portRadius=100  spacing=1000 ;
 
 CHANNEL c1 from p1 3 to m1 1 channelWidth=100;
 
@@ -21,7 +21,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2, cp3, cp4, cp5, cp6 r=200;
+ PORT cp1, cp2, cp3, cp4, cp5, cp6 portRadius=200;
 
 CHANNEL cc1 from cp1 4 to m1 10 channelWidth=20;
 CHANNEL cc2 from cp2 4 to m1 12 channelWidth=20;

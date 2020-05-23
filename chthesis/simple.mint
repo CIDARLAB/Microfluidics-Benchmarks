@@ -1,7 +1,7 @@
 DEVICE simple
 
 LAYER FLOW
-PORT p1, p2, p3 r=100;
+ PORT p1, p2, p3 portRadius=100;
 NODE n1;
 H LONG CELL TRAP ct1 numChambers=10 chamberWidth=100 chamberLength=100
 chamberSpacing=50 channelWidth=100 ;
@@ -12,7 +12,7 @@ CHANNEL c4 from ct1 2 to p3 4 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
-PORT cp1, cp2 r=100;
+ PORT cp1, cp2 portRadius=100;
 VALVE v1 on c1 w=300 l=100;
 VALVE v2 on c2 w=300 l=100;
 CHANNEL c5 from cp1 2 to v1 4 channelWidth=50;

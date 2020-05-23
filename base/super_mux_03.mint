@@ -1,12 +1,12 @@
 DEVICE super_mux_03
 
 LAYER FLOW
-V BANK b1 of 8 PORT r=100  spacing=1500 channelWidth=100;
+ V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
 V BANK b2 of 8 CELL TRAP numChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 channelWidth=100;
 V TREE m1 8 to 1 spacing=1500 flowChannelWidth=100;
 H MUX m2 2 to 1 spacing=1500 flowChannelWidth=100 controlChannelWidth=20;
-H BANK b3 of 2 PORT r=100  spacing=1500 channelWidth=100;
-PORT p1, p2 r=100;
+ H BANK b3 of 2  PORT portRadius=100  spacing=1500 ;
+ PORT p1, p2 portRadius=100;
 NODE n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16;
 
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
@@ -72,7 +72,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2 r=100;
+ PORT cp1, cp2 portRadius=100;
 
 CHANNEL cx1 from cp1 2 to m2 4 channelWidth=20;
 CHANNEL cx2 from cp2 4 to m2 5 channelWidth=20;

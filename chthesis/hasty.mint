@@ -2,7 +2,7 @@ DEVICE hasty
 
 LAYER FLOW
 
-PORT p1, p2, p3, p4, p5 r=100;
+ PORT p1, p2, p3, p4, p5 portRadius=100;
 NODE n1, n2;
 V TREE t1 1 to 8 spacing=500 flowChannelWidth=100;
 V TREE t2 8 to 1 spacing=500 flowChannelWidth=100;

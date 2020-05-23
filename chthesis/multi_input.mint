@@ -2,15 +2,15 @@ DEVICE multi_input
 
 LAYER FLOW
 
-H BANK pb1 of 2 PORT r=100  spacing=1200 channelWidth=100;
-V BANK pb2 of 2 PORT r=100  spacing=1200 channelWidth=100;
-V BANK pb3 of 2 PORT r=100  spacing=1200 channelWidth=100;
+ H BANK pb1 of 2  PORT portRadius=100  spacing=1200 ;
+ V BANK pb2 of 2  PORT portRadius=100  spacing=1200 ;
+ V BANK pb3 of 2  PORT portRadius=100  spacing=1200 ;
 H MUX m1 2 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 V TREE t1 2 to 1 spacing=1200 flowChannelWidth=100;
 V TREE t2 1 to 2 spacing=1200 flowChannelWidth=100;
 H MIXER x1 numBends=10 bendSpacing=100 bendLength=1000 channelWidth=100;
 H MIXER x2 numBends=10 bendSpacing=100 bendLength=1000 channelWidth=100;
-PORT p1 r=100;
+ PORT p1 portRadius=100;
 SQUARE CELL TRAP ct1 chamberWidth=500 chamberLength=500 channelWidth=100;
 CHANNEL c1 from pb1 1 to m1 1 channelWidth=100;
 CHANNEL c2 from pb1 2 to m1 2 channelWidth=100;
@@ -29,7 +29,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2, cp3, cp4 r=100;
+ PORT cp1, cp2, cp3, cp4 portRadius=100;
 CHANNEL cc1 from cp1 3 to m1 4 channelWidth=50;
 CHANNEL cc2 from cp2 3 to m1 5 channelWidth=50;
 VALVE v1 on c7 w=150 l=300;

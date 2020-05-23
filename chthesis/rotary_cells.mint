@@ -4,12 +4,12 @@ LAYER FLOW
 
 V MUX m1 4 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 V MUX m2 1 to 4 spacing=500 flowChannelWidth=100 controlChannelWidth=50;
-V BANK pb1 of 4 PORT r=100  spacing=1200 channelWidth=100;
+ V BANK pb1 of 4  PORT portRadius=100  spacing=1200 ;
 H ROTARY PUMP rp radius=1000 flowChannelWidth=100 controlChannelWidth=50;
 V BANK b1 of 4 CELL TRAP numChambers=100 chamberWidth=100 chamberLength=100
 chamberSpacing=30 spacing=500 channelWidth=100;
 V TREE t1 4 to 1 spacing=500 flowChannelWidth=100;
-PORT p1 r=100;
+ PORT p1 portRadius=100;
 CHANNEL c1 from pb1 1 to m1 1 channelWidth=100;
 CHANNEL c2 from pb1 2 to m1 2 channelWidth=100;
 CHANNEL c3 from pb1 3 to m1 3 channelWidth=100;
@@ -30,12 +30,12 @@ END LAYER
 
 LAYER CONTROL
 
-H BANK cb1 of 2 PORT r=100  spacing=1200 channelWidth=50;
-H BANK cb2 of 2 PORT r=100  spacing=1200 channelWidth=50;
-H BANK cb3 of 3 PORT r=100  spacing=1200 channelWidth=50;
-H BANK cb4 of 2 PORT r=100  spacing=1200 channelWidth=50;
-H BANK cb5 of 2 PORT r=100  spacing=1200 channelWidth=50;
-H BANK cb6 of 2 PORT r=100  spacing=1200 channelWidth=50;
+ H BANK cb1 of 2  PORT portRadius=100  spacing=1200 ;
+ H BANK cb2 of 2  PORT portRadius=100  spacing=1200 ;
+ H BANK cb3 of 3  PORT portRadius=100  spacing=1200 ;
+ H BANK cb4 of 2  PORT portRadius=100  spacing=1200 ;
+ H BANK cb5 of 2  PORT portRadius=100  spacing=1200 ;
+ H BANK cb6 of 2  PORT portRadius=100  spacing=1200 ;
 CHANNEL cc1 from m1 6 to cb1 1 channelWidth=50;
 CHANNEL cc2 from m1 8 to cb1 2 channelWidth=50;
 CHANNEL cc3 from rp 3 to cb3 1 channelWidth=50;

@@ -1,9 +1,9 @@
 DEVICE mux8
 
 LAYER FLOW
-H BANK b1 of 8 PORT r=100  spacing=1200 channelWidth=100;
+ H BANK b1 of 8  PORT portRadius=100  spacing=1200 ;
 H MUX m0 8 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
-PORT p1 r=100;
+ PORT p1 portRadius=100;
 CHANNEL ca from b1 1 to m0 1 channelWidth=100;
 CHANNEL cb from b1 2 to m0 2 channelWidth=100;
 CHANNEL cc from b1 3 to m0 3 channelWidth=100;
@@ -16,8 +16,8 @@ CHANNEL c1 from m0 9 to p1 1 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
-V BANK cb3 of 3 PORT r=100  spacing=1200 channelWidth=50;
-V BANK cb4 of 3 PORT r=100  spacing=1200 channelWidth=50;
+ V BANK cb3 of 3  PORT portRadius=100  spacing=1200 ;
+ V BANK cb4 of 3  PORT portRadius=100  spacing=1200 ;
 CHANNEL cc57 from m0 10 to cb3 1 channelWidth=50;
 CHANNEL cc58 from m0 12 to cb3 2 channelWidth=50;
 CHANNEL cc59 from m0 14 to cb3 3 channelWidth=50;

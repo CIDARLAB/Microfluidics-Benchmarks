@@ -2,7 +2,7 @@ DEVICE transposer_test
 
 LAYER FLOW
 
-PORT p1, p2, p3, p4 r=500;
+ PORT p1, p2, p3, p4 portRadius=500;
 NODE n1, n2, n3, n4;
 VIA v1, v2;
 
@@ -23,7 +23,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2 r=500;
+ PORT cp1, cp2 portRadius=500;
 
 VALVE3D v3d1 on c2_3 radius=500 gap=200;
 VALVE3D v3d2 on c9_11 radius=500 gap=200;

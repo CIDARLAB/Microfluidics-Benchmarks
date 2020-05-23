@@ -1,7 +1,7 @@
 DEVICE net_multi_test
 
 LAYER FLOW
-V BANK b1 of 3 PORT r=100  spacing=1500 channelWidth=100;
+ V BANK b1 of 3  PORT portRadius=100  spacing=1500 ;
 NODE n1, n2, n3;
 
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
@@ -14,7 +14,7 @@ CHANNEL c10 from n2 3 to n3 1 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
-PORT cp1, cp2 r=100;
+ PORT cp1, cp2 portRadius=100;
 
 VALVE v10 on c9 w=200 l=100;
 VALVE v11 on c10 w=200 l=100;

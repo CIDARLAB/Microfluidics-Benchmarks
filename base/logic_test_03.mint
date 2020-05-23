@@ -3,7 +3,7 @@ DEVICE logic_test_03
 LAYER FLOW
 
 LOGIC ARRAY la flowChannelWidth=100 controlChannelWidth=20 chamberLength=100 chamberWidth=100 r=100;
-V BANK b1 of 8 PORT r=100  spacing=1500 channelWidth=100;
+ V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
 H IN MUX m1 8 to 1 r=100 flowChannelWidth=100 controlChannelWidth=20;
 
 
@@ -17,8 +17,8 @@ CHANNEL c3 from la 1 to n1 1 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
-H BANK b4 of 5 PORT r=100  channelWidth=20;
-H BANK b5 of 4 PORT r=100  channelWidth=20;
+ H BANK b4 of 5  PORT portRadius=100  ;
+ H BANK b5 of 4  PORT portRadius=100  ;
 
 CHANNEL cc21 from b4 1 to m1 2 channelWidth=20;
 CHANNEL cc22 from b5 1 to m1 3 channelWidth=20;
@@ -32,9 +32,9 @@ CHANNEL ccb from la 25 to b4 5 channelWidth=20;
 CHANNEL ccc from la 26 to b5 4 channelWidth=20;
 
 
-H BANK b1 of 5 PORT r=100  channelWidth=20;
-H BANK b3 of 5 PORT r=100  channelWidth=20;
-V BANK b2 of 10 PORT r=100  channelWidth=20;
+ H BANK b1 of 5  PORT portRadius=100  ;
+ H BANK b3 of 5  PORT portRadius=100  ;
+ V BANK b2 of 10  PORT portRadius=100  ;
 
 CHANNEL cc10 from la 13 to b2 5 channelWidth=20;
 CHANNEL cc11 from la 14 to b2 6 channelWidth=20;

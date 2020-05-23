@@ -2,10 +2,10 @@ DEVICE rotary16
 
 LAYER FLOW
 
-H BANK pb1 of 16 PORT r=100  spacing=1200 channelWidth=100;
+ H BANK pb1 of 16  PORT portRadius=100  spacing=1200 ;
 H MUX m1 16 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 V ROTARY PUMP rp radius=1000 flowChannelWidth=100 controlChannelWidth=50;
-H BANK pb2 of 16 PORT r=100  spacing=1200 channelWidth=100;
+ H BANK pb2 of 16  PORT portRadius=100  spacing=1200 ;
 H MUX m2 1 to 16 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 CHANNEL c1 from pb1 1 to m1 1 channelWidth=100;
 CHANNEL c2 from pb1 2 to m1 2 channelWidth=100;
@@ -46,12 +46,12 @@ END LAYER
 
 LAYER CONTROL
 
-V BANK cpb1 of 4 PORT r=100  spacing=1200 channelWidth=100;
-V BANK cpb2 of 4 PORT r=100  spacing=1200 channelWidth=100;
-V BANK cpb3 of 2 PORT r=100  spacing=1200 channelWidth=100;
-V BANK cpb4 of 3 PORT r=100  spacing=1200 channelWidth=100;
-V BANK cpb5 of 4 PORT r=100  spacing=1200 channelWidth=100;
-V BANK cpb6 of 4 PORT r=100  spacing=1200 channelWidth=100;
+ V BANK cpb1 of 4  PORT portRadius=100  spacing=1200 ;
+ V BANK cpb2 of 4  PORT portRadius=100  spacing=1200 ;
+ V BANK cpb3 of 2  PORT portRadius=100  spacing=1200 ;
+ V BANK cpb4 of 3  PORT portRadius=100  spacing=1200 ;
+ V BANK cpb5 of 4  PORT portRadius=100  spacing=1200 ;
+ V BANK cpb6 of 4  PORT portRadius=100  spacing=1200 ;
 CHANNEL cc1 from m1 18 to cpb1 1 channelWidth=50;
 CHANNEL cc2 from m1 20 to cpb1 2 channelWidth=50;
 CHANNEL cc3 from m1 22 to cpb1 3 channelWidth=50;

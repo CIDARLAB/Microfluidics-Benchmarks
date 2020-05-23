@@ -2,8 +2,8 @@ DEVICE grad_cells
 
 LAYER FLOW
 
-V BANK pb1, pb2 of 2 PORT r=100 spacing=1200 channelWidth=100;
-PORT p1 r=100;
+ V BANK pb1, pb2 of 2  PORT portRadius=100 spacing=1200 ;
+ PORT p1 portRadius=100;
 NODE n1;
 H GRADIENT GENERATOR g 1 to 4 numBends=10 bendSpacing=100 bendLength=500 
     channelWidth=100;
@@ -29,8 +29,8 @@ END LAYER
 
 LAYER CONTROL
 
-H BANK cpb1_1, cpb1_2 of 2 PORT r=100 spacing=1200 channelWidth=50;
-H BANK cpb2_1, cpb2_2 of 2 PORT r=100 spacing=1200 channelWidth=50;
+ H BANK cpb1_1, cpb1_2 of 2  PORT portRadius=100 spacing=1200 ;
+ H BANK cpb2_1, cpb2_2 of 2  PORT portRadius=100 spacing=1200 ;
 CHANNEL cc1 from cpb1_1 to m1 7 channelWidth=50;
 CHANNEL cc2 from cpb1_2 to m1 9 channelWidth=50;
 CHANNEL cc3 from cpb1_1 to m1 6 channelWidth=50;

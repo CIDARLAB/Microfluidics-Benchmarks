@@ -2,7 +2,7 @@ DEVICE test04
 
 LAYER FLOW
 
-PORT p1, p2, p3 r=500;
+ PORT p1, p2, p3 portRadius=500;
 NODE n1;
 H LONG CELL TRAP ct1 numChambers=10 chamberWidth=500 chamberLength=500  chamberSpacing=100 channelWidth=500;
 
@@ -15,7 +15,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2 r=500;
+ PORT cp1, cp2 portRadius=500;
 VALVE v1 on c1 w=1000 l=500;
 VALVE v2 on c2 w=1000 l=500;
 CHANNEL c5 from cp1 2 to v1 4 channelWidth=200;

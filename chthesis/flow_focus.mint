@@ -2,7 +2,7 @@ DEVICE flow_focus
 
 LAYER FLOW
 
-PORT p_in, p_oil_1, p_oil_2, p_out r=100;
+ PORT p_in, p_oil_1, p_oil_2, p_out portRadius=100;
 V DROPLET GENERATOR ff radius=100 oilChannelWidth=100 waterChannelWidth=40 angle=30;
 NODE n1;
 NODE n2;

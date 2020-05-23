@@ -2,7 +2,7 @@ DEVICE nonplanar
 
 LAYER FLOW
 
-PORT p1, p2, p3, p4 r=400;
+ PORT p1, p2, p3, p4 portRadius=400;
 
 CHANNEL c1 from p1 to p2 channelWidth=100;
 CHANNEL c2 from p2 to p3 channelWidth=100;

@@ -1,7 +1,7 @@
 DEVICE test_chambers_01
 
 LAYER FLOW
-PORT p1, p2, p3, p4, p5, p6, p7, p8 r=100;
+ PORT p1, p2, p3, p4, p5, p6, p7, p8 portRadius=100;
 SQUARE CELL TRAP ct1, ct2, ct3, ct4 channelWidth=100 chamberLength=100 chamberWidth=100;
 NODE n1, n2, n3, n4, n5;
 
@@ -30,7 +30,7 @@ CHANNEL c20 from n4 1 to ct1 3 channelWidth=50;
 END LAYER
 
 LAYER CONTROL
-PORT cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8, cp9, cp10, cp11, cp12, cp15, cp16, cp17, cp18 r=100;
+ PORT cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8, cp9, cp10, cp11, cp12, cp15, cp16, cp17, cp18 portRadius=100;
 VALVE v1 on c1 w=100 l=200;
 VALVE v2 on c2 w=100 l=200;
 VALVE v3 on c3 w=100 l=200;

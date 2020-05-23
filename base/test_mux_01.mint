@@ -1,7 +1,7 @@
 DEVICE test_mux_01
 
 LAYER FLOW
-PORT p1, p2, p3, p4, p5 r=100;
+ PORT p1, p2, p3, p4, p5 portRadius=100;
 NODE n1, n2, n3, n4, n5, n6, n7, n8, n9;
 
 CHANNEL c1 from p1 2 to n1 4 channelWidth=100;
@@ -22,7 +22,7 @@ END LAYER
 
 LAYER CONTROL
 
-PORT cp1, cp2, cp3, cp4 r=100;
+ PORT cp1, cp2, cp3, cp4 portRadius=100;
 VALVE v1 on c1 w=100 l=200;
 VALVE v2 on c2 w=100 l=200;
 VALVE v3 on c3 w=100 l=200;

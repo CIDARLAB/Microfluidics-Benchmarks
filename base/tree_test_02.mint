@@ -2,7 +2,7 @@ DEVICE tree_test_01
 
 LAYER FLOW
 
-PORT pin, pout_1, pout_2 r=200;
+ PORT pin, pout_1, pout_2 portRadius=200;
 
 H TREE tr 1 to 2 flowChannelWidth=100;
 
