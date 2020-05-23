@@ -4,12 +4,12 @@ LAYER FLOW
 V BANK b1 of 3 PORT r=100  spacing=1500 channelWidth=100;
 NODE n1, n2, n3;
 
-CHANNEL c1 from b1 1 to n1 4 w=100;
-CHANNEL c2 from b1 2 to n2 4 w=100;
-CHANNEL c3 from b1 3 to n3 4 w=100;
+CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
+CHANNEL c2 from b1 2 to n2 4 channelWidth=100;
+CHANNEL c3 from b1 3 to n3 4 channelWidth=100;
 
-CHANNEL c9 from n1 3 to n2 1 w=100;
-CHANNEL c10 from n2 3 to n3 1 w=100;
+CHANNEL c9 from n1 3 to n2 1 channelWidth=100;
+CHANNEL c10 from n2 3 to n3 1 channelWidth=100;
 
 END LAYER
 
