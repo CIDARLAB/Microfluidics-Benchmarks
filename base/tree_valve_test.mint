@@ -2,7 +2,7 @@ DEVICE tree_valve_test
 
 LAYER FLOW
 
-H BANK b1 of 4 PORT r=100 dir=DOWN spacing=1500 channelWidth=100;
+H BANK b1 of 4 PORT r=100  spacing=1500 channelWidth=100;
 H TREE m2 4 to 1 spacing=1500 flowChannelWidth=100;
 PORT p1 r=100;
 

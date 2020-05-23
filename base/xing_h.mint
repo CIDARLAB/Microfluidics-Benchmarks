@@ -1,8 +1,8 @@
 DEVICE xing_h
 
 LAYER FLOW
-V BANK b1 of 3 PORT r=100 dir=RIGHT spacing=1500 channelWidth=100;
-V BANK b2 of 3 PORT r=100 dir=LEFT spacing=1500 channelWidth=100;
+V BANK b1 of 3 PORT r=100  spacing=1500 channelWidth=100;
+V BANK b2 of 3 PORT r=100  spacing=1500 channelWidth=100;
 
 NODE n1, n2, n3, n4, n5, n6;
 

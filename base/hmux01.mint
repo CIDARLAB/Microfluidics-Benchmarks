@@ -4,7 +4,7 @@ LAYER FLOW
 H MUX m1 1 to 8 spacing=1000 flowChannelWidth=100 controlChannelWidth=20;
 PORT p1 r=200;
 
-H BANK pb of 8 PORT r=100 dir=UP spacing=1000 channelWidth=100;
+H BANK pb of 8 PORT r=100  spacing=1000 channelWidth=100;
 
 CHANNEL c1 from p1 3 to m1 1 w=100;
 

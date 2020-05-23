@@ -2,9 +2,9 @@ DEVICE multi_input
 
 LAYER FLOW
 
-H BANK pb1 of 2 PORT r=100 dir=DOWN spacing=1200 channelWidth=100;
-V BANK pb2 of 2 PORT r=100 dir=RIGHT spacing=1200 channelWidth=100;
-V BANK pb3 of 2 PORT r=100 dir=LEFT spacing=1200 channelWidth=100;
+H BANK pb1 of 2 PORT r=100  spacing=1200 channelWidth=100;
+V BANK pb2 of 2 PORT r=100  spacing=1200 channelWidth=100;
+V BANK pb3 of 2 PORT r=100  spacing=1200 channelWidth=100;
 H MUX m1 2 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 V TREE t1 2 to 1 spacing=1200 flowChannelWidth=100;
 V TREE t2 1 to 2 spacing=1200 flowChannelWidth=100;

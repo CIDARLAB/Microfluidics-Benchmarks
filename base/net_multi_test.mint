@@ -1,7 +1,7 @@
 DEVICE net_multi_test
 
 LAYER FLOW
-V BANK b1 of 3 PORT r=100 dir=RIGHT spacing=1500 channelWidth=100;
+V BANK b1 of 3 PORT r=100  spacing=1500 channelWidth=100;
 NODE n1, n2, n3;
 
 CHANNEL c1 from b1 1 to n1 4 w=100;

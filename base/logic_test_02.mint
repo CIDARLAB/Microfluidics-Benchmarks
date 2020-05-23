@@ -14,8 +14,8 @@ CHANNEL c3 from n1 1 to la 1 w=100;
 END LAYER
 
 LAYER CONTROL
-H BANK b4 of 5 PORT r=100 dir=DOWN spacing=1500 channelWidth=20;
-H BANK b5 of 4 PORT r=100 dir=UP spacing=1500 channelWidth=20;
+H BANK b4 of 5 PORT r=100  spacing=1500 channelWidth=20;
+H BANK b5 of 4 PORT r=100  spacing=1500 channelWidth=20;
 
 CHANNEL cc21 from b4 1 to m1 2 w=20;
 CHANNEL cc22 from b5 1 to m1 3 w=20;
@@ -29,9 +29,9 @@ CHANNEL ccb from la 25 to b4 5 w=20;
 CHANNEL ccc from la 26 to b5 4 w=20;
 
 
-H BANK b1 of 5 PORT r=100 dir=DOWN spacing=1500 channelWidth=20;
-H BANK b3 of 5 PORT r=100 dir=UP spacing=1500 channelWidth=20;
-V BANK b2 of 10 PORT r=100 dir=LEFT spacing=1500 channelWidth=20;
+H BANK b1 of 5 PORT r=100  spacing=1500 channelWidth=20;
+H BANK b3 of 5 PORT r=100  spacing=1500 channelWidth=20;
+V BANK b2 of 10 PORT r=100  spacing=1500 channelWidth=20;
 
 CHANNEL cc1 from b1 1 to la 4 w=20;
 CHANNEL cc2 from b1 2 to la 5 w=20;
