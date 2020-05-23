@@ -3,14 +3,15 @@ DEVICE tree_test_01
 LAYER FLOW
 
 PORT p0 r=100;
-V BANK b0 of 8 PORT r=100 channelWidth=100;
-V BANK b0 of 8 PORT r=100 channelWidth=100;
+V BANK b0_1, b0_2, b0_3, b0_4,b0_5 ,b0_6 ,b0_7 ,b0_8 of 8 PORT r=100;
+V BANK b1_1, b1_2, b1_3, b1_4,b1_5 ,b1_6 ,b1_7 ,b1_8 of 8 PORT r=100;
 
-H IN TREE ct0 of 8 
+H TREE ct0 1 to 8 ;
 
-V BANK lct of 8 LONG CELL TRAP numChambers=10 chamberLength=100 chamberWidth=100 chamberSpacing=30 flowChannelWidth=100 controlChannelWidth=20;
+V BANK lct of 8 LONG CELL TRAP numChambers=10 chamberLength=100 chamberWidth=100 
+    chamberSpacing=30 flowChannelWidth=100 controlChannelWidth=20;
 
-CHANNEL c0 from ct0 9 to p0 4;
+CHANNEL c0 from ct0 9 to p0;
 
 CHANNEL c1 from ct0 1 to b0_1;
 CHANNEL c2 from ct0 2 to b0_2;
@@ -32,6 +33,3 @@ CHANNEL c18 from lct_8 to b1_8;
 
 
 END LAYER
-
-LAYER CONTROL
-END LAYER 

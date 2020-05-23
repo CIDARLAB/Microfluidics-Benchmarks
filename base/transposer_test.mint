@@ -25,12 +25,12 @@ LAYER CONTROL
 
 PORT cp1, cp2 r=500;
 
-3DVALVE v3d1 on c2_3 radius=500 gap=200;
-3DVALVE v3d2 on c9_11 radius=500 gap=200;
-3DVALVE v3d3 on c12_13 radius=500 gap=200;
-3DVALVE v3d4 on c14_15 radius=500 gap=200;
-3DVALVE v3d5 on c9_11 radius=500 gap=200;
-3DVALVE v3d6 on c6_7 radius=500 gap=200;
+VALVE3D v3d1 on c2_3 radius=500 gap=200;
+VALVE3D v3d2 on c9_11 radius=500 gap=200;
+VALVE3D v3d3 on c12_13 radius=500 gap=200;
+VALVE3D v3d4 on c14_15 radius=500 gap=200;
+VALVE3D v3d5 on c9_11 radius=500 gap=200;
+VALVE3D v3d6 on c6_7 radius=500 gap=200;
 
 NET n1 from cp1 4 to v3d1 1, v3d6 3 channelWidth=500;
 NET n2 from cp2 4 to v3d3 2, v3d5 2 channelWidth=500;

@@ -26,8 +26,8 @@ END LAYER
 
 LAYER CONTROL
 
-H BANK b4_1. b4_2, b4_3, b4_4, b4_5 of 5 PORT portRadius=100 spacing=1200
-H BANK b5_1. b5_2, b5_3, b5_4 of 4 PORT r=100 spacing=1200 channelWidth=50;
+H BANK b4_1, b4_2, b4_3, b4_4, b4_5 of 5 PORT portRadius=100 spacing=1200;
+H BANK b5_1, b5_2, b5_3, b5_4 of 4 PORT r=100 spacing=1200 channelWidth=50;
 CHANNEL cc21 from m1 10 to b4_1 channelWidth=50;
 CHANNEL cc22 from m1 11 to b5_1 channelWidth=50;
 CHANNEL cc23 from m1 12 to b4_2 channelWidth=50;
