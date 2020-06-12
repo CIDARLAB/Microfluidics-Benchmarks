@@ -1,0 +1,12 @@
+
+module expression1(finput buffer, syringe, sample, foutput out1, out2);
+
+    flow temp_out1; 
+    flow temp_out;
+    assign temp_out1 = buffer + syringe; //Output of first 3way valve
+    assign out1 = temp_out1;
+    assign temp_out = temp_out1 + sample; //Output of last 3 way valve
+
+    assign out2 = temp_out;
+
+endmodule

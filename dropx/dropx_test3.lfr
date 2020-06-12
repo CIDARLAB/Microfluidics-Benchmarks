@@ -1,0 +1,15 @@
+//Design that will work when synthesized
+
+module dropx_test2(finput in1, in2, foutput out1);
+
+    storage in1_metered, in2_metered;
+    
+    #CONSTRAIN '%' generation_rate = 400 Hz
+    assign in1_metered = in1%0.1;
+
+    #CONSTRAIN '%' generation_rate = 400 Hz
+    assign in2_metered = in2%0.1;
+     
+    assign out1 = in1_metered + in2_metered;
+
+endmodule

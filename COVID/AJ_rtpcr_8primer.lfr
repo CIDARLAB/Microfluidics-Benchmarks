@@ -1,0 +1,16 @@
+module aj_rtpcr2(finput [0:7] primerin, pcrmix, rtmix, foutput [0:7] amplifiedout, control cprimer);
+
+
+    flow rtpcrmix, [0:7] rtpcrprimer, [0:7] outstage;
+    flow [0:7] rtpcrmixer, [0:7] stableHeatChamber;
+    assign rtpcrmix = rtmix % 9.99  + pcrmix;
+
+    distribute@(cprimer)
+    begin
+        assign rtpcrprimer = ({rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix,rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix} + primerin);
+        assign rtpcrmixer = rtpcrprimer;
+        assign stableHeatChamber = rtpcrmixer;
+        assign outstage = stableHeatChamber;
+        assign amplifiedout = outstage;
+    end
+endmodule

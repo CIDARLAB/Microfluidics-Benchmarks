@@ -1,0 +1,13 @@
+module part3_gel(finput p1, p2, p3, p4, p5, p6, foutput out);
+
+    flow n1;
+    flow n2;
+    flow final;
+
+    assign n1 = p4;
+    assign n2 = p5;
+    assign final = n1 + n2;
+
+    assign out = final;
+
+endmodule

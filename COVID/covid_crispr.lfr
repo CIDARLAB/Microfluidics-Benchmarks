@@ -1,0 +1,14 @@
+module expression1(finput in_port1, in_port2, foutput out_port);
+
+    flow in_flow1;
+    flow in_flow2;
+    flow product;
+
+    assign in_flow1 = in_port1;
+    assign in_flow2 = in_port2;
+
+    assign product = in_flow1+in_flow2;
+    
+    assign out_port = product;
+
+endmodule

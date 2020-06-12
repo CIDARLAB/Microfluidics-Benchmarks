@@ -1,0 +1,25 @@
+module part1_rna(finput p1, p2, p3, p4, p5, foutput out);
+
+    flow left1;
+    flow left2;
+    flow left3;
+    flow leftside;
+    flow right1;
+    flow right2;
+    flow rightside;
+    flow final;
+
+    assign left1 = p1;
+    assign left2 = p2;
+    assign left3 = p3;
+    assign leftside = left1 + left2 + left3;
+
+    assign right1 = p4;
+    assign right2 = p5;
+    assign rightside = right1 + right2;
+
+    final = leftside + rightside;
+
+    assign out = final;
+
+endmodule

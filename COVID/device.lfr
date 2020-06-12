@@ -1,0 +1,15 @@
+module expression1(finput in1, in2, in3, in4, in5 foutput out);
+
+    flow temp_out0;
+    flow temp_out1;
+    flow temp_out2;
+    flow temp_out3;
+
+    assign temp_out0 = in1 + in2; // mix the first two inputs, i.e. DNA sample with RPA mastermix
+    assign temp_out1 = temp_out0 + in3; // mix the DNA+RPA assay with MgAC
+    assign temp_out2 = temp_out1 + in4; // mix the assay with Cas13
+    assign temp_out3 = temp_out2 + in5; // mix assay with HybriDetect Assay Buffer for final readout
+
+    assign out = temp_out3;
+
+endmodule
