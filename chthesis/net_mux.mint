@@ -3,11 +3,11 @@ DEVICE net_mux
 LAYER FLOW
 
  V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
-V BANK b2 of 8 CELL TRAP numChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 channelWidth=100;
+V BANK b2 of 8 LONG CELL TRAP numChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 channelWidth=100;
 V TREE m1 8 to 1 spacing=1500 flowChannelWidth=100;
 H MUX m2 2 to 1 spacing=1500 flowChannelWidth=100 controlChannelWidth=50;
- H BANK b3 of 2  PORT portRadius=100  spacing=1500 ;
- PORT p1, p2 portRadius=100;
+H BANK b3_1, b3_2 of 2  PORT portRadius=100  spacing=1500 ;
+PORT p1, p2 portRadius=100;
 NODE n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16;
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
 CHANNEL c2 from b1 2 to n2 4 channelWidth=100;
@@ -58,14 +58,14 @@ CHANNEL c46 from n15 2 to m1 7 channelWidth=100;
 CHANNEL c47 from n16 2 to m1 8 channelWidth=100;
 CHANNEL c48 from m1 9 to p2 4 channelWidth=100;
 CHANNEL c49 from n1 1 to m2 3 channelWidth=100;
-CHANNEL c50 from b3 1 to m2 1 channelWidth=100;
-CHANNEL c51 from b3 2 to m2 2 channelWidth=100;
+CHANNEL c50 from b3_1 to m2 1 channelWidth=100;
+CHANNEL c51 from b3_2 to m2 2 channelWidth=100;
 
 END LAYER
 
 LAYER CONTROL
 
- PORT cp1, cp2, cp3, cp4, cp5, cp6 portRadius=100;
+PORT cp1, cp2, cp3, cp4, cp5, cp6 portRadius=100;
 CHANNEL cm1 from cp1 2 to m2 4 channelWidth=50;
 CHANNEL cm2 from cp2 3 to m2 5 channelWidth=50;
 VALVE v1 on c1 w=150 l=300;
