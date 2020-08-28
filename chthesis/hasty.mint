@@ -6,7 +6,7 @@ PORT p1, p2, p3, p4, p5 portRadius=100;
 NODE n1, n2;
 V TREE t1 1 to 8 spacing=500 flowChannelWidth=100;
 V TREE t2 8 to 1 spacing=500 flowChannelWidth=100;
-V BANK b1_1, b1_2, b1_3, b1_4, b1_5, b1_6, b1_7, b1_8 of 8 LONG CELL TRAP 
+V BANK b1_1, b1_2, b1_3, b1_4, b1_5, b1_6, b1_7, b1_8 of  LONG CELL TRAP 
     numberOfChambers=100 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=500 feedingChannelWidth=100;
 CHANNEL c1 from p1 to n1 channelWidth=100;
 CHANNEL c2 from p2 to n1 channelWidth=100;
