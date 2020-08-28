@@ -62,8 +62,8 @@ CHANNEL c34 from m2 5 to p2 1 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
- V BANK cpb1 of 4  PORT portRadius=100  spacing=1500 ;
- V BANK cpb2 of 3  PORT portRadius=100  spacing=1500 ;
+V BANK cpb1 of 4  PORT portRadius=100  spacing=1500 ;
+V BANK cpb2 of 3  PORT portRadius=100  spacing=1500 ;
 
 VALVE v1 on c6 w=100 l=300;
 VALVE v2 on c7 w=100 l=300;

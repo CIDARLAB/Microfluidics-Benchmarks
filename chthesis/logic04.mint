@@ -6,7 +6,7 @@ LOGIC ARRAY la flowChannelWidth=100 controlChannelWidth=50 chamberLength=100
     chamberWidth=100 r=100;
 V BANK b0_1, b0_2, b0_3, b0_3, b0_4, b0_5, b0_6, b0_7, b0_8 of 8 PORT portRadius=100 
     spacing=1500;
-V MUX m1 8 to 1 spacing=1500 flowChannelWidth=100 controlChannelWidth=50;
+V MUX m1 1 to 8 spacing=1500 flowChannelWidth=100 controlChannelWidth=50;
 
 NODE n1;
 CHANNEL c0 from m1 9 to n1 channelWidth=100;
@@ -27,7 +27,7 @@ END LAYER
 LAYER CONTROL
 
 H BANK b4_1, b4_2, b4_3, b4_4, b4_5 of 5 PORT portRadius=100 spacing=1200;
- H BANK b5_1, b5_2, b5_3, b5_4 of 4  PORT portRadius=100 spacing=1200 ;
+H BANK b5_1, b5_2, b5_3, b5_4 of 4  PORT portRadius=100 spacing=1200 ;
 CHANNEL cc21 from m1 10 to b4_1 channelWidth=50;
 CHANNEL cc22 from m1 11 to b5_1 channelWidth=50;
 CHANNEL cc23 from m1 12 to b4_2 channelWidth=50;
@@ -37,8 +37,8 @@ CHANNEL cc26 from m1 15 to b5_3 channelWidth=50;
 CHANNEL cca from la 24 to b4_4 channelWidth=50;
 CHANNEL ccb from la 25 to b4_5 channelWidth=50;
 CHANNEL ccc from la 26 to b5_4 channelWidth=50;
- H BANK b1_1, b1_2, b1_3, b1_4, b1_5 of 5  PORT portRadius=100 spacing=1200 ;
- H BANK b3_1, b3_2, b3_3, b3_4, b3_5 of 5  PORT portRadius=100 spacing=1200 ;
+H BANK b1_1, b1_2, b1_3, b1_4, b1_5 of 5  PORT portRadius=100 spacing=1200 ;
+H BANK b3_1, b3_2, b3_3, b3_4, b3_5 of 5  PORT portRadius=100 spacing=1200 ;
 V BANK b2_1, b2_2, b2_3, b2_4, b2_5, 
     b2_6, b2_7, b2_8, b2_9, b2_10 of 10  PORT portRadius=100 spacing=1200 channelWidth=50;
 CHANNEL cc10 from la 13 to b2_5 channelWidth=50;

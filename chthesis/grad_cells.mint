@@ -2,14 +2,14 @@ DEVICE grad_cells
 
 LAYER FLOW
 
- V BANK pb1, pb2 of 2  PORT portRadius=100 spacing=1200 ;
- PORT p1 portRadius=100;
+V BANK pb1, pb2 of 2  PORT portRadius=100 spacing=1200 ;
+PORT p1 portRadius=100;
 NODE n1;
 H GRADIENT GENERATOR g 1 to 4 numBends=10 bendSpacing=100 bendLength=500 
     channelWidth=100;
 V MUX m1 1 to 4 spacing=500 flowChannelWidth=100 controlChannelWidth=50;
 V TREE t1 4 to 1 spacing=500 flowChannelWidth=100;
-V BANK ctb of 4 CELL TRAP numChambers=20 chamberWidth=100 
+V BANK ctb of 4 LONG CELL TRAP numChambers=20 chamberWidth=100 
     chamberLength=100 chamberSpacing=30 spacing=500 channelWidth=100;
 CHANNEL c1 from pb1 to n1 channelWidth=100;
 CHANNEL c2 from pb2 to n1 channelWidth=100;
@@ -29,8 +29,8 @@ END LAYER
 
 LAYER CONTROL
 
- H BANK cpb1_1, cpb1_2 of 2  PORT portRadius=100 spacing=1200 ;
- H BANK cpb2_1, cpb2_2 of 2  PORT portRadius=100 spacing=1200 ;
+H BANK cpb1_1, cpb1_2 of 2  PORT portRadius=100 spacing=1200 ;
+H BANK cpb2_1, cpb2_2 of 2  PORT portRadius=100 spacing=1200 ;
 CHANNEL cc1 from cpb1_1 to m1 7 channelWidth=50;
 CHANNEL cc2 from cpb1_2 to m1 9 channelWidth=50;
 CHANNEL cc3 from cpb1_1 to m1 6 channelWidth=50;
