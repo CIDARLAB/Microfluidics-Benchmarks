@@ -3,7 +3,7 @@ DEVICE test03
 LAYER FLOW
  PORT p1, p2, p3 portRadius=500;
 NODE n1;
-H LONG CELL TRAP ct1 numChambers=10 chamberWidth=500 chamberLength=500 chamberSpacing=100 channelWidth=500;
+H LONG CELL TRAP ct1 numberOfChambers=10 chamberWidth=500 chamberLength=500 chamberSpacing=100 feedingChannelWidth=500;
 
 CHANNEL c1 from p1 3 to n1 1 channelWidth=500;
 CHANNEL c2 from p2 1 to n1 3 channelWidth=500;

@@ -7,7 +7,7 @@ H MIXER x1 numBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
 H DROPLET GENERATOR T t2 radius=100 oilChannelWidth=100 waterChannelWidth=20;
 H MIXER x2 numBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
 V MUX m1 1 to 2 spacing=4000 flowChannelWidth=100 controlChannelWidth=50;
-H LONG CELL TRAP ct1 numChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=50 channelWidth=100 ;
+H LONG CELL TRAP ct1 numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=50 feedingChannelWidth=100 ;
 PORT p1 portRadius=100;
 CHANNEL c1 from t1 1 to x1 1 channelWidth=100;
 CHANNEL c2 from x1 2 to m1 1 channelWidth=100;

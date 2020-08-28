@@ -6,7 +6,7 @@ V MUX m1 1 to 4 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
 V MUX m2 1 to 4 spacing=500 flowChannelWidth=100 controlChannelWidth=50;
 V BANK pb1 of 4  PORT portRadius=100  spacing=1200 ;
 H ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50;
-V BANK b1 of 4 CELL TRAP numChambers=100 chamberWidth=100 chamberLength=100
+V BANK b1 of 4 LONG CELL TRAP numberOfChambers=100 chamberWidth=100 chamberLength=100
     chamberSpacing=30 spacing=500 channelWidth=100;
 V TREE t1 1 to 4 spacing=500 flowChannelWidth=100;
 PORT p1 portRadius=100;

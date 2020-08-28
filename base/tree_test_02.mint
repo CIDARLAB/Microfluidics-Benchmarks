@@ -6,7 +6,7 @@ LAYER FLOW
 
 H TREE tr 1 to 2 flowChannelWidth=100;
 
-H BANK ct0, ct1 of 2 LONG CELL TRAP numChambers=10 chamberLength=100 
+H BANK ct0, ct1 of 2 LONG CELL TRAP numberOfChambers=10 chamberLength=100 
     chamberWidth=100 chamberSpacing=30 flowChannelWidth=100 controlChannelWidth=20;
 
 CHANNEL c1 from pin to tr 1 channelWidth=100;
