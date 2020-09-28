@@ -1,9 +1,9 @@
-module pcr(finput cell_suspension, foutput result)
+module pcr(finput cell_suspension, foutput result);
 
     storage incubation_chamber;
 
-    #MAP & to PCR Chamber
-    assign incubation_chamber = &cell_suspension;
+    #MAP 'PCR CHAMBER' 'storage'
+    assign incubation_chamber = cell_suspension;
 
     assign result = incubation_chamber;
 

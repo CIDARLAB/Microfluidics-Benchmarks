@@ -10,11 +10,11 @@ module dna_digest(dna_suspension, buffer_enzyme_solution, water)
     assign digestion_mix = dna_suspension_vol + buffer_enzyme_solution_vol;
     
     #MAP HEATING ELEMENT to '&' operator here
-    #This should be a storing statement
+    //This should be a storing statement
     assign incubation_mix = &digestion_mix;
 
-    #Delay for 1 hour
-    #This is also storage
+    //Delay for 1 hour
+    //This is also storage
     assign result = incubation_mix + water;
 
 endmodule

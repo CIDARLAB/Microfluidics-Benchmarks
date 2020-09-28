@@ -4,7 +4,7 @@ module ligation(finput ligase_buffer, vector_dna, insert_dna,
     flow temp1, temp2, temp3, temp4;
     storage temp5;
 
-    # This should probably generate a 5 input mixing tree    
+    //This should probably generate a 5 input mixing tree as an alternative    
     assign temp1 = ligase_buffer % <somevolume1>;
     assign temp2 = vector_dna % <somevolume2> + temp1;
     assign temp3 = insert_dna % <somevolume3> + temp2;
