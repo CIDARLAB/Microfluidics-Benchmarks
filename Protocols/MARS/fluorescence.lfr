@@ -1,7 +1,7 @@
-module fluorescence(finput toehold, trigger_rna, mastermix)
+module fluorescence(finput toehold, trigger_rna, mastermix);
 
-    flow toehold_vol, trigger_rna_vol, 
-    number volume1, volume2;
+    flow toehold_vol, trigger_toehold_mix; 
+    number volume1 = 50, volume2 = 50;
     storage fchamber;
 
     // % does sampling via metering

@@ -1,12 +1,11 @@
     module dropx_test4(finput in1, in2, foutput out1);
        
 
-        #MAP  'DROPLET GENERATOR' '~'
-        #MAP 'MIXER' '*'
-        #CONSTRAINT '~''RADIUS' '50' 'um' && 'GENERATION_RATE' '70'
-        assign out1 = *~in1;
-
-        assign out2 = 0.7*in1;
+        #MAP 'DROPLET GENERATOR' '~'
+        #MAP 'MIXER' '&'
+        #CONSTRAIN '~' DROPLET_SIZE = 50 um 
+        #CONSTRAIN '~' GENERATION_RATE = 70 Hz
+        assign out1 = &(~in1);
 
         assign out1 = in1*0.7 + in2*0.3;
 
