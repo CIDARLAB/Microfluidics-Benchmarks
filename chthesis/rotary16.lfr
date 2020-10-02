@@ -1,0 +1,15 @@
+module rotary16(
+    finput [0:15] bank_in, 
+    foutput [0:15] bank_out
+    control [0:3] c_in, [0:3] c_out
+);
+
+    flow temp_in, temp_out;
+
+    assign temp_in = bank_in;
+
+    assign temp_out = &temp_in;
+
+    assign bank_out = temp_out;
+
+endmodule

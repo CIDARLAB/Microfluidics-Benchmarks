@@ -1,0 +1,54 @@
+module net_mux(
+    finput in1, [0:1] in2, 
+    foutput [0:7] out1, out2, 
+    control c_in1, c_in2, c_in_connect, c_out_connect, c_out1
+);
+
+    flow [0:7] temp_in1, [0:7] temp_out1, temp_in2;
+    flow [0:7] trap_inputs;
+    flow [0:7] trap_output;
+    storage [0:7] cell_traps;
+
+    assign in1 = temp_in1;
+    assign cell_traps = trap_inputs;
+    assign trap_output = cell_traps;
+
+    distribute@(c_in1)
+    begin
+        if (c_in1)
+            trap_inputs <= temp_in1;
+    end
+
+    distribute@(c_in2)
+    begin
+        case(c_in2)
+            1'b0: temp_in2 <= in2[0];
+            1'b1: temp_in2 <= in2[1];
+        endcase
+    end
+
+    distribute@(c_in_connect)
+    begin
+        //Need to allow for a single pipeline
+        //the default of this would be to make 
+        //over the channel connections
+        if (c_in_connect)
+            trap_output <= temp_in2;
+    end
+
+    distribute@(c_out_connect)
+    begin
+        //Need to allow for a single pipeline
+        //the default of this would be to make 
+        //over the channel connections
+        if (c_out_connect)
+            out2 <= trap_inputs;
+    end
+
+    distribute@(c_out1)
+    begin
+        if (c_out1)
+            out1 <= temp_out1;
+    end
+
+endmodule

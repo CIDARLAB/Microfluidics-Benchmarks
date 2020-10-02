@@ -1,0 +1,20 @@
+module multi_input(
+    finput [0:1] in1, [0:1] in2, [0:1] in3, 
+    foutput out, control c1, c2, c3
+);
+
+    storage cell_trap;
+
+    distribute@(c1)
+        case(c1)
+            1'b0 cell_trap <= in1[0];
+            1'b1 cell_trap <= in1[1];
+        endcase
+    end
+
+    assign cell_trap = in2[0] + in2[1];
+    assign cell_trap = in3[0] + in3[1];
+
+    assign out = cell_trap;
+
+endmodule
