@@ -1,0 +1,19 @@
+module simple(
+    finput [0:1] inputs, 
+    control c_select, f
+    foutput output
+);
+
+    storage cell_trap;
+
+    distribute@(c_select)
+    begin
+        if(c_select)
+            cell_trap <= inputs[0];
+        else
+            cell_trap <= inputs[1];
+    end
+
+    assign output = cell_trap;
+
+endmodule

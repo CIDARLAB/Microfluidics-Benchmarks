@@ -1,0 +1,36 @@
+module(
+    finput [0:3] in_1,
+    foutput out_1,
+    control [0:1] c_inputs, [0:1] c_cell_traps
+);
+
+    flow temp_input, temp_trap_input;
+    storage [0:3] cell_traps;
+
+    distribute@(c_inputs)
+    begin
+        case(c_inputs)
+            2'b00 : temp_input <= in_1[0];
+            2'b01 : temp_input <= in_1[1];
+            2'b10 : temp_input <= in_1[2];
+            2'b11 : temp_input <= in_1[3];
+        endcase
+    end
+
+    #MAP 'ROTARY MIXER' '&'
+    assign temp_trap_input = &temp_input;
+    
+    distribute@(c_cell_traps)
+    begin
+        case(c_cell_traps)
+            2'b00 : cell_traps[0] <= temp_input;
+            2'b01 : cell_traps[1] <= temp_input;
+            2'b10 : cell_traps[2] <= temp_input;
+            2'b11 : cell_traps[3] <= temp_input;
+        endcase
+    end
+
+    #MAP 'TREE' 'assign'
+    assign out_1 =  cell_traps;
+
+endmodule

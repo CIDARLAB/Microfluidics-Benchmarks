@@ -1,0 +1,26 @@
+module tdroplet(
+    finput [0:1] inputs,
+    foutput output,
+    control c_select
+);
+
+    flow [0:1] temp_inputs;
+    flow [0:1] delayed_outputs;
+    storage cell_trap;
+
+    assign temp_inputs = inputs%50;
+
+    #MAP 'MIXER' '&'
+    assign delayed_outputs = &temp_inputs;
+    
+    distribute@(c_select)
+    begin
+        if (c_select)
+            cell_trap <= delayed_outputs[0];
+        else
+            cell_trap <= delayed_outputs[1];
+    end
+
+    assign cell_trap = cell_trap;
+
+endmodule
