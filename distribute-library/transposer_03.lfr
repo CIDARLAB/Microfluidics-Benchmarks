@@ -1,0 +1,37 @@
+module transposer_03(
+    finput [0:2] inputs,
+    foutput [0:2] outputs, 
+    control [0:1] c_select
+);
+
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : 
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[1];
+                outputs[2] <= inputs[2];
+            end
+            2'b01 :
+            begin
+                outputs[0] <= inputs[1];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[2];
+            end
+            2'b10 :
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[2];
+                outputs[2] <= inputs[1];
+            end
+            2'b11 :
+            begin
+                outputs[0] <= inputs[2];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[1];
+            end        
+        endcase
+    end
+
+endmodule

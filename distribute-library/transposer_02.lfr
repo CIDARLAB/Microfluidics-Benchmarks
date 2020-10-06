@@ -1,0 +1,19 @@
+module transposer_02(
+    finput [0:1] inputs,
+    foutput [0:1] outputs, 
+    control c_select
+);
+
+    distribute@(c_select)
+    begin
+        if(c_select) begin
+            outputs[0] <= inputs [0];
+            outputs[1] <= inputs [1];
+        end
+        else begin
+            outputs[0] <= inputs [1];
+            outputs[1] <= inputs [0];
+        end
+    end
+
+endmodule

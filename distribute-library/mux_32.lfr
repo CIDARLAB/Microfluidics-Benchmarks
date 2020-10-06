@@ -1,0 +1,45 @@
+module mux_32(
+    finput input, 
+    foutput [0:31] outputs, 
+    control [0:4] c_select
+);
+
+    distribute@(c_select)
+    begin
+        case(c_select)
+            5'b00000 : outputs[0] <= input;
+            5'b00001 : outputs[1] <= input;
+            5'b00010 : outputs[2] <= input;
+            5'b00011 : outputs[3] <= input;
+            5'b00100 : outputs[4] <= input;
+            5'b00101 : outputs[5] <= input;
+            5'b00110 : outputs[6] <= input;
+            5'b00111 : outputs[7] <= input;
+            5'b01000 : outputs[8] <= input;
+            5'b01001 : outputs[9] <= input;
+            5'b01010 : outputs[10] <= input;
+            5'b01011 : outputs[11] <= input;
+            5'b01100 : outputs[12] <= input;
+            5'b01101 : outputs[13] <= input;
+            5'b01110 : outputs[14] <= input;
+            5'b01111 : outputs[15] <= input;
+            5'b10000 : outputs[16] <= input;
+            5'b10001 : outputs[17] <= input;
+            5'b10010 : outputs[18] <= input;
+            5'b10011 : outputs[19] <= input;
+            5'b10100 : outputs[20] <= input;
+            5'b10101 : outputs[21] <= input;
+            5'b10110 : outputs[22] <= input;
+            5'b10111 : outputs[23] <= input;
+            5'b11000 : outputs[24] <= input;
+            5'b11001 : outputs[25] <= input;
+            5'b11010 : outputs[26] <= input;
+            5'b11011 : outputs[27] <= input;
+            5'b11100 : outputs[28] <= input;
+            5'b11101 : outputs[29] <= input;
+            5'b11110 : outputs[30] <= input;
+            5'b11111 : outputs[31] <= input;
+        endcase
+    end
+
+endmodule
