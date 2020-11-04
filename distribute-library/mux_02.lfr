@@ -6,7 +6,7 @@ module mux_02(
 
     distribute@(c_select)
     begin
-        if(c_select)
+        if(c_select == 1)
             outputs[0] <= input;
         else
             outputs[1] <= input;
