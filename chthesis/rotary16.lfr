@@ -4,7 +4,7 @@
 
 module rotary16(
     finput [0:15] bank_in, 
-    foutput [0:15] bank_out
+    foutput [0:15] bank_out,
     control [0:3] c_in, [0:3] c_out
 );
 
@@ -14,6 +14,6 @@ module rotary16(
 
     assign temp_out = &temp_in;
 
-    mux_16_out mux_out(bank_out, temp_out, c_out);
+    mux_16_out mux_out(temp_out, bank_out, c_out);
 
 endmodule
