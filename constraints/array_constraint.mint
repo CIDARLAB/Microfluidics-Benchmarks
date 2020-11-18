@@ -7,13 +7,13 @@ PORT p_in1, p_in2, p_in3, p_in4,
     p_in5, p_in6, p_in7, p_in8 portRadius=2000;
 
 BANK p_in1, p_in2, p_in3, p_in4, 
-    p_in5, p_in6, p_in7, p_in8 of 8 spacing=2000;
+    p_in5, p_in6, p_in7, p_in8 spacing=2000;
 
 PORT p_out1, p_out2, p_out3, p_out4, 
     p_out5, p_out6, p_out7, p_out8 portRadius=2000;
 
 BANK p_out1, p_out2, p_outp3, p_out4, 
-    p_out5, p_out6, p_out7, p_out8 of 8 spacing=2000;
+    p_out5, p_out6, p_out7, p_out8 spacing=2000;
 
 
 REACTION CHAMBER ct1_1, ct1_2, ct1_3, ct1_4, ct1_5, ct1_6, ct1_7, ct1_8,
