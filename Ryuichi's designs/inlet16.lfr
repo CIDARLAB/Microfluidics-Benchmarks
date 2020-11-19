@@ -1,0 +1,66 @@
+//G. A. Coolsey, C. G. Sip and A. Folch, Lab Chip, 2009, 9, 417-426
+     
+
+module inlet96(
+    finput [0:15] in,
+    foutput out,
+    control x9, x1,
+    control inlet
+);
+
+    flow mux;
+    flow mixer;
+    flow mixer_in, mixer_out;
+    flow bypass1, bypass2;
+    flow bypass_in, bypass_out;
+    control x9, x1;
+
+    flow chamber;
+
+    flow flowcontroller;
+
+    // assign temp1[15:0] = in;
+
+    // mux here
+    assign mux = in[0:15] ;
+    assign mux = x9;
+
+    // mixer
+    // distribution block
+    #MAP 'Mixer' '~'
+    assign mixer_out = ~mixer_in;
+
+    distribute@(x1)
+    begin
+        if (x1) 
+        begin
+            bypass_out <= bypass_in;
+        end
+        else 
+        begin
+            // mixer_in <= bypass_in;
+            // bypass_out <= mixer_out;
+        end
+    end
+
+    // assign temp3 = temp2 + cout;
+    
+    // assign bypass_out = mixer;
+    // assign bypass_out = mux;
+    
+    // assign bypass2 = mixer;
+    // assign bypass2 = bypass_out;
+
+    // // chamber
+    // assign chamber = bypass2;
+    // assign chamber = inlet;
+    // assign bypass2 = chamber;
+
+    // // flow controller
+    // assign flowcontroller = chamber;
+    // assign bypass2 = flowcontroller;
+
+    // assign out = flowcontroller;
+
+endmodule
+

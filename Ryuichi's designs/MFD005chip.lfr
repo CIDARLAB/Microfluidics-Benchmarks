@@ -1,0 +1,41 @@
+// M. Ferry, I. Razinkov and J. Hasty, Methods Enzymol., 2011, 497, 295
+
+module MFD005chip(
+    finput Inlet1, Inlet2, port, outlet,
+    foutput waste
+);
+
+    flow waste_in, SHM, DAW, DAW_out;
+
+    assign DAW = Inlet1;
+    assign DAW = Inlet2;
+
+#MAP 'DAW junction' '~'
+    assign DAW_out = ~DAW;
+    
+    assign waste_in = DAW_out;
+    assign SHM = DAW_out;
+
+
+#MAP 'Cell and shunt waste' '~'
+
+    assign waste = ~waste_in;
+
+    
+    flow TRAP;
+    assign TRAP = outlet;
+    assign TRAP = port;
+    assign outlet = TRAP;
+    assign port = TRAP;
+
+    flow shm_integ, trap_out;
+    
+#MAP 'TRAP' '~'
+
+    assign trap_out = ~TRAP;
+    assign TRAP = ~trap_out;
+    assign shm_integ = trap_out;
+    assign shm_integ = SHM;
+
+    assign waste = shm_integ;
+endmodule

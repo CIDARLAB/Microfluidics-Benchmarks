@@ -1,0 +1,50 @@
+//C.J.Wang, A. Bergmann, B. Lin, K.Kim and A. Levchenko, Sci. Signaling, 2012, 5, ra17
+
+module seeding(
+    control c0, c1, c2, c3, c4, c5, c6,
+    finput seeding0, seeding1, buffer, stimuli,
+    foutput waste
+);
+
+    storage [3:0] culture;
+
+    flow c0_out;
+
+    assign c0_out = c0;
+    assign c0_out = seeding0;
+
+    flow seeding0_out;
+    
+    assign seeding0_out = seeding1;
+    assign seeding0_out = c0_out;
+
+    assign culture = seeding0_out;
+
+    flow mixing_in, mixing_out, buffer_out, stimuli_out;
+
+    assign buffer_out = buffer;
+    assign buffer_out = c1;
+    assign stimuli_out = stimuli;
+    //error, create distribute block
+    // distribute@(c2) begin
+    //     if(c2 == 1)
+    //         stimuli_out <= stimuli;
+    // end
+    // assign stimuli_out = c2;
+    assign mixing_in = stimuli_out;
+    assign mixing_in = buffer_out;
+
+    #MAP 'Mixing' '~'
+    assign mixing_out = ~mixing_in;
+
+    //specify more
+    assign culture = mixing_out;
+    assign culture = c3;
+    assign culture = c4;
+    assign culture = c5;
+    assign culture = c6;
+
+    assign waste = culture;
+
+
+endmodule
