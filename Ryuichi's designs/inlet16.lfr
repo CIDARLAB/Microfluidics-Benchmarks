@@ -1,7 +1,7 @@
 //G. A. Coolsey, C. G. Sip and A. Folch, Lab Chip, 2009, 9, 417-426
      
 
-module inlet96(
+module inlet16(
     finput [0:15] in,
     foutput out,
     control x9, x1,
@@ -32,18 +32,30 @@ module inlet96(
 
     distribute@(x1)
     begin
-        if (x1) 
+        if (x1 == 1) 
         begin
             bypass_out <= bypass_in;
         end
         else 
         begin
-            // mixer_in <= bypass_in;
-            // bypass_out <= mixer_out;
+            mixer_in <= bypass_in;
+            bypass_out <= mixer_out;
         end
     end
 
     // assign temp3 = temp2 + cout;
+
+    flow valve1_in, valve1_out;
+
+    assign valve1_in = mux + bypass_out;
+
+    distribute@(x1) 
+    begin
+        if (x1 == 1) begin
+            valve1_out <= valve1_in;
+        end
+    end
+
     
     // assign bypass_out = mixer;
     // assign bypass_out = mux;

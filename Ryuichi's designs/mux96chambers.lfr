@@ -4,21 +4,23 @@ module mux96chambers(
     foutput waste
 )
 
-    flow mixer;
-    flow pump;
+    flow mixer_in, mixer_out;
+    flow pump_in, pump_out;
 
     //in de mux?
-    flow inDeMux;
+    flow inDeMux, outMux;
 
     storage [0:95] chamber;
 
-    //out mux
-    flow outMux;
+    assign mixer_in = in[0:15];
+    #MAP 'Mixer' '~'
+    assign mixer_out = ~mixer_in;
 
-    assign mixer = in[0:15];
-    assign pump = mixer;
+    assign pump_in = mixer_out;
+    #MAP 'Pump' '~'
+    assign pump_out = ~pump_in;
 
-    assign inDeMux = pump;
+    assign inDeMux = pump_out;
     assign chamber[0:95] = inDeMux;
     assign outMux = chamber[0:95];
 

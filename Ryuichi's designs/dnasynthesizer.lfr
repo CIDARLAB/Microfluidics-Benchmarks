@@ -82,11 +82,81 @@
 //     assign reactor_output[0] = reactor[0];
 // endmodule
 
-module design3(
-    finput[3:0] in,
-    foutput [3:0] out;
+module dnasynthesizer(
+    finput[0:10] in,
+    foutput [0:15] out,
+    control c[0:15];
 );
 
-    assign out[0] = in[0];
+    flow path1, path2, path3, path4, controller_out;
 
+    distribute@(c[0:2]) begin
+        if (c[0] == 1) begin
+            path1 <= path1 + in[0];
+        end
+        if (c[1] == 1) begin
+            path1 <= path1 + in[1];
+        end
+        if (c[2] == 1) begin
+            path1 <= path1 + in[2];
+        end
+    end
+
+    distribute@(c[3:5]) begin
+        if (c[3] == 1) begin
+            path2 <= path2 + in[3];
+        end
+        if (c[4] == 1) begin
+            path2 <= path2 + path1;
+        end
+        if (c[5] == 1) begin
+            path2 <= path2 + in[4];
+        end
+    end
+
+    distribute@(c[6:8]) begin
+        if (c[6] == 1) begin
+            path3 <= path3 + in[5];
+        end
+        if (c[7] == 1) begin
+            path3 <= path3 + path2;
+        end
+        if (c[8] == 1) begin
+            path3 <= path3 + in[6];
+        end
+    end
+
+    distribute@(c[9:11]) begin
+        if (c[9] == 1) begin
+            path4 <= path4 + in[7];
+        end
+        if (c[10] == 1) begin
+            path4 <= path4 + path3;
+        end
+        if (c[11] == 1) begin
+            path4 <= path4 + in[8];
+        end
+    end
+
+    distribute@(c[12:15]) begin
+        if (c[12] == 1) begin
+            path4 <= path4 + in[9];
+        end
+        if (c[13] == 1) begin
+            path4 <= path4 + path3;
+        end
+        if (c[14] == 1) begin
+            path4 <= path4 + in[10];
+        end
+        if (c[15] == 1) begin
+            controller_out <= path4;
+        end
+    end
+
+    storage reactor[0:15];
+
+    #MAP 'BinaryTree' '~'
+    assign reactor = ~controller_out;
+
+    assign out = reactor;
     endmodule
