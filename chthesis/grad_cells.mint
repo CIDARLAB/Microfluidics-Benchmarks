@@ -2,7 +2,7 @@ DEVICE grad_cells
 
 LAYER FLOW
 
-V BANK pb1, pb2 of   PORT portRadius=100 spacing=1200 ;
+V BANK pb1, pb2 of PORT portRadius=100 spacing=1200 ;
 PORT p1 portRadius=100;
 NODE n1;
 H GRADIENT GENERATOR g 1 to 4 numBends=10 bendSpacing=100 bendLength=500 
@@ -15,14 +15,14 @@ CHANNEL c1 from pb1 to n1 channelWidth=100;
 CHANNEL c2 from pb2 to n1 channelWidth=100;
 CHANNEL c3 from n1 to g 1 channelWidth=100;
 CHANNEL c4 from g 2 to m1 1 channelWidth=100;
-CHANNEL c5 from m1 2 to ctb 1 channelWidth=100;
-CHANNEL c6 from m1 3 to ctb 2 channelWidth=100;
-CHANNEL c7 from m1 4 to ctb 3 channelWidth=100;
-CHANNEL c8 from m1 5 to ctb 4 channelWidth=100;
-CHANNEL c9 from ctb 5 to t1 1 channelWidth=100;
-CHANNEL c10 from ctb 6 to t1 2 channelWidth=100;
-CHANNEL c11 from ctb 7 to t1 3 channelWidth=100;
-CHANNEL c12 from ctb 8 to t1 4 channelWidth=100;
+CHANNEL c5 from m1 2 to ctb_1 channelWidth=100;
+CHANNEL c6 from m1 3 to ctb_2 channelWidth=100;
+CHANNEL c7 from m1 4 to ctb_3 channelWidth=100;
+CHANNEL c8 from m1 5 to ctb_4 channelWidth=100;
+CHANNEL c9 from ctb_1 to t1 1 channelWidth=100;
+CHANNEL c10 from ctb_2 to t1 2 channelWidth=100;
+CHANNEL c11 from ctb_3 to t1 3 channelWidth=100;
+CHANNEL c12 from ctb_4 to t1 4 channelWidth=100;
 CHANNEL c13 from t1 5 to p1 4 channelWidth=100;
 
 END LAYER
