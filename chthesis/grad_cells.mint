@@ -33,7 +33,7 @@ H BANK cpb1_1, cpb1_2 of   PORT portRadius=100 spacing=1200 ;
 H BANK cpb2_1, cpb2_2 of   PORT portRadius=100 spacing=1200 ;
 CHANNEL cc1 from cpb1_1 to m1 7 channelWidth=50;
 CHANNEL cc2 from cpb1_2 to m1 9 channelWidth=50;
-CHANNEL cc3 from cpb1_1 to m1 6 channelWidth=50;
+CHANNEL cc3 from cpb2_1 to m1 6 channelWidth=50;
 CHANNEL cc4 from cpb2_2 to m1 8 channelWidth=50;
 
 END LAYER
