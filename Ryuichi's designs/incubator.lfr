@@ -1,0 +1,157 @@
+// multi-purpose lab-on-a-chip Ahmed M. Amin, Raviraj Thakur, Seth Madren, Han-Sheng Chuang, Mithuna Thottethodi, T. N. Vijaykumar, Steven T. Wereley, and Stephen C. Jacobson
+
+// module incubator(
+//    A, B, C, D, E,
+//    X, Y, Z,
+//    c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14
+// );
+
+// finput A, B, C, D, E;
+// foutput X, Y, Z;
+// control c1, c2, c3, c4, c5, c6, c6, c8, c9, c10;
+
+// flow after_BCD, after_AEABC;
+
+// // assign after_BCD = B;
+// // assign after_BCD = C;
+// // assign after_BCD = D;
+
+// distribute@(c1, c2, c3) begin
+//     if (c1 == 1) begin
+//         after_BCD <= B;
+//     else if (c2 == 1) begin
+//         after_BCD <= C;
+//     else if (c3 == 1) begin
+//         after_BCD <= D;
+//     else
+//     end
+// end
+
+// // assign after_AEABC = A;
+// // assign after_AEABC = after_BCD;
+// // assign after_AEABC = E;
+
+// distribute@(c4, c5, c6) begin
+//     if (c4 == 1) begin
+//         after_AEABC <= A;
+//     else if (c5 == 1) begin
+//         after_AEABC <= after_BCD;
+//     else if (c6 == 1) begin
+//         after_AEABC <= E;
+//     end
+// end
+
+// flow system_in, system_out, after_pump1;
+// flow mixer_in, incubator_in;
+
+// #MAP 'Pump1' '~'
+// assign after_pump1 = ~after_AEABC;
+
+// distribute@(c7, c8, c9, c10) begin
+//     if (c7 == 1) begin
+//         if (c10 == 1) begin
+//             system_in <= after_pump1;
+//         else if (c8 == 1) begin
+//             mixer_in <= after_pump1;
+//         else if (c9 == 1) begin
+//             incubator_in <= after_pump1;
+//         else
+//         end
+//     else if (c8 == 1 && c9 ==1) begin
+//             incubator_in <= mixer_in;
+//         end
+//     else
+//     end
+// end
+
+// flow mixer_out, incubator_out;
+// #MAP 'Mixer' '~'
+// assign mixer_out = ~mixer_in;
+
+// assign mixer_out = system_in;
+
+// #MAP 'Incubator' '~'
+// assign incubator_out = ~incubator_in;
+
+// // not shown from here for some reason
+
+// distribute@(c11, c12, c13, c14) begin
+//     if (c14 == 1) begin
+//         if (c11 == 1) begin
+//             system_out <= system_in;
+//         else if (c12 == 1) begin
+//             system_out <= mixer_out;
+//         else if (c13 == 1) begin
+//             system_out <= incubator_out;
+//         else
+//         end
+//     else
+//     end
+// end
+
+// flow res;
+
+// #MAP 'Pump2' '~'
+// assign res = ~system_out;
+
+// assign X = res;
+// assign Y = res;
+// assign Z = res;
+
+
+// endmodule
+
+// module incubator(
+//     finput A, B, C, D, E,
+//     foutput X, Y, Z,
+//     control [0:16] valve
+// );
+
+// flow after_BCD, after_resorviors;
+
+//     distribute@(valve[0:2]) begin
+//         if (valve[0] == 1) begin
+//             after_BCD <= after_BCD + B;
+//         end
+//         if (valve[1] == 1) begin
+//             after_BCD <= after_BCD + C;
+//         end
+//         if (valve[2] == 1) begin
+//             after_BCD <= after_BCD + D;
+//         end
+//     end
+
+//     distribute@(valve[3:5]){
+//         if (valve[3] == 1) begin
+//             after_resorviors <= after_resorviors + A;
+//         end
+//         if (valve[4] == 1) begin
+//             after_BCD <= after_resorviors + after_BCD;
+//         end
+//         if (valve[5] == 1) begin
+//             after_BCD <= after_resorviors + E;
+//         end
+//     }
+
+//     flow after_pump1;
+
+//     #MAP 'Pump1' '~'
+//     assign after_pump1 = ~after_resorviors;
+
+// endmodule
+
+module incubator(
+    finput A, B, C, D, E,
+    foutput X, Y, Z,
+    control [0:16] valve
+);
+
+    flow after_resorvoir;
+
+    distribute@(valve[0]) begin
+        if (valve[0] == 1) begin
+            after_resorvoir <= B;
+        end
+    end
+
+endmodule
