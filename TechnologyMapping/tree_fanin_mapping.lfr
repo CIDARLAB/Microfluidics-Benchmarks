@@ -1,8 +1,7 @@
-module tree_fanin(i1[0:7], out);
-
-    finput [0:7] i1;
-    foutput out;
-
+module tree_fanin(
+    finput [0:7] i1,
+    foutput out
+);
     // This implicitly means that 
     // we can generate a tree
     #MAP 'TREE' 'assign'
