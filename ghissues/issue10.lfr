@@ -1,0 +1,15 @@
+module issue10(
+    finput A, B, C, D, E,
+    foutput X, Y, Z,
+    control [0:16] valve
+);
+
+    flow after_resorvoir;
+
+    distribute@(valve[0]) begin
+        if (valve[0] == 1) begin
+            after_resorvoir <= B;
+        end
+    end
+
+endmodule

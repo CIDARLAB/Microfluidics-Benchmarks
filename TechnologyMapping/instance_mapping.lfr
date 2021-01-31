@@ -1,0 +1,37 @@
+module one_to_one_mapping(in, out);
+
+    finput in;
+    foutput out;
+    
+    flow temp1;
+    flow temp2;
+    
+    assign temp1 = in;
+
+    #MAP  'MIXER' '~'
+    assign temp2 = ~temp1;
+    assign out = temp2;
+
+endmodule
+
+
+module full_system(
+    finput in,
+    foutput out
+);
+
+    flow temp_in, temp_out;
+
+    assign temp_in = in;
+
+    one_to_one_mapping inst1(
+        .in(temp_in),
+        .out(temp_out)
+    );
+
+    assign out = temp_out;
+
+endmodule
+
+
+

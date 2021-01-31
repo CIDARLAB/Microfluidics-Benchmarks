@@ -1,0 +1,12 @@
+module tree_fanout(i1, out [0:7]);
+
+    finput i1;
+    foutput [0:7] out;
+
+    //This implicitly means that 
+    //we can generate a tree
+    #MAP 'YTREE' 'assign'
+    assign out[0:7] = i1;
+
+endmodule
+
