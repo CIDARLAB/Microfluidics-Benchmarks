@@ -1,50 +1,120 @@
 //C.J.Wang, A. Bergmann, B. Lin, K.Kim and A. Levchenko, Sci. Signaling, 2012, 5, ra17
 
 module seeding(
-    control c0, c1, c2, c3, c4, c5, c6,
-    finput seeding0, seeding1, buffer, stimuli,
-    foutput waste
+    control [6:0] c,
+    finput buffer, stimuli,
+    foutput seeding_out, waste
 );
 
-    storage [3:0] culture;
+    storage culture;
 
-    flow c0_out;
+    distribute@(c[0:1]) begin 
+        if (c[0] == 1)
+            culture <= buffer;
+        if (c[1] == 1)
+            culture <= stimuli;
+        // if both 1, and buffer v > stimuli v, then cutlure = buffer and vice versa.
+    end
 
-    assign c0_out = c0;
-    assign c0_out = seeding0;
+    // seeding
+    flow [1:0] seeding1;
+    flow [3:0] seeding2;
+    flow [5:0] seeding3;
+    flow [7:0] seeding4;
 
-    flow seeding0_out;
-    
-    assign seeding0_out = seeding1;
-    assign seeding0_out = c0_out;
+    distribute@(c[2:5]) begin 
+        if (c[2] == 1)
+            seeding1[0:1] <= culture;
+        if (c[3] == 1) begin 
+            seeding2[0:1] <= seeding1[0:1];
+            seeding2[2:3] <= culture;
+        end
+        if (c[4] == 1) begin 
+            seeding3[0:3] <= seeding2[0:3];
+            seeding3[4:5] <= culture;
+        end
+        if (c[5] == 1) begin 
+            seeding4[0:5] <= seeding3[0:5];
+            seeding4[6:7] <= culture;
+        end
+    end
 
-    assign culture = seeding0_out;
+    flow seeding_total;
 
-    flow mixing_in, mixing_out, buffer_out, stimuli_out;
+    assign seeding_total = seeding4[0:7];
 
-    assign buffer_out = buffer;
-    assign buffer_out = c1;
-    assign stimuli_out = stimuli;
-    //error, create distribute block
-    // distribute@(c2) begin
-    //     if(c2 == 1)
-    //         stimuli_out <= stimuli;
+    distribute@(c[6]) begin 
+        if(c[6] == 1) 
+            seeding_out <= seeding_total;
+    end
+
+    // waste
+    flow [7:0] waste1; 
+    flow [7:0] waste2; 
+    flow [7:0] waste3;
+    flow [7:0] waste4; 
+    flow [7:0] waste5; 
+    flow [7:0] waste6;
+
+    assign waste1[1:5] = culture;
+
+    distribute@(c[2], c[4]) begin
+    // first control level 
+        if (c[4] == 1) 
+            waste1[6:7] <= culture;
+        if (c[2] == 1)
+            waste1[0] <= culture;
+    end
+
+    assign waste2[0:3] = waste1[0:3];
+
+    distribute@(c[3]) begin 
+      // second control level
+        if (c[3] == 1)
+            waste2[4:7] <= waste1[4:7];
+    end
+
+    assign waste3[0:1] = waste2[0:1];
+
+    distribute@(c[2]) begin 
+        // // third control level
+        if (c[2] == 1)
+            waste3[2:7] <= waste2[2:7];
+    end
+
+    assign waste4[3:7] = waste3[3:7];
+
+    distribute@(c[3]) begin 
+     // fourth control level
+        if (c[3] == 1) 
+            waste4[0:2] <= waste3[0:2];
+    end
+  
+    // fifth control level
+    assign waste5[5:7] = waste4[5:7];
+
+    distribute@(c[4]) begin 
+        if (c[4] == 1)
+            waste5[0:4] <= waste4[0:4];
+    end
+
+    // sixth control level
+    assign waste6[7] = waste5[7];
+
+    distribute@(c[5]) begin 
+        if (c[5] == 1)
+            waste6[0:6] <= waste5[0:6];
+    end
+
+    assign waste = waste6[0:7];
+
+    // //
     // end
-    // assign stimuli_out = c2;
-    assign mixing_in = stimuli_out;
-    assign mixing_in = buffer_out;
 
-    #MAP 'Mixing' '~'
-    assign mixing_out = ~mixing_in;
+    // flow [7:0] waste_midpoint;
 
-    //specify more
-    assign culture = mixing_out;
-    assign culture = c3;
-    assign culture = c4;
-    assign culture = c5;
-    assign culture = c6;
+    // assign waste_midpoint[0:7] = waste3[0:7];
 
-    assign waste = culture;
 
 
 endmodule
