@@ -1,78 +1,147 @@
 //G. A. Coolsey, C. G. Sip and A. Folch, Lab Chip, 2009, 9, 417-426
      
 
+// module inlet16(
+//     finput [0:15] in,
+//     foutput out,
+//     control x9, x1,
+//     control inlet
+// );
+
+//     flow mux;
+//     flow mixer;
+//     flow mixer_in, mixer_out;
+//     flow bypass1, bypass2;
+//     flow bypass_in, bypass_out;
+//     control x9, x1;
+
+//     flow chamber;
+
+//     flow flowcontroller;
+
+//     // assign temp1[15:0] = in;
+
+//     // mux here
+//     assign mux = in[0:15] ;
+//     assign mux = x9;
+
+//     // mixer
+//     // distribution block
+//     #MAP 'Mixer' '~'
+//     assign mixer_out = ~mixer_in;
+
+//     distribute@(x1)
+//     begin
+//         if (x1 == 1) 
+//         begin
+//             bypass_out <= bypass_in;
+//         end
+//         else 
+//         begin
+//             mixer_in <= bypass_in;
+//             bypass_out <= mixer_out;
+//         end
+//     end
+
+//     // assign temp3 = temp2 + cout;
+
+//     flow valve1_in, valve1_out;
+
+//     assign valve1_in = mux + bypass_out;
+
+//     distribute@(x1) 
+//     begin
+//         if (x1 == 1) begin
+//             valve1_out <= valve1_in;
+//         end
+//     end
+
+    
+//     // assign bypass_out = mixer;
+//     // assign bypass_out = mux;
+    
+//     // assign bypass2 = mixer;
+//     // assign bypass2 = bypass_out;
+
+//     // // chamber
+//     // assign chamber = bypass2;
+//     // assign chamber = inlet;
+//     // assign bypass2 = chamber;
+
+//     // // flow controller
+//     // assign flowcontroller = chamber;
+//     // assign bypass2 = flowcontroller;
+
+//     // assign out = flowcontroller;
+
+// endmodule
+
 module inlet16(
-    finput [0:15] in,
-    foutput out,
-    control x9, x1,
-    control inlet
+    finput [15:0] inlet,
+    finput rinse, side_inlet,
+    foutput  out,
+    control [6:0] x
 );
 
-    flow mux;
-    flow mixer;
-    flow mixer_in, mixer_out;
-    flow bypass1, bypass2;
-    flow bypass_in, bypass_out;
-    control x9, x1;
+    flow mux_out;
 
-    flow chamber;
+    #MAP 'Multiplexer' '~'
+    assign mux_out = ~inlet[0:15];
+    assign mux_out = ~rinse;
 
-    flow flowcontroller;
+    flow bypass1_out, mixer_in, mixer_out;
 
-    // assign temp1[15:0] = in;
+    distribute@(x[0]) 
+    begin
+        if (x[0] == 1)
+            mixer_in <= mux_out;
+    end
 
-    // mux here
-    assign mux = in[0:15] ;
-    assign mux = x9;
+    distribute@(x[1])
+    begin 
+        if (x[1] == 1)
+            bypass1_out <= mux_out;
+    end
 
-    // mixer
-    // distribution block
     #MAP 'Mixer' '~'
     assign mixer_out = ~mixer_in;
 
-    distribute@(x1)
-    begin
-        if (x1 == 1) 
-        begin
-            bypass_out <= bypass_in;
-        end
-        else 
-        begin
-            mixer_in <= bypass_in;
-            bypass_out <= mixer_out;
-        end
+    distribute@(x[2])
+    begin 
+        if (x[2] == 1)
+            bypass1_out <= mixer_out;
     end
 
-    // assign temp3 = temp2 + cout;
-
-    flow valve1_in, valve1_out;
-
-    assign valve1_in = mux + bypass_out;
-
-    distribute@(x1) 
-    begin
-        if (x1 == 1) begin
-            valve1_out <= valve1_in;
-        end
+    flow bypass2_out, line1_out, flow_out;
+    
+    distribute@(x[3])
+    begin 
+        if (x[3] == 1)
+            bypass2_out <= bypass1_out;
     end
 
+    distribute@(x[4])
+    begin 
+        if (x[4] == 1)
+            line1_out <= bypass1_out;
+    end
+
+    storage chamber;
+
+    assign chamber = line1_out;
+
+    distribute@(x[5:6])
+    begin
+        if (x[5] == 1)
+            chamber <= side_inlet;
+
+        if (x[6] == 1)
+            chamber <= bypass2_out;
+    end
+
+    #MAP 'Flow Controller' '~'
+    assign flow_out = ~chamber;
+
+    assign out = flow_out + bypass2_out;
     
-    // assign bypass_out = mixer;
-    // assign bypass_out = mux;
-    
-    // assign bypass2 = mixer;
-    // assign bypass2 = bypass_out;
-
-    // // chamber
-    // assign chamber = bypass2;
-    // assign chamber = inlet;
-    // assign bypass2 = chamber;
-
-    // // flow controller
-    // assign flowcontroller = chamber;
-    // assign bypass2 = flowcontroller;
-
-    // assign out = flowcontroller;
-
 endmodule
-
