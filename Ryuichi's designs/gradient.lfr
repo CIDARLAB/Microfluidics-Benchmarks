@@ -1,0 +1,18 @@
+// S.K. Dertinger, D.T. Chiu, N.L. Jeon and G.M. Whitesides, Anal. Chem., 2001, 73, 1240-1246
+
+module gradient(
+    finput P, Q, R,
+    foutput [0:8] out
+);
+
+    assign out[0] = P;
+    assign out[1] = (1/9)*(6*P + 3*Q);
+    assign out[2] = (1/36)*(15*P + 18*Q + R);
+    assign out[3] = (5/84)*(4*P + 9*Q + 2*R);
+    assign out[4] = (1/42)*(5*P + 20*Q + 9*R);
+    assign out[5] = (1/126)*(6*P + 45*Q + 40*R);
+    assign out[6] = (1/84)*(P + 18*Q + 37*R);
+    assign out[7] = (1/12)*(Q + 6*R);
+    assign out[8] = (1/3)*R;
+
+endmodule
