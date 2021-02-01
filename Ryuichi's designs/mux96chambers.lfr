@@ -2,12 +2,13 @@
 module mux96chambers(
     finput [0:15] in,
     foutput waste
-)
+);
 
-    flow mixer_in, mixer_out;
+    flow mixer_in;
+    flow mixer_out;
     flow pump_in, pump_out;
 
-    //in de mux?
+    //in de mux
     flow inDeMux, outMux;
 
     storage [0:95] chamber;
