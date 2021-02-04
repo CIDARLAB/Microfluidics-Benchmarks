@@ -3,7 +3,7 @@ DEVICE grad_gen_v
 LAYER FLOW
  H BANK b of 4  PORT portRadius=100  spacing=1500 ;
 NODE n1, n2, n3, n4, n5;
-V GRADIENT GENERATOR g 3 to 7 numBends=5 bendSpacing=100 bendLength=500 channelWidth=100;
+V GRADIENT GENERATOR g 3 to 7 numberOfBends=5 bendSpacing=100 bendLength=500 channelWidth=100;
  PORT p1 portRadius=100;
 
 CHANNEL c1 from b 1 to n1 4 channelWidth=100;

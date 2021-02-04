@@ -5,7 +5,7 @@ LAYER FLOW
 V BANK pb1, pb2 of PORT portRadius=100 spacing=1200 ;
 PORT p1 portRadius=100;
 NODE n1;
-H GRADIENT GENERATOR g 1 to 4 numBends=10 bendSpacing=100 bendLength=500 
+H GRADIENT GENERATOR g 1 to 4 numberOfBends=10 bendSpacing=100 bendLength=500 
     channelWidth=100;
 V MUX m1 1 to 4 spacing=500 flowChannelWidth=100 controlChannelWidth=50;
 V TREE t1 4 to 1 spacing=500 flowChannelWidth=100;

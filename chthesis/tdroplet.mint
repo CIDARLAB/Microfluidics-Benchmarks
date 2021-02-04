@@ -3,9 +3,9 @@ DEVICE tdroplet
 LAYER FLOW
 
 H DROPLET GENERATOR T t1 radius=100 oilChannelWidth=100 waterChannelWidth=20;
-H MIXER x1 numBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
+H MIXER x1 numberOfBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
 H DROPLET GENERATOR T t2 radius=100 oilChannelWidth=100 waterChannelWidth=20;
-H MIXER x2 numBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
+H MIXER x2 numberOfBends=5 bendSpacing=50 bendLength=1000 channelWidth=100;
 V MUX m1 1 to 2 spacing=4000 flowChannelWidth=100 controlChannelWidth=50;
 H LONG CELL TRAP ct1 numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=50 feedingChannelWidth=100 ;
 PORT p1 portRadius=100;
