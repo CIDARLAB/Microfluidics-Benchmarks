@@ -1,10 +1,10 @@
-DEVICE tree
+DEVICE ytree
 
 LAYER FLOW
 
 PORT p_in, p_out1, p_out2, p_out3, p_out4;
 
-TREE t 1 to 4;
+YTREE t 1 to 4;
 
 CHANNEL ci1 from p_in to t 1 channelWidth=200;
 CHANNEL co1 from t 2 to p_out1 channelWidth=200;
