@@ -14,7 +14,7 @@ CHANNEL c2 from x1 2 to m1 1 channelWidth=100;
 CHANNEL c3 from t2 1 to x2 1 channelWidth=100;
 CHANNEL c4 from x2 2 to m1 2 channelWidth=100;
 CHANNEL c5 from m1 3 to ct1 1 channelWidth=100;
-CHANNEL c6 from ct1 2 to p1 4 channelWidth=100;
+CHANNEL c6 from ct1 2 to p1 channelWidth=100;
 
 END LAYER
 

@@ -66,8 +66,8 @@ END LAYER
 LAYER CONTROL
 
 PORT cp1, cp2, cp3, cp4, cp5, cp6 portRadius=100;
-CHANNEL cm1 from cp1 2 to m2 4 channelWidth=50;
-CHANNEL cm2 from cp2 3 to m2 5 channelWidth=50;
+CHANNEL cm1 from cp1 to m2 4 channelWidth=50;
+CHANNEL cm2 from cp2 to m2 5 channelWidth=50;
 VALVE v1 on c1 w=150 l=300;
 VALVE v2 on c2 w=150 l=300;
 VALVE v3 on c3 w=150 l=300;
@@ -83,7 +83,7 @@ CHANNEL cc4 from v4 3 to v5 1 channelWidth=50;
 CHANNEL cc5 from v5 3 to v6 1 channelWidth=50;
 CHANNEL cc6 from v6 3 to v7 1 channelWidth=50;
 CHANNEL cc7 from v7 3 to v8 1 channelWidth=50;
-CHANNEL cc8 from v8 3 to cp3 1 channelWidth=50;
+CHANNEL cc8 from v8 3 to cp3 channelWidth=50;
 VALVE v9 on c49 w=300 l=150;
 VALVE v10 on c9 w=300 l=150;
 VALVE v11 on c10 w=300 l=150;

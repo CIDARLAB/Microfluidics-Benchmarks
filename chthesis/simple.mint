@@ -5,10 +5,10 @@ PORT p1, p2, p3 portRadius=100;
 NODE n1;
 H LONG CELL TRAP ct1 numberOfChambers=10 chamberWidth=100 chamberLength=100
 chamberSpacing=50 channelWidth=100 ;
-CHANNEL c1 from p1 3 to n1 1 channelWidth=100;
-CHANNEL c2 from p2 1 to n1 3 channelWidth=100;
+CHANNEL c1 from p1 to n1 1 channelWidth=100;
+CHANNEL c2 from p2 to n1 3 channelWidth=100;
 CHANNEL c3 from n1 2 to ct1 1 channelWidth=100;
-CHANNEL c4 from ct1 2 to p3 4 channelWidth=100;
+CHANNEL c4 from ct1 2 to p3 channelWidth=100;
 END LAYER
 
 LAYER CONTROL
