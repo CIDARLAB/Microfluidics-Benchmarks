@@ -5,7 +5,7 @@ H TREE m1 1 to 15 spacing=1200 flowChannelWidth=100;
 H TREE m2 15 to 1 spacing=1200 flowChannelWidth=100;
  PORT p1, p2 portRadius=100;
 SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16, ct17, ct18, ct19, ct20, ct21, ct22, ct23, ct24, ct25, ct26, ct27, ct28, ct29, ct30, ct31, ct32, ct33, ct34, ct35, ct36, ct37, ct38, ct39, ct40, ct41, ct42, ct43, ct44, ct45, ct46, ct47, ct48, ct49, ct50, ct51, ct52, ct53, ct54, ct55, ct56, ct57, ct58, ct59, ct60, ct61, ct62, ct63, ct64, ct65, ct66, ct67, ct68, ct69, ct70, ct71, ct72, ct73, ct74, ct75, ct76, ct77, ct78, ct79, ct80, ct81, ct82, ct83, ct84, ct85, ct86, ct87, ct88, ct89, ct90, ct91, ct92, ct93, ct94, ct95, ct96, ct97, ct98, ct99, ct100, ct101, ct102, ct103, ct104, ct105, ct106, ct107, ct108, ct109, ct110, ct111, ct112, ct113, ct114, ct115, ct116, ct117, ct118, ct119, ct120, ct121, ct122, ct123, ct124, ct125, ct126, ct127, ct128, ct129, ct130, ct131, ct132, ct133, ct134, ct135, ct136, ct137, ct138, ct139, ct140, ct141, ct142, ct143, ct144, ct145, ct146, ct147, ct148, ct149, ct150, ct151, ct152, ct153, ct154, ct155, ct156, ct157, ct158, ct159, ct160, ct161, ct162, ct163, ct164, ct165, ct166, ct167, ct168, ct169, ct170, ct171, ct172, ct173, ct174, ct175, ct176, ct177, ct178, ct179, ct180, ct181, ct182, ct183, ct184, ct185, ct186, ct187, ct188, ct189, ct190, ct191, ct192, ct193, ct194, ct195, ct196, ct197, ct198, ct199, ct200, ct201, ct202, ct203, ct204, ct205, ct206, ct207, ct208, ct209, ct210, ct211, ct212, ct213, ct214, ct215, ct216, ct217, ct218, ct219, ct220, ct221, ct222, ct223, ct224, ct225 chamberWidth=100 chamberLength=100 channelWidth=100;
-CHANNEL c1 from p1 3 to m1 1 channelWidth=100;
+CHANNEL c1 from p1 to m1 1 channelWidth=100;
 CHANNEL c2 from m1 2 to ct1 1 channelWidth=100;
 CHANNEL c3 from m1 3 to ct2 1 channelWidth=100;
 CHANNEL c4 from m1 4 to ct3 1 channelWidth=100;
@@ -485,7 +485,7 @@ CHANNEL c448 from ct222 3 to m2 12 channelWidth=100;
 CHANNEL c449 from ct223 3 to m2 13 channelWidth=100;
 CHANNEL c450 from ct224 3 to m2 14 channelWidth=100;
 CHANNEL c451 from ct225 3 to m2 15 channelWidth=100;
-CHANNEL c452 from m2 16 to p2 1 channelWidth=100;
+CHANNEL c452 from m2 16 to p1 channelWidth=100;
 
 END LAYER
 

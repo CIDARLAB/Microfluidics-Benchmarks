@@ -24,7 +24,7 @@ CHANNEL c11 from b1_1 to t1 1 channelWidth=100;
 CHANNEL c12 from b1_2 to t1 2 channelWidth=100;
 CHANNEL c13 from b1_3 to t1 3 channelWidth=100;
 CHANNEL c14 from b1_4 to t1 4 channelWidth=100;
-CHANNEL c15 from t1 5 to p1 4 channelWidth=100;
+CHANNEL c15 from t1 5 to p1 channelWidth=100;
 
 END LAYER
 

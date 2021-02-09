@@ -5,7 +5,7 @@ H TREE m1 1 to 7 spacing=1200 flowChannelWidth=100;
 H TREE m2 7 to 1 spacing=1200 flowChannelWidth=100;
  PORT p1, p2 portRadius=100;
 SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16, ct17, ct18, ct19, ct20, ct21, ct22, ct23, ct24, ct25, ct26, ct27, ct28, ct29, ct30, ct31, ct32, ct33, ct34, ct35, ct36, ct37, ct38, ct39, ct40, ct41, ct42, ct43, ct44, ct45, ct46, ct47, ct48, ct49 chamberWidth=100 chamberLength=100 channelWidth=100;
-CHANNEL c1 from p1 3 to m1 1 channelWidth=100;
+CHANNEL c1 from p1 to m1 1 channelWidth=100;
 CHANNEL c2 from m1 2 to ct1 1 channelWidth=100;
 CHANNEL c3 from m1 3 to ct2 1 channelWidth=100;
 CHANNEL c4 from m1 4 to ct3 1 channelWidth=100;
@@ -117,7 +117,7 @@ CHANNEL c96 from ct46 3 to m2 4 channelWidth=100;
 CHANNEL c97 from ct47 3 to m2 5 channelWidth=100;
 CHANNEL c98 from ct48 3 to m2 6 channelWidth=100;
 CHANNEL c99 from ct49 3 to m2 7 channelWidth=100;
-CHANNEL c100 from m2 8 to p2 1 channelWidth=100;
+CHANNEL c100 from m2 8 to p1 channelWidth=100;
 
 END LAYER
 

@@ -23,7 +23,7 @@ CHANNEL c9 from ctb_1 to t1 1 channelWidth=100;
 CHANNEL c10 from ctb_2 to t1 2 channelWidth=100;
 CHANNEL c11 from ctb_3 to t1 3 channelWidth=100;
 CHANNEL c12 from ctb_4 to t1 4 channelWidth=100;
-CHANNEL c13 from t1 5 to p1 4 channelWidth=100;
+CHANNEL c13 from t1 5 to p1 channelWidth=100;
 
 END LAYER
 
