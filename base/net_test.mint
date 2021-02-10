@@ -11,7 +11,7 @@ END LAYER
 
 LAYER CONTROL
  PORT p3 portRadius=100;
-VALVE v1 on c1 w=300 l=100;
-VALVE v2 on c2 w=300 l=100;
+VALVE v1 on c1 width=300 length=100;
+VALVE v2 on c2 width=300 length=100;
 NET net1 from p3 1 to v1 4, v2 4 channelWidth=50;
 END LAYER

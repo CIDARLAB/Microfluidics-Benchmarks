@@ -16,8 +16,8 @@ END LAYER
 LAYER CONTROL
  PORT cp1, cp2 portRadius=100;
 
-VALVE v10 on c9 w=200 l=100;
-VALVE v11 on c10 w=200 l=100;
+VALVE v10 on c9 width=200 length=100;
+VALVE v11 on c10 width=200 length=100;
 
 NET cntrlnet1 from cp1 1 to v11 2, v10 2 channelWidth=50;
 

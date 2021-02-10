@@ -32,8 +32,8 @@ LAYER CONTROL
 PORT cp1, cp2, cp3, cp4 portRadius=100;
 CHANNEL cc1 from cp1 to m1 4 channelWidth=50;
 CHANNEL cc2 from cp2 to m1 5 channelWidth=50;
-VALVE v1 on c7 w=150 l=300;
-VALVE v2 on c11 w=150 l=300;
+VALVE v1 on c7 width=150 length=300;
+VALVE v2 on c11 width=150 length=300;
 CHANNEL cc3 from cp3 to v1 channelWidth=50;
 CHANNEL cc4 from cp4 to v2 channelWidth=50;
 

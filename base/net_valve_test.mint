@@ -36,14 +36,14 @@ CHANNEL cm1 from cp1 2 to m2 4 channelWidth=50;
 CHANNEL cm2 from cp2 3 to m2 5 channelWidth=50;
 
 
-VALVE v9 on c49 w=200 l=100;
-VALVE v10 on c9 w=200 l=100;
-VALVE v11 on c10 w=200 l=100;
-VALVE v12 on c11 w=200 l=100;
-VALVE v13 on c12 w=200 l=100;
-VALVE v14 on c13 w=200 l=100;
-VALVE v15 on c14 w=200 l=100;
-VALVE v16 on c15 w=200 l=100;
+VALVE v9 on c49 width=200 length=100;
+VALVE v10 on c9 width=200 length=100;
+VALVE v11 on c10 width=200 length=100;
+VALVE v12 on c11 width=200 length=100;
+VALVE v13 on c12 width=200 length=100;
+VALVE v14 on c13 width=200 length=100;
+VALVE v15 on c14 width=200 length=100;
+VALVE v16 on c15 width=200 length=100;
 NET nt1 from cp4 1 to v16 4, v10 4, v11 4, v12 4, v13 4, v14 4, v15 4, v9 4 channelWidth=50;
 
 

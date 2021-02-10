@@ -16,10 +16,10 @@ END LAYER
 
 LAYER CONTROL
 
-VALVE v1 on c1 w=300 l=100;
-VALVE v2 on c2 w=300 l=100;
-VALVE v3 on c3 w=300 l=100;
-VALVE v4 on c4 w=300 l=100;
+VALVE v1 on c1 width=300 length=100;
+VALVE v2 on c2 width=300 length=100;
+VALVE v3 on c3 width=300 length=100;
+VALVE v4 on c4 width=300 length=100;
 
  PORT cp1 portRadius=100;
 

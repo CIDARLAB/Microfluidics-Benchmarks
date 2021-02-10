@@ -65,36 +65,36 @@ LAYER CONTROL
 V BANK cpb1 of 4  PORT portRadius=100  spacing=1500 ;
 V BANK cpb2 of 3  PORT portRadius=100  spacing=1500 ;
 
-VALVE v1 on c6 w=100 l=300;
-VALVE v2 on c7 w=100 l=300;
-VALVE v3 on c8 w=100 l=300;
+VALVE v1 on c6 width=100 length=300;
+VALVE v2 on c7 width=100 length=300;
+VALVE v3 on c8 width=100 length=300;
 
-VALVE v4 on c9 w=300 l=100;
-VALVE v5 on c10 w=300 l=100;
-VALVE v6 on c11 w=300 l=100;
-VALVE v7 on c12 w=300 l=100;
+VALVE v4 on c9 width=300 length=100;
+VALVE v5 on c10 width=300 length=100;
+VALVE v6 on c11 width=300 length=100;
+VALVE v7 on c12 width=300 length=100;
 
-VALVE v8 on c13 w=100 l=300;
-VALVE v9 on c14 w=100 l=300;
-VALVE v10 on c15 w=100 l=300;
+VALVE v8 on c13 width=100 length=300;
+VALVE v9 on c14 width=100 length=300;
+VALVE v10 on c15 width=100 length=300;
 
-VALVE v11 on c16 w=300 l=100;
-VALVE v12 on c17 w=300 l=100;
-VALVE v13 on c18 w=300 l=100;
-VALVE v14 on c19 w=300 l=100;
+VALVE v11 on c16 width=300 length=100;
+VALVE v12 on c17 width=300 length=100;
+VALVE v13 on c18 width=300 length=100;
+VALVE v14 on c19 width=300 length=100;
 
-VALVE v15 on c20 w=100 l=300;
-VALVE v16 on c21 w=100 l=300;
-VALVE v17 on c22 w=100 l=300;
+VALVE v15 on c20 width=100 length=300;
+VALVE v16 on c21 width=100 length=300;
+VALVE v17 on c22 width=100 length=300;
 
-VALVE v18 on c23 w=300 l=100;
-VALVE v19 on c24 w=300 l=100;
-VALVE v20 on c25 w=300 l=100;
-VALVE v21 on c26 w=300 l=100;
+VALVE v18 on c23 width=300 length=100;
+VALVE v19 on c24 width=300 length=100;
+VALVE v20 on c25 width=300 length=100;
+VALVE v21 on c26 width=300 length=100;
 
-VALVE v22 on c27 w=100 l=300;
-VALVE v23 on c28 w=100 l=300;
-VALVE v24 on c29 w=100 l=300;
+VALVE v22 on c27 width=100 length=300;
+VALVE v23 on c28 width=100 length=300;
+VALVE v24 on c29 width=100 length=300;
 
 NET n1 from cpb1_1 to v1 3, v2 3, v3 3 channelWidth=50;
 

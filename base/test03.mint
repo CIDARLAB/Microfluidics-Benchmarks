@@ -14,8 +14,8 @@ END LAYER
 
 LAYER CONTROL
  PORT cp1, cp2 portRadius=500;
-VALVE v1 on c1 w=1000 l=500;
-VALVE v2 on c2 w=1000 l=500;
+VALVE v1 on c1 width=1000 length=500;
+VALVE v2 on c2 width=1000 length=500;
 CHANNEL c5 from cp1 2 to v1 4 channelWidth=500;
 CHANNEL c6 from cp2 2 to v2 4 channelWidth=500;
 

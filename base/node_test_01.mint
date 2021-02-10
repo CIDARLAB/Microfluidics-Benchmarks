@@ -15,9 +15,9 @@ END LAYER
 
 LAYER CONTROL
 
-VALVE v1 on c1 w=100 l=200;
-VALVE v2 on c3 w=200 l=100;
-VALVE v3 on c2 w=200 l=100;
+VALVE v1 on c1 width=100 length=200;
+VALVE v2 on c3 width=200 length=100;
+VALVE v3 on c2 width=200 length=100;
  PORT cp1, cp2, cp3 portRadius=100;
 
 CHANNEL cca from cp1 3 to v1 1 channelWidth=20;
