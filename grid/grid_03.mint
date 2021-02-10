@@ -40,32 +40,32 @@ V BANK cpb2 of 2  PORT portRadius=100  spacing=1500 ;
 VALVE v1 on c5 width=100 length=300;
 VALVE v2 on c6 width=100 length=300;
 
-NET n1 from cpb1_1 to v1 3, v2 3 channelWidth=50;
+NET n1 from cpb1_1 to v1, v2 channelWidth=50;
 
 VALVE v3 on c7 width=300 length=100;
 VALVE v4 on c8 width=300 length=100;
 VALVE v5 on c9 width=300 length=100;
 
-CHANNEL cc1 from v3 2 to v4 4 channelWidth=50;
-CHANNEL cc2 from v4 2 to v5 4 channelWidth=50;
-CHANNEL cc3 from v5 2 to cpb2_1 channelWidth=50;
+CHANNEL cc1 from v3 to v4 channelWidth=50;
+CHANNEL cc2 from v4 to v5 channelWidth=50;
+CHANNEL cc3 from v5 to cpb2_1 channelWidth=50;
 
 VALVE v6 on c10 width=100 length=300;
 VALVE v7 on c11 width=100 length=300;
 
-NET n2 from cpb1_2 to v6 3, v7 3 channelWidth=50;
+NET n2 from cpb1_2 to v6, v7 channelWidth=50;
 
 VALVE v8 on c12 width=300 length=100;
 VALVE v9 on c13 width=300 length=100;
 VALVE v10 on c14 width=300 length=100;
 
-CHANNEL cc4 from v8 2 to v9 4 channelWidth=50;
-CHANNEL cc5 from v9 2 to v10 4 channelWidth=50;
-CHANNEL cc6 from v10 2 to cpb2_2 channelWidth=50;
+CHANNEL cc4 from v8 to v9 channelWidth=50;
+CHANNEL cc5 from v9 to v10 channelWidth=50;
+CHANNEL cc6 from v10 to cpb2_2 channelWidth=50;
 
 VALVE v11 on c15 width=100 length=300;
 VALVE v12 on c16 width=100 length=300;
 
-NET n3 from cpb1_3 to v11 3, v12 3 channelWidth=50;
+NET n3 from cpb1_3 to v11, v12 channelWidth=50;
 
 END LAYER
