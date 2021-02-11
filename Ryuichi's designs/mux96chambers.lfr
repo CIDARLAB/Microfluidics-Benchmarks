@@ -1,0 +1,30 @@
+// R. Gomez-Sjoberg, A. A. Leyrat, D. M. Pirone, C. S. Chen and S. R. Quake, Anal. Chem., 2007, 79, 8557-8563
+module mux96chambers(
+    finput [0:15] in,
+    foutput waste
+);
+
+    flow mixer_in;
+    flow mixer_out;
+    flow pump_in, pump_out;
+
+    //in de mux
+    flow inDeMux, outMux;
+
+    storage [0:95] chamber;
+
+    assign mixer_in = in[0:15];
+    #MAP 'Mixer' '~'
+    assign mixer_out = ~mixer_in;
+
+    assign pump_in = mixer_out;
+    #MAP 'Pump' '~'
+    assign pump_out = ~pump_in;
+
+    assign inDeMux = pump_out;
+    assign chamber[0:95] = inDeMux;
+    assign outMux = chamber[0:95];
+
+    assign waste = outMux;
+
+endmodule
