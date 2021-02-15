@@ -8,8 +8,10 @@ module dx11(
     
     assign injected_droplets = in1 % 100  + in2;
 
+    flow sort_candidates1, sort_candidates2, temp_winners;
+    
     #MAP 'MIXER' '~'
-    flow sort_candidates1 = ~(injected_droplets);
+    assign sort_candidates1 = ~(injected_droplets);
 
     assign temp_winners = sort_candidates1 - waste1;
     
