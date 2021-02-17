@@ -1,0 +1,11 @@
+// Based on the design by Helen Huang
+
+module dx15(
+    finput in1, 
+    foutput collection, waste
+);
+    flow incubated_droplets;
+    assign incubated_droplets = ~(in1%100);
+    assign collection = incubated_droplets - waste;
+
+endmodule
