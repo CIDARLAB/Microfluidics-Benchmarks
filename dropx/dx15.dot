@@ -1,0 +1,9 @@
+strict digraph "" {
+	in1 -> "in1_METER_(%)_0";
+	incubated_droplets -> "incubated_droplets_SIEVE_(-)_waste_2";
+	"in1_METER_(%)_0" -> "in1_METER_(%)_0_PROCESS_(~)_1";
+	val_1 -> "in1_METER_(%)_0";
+	"in1_METER_(%)_0_PROCESS_(~)_1" -> incubated_droplets;
+	"incubated_droplets_SIEVE_(-)_waste_2" -> collection;
+	"incubated_droplets_SIEVE_(-)_waste_2" -> waste;
+}

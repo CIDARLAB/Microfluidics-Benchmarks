@@ -1,0 +1,12 @@
+strict digraph "" {
+	in1 -> "in1_PROCESS_(~)_0";
+	in1 -> "in1_DILUTE_(*)_2";
+	in2 -> "in2_DILUTE_(*)_3";
+	"in1_PROCESS_(~)_0" -> "in1_PROCESS_(~)_0_PROCESS_(&)_1";
+	"in1_PROCESS_(~)_0_PROCESS_(&)_1" -> out1;
+	"in1_DILUTE_(*)_2" -> "in1_DILUTE_(*)_2_MIX_(+)_in2_DILUTE_(*)_3_4";
+	val_1 -> "in1_DILUTE_(*)_2";
+	"in2_DILUTE_(*)_3" -> "in1_DILUTE_(*)_2_MIX_(+)_in2_DILUTE_(*)_3_4";
+	val_2 -> "in2_DILUTE_(*)_3";
+	"in1_DILUTE_(*)_2_MIX_(+)_in2_DILUTE_(*)_3_4" -> out1;
+}

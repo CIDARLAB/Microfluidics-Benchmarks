@@ -1,0 +1,15 @@
+strict digraph "" {
+	in1 -> "in1_METER_(%)_0";
+	in2 -> "in2_METER_(%)_1";
+	in3 -> "in3_MIX_(+)_merged_droplets_3";
+	merged_droplets -> "in3_MIX_(+)_merged_droplets_3";
+	"in1_METER_(%)_0" -> "in1_METER_(%)_0_MIX_(+)_in2_METER_(%)_1_2";
+	val_1 -> "in1_METER_(%)_0";
+	"in2_METER_(%)_1" -> "in1_METER_(%)_0_MIX_(+)_in2_METER_(%)_1_2";
+	val_2 -> "in2_METER_(%)_1";
+	"in1_METER_(%)_0_MIX_(+)_in2_METER_(%)_1_2" -> merged_droplets;
+	injected_droplets -> "injected_droplets_SIEVE_(-)_out1_4";
+	"in3_MIX_(+)_merged_droplets_3" -> injected_droplets;
+	"injected_droplets_SIEVE_(-)_out1_4" -> out1;
+	"injected_droplets_SIEVE_(-)_out1_4" -> out2;
+}

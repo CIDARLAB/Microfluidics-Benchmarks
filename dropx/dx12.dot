@@ -1,0 +1,17 @@
+strict digraph "" {
+	plasmids -> "plasmids_METER_(%)_0";
+	dig1 -> "dig1_MIX_(+)_enc_plasmids_1";
+	dig2 -> "dig1_MIX_(+)_enc_plasmids_1_MIX_(+)_dig2_2";
+	enc_plasmids -> "dig1_MIX_(+)_enc_plasmids_1";
+	injected_dig -> "injected_dig_PROCESS_(~)_3";
+	incubated_plasmids -> "discarded_droplets_SIEVE_(-)_incubated_plasmids_4";
+	digest_plasmids -> dig_plasmids;
+	discarded_droplets -> waste;
+	"plasmids_METER_(%)_0" -> enc_plasmids;
+	val_1 -> "plasmids_METER_(%)_0";
+	"dig1_MIX_(+)_enc_plasmids_1" -> "dig1_MIX_(+)_enc_plasmids_1_MIX_(+)_dig2_2";
+	"dig1_MIX_(+)_enc_plasmids_1_MIX_(+)_dig2_2" -> injected_dig;
+	"injected_dig_PROCESS_(~)_3" -> incubated_plasmids;
+	"discarded_droplets_SIEVE_(-)_incubated_plasmids_4" -> digest_plasmids;
+	"discarded_droplets_SIEVE_(-)_incubated_plasmids_4" -> discarded_droplets;
+}
