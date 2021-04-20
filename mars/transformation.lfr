@@ -1,0 +1,15 @@
+module transformation (
+    finput B, C,
+    foutput d_out
+);
+
+    // oil (carrier load) ignored
+    // add plasmid and cell suspension
+    flow mixture;
+    assign mixture = 500%B + 500%C;
+
+    // mixer is a heat shock mixer
+    #MAP 'shock' '~'
+    assign d_out = ~mixture;
+
+endmodule

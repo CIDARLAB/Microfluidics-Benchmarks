@@ -1,0 +1,21 @@
+module fluorescence (
+    finput B, C, D,
+    control c1
+);
+
+    // input toehold and trigger RNA
+    flow mixture;
+    storage chamber;
+
+    assign mixture = 200%B + 200%C;
+
+    // send the mixture to chamber
+    assign chamber = mixture;
+
+    // send master mix to chamber
+    distribute@(c1) begin 
+        if (c1 == 1)
+            chamber <= D;
+    end
+
+endmodule

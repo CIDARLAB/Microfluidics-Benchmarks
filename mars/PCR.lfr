@@ -1,0 +1,29 @@
+module PCR(
+    finput A,
+    foutput a_out,
+    control c1, c2
+);
+
+    flow mixer_in, mixed, incubated;
+    #MAP 'MIX' '+'
+    #MAP 'Incubator' '~'
+
+    // load PCR solution
+    distribute@(c1) begin 
+        if (c1 == 1) begin 
+            mixer_in <= A;
+            // mix
+            mixed <= +mixer_in;
+            // incubate
+            incubated <= ~mixed;
+        end
+    end
+
+    
+    // out
+    distribute@(c2) begin 
+        if (c2 == 1)
+            a_out <= incubated;
+    end
+
+endmodule
