@@ -9,19 +9,19 @@ module dx13(
 
     assign droplets_1 = in1%100;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign mix_1 = ~droplets_1;
 
     assign pico_1 = mix_1 + in2;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign mix_2 = ~pico_1;
 
     assign sorted_1 = mix_2 - sorted_trash_1;
 
     assign pico_2 = sorted_1 + in3;
     
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign mix_3 = ~pico_2;
 
     assign sorted_2 = mix_3 - sorted_trash_2;

@@ -10,13 +10,13 @@ module dx11(
 
     flow sort_candidates1, sort_candidates2, temp_winners;
     
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign sort_candidates1 = ~(injected_droplets);
 
     assign temp_winners = sort_candidates1 - waste1;
     
     
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign sort_candidates2 = ~(in3 + temp_winners);
 
     assign final_winners = sort_candidates2 - waste2;

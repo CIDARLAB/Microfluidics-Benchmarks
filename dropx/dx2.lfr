@@ -10,7 +10,7 @@ module dx2(
 
     assign merged_droplets = droplets1 + droplets2;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign incubated_droplets = ~merged_droplets;
 
     assign out1 = incubated_droplets - out2;

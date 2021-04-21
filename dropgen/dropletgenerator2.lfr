@@ -3,11 +3,11 @@ module dropletgenerator2(oilin1, oilin2, oilin3, oilin4, waterin, dropletout1, d
     finput oilin1, oilin2, oilin3, oilin4, waterin;
     foutput dropletout1, dropletout2;
 
-    # MAP 'DROPLET GENERATOR' '&''
+    # MAP "DROPLET GENERATOR" "&"
     # DROPLET_RATE = 5 kHz & DROPLET_SIZE = 100 um
     assign dropletout1 = oilin1 & oilin2 & waterin ;
 
-    # MAP 'DROPLET GENERATOR' '&''
+    # MAP "DROPLET GENERATOR" "&"
     # DROPLET_RATE = 6 kHz & DROPLET_SIZE = 50 um
     assign dropletout2 = oilin3 & oilin4 & waterin ;
 

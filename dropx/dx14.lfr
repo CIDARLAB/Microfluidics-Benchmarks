@@ -13,7 +13,7 @@ module dx14(
     
     flow join;
     
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign join = ~(droplet_inputs%100);
 
     assign keep = join - waste;

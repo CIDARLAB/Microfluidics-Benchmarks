@@ -16,7 +16,7 @@ module dx8(
 
     flow mixed_droplets;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign mixed_droplets = ~injected_droplets;
     flow temp;
     assign temp = mixed_droplets - out2;
