@@ -11,7 +11,7 @@ module dx12(
 
     assign injected_dig = enc_plasmids + dig1 + dig2;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign incubated_plasmids = ~injected_dig;
 
     assign digest_plasmids = incubated_plasmids - discarded_droplets;

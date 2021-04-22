@@ -9,7 +9,7 @@ module dx1(
 
     assign injected_droplets = base_droplets + in2;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign incubated_droplets = ~injected_droplets;
 
     assign sorted_droplets = incubated_droplets - discarded_droplets;
