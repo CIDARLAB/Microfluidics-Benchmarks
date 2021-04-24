@@ -6,11 +6,12 @@ module ligation (
 
     // mix T4 DNA lygase buffer, vector DNA, insert DNA, Nuclease-free water, and T4 DNA lygase
     flow mixture;
-    assign mixture = 500%B + 500%C + 500%D + 500%E + 500%F;
+    assign mixture = B%500 + C%500 + D%500 + E%500 + F%500;
 
     // incubate
     flow incubated;
-    #MAP 'Incubator' '~'
+    
+    #MAP "INCUBATOR" "~"
 
     distribute@(c1) begin 
         if (c1 == 1)

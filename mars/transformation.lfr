@@ -6,10 +6,10 @@ module transformation (
     // oil (carrier load) ignored
     // add plasmid and cell suspension
     flow mixture;
-    assign mixture = 500%B + 500%C;
+    assign mixture = B%500 + C%500;
 
     // mixer is a heat shock mixer
-    #MAP 'shock' '~'
+    #MAP "INCUBATOR" "~"
     assign d_out = ~mixture;
 
 endmodule

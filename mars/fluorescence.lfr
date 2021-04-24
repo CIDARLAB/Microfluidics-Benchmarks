@@ -7,7 +7,7 @@ module fluorescence (
     flow mixture;
     storage chamber;
 
-    assign mixture = 200%B + 200%C;
+    assign mixture = B%200 + C%200;
 
     // send the mixture to chamber
     assign chamber = mixture;
