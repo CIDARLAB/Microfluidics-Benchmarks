@@ -16,7 +16,7 @@ module rotary_cells(
         .c_select(c_inputs)
     );
 
-    #MAP 'ROTARY MIXER' '&'
+    #MAP "ROTARY MIXER" "&"
     assign temp_trap_input = &temp_input;
     
     mux_04_out mux_traps(
@@ -25,7 +25,7 @@ module rotary_cells(
         .c_select(c_cell_traps)
     );
 
-    #MAP 'TREE' 'assign'
+    #MAP "TREE" "assign"
     assign out_1 =  cell_traps;
 
 endmodule

@@ -28,7 +28,7 @@ end
 
 flow pump1_out;
 
-#MAP 'Pump1' '~'
+#MAP "Pump1" "~"
 assign pump1_out = ~resorvoirs_out; 
 
 flow waitroom1, mixer_left, incubator_left, midpath;
@@ -52,16 +52,16 @@ end
 
 flow waitroom2, mixer_right, incubator_right, pump2_in;
 
-#MAP 'Mixer_left_to_right' '~'
+#MAP "Mixer_left_to_right" "~"
 assign mixer_right = ~mixer_left;
 
-#MAP 'Mixer_right_to_left' '~'
+#MAP "Mixer_right_to_left" "~"
 assign mixer_left = mixer_right;
 
-#MAP 'Incubator_left_to_right' '~'
+#MAP "Incubator_left_to_right" "~"
 assign incubator_right = incubator_left;
 
-#MAP 'Incubator_right_to_left' '~'
+#MAP "Incubator_right_to_left" "~"
 assign incubator_left = incubator_right;
 
 distribute@(valve[10:13]) begin
@@ -82,7 +82,7 @@ end
 
 flow pump2_out;
 
-#MAP 'Pump2' '~'
+#MAP "Pump2" "~"
 assign pump2_out = ~pump2_in;
 
 distribute@(valve[14:16]) begin 

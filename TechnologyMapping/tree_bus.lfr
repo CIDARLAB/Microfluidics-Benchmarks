@@ -11,7 +11,7 @@ module tree_bus(i1, out);
 
     assign temp1[0:8] = i1;
 
-    #MAP 'MIXER' '~'
+    #MAP "MIXER" "~"
     assign temp2[0:8] = ~temp1[0:8];
     assign out = temp2[0:8];
 

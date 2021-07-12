@@ -8,7 +8,7 @@ module one_to_one_mapping(in, out);
     
     assign temp1 = in;
 
-    #MAP  'MIXER' '~'
+    #MAP  "MIXER" "~"
     assign temp2 = ~temp1;
     assign out = temp2;
 

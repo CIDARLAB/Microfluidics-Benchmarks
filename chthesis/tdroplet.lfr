@@ -10,7 +10,7 @@ module tdroplet(
 
     assign temp_inputs = inputs%50;
 
-    #MAP 'MIXER' '&'
+    #MAP "MIXER" "&"
     assign delayed_outputs = &temp_inputs;
     
     distribute@(c_select)

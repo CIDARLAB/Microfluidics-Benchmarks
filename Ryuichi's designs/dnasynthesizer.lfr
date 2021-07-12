@@ -155,7 +155,7 @@ module dnasynthesizer(
 
     storage reactor[0:15];
 
-    #MAP 'BinaryTree' '~'
+    #MAP "BinaryTree" "~"
     assign reactor = ~controller_out;
 
     assign out = reactor;

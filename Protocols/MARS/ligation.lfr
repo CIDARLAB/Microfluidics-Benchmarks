@@ -10,7 +10,7 @@ module ligation(finput ligase_buffer, vector_dna, insert_dna,
     assign temp3 = insert_dna % 50 + temp2;
     assign temp4 = nfwater % 50 + temp3;
     
-    #MAP 'INCUBATOR' 'storage'
+    #MAP "INCUBATOR" "storage"
     assign temp5 = temp4 + ligase % 50;
     assign result = temp5;
 

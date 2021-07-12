@@ -10,14 +10,14 @@ module MFD005chip(
     assign DAW = Inlet1;
     assign DAW = Inlet2;
 
-#MAP 'DAW junction' '~'
+#MAP "DAW junction" "~"
     assign DAW_out = ~DAW;
     
     assign waste_in = DAW_out;
     assign SHM = DAW_out;
 
 
-#MAP 'Cell and shunt waste' '~'
+#MAP "Cell and shunt waste" "~"
 
     assign waste = ~waste_in;
 
@@ -30,7 +30,7 @@ module MFD005chip(
 
     flow shm_integ, trap_out;
     
-#MAP 'TRAP' '~'
+#MAP "TRAP" "~"
 
     assign trap_out = ~TRAP;
     assign TRAP = ~trap_out;

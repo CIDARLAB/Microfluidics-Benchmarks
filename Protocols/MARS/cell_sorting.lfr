@@ -1,6 +1,6 @@
 module cell_sorting(finput cell_suspension,  foutput plasma, [0:1] cells);
 
-    #MAP 'BLOOD SEPARATOR' '-'
+    #MAP "BLOOD SEPARATOR" "-"
     // Can we also ask for performance metrics in the annotations ?
     assign plasma = cell_suspension - cells;
 

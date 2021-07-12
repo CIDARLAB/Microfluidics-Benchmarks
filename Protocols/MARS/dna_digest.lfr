@@ -9,13 +9,13 @@ module dna_digest(dna_suspension, buffer_enzyme_solution, water);
     assign buffer_enzyme_solution_vol = buffer_enzyme_solution % 50;
     assign digestion_mix = dna_suspension_vol + buffer_enzyme_solution_vol;
     
-    #MAP 'INCUBATOR' 'storage'
+    #MAP "INCUBATOR" "storage"
     //This should be a storing statement
     assign incubation_mix = digestion_mix;
 
     //Delay for 1 hour
     //This is also storage
-    #MAP 'PUNCH CHAMBER' 'storage'
+    #MAP "PUNCH CHAMBER" "storage"
     assign result = incubation_mix + water;
 
 endmodule

@@ -27,7 +27,7 @@
 
 //     // mixer
 //     // distribution block
-//     #MAP 'Mixer' '~'
+//     #MAP "Mixer" "~"
 //     assign mixer_out = ~mixer_in;
 
 //     distribute@(x1)
@@ -85,7 +85,7 @@ module inlet16(
 
     flow mux_out;
 
-    #MAP 'Multiplexer' '~'
+    #MAP "Multiplexer" "~"
     assign mux_out = ~inlet[0:15];
     assign mux_out = ~rinse;
 
@@ -103,7 +103,7 @@ module inlet16(
             bypass1_out <= mux_out;
     end
 
-    #MAP 'Mixer' '~'
+    #MAP "Mixer" "~"
     assign mixer_out = ~mixer_in;
 
     distribute@(x[2])
@@ -139,7 +139,7 @@ module inlet16(
             chamber <= bypass2_out;
     end
 
-    #MAP 'Flow Controller' '~'
+    #MAP "Flow Controller" "~"
     assign flow_out = ~chamber;
 
     assign out = flow_out + bypass2_out;

@@ -14,11 +14,11 @@ module mux96chambers(
     storage [0:95] chamber;
 
     assign mixer_in = in[0:15];
-    #MAP 'Mixer' '~'
+    #MAP "Mixer" "~"
     assign mixer_out = ~mixer_in;
 
     assign pump_in = mixer_out;
-    #MAP 'Pump' '~'
+    #MAP "Pump" "~"
     assign pump_out = ~pump_in;
 
     assign inDeMux = pump_out;

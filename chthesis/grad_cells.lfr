@@ -24,7 +24,7 @@ module grad_cells(finput [0:1] in1, foutput out1, control [0:1] c);
             celltraps[3] <= gradient_out;
     end
 
-    #MAP 'TREE' 'assign'
+    #MAP "TREE" "assign"
     assign out1 = celltraps;
 
 endmodule
