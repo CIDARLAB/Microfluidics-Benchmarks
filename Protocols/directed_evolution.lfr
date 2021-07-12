@@ -20,17 +20,17 @@ module directed_evolution(genes, pcr_mastermix, tx_tl_sol, ethanol, result,
     assign pcr_mix_t1 = pcr_mix_t0;
     assign tx_tl_mix = tx_tl_sol + pcr_mix_t1;
 
-    # How would / vs % work when doing a multisynthesis descision
+    //How would / vs % work when doing a multisynthesis descision
     assign reaction_samples[n:0] = tx_tl_mix / n;
 
-    # DELAY 4 hrs
-    # MAP & to Incubate
+    //DELAY 4 hrs
+    #MAP "Incubate" "&"" 
     assign reaction_samples_2 = &reaction_samples;
 
-    # MAP & to Separate
+    #MAP "Separate" "&"
     assign washed, waste1 = &(reaction_samples_2 + ethanol);
 
-    # MAP & to Detect
+    #MAP "Detect" "&"
     assign washed = &washed # If we give signal out of this, we are talking about the electronic integration
 
     distribute@(found_candidate, found_result)
