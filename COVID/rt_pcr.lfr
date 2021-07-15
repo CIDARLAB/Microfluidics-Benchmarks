@@ -1,4 +1,7 @@
-module pcr(finput input, foutput output);
+module pcr(
+    finput input, 
+    foutput output
+);
 
     flow spe_input;
     flow rt_chamber_input;
@@ -14,12 +17,12 @@ module pcr(finput input, foutput output);
 
     assign rt_chamber_input = spe_output;
 
-    #MAP RTChamber -
+    #MAP "RTChamber" "-"
     assign rt_chamber_output = -rt_chamber_input;
 
     assign pcr_chamber_input = rt_chamber_output;
 
-    #MAP PCRChamber ~
+    #MAP "PCRChamber" "~"
     assign pcr_chamber_output = ~pcr_chamber_input;
 
     assign output = pcr_chamber_output;

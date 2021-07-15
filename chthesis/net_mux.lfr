@@ -15,7 +15,7 @@ module net_mux(
 
     distribute@(c_in1)
     begin
-        if (c_in1)
+        if (c_in1 == 1)
             trap_inputs <= temp_in1;
     end
 
@@ -32,7 +32,7 @@ module net_mux(
         //Need to allow for a single pipeline
         //the default of this would be to make 
         //over the channel connections
-        if (c_in_connect)
+        if (c_in_connect == 1)
             trap_output <= temp_in2;
     end
 
@@ -41,13 +41,13 @@ module net_mux(
         //Need to allow for a single pipeline
         //the default of this would be to make 
         //over the channel connections
-        if (c_out_connect)
+        if (c_out_connect == 1)
             out2 <= trap_inputs;
     end
 
     distribute@(c_out1)
     begin
-        if (c_out1)
+        if (c_out1 == 1)
             out1 <= temp_out1;
     end
 

@@ -9,14 +9,14 @@ module logic04(finput[0:7] in1, foutput [0:3] out,
     distribute@(c_mux_in)
     begin
         case(c_mux_in)
-            3b'000: trap_input <= in1[0];
-            3b'001: trap_input <= in1[1];
-            3b'010: trap_input <= in1[2];
-            3b'011: trap_input <= in1[3];
-            3b'100: trap_input <= in1[4];
-            3b'101: trap_input <= in1[5];
-            3b'110: trap_input <= in1[6];
-            3b'111: trap_input <= in1[7];
+            3'b000: trap_input <= in1[0];
+            3'b001: trap_input <= in1[1];
+            3'b010: trap_input <= in1[2];
+            3'b011: trap_input <= in1[3];
+            3'b100: trap_input <= in1[4];
+            3'b101: trap_input <= in1[5];
+            3'b110: trap_input <= in1[6];
+            3'b111: trap_input <= in1[7];
         endcase
     end
 

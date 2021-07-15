@@ -1,11 +1,9 @@
-module directed_evolution(genes, pcr_mastermix, tx_tl_sol, ethanol, result, 
-        found_candidate, found_result)
+module directed_evolution(
+    finput genes, pcr_mastermix, tx_tl_sol, ethanol, 
+    foutput result, waste1,waste2
+    control initial, found_candidate, found_result
+);
 
-    finput genes, pcr_mastermix, tx_tl_sol, ethanol, waste1, waste2;
-    foutput result;
-    control initial;
-    control found_candidate;
-    control found_result;
 
     flow pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
     number a, b, n;

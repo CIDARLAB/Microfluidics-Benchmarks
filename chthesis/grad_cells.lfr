@@ -12,16 +12,16 @@ module grad_cells(finput [0:1] in1, foutput out1, control [0:1] c);
 
     distribute@(c)
     begin
-
-    case({c[0], c[1]})
-        2'b00:
-            celltraps[0] <= gradient_out;
-        2'b01:
-            celltraps[1] <= gradient_out;
-        2'b10:
-            celltraps[2] <= gradient_out;
-        2'b11:
-            celltraps[3] <= gradient_out;
+        case({c[0], c[1]})
+            2'b00:
+                celltraps[0] <= gradient_out;
+            2'b01:
+                celltraps[1] <= gradient_out;
+            2'b10:
+                celltraps[2] <= gradient_out;
+            2'b11:
+                celltraps[3] <= gradient_out;
+        endcase
     end
 
     #MAP "TREE" "assign"
