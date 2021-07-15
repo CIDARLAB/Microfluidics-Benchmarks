@@ -8,7 +8,7 @@ module simple(
 
     distribute@(c_select)
     begin
-        if(c_select)
+        if(c_select == 1)
             cell_trap <= inputs[0];
         else
             cell_trap <= inputs[1];

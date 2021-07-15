@@ -6,6 +6,7 @@ module multi_input(
     storage cell_trap;
 
     distribute@(c1)
+    begin
         case(c1)
             1'b0 : cell_trap <= in1[0];
             1'b1 : cell_trap <= in1[1];
