@@ -1,43 +1,48 @@
 module directed_evolution(
     finput genes, pcr_mastermix, tx_tl_sol, ethanol, 
-    foutput result, waste1,waste2
+    foutput result, waste1,waste2,
     control initial, found_candidate, found_result
 );
 
-
     flow pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
-    number a, b, n;
+    number n = 2;
+    number a = 3;
+    number b = 4;
     flow pcr_mix, geneinput;
-
+    flow candidates;
+    
     distribute@(initial)
     begin
-        pcr_mix = {genes, candidates} * initial;
+        if (initial == 1)
+        begin
+            pcr_mix <= {genes, candidates};
+        end
     end
 
-    assign pcr_mix_t0 = a*pcr_mix + b*pcr_mastermix
+    assign pcr_mix_t0 = a*pcr_mix + b*pcr_mastermix;
     assign pcr_mix_t1 = pcr_mix_t0;
     assign tx_tl_mix = tx_tl_sol + pcr_mix_t1;
 
     //How would / vs % work when doing a multisynthesis descision
-    assign reaction_samples[n:0] = tx_tl_mix / n;
+    assign reaction_samples[2:0] = tx_tl_mix / n;
 
     //DELAY 4 hrs
-    #MAP "Incubate" "&"" 
+    #MAP "Incubate" "&"
     assign reaction_samples_2 = &reaction_samples;
 
     #MAP "Separate" "&"
-    assign washed, waste1 = &(reaction_samples_2 + ethanol);
+    assign {washed, waste1} = &(reaction_samples_2 + ethanol);
 
     #MAP "Detect" "&"
-    assign washed = &washed # If we give signal out of this, we are talking about the electronic integration
+    assign washed = &washed; //If we give signal out of this, we are talking about the electronic integration
 
     distribute@(found_candidate, found_result)
     begin
         case({found_candidate, found_result})
-            b'00 : waste2 = washed;
-            b'10 : candidates = washed;
-            b'01 : result = washed;
-            b'01 : waste2 = washed;
+            2'b00 : waste2 <= washed;
+            2'b10 : candidates <= washed;
+            2'b01 : result <= washed;
+            2'b01 : waste2 <= washed;
         endcase
     end
 
