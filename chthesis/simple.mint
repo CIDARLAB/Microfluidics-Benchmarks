@@ -3,8 +3,7 @@ DEVICE simple
 LAYER FLOW
 PORT p1, p2, p3 portRadius=100;
 NODE n1;
-H LONG CELL TRAP ct1 numberOfChambers=10 chamberWidth=100 chamberLength=100
-chamberSpacing=50 channelWidth=100 ;
+H LONG CELL TRAP ct1 numberOfChambers=10 cchamberWidth=100 chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
 CHANNEL c1 from p1 to n1 channelWidth=100;
 CHANNEL c2 from p2 to n1 channelWidth=100;
 CHANNEL c3 from n1 to ct1 1 channelWidth=100;

@@ -3,9 +3,9 @@ DEVICE net_mux
 LAYER FLOW
 
 V BANK b1_1, b1_2, b1_3, b1_4, b1_5, b1_6, b1_7, b1_8 of  PORT portRadius=100  spacing=1500 ;
-V BANK b2_1, b2_2, b2_3, b2_4, b2_5, b2_6, b2_7, b2_8 of  LONG CELL TRAP numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 feedingChannelWidth=100;
-V TREE m1 8 to 1 spacing=1500 flowChannelWidth=100;
-H MUX m2 1 to 2 spacing=1500 flowChannelWidth=100 controlChannelWidth=50;
+V BANK b2_1, b2_2, b2_3, b2_4, b2_5, b2_6, b2_7, b2_8 of  LONG CELL TRAP numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
+V TREE m1 8 to 1 spacing=500 flowChannelWidth=100 stageLength=500;
+H MUX m2 1 to 2 sspacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
 H BANK b3_1, b3_2 of   PORT portRadius=100  spacing=1500 ;
 PORT p1, p2 portRadius=100;
 NODE n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16;

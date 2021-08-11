@@ -2,13 +2,12 @@ DEVICE rotary_cells
 
 LAYER FLOW
 
-V MUX m1 1 to 4 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
-V MUX m2 1 to 4 spacing=500 flowChannelWidth=100 controlChannelWidth=50;
+V MUX m1 1 to 4 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
+V MUX m2 1 to 4 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
 V BANK pb1 of 4  PORT portRadius=100  spacing=1200 ;
-H ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50;
-V BANK b1 of 4 LONG CELL TRAP numberOfChambers=100 chamberWidth=100 chamberLength=100
-    chamberSpacing=30 spacing=500 channelWidth=100;
-V TREE t1 1 to 4 spacing=500 flowChannelWidth=100;
+H ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50 valveWidth=200 valveLength=200 valveSpacing=400 height=30;
+V BANK b1 of 4 LONG CELL TRAP numberOfChambers=100 chamberWidth=100 chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
+V TREE t1 1 to 4 spacing=500 flowChannelWidth=100 stageLength=500;
 PORT p1 portRadius=100;
 CHANNEL c1 from pb1_1 to m1 1 channelWidth=100;
 CHANNEL c2 from pb1_2 to m1 2 channelWidth=100;

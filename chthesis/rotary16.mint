@@ -3,10 +3,10 @@ DEVICE rotary16
 LAYER FLOW
 
 H BANK pb1 of 16  PORT portRadius=100  spacing=1200 ;
-H MUX m1 1 to 16 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
-V ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50;
+H MUX m1 1 to 16 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
+V ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50 valveWidth=200 valveLength=200 valveSpacing=400 height=30;
 H BANK pb2 of 16  PORT portRadius=100  spacing=1200 ;
-H MUX m2 1 to 16 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
+H MUX m2 1 to 16 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
 CHANNEL c1 from pb1_1 to m1 1 channelWidth=100;
 CHANNEL c2 from pb1_2 to m1 2 channelWidth=100;
 CHANNEL c3 from pb1_3 to m1 3 channelWidth=100;
