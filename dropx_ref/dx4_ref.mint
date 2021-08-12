@@ -65,7 +65,7 @@ DROPLET SORTER droplet_sorter_1
     wasteWidth=600
     outputLength=4000
     keepWidth=600
-    pressureWidth-1000
+    pressureWidth=1000
     numberofDistributor=5
     channelDepth=300
     electrodeDepth=300
@@ -86,7 +86,7 @@ DROPLET SORTER droplet_sorter_2
     wasteWidth=600
     outputLength=4000
     keepWidth=600
-    pressureWidth-1000
+    pressureWidth=1000
     numberofDistributor=5
     channelDepth=300
     electrodeDepth=300
@@ -105,7 +105,7 @@ DROPLET SORTER droplet_sorter_3
     wasteWidth=600
     outputLength=4000
     keepWidth=600
-    pressureWidth-1000
+    pressureWidth=1000
     numberofDistributor=5
     channelDepth=300
     electrodeDepth=300

@@ -96,7 +96,7 @@ angle=45
 wasteWidth=600
 outputLength=4000
 keepWidth=600
-pressureWidth-1000
+pressureWidth=1000
 numberofDistributor=5
 channelDepth=300
 electrodeDepth=300
@@ -115,7 +115,7 @@ angle=45
 wasteWidth=600
 outputLength=4000
 keepWidth=600
-pressureWidth-1000
+pressureWidth=1000
 numberofDistributor=5
 channelDepth=300
 electrodeDepth=300
