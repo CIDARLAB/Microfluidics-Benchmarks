@@ -127,15 +127,15 @@ def controlChannels(minChannel, maxChannel, minValve, port, f):
             + " 4 channelWidth=50;\n"
         )
         minValve = minValve + 1
-    f.write(
-        "CHANNEL cc"
-        + str(i + 1)
-        + " from v"
-        + str(minValve)
-        + " 2 to cpb2 "
-        + str(port)
-        + " channelWidth=50;\n"
-    )
+        f.write(
+            "CHANNEL cc"
+            + str(i + 1)
+            + " from v"
+            + str(minValve)
+            + " 2 to cpb2 "
+            + str(port)
+            + " channelWidth=50;\n"
+        )
 
 
 grid_size = input("Enter Grid Size: ")

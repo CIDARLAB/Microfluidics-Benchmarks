@@ -2,6 +2,7 @@ DEVICE tdroplet
 
 LAYER FLOW
 
+PORT p1 portRadius=100;
 H DROPLET GENERATOR T t1 radius=100 oilChannelWidth=100 waterChannelWidth=20 length=2000 height=30;
 H MIXER x1 numberOfBends=5 bendSpacing=100 bendLength=100 channelWidth=100;
 H DROPLET GENERATOR T t2 radius=100 oilChannelWidth=100 waterChannelWidth=20 length=2000 height=30;
