@@ -94,12 +94,12 @@ DROPLET SORTER droplet_sorter_1
     outputLength=4000
     keepWidth=600
     pressureWidth=1000
-    numberofDistributor=5
+    numberofDistributors=5
     channelDepth=300
     electrodeDepth=300
     pressureDepth=200;
 
-CHANNEL connection_12 from pico_injector_1 3 to droplet_sorter_1 1 channelWidth=300;
+CHANNEL connection_12 from picoinjector_1 3 to droplet_sorter_1 1 channelWidth=300;
 
 PORT port_out_waste portRadius=2000;
 PORT port_out_keep portRadius=2000;

@@ -83,46 +83,46 @@ MIXER mixer_1
 
 CHANNEL connection_12 from pico_injector_3 3 to mixer_1 1 channelWidth=300;
 
-DROPLET SORTER droplet_sorter_1
-height=300
-inletWidth=300
-inletLength=4000
-inletLength=4000
-electrodeDistance=1000
-electrodeWidth=700
-electrodeLength=5000
-outletWidth=300
-angle=45
-wasteWidth=600
-outputLength=4000
-keepWidth=600
-pressureWidth=1000
-numberofDistributor=5
-channelDepth=300
-electrodeDepth=300
-pressureDepth=200;
+DROPLET SORTER droplet_sorter_1 
+    height=300
+    inletWidth=300
+    inletLength=4000
+    inletLength=4000
+    electrodeDistance=1000
+    electrodeWidth=700
+    electrodeLength=5000
+    outletWidth=300
+    angle=45
+    wasteWidth=600
+    outputLength=4000
+    keepWidth=600
+    pressureWidth=1000
+    numberofDistributors=5
+    channelDepth=300
+    electrodeDepth=300
+    pressureDepth=200;
 
-DROPLET SORTER droplet_sorter_2
-height=300
-inletWidth=300
-inletLength=4000
-inletLength=4000
-electrodeDistance=1000
-electrodeWidth=700
-electrodeLength=5000
-outletWidth=300
-angle=45
-wasteWidth=600
-outputLength=4000
-keepWidth=600
-pressureWidth=1000
-numberofDistributor=5
-channelDepth=300
-electrodeDepth=300
-pressureDepth=200;
+DROPLET SORTER droplet_sorter_2 
+    height=300
+    inletWidth=300
+    inletLength=4000
+    inletLength=4000
+    electrodeDistance=1000
+    electrodeWidth=700
+    electrodeLength=5000
+    outletWidth=300
+    angle=45
+    wasteWidth=600
+    outputLength=4000
+    keepWidth=600
+    pressureWidth=1000
+    numberofDistributors=5
+    channelDepth=300
+    electrodeDepth=300
+    pressureDepth=200;
 
 
-CHANNEL connection_13 from mixer_1 3 to droplet_sorter_1 1 channelWidth=300;
+CHANNEL connection_13 from mixer_1 2 to droplet_sorter_1 1 channelWidth=300;
 
 PORT port_out1 portRadius=2000;
 PORT port_out2 portRadius=2000;

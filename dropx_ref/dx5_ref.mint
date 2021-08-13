@@ -70,7 +70,7 @@ DROPLET SORTER droplet_sorter_1
     outputLength=4000
     keepWidth=600
     pressureWidth=1000
-    numberofDistributor=5
+    numberofDistributors=5
     channelDepth=300
     electrodeDepth=300
     pressureDepth=200;
@@ -90,7 +90,7 @@ DROPLET SORTER droplet_sorter_2
     outputLength=4000
     keepWidth=600
     pressureWidth=1000
-    numberofDistributor=5
+    numberofDistributors=5
     channelDepth=300
     electrodeDepth=300
     pressureDepth=200;

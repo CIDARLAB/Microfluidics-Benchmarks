@@ -5,7 +5,6 @@ LAYER FLOW
 PORT port_oil1 portRadius=2000 ;
 PORT port_oil2 portRadius=2000 ;
 PORT port_water1 portRadius=2000 ;
-PORT port_injector portRadius=2000 ;
 PORT port_out_waste portRadius=2000 ;
 PORT port_out_keep portRadius=2000 ;
 
@@ -35,7 +34,7 @@ DROPLET SORTER droplet_sorter_1
     outputLength=4000
     keepWidth=600
     pressureWidth=1000
-    numberofDistributor=5
+    numberofDistributors=5
     channelDepth=300
     electrodeDepth=300
     pressureDepth=200;
@@ -43,15 +42,13 @@ DROPLET SORTER droplet_sorter_1
 CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300 ;
 CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300 ;
 CHANNEL connection_3 from port_water1 to nozzle_droplet_generator_1 1 channelWidth=300 ;
-CHANNEL connection_4 from port_injector to picoinjector_1 2 channelWidth=300 ;
 CHANNEL connection_5 from nozzle_droplet_generator_1 3 to mixer_1 1 channelWidth=300 ;
 
 CHANNEL connection_10 from port_oil3 to nozzle_droplet_generator_2 2 channelWidth=300 ;
 CHANNEL connection_11 from port_oil4 to nozzle_droplet_generator_2 4 channelWidth=300 ;
-CHANNEL connection_12 from port_water2 to picoinjector_1 3 channelWidth=300 ;
 CHANNEL connection_13 from nozzle_droplet_generator_2 3 to mixer_1 1 channelWidth=300 ;
 
-CHANNEL connection_7 from mixer_1 3 to droplet_sorter_1 1 channelWidth=300 ;
+CHANNEL connection_7 from mixer_1 2 to droplet_sorter_1 1 channelWidth=300 ;
 
 CHANNEL connection_8 from droplet_sorter_1 2 to port_out_waste channelWidth=300 ;
 CHANNEL connection_9 from droplet_sorter_1 3 to port_out_keep channelWidth=300 ;

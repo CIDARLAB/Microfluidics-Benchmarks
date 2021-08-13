@@ -34,7 +34,7 @@ CHANNEL connection_3 from port_water to nozzle_droplet_generator_1 1 channelWidt
 CHANNEL connection_4 from port_injector to picoinjector_1 2 channelWidth=300 ;
 CHANNEL connection_5 from nozzle_droplet_generator_1 3 to picoinjector_1 1 channelWidth=300 ;
 CHANNEL connection_6 from picoinjector_1 3 to mixer_1 1 channelWidth=300 ;
-CHANNEL connection_7 from mixer_1 3 to droplet_sorter_1 1 channelWidth=300 ;
+CHANNEL connection_7 from mixer_1 2 to droplet_sorter_1 1 channelWidth=300 ;
 CHANNEL connection_8 from droplet_sorter_1 2 to port_out_waste channelWidth=300 ;
 CHANNEL connection_9 from droplet_sorter_1 3 to port_out_keep channelWidth=300 ;
 

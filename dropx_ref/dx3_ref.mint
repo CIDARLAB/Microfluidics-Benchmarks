@@ -58,8 +58,8 @@ CHANNEL connection_8 from port_injector2 to picoinjector_2 2 channelWidth=300 ;
 PORT port_out1 portRadius=2000 ;
 PORT port_out2 portRadius=2000 ;
 
-CHANNEL connection_9 from picoinjector_1 3 to port_out1 2 channelWidth=300 ;
-CHANNEL connection_10 from picoinjector_2 3 to port_out2 2 channelWidth=300 ;
+CHANNEL connection_9 from picoinjector_1 3 to port_out1 1 channelWidth=300 ;
+CHANNEL connection_10 from picoinjector_2 3 to port_out2 1 channelWidth=300 ;
 
 END LAYER
 
