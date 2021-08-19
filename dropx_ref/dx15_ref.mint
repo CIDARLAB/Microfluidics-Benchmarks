@@ -30,14 +30,14 @@ pressureWidth=1000
 numberofDistributors=5
 channelDepth=300
 electrodeDepth=300
-pressureDepth=200 ;
+pressureDepth=200;
 
-CHANNEL c4 from mixer1 2 to droplet_sorter1 1 channelWidth=300 ;
+CHANNEL c4 from mixer1 2 to droplet_sorter1 1 channelWidth=300;
 
-PORT port_out_keep, port_out_waste portRadius=2000 ;
+PORT port_out_keep, port_out_waste portRadius=2000;
 
-CHANNEL c5 from droplet_sorter1 3 to port_out_keep 1 channelWidth=300 ;
-CHANNEL c6 from droplet_sorter1 2 to port_out_waste 1 channelWidth=300 ;
+CHANNEL c5 from droplet_sorter1 3 to port_out_keep 1 channelWidth=300;
+CHANNEL c6 from droplet_sorter1 2 to port_out_waste 1 channelWidth=300;
 
 END LAYER
 
