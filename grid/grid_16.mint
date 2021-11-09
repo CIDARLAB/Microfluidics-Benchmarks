@@ -549,7 +549,7 @@ CHANNEL c510 from ct253 3 to m2 13 channelWidth=100;
 CHANNEL c511 from ct254 3 to m2 14 channelWidth=100;
 CHANNEL c512 from ct255 3 to m2 15 channelWidth=100;
 CHANNEL c513 from ct256 3 to m2 16 channelWidth=100;
-CHANNEL c514 from m2 17 to p1 channelWidth=100;
+CHANNEL c514 from m2 17 to p2 channelWidth=100;
 
 END LAYER
 

@@ -269,7 +269,7 @@ CHANNEL c240 from ct118 3 to m2 8 channelWidth=100;
 CHANNEL c241 from ct119 3 to m2 9 channelWidth=100;
 CHANNEL c242 from ct120 3 to m2 10 channelWidth=100;
 CHANNEL c243 from ct121 3 to m2 11 channelWidth=100;
-CHANNEL c244 from m2 12 to p1 channelWidth=100;
+CHANNEL c244 from m2 12 to p2 channelWidth=100;
 
 END LAYER
 

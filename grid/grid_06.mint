@@ -89,7 +89,7 @@ CHANNEL c70 from ct33 3 to m2 3 channelWidth=100;
 CHANNEL c71 from ct34 3 to m2 4 channelWidth=100;
 CHANNEL c72 from ct35 3 to m2 5 channelWidth=100;
 CHANNEL c73 from ct36 3 to m2 6 channelWidth=100;
-CHANNEL c74 from m2 7 to p1 channelWidth=100;
+CHANNEL c74 from m2 7 to p2 channelWidth=100;
 
 END LAYER
 

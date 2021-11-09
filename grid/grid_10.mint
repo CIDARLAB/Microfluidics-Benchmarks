@@ -225,7 +225,7 @@ CHANNEL c198 from ct97 3 to m2 7 channelWidth=100;
 CHANNEL c199 from ct98 3 to m2 8 channelWidth=100;
 CHANNEL c200 from ct99 3 to m2 9 channelWidth=100;
 CHANNEL c201 from ct100 3 to m2 10 channelWidth=100;
-CHANNEL c202 from m2 11 to p1 channelWidth=100;
+CHANNEL c202 from m2 11 to p2 channelWidth=100;
 
 END LAYER
 

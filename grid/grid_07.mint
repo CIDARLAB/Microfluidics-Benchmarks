@@ -117,7 +117,7 @@ CHANNEL c96 from ct46 3 to m2 4 channelWidth=100;
 CHANNEL c97 from ct47 3 to m2 5 channelWidth=100;
 CHANNEL c98 from ct48 3 to m2 6 channelWidth=100;
 CHANNEL c99 from ct49 3 to m2 7 channelWidth=100;
-CHANNEL c100 from m2 8 to p1 channelWidth=100;
+CHANNEL c100 from m2 8 to p2 channelWidth=100;
 
 END LAYER
 

@@ -149,7 +149,7 @@ CHANNEL c126 from ct61 3 to m2 5 channelWidth=100;
 CHANNEL c127 from ct62 3 to m2 6 channelWidth=100;
 CHANNEL c128 from ct63 3 to m2 7 channelWidth=100;
 CHANNEL c129 from ct64 3 to m2 8 channelWidth=100;
-CHANNEL c130 from m2 9 to p1 channelWidth=100;
+CHANNEL c130 from m2 9 to p2 channelWidth=100;
 
 END LAYER
 

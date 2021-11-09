@@ -45,7 +45,7 @@ CHANNEL c30 from ct13 3 to m2 1 channelWidth=100;
 CHANNEL c31 from ct14 3 to m2 2 channelWidth=100;
 CHANNEL c32 from ct15 3 to m2 3 channelWidth=100;
 CHANNEL c33 from ct16 3 to m2 4 channelWidth=100;
-CHANNEL c34 from m2 5 to p1 channelWidth=100;
+CHANNEL c34 from m2 5 to p2 channelWidth=100;
 
 END LAYER
 

@@ -29,7 +29,7 @@ CHANNEL c16 from ct8 2 to ct9 4 channelWidth=100;
 CHANNEL c17 from ct7 3 to m2 1 channelWidth=100;
 CHANNEL c18 from ct8 3 to m2 2 channelWidth=100;
 CHANNEL c19 from ct9 3 to m2 3 channelWidth=100;
-CHANNEL c20 from m2 4 to p1 channelWidth=100;
+CHANNEL c20 from m2 4 to p2 channelWidth=100;
 
 END LAYER
 

@@ -425,7 +425,7 @@ CHANNEL c390 from ct193 3 to m2 11 channelWidth=100;
 CHANNEL c391 from ct194 3 to m2 12 channelWidth=100;
 CHANNEL c392 from ct195 3 to m2 13 channelWidth=100;
 CHANNEL c393 from ct196 3 to m2 14 channelWidth=100;
-CHANNEL c394 from m2 15 to p1 channelWidth=100;
+CHANNEL c394 from m2 15 to p2 channelWidth=100;
 
 END LAYER
 

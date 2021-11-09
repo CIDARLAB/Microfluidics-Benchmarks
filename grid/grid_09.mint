@@ -185,7 +185,7 @@ CHANNEL c160 from ct78 3 to m2 6 channelWidth=100;
 CHANNEL c161 from ct79 3 to m2 7 channelWidth=100;
 CHANNEL c162 from ct80 3 to m2 8 channelWidth=100;
 CHANNEL c163 from ct81 3 to m2 9 channelWidth=100;
-CHANNEL c164 from m2 10 to p1 channelWidth=100;
+CHANNEL c164 from m2 10 to p2 channelWidth=100;
 
 END LAYER
 

@@ -317,7 +317,7 @@ CHANNEL c286 from ct141 3 to m2 9 channelWidth=100;
 CHANNEL c287 from ct142 3 to m2 10 channelWidth=100;
 CHANNEL c288 from ct143 3 to m2 11 channelWidth=100;
 CHANNEL c289 from ct144 3 to m2 12 channelWidth=100;
-CHANNEL c290 from m2 13 to p1 channelWidth=100;
+CHANNEL c290 from m2 13 to p2 channelWidth=100;
 
 END LAYER
 

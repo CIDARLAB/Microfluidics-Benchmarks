@@ -369,7 +369,7 @@ CHANNEL c336 from ct166 3 to m2 10 channelWidth=100;
 CHANNEL c337 from ct167 3 to m2 11 channelWidth=100;
 CHANNEL c338 from ct168 3 to m2 12 channelWidth=100;
 CHANNEL c339 from ct169 3 to m2 13 channelWidth=100;
-CHANNEL c340 from m2 14 to p1 channelWidth=100;
+CHANNEL c340 from m2 14 to p2 channelWidth=100;
 
 END LAYER
 

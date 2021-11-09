@@ -485,7 +485,7 @@ CHANNEL c448 from ct222 3 to m2 12 channelWidth=100;
 CHANNEL c449 from ct223 3 to m2 13 channelWidth=100;
 CHANNEL c450 from ct224 3 to m2 14 channelWidth=100;
 CHANNEL c451 from ct225 3 to m2 15 channelWidth=100;
-CHANNEL c452 from m2 16 to p1 channelWidth=100;
+CHANNEL c452 from m2 16 to p2 channelWidth=100;
 
 END LAYER
 
