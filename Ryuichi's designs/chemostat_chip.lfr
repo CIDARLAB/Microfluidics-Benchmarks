@@ -1,0 +1,32 @@
+`import nine_to_one_mux;
+`import microreactor;
+
+module chemostat_chip (
+    finput [0:8] in,
+    foutput out,
+    control [0:5] c1, [0:7] c2, [0:8] c3, c4
+);
+
+    flow after_mux;
+
+    nine_to_one_mux NineOneMux(in, after_mux, c1);
+
+    flow [0:7] microreactor_out;
+
+    microreactor Micro1(after_mux, microreactor_out[0], c3, c2[0]);
+    microreactor Micro2(after_mux, microreactor_out[1], c3, c2[1]);
+    microreactor Micro3(after_mux, microreactor_out[2], c3, c2[2]);
+    microreactor Micro4(after_mux, microreactor_out[3], c3, c2[3]);
+    microreactor Micro5(after_mux, microreactor_out[4], c3, c2[4]);
+    microreactor Micro6(after_mux, microreactor_out[5], c3, c2[5]);
+    microreactor Micro7(after_mux, microreactor_out[6], c3, c2[6]);
+    microreactor Micro8(after_mux, microreactor_out[7], c3, c2[7]);
+
+    distribute@(c4)
+    begin 
+        if (c4 == 1)
+            out <= microreactor_out;
+    end
+    
+
+endmodule

@@ -1,0 +1,22 @@
+// Development of Microfluidic Dilution Network-Based System for Lab-on-a-Chip Microalgal Bioassays
+// Yunhua Wang
+
+module microalgal(
+    finput buffer, sample,
+    foutput output
+);
+
+    flow [0:4]channel;
+    assign channel[0:4] = buffer;
+
+    storage [0:4] chamber;
+
+    assign chamber[0] = channel[0] + sample;
+    assign chamber[1] = channel[1] + sample;
+    assign chamber[2] = channel[2] + sample;
+    assign chamber[3] = channel[3] + sample;
+    assign chamber[4] = channel[4] + sample;
+
+    assign output = chamber[0:4];
+
+endmodule
