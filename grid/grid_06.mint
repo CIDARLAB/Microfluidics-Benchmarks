@@ -2,7 +2,7 @@ DEVICE grid_6
 
 LAYER FLOW
 H TREE m1 1 to 6 spacing=1200 flowChannelWidth=100;
-H TREE m2 6 to 1 spacing=1200 flowChannelWidth=100;
+H TREE m2 1 to 6  spacing=1200 flowChannelWidth=100;
  PORT p1, p2 portRadius=100;
 SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16, ct17, ct18, ct19, ct20, ct21, ct22, ct23, ct24, ct25, ct26, ct27, ct28, ct29, ct30, ct31, ct32, ct33, ct34, ct35, ct36 chamberWidth=100 chamberLength=100 channelWidth=100;
 CHANNEL c1 from p1 to m1 1 channelWidth=100;

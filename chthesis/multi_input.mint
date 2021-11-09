@@ -5,9 +5,9 @@ LAYER FLOW
 H BANK pb1 of 2  PORT portRadius=100  spacing=1200 ;
 V BANK pb2 of 2  PORT portRadius=100  spacing=1200 ;
 V BANK pb3 of 2  PORT portRadius=100  spacing=1200 ;
-H MUX m1 2 to 1 spacing=500 width=400 length=100 
+H MUX m1 1 to 2 spacing=500 width=400 length=100 
     stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-V TREE t1 2 to 1 spacing=500 flowChannelWidth=100 stageLength=500;
+V TREE t1 1 to 2 spacing=500 flowChannelWidth=100 stageLength=500;
 V TREE t2 1 to 2 spacing=500 flowChannelWidth=100 stageLength=500;
 H MIXER x1 numberOfBends=10 bendSpacing=100 bendLength=1000 channelWidth=100;
 H MIXER x2 numberOfBends=10 bendSpacing=100 bendLength=1000 channelWidth=100;

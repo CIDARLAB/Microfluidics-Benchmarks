@@ -4,7 +4,7 @@ LAYER FLOW
 
 LOGIC ARRAY la flowChannelWidth=100 controlChannelWidth=20 chamberLength=100 chamberWidth=100 r=100;
  V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
-H IN MUX m1 8 to 1 r=100 flowChannelWidth=100 controlChannelWidth=20;
+H IN MUX m1 1 to 8 r=100 flowChannelWidth=100 controlChannelWidth=20;
 
 
 NODE n1;

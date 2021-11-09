@@ -8,7 +8,7 @@ NODE n1;
 H GRADIENT GENERATOR g 1 to 4 numberOfBends=10 bendSpacing=100 bendLength=500 
     channelWidth=100 spacing=2000;
 V MUX m1 1 to 4 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-V TREE t1 4 to 1 spacing=500 flowChannelWidth=100 stageLength=500;
+V TREE t1 1 to 4  spacing=500 flowChannelWidth=100 stageLength=500;
 V BANK ctb of 4 LONG CELL TRAP numberOfChambers=20 chamberWidth=100 
     chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
 CHANNEL c1 from pb1 to n1 channelWidth=100;

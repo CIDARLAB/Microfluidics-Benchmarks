@@ -6,8 +6,8 @@ V MIXER n1 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
 V MIXER n2 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
 V MIXER n3 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
 V MIXER n4 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
-H TREE m2 4 to 1 spacing=1200 flowChannelWidth=100;
- PORT p1, p2 portRadius=100;
+H TREE m2 1 to 4 spacing=1200 flowChannelWidth=100;
+PORT p1, p2 portRadius=100;
 SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16 chamberWidth=100 chamberLength=100 channelWidth=100;
 
 CHANNEL c1 from p1 3 to m1 1 channelWidth=100;

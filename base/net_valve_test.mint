@@ -1,9 +1,9 @@
 DEVICE net_valve_test
 
 LAYER FLOW
- V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
-H MUX m2 2 to 1 spacing=1500 flowChannelWidth=100 controlChannelWidth=20;
- H BANK b3 of 2  PORT portRadius=100  spacing=1500 ;
+V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
+H MUX m2 1 to 2 spacing=1500 flowChannelWidth=100 controlChannelWidth=20;
+H BANK b3 of 2  PORT portRadius=100  spacing=1500 ;
 NODE n1, n2, n3, n4, n5, n6, n7, n8;
 
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;

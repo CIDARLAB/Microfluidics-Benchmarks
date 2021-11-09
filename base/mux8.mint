@@ -2,7 +2,7 @@ DEVICE mux8
 
 LAYER FLOW
  H BANK b1 of 8  PORT portRadius=100  spacing=1200 ;
-H MUX m0 8 to 1 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
+H MUX m0 1 to 8 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
  PORT p1 portRadius=100;
 CHANNEL ca from b1 1 to m0 1 channelWidth=100;
 CHANNEL cb from b1 2 to m0 2 channelWidth=100;
