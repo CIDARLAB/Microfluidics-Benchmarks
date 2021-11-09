@@ -1,0 +1,27 @@
+// A synchronized quorum of genetic clocks
+// Tal Danio, Octavio Mondragon-Palomino, Lev Tsimring, and Jeff Hasty
+
+module genetic_clock_testing_tool (
+    finput media,
+    foutput waste1, waste2
+);
+
+    flow diverge_point;
+
+    assign diverge_point = media;
+
+// each trap has different dimensions 
+    storage trap1, trap2, trap3;
+
+    assign trap1 = diverge_point;
+    assign trap2 = diverge_point;
+    assign trap3 = diverge_point;
+
+    assign waste1 = diverge_point;
+    assign waste2 = diverge_point;
+
+    storage chamber;
+
+    assign chamber = trap1 + trap2 + trap3;
+
+endmodule

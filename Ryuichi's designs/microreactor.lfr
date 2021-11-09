@@ -1,0 +1,25 @@
+// steady state cell free gene expression with microfluidics chemostats
+// by Nadanai Laohakunakorn, Barbora Lavickova, Zoe Swank, Julie Laurent, Sebastian J Maerkl 
+
+module microreactor (
+    finput in,
+    foutput out,
+    control [0:8] c, c_start
+);
+
+    storage DNA, Proteins, Energy;
+
+    flow temp;
+
+    distribute@(c, c_start)
+    begin 
+        case(c)
+            9'b001011000: temp <= in + DNA + Proteins + Energy;
+            9'b001100000: temp <= in + Proteins;
+            9'b010000000: temp <= in + DNA;
+        endcase
+
+        if (c_start == 1)
+            out <= temp;
+    end
+endmodule

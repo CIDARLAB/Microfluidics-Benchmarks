@@ -1,0 +1,36 @@
+// Simultaneous Determination of Gene Expression andEnzymatic Activity in Individual Bacterial Cells in MicrodropletCompartments
+// Jung-uk Shim, Louis F. Olguin, Graeme Whyte, Duncan Scott, Ann Babtie, Christ Abell, Wilhelm T. S. Huck, and Florian Hollfelder
+
+module microdroplet (
+    finput oil_inlet1, oil_inlet2, aqueous_inlet_1, aqueous_inlet_2, reservoir_inlet_1, reservoir_inlet_2,
+    foutput reservoir_outlet_1, reservoir_outlet_2, waste_outlet,
+    control [0:8] c
+);
+
+    flow droplet_flow;
+
+    // each droplet has a diameter of 30 um or a volume of 20 pL then mix
+    assign droplet_flow = (aqueous_inlet_1 % 30) + (aqueous_inlet_2 % 30);
+
+    storage storage_area;
+    distribute@(c[0]) begin 
+        if (c[0] == 1) 
+            storage_area <= droplet_flow;
+    end
+
+    flow droplet_flow_out;
+    distribute@(c[1]) begin 
+        if (c[1] == 1)
+            droplet_flow_out <= storage_area;
+    end
+
+    // droplet flow path 1
+    assign waste_outlet = droplet_flow_out;
+
+    // droplet flow path 2
+    distribute@(c[2]) begin 
+        if (c[2] == 1) 
+            waste_outlet <= droplet_flow;
+    end
+
+endmodule
