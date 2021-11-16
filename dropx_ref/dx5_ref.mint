@@ -37,7 +37,7 @@ CHANNEL connection_4 from nozzle_droplet_generator_1 3 to picoinjector_1 1 chann
 
 PORT port_injection portRadius=2000;
 
-CHANNEL connection_5 from port_injection to picoinjector_1 2 channelWidth=300;
+CHANNEL connection_5 from port_injection to picoinjector_1 3 channelWidth=300;
 
 DROPLET SPLITTER droplet_splitter_1
     height=30
@@ -48,7 +48,7 @@ DROPLET SPLITTER droplet_splitter_1
     outletWidth2=300
     outletLength2=2000;
 
-CHANNEL connection_6 from picoinjector_1 3 to droplet_splitter_1 1 channelWidth=300;
+CHANNEL connection_6 from picoinjector_1 2 to droplet_splitter_1 1 channelWidth=300;
 
 MIXER mixer_1;
 MIXER mixer_2;

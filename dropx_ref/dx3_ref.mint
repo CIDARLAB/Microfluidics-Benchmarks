@@ -52,14 +52,14 @@ PICOINJECTOR picoinjector_2 height=300
 CHANNEL connection_4 from nozzle_droplet_generator_1 3 to droplet_splitter_1 1 channelWidth=300 ;
 CHANNEL connection_5 from droplet_splitter_1 2 to picoinjector_1 1 channelWidth=300 ;
 CHANNEL connection_6 from droplet_splitter_1 3 to picoinjector_2 1 channelWidth=300 ;
-CHANNEL connection_7 from port_injector1 to picoinjector_1 2 channelWidth=300 ;
-CHANNEL connection_8 from port_injector2 to picoinjector_2 2 channelWidth=300 ;
+CHANNEL connection_7 from port_injector1 to picoinjector_1 3 channelWidth=300 ;
+CHANNEL connection_8 from port_injector2 to picoinjector_2 3 channelWidth=300 ;
 
 PORT port_out1 portRadius=2000 ;
 PORT port_out2 portRadius=2000 ;
 
-CHANNEL connection_9 from picoinjector_1 3 to port_out1 1 channelWidth=300 ;
-CHANNEL connection_10 from picoinjector_2 3 to port_out2 1 channelWidth=300 ;
+CHANNEL connection_9 from picoinjector_1 2 to port_out1 1 channelWidth=300 ;
+CHANNEL connection_10 from picoinjector_2 2 to port_out2 1 channelWidth=300 ;
 
 END LAYER
 
