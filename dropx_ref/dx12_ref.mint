@@ -14,9 +14,9 @@ NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1
     outputLength=5000
     height=300;
 
-CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300 channelWidth=300;
-CHANNEL connection_2 from port_water1 to nozzle_droplet_generator_1 1 channelWidth=300 channelWidth=300;
-CHANNEL connection_3 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300 channelWidth=300;
+CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300 channelWidth=300;
+CHANNEL connection_2 from port_water1 to nozzle_droplet_generator_1 4 channelWidth=300 channelWidth=300;
+CHANNEL connection_3 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300 channelWidth=300;
 
 PORT port_injector portRadius=2000;
 PICOINJECTOR pico_injector_1
@@ -33,7 +33,7 @@ PICOINJECTOR pico_injector_1
     electrodeLength=3000;
 
 CHANNEL connection_4 from port_injector to pico_injector_1 2 channelWidth=300;
-CHANNEL connection_5 from nozzle_droplet_generator_1 3 to pico_injector_1 1 channelWidth=300;
+CHANNEL connection_5 from nozzle_droplet_generator_1 2 to pico_injector_1 1 channelWidth=300;
 
 MIXER mixer_1
     bendSpacing=600

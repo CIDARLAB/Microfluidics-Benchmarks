@@ -39,14 +39,14 @@ DROPLET SORTER droplet_sorter_1
     electrodeDepth=300
     pressureDepth=200;
 
-CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300 ;
-CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300 ;
-CHANNEL connection_3 from port_water1 to nozzle_droplet_generator_1 1 channelWidth=300 ;
-CHANNEL connection_5 from nozzle_droplet_generator_1 3 to mixer_1 1 channelWidth=300 ;
+CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300 ;
+CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300 ;
+CHANNEL connection_3 from port_water1 to nozzle_droplet_generator_1 4 channelWidth=300 ;
+CHANNEL connection_5 from nozzle_droplet_generator_1 2 to mixer_1 1 channelWidth=300 ;
 
-CHANNEL connection_10 from port_oil3 to nozzle_droplet_generator_2 2 channelWidth=300 ;
-CHANNEL connection_11 from port_oil4 to nozzle_droplet_generator_2 4 channelWidth=300 ;
-CHANNEL connection_13 from nozzle_droplet_generator_2 3 to mixer_1 1 channelWidth=300 ;
+CHANNEL connection_10 from port_oil3 to nozzle_droplet_generator_2 1 channelWidth=300 ;
+CHANNEL connection_11 from port_oil4 to nozzle_droplet_generator_2 3 channelWidth=300 ;
+CHANNEL connection_13 from nozzle_droplet_generator_2 2 to mixer_1 1 channelWidth=300 ;
 
 CHANNEL connection_7 from mixer_1 2 to droplet_sorter_1 1 channelWidth=300 ;
 

@@ -26,9 +26,9 @@ NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1
     outputLength=5000
     height=300;
 
-CHANNEL connection_3 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300;
-CHANNEL connection_4 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300;
-CHANNEL connection_5 from mixer_1 2 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_3 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_4 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300;
+CHANNEL connection_5 from mixer_1 2 to nozzle_droplet_generator_1 4 channelWidth=300;
 
 DROPLET SPLITTER droplet_splitter_1
     height=30
@@ -39,7 +39,7 @@ DROPLET SPLITTER droplet_splitter_1
     outletWidth2=300
     outletLength2=2000;
 
-CHANNEL connection_6 from nozzle_droplet_generator_1 3 to droplet_splitter_1 1 channelWidth=300;
+CHANNEL connection_6 from nozzle_droplet_generator_1 2 to droplet_splitter_1 1 channelWidth=300;
 
 PORT port_out1 portRadius=2000;
 PORT port_out2 portRadius=2000;

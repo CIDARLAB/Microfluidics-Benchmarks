@@ -11,9 +11,9 @@ outputWidth=300
 outputLength=5000
 height=300;
 
-CHANNEL c1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300;
-CHANNEL c2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300;
-CHANNEL c3 from port_water1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL c1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL c2 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300;
+CHANNEL c3 from port_water1 to nozzle_droplet_generator_1 4 channelWidth=300;
 
 MIXER mixer_1 bendSpacing=600
 numberOfBends=5

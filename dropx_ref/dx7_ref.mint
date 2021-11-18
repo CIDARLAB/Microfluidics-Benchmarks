@@ -15,9 +15,9 @@ NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1
     outputLength=5000
     height=300;
 
-CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300;
-CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300;
-CHANNEL connection_3 from port_water1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300;
+CHANNEL connection_3 from port_water1 to nozzle_droplet_generator_1 4 channelWidth=300;
 
 PORT port_oil3 portRadius=2000;
 PORT port_oil4 portRadius=2000;
@@ -31,9 +31,9 @@ NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2
     outputLength=5000
     height=300;
 
-CHANNEL connection_4 from port_oil3 to nozzle_droplet_generator_2 2 channelWidth=300;
-CHANNEL connection_5 from port_oil4 to nozzle_droplet_generator_2 4 channelWidth=300;
-CHANNEL connection_6 from port_water2 to nozzle_droplet_generator_2 1 channelWidth=300;
+CHANNEL connection_4 from port_oil3 to nozzle_droplet_generator_2 1 channelWidth=300;
+CHANNEL connection_5 from port_oil4 to nozzle_droplet_generator_2 3 channelWidth=300;
+CHANNEL connection_6 from port_water2 to nozzle_droplet_generator_2 4 channelWidth=300;
 
 DROPLET MERGER droplet_merger_1
     height=200
@@ -49,8 +49,8 @@ DROPLET MERGER droplet_merger_1
     channelDepth=300
     electrodeDepth=200;
 
-CHANNEL connection_7 from nozzle_droplet_generator_1 3 to droplet_merger_1 1 channelWidth=300;
-CHANNEL connection_8 from nozzle_droplet_generator_2 3 to droplet_merger_1 1 channelWidth=300;
+CHANNEL connection_7 from nozzle_droplet_generator_1 2 to droplet_merger_1 1 channelWidth=300;
+CHANNEL connection_8 from nozzle_droplet_generator_2 2 to droplet_merger_1 1 channelWidth=300;
 
 PORT port_injector1 portRadius=2000;
 PORT port_injector2 portRadius=2000;

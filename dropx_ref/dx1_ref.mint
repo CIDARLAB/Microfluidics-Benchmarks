@@ -28,11 +28,11 @@ MIXER mixer_1 bendSpacing=600 numberOfBends=5 channelWidth=300 bendLength=2000 h
 
 DROPLET SORTER droplet_sorter_1 ;
 
-CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300 ;
-CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300 ;
-CHANNEL connection_3 from port_water to nozzle_droplet_generator_1 1 channelWidth=300 ;
+CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300 ;
+CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300 ;
+CHANNEL connection_3 from port_water to nozzle_droplet_generator_1 4 channelWidth=300 ;
 CHANNEL connection_4 from port_injector to picoinjector_1 3 channelWidth=300 ;
-CHANNEL connection_5 from nozzle_droplet_generator_1 3 to picoinjector_1 1 channelWidth=300 ;
+CHANNEL connection_5 from nozzle_droplet_generator_1 2 to picoinjector_1 1 channelWidth=300 ;
 CHANNEL connection_6 from picoinjector_1 2 to mixer_1 1 channelWidth=300 ;
 CHANNEL connection_7 from mixer_1 2 to droplet_sorter_1 1 channelWidth=300 ;
 CHANNEL connection_8 from droplet_sorter_1 2 to port_out_waste channelWidth=300 ;

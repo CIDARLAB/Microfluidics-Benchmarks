@@ -18,12 +18,12 @@ NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1
     outputLength=5000
     height=300;
 
-CHANNEL connection_1 from port_in1 to nozzle_droplet_generator_1 1 channelWidth=300;
-CHANNEL connection_2 from port_in2 to nozzle_droplet_generator_1 1 channelWidth=300;
-CHANNEL connection_3 from port_in3 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_1 from port_in1 to nozzle_droplet_generator_1 4 channelWidth=300;
+CHANNEL connection_2 from port_in2 to nozzle_droplet_generator_1 4 channelWidth=300;
+CHANNEL connection_3 from port_in3 to nozzle_droplet_generator_1 4 channelWidth=300;
 
-CHANNEL connection_4 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300;
-CHANNEL connection_5 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300;
+CHANNEL connection_4 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300;
+CHANNEL connection_5 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300;
 
 PICOINJECTOR pico_injector_1 height=300
     injectorWidth=1000
@@ -62,7 +62,7 @@ PICOINJECTOR pico_injector_3 height=300
     electrodeLength=3000;
 
 
-CHANNEL connection_6 from nozzle_droplet_generator_1 3 to pico_injector_1 1 channelWidth=300;
+CHANNEL connection_6 from nozzle_droplet_generator_1 2 to pico_injector_1 1 channelWidth=300;
 CHANNEL connection_7 from pico_injector_1 3 to pico_injector_2 1 channelWidth=300;
 CHANNEL connection_8 from pico_injector_2 3 to pico_injector_3 1 channelWidth=300;
 

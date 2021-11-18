@@ -9,9 +9,9 @@ PORT port_water portRadius=2000 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 orificeSize=150 orificeLength=375 
     oilInputWidth=600 waterInputWidth=375 outputWidth=300 outputLength=5000 height=300 ;
 
-CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 2 channelWidth=300 ;
-CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 4 channelWidth=300 ;
-CHANNEL connection_3 from port_water to nozzle_droplet_generator_1 1 channelWidth=300 ;
+CHANNEL connection_1 from port_oil1 to nozzle_droplet_generator_1 1 channelWidth=300 ;
+CHANNEL connection_2 from port_oil2 to nozzle_droplet_generator_1 3 channelWidth=300 ;
+CHANNEL connection_3 from port_water to nozzle_droplet_generator_1 4 channelWidth=300 ;
 
 DROPLET SPLITTER droplet_splitter_1
     height=30
@@ -49,7 +49,7 @@ PICOINJECTOR picoinjector_2 height=300
     electrodeWidth=800
     electrodeLength=3000;
 
-CHANNEL connection_4 from nozzle_droplet_generator_1 3 to droplet_splitter_1 1 channelWidth=300 ;
+CHANNEL connection_4 from nozzle_droplet_generator_1 2 to droplet_splitter_1 1 channelWidth=300 ;
 CHANNEL connection_5 from droplet_splitter_1 2 to picoinjector_1 1 channelWidth=300 ;
 CHANNEL connection_6 from droplet_splitter_1 3 to picoinjector_2 1 channelWidth=300 ;
 CHANNEL connection_7 from port_injector1 to picoinjector_1 3 channelWidth=300 ;
