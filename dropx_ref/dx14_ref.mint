@@ -28,22 +28,22 @@ outputWidth=300
 outputLength=5000
 height=300;
 
-CHANNEL channel_mixed_1 from mixer_in 2 to nozzle_droplet_generator1 1 channelWidth=300;
-CHANNEL channel_mixed_2 from mixer_in 2 to nozzle_droplet_generator2 1 channelWidth=300;
+CHANNEL channel_mixed_1 from mixer_in 2 to nozzle_droplet_generator1 4 channelWidth=300;
+CHANNEL channel_mixed_2 from mixer_in 2 to nozzle_droplet_generator2 4 channelWidth=300;
 
 PORT port_oil1, port_oil2, port_oil3, port_oil4 portRadius=2000;
-CHANNEL channel_oil1 from port_oil1 to nozzle_droplet_generator1 2 channelWidth=300;
-CHANNEL channel_oil2 from port_oil2 to nozzle_droplet_generator1 4 channelWidth=300;
-CHANNEL channel_oil3 from port_oil3 to nozzle_droplet_generator2 2 channelWidth=300;
-CHANNEL channel_oil4 from port_oil4 to nozzle_droplet_generator2 4 channelWidth=300;
+CHANNEL channel_oil1 from port_oil1 to nozzle_droplet_generator1 1 channelWidth=300;
+CHANNEL channel_oil2 from port_oil2 to nozzle_droplet_generator1 3 channelWidth=300;
+CHANNEL channel_oil3 from port_oil3 to nozzle_droplet_generator2 1 channelWidth=300;
+CHANNEL channel_oil4 from port_oil4 to nozzle_droplet_generator2 3 channelWidth=300;
 
 MIXER mixer_incubate1, mixer_incubate2 bendSpacing=600
 numberOfBends=5
 channelWidth=300
 bendLength=2000
 height=300;
-CHANNEL channel_incubate1 from nozzle_droplet_generator1 3 to mixer_incubate1 1 channelWidth=300;
-CHANNEL channel_incubate2 from nozzle_droplet_generator2 3 to mixer_incubate2 1 channelWidth=300;
+CHANNEL channel_incubate1 from nozzle_droplet_generator1 2 to mixer_incubate1 1 channelWidth=300;
+CHANNEL channel_incubate2 from nozzle_droplet_generator2 2 to mixer_incubate2 1 channelWidth=300;
 
 DROPLET SORTER droplet_sorter1 height=300
 inletWidth=300
