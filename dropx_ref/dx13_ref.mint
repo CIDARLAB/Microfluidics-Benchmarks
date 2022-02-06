@@ -86,7 +86,7 @@ electrodeDistance=500
 electrodeWidth=800
 electrodeLength=3000;
 
-CHANNEL c9 from port_injector2 to pico_injector_2 2 channelWidth=300;
+CHANNEL c9 from port_injector2 to pico_injector_2 3 channelWidth=300;
 CHANNEL c10 from droplet_sorter_1 3 to pico_injector_2 1 channelWidth=300;
 
 MIXER mixer_3 bendSpacing=600
@@ -96,7 +96,7 @@ bendLength=2000
 height=300
 ;
 
-CHANNEL c10 from pico_injector_2 3 to mixer_3 1 channelWidth=300;
+CHANNEL c10 from pico_injector_2 2 to mixer_3 1 channelWidth=300;
 
 PORT port_waste2 portRadius=2000;
 DROPLET SORTER droplet_sorter_2 height=300

@@ -63,16 +63,16 @@ PICOINJECTOR pico_injector_3 height=300
 
 
 CHANNEL connection_6 from nozzle_droplet_generator_1 2 to pico_injector_1 1 channelWidth=300;
-CHANNEL connection_7 from pico_injector_1 3 to pico_injector_2 1 channelWidth=300;
-CHANNEL connection_8 from pico_injector_2 3 to pico_injector_3 1 channelWidth=300;
+CHANNEL connection_7 from pico_injector_1 2 to pico_injector_2 1 channelWidth=300;
+CHANNEL connection_8 from pico_injector_2 2 to pico_injector_3 1 channelWidth=300;
 
 PORT port_injector1 portRadius=2000;
 PORT port_injector2 portRadius=2000;
 PORT port_injector3 portRadius=2000;
 
-CHANNEL connection_9 from port_injector1 to pico_injector_1 2 channelWidth=300;
-CHANNEL connection_10 from port_injector2 to pico_injector_2 2 channelWidth=300;
-CHANNEL connection_11 from port_injector3 to pico_injector_3 2 channelWidth=300;
+CHANNEL connection_9 from port_injector1 to pico_injector_1 3 channelWidth=300;
+CHANNEL connection_10 from port_injector2 to pico_injector_2 3 channelWidth=300;
+CHANNEL connection_11 from port_injector3 to pico_injector_3 3 channelWidth=300;
 
 MIXER mixer_1
     bendSpacing=600
@@ -81,7 +81,7 @@ MIXER mixer_1
     bendLength=2000
     height=300;
 
-CHANNEL connection_12 from pico_injector_3 3 to mixer_1 1 channelWidth=300;
+CHANNEL connection_12 from pico_injector_3 2 to mixer_1 1 channelWidth=300;
 
 DROPLET SORTER droplet_sorter_1 
     height=300

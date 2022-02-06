@@ -76,6 +76,7 @@ MIXER mix_2
 CHANNEL connection_8 from droplet_sorter_1 2 to mix_2 1 channelWidth=300;
 
 PORT port_out_waste1 portRadius=2000;
+CHANNEL connection_15 from droplet_sorter_1 2 to port_out_waste1 channelWidth=300;
 
 PORT port_injector2 portRadius=2000;
 PICOINJECTOR pico_injector_2
@@ -92,7 +93,7 @@ PICOINJECTOR pico_injector_2
     electrodeLength=3000;
 
 CHANNEL connection_9 from mix_2 1 to pico_injector_2 2 channelWidth=300;
-CHANNEL connection_10 from port_injector2 to pico_injector_2 2 channelWidth=300;
+CHANNEL connection_10 from port_injector2 to pico_injector_2 3 channelWidth=300;
 
 MIXER mix_3
     bendSpacing=600
@@ -101,7 +102,7 @@ MIXER mix_3
     bendLength=2000
     height=300;
 
-CHANNEL connection_11 from pico_injector_2 3 to mix_3 1 channelWidth=300;
+CHANNEL connection_11 from pico_injector_2 2 to mix_3 1 channelWidth=300;
 
 DROPLET SORTER droplet_sorter_2
     height=300

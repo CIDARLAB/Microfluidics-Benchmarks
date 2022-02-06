@@ -67,7 +67,7 @@ PICOINJECTOR pico_injector_1
     electrodeWidth=800
     electrodeLength=3000;
 
-CHANNEL connection_9 from port_injector to pico_injector_1 2 channelWidth=300;
+CHANNEL connection_9 from port_injector to pico_injector_1 3 channelWidth=300;
 CHANNEL connection_10 from droplet_merger_1 2 to pico_injector_1 1 channelWidth=300;
 
 DROPLET SORTER droplet_sorter_1
@@ -89,7 +89,7 @@ DROPLET SORTER droplet_sorter_1
     electrodeDepth=300
     pressureDepth=200;
 
-CHANNEL connection_11 from pico_injector_1 3 to droplet_sorter_1 1 channelWidth=300;
+CHANNEL connection_11 from pico_injector_1 2 to droplet_sorter_1 1 channelWidth=300;
 
 PORT port_outlet portRadius=2000;
 PORT port_waste portRadius=2000;

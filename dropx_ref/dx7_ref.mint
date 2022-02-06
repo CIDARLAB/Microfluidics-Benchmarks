@@ -107,6 +107,7 @@ PORT port_out_keep portRadius=2000;
 CHANNEL connection_13 from droplet_sorter_1 2 to port_out_waste channelWidth=300;
 CHANNEL connection_14 from droplet_sorter_1 3 to port_out_keep channelWidth=300;
 
+CHANNEL connection_15 from droplet_merger_1 2 to picoinjector_1 1 channelWidth=300;
 
 END LAYER
 

@@ -32,7 +32,7 @@ PICOINJECTOR pico_injector_1
     electrodeWidth=800
     electrodeLength=3000;
 
-CHANNEL connection_4 from port_injector to pico_injector_1 2 channelWidth=300;
+CHANNEL connection_4 from port_injector to pico_injector_1 3 channelWidth=300;
 CHANNEL connection_5 from nozzle_droplet_generator_1 2 to pico_injector_1 1 channelWidth=300;
 
 MIXER mixer_1
@@ -42,7 +42,7 @@ MIXER mixer_1
     bendLength=2000
     height=300;
 
-CHANNEL connection_6 from pico_injector_1 3 to mixer_1 1 channelWidth=300;
+CHANNEL connection_6 from pico_injector_1 2 to mixer_1 1 channelWidth=300;
 
 PORT port_out_waste portRadius=2000;
 PORT port_out_keep portRadius=2000;
