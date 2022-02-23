@@ -19,11 +19,11 @@ CHANNEL c7 from m2 2 to b1_1 channelWidth=100;
 CHANNEL c8 from m2 3 to b1_2 channelWidth=100;
 CHANNEL c9 from m2 4 to b1_3 channelWidth=100;
 CHANNEL c10 from m2 5 to b1_4 channelWidth=100;
-CHANNEL c11 from b1_1 to t1 1 channelWidth=100;
-CHANNEL c12 from b1_2 to t1 2 channelWidth=100;
+CHANNEL c11 from b1_1 to t1 5 channelWidth=100;
+CHANNEL c12 from b1_2 to t1 4 channelWidth=100;
 CHANNEL c13 from b1_3 to t1 3 channelWidth=100;
-CHANNEL c14 from b1_4 to t1 4 channelWidth=100;
-CHANNEL c15 from t1 5 to p1 channelWidth=100;
+CHANNEL c14 from b1_4 to t1 2 channelWidth=100;
+CHANNEL c15 from t1 1 to p1 channelWidth=100;
 
 END LAYER
 
