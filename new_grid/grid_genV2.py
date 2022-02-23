@@ -137,7 +137,7 @@ def main():
             "CHANNEL",
             FLOW_CHANNEL_DEFAULTS,
             MINTTarget(cell_trap_refs[GRID_SIZE - 1][i - 1].ID, "3"),
-            [MINTTarget(output_tree.ID, str(i + 1))],
+            [MINTTarget(output_tree.ID, str(GRID_SIZE + 1 - i))],
             flow_layer_ref.ID,
         )
 

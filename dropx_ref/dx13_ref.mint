@@ -37,9 +37,9 @@ electrodeDistance=500
 electrodeWidth=800
 electrodeLength=3000;
 
-CHANNEL c5 from port_injector1 to pico_injector_1 2 channelWidth=300;
+CHANNEL c5 from port_injector1 to pico_injector_1 3 channelWidth=300;
 
-CHANNEL c6 from mixer_1 to pico_injector_1 1 channelWidth=300;
+CHANNEL c6 from mixer_1 2 to pico_injector_1 1 channelWidth=300;
 
 MIXER mixer_2 bendSpacing=600
 numberOfBends=5

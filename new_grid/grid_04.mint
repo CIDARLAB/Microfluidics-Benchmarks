@@ -54,10 +54,10 @@ CHANNEL channel_in_1 from input_tree 2 to ct_1_1 2 channelWidth=100  ;
 CHANNEL channel_in_2 from input_tree 3 to ct_1_2 2 channelWidth=100  ;
 CHANNEL channel_in_3 from input_tree 4 to ct_1_3 2 channelWidth=100  ;
 CHANNEL channel_in_4 from input_tree 5 to ct_1_4 2 channelWidth=100  ;
-CHANNEL channel_out_1 from ct_4_1 4 to output_tree 2 channelWidth=100  ;
-CHANNEL channel_out_2 from ct_4_2 4 to output_tree 3 channelWidth=100  ;
-CHANNEL channel_out_3 from ct_4_3 4 to output_tree 4 channelWidth=100  ;
-CHANNEL channel_out_4 from ct_4_4 4 to output_tree 5 channelWidth=100  ;
+CHANNEL channel_out_1 from ct_4_1 4 to output_tree 5 channelWidth=100  ;
+CHANNEL channel_out_2 from ct_4_2 4 to output_tree 4 channelWidth=100  ;
+CHANNEL channel_out_3 from ct_4_3 4 to output_tree 3 channelWidth=100  ;
+CHANNEL channel_out_4 from ct_4_4 4 to output_tree 2 channelWidth=100  ;
 CHANNEL channel_out from output_tree 1 to port_out 1 channelWidth=100  ; 
 
 END LAYER

@@ -194,14 +194,14 @@ CHANNEL channel_in_5 from input_tree 6 to ct_1_5 2 channelWidth=100  ;
 CHANNEL channel_in_6 from input_tree 7 to ct_1_6 2 channelWidth=100  ;
 CHANNEL channel_in_7 from input_tree 8 to ct_1_7 2 channelWidth=100  ;
 CHANNEL channel_in_8 from input_tree 9 to ct_1_8 2 channelWidth=100  ;
-CHANNEL channel_out_1 from ct_8_1 4 to output_tree 2 channelWidth=100  ;
-CHANNEL channel_out_2 from ct_8_2 4 to output_tree 3 channelWidth=100  ;
-CHANNEL channel_out_3 from ct_8_3 4 to output_tree 4 channelWidth=100  ;
-CHANNEL channel_out_4 from ct_8_4 4 to output_tree 5 channelWidth=100  ;
-CHANNEL channel_out_5 from ct_8_5 4 to output_tree 6 channelWidth=100  ;
-CHANNEL channel_out_6 from ct_8_6 4 to output_tree 7 channelWidth=100  ;
-CHANNEL channel_out_7 from ct_8_7 4 to output_tree 8 channelWidth=100  ;
-CHANNEL channel_out_8 from ct_8_8 4 to output_tree 9 channelWidth=100  ;
+CHANNEL channel_out_1 from ct_8_1 4 to output_tree 9 channelWidth=100  ;
+CHANNEL channel_out_2 from ct_8_2 4 to output_tree 8 channelWidth=100  ;
+CHANNEL channel_out_3 from ct_8_3 4 to output_tree 7 channelWidth=100  ;
+CHANNEL channel_out_4 from ct_8_4 4 to output_tree 6 channelWidth=100  ;
+CHANNEL channel_out_5 from ct_8_5 4 to output_tree 5 channelWidth=100  ;
+CHANNEL channel_out_6 from ct_8_6 4 to output_tree 4 channelWidth=100  ;
+CHANNEL channel_out_7 from ct_8_7 4 to output_tree 3 channelWidth=100  ;
+CHANNEL channel_out_8 from ct_8_8 4 to output_tree 2 channelWidth=100  ;
 CHANNEL channel_out from output_tree 1 to port_out 1 channelWidth=100  ; 
 
 END LAYER
