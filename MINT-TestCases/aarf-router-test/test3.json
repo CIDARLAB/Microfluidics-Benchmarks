@@ -1,0 +1,319 @@
+{
+    "name": "test3",
+    "params": {
+        "xspan": 135000,
+        "yspan": 85000,
+        "valveMap": {},
+        "valveTypeMap": {}
+    },
+    "components": [
+        {
+            "id": "a74a2040-38d3-11eb-bea1-2769dccfec09",
+            "name": "BetterMixer_1",
+            "entity": "MIXER",
+            "params": {
+                "position": [
+                    39000,
+                    34000
+                ],
+                "bendSpacing": 1230,
+                "numberOfBends": 1,
+                "channelWidth": 800,
+                "bendLength": 2460,
+                "orientation": "V",
+                "height": 250
+            },
+            "x-span": 4060,
+            "y-span": 4860,
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "layer": "FLOW",
+                    "label": "1"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "layer": "FLOW",
+                    "label": "2"
+                }
+            ],
+            "layers": [
+                "a3691580-38d3-11eb-bea1-2769dccfec09"
+            ]
+        },
+        {
+            "id": "a81845b0-38d3-11eb-bea1-2769dccfec09",
+            "name": "BetterMixer_2",
+            "entity": "MIXER",
+            "params": {
+                "position": [
+                    70000,
+                    34000
+                ],
+                "bendSpacing": 1230,
+                "numberOfBends": 1,
+                "channelWidth": 800,
+                "bendLength": 2460,
+                "orientation": "V",
+                "height": 250
+            },
+            "x-span": 4060,
+            "y-span": 4860,
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "layer": "FLOW",
+                    "label": "1"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "layer": "FLOW",
+                    "label": "2"
+                }
+            ],
+            "layers": [
+                "a3691580-38d3-11eb-bea1-2769dccfec09"
+            ]
+        }
+    ],
+    "connections": [
+        {
+            "id": "b30a6570-38d3-11eb-bea1-2769dccfec09",
+            "name": "CHANNEL_1",
+            "entity": "CHANNEL",
+            "source": {
+                "component": "a81845b0-38d3-11eb-bea1-2769dccfec09",
+                "port": "1"
+            },
+            "sinks": null,
+            "paths": [
+                [
+                    [
+                        41000,
+                        39000
+                    ],
+                    [
+                        41000,
+                        45000
+                    ],
+                    [
+                        57000,
+                        45000
+                    ],
+                    [
+                        57000,
+                        28000
+                    ],
+                    [
+                        72000,
+                        28000
+                    ],
+                    [
+                        72000,
+                        34000
+                    ],
+                    [
+                        72030,
+                        34000
+                    ]
+                ]
+            ],
+            "params": {
+                "start": [
+                    41000,
+                    39000
+                ],
+                "end": [
+                    72030,
+                    34000
+                ],
+                "wayPoints": [
+                    [
+                        41000,
+                        39000
+                    ],
+                    [
+                        41000,
+                        45000
+                    ],
+                    [
+                        57000,
+                        45000
+                    ],
+                    [
+                        57000,
+                        28000
+                    ],
+                    [
+                        72000,
+                        28000
+                    ],
+                    [
+                        72000,
+                        34000
+                    ],
+                    [
+                        72030,
+                        34000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            41000,
+                            39000
+                        ],
+                        [
+                            41000,
+                            39000
+                        ]
+                    ],
+                    [
+                        [
+                            41000,
+                            39000
+                        ],
+                        [
+                            41000,
+                            45000
+                        ]
+                    ],
+                    [
+                        [
+                            41000,
+                            45000
+                        ],
+                        [
+                            57000,
+                            45000
+                        ]
+                    ],
+                    [
+                        [
+                            57000,
+                            45000
+                        ],
+                        [
+                            57000,
+                            28000
+                        ]
+                    ],
+                    [
+                        [
+                            57000,
+                            28000
+                        ],
+                        [
+                            72000,
+                            28000
+                        ]
+                    ],
+                    [
+                        [
+                            72000,
+                            28000
+                        ],
+                        [
+                            72000,
+                            34000
+                        ]
+                    ],
+                    [
+                        [
+                            72000,
+                            34000
+                        ],
+                        [
+                            72030,
+                            34000
+                        ]
+                    ],
+                    [
+                        [
+                            72030,
+                            34000
+                        ],
+                        [
+                            72030,
+                            34000
+                        ]
+                    ]
+                ],
+                "channelWidth": 800,
+                "height": 250
+            },
+            "layer": "a3691580-38d3-11eb-bea1-2769dccfec09"
+        }
+    ],
+    "layers": [
+        {
+            "id": "a3691580-38d3-11eb-bea1-2769dccfec09",
+            "name": "flow",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 0,
+                "flip": false
+            }
+        },
+        {
+            "id": "a3691581-38d3-11eb-bea1-2769dccfec09",
+            "name": "control",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 1200,
+                "flip": true
+            }
+        },
+        {
+            "id": "a3691582-38d3-11eb-bea1-2769dccfec09",
+            "name": "cells",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 2000,
+                "flip": false
+            }
+        }
+    ],
+    "features": [
+        {
+            "id": "a3691580-38d3-11eb-bea1-2769dccfec09",
+            "name": "flow",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 0,
+                "flip": false
+            }
+        },
+        {
+            "id": "a3691581-38d3-11eb-bea1-2769dccfec09",
+            "name": "control",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 1200,
+                "flip": true
+            }
+        },
+        {
+            "id": "a3691582-38d3-11eb-bea1-2769dccfec09",
+            "name": "cells",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 2000,
+                "flip": false
+            }
+        }
+    ],
+    "version": 1.1,
+    "groups": [],
+    "customComponents": {}
+}

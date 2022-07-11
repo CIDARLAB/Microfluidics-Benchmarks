@@ -1,0 +1,219 @@
+{
+    "name": "test0",
+    "params": {
+        "xspan": 135000,
+        "yspan": 85000,
+        "valveMap": {},
+        "valveTypeMap": {}
+    },
+    "components": [
+        {
+            "id": "4bc75a30-38c9-11eb-a536-b360462db1cb",
+            "name": "Port_1",
+            "entity": "PORT",
+            "params": {
+                "position": [
+                    52000,
+                    32000
+                ],
+                "portRadius": 700,
+                "height": 1100
+            },
+            "x-span": 1400,
+            "y-span": 1400,
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "layer": "FLOW",
+                    "label": "1"
+                }
+            ],
+            "layers": [
+                "12843bd0-38c9-11eb-a536-b360462db1cb"
+            ]
+        },
+        {
+            "id": "4cd85500-38c9-11eb-a536-b360462db1cb",
+            "name": "Port_2",
+            "entity": "PORT",
+            "params": {
+                "position": [
+                    101000,
+                    47000
+                ],
+                "portRadius": 700,
+                "height": 1100
+            },
+            "x-span": 1400,
+            "y-span": 1400,
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "layer": "FLOW",
+                    "label": "1"
+                }
+            ],
+            "layers": [
+                "12843bd0-38c9-11eb-a536-b360462db1cb"
+            ]
+        }
+    ],
+    "connections": [
+        {
+            "id": "53f020c0-38c9-11eb-a536-b360462db1cb",
+            "name": "CHANNEL_1",
+            "entity": "CHANNEL",
+            "source": {
+                "component": "4bc75a30-38c9-11eb-a536-b360462db1cb",
+                "port": "1"
+            },
+            "sinks": [
+                {
+                    "component": "4cd85500-38c9-11eb-a536-b360462db1cb",
+                    "port": "1"
+                }
+            ],
+            "paths": [
+                [
+                    [
+                        52000,
+                        32000
+                    ],
+                    [
+                        98000,
+                        36000
+                    ],
+                    [
+                        101000,
+                        47000
+                    ]
+                ]
+            ],
+            "params": {
+                "start": [
+                    52000,
+                    32000
+                ],
+                "end": [
+                    101000,
+                    47000
+                ],
+                "wayPoints": [],
+                "segments": [
+                    [
+                        [
+                            52000,
+                            32000
+                        ],
+                        [
+                            52000,
+                            32000
+                        ]
+                    ],
+                    [
+                        [
+                            52000,
+                            32000
+                        ],
+                        [
+                            98000,
+                            36000
+                        ]
+                    ],
+                    [
+                        [
+                            98000,
+                            36000
+                        ],
+                        [
+                            101000,
+                            47000
+                        ]
+                    ],
+                    [
+                        [
+                            101000,
+                            47000
+                        ],
+                        [
+                            101000,
+                            47000
+                        ]
+                    ]
+                ],
+                "channelWidth": 800,
+                "height": 250
+            },
+            "layer": "12843bd0-38c9-11eb-a536-b360462db1cb"
+        }
+    ],
+    "layers": [
+        {
+            "id": "12843bd0-38c9-11eb-a536-b360462db1cb",
+            "name": "flow",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 0,
+                "flip": false
+            }
+        },
+        {
+            "id": "12843bd1-38c9-11eb-a536-b360462db1cb",
+            "name": "control",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 1200,
+                "flip": true
+            }
+        },
+        {
+            "id": "12843bd2-38c9-11eb-a536-b360462db1cb",
+            "name": "cells",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 2000,
+                "flip": false
+            }
+        }
+    ],
+    "features": [
+        {
+            "id": "12843bd0-38c9-11eb-a536-b360462db1cb",
+            "name": "flow",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 0,
+                "flip": false
+            }
+        },
+        {
+            "id": "12843bd1-38c9-11eb-a536-b360462db1cb",
+            "name": "control",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 1200,
+                "flip": true
+            }
+        },
+        {
+            "id": "12843bd2-38c9-11eb-a536-b360462db1cb",
+            "name": "cells",
+            "type": "FLOW",
+            "group": "0",
+            "params": {
+                "z_offset": 2000,
+                "flip": false
+            }
+        }
+    ],
+    "version": 1.1,
+    "groups": [],
+    "customComponents": {}
+}
