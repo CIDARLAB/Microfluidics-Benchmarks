@@ -1,11 +1,13 @@
 module v0(
-    finput [0:3] inputs1, [0:3] inputs2, wash, [0:1] media,
+    finput [0:3] inputs1, [0:3] inputs2, wash, media, cells
     foutput [0:1] outputs,
     control [0:1] c_inputs1, [0:1] c_inputs2, c_wash, [0:1] c_media
 );
 
     flow acc1, acc2, central_acc;
-    storage [0:1] cell_traps;
+    storage cell_traps;
+
+    flow signals, disposal;
 
     distribute@(c_inputs1)
     begin
@@ -17,16 +19,26 @@ module v0(
         endcase
     end
 
+    distribute@(c_wash)
+    begin
+        if(c_wash)
+            begin
+                acc1 <= wash;
+            end
+    end
+
     assign central_acc = {acc1, acc2};
+
+    assign cell_traps = signals;
+    assign disposal = cell_traps;
+    assign cell_traps = {media, cells};
 
     distribute@(c_media)
     begin
-
         case(c_media)
-            2'b01 : cell_traps[0] <= central_acc;
-            2'b10 : cell_traps[1] <= central_acc;
+            2'b01 : cell_traps <= signals;
+            2'b10 : cell_traps <= disposal;
         endcase
-
     end
 
     distribute@(c_inputs2)
