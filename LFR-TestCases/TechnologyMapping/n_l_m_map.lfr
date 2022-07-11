@@ -1,0 +1,18 @@
+module n_l_m_map(
+    finput [0:3] i1,
+    foutput [0:4] out
+);
+
+    flow [0:3] temp1;
+    flow [0:4] temp2;
+
+    assign temp1[0:3] = i1[0:3];
+
+    #MAP "GRADIENT GENERATOR" "assign"
+    assign temp2[0:4] = temp1[0:3];
+    assign out[0:4] = temp2[0:4];
+
+endmodule
+
+
+

@@ -1,0 +1,63 @@
+#This example has 1 to 8 mux
+module one_to_n(finput in, foutput out[0:7], control c1[0:2], c2[0:2])
+
+distribute@(c1, c2)
+begin
+    out[0] = in * (!c1[0] && !c1[1] && !c1[2]) && (c2[0] && c2[1] && c2[2]);
+    out[1] = in * (!c1[0] && !c1[1] && c1[2]) && (c2[0] && c2[1] && !c2[2]);
+    out[2] = in * (!c1[0] && c1[1] && !c1[2]) && (c2[0] && !c2[1] && c2[2]);
+    out[3] = in * (!c1[0] && c1[1] && c1[2]) && (c2[0] && !c2[1] && !c2[2]);
+    out[4] = in * (c1[0] && !c1[1] && !c1[2]) && (!c2[0] && c2[1] && c2[2]);
+    out[5] = in * (c1[0] && !c1[1] && c1[2]) && (!c2[0] && c2[1] && !c2[2]);
+    out[6] = in * (c1[0] && c1[1] && !c1[2]) && (!c2[0] && !c2[1] && c2[2]);
+    out[7] = in * (c1[0] && c1[1] && c1[2]) && (!c2[0] && !c2[1] && !c2[2]);
+end
+
+endmodule
+
+
+#This example has 1 to 8 mux
+module one_to_n(finput in, foutput out[0:7], control c1[0:2], c2[0:2])
+
+distribute@(c1, c2)
+begin
+    case({c2,c1})
+        6'b111000 : 
+            out[0] = in;
+        6'b110001 :
+            out[1] = in;
+        6'b101010 :
+            out[2] = in;
+        6'b100011 :
+            out[3] = in;
+        6'b011100 :
+            out[4] = in;
+        6'b010101 :
+            out[5] = in;
+        6'b001110 :
+            out[6] = in;
+        6'b000111 :
+            out[7] = in;
+    endcase
+end
+
+endmodule
+
+
+
+distribute@(c1, c2, ...)
+begin
+    #This statement maps the input to the outputs
+    output = input * (Logic Function);
+
+end
+
+
+distribute@(c1,c2, ... )
+begin
+
+    #This statement maps input vectors to output vectors
+    output[0:n] = input[0:m] * (Logic Function);
+
+end
+

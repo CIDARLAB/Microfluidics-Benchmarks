@@ -1,0 +1,17 @@
+module mux_04_in(
+    finput [0:3] inputs, 
+    foutput output, 
+    control [0:1] c_select
+);
+
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : output <= inputs[0];
+            2'b01 : output <= inputs[1];
+            2'b10 : output <= inputs[2];
+            2'b11 : output <= inputs[3];
+        endcase
+    end
+
+endmodule

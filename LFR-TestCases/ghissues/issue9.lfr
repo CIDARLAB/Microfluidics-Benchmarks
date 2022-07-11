@@ -1,0 +1,55 @@
+module issue9(
+    finput [0:15] in,
+    foutput out,
+    control x9, x1,
+    control inlet
+);
+
+    flow mux;
+    flow mixer;
+    flow mixer_in, mixer_out;
+    flow bypass1, bypass2;
+    flow bypass_in, bypass_out;
+    control x9, x1;
+
+    flow chamber;
+
+    flow flowcontroller;
+
+    // assign temp1[15:0] = in;
+
+    // mux here
+    assign mux = in[0:15] ;
+    assign mux = x9;
+
+    // mixer
+    // distribution block
+    #MAP "MIXER" "~"
+    assign mixer_out = ~mixer_in;
+
+    distribute@(x1)
+    begin
+        if (x1 == 1) 
+        begin
+            bypass_out <= bypass_in;
+        end
+        else 
+        begin
+            mixer_in <= bypass_in;
+            bypass_out <= mixer_out;
+        end
+    end
+
+    // assign temp3 = temp2 + cout;
+
+    flow valve1_in, valve1_out;
+
+    assign valve1_in = mux + bypass_out;
+
+    distribute@(x1) 
+    begin
+        if (x1 == 1) begin
+            valve1_out <= valve1_in;
+        end
+    end
+endmodule

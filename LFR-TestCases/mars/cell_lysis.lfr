@@ -1,0 +1,22 @@
+module cell_lysis (
+    finput A, B, C, D,
+    foutput a_out
+);
+
+    flow mixture1, mixture2;
+
+    // mix suspended cells and lysing buffer
+    assign mixture1 = A + B;
+
+    // mix mixture1 with neutralization buffer to prevent DNA degradation
+    assign mixture2 = mixture1 + C;
+
+    // move to diamond chamber so DNA can bind to magnetic particles
+    #MAP "DIAMOND CHAMBER" "~"
+    flow processed_mix;
+    assign processed_mix = ~mixture2;
+    
+    // clean and release DNA from magnetic particles
+    assign a_out = D + processed_mix;
+    
+endmodule

@@ -1,0 +1,15 @@
+module mux_02_in(
+    finput input, 
+    foutput [0:1] outputs, 
+    control c_select
+);
+
+    distribute@(c_select)
+    begin
+        if(c_select == 1)
+            outputs[0] <= input;
+        else
+            outputs[1] <= input;
+    end
+
+endmodule

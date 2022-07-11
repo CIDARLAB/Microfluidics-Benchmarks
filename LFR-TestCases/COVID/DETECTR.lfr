@@ -1,0 +1,19 @@
+module detectr(finput complex, iab, mgso4, dntps, primer, bst, warmstart,
+water, sample, nebuffer, foutput solution);
+
+    #MAP "MIXER" "~"
+
+    flow mixer1;
+    flow mixer2;
+    flow mixer3;
+
+    assign mixer1 = iab + mgso4 + dntps + primer + bst + warmstart + water + sample;
+
+    assign mixer2 = ~mixer1;
+    assign mixer2 = nebuffer;
+
+    assign mixer3 = ~mixer2;
+
+    assign solution = ~mixer3;
+
+endmodule

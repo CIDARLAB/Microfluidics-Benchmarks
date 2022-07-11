@@ -1,0 +1,15 @@
+module dropletgenerator3(oilin1, oilin2, waterin1, waterin2, dropletout1, dropletout2);
+
+    finput oilin1, oilin2, waterin1, waterin2;
+    foutput dropletout1, dropletout2;
+
+    #MAP "DROPLET GENERATOR" "&"
+    #CONSTRAIN DROPLET_RATE = 5 kHz & DROPLET_SIZE = 100 um
+    assign dropletout1 = oilin1 & oilin2 & waterin1 ;
+
+    #MAP "DROPLET GENERATOR" "&"
+    #CONSTRAIN "&" DROPLET_RATE = 6 kHz 
+    #CONSTRAIN "&" DROPLET_SIZE = 50 um
+    assign dropletout2 = oilin1 & oilin2 & waterin2 ;
+
+endmodule

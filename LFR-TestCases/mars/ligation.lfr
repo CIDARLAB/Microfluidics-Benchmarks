@@ -1,0 +1,27 @@
+module ligation (
+    finput B, C, D, E, F,
+    foutput g_out,
+    control c1, c2
+);
+
+    // mix T4 DNA lygase buffer, vector DNA, insert DNA, Nuclease-free water, and T4 DNA lygase
+    flow mixture;
+    assign mixture = B%500 + C%500 + D%500 + E%500 + F%500;
+
+    // incubate
+    flow incubated;
+    
+    #MAP "INCUBATOR" "~"
+
+    distribute@(c1) begin 
+        if (c1 == 1)
+            incubated <= ~mixture;
+    end
+
+    distribute@(c2) begin 
+        if (c2 == 1)
+            g_out <= incubated;
+    end
+
+
+endmodule

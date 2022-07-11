@@ -1,0 +1,22 @@
+module tree_fanout3(
+    finput i1,
+    foutput [0:7] out
+ );
+
+    flow temp_i1, temp_temp_i1;
+    flow [0:7] temp_out, [0:7] temp_temp_out;
+    
+    assign temp_temp_i1 = i1;
+    assign temp_i1 = temp_temp_i1;
+
+    //This implicitly means that 
+    //we can generate a tree
+    #MAP "YTREE" "assign"
+    assign temp_out[0:7] = temp_i1;
+    
+    assign temp_temp_out = temp_out;
+
+    assign out = temp_temp_out;
+
+endmodule
+

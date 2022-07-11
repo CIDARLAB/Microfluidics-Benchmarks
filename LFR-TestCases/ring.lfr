@@ -1,0 +1,23 @@
+module ring(input, input2, input3, output);
+
+    # This particular ring config has some inputs and outputs 
+    # TODO: Do we need to consider scenario where there are no inputs or outputs ?
+    finput input, input2, input3;
+    foutput output;
+
+    # TODO: How do we deal with wastes ?
+    foutput [3:0] waste;
+    
+    flow/wire/storage temp1, temp2, temp3;
+
+    assign temp1 = input + input2 + temp3;
+
+    assign temp2 = process_somehow1(temp1);
+
+    assign temp3 = temp2 + input3;
+
+    assign ouput = temp3;
+
+
+endmodule
+

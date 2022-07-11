@@ -1,0 +1,22 @@
+module and_annotation_test(
+    finput in_1, in_2, in_3,
+    foutput out,
+    control c
+);
+
+    distribute@(c)
+    begin
+        if(c == 1)
+        begin
+            out <= in_1;
+            out <= in_2;
+        end
+        else
+        begin
+            out <= in_3;
+        end
+    
+    end
+
+
+endmodule

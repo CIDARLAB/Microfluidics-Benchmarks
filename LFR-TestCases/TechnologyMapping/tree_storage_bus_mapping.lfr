@@ -1,0 +1,12 @@
+module tree_storage_bus_mapping(finput input, foutput output);
+
+    #MAP "LONG CELL TRAP" "storage"
+    storage [0:7] cell_traps;
+
+    #MAP "YTREE" "assign"
+    assign cell_traps = input;
+
+    #MAP "YTREE" "assign"
+    assign output = cell_traps;
+
+endmodule

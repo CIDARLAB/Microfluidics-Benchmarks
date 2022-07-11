@@ -1,0 +1,8 @@
+module gradient(
+    finput P, Q, E,
+    foutput [8:0] out
+);
+    assign out[0] = P;
+    assign out[1] = Q;
+    //(1/9)*(5*P + 3*Q);
+endmodule

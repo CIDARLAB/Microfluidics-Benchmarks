@@ -1,0 +1,69 @@
+module transposer_04(
+    finput [0:3] inputs,
+    foutput [0:3] outputs, 
+    control [0:2] c_select
+);
+
+    distribute@(c_select)
+    begin
+        case(c_select)
+            3'b000 : 
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[1];
+                outputs[2] <= inputs[2];
+                outputs[3] <= inputs[3];
+            end
+            3'b001 :
+            begin
+                outputs[0] <= inputs[1];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[2];
+                outputs[3] <= inputs[3];
+            end
+            3'b010 :
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[2];
+                outputs[2] <= inputs[1];
+                outputs[3] <= inputs[3];
+            end
+            3'b011 :
+            begin
+                outputs[0] <= inputs[2];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[1];
+                outputs[3] <= inputs[3];
+            end
+            3'b100 : 
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[1];
+                outputs[2] <= inputs[2];
+                outputs[3] <= inputs[3];
+            end
+            3'b101 :
+            begin
+                outputs[0] <= inputs[1];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[2];
+                outputs[3] <= inputs[3];
+            end
+            3'b110 :
+            begin
+                outputs[0] <= inputs[0];
+                outputs[1] <= inputs[2];
+                outputs[2] <= inputs[1];
+                outputs[3] <= inputs[3];
+            end
+            3'b111 :
+            begin
+                outputs[0] <= inputs[2];
+                outputs[1] <= inputs[0];
+                outputs[2] <= inputs[1];
+                outputs[3] <= inputs[3];
+            end                
+        endcase
+    end
+
+endmodule

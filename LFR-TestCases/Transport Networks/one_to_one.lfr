@@ -1,0 +1,8 @@
+module one_to_one(finput in, foutput out, control c1)
+
+    distribute@(c1)
+    begin
+        out = in*c1;
+    end
+
+endmodule

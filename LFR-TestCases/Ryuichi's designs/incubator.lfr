@@ -1,0 +1,97 @@
+// multi-purpose lab-on-a-chip Ahmed M. Amin, Raviraj Thakur, Seth Madren, Han-Sheng Chuang, Mithuna Thottethodi, T. N. Vijaykumar, Steven T. Wereley, and Stephen C. Jacobson
+
+module incubator(
+    finput A, B, C, D, E,
+    foutput X, Y, Z,
+    control [16:0] valve
+);
+
+flow after_BCD, resorvoirs_out;
+
+distribute@(valve[0:2]) begin 
+    if (valve[0] == 1)
+        after_BCD <= B;
+    if (valve[1] == 1)
+        after_BCD <= C;
+    if (valve[2] == 1)
+        after_BCD <= D;
+end
+
+distribute@(valve[3:5]) begin 
+    if (valve[3] == 1)
+        resorvoirs_out <= A;
+    if (valve[4] == 1)
+        resorvoirs_out <= after_BCD;
+    if (valve[5] == 1)
+        resorvoirs_out <= E;
+end
+
+flow pump1_out;
+
+#MAP "Pump1" "~"
+assign pump1_out = ~resorvoirs_out; 
+
+flow waitroom1, mixer_left, incubator_left, midpath;
+
+distribute@(valve[6:9]) begin 
+    if (valve[6] == 1)
+        waitroom1 <= pump1_out;
+    if (valve[7] == 1) begin 
+        mixer_left <= waitroom1;
+        waitroom1 <= mixer_left;
+    end
+    if (valve[8] == 1) begin 
+        midpath <= waitroom1;
+        waitroom1 <= midpath;
+    end
+    if (valve[9] == 1) begin 
+        incubator_left <= waitroom1;
+        waitroom1 <= incubator_left;
+    end
+end
+
+flow waitroom2, mixer_right, incubator_right, pump2_in;
+
+#MAP "Mixer_left_to_right" "~"
+assign mixer_right = ~mixer_left;
+
+#MAP "Mixer_right_to_left" "~"
+assign mixer_left = mixer_right;
+
+#MAP "Incubator_left_to_right" "~"
+assign incubator_right = incubator_left;
+
+#MAP "Incubator_right_to_left" "~"
+assign incubator_left = incubator_right;
+
+distribute@(valve[10:13]) begin
+    if (valve[10] == 1) begin 
+        waitroom2 <= midpath;
+        midpath <= waitroom2;
+    end
+    if (valve[11] == 1) begin
+        waitroom2 <= incubator_right;
+        incubator_right <= waitroom2;
+    end
+    if (valve[12] == 1) 
+        pump2_in <= waitroom2;
+    if (valve[13] == 1) 
+        waitroom2 <= incubator_right;
+        incubator_right <= waitroom2;
+end
+
+flow pump2_out;
+
+#MAP "Pump2" "~"
+assign pump2_out = ~pump2_in;
+
+distribute@(valve[14:16]) begin 
+    if (valve[14] == 1)
+        X <= pump2_out;
+    if (valve[15] == 1)
+        Y <= pump2_out;
+    if (valve[16] == 1)
+        Z <= pump2_out;
+end
+
+endmodule

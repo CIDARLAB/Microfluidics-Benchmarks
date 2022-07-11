@@ -1,0 +1,16 @@
+module crispr(finput water, nebuffer, lbcas12a, grna, reporter,
+foutput complex);
+
+    #MAP "MIXER" "~"
+
+    flow mixer1;
+    flow mixer2;
+
+    assign mixer1 = water + nebuffer + lbcas12a + grna;
+
+    assign mixer2 = ~mixer1;
+    assign mixer2 = reporter;
+
+    assign complex = ~mixer2;
+
+endmodule

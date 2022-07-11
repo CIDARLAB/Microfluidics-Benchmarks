@@ -1,0 +1,10 @@
+module dropletgenerator(waterin, dropletout);
+
+    finput waterin;
+    foutput dropletout;
+
+    #MAP "DROPLET GENERATOR" "%"
+    #CONSTRAIN "&" DROPLET_RATE = 30 Hz
+    assign dropletout = waterin%100 ;
+
+endmodule

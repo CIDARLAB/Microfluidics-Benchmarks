@@ -1,0 +1,120 @@
+//C.J.Wang, A. Bergmann, B. Lin, K.Kim and A. Levchenko, Sci. Signaling, 2012, 5, ra17
+
+module seeding(
+    control [6:0] c,
+    finput buffer, stimuli,
+    foutput seeding_out, waste
+);
+
+    storage culture;
+
+    distribute@(c[0:1]) begin 
+        if (c[0] == 1)
+            culture <= buffer;
+        if (c[1] == 1)
+            culture <= stimuli;
+        // if both 1, and buffer v > stimuli v, then cutlure = buffer and vice versa.
+    end
+
+    // seeding
+    flow [1:0] seeding1;
+    flow [3:0] seeding2;
+    flow [5:0] seeding3;
+    flow [7:0] seeding4;
+
+    distribute@(c[2:5]) begin 
+        if (c[2] == 1)
+            seeding1[0:1] <= culture;
+        if (c[3] == 1) begin 
+            seeding2[0:1] <= seeding1[0:1];
+            seeding2[2:3] <= culture;
+        end
+        if (c[4] == 1) begin 
+            seeding3[0:3] <= seeding2[0:3];
+            seeding3[4:5] <= culture;
+        end
+        if (c[5] == 1) begin 
+            seeding4[0:5] <= seeding3[0:5];
+            seeding4[6:7] <= culture;
+        end
+    end
+
+    flow seeding_total;
+
+    assign seeding_total = seeding4[0:7];
+
+    distribute@(c[6]) begin 
+        if(c[6] == 1) 
+            seeding_out <= seeding_total;
+    end
+
+    // waste
+    flow [7:0] waste1; 
+    flow [7:0] waste2; 
+    flow [7:0] waste3;
+    flow [7:0] waste4; 
+    flow [7:0] waste5; 
+    flow [7:0] waste6;
+
+    assign waste1[1:5] = culture;
+
+    distribute@(c[2], c[4]) begin
+    // first control level 
+        if (c[4] == 1) 
+            waste1[6:7] <= culture;
+        if (c[2] == 1)
+            waste1[0] <= culture;
+    end
+
+    assign waste2[0:3] = waste1[0:3];
+
+    distribute@(c[3]) begin 
+      // second control level
+        if (c[3] == 1)
+            waste2[4:7] <= waste1[4:7];
+    end
+
+    assign waste3[0:1] = waste2[0:1];
+
+    distribute@(c[2]) begin 
+        // // third control level
+        if (c[2] == 1)
+            waste3[2:7] <= waste2[2:7];
+    end
+
+    assign waste4[3:7] = waste3[3:7];
+
+    distribute@(c[3]) begin 
+     // fourth control level
+        if (c[3] == 1) 
+            waste4[0:2] <= waste3[0:2];
+    end
+  
+    // fifth control level
+    assign waste5[5:7] = waste4[5:7];
+
+    distribute@(c[4]) begin 
+        if (c[4] == 1)
+            waste5[0:4] <= waste4[0:4];
+    end
+
+    // sixth control level
+    assign waste6[7] = waste5[7];
+
+    distribute@(c[5]) begin 
+        if (c[5] == 1)
+            waste6[0:6] <= waste5[0:6];
+    end
+
+    assign waste = waste6[0:7];
+
+    // //
+    // end
+
+    // flow [7:0] waste_midpoint;
+
+    // assign waste_midpoint[0:7] = waste3[0:7];
+
+
+
+endmodule

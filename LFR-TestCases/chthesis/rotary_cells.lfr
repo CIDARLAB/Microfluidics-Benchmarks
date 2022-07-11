@@ -1,0 +1,31 @@
+`import "mux_04_in.lfr"
+`import "mux_04_out.lfr"
+
+module rotary_cells(
+    finput [0:3] in_1,
+    foutput out_1,
+    control [0:1] c_inputs, [0:1] c_cell_traps
+);
+
+    flow temp_input, temp_trap_input;
+    storage [0:3] cell_traps;
+
+    mux_04_in mux_in(
+        .inputs(in_1), 
+        .output(temp_input), 
+        .c_select(c_inputs)
+    );
+
+    #MAP "ROTARY MIXER" "&"
+    assign temp_trap_input = &temp_input;
+    
+    mux_04_out mux_traps(
+        .input(temp_trap_input), 
+        .outputs(cell_traps), 
+        .c_select(c_cell_traps)
+    );
+
+    #MAP "TREE" "assign"
+    assign out_1 =  cell_traps;
+
+endmodule

@@ -1,0 +1,8 @@
+module issue8(
+    finput P, Q, R,
+    foutput [0:8] out
+);
+    assign out[0] = P;
+    assign out[1] = (1/9)*(6*P + 3*Q);
+    assign out[2] = (1/36)*(15*P + 18*Q - R); 
+endmodule

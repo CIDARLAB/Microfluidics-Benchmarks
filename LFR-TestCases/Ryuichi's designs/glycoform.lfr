@@ -1,0 +1,21 @@
+// Integrated Lectin Affinity Microfluidic Chip for Glycoform Separation
+//  Xiuli Mao, Yong Luo, Zhongpeng Dai, Keyi Wang, Yuguang Du, and Bingcheng Lin
+
+module glycoform (
+    finput R1, R2, R3, R5, R6,
+    foutput R4, R7
+);
+    // sample injection 1
+    assign R4 = R3;
+
+    // sample injection 2 and washing
+    assign R7 = R1;
+    assign R4 = R1;
+    assign R3 = R1;
+
+    // elution 1 and elution 2
+    assign R7 = R2;
+    assign R4 = R2;
+    assign R3 = R2;
+
+endmodule

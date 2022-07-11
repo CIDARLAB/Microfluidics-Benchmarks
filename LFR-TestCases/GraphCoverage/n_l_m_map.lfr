@@ -1,0 +1,16 @@
+module n_l_m_map(i1, out);
+
+    finput i1;
+    foutput out;
+
+    flow [0:3] temp1;
+    flow [0:4] temp2;
+
+    assign temp1[0:3] = i1;
+    assign temp2[0:4] = temp1[0:3];
+    assign out = temp2[0:4];
+
+endmodule
+
+
+

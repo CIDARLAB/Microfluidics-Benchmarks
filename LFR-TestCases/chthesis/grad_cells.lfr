@@ -1,0 +1,30 @@
+module grad_cells(finput [0:1] in1, foutput out1, control [0:1] c);
+
+    flow [0:3] gradients, gradient_out;
+    storage [0:3] celltraps;
+
+    assign gradients[0] = 0.9 * in1[0] + 0.1 * in1[1];
+    assign gradients[1] = 0.7 * in1[0] + 0.3 * in1[1];
+    assign gradients[2] = 0.3 * in1[0] + 0.7 * in1[1];
+    assign gradients[3] = 0.1 * in1[0] + 0.9 * in1[1];
+
+    assign gradient_out = gradients;
+
+    distribute@(c)
+    begin
+        case({c[0], c[1]})
+            2'b00:
+                celltraps[0] <= gradient_out;
+            2'b01:
+                celltraps[1] <= gradient_out;
+            2'b10:
+                celltraps[2] <= gradient_out;
+            2'b11:
+                celltraps[3] <= gradient_out;
+        endcase
+    end
+
+    #MAP "TREE" "assign"
+    assign out1 = celltraps;
+
+endmodule

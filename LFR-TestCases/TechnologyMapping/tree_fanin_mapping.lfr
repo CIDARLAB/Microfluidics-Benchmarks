@@ -1,0 +1,11 @@
+module tree_fanin(
+    finput [0:7] i1,
+    foutput out
+);
+    // This implicitly means that 
+    // we can generate a tree
+    #MAP "YTREE" "assign"
+    assign out = i1 [0:7];
+
+endmodule
+

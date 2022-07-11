@@ -1,0 +1,19 @@
+module tree_bus(i1, out);
+
+    finput i1;
+    foutput out;
+
+    flow [0:8] temp1;
+    flow [0:8] temp2;
+
+    // We extend the base case to
+    // vectors having similar sizes
+
+    assign temp1[0:8] = i1;
+
+    #MAP "MIXER" "~"
+    assign temp2[0:8] = ~temp1[0:8];
+    assign out = temp2[0:8];
+
+endmodule
+

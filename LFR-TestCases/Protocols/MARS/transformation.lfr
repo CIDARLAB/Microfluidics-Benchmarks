@@ -1,0 +1,20 @@
+module transformation(finput plasmid, cell_suspension, foutput result);
+
+    flow reaction_mix, plasmid_vol;
+    storage incubator;
+
+    // This is the metering network should we manually map it ?
+    assign plasmid_vol = plasmid % 50.88;
+
+    assign reaction_mix = plasmid_vol + cell_suspension % 50;
+
+    // This is sort of a hybrid store and process system so it
+    // also has a delay associated with it
+    // Delay 1 hour
+
+    #MAP "INCUBATOR" "storage" 
+    assign incubator = &reaction_mix;
+    assign result = incubator;
+
+endmodule
+

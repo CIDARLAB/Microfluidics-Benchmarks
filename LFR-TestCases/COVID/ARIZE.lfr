@@ -1,0 +1,25 @@
+
+module expression1(
+    // Define input and output ports on ARIZE
+    finput in1a,in2a,in3a,in4a,in5a,in6a,in7a,in1b,in2b,in3b,in4b,in5b,in6b,in7b,in8b,in9b, 
+    foutput out1,out2);
+
+    // Fluid flows representing the products from each step and fractioned product for step 2 of SHERLOCK protocol
+    flow mix_a;
+    flow mix_b;
+    flow t;
+
+    // Mix inputs of step 1 
+    assign mix_a = in1a + in2a + in3a + in4a + in5a + in6a + in7a;
+    
+    // Fraction off fluid from product of first step (using 2 as placeholder)
+    assign t = mix_a/2;
+
+    // Mix inputs for second step, which includes t
+    assign mix_b = in1b + in2b + in3b + in4b + in5b + in6b + in7b + in8b + in9b + t;
+
+    // Direct products to either waste or final output ports
+    assign out1 = mix_a;
+    assign out2 = mix_b;
+
+endmodule

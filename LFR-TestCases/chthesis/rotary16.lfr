@@ -1,0 +1,19 @@
+`import "mux_16_in.lfr"
+`import "mux_16_out.lfr"
+
+
+module rotary16(
+    finput [0:15] bank_in, 
+    foutput [0:15] bank_out,
+    control [0:3] c_in, [0:3] c_out
+);
+
+    flow temp_in, temp_out;
+
+    mux_16_in mux_in(bank_in, temp_in, c_in);
+
+    assign temp_out = &temp_in;
+
+    mux_16_out mux_out(temp_out, bank_out, c_out);
+
+endmodule

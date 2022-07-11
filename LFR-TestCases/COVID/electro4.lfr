@@ -1,0 +1,28 @@
+
+module electro4(
+    finput dna_line, denaturing_line, probe_line, gelin, 
+    foutput exit, gelout
+);
+    
+        flow node;
+        flow[0:2] cathode;
+        flow[0:2] chamber;
+        flow[0:2] gelchannel;
+        flow[0:2] anode;
+    
+        #MAP  "VALVE" "&"
+        #MAP  "VALVE2" "~"
+        assign node = dna_line + denaturing_line + probe_line;
+        assign chamber[0:2] = &node;
+        assign chamber[0:2] = cathode[0:2];
+    
+        assign gelchannel[0:2] = ~chamber[0:2];
+        assign gelchannel[0:2] = gelin;
+        assign anode[0:2] = ~gelchannel[0:2];
+        assign gelout = gelchannel[0:2];
+        assign exit = &chamber[0:2];
+
+endmodule
+       
+    
+    

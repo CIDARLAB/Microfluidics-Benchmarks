@@ -1,0 +1,11 @@
+module tree_fanout(i1, out [0:8]);
+
+    finput i1;
+    foutput [0:8] out;
+
+    //This implicitly means that 
+    //we can generate a tree
+    assign out[0:8] = i1;
+
+endmodule
+
