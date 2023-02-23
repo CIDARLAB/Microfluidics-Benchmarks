@@ -11,7 +11,7 @@ waterInputWidth=375
 outputWidth=300
 outputLength=5000
 height=300;
-DIAMOND CHAMBER diamond_chamber_1 ;
+DIAMOND REACTION CHAMBER diamond_chamber_1 ;
 DROPLET SORTER droplet_sorter_1 ;
 PORT port_3 portRadius=2000  portRadius=2000;
 PORT port_4 portRadius=2000  portRadius=2000;

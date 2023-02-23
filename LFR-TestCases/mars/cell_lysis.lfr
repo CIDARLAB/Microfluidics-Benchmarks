@@ -12,7 +12,7 @@ module cell_lysis (
     assign mixture2 = mixture1 + C;
 
     // move to diamond chamber so DNA can bind to magnetic particles
-    #MAP "DIAMOND CHAMBER" "~"
+    #MAP "DIAMOND REACTION CHAMBER" "~"
     flow processed_mix;
     assign processed_mix = ~mixture2;
     
