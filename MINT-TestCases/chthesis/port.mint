@@ -1,0 +1,7 @@
+DEVICE port_1
+
+LAYER FLOW
+
+PORT p1 portRadius=100;
+
+END LAYER
