@@ -1,0 +1,619 @@
++ echo Converting LFR files from ./Microfluidics-Benchmarks/LFR-TestCases/test
+Converting LFR files from ./Microfluidics-Benchmarks/LFR-TestCases/test
++ echo Output base: ./Microfluidics-Benchmarks/Results/LFR-TestCases/test
+Output base: ./Microfluidics-Benchmarks/Results/LFR-TestCases/test
++ echo -----------------------
+-----------------------
++ [ ! -f ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr ]
++ basename ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr .lfr
++ BASENAME=multi_input
++ FILE_OUT_DIR=./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input
++ mkdir -p ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input
++ echo Processing: ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr -> ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input (variant 0)
+Processing: ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr -> ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input (variant 0)
++ fluigi compile_lfr --no-debug-graphs --outpath ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input --variant 0 ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
+line 2:25 extraneous input 'CHAMBER' expecting {',', '}'}
+ _____ _       _       _ 
+|  ___| |_   _(_) __ _(_)
+| |_  | | | | | |/ _` | |
+|  _| | | |_| | | (_| | |
+|_|   |_|\__,_|_|\__, |_|
+                 |___/   
+
+('./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr',) Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input dropx /workspaces/Neptune_2026/pylfr/library False False True ()
+()
+Loading all LFR Files from lib Directories:
+Input Path: /workspaces/Neptune_2026/Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
+File: /workspaces/Neptune_2026/Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
+['multi_input.lfr']
+output dir: Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input
+('./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr',)
+Initialized the lfrcompiler
+Entering the Distribution Block
+Entering the dis assign stat
+Exiting the dist assign stat
+LHS, RHS sizes are equal
+IO - Name: in1_0, Type : IOType.FLOW_INPUT STORAGE - cell_trap
+Could not find source - in1_0 in state table connectivity graph, adding node
+Could not find target - cell_trap in state table connectivity graph, adding node
+Added the edge in1_0 -> cell_trap
+Entering the dis assign stat
+Exiting the dist assign stat
+LHS, RHS sizes are equal
+IO - Name: in1_1, Type : IOType.FLOW_INPUT STORAGE - cell_trap
+Could not find source - in1_1 in state table connectivity graph, adding node
+Could not find target - cell_trap in state table connectivity graph, adding node
+Added the edge in1_1 -> cell_trap
+Exit the Distribution Block
+Implement the fig generation from this
+Connectivity table for the distribution block
+╒════════════════════╤════════════════════╕
+│   in1_0->cell_trap │   in1_1->cell_trap │
+╞════════════════════╪════════════════════╡
+│                  1 │                  0 │
+├────────────────────┼────────────────────┤
+│                  0 │                  1 │
+╘════════════════════╧════════════════════╛
+╒══════╕
+│   c1 │
+╞══════╡
+│    0 │
+├──────┤
+│    1 │
+╘══════╛
+╒════════════════════╤════════════════════╤══════╕
+│   in1_0->cell_trap │   in1_1->cell_trap │   c1 │
+╞════════════════════╪════════════════════╪══════╡
+│                  1 │                  0 │    0 │
+├────────────────────┼────────────────────┼──────┤
+│                  0 │                  1 │    1 │
+╘════════════════════╧════════════════════╧══════╛
+DISTRIBUTE-AND CANDIDATES:
+[]
+╒════════════════════╤════════════════════╕
+│   in1_0->cell_trap │   in1_1->cell_trap │
+╞════════════════════╪════════════════════╡
+│                  1 │                  0 │
+├────────────────────┼────────────────────┤
+│                  0 │                  1 │
+╘════════════════════╧════════════════════╛
+╒══════╕
+│   c1 │
+╞══════╡
+│    0 │
+├──────┤
+│    1 │
+╘══════╛
+╒════════════════════╤════════════════════╤══════╕
+│   in1_0->cell_trap │   in1_1->cell_trap │   c1 │
+╞════════════════════╪════════════════════╪══════╡
+│                  1 │                  0 │    0 │
+├────────────────────┼────────────────────┼──────┤
+│                  0 │                  1 │    1 │
+╘════════════════════╧════════════════════╧══════╛
+[[1 0]
+ [0 1]]
+[[1 0]
+ [0 1]]
+DISTRIBUTE-OR CANDIDATES
+[[0, 1]]
+Adding DIST-OR annotation 'DIST_OR_eb7a88da-84e3-4caa-918e-88d1266fa9f4' for fig nodes:
+IO - Name: in1_0, Type : IOType.FLOW_INPUT->STORAGE - cell_trap
+IO - Name: in1_1, Type : IOType.FLOW_INPUT->STORAGE - cell_trap
+Control mapping: 2 edge(s) -> valve/control_port (1:1)
+  in1_0 -> cell_trap  :  valve_0  <-  ctrl_0
+  in1_1 -> cell_trap  :  valve_1  <-  ctrl_1
+Performing operation: <VectorRange::Vector - in2 [0 : 0]> + <VectorRange::Vector - in2 [1 : 1]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - in2_0_MIX_(+)_in2_1_0 STORAGE - cell_trap
+<class 'lfr.fig.interaction.FluidFluidInteraction'>
++
+Performing operation: <VectorRange::Vector - in3 [0 : 0]> + <VectorRange::Vector - in3 [1 : 1]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - in3_0_MIX_(+)_in3_1_1 STORAGE - cell_trap
+<class 'lfr.fig.interaction.FluidFluidInteraction'>
++
+LHS, RHS sizes are equal
+STORAGE - cell_trap IO - Name: out, Type : IOType.FLOW_OUTPUT
+Name : multi_input
+Name: in1, Type : IOType.FLOW_INPUT
+Name: in2, Type : IOType.FLOW_INPUT
+Name: in3, Type : IOType.FLOW_INPUT
+Name: out, Type : IOType.FLOW_OUTPUT
+Name: c1, Type : IOType.CONTROL
+Name: c2, Type : IOType.CONTROL
+Name: c3, Type : IOType.CONTROL
+
+---Top of Stack---
+---Bottom of Stack---
+[]
+('6fc35c7c22084cae72e62a0163574d8c', 'REACTION CHAMBER', '{\n            v1: REACTION CHAMBER\n        }')
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', '{\n            v1:IO\n        }')
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', '{\n            v1:MIX\n        }')
+('8330be665ac09c4b528fb673eaf54323', 'PICOINJECTOR', '{\n            v1:MIX\n        }')
+('588c06b63717d489f484abec4d043630', 'DROPLET MERGER', '{\n            v1:MIX\n        }')
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', '{\n            v1:SIEVE\n        }')
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', '{\n            v1:METER\n        }')
+('914238687115aa147b97e8d5533e886c', 'DROPLET MERGER JUNCTION', '{\n            v1:MIX\n        }')
+('d886b57db1ce64cdc693b482957a8fe2', 'DROPLET MERGER CHANNEL', '{\n            v1:MIX\n        }')
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', '{\n            v1:DIVIDE\n        }')
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', '{\n            v1:PROCESS\n        }')
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', '{\n            v1:STORAGE\n        }')
+('cd9f240e7e4fed74b91aa6e3b94eec01', 'LONG CELL TRAPPER', '{\n            v1:STORAGE\n        }')
+('26f0a16b9d1878f24029199874cd778b', 'FILTER', '{\n            v1:PROCESS\n        }')
+('c9770124d971f8583173f0dd28b4017b', 'DROPLET FLUORESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('09781c385e672251742ca6cc07e56759', 'DROPLET LUMINESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('1159f8c0f6837f1916dd1b43d142fa9d', 'DROPLET SPACER', '{\n            v1:PROCESS\n        }')
+('feb0fbd9a78edd7b903246b2de78427e', 'YTREE', '')
+('f52e9c50a060add65a035429b2a22229', 'CHANNEL', '')
+[]
+6fc35c7c22084cae72e62a0163574d8c
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae6793c3910>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+5b0789de1846a32aa239997c6b11eba8
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940add0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'c1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'c3': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in3_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'c2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in1_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in1_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in3_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in2_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in2_1': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'})]
+3888a3a085a0b78f43d9ad9257fb94cd
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940a530>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 3888a3a085a0b78f43d9ad9257fb94cd
+{'in2_0_MIX_(+)_in2_1_0': 'v1'}
+Found Match: 3888a3a085a0b78f43d9ad9257fb94cd
+{'in3_0_MIX_(+)_in3_1_1': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+8330be665ac09c4b528fb673eaf54323
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940b700>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+588c06b63717d489f484abec4d043630
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940afb0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+5cd84e8394bf8d6c20a6333d70b59771
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940afe0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+9722844e53ed3f50c3e82c3f8015876f
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940ad70>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+914238687115aa147b97e8d5533e886c
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940b760>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+d886b57db1ce64cdc693b482957a8fe2
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940bfa0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+d949473e8c28c7624371eb1477dc026b
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940bc40>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+cdea77c5343e10aa9ebcb993ab494b7b
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae679409780>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})]
+ddafeac84b5c1d4256c02be0327aad6b
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940bfd0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: ddafeac84b5c1d4256c02be0327aad6b
+{'cell_trap': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+cd9f240e7e4fed74b91aa6e3b94eec01
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940af80>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+26f0a16b9d1878f24029199874cd778b
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940a740>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+c9770124d971f8583173f0dd28b4017b
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940b850>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+09781c385e672251742ca6cc07e56759
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940bf70>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+1159f8c0f6837f1916dd1b43d142fa9d
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7ae67940bfa0>
+[('in1_0', 'cell_trap'), ('in1_1', 'cell_trap'), ('in2_0', 'in2_0_MIX_(+)_in2_1_0'), ('in2_1', 'in2_0_MIX_(+)_in2_1_0'), ('in3_0', 'in3_0_MIX_(+)_in3_1_1'), ('in3_1', 'in3_0_MIX_(+)_in3_1_1'), ('cell_trap', 'out'), ('in2_0_MIX_(+)_in2_1_0', 'cell_trap'), ('in3_0_MIX_(+)_in3_1_1', 'cell_trap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+feb0fbd9a78edd7b903246b2de78427e
+Warning ! - Missing match string for mint- feb0fbd9a78edd7b903246b2de78427e
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+f52e9c50a060add65a035429b2a22229
+Warning ! - Missing match string for mint- f52e9c50a060add65a035429b2a22229
+Ret here
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})]
+Total Matches against library : 13
+Start of Matches
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'})
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'})
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})
+End of matches
+Total matches against library after explicit mapping eliminations: 13
+{'c1'}
+{'out'}
+{'c3'}
+{'in3_1'}
+{'c2'}
+{'in1_1'}
+{'in1_0'}
+{'in3_0'}
+{'in2_0'}
+{'in2_1'}
+{'in2_0_MIX_(+)_in2_1_0'}
+{'in3_0_MIX_(+)_in3_1_1'}
+{'cell_trap'}
+Moving Max Set Cover to the front: [{'c1'}, {'out'}, {'c3'}, {'in3_1'}, {'c2'}, {'in1_1'}, {'in1_0'}, {'in3_0'}, {'in2_0'}, {'in2_1'}, {'in2_0_MIX_(+)_in2_1_0'}, {'in3_0_MIX_(+)_in3_1_1'}, {'cell_trap'}]
+in2_0_MIX_(+)_in2_1_0
+c1
+out
+c3
+cell_trap
+in3_0_MIX_(+)_in3_1_1
+in3_1
+c2
+in1_1
+in1_0
+in3_0
+in2_0
+in2_1
+Moving Explicit Matches to the front: []
+Checking Match: ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'cell_trap': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_square_cell_trap_1 to variant variant_0
+Checking Match: ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in3_0_MIX_(+)_in3_1_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_mixer_1 to variant variant_0
+Checking Match: ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'in2_0_MIX_(+)_in2_1_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_mixer_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_1 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_3 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_4 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_5 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c2': 'v1'})
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in3_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_6 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c3': 'v1'})
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_7 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c1': 'v1'})
+Variant variant_0:
+cn_square_cell_trap_1
+cn_mixer_1
+cn_mixer_2
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+cn_port_5
+cn_port_6
+cn_port_7
+Connected Nodes
+cn_square_cell_trap_1
+cn_port_7
+Connected Nodes
+cn_mixer_1
+cn_square_cell_trap_1
+Connected Nodes
+cn_mixer_2
+cn_square_cell_trap_1
+Connected Nodes
+cn_port_1
+cn_mixer_2
+Connected Nodes
+cn_port_2
+cn_mixer_2
+Connected Nodes
+cn_port_3
+cn_mixer_1
+Connected Nodes
+cn_port_4
+cn_square_cell_trap_1
+Connected Nodes
+cn_port_5
+cn_square_cell_trap_1
+Connected Nodes
+cn_port_6
+cn_mixer_1
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x7ae6793da9d0>
+Pulling Default Values of Components
+Could not retrieve default parameters for SQUARE CELL TRAP, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=SQUARE+CELL+TRAP (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433700>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for square_cell_trap_1 of type :SQUARE CELL TRAP
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433ee0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_1 of type :PORT
+Could not retrieve default parameters for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=MIXER (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794746d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for mixer_1 of type :MIXER
+Could not retrieve default parameters for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=MIXER (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679474e20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for mixer_2 of type :MIXER
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794335e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_2 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794337c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_3 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679474160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_4 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679475570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_5 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679475cc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_6 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679432ec0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_7 of type :PORT
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for Cport_0 of type :PORT
+Could not retrieve default parameters for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=VALVE (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794761d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for valve_0 of type :VALVE
+Could not retrieve default parameters for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=PORT (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679475600>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for Cport_1 of type :PORT
+Could not retrieve default parameters for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /defaults?mint=VALVE (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679474220>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for valve_1 of type :VALVE
+Pulling Dimensions of Components
+Could not retrieve dimensions for SQUARE CELL TRAP, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=SQUARE+CELL+TRAP&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679474520>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for square_cell_trap_1 of type :SQUARE CELL TRAP
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679476500>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_1 of type :PORT
+Could not retrieve dimensions for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=MIXER&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for mixer_1 of type :MIXER
+Could not retrieve dimensions for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=MIXER&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679432560>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for mixer_2 of type :MIXER
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679474d00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_2 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794742b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_3 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679475b10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_4 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679475ea0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_5 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433a60>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_6 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794335e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for port_7 of type :PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679430e80>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for Cport_0 of type :PORT
+Could not retrieve dimensions for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=VALVE&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%2C+%22controlPort%22%3A+%22Cport_0%22%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794306a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for valve_0 of type :VALVE
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679431660>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for Cport_1 of type :PORT
+Could not retrieve dimensions for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /dimensions?mint=VALVE&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%2C+%22controlPort%22%3A+%22Cport_1%22%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794318a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull default values for valve_1 of type :VALVE
+Pulling Terminals of Components
+Could not retrieve dimensions for SQUARE CELL TRAP, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=SQUARE+CELL+TRAP&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae67940bee0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for square_cell_trap_1 of type: SQUARE CELL TRAP
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794306d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_1 of type: PORT
+Could not retrieve dimensions for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=MIXER&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679430190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for mixer_1 of type: MIXER
+Could not retrieve dimensions for MIXER, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=MIXER&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for mixer_2 of type: MIXER
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433580>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_2 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433880>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_3 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae67940ae30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_4 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_5 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679433c40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_6 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6794304f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for port_7 of type: PORT
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679430a90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for Cport_0 of type: PORT
+Could not retrieve dimensions for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=VALVE&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%2C+%22controlPort%22%3A+%22Cport_0%22%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae679431960>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for valve_0 of type: VALVE
+Could not retrieve dimensions for PORT, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=PORT&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae67940bc40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for Cport_1 of type: PORT
+Could not retrieve dimensions for VALVE, Exception: HTTPConnectionPool(host='localhost', port=6060): Max retries exceeded with url: /terminals?mint=VALVE&params=%7B%22position%22%3A+%5B-1%2C+-1%5D%2C+%22controlPort%22%3A+%22Cport_1%22%7D (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ae6793c2560>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Warning: Could not pull terminal data for valve_1 of type: VALVE
+/workspaces/Neptune_2026/Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0
++ [ 0 -eq 0 ]
++ find ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input -type d -name variant_0 -newer ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
++ head -1
++ VARIANT_DIR=./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0
++ [ -z ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0 ]
++ [ -n ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0 ]
++ find ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0 -name *.mint -type f
++ head -1
++ GENERATED_MINT=./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.mint
++ find ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0 -name *_fromLFR.json -type f
++ head -1
++ GENERATED_JSON=./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.json
++ [ -n ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.mint ]
++ mv ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.mint ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input_fromLFR.mint
++ echo ✓ MINT -> multi_input_fromLFR.mint
+✓ MINT -> multi_input_fromLFR.mint
++ [ -n ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.json ]
++ mv ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0/multi_input_fromLFR.json ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input_fromLFR.json
++ echo ✓ JSON -> multi_input_fromLFR.json
+✓ JSON -> multi_input_fromLFR.json
++ rmdir ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0
++ dirname ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input/variant_0
++ PARENT=./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input
++ rmdir ./Microfluidics-Benchmarks/Results/LFR-TestCases/test/multi_input/multi_input
++ echo ✓ Successfully processed ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
+✓ Successfully processed ./Microfluidics-Benchmarks/LFR-TestCases/test/multi_input.lfr
++ echo -----------------------
+-----------------------
++ echo Done. Results under ./Microfluidics-Benchmarks/Results/LFR-TestCases/test (log: fromLFR_20260205_052406.log)
+Done. Results under ./Microfluidics-Benchmarks/Results/LFR-TestCases/test (log: fromLFR_20260205_052406.log)

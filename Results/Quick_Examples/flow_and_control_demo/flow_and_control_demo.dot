@@ -7,13 +7,13 @@ digraph "" {
 params': {'data': {}}}, '_paths': []}",
 		sink_port="{'_component': 'port_1', '_port': '1'}",
 		source_port="{'_component': 'mixer_1', '_port': '2'}"];
-	port_2 -> mixer_1	[key=0,
+	port_2 -> port_1	[key=0,
 		connection_id=channel_2,
 		connection_ref="{'name': 'channel_2', 'ID': 'channel_2', 'entity': 'CHANNEL', 'params': {'data': {'connectionSpacing': 1000, 'start': ['Point', \
 -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'port_2', '_port': '\
-1'}, 'sinks': [{'_component': 'mixer_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
-0', 'params': {'data': {}}}, '_paths': []}",
-		sink_port="{'_component': 'mixer_1', '_port': '1'}",
+1'}, 'sinks': [{'_component': 'port_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '0', '\
+params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'port_1', '_port': '1'}",
 		source_port="{'_component': 'port_2', '_port': '1'}"];
 	port_3 -> mixer_1	[key=0,
 		connection_id=channel_3,
@@ -23,13 +23,13 @@ params': {'data': {}}}, '_paths': []}",
 0', 'params': {'data': {}}}, '_paths': []}",
 		sink_port="{'_component': 'mixer_1', '_port': '1'}",
 		source_port="{'_component': 'port_3', '_port': '1'}"];
-	port_4 -> port_1	[key=0,
+	port_4 -> mixer_1	[key=0,
 		connection_id=channel_4,
 		connection_ref="{'name': 'channel_4', 'ID': 'channel_4', 'entity': 'CHANNEL', 'params': {'data': {'connectionSpacing': 1000, 'start': ['Point', \
 -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'port_4', '_port': '\
-1'}, 'sinks': [{'_component': 'port_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '0', '\
-params': {'data': {}}}, '_paths': []}",
-		sink_port="{'_component': 'port_1', '_port': '1'}",
+1'}, 'sinks': [{'_component': 'mixer_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_1', '_port': '1'}",
 		source_port="{'_component': 'port_4', '_port': '1'}"];
 	Cport_0 -> valve_0	[key=0,
 		connection_id=Ctrlchannel_0,

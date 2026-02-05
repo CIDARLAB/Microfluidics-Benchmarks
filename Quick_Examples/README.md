@@ -117,6 +117,5 @@ Control mapping: 2 edge(s) -> valve/control_port (1:1)
 
 ## Is the primitives server required for compile_lfr?
 
-**No.**  
-`compile_lfr` (LFR → MINT/JSON) uses only the in-repo mapping library (e.g. dropx) and pylfr/pymint/pyparchmint; it does **not** connect to the 3DuF primitives server (localhost:6060).  
-The primitives server is used in **later** steps: e.g. after `compile_mint` for place & route, or when 3DuF needs component dimensions. For LFR compilation checks only, you do not need to start the primitives server.
+**Yes, for full JSON output.**  
+`compile_lfr` (LFR → MINT/JSON) first uses the in-repo mapping library (e.g. dropx) and pylfr/pymint/pyparchmint to generate MINT and JSON. It then calls the 3DuF primitives server (e.g. localhost:6060) to fill in component dimensions and terminals for the generated `*_fromLFR.json` files, so that the JSON is consistent with the MINT path and ready for place & route. If the primitives server is not running, LFR compilation still produces MINT and JSON, but component sizes/terminals will not be updated from the server.
