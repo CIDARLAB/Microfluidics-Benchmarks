@@ -1,4 +1,4 @@
-// R. Gomez-Sjoberg, A. A. Leyrat, D. M. Pirone, C. S. Chen and S. R. Quake, Anal. Chem., 2007, 79, 8557-8563
+//  R. Gomez-Sjoberg, A. A. Leyrat, D. M. Pirone, C. S. Chen and S. R. Quake, Anal. Chem., 2007, 79, 8557-8563
 module mux96chambers(
     finput [0:15] in,
     foutput waste
@@ -8,7 +8,7 @@ module mux96chambers(
     flow mixer_out;
     flow pump_in, pump_out;
 
-    //in de mux
+// in de mux
     flow inDeMux, outMux;
 
     storage [0:95] chamber;

@@ -4,10 +4,10 @@ module antibiotic_resistance (
 );
     storage [0:9] chamber;
 
-    // send suspended cells to each chambers that contain different concentrations of antibiotics
+//  send suspended cells to each chambers that contain different concentrations of antibiotics
     assign chamber[0:9] = A;
 
-    // excess cells out
+//  excess cells out
     assign a_out = A;
 
 endmodule

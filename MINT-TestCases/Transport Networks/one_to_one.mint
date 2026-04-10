@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/Transport Networks/one_to_one.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/Transport Networks/one_to_one.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE one_to_one
 

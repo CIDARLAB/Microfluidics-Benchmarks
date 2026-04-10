@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/TechnologyMapping/tree_fanout_mapping.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/TechnologyMapping/tree_fanout_mapping.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE tree_fanout
 

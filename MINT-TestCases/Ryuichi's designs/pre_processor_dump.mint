@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/pre_processor_dump.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/pre_processor_dump.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE seeding
 

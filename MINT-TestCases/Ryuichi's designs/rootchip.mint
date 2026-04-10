@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/rootchip.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/rootchip.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE rootchip
 

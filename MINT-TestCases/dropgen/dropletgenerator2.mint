@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/dropgen/dropletgenerator2.lfr
-// Source: hand-authored template
+# MINT-TestCases mirror for LFR-TestCases/dropgen/dropletgenerator2.lfr
+# Source: hand-authored template
 
 DEVICE dropletgenerator2
 

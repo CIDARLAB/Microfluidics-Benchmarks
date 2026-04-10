@@ -4,11 +4,11 @@ module ligation (
     control c1, c2
 );
 
-    // mix T4 DNA lygase buffer, vector DNA, insert DNA, Nuclease-free water, and T4 DNA lygase
+//  mix T4 DNA lygase buffer, vector DNA, insert DNA, Nuclease-free water, and T4 DNA lygase
     flow mixture;
     assign mixture = B%500 + C%500 + D%500 + E%500 + F%500;
 
-    // incubate
+//  incubate
     flow incubated;
     
     #MAP "INCUBATOR" "~"

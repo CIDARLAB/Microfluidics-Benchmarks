@@ -16,14 +16,14 @@ module issue9(
 
     flow flowcontroller;
 
-    // assign temp1[15:0] = in;
+//  assign temp1[15:0] = in;
 
-    // mux here
+//  mux here
     assign mux = in[0:15] ;
     assign mux = x9;
 
-    // mixer
-    // distribution block
+//  mixer
+//  distribution block
     #MAP "MIXER" "~"
     assign mixer_out = ~mixer_in;
 
@@ -40,7 +40,7 @@ module issue9(
         end
     end
 
-    // assign temp3 = temp2 + cout;
+//  assign temp3 = temp2 + cout;
 
     flow valve1_in, valve1_out;
 

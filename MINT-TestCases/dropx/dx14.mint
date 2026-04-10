@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/dropx/dx14.lfr
-// Source: dropx_ref/dx14_ref.mint
+# MINT-TestCases mirror for LFR-TestCases/dropx/dx14.lfr
+# Source: dropx_ref/dx14_ref.mint
 
 DEVICE dx14
 

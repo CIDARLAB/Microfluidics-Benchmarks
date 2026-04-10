@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/hmlp/v0.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/hmlp/v0.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE v0
 

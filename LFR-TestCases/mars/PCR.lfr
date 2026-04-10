@@ -8,19 +8,19 @@ module PCR(
     #MAP "MIX" "+"
     #MAP "Incubator" "~"
 
-    // load PCR solution
+//  load PCR solution
     distribute@(c1) begin 
         if (c1 == 1) begin 
             mixer_in <= A;
-            // mix
+//  mix
             mixed <= +mixer_in;
-            // incubate
+//  incubate
             incubated <= ~mixed;
         end
     end
 
     
-    // out
+//  out
     distribute@(c2) begin 
         if (c2 == 1)
             a_out <= incubated;

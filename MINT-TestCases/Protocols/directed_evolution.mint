@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/Protocols/directed_evolution.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/Protocols/directed_evolution.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE directed_evolution
 

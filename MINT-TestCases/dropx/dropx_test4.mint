@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/dropx/dropx_test4.lfr
-// Source: hand-authored template
+# MINT-TestCases mirror for LFR-TestCases/dropx/dropx_test4.lfr
+# Source: hand-authored template
 
 DEVICE dropx_test4
 

@@ -1,5 +1,5 @@
-// Chronis, N., Zimmer, M. & Bargmann, C. Microfluidics for in vivo imaging of neuronal and behavioral activity in Caenorhabditis elegans.
-// https://www.nature.com/articles/nmeth1075
+//  Chronis, N., Zimmer, M. & Bargmann, C. Microfluidics for in vivo imaging of neuronal and behavioral activity in Caenorhabditis elegans.
+//  https://www.nature.com/articles/nmeth1075
 
 module olfactory(
     finput stimulus, buffer, left_dye, right_dye,
@@ -11,14 +11,14 @@ module olfactory(
 distribute@(c)
 begin
     if (c == 1)
-        // on state
+//  on state
         begin 
         worm <= stimulus
         left_outlet <= stimulus
         left_outlet <= left_dye
         end
     else 
-        // off state
+//  off state
         begin 
         left_outlet <= stimulus
         left_outlet <= right_dye

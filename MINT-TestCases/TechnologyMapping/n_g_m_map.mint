@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/TechnologyMapping/n_g_m_map.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/TechnologyMapping/n_g_m_map.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE n_g_m_map
 

@@ -1,4 +1,4 @@
-//TODO- Rewrite based on whatever actual connections to logic 04
+// TODO- Rewrite based on whatever actual connections to logic 04
 module logic04(finput[0:7] in1, foutput [0:3] out, 
     control [0:2] c_mux_in, [0:4] c_logic_array);
 
@@ -23,9 +23,9 @@ module logic04(finput[0:7] in1, foutput [0:3] out,
     distribute@(c_logic_array)
     begin
 
-        //Might need to rewrite these as a bunch of differen
-        //case statements that can give more accuracy on which
-        // components I would be able to connect to
+// Might need to rewrite these as a bunch of differen
+// case statements that can give more accuracy on which
+//  components I would be able to connect to
         case(c)
             4'b0000: cell_traps[0] <= trap_input;
             4'b0001: cell_traps[1] <= trap_input;

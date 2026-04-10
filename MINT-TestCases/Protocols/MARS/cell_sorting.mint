@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/Protocols/MARS/cell_sorting.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/Protocols/MARS/cell_sorting.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE cell_sorting
 

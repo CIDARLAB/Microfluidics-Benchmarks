@@ -1,5 +1,5 @@
-// MINT-TestCases mirror for LFR-TestCases/distribute-expressions/dist_expression1.lfr
-// Source: minimal stub from module port list; fluigi emitted no variant
+# MINT-TestCases mirror for LFR-TestCases/distribute-expressions/dist_expression1.lfr
+# Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE dist_expression1
 
