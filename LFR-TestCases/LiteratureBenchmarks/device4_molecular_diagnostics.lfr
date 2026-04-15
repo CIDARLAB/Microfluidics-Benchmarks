@@ -1,0 +1,27 @@
+module molec_diag(
+	Finput gibbs_reagent, propofol
+	Foutput out1, out2, out3
+)
+#MAP ‘MIXER’ ‘~’
+flow mixed_reagent = ~gibbs_reagent;
+	
+flow in_sensor1, in_sensor2, out_sensor1, out_sensor2;
+	
+assign in_sensor1 = mixed_reagent;
+assign in_sensor1 = propofol;
+
+assign in_sensor2 = mixed_reagent;
+assign in_sensor2 = propofol;
+	
+#MAP “MIP_BIOSENSOR” “~”
+assign out_sensor1 = ~in_sensor1;
+
+#MAP “MIP_BIOSENSOR” “~”
+assign out_sensor2 = ~in_sensor2;
+	
+assign out1 = out_sensor1;
+assign out2 = out_sensor2;
+assign out3 = out_sensor2;
+
+endmodule
+	

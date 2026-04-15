@@ -1,0 +1,24 @@
+module scrnaseq(
+    finput tcells, media,
+    foutput final_solution, waste 
+)
+
+    #MAP "FILTER" "~"
+    flow filtered_tcells = ~tcells;
+
+    #MAP "FILTER" "~"
+    flow filtered_media = ~media;
+
+    flow mixed_soluiton = filtered_media + filtered_tcells;
+
+    flow solution_droplets = mixed_solution%1; 
+
+    #MAP "MICROARRAY" "storage"
+    storage microarray;
+
+    assign microarray = solution_droplets; 
+
+    assign final_solution = microarray;
+    assign waste = microarray;
+
+endmodule

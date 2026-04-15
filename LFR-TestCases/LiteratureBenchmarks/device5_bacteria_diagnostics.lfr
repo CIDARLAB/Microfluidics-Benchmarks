@@ -1,0 +1,26 @@
+“import mixing_chamber.lfr”
+
+module bacteria_diagnostics(
+	Finput magchain_sers, specimen, wash,
+	Foutput outlet,
+	Control c1, c2
+);
+	flow in_chamber1, in_chamber2, wash_chamber, out_chamber;
+
+	distribute@(c1)
+	begin
+		if(c1 == 1)
+			in_chamber1 <= magchain_sers;
+			in_chamber2 <= specimen;
+			out_chamber <= outlet;
+	end
+
+	distribute@(c2)
+	begin
+		if(c2==1)
+			wash_chamber <= wash;
+	end
+
+	mixing_chamber mix1(in_chamber1, in_chamber2, wash_chamber, out_chamber);
+
+endmodule
