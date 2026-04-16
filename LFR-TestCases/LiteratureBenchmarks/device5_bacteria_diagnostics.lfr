@@ -1,26 +1,25 @@
-“import mixing_chamber.lfr”
-
-module bacteria_diagnostics(
-	Finput magchain_sers, specimen, wash,
-	Foutput outlet,
-	Control c1, c2
+module device5_bacteria_diagnostics(
+    finput p1, p2, p3,
+    foutput p4,
+    control cp1, cp2
 );
-	flow in_chamber1, in_chamber2, wash_chamber, out_chamber;
 
-	distribute@(c1)
-	begin
-		if(c1 == 1)
-			in_chamber1 <= magchain_sers;
-			in_chamber2 <= specimen;
-			out_chamber <= outlet;
-	end
+    flow mixed_inputs, detection_stream;
+    storage mixing_chamber, detection_chamber;
 
-	distribute@(c2)
-	begin
-		if(c2==1)
-			wash_chamber <= wash;
-	end
+    assign mixed_inputs = p1 + p2;
+    assign detection_stream = p3;
 
-	mixing_chamber mix1(in_chamber1, in_chamber2, wash_chamber, out_chamber);
+    distribute@(cp1) begin
+        if (cp1 == 1'b1)
+            mixing_chamber <= mixed_inputs;
+    end
+
+    distribute@(cp2) begin
+        if (cp2 == 1'b1)
+            detection_chamber <= detection_stream;
+    end
+
+    assign p4 = mixing_chamber + detection_chamber;
 
 endmodule

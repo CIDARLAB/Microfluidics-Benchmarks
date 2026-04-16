@@ -16,6 +16,7 @@ LFR (Liquid Flow Representation) format design files (`.lfr`). Each subfolder is
 | `COVID/` | COVID-related protocols (CRISPR, rt_pcr, etc.) |
 | `distribute-expressions/`, `distribute-library/` | Distribution and library tests |
 | `Expressions/` | Expression benchmarks |
+| `LiteratureBenchmarks/` | Literature-derived LFR benchmarks (e.g. scRNA-seq, molecular diagnostics, bacteria diagnostics) |
 | `GraphCoverage/`, `TechnologyMapping/` | Graph coverage and technology mapping |
 | `mars/` | MARS platform designs (PCR, sorting, transformation, etc.) |
 | `Protocols/`, `Transport Networks/` | Protocols and transport networks |

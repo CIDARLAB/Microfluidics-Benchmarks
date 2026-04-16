@@ -1,0 +1,49 @@
+module device6_organic_chemical_synthesis(
+    finput p1, p2, p3, p4, p5, p6, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25,
+    foutput product,
+    control [0:2] c_mix,
+    control [0:2] c_react
+);
+
+    flow feed_stage_a, feed_stage_b, feed_stage_c;
+    flow concentration_input, reaction_input;
+    storage concentration_loop, reaction_loop;
+
+    assign feed_stage_a = p1 + p2 + p3;
+    assign feed_stage_b = p4 + p5 + p6;
+    assign feed_stage_c = p15 + p16 + p17;
+    assign concentration_input = feed_stage_a + feed_stage_b + feed_stage_c + p18;
+
+    distribute@(c_mix)
+    begin
+        case({c_mix[0], c_mix[1], c_mix[2]})
+            3'b000: concentration_loop <= concentration_input;
+            3'b001: concentration_loop <= concentration_input;
+            3'b010: concentration_loop <= concentration_input;
+            3'b011: concentration_loop <= concentration_input;
+            3'b100: concentration_loop <= concentration_input;
+            3'b101: concentration_loop <= concentration_input;
+            3'b110: concentration_loop <= concentration_input;
+            3'b111: concentration_loop <= concentration_input;
+        endcase
+    end
+
+    assign reaction_input = concentration_loop + p19 + p20 + p21 + p22 + p23 + p24 + p25;
+
+    distribute@(c_react)
+    begin
+        case({c_react[0], c_react[1], c_react[2]})
+            3'b000: reaction_loop <= reaction_input;
+            3'b001: reaction_loop <= reaction_input;
+            3'b010: reaction_loop <= reaction_input;
+            3'b011: reaction_loop <= reaction_input;
+            3'b100: reaction_loop <= reaction_input;
+            3'b101: reaction_loop <= reaction_input;
+            3'b110: reaction_loop <= reaction_input;
+            3'b111: reaction_loop <= reaction_input;
+        endcase
+    end
+
+    assign product = reaction_loop;
+
+endmodule

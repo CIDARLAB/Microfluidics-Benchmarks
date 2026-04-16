@@ -1,4 +1,4 @@
-DEVICE bacteria_diagnostics_ref
+DEVICE molecular_diagnostics
 
 LAYER FLOW
 

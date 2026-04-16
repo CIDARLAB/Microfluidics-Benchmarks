@@ -1,0 +1,36 @@
+module device2_artificial_cells(
+    finput p1, p2,
+    foutput p3, p4, p5, p6, p7, p8, p9, p10,
+    control [0:2] route
+);
+
+    flow oil_feed, reagent_feed;
+    flow [0:7] droplets;
+
+    assign oil_feed = p1;
+    assign reagent_feed = p2;
+
+    distribute@(route)
+    begin
+        case({route[0], route[1], route[2]})
+            3'b000: droplets[0] <= oil_feed + reagent_feed;
+            3'b001: droplets[1] <= oil_feed + reagent_feed;
+            3'b010: droplets[2] <= oil_feed + reagent_feed;
+            3'b011: droplets[3] <= oil_feed + reagent_feed;
+            3'b100: droplets[4] <= oil_feed + reagent_feed;
+            3'b101: droplets[5] <= oil_feed + reagent_feed;
+            3'b110: droplets[6] <= oil_feed + reagent_feed;
+            3'b111: droplets[7] <= oil_feed + reagent_feed;
+        endcase
+    end
+
+    assign p3 = droplets[0];
+    assign p4 = droplets[1];
+    assign p5 = droplets[2];
+    assign p6 = droplets[3];
+    assign p7 = droplets[4];
+    assign p8 = droplets[5];
+    assign p9 = droplets[6];
+    assign p10 = droplets[7];
+
+endmodule
