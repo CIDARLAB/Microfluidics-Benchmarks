@@ -1,0 +1,34 @@
+digraph "" {
+	n1 -> north	[key=0,
+		connection_id=c_north,
+		connection_ref="{'name': 'c_north', 'ID': 'c_north', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'n1', '_\
+port': None}, 'sinks': [{'_component': 'north', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'north', '_port': None}",
+		source_port="{'_component': 'n1', '_port': None}"];
+	n1 -> east	[key=0,
+		connection_id=c_east,
+		connection_ref="{'name': 'c_east', 'ID': 'c_east', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'n1', '_\
+port': None}, 'sinks': [{'_component': 'east', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'east', '_port': None}",
+		source_port="{'_component': 'n1', '_port': None}"];
+	n1 -> west	[key=0,
+		connection_id=c_west,
+		connection_ref="{'name': 'c_west', 'ID': 'c_west', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'n1', '_\
+port': None}, 'sinks': [{'_component': 'west', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'west', '_port': None}",
+		source_port="{'_component': 'n1', '_port': None}"];
+	n1 -> south	[key=0,
+		connection_id=c_south,
+		connection_ref="{'name': 'c_south', 'ID': 'c_south', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'n1', '_\
+port': None}, 'sinks': [{'_component': 'south', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'south', '_port': None}",
+		source_port="{'_component': 'n1', '_port': None}"];
+}

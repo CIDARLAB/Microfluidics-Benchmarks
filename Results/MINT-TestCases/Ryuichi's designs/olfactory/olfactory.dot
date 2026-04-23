@@ -1,0 +1,58 @@
+digraph "" {
+	stimulus -> mixer_stub	[key=0,
+		connection_id=c0,
+		connection_ref="{'name': 'c0', 'ID': 'c0', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'stimulus', '_\
+port': '1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '1'}",
+		source_port="{'_component': 'stimulus', '_port': '1'}"];
+	buffer -> mixer_stub	[key=0,
+		connection_id=c1,
+		connection_ref="{'name': 'c1', 'ID': 'c1', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'buffer', '_port': '\
+1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '2'}",
+		source_port="{'_component': 'buffer', '_port': '1'}"];
+	left_dye -> mixer_stub	[key=0,
+		connection_id=c2,
+		connection_ref="{'name': 'c2', 'ID': 'c2', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'left_dye', '_\
+port': '1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '2'}",
+		source_port="{'_component': 'left_dye', '_port': '1'}"];
+	right_dye -> mixer_stub	[key=0,
+		connection_id=c3,
+		connection_ref="{'name': 'c3', 'ID': 'c3', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'right_dye', '_\
+port': '1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '2'}",
+		source_port="{'_component': 'right_dye', '_port': '1'}"];
+	worm -> mixer_stub	[key=0,
+		connection_id=c4,
+		connection_ref="{'name': 'c4', 'ID': 'c4', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'worm', '_port': '\
+1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '2'}",
+		source_port="{'_component': 'worm', '_port': '1'}"];
+	left_outlet -> mixer_stub	[key=0,
+		connection_id=c5,
+		connection_ref="{'name': 'c5', 'ID': 'c5', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'left_outlet', '_\
+port': '1'}, 'sinks': [{'_component': 'mixer_stub', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer_stub', '_port': '2'}",
+		source_port="{'_component': 'left_outlet', '_port': '1'}"];
+	mixer_stub -> c	[key=0,
+		connection_id=c_out,
+		connection_ref="{'name': 'c_out', 'ID': 'c_out', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'mixer_\
+stub', '_port': '3'}, 'sinks': [{'_component': 'c', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'c', '_port': '1'}",
+		source_port="{'_component': 'mixer_stub', '_port': '3'}"];
+}

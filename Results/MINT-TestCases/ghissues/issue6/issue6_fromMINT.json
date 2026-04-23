@@ -1,0 +1,638 @@
+{
+    "name": "samv0",
+    "components": [
+        {
+            "name": "bank_in1",
+            "id": "bank_in1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "bank_in2",
+            "id": "bank_in2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "wash",
+            "id": "wash",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "out1",
+            "id": "out1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "out2",
+            "id": "out2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "mux_c1",
+            "id": "mux_c1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "mux_c2",
+            "id": "mux_c2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "cell_c",
+            "id": "cell_c",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "wash_c",
+            "id": "wash_c",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "mixer_stub",
+            "id": "mixer_stub",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "componentSpacing": 9000
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "1"
+                }
+            ],
+            "name": "c0",
+            "id": "c0",
+            "source": {
+                "component": "bank_in1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "bank_in2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c2",
+            "id": "c2",
+            "source": {
+                "component": "wash",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "out1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c4",
+            "id": "c4",
+            "source": {
+                "component": "out2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c5",
+            "id": "c5",
+            "source": {
+                "component": "mux_c1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c6",
+            "id": "c6",
+            "source": {
+                "component": "mux_c2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_stub",
+                    "port": "2"
+                }
+            ],
+            "name": "c7",
+            "id": "c7",
+            "source": {
+                "component": "cell_c",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "wash_c",
+                    "port": "1"
+                }
+            ],
+            "name": "c_out",
+            "id": "c_out",
+            "source": {
+                "component": "mixer_stub",
+                "port": "3"
+            },
+            "params": {
+                "channelWidth": 200,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 76200,
+        "y-span": 76200,
+        "length": 76200
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

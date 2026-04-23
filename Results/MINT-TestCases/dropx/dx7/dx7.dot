@@ -1,0 +1,122 @@
+digraph "" {
+	port_1 -> nozzle_droplet_generator_1	[key=0,
+		connection_id=channel_1,
+		connection_ref="{'name': 'channel_1', 'ID': 'channel_1', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_1', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_1', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_1', '_port': '2'}",
+		source_port="{'_component': 'port_1', '_port': None}"];
+	port_2 -> nozzle_droplet_generator_1	[key=0,
+		connection_id=channel_2,
+		connection_ref="{'name': 'channel_2', 'ID': 'channel_2', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_2', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_1', '_port': '4'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_1', '_port': '4'}",
+		source_port="{'_component': 'port_2', '_port': None}"];
+	nozzle_droplet_generator_1 -> picoinjector_1	[key=0,
+		connection_id=channel_7,
+		connection_ref="{'name': 'channel_7', 'ID': 'channel_7', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+nozzle_droplet_generator_1', '_port': '3'}, 'sinks': [{'_component': 'picoinjector_1', '_port': '1'}], 'layer': {'_id': '0', 'name': '\
+FLOW_0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_1', '_port': '1'}",
+		source_port="{'_component': 'nozzle_droplet_generator_1', '_port': '3'}"];
+	port_3 -> nozzle_droplet_generator_2	[key=0,
+		connection_id=channel_3,
+		connection_ref="{'name': 'channel_3', 'ID': 'channel_3', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_3', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_2', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_2', '_port': '2'}",
+		source_port="{'_component': 'port_3', '_port': None}"];
+	port_4 -> nozzle_droplet_generator_2	[key=0,
+		connection_id=channel_4,
+		connection_ref="{'name': 'channel_4', 'ID': 'channel_4', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_4', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_2', '_port': '4'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_2', '_port': '4'}",
+		source_port="{'_component': 'port_4', '_port': None}"];
+	nozzle_droplet_generator_2 -> picoinjector_1	[key=0,
+		connection_id=channel_8,
+		connection_ref="{'name': 'channel_8', 'ID': 'channel_8', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+nozzle_droplet_generator_2', '_port': '3'}, 'sinks': [{'_component': 'picoinjector_1', '_port': '2'}], 'layer': {'_id': '0', 'name': '\
+FLOW_0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_1', '_port': '2'}",
+		source_port="{'_component': 'nozzle_droplet_generator_2', '_port': '3'}"];
+	picoinjector_1 -> picoinjector_3	[key=0,
+		connection_id=channel_12,
+		connection_ref="{'name': 'channel_12', 'ID': 'channel_12', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+picoinjector_1', '_port': '3'}, 'sinks': [{'_component': 'picoinjector_3', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', '\
+layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_3', '_port': '2'}",
+		source_port="{'_component': 'picoinjector_1', '_port': '3'}"];
+	picoinjector_2 -> picoinjector_3	[key=0,
+		connection_id=channel_11,
+		connection_ref="{'name': 'channel_11', 'ID': 'channel_11', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+picoinjector_2', '_port': '3'}, 'sinks': [{'_component': 'picoinjector_3', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', '\
+layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_3', '_port': '1'}",
+		source_port="{'_component': 'picoinjector_2', '_port': '3'}"];
+	picoinjector_3 -> droplet_splitter_1	[key=0,
+		connection_id=channel_13,
+		connection_ref="{'name': 'channel_13', 'ID': 'channel_13', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+picoinjector_3', '_port': '3'}, 'sinks': [{'_component': 'droplet_splitter_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'droplet_splitter_1', '_port': '1'}",
+		source_port="{'_component': 'picoinjector_3', '_port': '3'}"];
+	droplet_splitter_1 -> port_9	[key=0,
+		connection_id=channel_14,
+		connection_ref="{'name': 'channel_14', 'ID': 'channel_14', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+droplet_splitter_1', '_port': '2'}, 'sinks': [{'_component': 'port_9', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', '\
+layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'port_9', '_port': None}",
+		source_port="{'_component': 'droplet_splitter_1', '_port': '2'}"];
+	droplet_splitter_1 -> port_10	[key=0,
+		connection_id=channel_15,
+		connection_ref="{'name': 'channel_15', 'ID': 'channel_15', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+droplet_splitter_1', '_port': '3'}, 'sinks': [{'_component': 'port_10', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', '\
+layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'port_10', '_port': None}",
+		source_port="{'_component': 'droplet_splitter_1', '_port': '3'}"];
+	port_5 -> nozzle_droplet_generator_1	[key=0,
+		connection_id=channel_5,
+		connection_ref="{'name': 'channel_5', 'ID': 'channel_5', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_5', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_1', '_port': '1'}",
+		source_port="{'_component': 'port_5', '_port': None}"];
+	port_6 -> nozzle_droplet_generator_2	[key=0,
+		connection_id=channel_6,
+		connection_ref="{'name': 'channel_6', 'ID': 'channel_6', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_6', '_port': None}, 'sinks': [{'_component': 'nozzle_droplet_generator_2', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_\
+0', 'layertype': 'FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'nozzle_droplet_generator_2', '_port': '1'}",
+		source_port="{'_component': 'port_6', '_port': None}"];
+	port_7 -> picoinjector_2	[key=0,
+		connection_id=channel_9,
+		connection_ref="{'name': 'channel_9', 'ID': 'channel_9', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_7', '_port': None}, 'sinks': [{'_component': 'picoinjector_2', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': '\
+FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_2', '_port': '1'}",
+		source_port="{'_component': 'port_7', '_port': None}"];
+	port_8 -> picoinjector_2	[key=0,
+		connection_id=channel_10,
+		connection_ref="{'name': 'channel_10', 'ID': 'channel_10', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 400, 'connectionSpacing': 1000, '\
+start': ['Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': '\
+port_8', '_port': None}, 'sinks': [{'_component': 'picoinjector_2', '_port': '2'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': '\
+FLOW', 'group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'picoinjector_2', '_port': '2'}",
+		source_port="{'_component': 'port_8', '_port': None}"];
+}

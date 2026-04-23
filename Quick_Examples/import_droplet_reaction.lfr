@@ -1,0 +1,49 @@
+//  Example: 3-reagent droplet reaction pipeline, built entirely from library
+//  modules. Demonstrates composing a multi-stage design graph via three
+//  separate library imports:
+//
+//  Topology:
+//       analyte ---\
+//       primer  --- three_in_mixer premix --\
+//       buffer  ---/                         \
+//                                             droplet_generator gen --> incubator react --> outlet
+//       oil_phase ---------------------------/
+//
+//  Stages:
+//    1. three_in_mixer    : folds three reagents into a single aqueous stream.
+//    2. droplet_generator : emulsifies the aqueous stream with the oil phase
+//                           into a monodisperse droplet train.
+//    3. incubator         : holds the droplet train long enough for the
+//                           reaction inside each droplet to complete.
+//
+//  All three modules live in Quick_Examples/library/ and can be reused from
+//  any other design.
+
+`import "library/three_in_mixer.lfr"
+`import "library/droplet_generator.lfr"
+`import "library/incubator.lfr"
+
+module import_droplet_reaction(
+    finput analyte, primer, buffer, oil_phase,
+    foutput outlet
+);
+    flow aqueous, droplets;
+
+    three_in_mixer premix(
+        .in_a(analyte),
+        .in_b(primer),
+        .in_c(buffer),
+        .out_1(aqueous)
+    );
+
+    droplet_generator gen(
+        .oil(oil_phase),
+        .aqueous(aqueous),
+        .droplets(droplets)
+    );
+
+    incubator react(
+        .in_1(droplets),
+        .out_1(outlet)
+    );
+endmodule

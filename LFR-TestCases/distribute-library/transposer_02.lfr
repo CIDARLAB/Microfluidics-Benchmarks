@@ -6,7 +6,7 @@ module transposer_02(
 
     distribute@(c_select)
     begin
-        if(c_select) begin
+        if(c_select == 1) begin
             outputs[0] <= inputs [0];
             outputs[1] <= inputs [1];
         end

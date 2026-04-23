@@ -1,37 +1,39 @@
-import “incubator.lfr”
+`import "incubator.lfr"
 
-module enzyme_screening(
-	Finput in1, in2, in3, in4, in5, in6, in7, oil_in
-	Foutput outlet,
-	Control c1, c2,c3 ,c4, c5, c6, c7
+module device7_enzyme_screening(
+	finput in1, in2, in3, in4, in5, in6, in7, oil_in,
+	foutput outlet,
+	control c1, c2, c3, c4, c5, c6, c7
 );
 
 flow central_flow;
-#MAP “INCUBATOR” “~”;
-flow incubated_in3 = ~in3;
+flow incubated_in3;
+flow incubated_in5;
+
+#MAP "INCUBATOR" "~"
+assign incubated_in3 = ~in3;
 assign central_flow = incubated_in3;
 
 distribute@(c4)
 begin
 	if(c4==1)
-		assign central_flow = in_4 
+		central_flow <= in4;
 end
 
-#MAP “INCUBATOR” “~”;
-flow incubated_in5 = ~in5;
+assign incubated_in5 = ~in5;
 distribute@(c5)
 begin
 	if(c5==1)
-		assign central_flow = incubated_in5 ;
+		central_flow <= incubated_in5;
 end
 
 
 
-flow droplets
+flow droplets;
 
-//Pass the droplet fluid through 2 incubators
-flow drop_inc1
-flow drop_inc2
+// Pass the droplet fluid through 2 incubators
+flow drop_inc1;
+flow drop_inc2;
 
 
 incubator incubator_1(droplets, drop_inc1);

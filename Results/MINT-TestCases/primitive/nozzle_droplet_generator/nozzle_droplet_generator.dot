@@ -1,0 +1,34 @@
+digraph "" {
+	g -> p1	[key=0,
+		connection_id=co1,
+		connection_ref="{'name': 'co1', 'ID': 'co1', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'g', '_\
+port': '1'}, 'sinks': [{'_component': 'p1', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'p1', '_port': None}",
+		source_port="{'_component': 'g', '_port': '1'}"];
+	g -> p2	[key=0,
+		connection_id=co2,
+		connection_ref="{'name': 'co2', 'ID': 'co2', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'g', '_\
+port': '2'}, 'sinks': [{'_component': 'p2', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'p2', '_port': None}",
+		source_port="{'_component': 'g', '_port': '2'}"];
+	g -> p3	[key=0,
+		connection_id=co3,
+		connection_ref="{'name': 'co3', 'ID': 'co3', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'g', '_\
+port': '3'}, 'sinks': [{'_component': 'p3', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'p3', '_port': None}",
+		source_port="{'_component': 'g', '_port': '3'}"];
+	g -> p4	[key=0,
+		connection_id=c04,
+		connection_ref="{'name': 'c04', 'ID': 'c04', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 200, 'connectionSpacing': 1000, 'start': ['\
+Point', -1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'g', '_\
+port': '4'}, 'sinks': [{'_component': 'p4', '_port': None}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'p4', '_port': None}",
+		source_port="{'_component': 'g', '_port': '4'}"];
+}

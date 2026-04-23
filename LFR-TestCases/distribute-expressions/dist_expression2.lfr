@@ -13,7 +13,7 @@ module dist_expression2(in, out1, out2, c1);
 //  assign temp2 = temp1
     distribute@(c1)
     begin
-        if(c1)
+        if(c1 == 1)
             begin
                 temp2 <= temp1;
             end
@@ -23,8 +23,8 @@ module dist_expression2(in, out1, out2, c1);
             end
     end
 
-    assign out = temp2;
-    assign out = temp3;
+    assign out1 = temp2;
+    assign out2 = temp3;
 
 endmodule
 

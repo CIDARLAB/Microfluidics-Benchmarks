@@ -1,0 +1,95 @@
+{
+  "name": "MyGadget",
+  "_comment": "User-defined ParchMint component. Consumed by fluigi as a black box: top-level x-span/y-span and every 'PORT' component become the black box's bounding box and external terminals. The filename stem (MyGadget) is the entity name referenced from top-level MINT/JSON designs.",
+  "params": {
+    "width": 20000,
+    "length": 10000
+  },
+  "x-span": 20000,
+  "y-span": 10000,
+  "layers": [
+    {
+      "id": "mygadget-flow-layer",
+      "name": "LayerFlow_1",
+      "type": "FLOW",
+      "group": "0",
+      "params": {"z_offset": 0, "flip": false},
+      "features": []
+    },
+    {
+      "id": "mygadget-control-layer",
+      "name": "LayerControl_1",
+      "type": "CONTROL",
+      "group": "0",
+      "params": {"z_offset": 0, "flip": false},
+      "features": []
+    }
+  ],
+  "groups": [],
+  "components": [
+    {
+      "id": "mygadget-port-inA",
+      "name": "1",
+      "entity": "PORT",
+      "params": {
+        "position": [0, 2500],
+        "componentSpacing": 1000,
+        "portRadius": 700,
+        "height": 1100
+      },
+      "x-span": 1400,
+      "y-span": 1400,
+      "ports": [{"x": 0, "y": 0, "layer": "FLOW", "label": "1"}],
+      "layers": ["mygadget-flow-layer"]
+    },
+    {
+      "id": "mygadget-port-inB",
+      "name": "2",
+      "entity": "PORT",
+      "params": {
+        "position": [0, 7500],
+        "componentSpacing": 1000,
+        "portRadius": 700,
+        "height": 1100
+      },
+      "x-span": 1400,
+      "y-span": 1400,
+      "ports": [{"x": 0, "y": 0, "layer": "FLOW", "label": "1"}],
+      "layers": ["mygadget-flow-layer"]
+    },
+    {
+      "id": "mygadget-port-out",
+      "name": "3",
+      "entity": "PORT",
+      "params": {
+        "position": [20000, 5000],
+        "componentSpacing": 1000,
+        "portRadius": 700,
+        "height": 1100
+      },
+      "x-span": 1400,
+      "y-span": 1400,
+      "ports": [{"x": 0, "y": 0, "layer": "FLOW", "label": "1"}],
+      "layers": ["mygadget-flow-layer"]
+    },
+    {
+      "id": "mygadget-port-ctrl",
+      "name": "4",
+      "entity": "PORT",
+      "params": {
+        "position": [10000, 0],
+        "componentSpacing": 1000,
+        "portRadius": 700,
+        "height": 1100
+      },
+      "x-span": 1400,
+      "y-span": 1400,
+      "ports": [{"x": 0, "y": 0, "layer": "CONTROL", "label": "1"}],
+      "layers": ["mygadget-control-layer"]
+    }
+  ],
+  "connections": [],
+  "valves": [],
+  "features": [],
+  "version": "1.2"
+}

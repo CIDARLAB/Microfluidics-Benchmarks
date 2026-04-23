@@ -26,8 +26,8 @@ LAYER CONTROL
 PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
-VALVE valve_0 on channel_1 componentSpacing=1000.0 rotation=0.0 width=1230.0 length=4920.0 height=250.0;
-VALVE valve_1 on channel_4 componentSpacing=1000.0 rotation=0.0 width=1230.0 length=4920.0 height=250.0;
+VALVE3D valve_0 on channel_1 controlPort=Cport_0 componentSpacing=1000.0 rotation=0.0 valveRadius=400.0 height=250.0;
+VALVE3D valve_1 on channel_4 controlPort=Cport_1 componentSpacing=1000.0 rotation=0.0 valveRadius=400.0 height=250.0;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000;
 CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000;

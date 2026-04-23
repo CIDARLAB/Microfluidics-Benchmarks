@@ -1,0 +1,35 @@
+//  Example: simple 2-stage pipeline built by importing two tiny library modules.
+//
+//  Pipeline:
+//       reagent_a ---\
+//                     two_in_mixer --> incubator --> outlet
+//       reagent_b ---/
+//
+//  The two_in_mixer module mixes two reagents; the incubator holds the mixture
+//  for a reaction step. Both are defined in Quick_Examples/library/.
+//
+//  This is the smallest example showing how the LFR import directive
+//  (backtick-import followed by a quoted filename) pulls in a sibling
+//  design file at compile time. Use this as the template for building
+//  larger composite designs from small, reusable blocks.
+
+`import "library/two_in_mixer.lfr"
+`import "library/incubator.lfr"
+
+module import_mixer_and_incubator(
+    finput reagent_a, reagent_b,
+    foutput outlet
+);
+    flow mixed_flow;
+
+    two_in_mixer premix(
+        .in_a(reagent_a),
+        .in_b(reagent_b),
+        .out_1(mixed_flow)
+    );
+
+    incubator hold(
+        .in_1(mixed_flow),
+        .out_1(outlet)
+    );
+endmodule

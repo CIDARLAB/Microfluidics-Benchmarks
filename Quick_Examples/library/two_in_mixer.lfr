@@ -1,0 +1,13 @@
+// Reusable building block: 2-inlet MIXER module.
+// Mixes in_a + in_b into a single outgoing flow using the MIXER primitive.
+//
+// Naming convention: the file stem (two_in_mixer) MUST match the module name
+// so that other files can pull this design in with a backtick-import directive
+// referencing "two_in_mixer.lfr".
+module two_in_mixer(
+    finput in_a, in_b,
+    foutput out_1
+);
+    #MAP "MIXER" "~"
+    assign out_1 = ~(in_a + in_b);
+endmodule

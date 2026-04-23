@@ -1,0 +1,50 @@
+digraph "" {
+	port_in1 -> mixer1	[key=0,
+		connection_id=c1,
+		connection_ref="{'name': 'c1', 'ID': 'c1', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'port_in1', '_\
+port': None}, 'sinks': [{'_component': 'mixer1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer1', '_port': '1'}",
+		source_port="{'_component': 'port_in1', '_port': None}"];
+	port_in2 -> mixer1	[key=0,
+		connection_id=c2,
+		connection_ref="{'name': 'c2', 'ID': 'c2', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'port_in2', '_\
+port': None}, 'sinks': [{'_component': 'mixer1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer1', '_port': '1'}",
+		source_port="{'_component': 'port_in2', '_port': None}"];
+	port_in3 -> mixer1	[key=0,
+		connection_id=c3,
+		connection_ref="{'name': 'c3', 'ID': 'c3', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'port_in3', '_\
+port': None}, 'sinks': [{'_component': 'mixer1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'mixer1', '_port': '1'}",
+		source_port="{'_component': 'port_in3', '_port': None}"];
+	mixer1 -> droplet_sorter1	[key=0,
+		connection_id=c4,
+		connection_ref="{'name': 'c4', 'ID': 'c4', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'mixer1', '_port': '\
+2'}, 'sinks': [{'_component': 'droplet_sorter1', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', 'group': '\
+0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'droplet_sorter1', '_port': '1'}",
+		source_port="{'_component': 'mixer1', '_port': '2'}"];
+	droplet_sorter1 -> port_out_keep	[key=0,
+		connection_id=c5,
+		connection_ref="{'name': 'c5', 'ID': 'c5', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'droplet_sorter1', '_\
+port': '3'}, 'sinks': [{'_component': 'port_out_keep', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'port_out_keep', '_port': '1'}",
+		source_port="{'_component': 'droplet_sorter1', '_port': '3'}"];
+	droplet_sorter1 -> port_out_waste	[key=0,
+		connection_id=c6,
+		connection_ref="{'name': 'c6', 'ID': 'c6', 'entity': 'CHANNEL', 'params': {'data': {'channelWidth': 300, 'connectionSpacing': 1000, 'start': ['Point', \
+-1, -1], 'end': [-1, -1], 'wayPoints': [[-1, -1]], 'segments': [[[-1, -1], [-1, -1]]]}}, 'source': {'_component': 'droplet_sorter1', '_\
+port': '2'}, 'sinks': [{'_component': 'port_out_waste', '_port': '1'}], 'layer': {'_id': '0', 'name': 'FLOW_0', 'layertype': 'FLOW', '\
+group': '0', 'params': {'data': {}}}, '_paths': []}",
+		sink_port="{'_component': 'port_out_waste', '_port': '1'}",
+		source_port="{'_component': 'droplet_sorter1', '_port': '2'}"];
+}
