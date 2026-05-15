@@ -12,7 +12,7 @@ BANK p_in1, p_in2, p_in3, p_in4,
 PORT p_out1, p_out2, p_out3, p_out4, 
     p_out5, p_out6, p_out7, p_out8 portRadius=2000;
 
-BANK p_out1, p_out2, p_outp3, p_out4, 
+BANK p_out1, p_out2, p_out3, p_out4, 
     p_out5, p_out6, p_out7, p_out8 spacing=2000;
 
 

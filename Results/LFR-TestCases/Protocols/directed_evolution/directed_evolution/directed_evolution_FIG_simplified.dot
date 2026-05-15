@@ -1,0 +1,24 @@
+strict digraph "" {
+	genes;
+	pcr_mastermix -> "pcr_mastermix_DILUTE_(*)_1";
+	tx_tl_sol -> "pcr_mix_t1_MIX_(+)_tx_tl_sol_3";
+	ethanol -> "ethanol_MIX_(+)_reaction_samples_2_6";
+	result;
+	waste2;
+	initial;
+	found_candidate;
+	found_result;
+	"pcr_mix_DILUTE_(*)_0" -> "pcr_mastermix_DILUTE_(*)_1_MIX_(+)_pcr_mix_DILUTE_(*)_0_2";
+	val_1 -> "pcr_mix_DILUTE_(*)_0";
+	"pcr_mastermix_DILUTE_(*)_1" -> "pcr_mastermix_DILUTE_(*)_1_MIX_(+)_pcr_mix_DILUTE_(*)_0_2";
+	val_2 -> "pcr_mastermix_DILUTE_(*)_1";
+	"pcr_mastermix_DILUTE_(*)_1_MIX_(+)_pcr_mix_DILUTE_(*)_0_2" -> "pcr_mix_t1_MIX_(+)_tx_tl_sol_3";
+	"pcr_mix_t1_MIX_(+)_tx_tl_sol_3" -> "tx_tl_mix_DIVIDE_(/)_4";
+	val_3 -> "tx_tl_mix_DIVIDE_(/)_4";
+	"reaction_samples_PROCESS_(&)_5" -> "ethanol_MIX_(+)_reaction_samples_2_6";
+	"ethanol_MIX_(+)_reaction_samples_2_6" -> "ethanol_MIX_(+)_reaction_samples_2_6_PROCESS_(&)_7";
+	"ethanol_MIX_(+)_reaction_samples_2_6_PROCESS_(&)_7" -> waste1;
+	"ethanol_MIX_(+)_reaction_samples_2_6_PROCESS_(&)_7" -> FLOW_component_replacement_0;
+	"washed_PROCESS_(&)_8" -> FLOW_component_replacement_0;
+	FLOW_component_replacement_0 -> "pcr_mix_DILUTE_(*)_0";
+}

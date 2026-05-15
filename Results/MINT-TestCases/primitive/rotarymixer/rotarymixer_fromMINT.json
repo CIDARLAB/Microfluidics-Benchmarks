@@ -9,15 +9,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "p2",
@@ -27,15 +36,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "r1",
@@ -45,15 +63,69 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "radius": 2000.0,
+                "flowChannelWidth": 1000.0,
+                "controlChannelWidth": 500.0,
+                "valveWidth": 2400.0,
+                "valveLength": 1000.0,
+                "valveSpacing": 300.0,
+                "valveRadius": 1200.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 9200,
+                    "y": 2400,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 7400,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 8400,
+                    "y": 0,
+                    "label": "3",
+                    "layer": "CONTROL"
+                },
+                {
+                    "x": 4600,
+                    "y": 0,
+                    "label": "4",
+                    "layer": "CONTROL"
+                },
+                {
+                    "x": 9500,
+                    "y": 4900,
+                    "label": "5",
+                    "layer": "CONTROL"
+                },
+                {
+                    "x": 4600,
+                    "y": 9800,
+                    "label": "6",
+                    "layer": "CONTROL"
+                },
+                {
+                    "x": 800,
+                    "y": 9800,
+                    "label": "7",
+                    "layer": "CONTROL"
+                }
+            ],
+            "x-span": 9500,
+            "y-span": 9800
         }
     ],
     "connections": [
@@ -68,10 +140,11 @@
             "id": "c1",
             "source": {
                 "component": "p1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -108,7 +181,7 @@
             "sinks": [
                 {
                     "component": "p2",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c2",
@@ -119,6 +192,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,

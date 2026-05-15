@@ -10,15 +10,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "east",
@@ -29,15 +37,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "west",
@@ -48,15 +64,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "south",
@@ -67,15 +91,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "n1",
@@ -85,13 +117,21 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
             "x-span": 400,
             "y-span": 400
         }
@@ -101,14 +141,14 @@
             "sinks": [
                 {
                     "component": "north",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c_north",
             "id": "c_north",
             "source": {
                 "component": "n1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -149,14 +189,14 @@
             "sinks": [
                 {
                     "component": "south",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c_south",
             "id": "c_south",
             "source": {
                 "component": "n1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -197,14 +237,14 @@
             "sinks": [
                 {
                     "component": "east",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c_east",
             "id": "c_east",
             "source": {
                 "component": "n1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -245,14 +285,14 @@
             "sinks": [
                 {
                     "component": "west",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c_west",
             "id": "c_west",
             "source": {
                 "component": "n1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -308,5 +348,20 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "north",
+                "south",
+                "east",
+                "west"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

@@ -10,15 +10,23 @@
             ],
             "params": {
                 "portRadius": 100,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 100,
+                    "y": 100,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 200,
+            "y-span": 200
         },
         {
             "name": "ff",
@@ -33,15 +41,26 @@
                 "waterChannelWidth": 40,
                 "angle": 30,
                 "length": 500.0,
+                "componentSpacing": 1000.0,
+                "height": 250.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 1266,
+                    "y": 585,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1266,
+            "y-span": 1170
         },
         {
             "name": "n1",
@@ -51,13 +70,21 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
             "x-span": 100,
             "y-span": 100
         },
@@ -69,13 +96,21 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
             "x-span": 100,
             "y-span": 100
         }
@@ -85,7 +120,7 @@
             "sinks": [
                 {
                     "component": "n1",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c1",
@@ -133,14 +168,14 @@
             "sinks": [
                 {
                     "component": "n2",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
                 "component": "n1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 20,
@@ -188,7 +223,7 @@
             "id": "c3",
             "source": {
                 "component": "n2",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -244,5 +279,31 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ff"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ff": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "ff",
+                "n2",
+                "p"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

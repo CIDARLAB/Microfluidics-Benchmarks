@@ -1,5 +1,5 @@
-`import nine_to_one_mux;
-`import microreactor;
+`import "nine_to_one_mux.lfr"
+`import "microreactor.lfr"
 
 module chemostat_chip (
     finput [0:8] in,
@@ -25,7 +25,7 @@ module chemostat_chip (
     distribute@(c4)
     begin 
         if (c4 == 1)
-            out <= microreactor_out;
+            out <= microreactor_out[0];
     end
     
 

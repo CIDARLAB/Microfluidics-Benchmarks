@@ -2,7 +2,7 @@ DEVICE super_mux_01
 
 LAYER FLOW
 V TREE m1 1 to 8 spacing=1500 flowChannelWidth=100;
-V BANK b2 of 8 CELL TRAP numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 feedingChannelWidth=100;
+V BANK b2 of 16 CELL TRAP numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 spacing=1500 feedingChannelWidth=100;
 V BANK pb of 8  PORT  portRadius=100 spacing=1500 ;
  PORT p1, p2 portRadius=100;
 NODE n9, n10, n11, n12, n13, n14, n15, n16;

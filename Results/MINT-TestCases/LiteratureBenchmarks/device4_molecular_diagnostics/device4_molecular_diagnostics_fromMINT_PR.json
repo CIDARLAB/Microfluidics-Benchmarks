@@ -1,0 +1,1064 @@
+{
+    "name": "molecular_diagnostics",
+    "components": [
+        {
+            "name": "p1",
+            "id": "p1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    20000,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "p2",
+            "id": "p2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    26400,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "p3",
+            "id": "p3",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    32800,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "p4",
+            "id": "p4",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    39200,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "p5",
+            "id": "p5",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    45600,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "m1",
+            "id": "m1",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "numberOfBends": 3,
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    52000,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 4060,
+            "y-span": 12980
+        },
+        {
+            "name": "bs1",
+            "id": "bs1",
+            "entity": "MIP BIOSENSOR",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "message": "MINT Not found - MIP BIOSENSOR",
+                "position": [
+                    61060,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "bs2",
+            "id": "bs2",
+            "entity": "MIP BIOSENSOR",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "message": "MINT Not found - MIP BIOSENSOR",
+                "position": [
+                    66059,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": -1,
+            "y-span": -1
+        },
+        {
+            "name": "n1",
+            "id": "n1",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
+                "position": [
+                    71058,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 400,
+            "y-span": 400
+        },
+        {
+            "name": "n2",
+            "id": "n2",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
+                "position": [
+                    76458,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 400,
+            "y-span": 400
+        },
+        {
+            "name": "n3",
+            "id": "n3",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
+                "position": [
+                    81858,
+                    20000
+                ]
+            },
+            "ports": [],
+            "x-span": 400,
+            "y-span": 400
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "m1",
+                    "port": "1"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "p1",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    20700,
+                    20700
+                ],
+                "end": [
+                    54030,
+                    26490
+                ],
+                "wayPoints": [
+                    [
+                        20700,
+                        26490
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            20700,
+                            20700
+                        ],
+                        [
+                            20700,
+                            26490
+                        ]
+                    ],
+                    [
+                        [
+                            20700,
+                            26490
+                        ],
+                        [
+                            54030,
+                            26490
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "p1",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "m1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            20700,
+                            20700
+                        ],
+                        [
+                            20700,
+                            26490
+                        ],
+                        [
+                            54030,
+                            26490
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n1",
+                    "port": null
+                }
+            ],
+            "name": "c2",
+            "id": "c2",
+            "source": {
+                "component": "m1",
+                "port": "2"
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    54030,
+                    26490
+                ],
+                "end": [
+                    71258,
+                    20200
+                ],
+                "wayPoints": [
+                    [
+                        54030,
+                        20200
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            54030,
+                            26490
+                        ],
+                        [
+                            54030,
+                            20200
+                        ]
+                    ],
+                    [
+                        [
+                            54030,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20200
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "m1",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "n1",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            54030,
+                            26490
+                        ],
+                        [
+                            54030,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20200
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n2",
+                    "port": null
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "p2",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    27100,
+                    20700
+                ],
+                "end": [
+                    76658,
+                    20200
+                ],
+                "wayPoints": [
+                    [
+                        27100,
+                        20200
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20200
+                        ]
+                    ],
+                    [
+                        [
+                            27100,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20200
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "p2",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "n2",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20200
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n2",
+                    "port": null
+                }
+            ],
+            "name": "c4",
+            "id": "c4",
+            "source": {
+                "component": "n1",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    71258,
+                    20200
+                ],
+                "end": [
+                    76658,
+                    20200
+                ],
+                "wayPoints": [
+                    [
+                        71258,
+                        20200
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20200
+                        ]
+                    ],
+                    [
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20200
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n1",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "n2",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20200
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "bs1",
+                    "port": "1"
+                }
+            ],
+            "name": "c5",
+            "id": "c5",
+            "source": {
+                "component": "n1",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    71258,
+                    20200
+                ],
+                "end": [
+                    61060,
+                    20000
+                ],
+                "wayPoints": [
+                    [
+                        71258,
+                        20000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20000
+                        ]
+                    ],
+                    [
+                        [
+                            71258,
+                            20000
+                        ],
+                        [
+                            61060,
+                            20000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n1",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "bs1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            71258,
+                            20200
+                        ],
+                        [
+                            71258,
+                            20000
+                        ],
+                        [
+                            61060,
+                            20000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "bs2",
+                    "port": "1"
+                }
+            ],
+            "name": "c6",
+            "id": "c6",
+            "source": {
+                "component": "n2",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    76658,
+                    20200
+                ],
+                "end": [
+                    66059,
+                    20000
+                ],
+                "wayPoints": [
+                    [
+                        76658,
+                        20000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            76658,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20000
+                        ]
+                    ],
+                    [
+                        [
+                            76658,
+                            20000
+                        ],
+                        [
+                            66059,
+                            20000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n2",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "bs2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            76658,
+                            20200
+                        ],
+                        [
+                            76658,
+                            20000
+                        ],
+                        [
+                            66059,
+                            20000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "p3",
+                    "port": null
+                }
+            ],
+            "name": "c7",
+            "id": "c7",
+            "source": {
+                "component": "bs1",
+                "port": "2"
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    61060,
+                    20000
+                ],
+                "end": [
+                    33500,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        61060,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            61060,
+                            20000
+                        ],
+                        [
+                            61060,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            61060,
+                            20700
+                        ],
+                        [
+                            33500,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "bs1",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "p3",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            61060,
+                            20000
+                        ],
+                        [
+                            61060,
+                            20700
+                        ],
+                        [
+                            33500,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n3",
+                    "port": null
+                }
+            ],
+            "name": "c8",
+            "id": "c8",
+            "source": {
+                "component": "bs2",
+                "port": "2"
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    66059,
+                    20000
+                ],
+                "end": [
+                    82058,
+                    20200
+                ],
+                "wayPoints": [
+                    [
+                        66059,
+                        20200
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            66059,
+                            20000
+                        ],
+                        [
+                            66059,
+                            20200
+                        ]
+                    ],
+                    [
+                        [
+                            66059,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20200
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "bs2",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "n3",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            66059,
+                            20000
+                        ],
+                        [
+                            66059,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20200
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "p4",
+                    "port": null
+                }
+            ],
+            "name": "c9",
+            "id": "c9",
+            "source": {
+                "component": "n3",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    82058,
+                    20200
+                ],
+                "end": [
+                    39900,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        82058,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            82058,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            82058,
+                            20700
+                        ],
+                        [
+                            39900,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n3",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "p4",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            82058,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20700
+                        ],
+                        [
+                            39900,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "p5",
+                    "port": null
+                }
+            ],
+            "name": "c10",
+            "id": "c10",
+            "source": {
+                "component": "n3",
+                "port": null
+            },
+            "params": {
+                "start": [
+                    "Point",
+                    82058,
+                    20200
+                ],
+                "end": [
+                    46300,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        82058,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            82058,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            82058,
+                            20700
+                        ],
+                        [
+                            46300,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n3",
+                        "port": null
+                    },
+                    "sink": {
+                        "component": "p5",
+                        "port": null
+                    },
+                    "wayPoints": [
+                        [
+                            82058,
+                            20200
+                        ],
+                        [
+                            82058,
+                            20700
+                        ],
+                        [
+                            46300,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CONNECTION"
+        }
+    ],
+    "params": {
+        "x-span": 122258,
+        "y-span": 72980,
+        "length": 122258
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false
+}

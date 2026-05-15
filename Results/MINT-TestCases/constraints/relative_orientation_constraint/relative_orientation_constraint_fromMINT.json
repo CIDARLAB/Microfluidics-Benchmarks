@@ -10,15 +10,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "pout",
@@ -29,15 +37,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "ct1",
@@ -47,15 +63,37 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
         },
         {
             "name": "ct2",
@@ -65,15 +103,37 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
         },
         {
             "name": "ct3",
@@ -83,15 +143,37 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
         }
     ],
     "connections": [
@@ -99,14 +181,14 @@
             "sinks": [
                 {
                     "component": "ct1",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
                 "component": "pin",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -147,14 +229,14 @@
             "sinks": [
                 {
                     "component": "ct2",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
                 "component": "ct1",
-                "port": null
+                "port": "2"
             },
             "params": {
                 "channelWidth": 100,
@@ -195,14 +277,14 @@
             "sinks": [
                 {
                     "component": "ct3",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c3",
             "id": "c3",
             "source": {
                 "component": "ct2",
-                "port": null
+                "port": "2"
             },
             "params": {
                 "channelWidth": 100,
@@ -258,5 +340,54 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        }
+    ]
 }

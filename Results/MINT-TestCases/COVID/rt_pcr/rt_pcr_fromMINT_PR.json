@@ -1,0 +1,431 @@
+{
+    "name": "pcr",
+    "components": [
+        {
+            "name": "reaction_chamber_1",
+            "id": "reaction_chamber_1",
+            "entity": "REACTION CHAMBER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 9000,
+                "width": 5000.0,
+                "length": 5000.0,
+                "height": 250.0,
+                "cornerRadius": 200.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    20000,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 2500,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 2500,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2500,
+                    "y": 5000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2500,
+                    "label": "4",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 5000,
+            "y-span": 5000
+        },
+        {
+            "name": "port_1",
+            "id": "port_1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    30000,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "reaction_chamber_2",
+            "id": "reaction_chamber_2",
+            "entity": "REACTION CHAMBER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 9000,
+                "width": 5000.0,
+                "length": 5000.0,
+                "height": 250.0,
+                "cornerRadius": 200.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    36400,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 2500,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 2500,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2500,
+                    "y": 5000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2500,
+                    "label": "4",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 5000,
+            "y-span": 5000
+        },
+        {
+            "name": "port_2",
+            "id": "port_2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    46400,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "port_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_1",
+            "id": "channel_1",
+            "source": {
+                "component": "reaction_chamber_1",
+                "port": "4"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    20000,
+                    22500
+                ],
+                "end": [
+                    30700,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        20000,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            20000,
+                            22500
+                        ],
+                        [
+                            20000,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            20000,
+                            20700
+                        ],
+                        [
+                            30700,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "reaction_chamber_1",
+                        "port": "4"
+                    },
+                    "sink": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            20000,
+                            22500
+                        ],
+                        [
+                            20000,
+                            20700
+                        ],
+                        [
+                            30700,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "reaction_chamber_1",
+                    "port": "2"
+                }
+            ],
+            "name": "channel_2",
+            "id": "channel_2",
+            "source": {
+                "component": "reaction_chamber_2",
+                "port": "4"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    36400,
+                    22500
+                ],
+                "end": [
+                    25000,
+                    22500
+                ],
+                "wayPoints": [
+                    [
+                        36400,
+                        22500
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            36400,
+                            22500
+                        ],
+                        [
+                            36400,
+                            22500
+                        ]
+                    ],
+                    [
+                        [
+                            36400,
+                            22500
+                        ],
+                        [
+                            25000,
+                            22500
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "reaction_chamber_2",
+                        "port": "4"
+                    },
+                    "sink": {
+                        "component": "reaction_chamber_1",
+                        "port": "2"
+                    },
+                    "wayPoints": [
+                        [
+                            36400,
+                            22500
+                        ],
+                        [
+                            36400,
+                            22500
+                        ],
+                        [
+                            25000,
+                            22500
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "reaction_chamber_2",
+                    "port": "2"
+                }
+            ],
+            "name": "channel_3",
+            "id": "channel_3",
+            "source": {
+                "component": "port_2",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    47100,
+                    20700
+                ],
+                "end": [
+                    41400,
+                    22500
+                ],
+                "wayPoints": [
+                    [
+                        47100,
+                        22500
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            47100,
+                            20700
+                        ],
+                        [
+                            47100,
+                            22500
+                        ]
+                    ],
+                    [
+                        [
+                            47100,
+                            22500
+                        ],
+                        [
+                            41400,
+                            22500
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "reaction_chamber_2",
+                        "port": "2"
+                    },
+                    "wayPoints": [
+                        [
+                            47100,
+                            20700
+                        ],
+                        [
+                            47100,
+                            22500
+                        ],
+                        [
+                            41400,
+                            22500
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 87800,
+        "y-span": 65000,
+        "length": 87800
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false
+}

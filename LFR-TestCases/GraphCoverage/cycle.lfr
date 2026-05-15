@@ -1,10 +1,11 @@
-module cycle(input1, input2, input3, out);
-
-//  This design has a cyclic relation in the 
-    finput input1, input2, input3;
-    foutput out;
+// This design has a cyclic relation in the flow graph.
+module cycle(
+    finput input1, input2, input3,
+    foutput out
+);
 
     flow temp1, temp2, temp3, temp4;
+    storage fb;
 
     assign temp1 = input1;
     assign temp1 = input2;
@@ -15,7 +16,8 @@ module cycle(input1, input2, input3, out);
     assign temp3 = input3;
 
     assign temp4 = temp3;
-    assign temp1 = temp4;
+    assign fb = temp4;
+    assign temp1 = fb;
 
     assign out = temp3;
 

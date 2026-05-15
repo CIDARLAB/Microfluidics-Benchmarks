@@ -10,14 +10,40 @@
             ],
             "params": {
                 "componentSpacing": 9000,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 1000.0,
+                "inletLength": 10000.0,
+                "electrodeWidth": 1500.0,
+                "electrodeLength": 4000.0,
+                "electrodeDistance": 2000.0,
+                "sensorWidth": 1000.0,
+                "sensorLength": 3000.0,
+                "channelDepth": 1000.0,
+                "electrodeDepth": 1000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 7000,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 10000,
+                    "y": 7000,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 10000,
+            "y-span": 14000
         },
         {
             "name": "port_1",
@@ -28,14 +54,23 @@
             ],
             "params": {
                 "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "droplet_capacitance_sensor_2",
@@ -46,14 +81,40 @@
             ],
             "params": {
                 "componentSpacing": 9000,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 1000.0,
+                "inletLength": 10000.0,
+                "electrodeWidth": 1500.0,
+                "electrodeLength": 4000.0,
+                "electrodeDistance": 2000.0,
+                "sensorWidth": 1000.0,
+                "sensorLength": 3000.0,
+                "channelDepth": 1000.0,
+                "electrodeDepth": 1000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 7000,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 10000,
+                    "y": 7000,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 10000,
+            "y-span": 14000
         },
         {
             "name": "port_2",
@@ -64,14 +125,23 @@
             ],
             "params": {
                 "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "Cport_3",
@@ -82,14 +152,23 @@
             ],
             "params": {
                 "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "valve_0",
@@ -99,16 +178,28 @@
                 "1"
             ],
             "params": {
-                "controlPort": "Cport_3",
                 "componentSpacing": 9000,
+                "rotation": 0.0,
+                "valveRadius": 1200.0,
+                "height": 250.0,
+                "gap": 600.0,
+                "width": 2400.0,
+                "length": 2400.0,
                 "position": [
                     -1,
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 1200,
+                    "y": 1200,
+                    "label": "1",
+                    "layer": "CONTROL"
+                }
+            ],
+            "x-span": 2400,
+            "y-span": 2400
         }
     ],
     "connections": [
@@ -127,6 +218,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -174,6 +266,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -221,6 +314,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -268,6 +362,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,

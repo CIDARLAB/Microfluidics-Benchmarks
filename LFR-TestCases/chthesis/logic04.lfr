@@ -1,6 +1,10 @@
-// TODO- Rewrite based on whatever actual connections to logic 04
-module logic04(finput[0:7] in1, foutput [0:3] out, 
-    control [0:2] c_mux_in, [0:4] c_logic_array);
+// Logic + trap routing benchmark (corrected bus / case syntax).
+module logic04(
+    finput [0:7] in1,
+    foutput [0:3] out,
+    control [0:2] c_mux_in,
+    control [0:4] c_logic_array
+);
 
     storage [0:3] cell_traps;
 
@@ -22,27 +26,22 @@ module logic04(finput[0:7] in1, foutput [0:3] out,
 
     distribute@(c_logic_array)
     begin
-
-// Might need to rewrite these as a bunch of differen
-// case statements that can give more accuracy on which
-//  components I would be able to connect to
-        case(c)
-            4'b0000: cell_traps[0] <= trap_input;
-            4'b0001: cell_traps[1] <= trap_input;
-            4'b0010: cell_traps[2] <= trap_input;
-            4'b0011: cell_traps[3] <= trap_input;
-            4'b0100: cell_traps[1] <= cell_traps[0];
-            4'b0101: cell_traps[2] <= cell_traps[0];
-            4'b0110: cell_traps[3] <= cell_traps[0];
-            4'b0111: cell_traps[2] <= cell_traps[1];
-            4'b1000: cell_traps[3] <= cell_traps[1];
-            4'b1001: cell_traps[3] <= cell_traps[2];
-            4'b1010: out[0] <= cell_traps[0];
-            4'b1011: out[1] <= cell_traps[1];
-            4'b1100: out[2] <= cell_traps[2];
-            4'b1101: out[3] <= cell_traps[3];        
+        case(c_logic_array)
+            5'b00000: cell_traps[0] <= trap_input;
+            5'b00001: cell_traps[1] <= trap_input;
+            5'b00010: cell_traps[2] <= trap_input;
+            5'b00011: cell_traps[3] <= trap_input;
+            5'b00100: cell_traps[1] <= cell_traps[0];
+            5'b00101: cell_traps[2] <= cell_traps[0];
+            5'b00110: cell_traps[3] <= cell_traps[0];
+            5'b00111: cell_traps[2] <= cell_traps[1];
+            5'b01000: cell_traps[3] <= cell_traps[1];
+            5'b01001: cell_traps[3] <= cell_traps[2];
+            5'b01010: out[0] <= cell_traps[0];
+            5'b01011: out[1] <= cell_traps[1];
+            5'b01100: out[2] <= cell_traps[2];
+            5'b01101: out[3] <= cell_traps[3];
         endcase
-    
     end
 
 endmodule

@@ -10,15 +10,23 @@
             ],
             "params": {
                 "portRadius": 400,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 400,
+                    "y": 400,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "p2",
@@ -29,15 +37,23 @@
             ],
             "params": {
                 "portRadius": 400,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 400,
+                    "y": 400,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "p3",
@@ -48,15 +64,23 @@
             ],
             "params": {
                 "portRadius": 400,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 400,
+                    "y": 400,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "p4",
@@ -67,15 +91,23 @@
             ],
             "params": {
                 "portRadius": 400,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 400,
+                    "y": 400,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 800,
+            "y-span": 800
         }
     ],
     "connections": [
@@ -83,14 +115,14 @@
             "sinks": [
                 {
                     "component": "p2",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
                 "component": "p1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -131,14 +163,14 @@
             "sinks": [
                 {
                     "component": "p3",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
                 "component": "p2",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -179,14 +211,14 @@
             "sinks": [
                 {
                     "component": "p4",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c3",
             "id": "c3",
             "source": {
                 "component": "p3",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -227,14 +259,14 @@
             "sinks": [
                 {
                     "component": "p1",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c4",
             "id": "c4",
             "source": {
                 "component": "p4",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -275,14 +307,14 @@
             "sinks": [
                 {
                     "component": "p3",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c5",
             "id": "c5",
             "source": {
                 "component": "p1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -323,14 +355,14 @@
             "sinks": [
                 {
                     "component": "p4",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c6",
             "id": "c6",
             "source": {
                 "component": "p2",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,

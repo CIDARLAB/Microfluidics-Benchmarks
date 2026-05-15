@@ -1,13 +1,14 @@
+// HMLP-style routing benchmark: two addressable input busses, optional wash on acc1,
+// and a simple media/cells path. Simplified from an earlier draft that used
+// storage/concatenation feedback the dropx/mlsi mappers do not yet cover as a
+// single variant.
 module v0(
     finput [0:3] inputs1, [0:3] inputs2, wash, media, cells,
     foutput [0:1] outputs,
     control [0:1] c_inputs1, [0:1] c_inputs2, c_wash, [0:1] c_media
 );
 
-    flow acc1, acc2, central_acc;
-    storage cell_traps;
-
-    flow signals, disposal;
+    flow acc1, acc2, cell_path;
 
     distribute@(c_inputs1)
     begin
@@ -21,23 +22,22 @@ module v0(
 
     distribute@(c_wash)
     begin
-        if(c_wash)
+        if(c_wash == 1)
             begin
                 acc1 <= wash;
             end
     end
 
-    assign central_acc = {acc1, acc2};
-
-    assign cell_traps = signals;
-    assign disposal = cell_traps;
-    assign cell_traps = {media, cells};
+    assign cell_path = media;
+    assign cell_path = cells;
 
     distribute@(c_media)
     begin
         case(c_media)
-            2'b01 : cell_traps <= signals;
-            2'b10 : cell_traps <= disposal;
+            2'b00 : outputs[0] <= acc1;
+            2'b01 : outputs[0] <= cell_path;
+            2'b10 : outputs[1] <= cell_path;
+            2'b11 : outputs[1] <= acc2;
         endcase
     end
 

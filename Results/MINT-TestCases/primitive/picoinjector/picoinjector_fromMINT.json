@@ -9,15 +9,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "p2",
@@ -27,15 +36,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "p3",
@@ -45,15 +63,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "pi",
@@ -63,15 +90,47 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 250.0,
+                "width": 10000.0,
+                "injectorWidth": 2000.0,
+                "injectorLength": 3000.0,
+                "dropletWidth": 800.0,
+                "nozzleWidth": 400.0,
+                "nozzleLength": 400.0,
+                "electrodeDistance": 800.0,
+                "electrodeWidth": 800.0,
+                "electrodeLength": 3000.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 3800,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 10000,
+                    "y": 3800,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 0,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 10000,
+            "y-span": 7600
         }
     ],
     "connections": [
@@ -86,7 +145,7 @@
             "id": "c1",
             "source": {
                 "component": "p1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -134,7 +193,7 @@
             "id": "c2",
             "source": {
                 "component": "p2",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -182,7 +241,7 @@
             "id": "c3",
             "source": {
                 "component": "p3",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,

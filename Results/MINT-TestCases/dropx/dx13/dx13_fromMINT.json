@@ -10,15 +10,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_2",
@@ -29,15 +37,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "nozzle_droplet_generator_1",
@@ -47,15 +63,50 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "orificeSize": 200.0,
+                "orificeLength": 400.0,
+                "oilInputWidth": 800.0,
+                "waterInputWidth": 600.0,
+                "outputWidth": 600.0,
+                "outputLength": 600.0,
+                "height": 250.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 400,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1800,
+                    "y": 300,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 400,
+                    "y": 600,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 300,
+                    "label": "4",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1800,
+            "y-span": 600
         },
         {
             "name": "mixer_1",
@@ -65,15 +116,36 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
         },
         {
             "name": "picoinjector_1",
@@ -83,15 +155,47 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 250.0,
+                "width": 10000.0,
+                "injectorWidth": 2000.0,
+                "injectorLength": 3000.0,
+                "dropletWidth": 800.0,
+                "nozzleWidth": 400.0,
+                "nozzleLength": 400.0,
+                "electrodeDistance": 800.0,
+                "electrodeWidth": 800.0,
+                "electrodeLength": 3000.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 3800,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 10000,
+                    "y": 3800,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 0,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 10000,
+            "y-span": 7600
         },
         {
             "name": "mixer_2",
@@ -101,15 +205,36 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
         },
         {
             "name": "droplet_sorter_1",
@@ -119,15 +244,54 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 800.0,
+                "inletLength": 4000.0,
+                "electrodeDistance": 1000.0,
+                "electrodeWidth": 700.0,
+                "electrodeLength": 5000.0,
+                "outletWidth": 800.0,
+                "angle": 45.0,
+                "wasteWidth": 1200.0,
+                "outputLength": 4000.0,
+                "keepWidth": 2000.0,
+                "pressureWidth": 400.0,
+                "pressureSpacing": 1500.0,
+                "numberofDistributors": 5.0,
+                "channelDepth": 1000.0,
+                "electrodeDepth": 1000.0,
+                "pressureDepth": 1000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 4845,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 600,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 9091,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 18450,
+            "y-span": 11425
         },
         {
             "name": "picoinjector_2",
@@ -137,15 +301,47 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "height": 250.0,
+                "width": 10000.0,
+                "injectorWidth": 2000.0,
+                "injectorLength": 3000.0,
+                "dropletWidth": 800.0,
+                "nozzleWidth": 400.0,
+                "nozzleLength": 400.0,
+                "electrodeDistance": 800.0,
+                "electrodeWidth": 800.0,
+                "electrodeLength": 3000.0,
+                "rotation": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 3800,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 10000,
+                    "y": 3800,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 0,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 10000,
+            "y-span": 7600
         },
         {
             "name": "mixer_3",
@@ -155,15 +351,36 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
         },
         {
             "name": "droplet_sorter_2",
@@ -173,15 +390,54 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 800.0,
+                "inletLength": 4000.0,
+                "electrodeDistance": 1000.0,
+                "electrodeWidth": 700.0,
+                "electrodeLength": 5000.0,
+                "outletWidth": 800.0,
+                "angle": 45.0,
+                "wasteWidth": 1200.0,
+                "outputLength": 4000.0,
+                "keepWidth": 2000.0,
+                "pressureWidth": 400.0,
+                "pressureSpacing": 1500.0,
+                "numberofDistributors": 5.0,
+                "channelDepth": 1000.0,
+                "electrodeDepth": 1000.0,
+                "pressureDepth": 1000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 4845,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 600,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 9091,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 18450,
+            "y-span": 11425
         },
         {
             "name": "droplet_splitter_1",
@@ -191,15 +447,44 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 2000.0,
+                "inletLength": 6000.0,
+                "outletWidth1": 1000.0,
+                "outletLength1": 3000.0,
+                "outletWidth2": 2000.0,
+                "outletLength2": 3000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 4000,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5500,
+                    "y": 0,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 8000,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 6000,
+            "y-span": 8000
         },
         {
             "name": "port_3",
@@ -210,15 +495,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_4",
@@ -229,15 +522,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_5",
@@ -248,15 +549,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_6",
@@ -267,15 +576,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_7",
@@ -286,15 +603,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_8",
@@ -305,15 +630,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         },
         {
             "name": "port_9",
@@ -324,15 +657,23 @@
             ],
             "params": {
                 "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
         }
     ],
     "connections": [
@@ -347,7 +688,7 @@
             "id": "channel_1",
             "source": {
                 "component": "port_1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -395,7 +736,7 @@
             "id": "channel_2",
             "source": {
                 "component": "port_2",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -443,7 +784,7 @@
             "id": "channel_3",
             "source": {
                 "component": "port_3",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -539,7 +880,7 @@
             "id": "channel_5",
             "source": {
                 "component": "port_4",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -731,7 +1072,7 @@
             "id": "channel_9",
             "source": {
                 "component": "port_5",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 400,
@@ -964,7 +1305,7 @@
             "sinks": [
                 {
                     "component": "port_6",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "channel_14",
@@ -1012,7 +1353,7 @@
             "sinks": [
                 {
                     "component": "port_7",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "channel_15",
@@ -1060,7 +1401,7 @@
             "sinks": [
                 {
                     "component": "port_8",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "channel_16",
@@ -1108,7 +1449,7 @@
             "sinks": [
                 {
                     "component": "port_9",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "channel_17",

@@ -9,15 +9,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "p2",
@@ -27,15 +36,24 @@
                 "0"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "cp1",
@@ -45,15 +63,24 @@
                 "1"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "v1",
@@ -63,15 +90,26 @@
                 "1"
             ],
             "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "width": 1230.0,
+                "length": 4920.0,
+                "height": 250.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "componentSpacing": 9000
+                ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 615,
+                    "y": 2460,
+                    "label": "1",
+                    "layer": "CONTROL"
+                }
+            ],
+            "x-span": 1230,
+            "y-span": 4920
         }
     ],
     "connections": [
@@ -79,14 +117,14 @@
             "sinks": [
                 {
                     "component": "p2",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
                 "component": "p1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -127,14 +165,14 @@
             "sinks": [
                 {
                     "component": "v1",
-                    "port": null
+                    "port": "1"
                 }
             ],
             "name": "cc1",
             "id": "cc1",
             "source": {
                 "component": "cp1",
-                "port": null
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,

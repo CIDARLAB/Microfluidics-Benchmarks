@@ -6,6 +6,8 @@ module tdroplet(
 
     flow [0:1] temp_inputs;
     flow [0:1] delayed_outputs;
+
+    #MAP "LONG CELL TRAP" "storage"
     storage cell_trap;
 
     assign temp_inputs = inputs%50;

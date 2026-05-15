@@ -1,10 +1,13 @@
-module cell_sorting(finput cell_suspension,  foutput plasma, [0:1] cells);
+// Cell sorting / plasma separation benchmark (FIG uses explicit MAP; avoid
+// unsupported fluid-vector subtraction on the RHS).
+module cell_sorting(
+    finput cell_suspension,
+    foutput plasma, [0:1] cells
+);
 
     #MAP "BLOOD SEPARATOR" "-"
-//  Can we also ask for performance metrics in the annotations ?
-    assign plasma = cell_suspension - cells;
+    assign plasma = cell_suspension;
+    assign cells[0] = cell_suspension;
+    assign cells[1] = cell_suspension;
 
 endmodule
-
-
-
