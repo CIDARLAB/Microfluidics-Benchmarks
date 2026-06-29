@@ -3,27 +3,27 @@ DEVICE tdroplet
 
 
 
-LAYER FLOW 
+LAYER flow
 
-MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
-REACTION CHAMBER reaction_chamber_1 componentSpacing=1000.0 width=5000.0 length=5000.0 height=250.0 cornerRadius=200.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
-MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
-PORT port_1 portRadius=2000 componentSpacing=1000.0 height=1100.0;
-PORT port_2 portRadius=2000 componentSpacing=1000.0 height=1100.0;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
-PORT port_3 portRadius=2000 componentSpacing=1000.0 height=1100.0;
-PORT port_4 portRadius=2000 componentSpacing=1000.0 height=1100.0;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+MIXER mixer_1componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
+REACTION CHAMBER reaction_chamber_1componentSpacing=1000.0 width=5000.0 length=5000.0 height=250.0 cornerRadius=200.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
+MIXER mixer_2componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
+PORT port_1portRadius=2000 componentSpacing=1000.0 height=1100.0;
+PORT port_2portRadius=2000 componentSpacing=1000.0 height=1100.0;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
+PORT port_3portRadius=2000 componentSpacing=1000.0 height=1100.0;
+PORT port_4portRadius=2000 componentSpacing=1000.0 height=1100.0;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0;
+PORT port_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_6componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_7componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
-CHANNEL channel_1 from port_1  to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000;
-CHANNEL channel_2 from port_2  to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000;
-CHANNEL channel_3 from port_3  to nozzle_droplet_generator_2 2 channelWidth=400 connectionSpacing=1000;
-CHANNEL channel_4 from port_4  to nozzle_droplet_generator_2 4 channelWidth=400 connectionSpacing=1000;
+CHANNEL channel_1 from port_1  to nozzle_droplet_generator_1 2channelWidth=400 connectionSpacing=1000;
+CHANNEL channel_2 from port_2  to nozzle_droplet_generator_1 4channelWidth=400 connectionSpacing=1000;
+CHANNEL channel_3 from port_3  to nozzle_droplet_generator_2 2channelWidth=400 connectionSpacing=1000;
+CHANNEL channel_4 from port_4  to nozzle_droplet_generator_2 4channelWidth=400 connectionSpacing=1000;
 CHANNEL channel_5 from mixer_1 2 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400;
 CHANNEL channel_6 from mixer_2 2 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400;
 CHANNEL channel_7 from nozzle_droplet_generator_1 3 to mixer_2 1 connectionSpacing=1000 channelWidth=400;
@@ -33,20 +33,20 @@ CHANNEL channel_10 from port_7 1 to nozzle_droplet_generator_1 1 connectionSpaci
 
  
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
-PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_0componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
-VALVE3D valve_0 on channel_6 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_1 on channel_5 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_0 on channel_6componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_1 on channel_5componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
 
-CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_0 from cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_1 from cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
 
  
 
-END LAYER
+END layer
 

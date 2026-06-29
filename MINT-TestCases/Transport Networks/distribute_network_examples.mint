@@ -3,7 +3,7 @@
 
 DEVICE one_to_n
 
-LAYER FLOW
+LAYER flow
 
 PORT in;
 PORT out;
@@ -26,4 +26,4 @@ CHANNEL c6 from in 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c7 from c2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c2 1 channelWidth=200;
 
-END LAYER
+END layer

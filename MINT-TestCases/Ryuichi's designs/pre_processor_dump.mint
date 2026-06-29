@@ -3,7 +3,7 @@
 
 DEVICE seeding
 
-LAYER FLOW
+LAYER flow
 
 PORT c0;
 PORT c1;
@@ -32,4 +32,4 @@ CHANNEL c9 from buffer 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c10 from stimuli 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to waste 1 channelWidth=200;
 
-END LAYER
+END layer

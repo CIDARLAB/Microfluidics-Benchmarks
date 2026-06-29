@@ -3,7 +3,7 @@
 
 DEVICE microdroplet
 
-LAYER FLOW
+LAYER flow
 
 PORT oil_inlet1;
 PORT oil_inlet2;
@@ -28,4 +28,4 @@ CHANNEL c7 from reservoir_outlet_2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c8 from waste_outlet 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c 1 channelWidth=200;
 
-END LAYER
+END layer

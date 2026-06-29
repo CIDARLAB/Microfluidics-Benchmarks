@@ -1,28 +1,28 @@
 DEVICE rotary16
 
-LAYER FLOW
+LAYER flow
 
-H BANK pb1 of 16  PORT portRadius=100  spacing=1200 ;
-H MUX m1 1 to 16 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-V ROTARY MIXER rp radius=1000 flowChannelWidth=100 controlChannelWidth=50 valveWidth=200 valveLength=200 valveSpacing=400 height=30;
-H BANK pb2 of 16  PORT portRadius=100  spacing=1200 ;
-H MUX m2 1 to 16 spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-CHANNEL c1 from pb1_1 to m1 1 channelWidth=100;
-CHANNEL c2 from pb1_2 to m1 2 channelWidth=100;
-CHANNEL c3 from pb1_3 to m1 3 channelWidth=100;
-CHANNEL c4 from pb1_4 to m1 4 channelWidth=100;
-CHANNEL c5 from pb1_5 to m1 5 channelWidth=100;
-CHANNEL c6 from pb1_6 to m1 6 channelWidth=100;
-CHANNEL c7 from pb1_7 to m1 7 channelWidth=100;
-CHANNEL c8 from pb1_8 to m1 8 channelWidth=100;
-CHANNEL c9 from pb1_9 to m1 9 channelWidth=100;
-CHANNEL c10 from pb1_10 to m1 10 channelWidth=100;
-CHANNEL c11 from pb1_11 to m1 11 channelWidth=100;
-CHANNEL c12 from pb1_12 to m1 12 channelWidth=100;
-CHANNEL c13 from pb1_13 to m1 13 channelWidth=100;
-CHANNEL c14 from pb1_14 to m1 14 channelWidth=100;
-CHANNEL c15 from pb1_15 to m1 15 channelWidth=100;
-CHANNEL c16 from pb1_16 to m1 16 channelWidth=100;
+H BANK pb1 of 16  PORTportRadius=100  spacing=1200 ;
+H MUX m1 1 to 16spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
+V ROTARY MIXER rpradius=1000 flowChannelWidth=100 controlChannelWidth=50 valveWidth=200 valveLength=200 valveSpacing=400 height=30;
+H BANK pb2 of 16  PORTportRadius=100  spacing=1200 ;
+H MUX m2 1 to 16spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
+CHANNEL c1 from pb1_1 to m1 1channelWidth=100;
+CHANNEL c2 from pb1_2 to m1 2channelWidth=100;
+CHANNEL c3 from pb1_3 to m1 3channelWidth=100;
+CHANNEL c4 from pb1_4 to m1 4channelWidth=100;
+CHANNEL c5 from pb1_5 to m1 5channelWidth=100;
+CHANNEL c6 from pb1_6 to m1 6channelWidth=100;
+CHANNEL c7 from pb1_7 to m1 7channelWidth=100;
+CHANNEL c8 from pb1_8 to m1 8channelWidth=100;
+CHANNEL c9 from pb1_9 to m1 9channelWidth=100;
+CHANNEL c10 from pb1_10 to m1 10channelWidth=100;
+CHANNEL c11 from pb1_11 to m1 11channelWidth=100;
+CHANNEL c12 from pb1_12 to m1 12channelWidth=100;
+CHANNEL c13 from pb1_13 to m1 13channelWidth=100;
+CHANNEL c14 from pb1_14 to m1 14channelWidth=100;
+CHANNEL c15 from pb1_15 to m1 15channelWidth=100;
+CHANNEL c16 from pb1_16 to m1 16channelWidth=100;
 CHANNEL c17 from m1 17 to rp 1 channelWidth=100;
 CHANNEL c18 from rp 2 to m2 1 channelWidth=100;
 CHANNEL c19 from m2 2 to pb2_1 channelWidth=100;
@@ -42,16 +42,16 @@ CHANNEL c32 from m2 15 to pb2_14 channelWidth=100;
 CHANNEL c33 from m2 16 to pb2_15 channelWidth=100;
 CHANNEL c34 from m2 17 to pb2_16 channelWidth=100;
 
-END LAYER
+END layer
 
-LAYER CONTROL
+LAYER control
 
-V BANK cpb1 of 4  PORT portRadius=100  spacing=1200 ;
-V BANK cpb2 of 4  PORT portRadius=100  spacing=1200 ;
-V BANK cpb3 of 2  PORT portRadius=100  spacing=1200 ;
-V BANK cpb4 of 3  PORT portRadius=100  spacing=1200 ;
-V BANK cpb5 of 4  PORT portRadius=100  spacing=1200 ;
-V BANK cpb6 of 4  PORT portRadius=100  spacing=1200 ;
+V BANK cpb1 of 4  PORTportRadius=100  spacing=1200 ;
+V BANK cpb2 of 4  PORTportRadius=100  spacing=1200 ;
+V BANK cpb3 of 2  PORTportRadius=100  spacing=1200 ;
+V BANK cpb4 of 3  PORTportRadius=100  spacing=1200 ;
+V BANK cpb5 of 4  PORTportRadius=100  spacing=1200 ;
+V BANK cpb6 of 4  PORTportRadius=100  spacing=1200 ;
 CHANNEL cc1 from m1 18 to cpb1_1 channelWidth=50;
 CHANNEL cc2 from m1 20 to cpb1_2 channelWidth=50;
 CHANNEL cc3 from m1 22 to cpb1_3 channelWidth=50;
@@ -74,4 +74,4 @@ CHANNEL cc19 from rp 3 to cpb4_1 channelWidth=50;
 CHANNEL cc20 from rp 6 to cpb4_2 channelWidth=50;
 CHANNEL cc21 from rp 7 to cpb4_3 channelWidth=50;
 
-END LAYER
+END layer

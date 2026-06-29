@@ -3,11 +3,11 @@
 
 DEVICE cell_traps_4
 
-LAYER FLOW
+LAYER flow
 
 PORT in1;
 MIXER mixer_stub;
 
 CHANNEL c0 from in1 1 to mixer_stub 1 channelWidth=200;
 
-END LAYER
+END layer

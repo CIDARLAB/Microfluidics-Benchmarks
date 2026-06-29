@@ -1,10 +1,10 @@
 module sorting (
-    finput A,
+    finput a,
     foutput a_out, b_out, c_out
 );
     flow temp;
 //  sorter
-    assign a_out = A - temp;
+    assign a_out = a - temp;
     assign temp = {b_out, c_out};
 
 //  assign b_out = ~A;

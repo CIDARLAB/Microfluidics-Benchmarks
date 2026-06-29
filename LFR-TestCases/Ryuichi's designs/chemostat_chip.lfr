@@ -9,18 +9,18 @@ module chemostat_chip (
 
     flow after_mux;
 
-    nine_to_one_mux NineOneMux(in, after_mux, c1);
+    nine_to_one_mux nine_one_mux(in, after_mux, c1);
 
     flow [0:7] microreactor_out;
 
-    microreactor Micro1(after_mux, microreactor_out[0], c3, c2[0]);
-    microreactor Micro2(after_mux, microreactor_out[1], c3, c2[1]);
-    microreactor Micro3(after_mux, microreactor_out[2], c3, c2[2]);
-    microreactor Micro4(after_mux, microreactor_out[3], c3, c2[3]);
-    microreactor Micro5(after_mux, microreactor_out[4], c3, c2[4]);
-    microreactor Micro6(after_mux, microreactor_out[5], c3, c2[5]);
-    microreactor Micro7(after_mux, microreactor_out[6], c3, c2[6]);
-    microreactor Micro8(after_mux, microreactor_out[7], c3, c2[7]);
+    microreactor micro1(after_mux, microreactor_out[0], c3, c2[0]);
+    microreactor micro2(after_mux, microreactor_out[1], c3, c2[1]);
+    microreactor micro3(after_mux, microreactor_out[2], c3, c2[2]);
+    microreactor micro4(after_mux, microreactor_out[3], c3, c2[3]);
+    microreactor micro5(after_mux, microreactor_out[4], c3, c2[4]);
+    microreactor micro6(after_mux, microreactor_out[5], c3, c2[5]);
+    microreactor micro7(after_mux, microreactor_out[6], c3, c2[6]);
+    microreactor micro8(after_mux, microreactor_out[7], c3, c2[7]);
 
     distribute@(c4)
     begin 

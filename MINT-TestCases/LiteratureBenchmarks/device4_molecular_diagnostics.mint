@@ -1,10 +1,10 @@
 DEVICE molecular_diagnostics
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2, p3, p4, p5;
 
-MIXER m1 numberOfBends=3;
+MIXER m1numberOfBends=3;
 MIP BIOSENSOR bs1, bs2;
 
 NODE n1, n2;
@@ -23,4 +23,4 @@ CONNECTION c8 from bs2 2 to n3;
 CONNECTION c9 from n3 to p4;
 CONNECTION c10 from n3 to p5;
 
-END LAYER
+END layer

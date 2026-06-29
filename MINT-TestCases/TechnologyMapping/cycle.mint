@@ -3,7 +3,7 @@
 
 DEVICE cycle
 
-LAYER FLOW
+LAYER flow
 
 PORT input1;
 PORT input2;
@@ -16,4 +16,4 @@ CHANNEL c1 from input2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c2 from input3 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to out 1 channelWidth=200;
 
-END LAYER
+END layer

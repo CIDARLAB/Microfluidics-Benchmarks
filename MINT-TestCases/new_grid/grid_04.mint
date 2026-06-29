@@ -1,27 +1,27 @@
 DEVICE grid_04
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_in portRadius=100 ;
-TREE input_tree spacing=1200 flowChannelWidth=100 in=1 out=4 ;
-SQUARE CELL TRAP ct_1_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
-TREE output_tree spacing=1200 flowChannelWidth=100 in=1 out=4 ;
-PORT port_out portRadius=100 ;
+PORT port_inportRadius=100 ;
+TREE input_treespacing=1200 flowChannelWidth=100 in=1 out=4 ;
+SQUARE CELL TRAP ct_1_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
+TREE output_treespacing=1200 flowChannelWidth=100 in=1 out=4 ;
+PORT port_outportRadius=100 ;
 
 
 
@@ -60,17 +60,17 @@ CHANNEL channel_out_3 from ct_4_3 4 to output_tree 3 channelWidth=100  ;
 CHANNEL channel_out_4 from ct_4_4 4 to output_tree 2 channelWidth=100  ;
 CHANNEL channel_out from output_tree 1 to port_out 1 channelWidth=100  ; 
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
-PORT port_ctrl_in_horizontal_1 portRadius=100 ;
-PORT port_ctrl_in_horizontal_2 portRadius=100 ;
-PORT port_ctrl_in_horizontal_3 portRadius=100 ;
-PORT port_ctrl_in_horizontal_4 portRadius=100 ;
-PORT port_ctrl_in_vertical_1 portRadius=100 ;
-PORT port_ctrl_in_vertical_2 portRadius=100 ;
-PORT port_ctrl_in_vertical_3 portRadius=100 ;
+PORT port_ctrl_in_horizontal_1portRadius=100 ;
+PORT port_ctrl_in_horizontal_2portRadius=100 ;
+PORT port_ctrl_in_horizontal_3portRadius=100 ;
+PORT port_ctrl_in_horizontal_4portRadius=100 ;
+PORT port_ctrl_in_vertical_1portRadius=100 ;
+PORT port_ctrl_in_vertical_2portRadius=100 ;
+PORT port_ctrl_in_vertical_3portRadius=100 ;
 
 VALVE valve_horizontal_1_1 on channel_horizontal_1_1 width=300 length=100 ;
 VALVE valve_horizontal_1_2 on channel_horizontal_1_2 width=300 length=100 ;
@@ -105,5 +105,5 @@ CHANNEL channel_ctrl_in_vertical_1 from port_ctrl_in_vertical_1 1 to valve_verti
 CHANNEL channel_ctrl_in_vertical_2 from port_ctrl_in_vertical_2 1 to valve_vertical_2_1 1, valve_vertical_2_2 1, valve_vertical_2_3 1, valve_vertical_2_4 1 channelWidth=100  ;
 CHANNEL channel_ctrl_in_vertical_3 from port_ctrl_in_vertical_3 1 to valve_vertical_3_1 1, valve_vertical_3_2 1, valve_vertical_3_3 1, valve_vertical_3_4 1 channelWidth=100  ; 
 
-END LAYER
+END layer
 

@@ -1,5 +1,5 @@
-module DNA_Digest (
-    finput B, C, D,
+module dna_digest(
+    finput b, c, d,
     foutput a_out,
     control c_val
 );
@@ -7,7 +7,7 @@ module DNA_Digest (
     flow mixture;
 
 //  mix suspended DNA, buffer and enzyme solution, and water with oil (ignored) pushing them. 500uL each
-    assign mixture = B%500 + C%500 + D%500;
+    assign mixture = b%500 + c%500 + d%500;
 
 //  incubate
     flow incubator_process;

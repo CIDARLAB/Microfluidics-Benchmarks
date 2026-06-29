@@ -3,7 +3,7 @@
 
 DEVICE dna_digest
 
-LAYER FLOW
+LAYER flow
 
 PORT dna_suspension;
 PORT buffer_enzyme_solution;
@@ -14,4 +14,4 @@ CHANNEL c0 from dna_suspension 1 to mixer_stub 1 channelWidth=200;
 CHANNEL c1 from buffer_enzyme_solution 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to water 1 channelWidth=200;
 
-END LAYER
+END layer

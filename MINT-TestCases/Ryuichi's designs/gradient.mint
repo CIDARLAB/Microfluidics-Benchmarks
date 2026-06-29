@@ -3,17 +3,17 @@
 
 DEVICE gradient
 
-LAYER FLOW
+LAYER flow
 
-PORT P;
-PORT Q;
-PORT R;
+PORT p;
+PORT q;
+PORT r;
 PORT out;
 MIXER mixer_stub;
 
-CHANNEL c0 from P 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from Q 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from R 1 to mixer_stub 2 channelWidth=200;
+CHANNEL c0 from p 1 to mixer_stub 1 channelWidth=200;
+CHANNEL c1 from q 1 to mixer_stub 2 channelWidth=200;
+CHANNEL c2 from r 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to out 1 channelWidth=200;
 
-END LAYER
+END layer

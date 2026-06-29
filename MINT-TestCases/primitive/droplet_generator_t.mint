@@ -1,11 +1,11 @@
 DEVICE droplet_generator_t
 
 
-LAYER FLOW
+LAYER flow
 
 PORT p1;
 DROPLET GENERATOR T d;
 
-CHANNEL c1 from p1 to d channelWidth=400;
+CHANNEL c1 from p1 to dchannelWidth=400;
 
-END LAYER
+END layer

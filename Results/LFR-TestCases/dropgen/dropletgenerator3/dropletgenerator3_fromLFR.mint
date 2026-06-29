@@ -2,16 +2,16 @@ DEVICE dropletgenerator3
 
 
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_6componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_7componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_8componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
@@ -20,5 +20,5 @@ CHANNEL channel_2 from port_8 1 to port_2 1 connectionSpacing=1000 channelWidth=
 
  
 
-END LAYER
+END layer
 

@@ -1,18 +1,18 @@
-DEVICE device1_scRNA_seq
+DEVICE device1_sc_rna_seq
 
 
 
-LAYER FLOW 
+LAYER flow
 
-SQUARE CELL TRAP square_cell_trap_1 componentSpacing=1000.0 rotation=0.0 height=250.0 channelWidth=1000.0 channelLength=4000.0 chamberWidth=2500.0 chamberLength=2500.0 chamberHeight=250.0 mirrorByX=0.0 mirrorByY=0.0;
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
-MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
-MIXER mixer_3 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+SQUARE CELL TRAP square_cell_trap_1componentSpacing=1000.0 rotation=0.0 height=250.0 channelWidth=1000.0 channelLength=4000.0 chamberWidth=2500.0 chamberLength=2500.0 chamberHeight=250.0 mirrorByX=0.0 mirrorByY=0.0;
+PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+MIXER mixer_1componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
+MIXER mixer_2componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
+MIXER mixer_3componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0;
+PORT port_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
@@ -28,5 +28,5 @@ CHANNEL channel_9 from port_5 1 to mixer_3 1 connectionSpacing=1000 channelWidth
 
  
 
-END LAYER
+END layer
 

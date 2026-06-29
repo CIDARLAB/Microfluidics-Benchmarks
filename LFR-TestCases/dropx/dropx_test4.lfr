@@ -3,8 +3,8 @@
 
         #MAP "DROPLET GENERATOR" "~"
         #MAP "MIXER" "&"
-        #CONSTRAIN "~" DROPLET_SIZE = 50 um 
-        #CONSTRAIN "~" GENERATION_RATE = 70 Hz
+        #CONSTRAIN "~" droplet_size = 50 um 
+        #CONSTRAIN "~" generation_rate = 70 hz
         assign out1 = &(~in1);
 
         assign out1 = in1*0.7 + in2*0.3;

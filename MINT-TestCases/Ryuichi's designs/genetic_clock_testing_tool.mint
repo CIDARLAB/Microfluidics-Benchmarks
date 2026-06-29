@@ -5,17 +5,17 @@ DEVICE genetic_clock_testing_tool
 
 
 
-LAYER FLOW 
+LAYER flow
 
-SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000;
-MIXER mixer_1 componentSpacing=9000;
-MIXER mixer_2 componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_3 componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_4 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
-PORT port_3 componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_1componentSpacing=9000;
+MIXER mixer_1componentSpacing=9000;
+MIXER mixer_2componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_2componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_3componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_4componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
+PORT port_3componentSpacing=9000;
 
 
 
@@ -27,5 +27,5 @@ CHANNEL channel_5 from mixer_1 2 to mixer_2 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

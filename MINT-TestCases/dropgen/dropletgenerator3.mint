@@ -3,16 +3,16 @@
 
 DEVICE dropletgenerator3
 
-LAYER FLOW
+LAYER flow
 
-PORT oilin1 portRadius=1200;
-PORT oilin2 portRadius=1200;
-PORT oilin3 portRadius=1200;
-PORT oilin4 portRadius=1200;
-PORT waterin1 portRadius=1200;
-PORT waterin2 portRadius=1200;
-PORT dropletout1 portRadius=1200;
-PORT dropletout2 portRadius=1200;
+PORT oilin1portRadius=1200;
+PORT oilin2portRadius=1200;
+PORT oilin3portRadius=1200;
+PORT oilin4portRadius=1200;
+PORT waterin1portRadius=1200;
+PORT waterin2portRadius=1200;
+PORT dropletout1portRadius=1200;
+PORT dropletout2portRadius=1200;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2;
 
@@ -25,4 +25,4 @@ CHANNEL c6 from waterin2 1 to nozzle_droplet_generator_2 6 channelWidth=280;
 CHANNEL c7 from nozzle_droplet_generator_1 1 to dropletout1 1 channelWidth=280;
 CHANNEL c8 from nozzle_droplet_generator_2 1 to dropletout2 1 channelWidth=280;
 
-END LAYER
+END layer

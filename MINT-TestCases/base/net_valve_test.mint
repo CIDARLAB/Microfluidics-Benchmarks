@@ -1,9 +1,9 @@
 DEVICE net_valve_test
 
-LAYER FLOW
-V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
-H MUX m2 1 to 2 spacing=1500 flowChannelWidth=100 controlChannelWidth=20;
-H BANK b3 of 2  PORT portRadius=100  spacing=1500 ;
+LAYER flow
+V BANK b1 of 8  PORTportRadius=100  spacing=1500 ;
+H MUX m2 1 to 2spacing=1500 flowChannelWidth=100 controlChannelWidth=20;
+H BANK b3 of 2  PORTportRadius=100  spacing=1500 ;
 NODE n1, n2, n3, n4, n5, n6, n7, n8;
 
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
@@ -27,10 +27,10 @@ CHANNEL c49 from n1 1 to m2 3 channelWidth=100;
 CHANNEL c50 from b3 1 to m2 1 channelWidth=100;
 CHANNEL c51 from b3 2 to m2 2 channelWidth=100;
 
-END LAYER
+END layer
 
-LAYER CONTROL
- PORT cp1, cp2, cp4 portRadius=100;
+LAYER control
+ PORT cp1, cp2, cp4portRadius=100;
 
 CHANNEL cm1 from cp1 2 to m2 4 channelWidth=50;
 CHANNEL cm2 from cp2 3 to m2 5 channelWidth=50;
@@ -44,7 +44,7 @@ VALVE v13 on c12 width=200 length=100;
 VALVE v14 on c13 width=200 length=100;
 VALVE v15 on c14 width=200 length=100;
 VALVE v16 on c15 width=200 length=100;
-NET nt1 from cp4 1 to v16 4, v10 4, v11 4, v12 4, v13 4, v14 4, v15 4, v9 4 channelWidth=50;
+NET nt1 from cp4 1 to v16 4, v10 4, v11 4, v12 4, v13 4, v14 4, v15 4, v9 4channelWidth=50;
 
 
-END LAYER
+END layer

@@ -3,7 +3,7 @@
 
 DEVICE directed_evolution
 
-LAYER FLOW
+LAYER flow
 
 PORT genes;
 PORT pcr_mastermix;
@@ -28,4 +28,4 @@ CHANNEL c7 from initial 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c8 from found_candidate 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to found_result 1 channelWidth=200;
 
-END LAYER
+END layer

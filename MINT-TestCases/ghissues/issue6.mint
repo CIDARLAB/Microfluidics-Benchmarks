@@ -3,7 +3,7 @@
 
 DEVICE samv0
 
-LAYER FLOW
+LAYER flow
 
 PORT bank_in1;
 PORT bank_in2;
@@ -26,4 +26,4 @@ CHANNEL c6 from mux_c2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c7 from cell_c 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to wash_c 1 channelWidth=200;
 
-END LAYER
+END layer

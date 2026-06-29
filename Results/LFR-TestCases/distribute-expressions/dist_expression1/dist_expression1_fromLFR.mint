@@ -2,10 +2,10 @@ DEVICE dist_expression1
 
 
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
@@ -13,9 +13,9 @@ CHANNEL channel_1 from port_2 1 to port_1 1 connectionSpacing=1000 channelWidth=
 
  
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
 
 
@@ -25,5 +25,5 @@ LAYER CONTROL
 
  
 
-END LAYER
+END layer
 

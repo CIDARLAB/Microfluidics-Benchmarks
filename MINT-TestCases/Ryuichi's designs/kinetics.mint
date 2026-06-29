@@ -5,14 +5,14 @@ DEVICE kinetics
 
 
 
-LAYER FLOW 
+LAYER flow
 
-MIXER mixer_1 componentSpacing=9000;
-MIXER mixer_2 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
-PORT port_3 componentSpacing=9000;
-PORT port_4 componentSpacing=9000;
+MIXER mixer_1componentSpacing=9000;
+MIXER mixer_2componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
+PORT port_3componentSpacing=9000;
+PORT port_4componentSpacing=9000;
 
 
 
@@ -24,5 +24,5 @@ CHANNEL channel_5 from port_4 1 to mixer_2 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

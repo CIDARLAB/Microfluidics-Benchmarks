@@ -3,8 +3,8 @@
 
 DEVICE transposer_64
 
-LAYER FLOW
+LAYER flow
 
 PORT placeholder;
 
-END LAYER
+END layer

@@ -1,13 +1,13 @@
 module antibiotic_resistance (
-    finput A,
+    finput a,
     foutput a_out
 );
     storage [0:9] chamber;
 
 //  send suspended cells to each chambers that contain different concentrations of antibiotics
-    assign chamber[0:9] = A;
+    assign chamber[0:9] = a;
 
 //  excess cells out
-    assign a_out = A;
+    assign a_out = a;
 
 endmodule

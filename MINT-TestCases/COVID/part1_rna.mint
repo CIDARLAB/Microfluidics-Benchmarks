@@ -5,18 +5,18 @@ DEVICE part1_rna
 
 
 
-LAYER FLOW 
+LAYER flow
 
-MIXER mixer_1 componentSpacing=9000;
-MIXER mixer_2 componentSpacing=9000;
-MIXER mixer_3 componentSpacing=9000;
-MIXER mixer_4 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
-PORT port_3 componentSpacing=9000;
-PORT port_4 componentSpacing=9000;
-PORT port_5 componentSpacing=9000;
-PORT port_6 componentSpacing=9000;
+MIXER mixer_1componentSpacing=9000;
+MIXER mixer_2componentSpacing=9000;
+MIXER mixer_3componentSpacing=9000;
+MIXER mixer_4componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
+PORT port_3componentSpacing=9000;
+PORT port_4componentSpacing=9000;
+PORT port_5componentSpacing=9000;
+PORT port_6componentSpacing=9000;
 
 
 
@@ -31,5 +31,5 @@ CHANNEL channel_8 from port_6 1 to mixer_3 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

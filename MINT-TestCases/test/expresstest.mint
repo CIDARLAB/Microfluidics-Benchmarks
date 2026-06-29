@@ -3,7 +3,7 @@
 
 DEVICE expressiontest
 
-LAYER FLOW
+LAYER flow
 
 PORT plasmid;
 PORT cell_suspension;
@@ -14,4 +14,4 @@ CHANNEL c0 from plasmid 1 to mixer_stub 1 channelWidth=200;
 CHANNEL c1 from cell_suspension 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to result 1 channelWidth=200;
 
-END LAYER
+END layer

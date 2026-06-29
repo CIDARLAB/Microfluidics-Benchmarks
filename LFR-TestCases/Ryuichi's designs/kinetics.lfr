@@ -1,9 +1,9 @@
 //  Millisecond Kinetics on a Microfluidics Chip Using nanoliters of Reagents. Helen Song and Rustem F. Ismagilov
 module kinetics(
-    finput buffer, subtrate, RNase_A,
+    finput buffer, subtrate, r_nase_a,
     foutput out
 );
 
-    assign out = buffer + subtrate + RNase_A;
+    assign out = buffer + subtrate + r_nase_a;
 
 endmodule

@@ -1,11 +1,11 @@
 DEVICE grid_15
 
-LAYER FLOW
-H TREE m1 1 to 15 spacing=1200 flowChannelWidth=100;
-H TREE m2 1 to 15  spacing=1200 flowChannelWidth=100;
- PORT p1, p2 portRadius=100;
-SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16, ct17, ct18, ct19, ct20, ct21, ct22, ct23, ct24, ct25, ct26, ct27, ct28, ct29, ct30, ct31, ct32, ct33, ct34, ct35, ct36, ct37, ct38, ct39, ct40, ct41, ct42, ct43, ct44, ct45, ct46, ct47, ct48, ct49, ct50, ct51, ct52, ct53, ct54, ct55, ct56, ct57, ct58, ct59, ct60, ct61, ct62, ct63, ct64, ct65, ct66, ct67, ct68, ct69, ct70, ct71, ct72, ct73, ct74, ct75, ct76, ct77, ct78, ct79, ct80, ct81, ct82, ct83, ct84, ct85, ct86, ct87, ct88, ct89, ct90, ct91, ct92, ct93, ct94, ct95, ct96, ct97, ct98, ct99, ct100, ct101, ct102, ct103, ct104, ct105, ct106, ct107, ct108, ct109, ct110, ct111, ct112, ct113, ct114, ct115, ct116, ct117, ct118, ct119, ct120, ct121, ct122, ct123, ct124, ct125, ct126, ct127, ct128, ct129, ct130, ct131, ct132, ct133, ct134, ct135, ct136, ct137, ct138, ct139, ct140, ct141, ct142, ct143, ct144, ct145, ct146, ct147, ct148, ct149, ct150, ct151, ct152, ct153, ct154, ct155, ct156, ct157, ct158, ct159, ct160, ct161, ct162, ct163, ct164, ct165, ct166, ct167, ct168, ct169, ct170, ct171, ct172, ct173, ct174, ct175, ct176, ct177, ct178, ct179, ct180, ct181, ct182, ct183, ct184, ct185, ct186, ct187, ct188, ct189, ct190, ct191, ct192, ct193, ct194, ct195, ct196, ct197, ct198, ct199, ct200, ct201, ct202, ct203, ct204, ct205, ct206, ct207, ct208, ct209, ct210, ct211, ct212, ct213, ct214, ct215, ct216, ct217, ct218, ct219, ct220, ct221, ct222, ct223, ct224, ct225 chamberWidth=100 chamberLength=100 channelWidth=100;
-CHANNEL c1 from p1 to m1 1 channelWidth=100;
+LAYER flow
+H TREE m1 1 to 15spacing=1200 flowChannelWidth=100;
+H TREE m2 1 to 15spacing=1200 flowChannelWidth=100;
+ PORT p1, p2portRadius=100;
+SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16, ct17, ct18, ct19, ct20, ct21, ct22, ct23, ct24, ct25, ct26, ct27, ct28, ct29, ct30, ct31, ct32, ct33, ct34, ct35, ct36, ct37, ct38, ct39, ct40, ct41, ct42, ct43, ct44, ct45, ct46, ct47, ct48, ct49, ct50, ct51, ct52, ct53, ct54, ct55, ct56, ct57, ct58, ct59, ct60, ct61, ct62, ct63, ct64, ct65, ct66, ct67, ct68, ct69, ct70, ct71, ct72, ct73, ct74, ct75, ct76, ct77, ct78, ct79, ct80, ct81, ct82, ct83, ct84, ct85, ct86, ct87, ct88, ct89, ct90, ct91, ct92, ct93, ct94, ct95, ct96, ct97, ct98, ct99, ct100, ct101, ct102, ct103, ct104, ct105, ct106, ct107, ct108, ct109, ct110, ct111, ct112, ct113, ct114, ct115, ct116, ct117, ct118, ct119, ct120, ct121, ct122, ct123, ct124, ct125, ct126, ct127, ct128, ct129, ct130, ct131, ct132, ct133, ct134, ct135, ct136, ct137, ct138, ct139, ct140, ct141, ct142, ct143, ct144, ct145, ct146, ct147, ct148, ct149, ct150, ct151, ct152, ct153, ct154, ct155, ct156, ct157, ct158, ct159, ct160, ct161, ct162, ct163, ct164, ct165, ct166, ct167, ct168, ct169, ct170, ct171, ct172, ct173, ct174, ct175, ct176, ct177, ct178, ct179, ct180, ct181, ct182, ct183, ct184, ct185, ct186, ct187, ct188, ct189, ct190, ct191, ct192, ct193, ct194, ct195, ct196, ct197, ct198, ct199, ct200, ct201, ct202, ct203, ct204, ct205, ct206, ct207, ct208, ct209, ct210, ct211, ct212, ct213, ct214, ct215, ct216, ct217, ct218, ct219, ct220, ct221, ct222, ct223, ct224, ct225chamberWidth=100 chamberLength=100 channelWidth=100;
+CHANNEL c1 from p1 to m1 1channelWidth=100;
 CHANNEL c2 from m1 2 to ct1 1 channelWidth=100;
 CHANNEL c3 from m1 3 to ct2 1 channelWidth=100;
 CHANNEL c4 from m1 4 to ct3 1 channelWidth=100;
@@ -487,11 +487,11 @@ CHANNEL c450 from ct224 3 to m2 14 channelWidth=100;
 CHANNEL c451 from ct225 3 to m2 15 channelWidth=100;
 CHANNEL c452 from m2 16 to p2 channelWidth=100;
 
-END LAYER
+END layer
 
-LAYER CONTROL
- V BANK cpb1 of 15  PORT portRadius=100  spacing=1500 ;
- V BANK cpb2 of 14  PORT portRadius=100  spacing=1500 ;
+LAYER control
+ V BANK cpb1 of 15  PORTportRadius=100  spacing=1500 ;
+ V BANK cpb2 of 14  PORTportRadius=100  spacing=1500 ;
 
 VALVE v1 on c17 width=100 length=300;
 VALVE v2 on c18 width=100 length=300;
@@ -508,7 +508,7 @@ VALVE v12 on c28 width=100 length=300;
 VALVE v13 on c29 width=100 length=300;
 VALVE v14 on c30 width=100 length=300;
 
-NET n1 from cpb1_1 to v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14 channelWidth=50;
+NET n1 from cpb1_1 to v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14channelWidth=50;
 
 VALVE v15 on c31 width=300 length=100;
 VALVE v16 on c32 width=300 length=100;
@@ -526,21 +526,21 @@ VALVE v27 on c43 width=300 length=100;
 VALVE v28 on c44 width=300 length=100;
 VALVE v29 on c45 width=300 length=100;
 
-CHANNEL cc1 from v15 to v16 channelWidth=50;
-CHANNEL cc2 from v16 to v17 channelWidth=50;
-CHANNEL cc3 from v17 to v18 channelWidth=50;
-CHANNEL cc4 from v18 to v19 channelWidth=50;
-CHANNEL cc5 from v19 to v20 channelWidth=50;
-CHANNEL cc6 from v20 to v21 channelWidth=50;
-CHANNEL cc7 from v21 to v22 channelWidth=50;
-CHANNEL cc8 from v22 to v23 channelWidth=50;
-CHANNEL cc9 from v23 to v24 channelWidth=50;
-CHANNEL cc10 from v24 to v25 channelWidth=50;
-CHANNEL cc11 from v25 to v26 channelWidth=50;
-CHANNEL cc12 from v26 to v27 channelWidth=50;
-CHANNEL cc13 from v27 to v28 channelWidth=50;
-CHANNEL cc14 from v28 to v29 channelWidth=50;
-CHANNEL cc15 from v29 to cpb2_1 channelWidth=50;
+CHANNEL cc1 from v15 to v16channelWidth=50;
+CHANNEL cc2 from v16 to v17channelWidth=50;
+CHANNEL cc3 from v17 to v18channelWidth=50;
+CHANNEL cc4 from v18 to v19channelWidth=50;
+CHANNEL cc5 from v19 to v20channelWidth=50;
+CHANNEL cc6 from v20 to v21channelWidth=50;
+CHANNEL cc7 from v21 to v22channelWidth=50;
+CHANNEL cc8 from v22 to v23channelWidth=50;
+CHANNEL cc9 from v23 to v24channelWidth=50;
+CHANNEL cc10 from v24 to v25channelWidth=50;
+CHANNEL cc11 from v25 to v26channelWidth=50;
+CHANNEL cc12 from v26 to v27channelWidth=50;
+CHANNEL cc13 from v27 to v28channelWidth=50;
+CHANNEL cc14 from v28 to v29channelWidth=50;
+CHANNEL cc15 from v29 to cpb2_1channelWidth=50;
 
 VALVE v30 on c46 width=100 length=300;
 VALVE v31 on c47 width=100 length=300;
@@ -557,7 +557,7 @@ VALVE v41 on c57 width=100 length=300;
 VALVE v42 on c58 width=100 length=300;
 VALVE v43 on c59 width=100 length=300;
 
-NET n2 from cpb1_2 to v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43 channelWidth=50;
+NET n2 from cpb1_2 to v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43channelWidth=50;
 
 VALVE v44 on c60 width=300 length=100;
 VALVE v45 on c61 width=300 length=100;
@@ -575,21 +575,21 @@ VALVE v56 on c72 width=300 length=100;
 VALVE v57 on c73 width=300 length=100;
 VALVE v58 on c74 width=300 length=100;
 
-CHANNEL cc16 from v44 to v45 channelWidth=50;
-CHANNEL cc17 from v45 to v46 channelWidth=50;
-CHANNEL cc18 from v46 to v47 channelWidth=50;
-CHANNEL cc19 from v47 to v48 channelWidth=50;
-CHANNEL cc20 from v48 to v49 channelWidth=50;
-CHANNEL cc21 from v49 to v50 channelWidth=50;
-CHANNEL cc22 from v50 to v51 channelWidth=50;
-CHANNEL cc23 from v51 to v52 channelWidth=50;
-CHANNEL cc24 from v52 to v53 channelWidth=50;
-CHANNEL cc25 from v53 to v54 channelWidth=50;
-CHANNEL cc26 from v54 to v55 channelWidth=50;
-CHANNEL cc27 from v55 to v56 channelWidth=50;
-CHANNEL cc28 from v56 to v57 channelWidth=50;
-CHANNEL cc29 from v57 to v58 channelWidth=50;
-CHANNEL cc30 from v58 to cpb2_2 channelWidth=50;
+CHANNEL cc16 from v44 to v45channelWidth=50;
+CHANNEL cc17 from v45 to v46channelWidth=50;
+CHANNEL cc18 from v46 to v47channelWidth=50;
+CHANNEL cc19 from v47 to v48channelWidth=50;
+CHANNEL cc20 from v48 to v49channelWidth=50;
+CHANNEL cc21 from v49 to v50channelWidth=50;
+CHANNEL cc22 from v50 to v51channelWidth=50;
+CHANNEL cc23 from v51 to v52channelWidth=50;
+CHANNEL cc24 from v52 to v53channelWidth=50;
+CHANNEL cc25 from v53 to v54channelWidth=50;
+CHANNEL cc26 from v54 to v55channelWidth=50;
+CHANNEL cc27 from v55 to v56channelWidth=50;
+CHANNEL cc28 from v56 to v57channelWidth=50;
+CHANNEL cc29 from v57 to v58channelWidth=50;
+CHANNEL cc30 from v58 to cpb2_2channelWidth=50;
 
 VALVE v59 on c75 width=100 length=300;
 VALVE v60 on c76 width=100 length=300;
@@ -606,7 +606,7 @@ VALVE v70 on c86 width=100 length=300;
 VALVE v71 on c87 width=100 length=300;
 VALVE v72 on c88 width=100 length=300;
 
-NET n3 from cpb1_3 to v59, v60, v61, v62, v63, v64, v65, v66, v67, v68, v69, v70, v71, v72 channelWidth=50;
+NET n3 from cpb1_3 to v59, v60, v61, v62, v63, v64, v65, v66, v67, v68, v69, v70, v71, v72channelWidth=50;
 
 VALVE v73 on c89 width=300 length=100;
 VALVE v74 on c90 width=300 length=100;
@@ -624,21 +624,21 @@ VALVE v85 on c101 width=300 length=100;
 VALVE v86 on c102 width=300 length=100;
 VALVE v87 on c103 width=300 length=100;
 
-CHANNEL cc31 from v73 to v74 channelWidth=50;
-CHANNEL cc32 from v74 to v75 channelWidth=50;
-CHANNEL cc33 from v75 to v76 channelWidth=50;
-CHANNEL cc34 from v76 to v77 channelWidth=50;
-CHANNEL cc35 from v77 to v78 channelWidth=50;
-CHANNEL cc36 from v78 to v79 channelWidth=50;
-CHANNEL cc37 from v79 to v80 channelWidth=50;
-CHANNEL cc38 from v80 to v81 channelWidth=50;
-CHANNEL cc39 from v81 to v82 channelWidth=50;
-CHANNEL cc40 from v82 to v83 channelWidth=50;
-CHANNEL cc41 from v83 to v84 channelWidth=50;
-CHANNEL cc42 from v84 to v85 channelWidth=50;
-CHANNEL cc43 from v85 to v86 channelWidth=50;
-CHANNEL cc44 from v86 to v87 channelWidth=50;
-CHANNEL cc45 from v87 to cpb2_3 channelWidth=50;
+CHANNEL cc31 from v73 to v74channelWidth=50;
+CHANNEL cc32 from v74 to v75channelWidth=50;
+CHANNEL cc33 from v75 to v76channelWidth=50;
+CHANNEL cc34 from v76 to v77channelWidth=50;
+CHANNEL cc35 from v77 to v78channelWidth=50;
+CHANNEL cc36 from v78 to v79channelWidth=50;
+CHANNEL cc37 from v79 to v80channelWidth=50;
+CHANNEL cc38 from v80 to v81channelWidth=50;
+CHANNEL cc39 from v81 to v82channelWidth=50;
+CHANNEL cc40 from v82 to v83channelWidth=50;
+CHANNEL cc41 from v83 to v84channelWidth=50;
+CHANNEL cc42 from v84 to v85channelWidth=50;
+CHANNEL cc43 from v85 to v86channelWidth=50;
+CHANNEL cc44 from v86 to v87channelWidth=50;
+CHANNEL cc45 from v87 to cpb2_3channelWidth=50;
 
 VALVE v88 on c104 width=100 length=300;
 VALVE v89 on c105 width=100 length=300;
@@ -655,7 +655,7 @@ VALVE v99 on c115 width=100 length=300;
 VALVE v100 on c116 width=100 length=300;
 VALVE v101 on c117 width=100 length=300;
 
-NET n4 from cpb1_4 to v88, v89, v90, v91, v92, v93, v94, v95, v96, v97, v98, v99, v100, v101 channelWidth=50;
+NET n4 from cpb1_4 to v88, v89, v90, v91, v92, v93, v94, v95, v96, v97, v98, v99, v100, v101channelWidth=50;
 
 VALVE v102 on c118 width=300 length=100;
 VALVE v103 on c119 width=300 length=100;
@@ -673,21 +673,21 @@ VALVE v114 on c130 width=300 length=100;
 VALVE v115 on c131 width=300 length=100;
 VALVE v116 on c132 width=300 length=100;
 
-CHANNEL cc46 from v102 to v103 channelWidth=50;
-CHANNEL cc47 from v103 to v104 channelWidth=50;
-CHANNEL cc48 from v104 to v105 channelWidth=50;
-CHANNEL cc49 from v105 to v106 channelWidth=50;
-CHANNEL cc50 from v106 to v107 channelWidth=50;
-CHANNEL cc51 from v107 to v108 channelWidth=50;
-CHANNEL cc52 from v108 to v109 channelWidth=50;
-CHANNEL cc53 from v109 to v110 channelWidth=50;
-CHANNEL cc54 from v110 to v111 channelWidth=50;
-CHANNEL cc55 from v111 to v112 channelWidth=50;
-CHANNEL cc56 from v112 to v113 channelWidth=50;
-CHANNEL cc57 from v113 to v114 channelWidth=50;
-CHANNEL cc58 from v114 to v115 channelWidth=50;
-CHANNEL cc59 from v115 to v116 channelWidth=50;
-CHANNEL cc60 from v116 to cpb2_4 channelWidth=50;
+CHANNEL cc46 from v102 to v103channelWidth=50;
+CHANNEL cc47 from v103 to v104channelWidth=50;
+CHANNEL cc48 from v104 to v105channelWidth=50;
+CHANNEL cc49 from v105 to v106channelWidth=50;
+CHANNEL cc50 from v106 to v107channelWidth=50;
+CHANNEL cc51 from v107 to v108channelWidth=50;
+CHANNEL cc52 from v108 to v109channelWidth=50;
+CHANNEL cc53 from v109 to v110channelWidth=50;
+CHANNEL cc54 from v110 to v111channelWidth=50;
+CHANNEL cc55 from v111 to v112channelWidth=50;
+CHANNEL cc56 from v112 to v113channelWidth=50;
+CHANNEL cc57 from v113 to v114channelWidth=50;
+CHANNEL cc58 from v114 to v115channelWidth=50;
+CHANNEL cc59 from v115 to v116channelWidth=50;
+CHANNEL cc60 from v116 to cpb2_4channelWidth=50;
 
 VALVE v117 on c133 width=100 length=300;
 VALVE v118 on c134 width=100 length=300;
@@ -704,7 +704,7 @@ VALVE v128 on c144 width=100 length=300;
 VALVE v129 on c145 width=100 length=300;
 VALVE v130 on c146 width=100 length=300;
 
-NET n5 from cpb1_5 to v117, v118, v119, v120, v121, v122, v123, v124, v125, v126, v127, v128, v129, v130 channelWidth=50;
+NET n5 from cpb1_5 to v117, v118, v119, v120, v121, v122, v123, v124, v125, v126, v127, v128, v129, v130channelWidth=50;
 
 VALVE v131 on c147 width=300 length=100;
 VALVE v132 on c148 width=300 length=100;
@@ -722,21 +722,21 @@ VALVE v143 on c159 width=300 length=100;
 VALVE v144 on c160 width=300 length=100;
 VALVE v145 on c161 width=300 length=100;
 
-CHANNEL cc61 from v131 to v132 channelWidth=50;
-CHANNEL cc62 from v132 to v133 channelWidth=50;
-CHANNEL cc63 from v133 to v134 channelWidth=50;
-CHANNEL cc64 from v134 to v135 channelWidth=50;
-CHANNEL cc65 from v135 to v136 channelWidth=50;
-CHANNEL cc66 from v136 to v137 channelWidth=50;
-CHANNEL cc67 from v137 to v138 channelWidth=50;
-CHANNEL cc68 from v138 to v139 channelWidth=50;
-CHANNEL cc69 from v139 to v140 channelWidth=50;
-CHANNEL cc70 from v140 to v141 channelWidth=50;
-CHANNEL cc71 from v141 to v142 channelWidth=50;
-CHANNEL cc72 from v142 to v143 channelWidth=50;
-CHANNEL cc73 from v143 to v144 channelWidth=50;
-CHANNEL cc74 from v144 to v145 channelWidth=50;
-CHANNEL cc75 from v145 to cpb2_5 channelWidth=50;
+CHANNEL cc61 from v131 to v132channelWidth=50;
+CHANNEL cc62 from v132 to v133channelWidth=50;
+CHANNEL cc63 from v133 to v134channelWidth=50;
+CHANNEL cc64 from v134 to v135channelWidth=50;
+CHANNEL cc65 from v135 to v136channelWidth=50;
+CHANNEL cc66 from v136 to v137channelWidth=50;
+CHANNEL cc67 from v137 to v138channelWidth=50;
+CHANNEL cc68 from v138 to v139channelWidth=50;
+CHANNEL cc69 from v139 to v140channelWidth=50;
+CHANNEL cc70 from v140 to v141channelWidth=50;
+CHANNEL cc71 from v141 to v142channelWidth=50;
+CHANNEL cc72 from v142 to v143channelWidth=50;
+CHANNEL cc73 from v143 to v144channelWidth=50;
+CHANNEL cc74 from v144 to v145channelWidth=50;
+CHANNEL cc75 from v145 to cpb2_5channelWidth=50;
 
 VALVE v146 on c162 width=100 length=300;
 VALVE v147 on c163 width=100 length=300;
@@ -753,7 +753,7 @@ VALVE v157 on c173 width=100 length=300;
 VALVE v158 on c174 width=100 length=300;
 VALVE v159 on c175 width=100 length=300;
 
-NET n6 from cpb1_6 to v146, v147, v148, v149, v150, v151, v152, v153, v154, v155, v156, v157, v158, v159 channelWidth=50;
+NET n6 from cpb1_6 to v146, v147, v148, v149, v150, v151, v152, v153, v154, v155, v156, v157, v158, v159channelWidth=50;
 
 VALVE v160 on c176 width=300 length=100;
 VALVE v161 on c177 width=300 length=100;
@@ -771,21 +771,21 @@ VALVE v172 on c188 width=300 length=100;
 VALVE v173 on c189 width=300 length=100;
 VALVE v174 on c190 width=300 length=100;
 
-CHANNEL cc76 from v160 to v161 channelWidth=50;
-CHANNEL cc77 from v161 to v162 channelWidth=50;
-CHANNEL cc78 from v162 to v163 channelWidth=50;
-CHANNEL cc79 from v163 to v164 channelWidth=50;
-CHANNEL cc80 from v164 to v165 channelWidth=50;
-CHANNEL cc81 from v165 to v166 channelWidth=50;
-CHANNEL cc82 from v166 to v167 channelWidth=50;
-CHANNEL cc83 from v167 to v168 channelWidth=50;
-CHANNEL cc84 from v168 to v169 channelWidth=50;
-CHANNEL cc85 from v169 to v170 channelWidth=50;
-CHANNEL cc86 from v170 to v171 channelWidth=50;
-CHANNEL cc87 from v171 to v172 channelWidth=50;
-CHANNEL cc88 from v172 to v173 channelWidth=50;
-CHANNEL cc89 from v173 to v174 channelWidth=50;
-CHANNEL cc90 from v174 to cpb2_6 channelWidth=50;
+CHANNEL cc76 from v160 to v161channelWidth=50;
+CHANNEL cc77 from v161 to v162channelWidth=50;
+CHANNEL cc78 from v162 to v163channelWidth=50;
+CHANNEL cc79 from v163 to v164channelWidth=50;
+CHANNEL cc80 from v164 to v165channelWidth=50;
+CHANNEL cc81 from v165 to v166channelWidth=50;
+CHANNEL cc82 from v166 to v167channelWidth=50;
+CHANNEL cc83 from v167 to v168channelWidth=50;
+CHANNEL cc84 from v168 to v169channelWidth=50;
+CHANNEL cc85 from v169 to v170channelWidth=50;
+CHANNEL cc86 from v170 to v171channelWidth=50;
+CHANNEL cc87 from v171 to v172channelWidth=50;
+CHANNEL cc88 from v172 to v173channelWidth=50;
+CHANNEL cc89 from v173 to v174channelWidth=50;
+CHANNEL cc90 from v174 to cpb2_6channelWidth=50;
 
 VALVE v175 on c191 width=100 length=300;
 VALVE v176 on c192 width=100 length=300;
@@ -802,7 +802,7 @@ VALVE v186 on c202 width=100 length=300;
 VALVE v187 on c203 width=100 length=300;
 VALVE v188 on c204 width=100 length=300;
 
-NET n7 from cpb1_7 to v175, v176, v177, v178, v179, v180, v181, v182, v183, v184, v185, v186, v187, v188 channelWidth=50;
+NET n7 from cpb1_7 to v175, v176, v177, v178, v179, v180, v181, v182, v183, v184, v185, v186, v187, v188channelWidth=50;
 
 VALVE v189 on c205 width=300 length=100;
 VALVE v190 on c206 width=300 length=100;
@@ -820,21 +820,21 @@ VALVE v201 on c217 width=300 length=100;
 VALVE v202 on c218 width=300 length=100;
 VALVE v203 on c219 width=300 length=100;
 
-CHANNEL cc91 from v189 to v190 channelWidth=50;
-CHANNEL cc92 from v190 to v191 channelWidth=50;
-CHANNEL cc93 from v191 to v192 channelWidth=50;
-CHANNEL cc94 from v192 to v193 channelWidth=50;
-CHANNEL cc95 from v193 to v194 channelWidth=50;
-CHANNEL cc96 from v194 to v195 channelWidth=50;
-CHANNEL cc97 from v195 to v196 channelWidth=50;
-CHANNEL cc98 from v196 to v197 channelWidth=50;
-CHANNEL cc99 from v197 to v198 channelWidth=50;
-CHANNEL cc100 from v198 to v199 channelWidth=50;
-CHANNEL cc101 from v199 to v200 channelWidth=50;
-CHANNEL cc102 from v200 to v201 channelWidth=50;
-CHANNEL cc103 from v201 to v202 channelWidth=50;
-CHANNEL cc104 from v202 to v203 channelWidth=50;
-CHANNEL cc105 from v203 to cpb2_7 channelWidth=50;
+CHANNEL cc91 from v189 to v190channelWidth=50;
+CHANNEL cc92 from v190 to v191channelWidth=50;
+CHANNEL cc93 from v191 to v192channelWidth=50;
+CHANNEL cc94 from v192 to v193channelWidth=50;
+CHANNEL cc95 from v193 to v194channelWidth=50;
+CHANNEL cc96 from v194 to v195channelWidth=50;
+CHANNEL cc97 from v195 to v196channelWidth=50;
+CHANNEL cc98 from v196 to v197channelWidth=50;
+CHANNEL cc99 from v197 to v198channelWidth=50;
+CHANNEL cc100 from v198 to v199channelWidth=50;
+CHANNEL cc101 from v199 to v200channelWidth=50;
+CHANNEL cc102 from v200 to v201channelWidth=50;
+CHANNEL cc103 from v201 to v202channelWidth=50;
+CHANNEL cc104 from v202 to v203channelWidth=50;
+CHANNEL cc105 from v203 to cpb2_7channelWidth=50;
 
 VALVE v204 on c220 width=100 length=300;
 VALVE v205 on c221 width=100 length=300;
@@ -851,7 +851,7 @@ VALVE v215 on c231 width=100 length=300;
 VALVE v216 on c232 width=100 length=300;
 VALVE v217 on c233 width=100 length=300;
 
-NET n8 from cpb1_8 to v204, v205, v206, v207, v208, v209, v210, v211, v212, v213, v214, v215, v216, v217 channelWidth=50;
+NET n8 from cpb1_8 to v204, v205, v206, v207, v208, v209, v210, v211, v212, v213, v214, v215, v216, v217channelWidth=50;
 
 VALVE v218 on c234 width=300 length=100;
 VALVE v219 on c235 width=300 length=100;
@@ -869,21 +869,21 @@ VALVE v230 on c246 width=300 length=100;
 VALVE v231 on c247 width=300 length=100;
 VALVE v232 on c248 width=300 length=100;
 
-CHANNEL cc106 from v218 to v219 channelWidth=50;
-CHANNEL cc107 from v219 to v220 channelWidth=50;
-CHANNEL cc108 from v220 to v221 channelWidth=50;
-CHANNEL cc109 from v221 to v222 channelWidth=50;
-CHANNEL cc110 from v222 to v223 channelWidth=50;
-CHANNEL cc111 from v223 to v224 channelWidth=50;
-CHANNEL cc112 from v224 to v225 channelWidth=50;
-CHANNEL cc113 from v225 to v226 channelWidth=50;
-CHANNEL cc114 from v226 to v227 channelWidth=50;
-CHANNEL cc115 from v227 to v228 channelWidth=50;
-CHANNEL cc116 from v228 to v229 channelWidth=50;
-CHANNEL cc117 from v229 to v230 channelWidth=50;
-CHANNEL cc118 from v230 to v231 channelWidth=50;
-CHANNEL cc119 from v231 to v232 channelWidth=50;
-CHANNEL cc120 from v232 to cpb2_8 channelWidth=50;
+CHANNEL cc106 from v218 to v219channelWidth=50;
+CHANNEL cc107 from v219 to v220channelWidth=50;
+CHANNEL cc108 from v220 to v221channelWidth=50;
+CHANNEL cc109 from v221 to v222channelWidth=50;
+CHANNEL cc110 from v222 to v223channelWidth=50;
+CHANNEL cc111 from v223 to v224channelWidth=50;
+CHANNEL cc112 from v224 to v225channelWidth=50;
+CHANNEL cc113 from v225 to v226channelWidth=50;
+CHANNEL cc114 from v226 to v227channelWidth=50;
+CHANNEL cc115 from v227 to v228channelWidth=50;
+CHANNEL cc116 from v228 to v229channelWidth=50;
+CHANNEL cc117 from v229 to v230channelWidth=50;
+CHANNEL cc118 from v230 to v231channelWidth=50;
+CHANNEL cc119 from v231 to v232channelWidth=50;
+CHANNEL cc120 from v232 to cpb2_8channelWidth=50;
 
 VALVE v233 on c249 width=100 length=300;
 VALVE v234 on c250 width=100 length=300;
@@ -900,7 +900,7 @@ VALVE v244 on c260 width=100 length=300;
 VALVE v245 on c261 width=100 length=300;
 VALVE v246 on c262 width=100 length=300;
 
-NET n9 from cpb1_9 to v233, v234, v235, v236, v237, v238, v239, v240, v241, v242, v243, v244, v245, v246 channelWidth=50;
+NET n9 from cpb1_9 to v233, v234, v235, v236, v237, v238, v239, v240, v241, v242, v243, v244, v245, v246channelWidth=50;
 
 VALVE v247 on c263 width=300 length=100;
 VALVE v248 on c264 width=300 length=100;
@@ -918,21 +918,21 @@ VALVE v259 on c275 width=300 length=100;
 VALVE v260 on c276 width=300 length=100;
 VALVE v261 on c277 width=300 length=100;
 
-CHANNEL cc121 from v247 to v248 channelWidth=50;
-CHANNEL cc122 from v248 to v249 channelWidth=50;
-CHANNEL cc123 from v249 to v250 channelWidth=50;
-CHANNEL cc124 from v250 to v251 channelWidth=50;
-CHANNEL cc125 from v251 to v252 channelWidth=50;
-CHANNEL cc126 from v252 to v253 channelWidth=50;
-CHANNEL cc127 from v253 to v254 channelWidth=50;
-CHANNEL cc128 from v254 to v255 channelWidth=50;
-CHANNEL cc129 from v255 to v256 channelWidth=50;
-CHANNEL cc130 from v256 to v257 channelWidth=50;
-CHANNEL cc131 from v257 to v258 channelWidth=50;
-CHANNEL cc132 from v258 to v259 channelWidth=50;
-CHANNEL cc133 from v259 to v260 channelWidth=50;
-CHANNEL cc134 from v260 to v261 channelWidth=50;
-CHANNEL cc135 from v261 to cpb2_9 channelWidth=50;
+CHANNEL cc121 from v247 to v248channelWidth=50;
+CHANNEL cc122 from v248 to v249channelWidth=50;
+CHANNEL cc123 from v249 to v250channelWidth=50;
+CHANNEL cc124 from v250 to v251channelWidth=50;
+CHANNEL cc125 from v251 to v252channelWidth=50;
+CHANNEL cc126 from v252 to v253channelWidth=50;
+CHANNEL cc127 from v253 to v254channelWidth=50;
+CHANNEL cc128 from v254 to v255channelWidth=50;
+CHANNEL cc129 from v255 to v256channelWidth=50;
+CHANNEL cc130 from v256 to v257channelWidth=50;
+CHANNEL cc131 from v257 to v258channelWidth=50;
+CHANNEL cc132 from v258 to v259channelWidth=50;
+CHANNEL cc133 from v259 to v260channelWidth=50;
+CHANNEL cc134 from v260 to v261channelWidth=50;
+CHANNEL cc135 from v261 to cpb2_9channelWidth=50;
 
 VALVE v262 on c278 width=100 length=300;
 VALVE v263 on c279 width=100 length=300;
@@ -949,7 +949,7 @@ VALVE v273 on c289 width=100 length=300;
 VALVE v274 on c290 width=100 length=300;
 VALVE v275 on c291 width=100 length=300;
 
-NET n10 from cpb1_10 to v262, v263, v264, v265, v266, v267, v268, v269, v270, v271, v272, v273, v274, v275 channelWidth=50;
+NET n10 from cpb1_10 to v262, v263, v264, v265, v266, v267, v268, v269, v270, v271, v272, v273, v274, v275channelWidth=50;
 
 VALVE v276 on c292 width=300 length=100;
 VALVE v277 on c293 width=300 length=100;
@@ -967,21 +967,21 @@ VALVE v288 on c304 width=300 length=100;
 VALVE v289 on c305 width=300 length=100;
 VALVE v290 on c306 width=300 length=100;
 
-CHANNEL cc136 from v276 to v277 channelWidth=50;
-CHANNEL cc137 from v277 to v278 channelWidth=50;
-CHANNEL cc138 from v278 to v279 channelWidth=50;
-CHANNEL cc139 from v279 to v280 channelWidth=50;
-CHANNEL cc140 from v280 to v281 channelWidth=50;
-CHANNEL cc141 from v281 to v282 channelWidth=50;
-CHANNEL cc142 from v282 to v283 channelWidth=50;
-CHANNEL cc143 from v283 to v284 channelWidth=50;
-CHANNEL cc144 from v284 to v285 channelWidth=50;
-CHANNEL cc145 from v285 to v286 channelWidth=50;
-CHANNEL cc146 from v286 to v287 channelWidth=50;
-CHANNEL cc147 from v287 to v288 channelWidth=50;
-CHANNEL cc148 from v288 to v289 channelWidth=50;
-CHANNEL cc149 from v289 to v290 channelWidth=50;
-CHANNEL cc150 from v290 to cpb2_10 channelWidth=50;
+CHANNEL cc136 from v276 to v277channelWidth=50;
+CHANNEL cc137 from v277 to v278channelWidth=50;
+CHANNEL cc138 from v278 to v279channelWidth=50;
+CHANNEL cc139 from v279 to v280channelWidth=50;
+CHANNEL cc140 from v280 to v281channelWidth=50;
+CHANNEL cc141 from v281 to v282channelWidth=50;
+CHANNEL cc142 from v282 to v283channelWidth=50;
+CHANNEL cc143 from v283 to v284channelWidth=50;
+CHANNEL cc144 from v284 to v285channelWidth=50;
+CHANNEL cc145 from v285 to v286channelWidth=50;
+CHANNEL cc146 from v286 to v287channelWidth=50;
+CHANNEL cc147 from v287 to v288channelWidth=50;
+CHANNEL cc148 from v288 to v289channelWidth=50;
+CHANNEL cc149 from v289 to v290channelWidth=50;
+CHANNEL cc150 from v290 to cpb2_10channelWidth=50;
 
 VALVE v291 on c307 width=100 length=300;
 VALVE v292 on c308 width=100 length=300;
@@ -998,7 +998,7 @@ VALVE v302 on c318 width=100 length=300;
 VALVE v303 on c319 width=100 length=300;
 VALVE v304 on c320 width=100 length=300;
 
-NET n11 from cpb1_11 to v291, v292, v293, v294, v295, v296, v297, v298, v299, v300, v301, v302, v303, v304 channelWidth=50;
+NET n11 from cpb1_11 to v291, v292, v293, v294, v295, v296, v297, v298, v299, v300, v301, v302, v303, v304channelWidth=50;
 
 VALVE v305 on c321 width=300 length=100;
 VALVE v306 on c322 width=300 length=100;
@@ -1016,21 +1016,21 @@ VALVE v317 on c333 width=300 length=100;
 VALVE v318 on c334 width=300 length=100;
 VALVE v319 on c335 width=300 length=100;
 
-CHANNEL cc151 from v305 to v306 channelWidth=50;
-CHANNEL cc152 from v306 to v307 channelWidth=50;
-CHANNEL cc153 from v307 to v308 channelWidth=50;
-CHANNEL cc154 from v308 to v309 channelWidth=50;
-CHANNEL cc155 from v309 to v310 channelWidth=50;
-CHANNEL cc156 from v310 to v311 channelWidth=50;
-CHANNEL cc157 from v311 to v312 channelWidth=50;
-CHANNEL cc158 from v312 to v313 channelWidth=50;
-CHANNEL cc159 from v313 to v314 channelWidth=50;
-CHANNEL cc160 from v314 to v315 channelWidth=50;
-CHANNEL cc161 from v315 to v316 channelWidth=50;
-CHANNEL cc162 from v316 to v317 channelWidth=50;
-CHANNEL cc163 from v317 to v318 channelWidth=50;
-CHANNEL cc164 from v318 to v319 channelWidth=50;
-CHANNEL cc165 from v319 to cpb2_11 channelWidth=50;
+CHANNEL cc151 from v305 to v306channelWidth=50;
+CHANNEL cc152 from v306 to v307channelWidth=50;
+CHANNEL cc153 from v307 to v308channelWidth=50;
+CHANNEL cc154 from v308 to v309channelWidth=50;
+CHANNEL cc155 from v309 to v310channelWidth=50;
+CHANNEL cc156 from v310 to v311channelWidth=50;
+CHANNEL cc157 from v311 to v312channelWidth=50;
+CHANNEL cc158 from v312 to v313channelWidth=50;
+CHANNEL cc159 from v313 to v314channelWidth=50;
+CHANNEL cc160 from v314 to v315channelWidth=50;
+CHANNEL cc161 from v315 to v316channelWidth=50;
+CHANNEL cc162 from v316 to v317channelWidth=50;
+CHANNEL cc163 from v317 to v318channelWidth=50;
+CHANNEL cc164 from v318 to v319channelWidth=50;
+CHANNEL cc165 from v319 to cpb2_11channelWidth=50;
 
 VALVE v320 on c336 width=100 length=300;
 VALVE v321 on c337 width=100 length=300;
@@ -1047,7 +1047,7 @@ VALVE v331 on c347 width=100 length=300;
 VALVE v332 on c348 width=100 length=300;
 VALVE v333 on c349 width=100 length=300;
 
-NET n12 from cpb1_12 to v320, v321, v322, v323, v324, v325, v326, v327, v328, v329, v330, v331, v332, v333 channelWidth=50;
+NET n12 from cpb1_12 to v320, v321, v322, v323, v324, v325, v326, v327, v328, v329, v330, v331, v332, v333channelWidth=50;
 
 VALVE v334 on c350 width=300 length=100;
 VALVE v335 on c351 width=300 length=100;
@@ -1065,21 +1065,21 @@ VALVE v346 on c362 width=300 length=100;
 VALVE v347 on c363 width=300 length=100;
 VALVE v348 on c364 width=300 length=100;
 
-CHANNEL cc166 from v334 to v335 channelWidth=50;
-CHANNEL cc167 from v335 to v336 channelWidth=50;
-CHANNEL cc168 from v336 to v337 channelWidth=50;
-CHANNEL cc169 from v337 to v338 channelWidth=50;
-CHANNEL cc170 from v338 to v339 channelWidth=50;
-CHANNEL cc171 from v339 to v340 channelWidth=50;
-CHANNEL cc172 from v340 to v341 channelWidth=50;
-CHANNEL cc173 from v341 to v342 channelWidth=50;
-CHANNEL cc174 from v342 to v343 channelWidth=50;
-CHANNEL cc175 from v343 to v344 channelWidth=50;
-CHANNEL cc176 from v344 to v345 channelWidth=50;
-CHANNEL cc177 from v345 to v346 channelWidth=50;
-CHANNEL cc178 from v346 to v347 channelWidth=50;
-CHANNEL cc179 from v347 to v348 channelWidth=50;
-CHANNEL cc180 from v348 to cpb2_12 channelWidth=50;
+CHANNEL cc166 from v334 to v335channelWidth=50;
+CHANNEL cc167 from v335 to v336channelWidth=50;
+CHANNEL cc168 from v336 to v337channelWidth=50;
+CHANNEL cc169 from v337 to v338channelWidth=50;
+CHANNEL cc170 from v338 to v339channelWidth=50;
+CHANNEL cc171 from v339 to v340channelWidth=50;
+CHANNEL cc172 from v340 to v341channelWidth=50;
+CHANNEL cc173 from v341 to v342channelWidth=50;
+CHANNEL cc174 from v342 to v343channelWidth=50;
+CHANNEL cc175 from v343 to v344channelWidth=50;
+CHANNEL cc176 from v344 to v345channelWidth=50;
+CHANNEL cc177 from v345 to v346channelWidth=50;
+CHANNEL cc178 from v346 to v347channelWidth=50;
+CHANNEL cc179 from v347 to v348channelWidth=50;
+CHANNEL cc180 from v348 to cpb2_12channelWidth=50;
 
 VALVE v349 on c365 width=100 length=300;
 VALVE v350 on c366 width=100 length=300;
@@ -1096,7 +1096,7 @@ VALVE v360 on c376 width=100 length=300;
 VALVE v361 on c377 width=100 length=300;
 VALVE v362 on c378 width=100 length=300;
 
-NET n13 from cpb1_13 to v349, v350, v351, v352, v353, v354, v355, v356, v357, v358, v359, v360, v361, v362 channelWidth=50;
+NET n13 from cpb1_13 to v349, v350, v351, v352, v353, v354, v355, v356, v357, v358, v359, v360, v361, v362channelWidth=50;
 
 VALVE v363 on c379 width=300 length=100;
 VALVE v364 on c380 width=300 length=100;
@@ -1114,21 +1114,21 @@ VALVE v375 on c391 width=300 length=100;
 VALVE v376 on c392 width=300 length=100;
 VALVE v377 on c393 width=300 length=100;
 
-CHANNEL cc181 from v363 to v364 channelWidth=50;
-CHANNEL cc182 from v364 to v365 channelWidth=50;
-CHANNEL cc183 from v365 to v366 channelWidth=50;
-CHANNEL cc184 from v366 to v367 channelWidth=50;
-CHANNEL cc185 from v367 to v368 channelWidth=50;
-CHANNEL cc186 from v368 to v369 channelWidth=50;
-CHANNEL cc187 from v369 to v370 channelWidth=50;
-CHANNEL cc188 from v370 to v371 channelWidth=50;
-CHANNEL cc189 from v371 to v372 channelWidth=50;
-CHANNEL cc190 from v372 to v373 channelWidth=50;
-CHANNEL cc191 from v373 to v374 channelWidth=50;
-CHANNEL cc192 from v374 to v375 channelWidth=50;
-CHANNEL cc193 from v375 to v376 channelWidth=50;
-CHANNEL cc194 from v376 to v377 channelWidth=50;
-CHANNEL cc195 from v377 to cpb2_13 channelWidth=50;
+CHANNEL cc181 from v363 to v364channelWidth=50;
+CHANNEL cc182 from v364 to v365channelWidth=50;
+CHANNEL cc183 from v365 to v366channelWidth=50;
+CHANNEL cc184 from v366 to v367channelWidth=50;
+CHANNEL cc185 from v367 to v368channelWidth=50;
+CHANNEL cc186 from v368 to v369channelWidth=50;
+CHANNEL cc187 from v369 to v370channelWidth=50;
+CHANNEL cc188 from v370 to v371channelWidth=50;
+CHANNEL cc189 from v371 to v372channelWidth=50;
+CHANNEL cc190 from v372 to v373channelWidth=50;
+CHANNEL cc191 from v373 to v374channelWidth=50;
+CHANNEL cc192 from v374 to v375channelWidth=50;
+CHANNEL cc193 from v375 to v376channelWidth=50;
+CHANNEL cc194 from v376 to v377channelWidth=50;
+CHANNEL cc195 from v377 to cpb2_13channelWidth=50;
 
 VALVE v378 on c394 width=100 length=300;
 VALVE v379 on c395 width=100 length=300;
@@ -1145,7 +1145,7 @@ VALVE v389 on c405 width=100 length=300;
 VALVE v390 on c406 width=100 length=300;
 VALVE v391 on c407 width=100 length=300;
 
-NET n14 from cpb1_14 to v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391 channelWidth=50;
+NET n14 from cpb1_14 to v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391channelWidth=50;
 
 VALVE v392 on c408 width=300 length=100;
 VALVE v393 on c409 width=300 length=100;
@@ -1163,21 +1163,21 @@ VALVE v404 on c420 width=300 length=100;
 VALVE v405 on c421 width=300 length=100;
 VALVE v406 on c422 width=300 length=100;
 
-CHANNEL cc196 from v392 to v393 channelWidth=50;
-CHANNEL cc197 from v393 to v394 channelWidth=50;
-CHANNEL cc198 from v394 to v395 channelWidth=50;
-CHANNEL cc199 from v395 to v396 channelWidth=50;
-CHANNEL cc200 from v396 to v397 channelWidth=50;
-CHANNEL cc201 from v397 to v398 channelWidth=50;
-CHANNEL cc202 from v398 to v399 channelWidth=50;
-CHANNEL cc203 from v399 to v400 channelWidth=50;
-CHANNEL cc204 from v400 to v401 channelWidth=50;
-CHANNEL cc205 from v401 to v402 channelWidth=50;
-CHANNEL cc206 from v402 to v403 channelWidth=50;
-CHANNEL cc207 from v403 to v404 channelWidth=50;
-CHANNEL cc208 from v404 to v405 channelWidth=50;
-CHANNEL cc209 from v405 to v406 channelWidth=50;
-CHANNEL cc210 from v406 to cpb2_14 channelWidth=50;
+CHANNEL cc196 from v392 to v393channelWidth=50;
+CHANNEL cc197 from v393 to v394channelWidth=50;
+CHANNEL cc198 from v394 to v395channelWidth=50;
+CHANNEL cc199 from v395 to v396channelWidth=50;
+CHANNEL cc200 from v396 to v397channelWidth=50;
+CHANNEL cc201 from v397 to v398channelWidth=50;
+CHANNEL cc202 from v398 to v399channelWidth=50;
+CHANNEL cc203 from v399 to v400channelWidth=50;
+CHANNEL cc204 from v400 to v401channelWidth=50;
+CHANNEL cc205 from v401 to v402channelWidth=50;
+CHANNEL cc206 from v402 to v403channelWidth=50;
+CHANNEL cc207 from v403 to v404channelWidth=50;
+CHANNEL cc208 from v404 to v405channelWidth=50;
+CHANNEL cc209 from v405 to v406channelWidth=50;
+CHANNEL cc210 from v406 to cpb2_14channelWidth=50;
 
 VALVE v407 on c423 width=100 length=300;
 VALVE v408 on c424 width=100 length=300;
@@ -1194,6 +1194,6 @@ VALVE v418 on c434 width=100 length=300;
 VALVE v419 on c435 width=100 length=300;
 VALVE v420 on c436 width=100 length=300;
 
-NET n15 from cpb1_15 to v407, v408, v409, v410, v411, v412, v413, v414, v415, v416, v417, v418, v419, v420 channelWidth=50;
+NET n15 from cpb1_15 to v407, v408, v409, v410, v411, v412, v413, v414, v415, v416, v417, v418, v419, v420channelWidth=50;
 
-END LAYER
+END layer

@@ -3,7 +3,7 @@
 
 DEVICE rootchip
 
-LAYER FLOW
+LAYER flow
 
 PORT flow_in;
 PORT plant;
@@ -14,4 +14,4 @@ CHANNEL c0 from flow_in 1 to mixer_stub 1 channelWidth=200;
 CHANNEL c1 from plant 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c 1 channelWidth=200;
 
-END LAYER
+END layer

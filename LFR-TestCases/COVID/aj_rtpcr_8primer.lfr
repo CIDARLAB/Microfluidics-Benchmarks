@@ -1,11 +1,11 @@
-module aj_rtpcr2(
+module aj_rtpcr_8primer(
     finput [0:7] primerin, pcrmix, rtmix, 
     foutput [0:7] amplifiedout, 
     control cprimer
 );
 
     flow rtpcrmix, [0:7] rtpcrprimer, [0:7] outstage;
-    flow [0:7] rtpcrmixer, [0:7] stableHeatChamber;
+    flow [0:7] rtpcrmixer, [0:7] stable_heat_chamber;
     assign rtpcrmix = rtmix % 9.99  + pcrmix;
 
     distribute@(cprimer)
@@ -14,8 +14,8 @@ module aj_rtpcr2(
             begin
                 rtpcrprimer <= ({rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix,rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix} + primerin);
                 rtpcrmixer <= rtpcrprimer;
-                stableHeatChamber <= rtpcrmixer;
-                outstage <= stableHeatChamber;
+                stable_heat_chamber <= rtpcrmixer;
+                outstage <= stable_heat_chamber;
                 amplifiedout <= outstage;
             end
     end

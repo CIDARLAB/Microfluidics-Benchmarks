@@ -1,13 +1,13 @@
 DEVICE portbank01
 
-LAYER FLOW
+LAYER flow
 
- H BANK bank01 of 8  PORT portRadius=100  spacing=200 ;
+ H BANK bank01 of 8  PORTportRadius=100  spacing=200 ;
 
-END LAYER
+END layer
 
-LAYER CONTROL
+LAYER control
 
- H BANK bank02 of 8  PORT portRadius=100  spacing=200 ;
+ H BANK bank02 of 8  PORTportRadius=100  spacing=200 ;
 
-END LAYER
+END layer

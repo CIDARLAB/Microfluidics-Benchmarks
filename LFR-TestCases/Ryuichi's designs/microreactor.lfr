@@ -7,16 +7,16 @@ module microreactor (
     control [0:8] c, c_start
 );
 
-    storage DNA, Proteins, Energy;
+    storage dna, proteins, energy;
 
     flow temp;
 
     distribute@(c, c_start)
     begin 
         case(c)
-            9'b001011000: temp <= in + DNA + Proteins + Energy;
-            9'b001100000: temp <= in + Proteins;
-            9'b010000000: temp <= in + DNA;
+            9'b001011000: temp <= in + dna + proteins + energy;
+            9'b001100000: temp <= in + proteins;
+            9'b010000000: temp <= in + dna;
         endcase
 
         if (c_start == 1)

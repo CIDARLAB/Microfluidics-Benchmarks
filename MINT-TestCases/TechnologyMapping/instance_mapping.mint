@@ -5,11 +5,11 @@ DEVICE full_system
 
 
 
-LAYER FLOW 
+LAYER flow
 
-MIXER mixer_1 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
+MIXER mixer_1componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
 
 
 
@@ -18,5 +18,5 @@ CHANNEL channel_2 from port_2 1 to mixer_1 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

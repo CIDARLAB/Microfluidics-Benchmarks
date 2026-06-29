@@ -5,47 +5,47 @@ DEVICE inlet16
 
 
 
-LAYER FLOW
+LAYER flow
 
-REACTION CHAMBER reaction_chamber_1 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-REACTION CHAMBER reaction_chamber_2 componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000;
-REACTION CHAMBER reaction_chamber_3 componentSpacing=9000;
-MIXER mixer_1 componentSpacing=9000;
-DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1 componentSpacing=9000;
-MIXER mixer_2 componentSpacing=9000;
-MIXER mixer_3 componentSpacing=9000;
-MIXER mixer_4 componentSpacing=9000;
-MIXER mixer_5 componentSpacing=9000;
-MIXER mixer_6 componentSpacing=9000;
-MIXER mixer_7 componentSpacing=9000;
-MIXER mixer_8 componentSpacing=9000;
-MIXER mixer_9 componentSpacing=9000;
-MIXER mixer_10 componentSpacing=9000;
-MIXER mixer_11 componentSpacing=9000;
-MIXER mixer_12 componentSpacing=9000;
-MIXER mixer_13 componentSpacing=9000;
-MIXER mixer_14 componentSpacing=9000;
-MIXER mixer_15 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
-PORT port_3 componentSpacing=9000;
-PORT port_4 componentSpacing=9000;
-PORT port_5 componentSpacing=9000;
-PORT port_6 componentSpacing=9000;
-PORT port_7 componentSpacing=9000;
-PORT port_8 componentSpacing=9000;
-PORT port_9 componentSpacing=9000;
-PORT port_10 componentSpacing=9000;
-PORT port_11 componentSpacing=9000;
-PORT port_12 componentSpacing=9000;
-PORT port_13 componentSpacing=9000;
-PORT port_14 componentSpacing=9000;
-PORT port_15 componentSpacing=9000;
-PORT port_16 componentSpacing=9000;
-PORT port_17 componentSpacing=9000;
-PORT port_18 componentSpacing=9000;
-PORT port_19 componentSpacing=9000;
+REACTION CHAMBER reaction_chamber_1componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+REACTION CHAMBER reaction_chamber_2componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_1componentSpacing=9000;
+REACTION CHAMBER reaction_chamber_3componentSpacing=9000;
+MIXER mixer_1componentSpacing=9000;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1componentSpacing=9000;
+MIXER mixer_2componentSpacing=9000;
+MIXER mixer_3componentSpacing=9000;
+MIXER mixer_4componentSpacing=9000;
+MIXER mixer_5componentSpacing=9000;
+MIXER mixer_6componentSpacing=9000;
+MIXER mixer_7componentSpacing=9000;
+MIXER mixer_8componentSpacing=9000;
+MIXER mixer_9componentSpacing=9000;
+MIXER mixer_10componentSpacing=9000;
+MIXER mixer_11componentSpacing=9000;
+MIXER mixer_12componentSpacing=9000;
+MIXER mixer_13componentSpacing=9000;
+MIXER mixer_14componentSpacing=9000;
+MIXER mixer_15componentSpacing=9000;
+PORT port_2componentSpacing=9000;
+PORT port_3componentSpacing=9000;
+PORT port_4componentSpacing=9000;
+PORT port_5componentSpacing=9000;
+PORT port_6componentSpacing=9000;
+PORT port_7componentSpacing=9000;
+PORT port_8componentSpacing=9000;
+PORT port_9componentSpacing=9000;
+PORT port_10componentSpacing=9000;
+PORT port_11componentSpacing=9000;
+PORT port_12componentSpacing=9000;
+PORT port_13componentSpacing=9000;
+PORT port_14componentSpacing=9000;
+PORT port_15componentSpacing=9000;
+PORT port_16componentSpacing=9000;
+PORT port_17componentSpacing=9000;
+PORT port_18componentSpacing=9000;
+PORT port_19componentSpacing=9000;
 
 
 
@@ -88,4 +88,4 @@ CHANNEL channel_36 from port_19 1 to mixer_11 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer

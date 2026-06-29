@@ -3,7 +3,7 @@
 
 DEVICE olfactory
 
-LAYER FLOW
+LAYER flow
 
 PORT stimulus;
 PORT buffer;
@@ -22,4 +22,4 @@ CHANNEL c4 from worm 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c5 from left_outlet 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c 1 channelWidth=200;
 
-END LAYER
+END layer

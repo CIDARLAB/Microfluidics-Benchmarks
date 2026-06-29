@@ -1,6 +1,6 @@
 DEVICE artificial_cells
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2;
 
@@ -49,4 +49,4 @@ CHANNEL c32 from dg6 2 to p7 1;
 CHANNEL c33 from dg7 2 to p8 1;
 CHANNEL c34 from dg8 2 to p9 1;
 
-END LAYER
+END layer

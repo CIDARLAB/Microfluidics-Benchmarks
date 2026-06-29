@@ -5,13 +5,13 @@ DEVICE sorting
 
 
 
-LAYER FLOW 
+LAYER flow
 
-DROPLET SORTER droplet_sorter_1 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
-PORT port_3 componentSpacing=9000;
-PORT port_4 componentSpacing=9000;
+DROPLET SORTER droplet_sorter_1componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
+PORT port_3componentSpacing=9000;
+PORT port_4componentSpacing=9000;
 
 
 
@@ -20,5 +20,5 @@ CHANNEL channel_2 from port_4 1 to droplet_sorter_1 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

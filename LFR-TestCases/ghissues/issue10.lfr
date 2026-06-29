@@ -1,6 +1,6 @@
 module issue10(
-    finput A, B, C, D, E,
-    foutput X, Y, Z,
+    finput a, b, c, d, e,
+    foutput x, y, z,
     control [0:16] valve
 );
 
@@ -8,7 +8,7 @@ module issue10(
 
     distribute@(valve[0]) begin
         if (valve[0] == 1) begin
-            after_resorvoir <= B;
+            after_resorvoir <= b;
         end
     end
 

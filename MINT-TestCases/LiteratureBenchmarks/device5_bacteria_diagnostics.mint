@@ -1,6 +1,6 @@
 DEVICE bacteria_diagnostics
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2, p3, p4;
 
@@ -13,9 +13,9 @@ CONNECTION c3 from p3 to dc 1;
 CONNECTION c4 from dc 2 to mc 3;
 CONNECTION c5 from mc 4 to p4;
 
-END LAYER
+END layer
 
-LAYER CONTROL
+LAYER control
 
 PORT cp1, cp2;
 
@@ -28,4 +28,4 @@ CONNECTION cn1 from cp1 to v1, v4;
 CONNECTION cc1 from v1 to v2;
 CONNECTION cc2 from cp2 to v3;
 
-END LAYER
+END layer

@@ -9,7 +9,7 @@ module mux96chambers(
     flow pump_in, pump_out;
 
 // in de mux
-    flow inDeMux, outMux;
+    flow in_de_mux, out_mux;
 
     storage [0:95] chamber;
 
@@ -21,10 +21,10 @@ module mux96chambers(
     #MAP "Pump" "~"
     assign pump_out = ~pump_in;
 
-    assign inDeMux = pump_out;
-    assign chamber[0:95] = inDeMux;
-    assign outMux = chamber[0:95];
+    assign in_de_mux = pump_out;
+    assign chamber[0:95] = in_de_mux;
+    assign out_mux = chamber[0:95];
 
-    assign waste = outMux;
+    assign waste = out_mux;
 
 endmodule

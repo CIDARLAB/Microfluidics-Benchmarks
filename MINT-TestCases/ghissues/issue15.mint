@@ -3,7 +3,7 @@
 
 DEVICE issue15
 
-LAYER FLOW
+LAYER flow
 
 PORT in1;
 PORT collection;
@@ -14,4 +14,4 @@ CHANNEL c0 from in1 1 to mixer_stub 1 channelWidth=200;
 CHANNEL c1 from collection 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to waste 1 channelWidth=200;
 
-END LAYER
+END layer

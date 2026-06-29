@@ -6,12 +6,12 @@ DEVICE pcr
 
 
 
-LAYER FLOW 
+LAYER flow
 
-REACTION CHAMBER reaction_chamber_1 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-REACTION CHAMBER reaction_chamber_2 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
+REACTION CHAMBER reaction_chamber_1componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+REACTION CHAMBER reaction_chamber_2componentSpacing=9000;
+PORT port_2componentSpacing=9000;
 
 
 
@@ -21,5 +21,5 @@ CHANNEL channel_3 from port_2 1 to reaction_chamber_2 2 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

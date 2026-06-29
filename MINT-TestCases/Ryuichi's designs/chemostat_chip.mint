@@ -3,7 +3,7 @@
 
 DEVICE chemostat_chip
 
-LAYER FLOW
+LAYER flow
 
 PORT in;
 PORT out;
@@ -20,4 +20,4 @@ CHANNEL c3 from c2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c4 from c3 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c4 1 channelWidth=200;
 
-END LAYER
+END layer

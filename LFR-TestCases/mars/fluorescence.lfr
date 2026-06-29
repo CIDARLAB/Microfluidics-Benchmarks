@@ -1,5 +1,5 @@
 module fluorescence (
-    finput B, C, D,
+    finput b, c, d,
     control c1
 );
 
@@ -7,7 +7,7 @@ module fluorescence (
     flow mixture;
     storage chamber;
 
-    assign mixture = B%200 + C%200;
+    assign mixture = b%200 + c%200;
 
 //  send the mixture to chamber
     assign chamber = mixture;
@@ -15,7 +15,7 @@ module fluorescence (
 //  send master mix to chamber
     distribute@(c1) begin 
         if (c1 == 1)
-            chamber <= D;
+            chamber <= d;
     end
 
 endmodule

@@ -1,5 +1,5 @@
 module pcr(
-    finput A,
+    finput a,
     foutput a_out,
     control c1, c2
 );
@@ -11,7 +11,7 @@ module pcr(
 //  load PCR solution
     distribute@(c1) begin 
         if (c1 == 1) begin 
-            mixer_in <= A;
+            mixer_in <= a;
 //  mix
             mixed <= +mixer_in;
 //  incubate

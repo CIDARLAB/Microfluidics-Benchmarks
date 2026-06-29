@@ -2,25 +2,25 @@ DEVICE mux_16_in
 
 
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_10 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_11 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_12 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_13 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_14 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_15 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_16 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_17 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_6componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_7componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_8componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_9componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_10componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_11componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_12componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_13componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_14componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_15componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_16componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_17componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
@@ -43,62 +43,62 @@ CHANNEL channel_16 from port_17 1 to port_2 1 connectionSpacing=1000 channelWidt
 
  
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
-PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_10 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_11 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_12 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_13 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_14 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_15 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_0componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_6componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_7componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_8componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_9componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_10componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_11componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_12componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_13componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_14componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_15componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
-VALVE3D valve_0 on channel_11 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_1 on channel_5 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_2 on channel_15 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_3 on channel_6 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_4 on channel_12 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_5 on channel_9 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_6 on channel_8 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_7 on channel_3 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_8 on channel_13 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_9 on channel_16 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_10 on channel_1 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_11 on channel_7 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_12 on channel_14 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_13 on channel_10 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_14 on channel_2 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_15 on channel_4 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_0 on channel_11componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_1 on channel_5componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_2 on channel_15componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_3 on channel_6componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_4 on channel_12componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_5 on channel_9componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_6 on channel_8componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_7 on channel_3componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_8 on channel_13componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_9 on channel_16componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_10 on channel_1componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_11 on channel_7componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_12 on channel_14componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_13 on channel_10componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_14 on channel_2componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_15 on channel_4componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
 
-CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_2 from Cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_3 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_4 from Cport_4 1 to valve_4 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_5 from Cport_5 1 to valve_5 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_6 from Cport_6 1 to valve_6 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_7 from Cport_7 1 to valve_7 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_8 from Cport_8 1 to valve_8 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_9 from Cport_9 1 to valve_9 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_10 from Cport_10 1 to valve_10 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_11 from Cport_11 1 to valve_11 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_12 from Cport_12 1 to valve_12 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_13 from Cport_13 1 to valve_13 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_14 from Cport_14 1 to valve_14 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_15 from Cport_15 1 to valve_15 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_0 from cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_1 from cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_2 from cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_3 from cport_3 1 to valve_3 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_4 from cport_4 1 to valve_4 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_5 from cport_5 1 to valve_5 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_6 from cport_6 1 to valve_6 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_7 from cport_7 1 to valve_7 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_8 from cport_8 1 to valve_8 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_9 from cport_9 1 to valve_9 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_10 from cport_10 1 to valve_10 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_11 from cport_11 1 to valve_11 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_12 from cport_12 1 to valve_12 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_13 from cport_13 1 to valve_13 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_14 from cport_14 1 to valve_14 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_15 from cport_15 1 to valve_15 1 connectionSpacing=1000 channelWidth=400;
 
  
 
-END LAYER
+END layer
 

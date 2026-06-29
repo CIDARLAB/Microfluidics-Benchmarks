@@ -5,12 +5,12 @@ DEVICE pcr
 
 
 
-LAYER FLOW 
+LAYER flow
 
-DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1 componentSpacing=9000;
-PORT port_1 componentSpacing=9000;
-DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_2 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_2componentSpacing=9000;
+PORT port_2componentSpacing=9000;
 
 
 
@@ -20,17 +20,17 @@ CHANNEL channel_3 from port_2 1 to droplet_capacitance_sensor_2 1 connectionSpac
 
  
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
-PORT Cport_3 componentSpacing=9000;
+PORT cport_3componentSpacing=9000;
 
-VALVE3D valve_0 on channel_1 controlPort=Cport_3 componentSpacing=9000;
+VALVE3D valve_0 on channel_1controlPort=Cport_3 componentSpacing=9000;
 
-CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_0 1 connectionSpacing=1000;
+CHANNEL ctrlchannel_3 from cport_3 1 to valve_0 1 connectionSpacing=1000;
 
  
 
-END LAYER
+END layer
 

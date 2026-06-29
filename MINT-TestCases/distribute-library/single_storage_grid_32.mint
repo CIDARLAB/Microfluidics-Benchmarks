@@ -3,8 +3,8 @@
 
 DEVICE single_storage_grid_32
 
-LAYER FLOW
+LAYER flow
 
 PORT placeholder;
 
-END LAYER
+END layer

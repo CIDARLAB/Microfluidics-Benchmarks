@@ -5,10 +5,10 @@ DEVICE declarations
 
 
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_1 componentSpacing=9000;
-PORT port_2 componentSpacing=9000;
+PORT port_1componentSpacing=9000;
+PORT port_2componentSpacing=9000;
 
 
 
@@ -16,5 +16,5 @@ PORT port_2 componentSpacing=9000;
 
  
 
-END LAYER
+END layer
 

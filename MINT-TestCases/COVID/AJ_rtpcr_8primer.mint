@@ -3,7 +3,7 @@
 
 DEVICE aj_rtpcr2
 
-LAYER FLOW
+LAYER flow
 
 PORT primerin;
 PORT pcrmix;
@@ -18,4 +18,4 @@ CHANNEL c2 from rtmix 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c3 from amplifiedout 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to cprimer 1 channelWidth=200;
 
-END LAYER
+END layer

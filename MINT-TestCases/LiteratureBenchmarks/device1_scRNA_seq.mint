@@ -1,12 +1,12 @@
-DEVICE scRNA_seq
+DEVICE sc_rna_seq
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2, p3;
 
 PORT p4, p5;
 
-MICROARRAY ma1 height = 10000 width = 10000;
+MICROARRAY ma1height = 10000 width = 10000;
 MICROARRAY ma2, ma3, ma4;
 
 CONNECTION c1 from p1 1 to ma1 1;
@@ -33,4 +33,4 @@ CONNECTION c12 from drc 1 to p5 1;
 CONNECTION c14 from drc 3 to p5 1; 
 CONNECTION c15 from drc 4 to p4 1; 
 
-END LAYER
+END layer

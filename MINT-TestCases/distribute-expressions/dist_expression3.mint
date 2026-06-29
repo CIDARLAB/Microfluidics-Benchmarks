@@ -3,7 +3,7 @@
 
 DEVICE dist_expression2
 
-LAYER FLOW
+LAYER flow
 
 PORT in;
 PORT out1;
@@ -16,4 +16,4 @@ CHANNEL c1 from out1 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c2 from out2 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to c1 1 channelWidth=200;
 
-END LAYER
+END layer

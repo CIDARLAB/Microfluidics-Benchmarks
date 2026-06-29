@@ -1,6 +1,6 @@
 DEVICE organic_chemical_synthesis
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2, p3;
 PORT p4, p5, p6, p7;
@@ -56,9 +56,9 @@ CONNECTION c19 from p24 1 to rl 7;
 PORT p25;
 CONNECTION c20 from p25 1 to rl 6;
 
-END LAYER
+END layer
 
-LAYER CONTROL
+LAYER control
 
 PORT cp1, cp2, cp3;
 
@@ -169,4 +169,4 @@ CONNECTION cc36 from rl 3 to cl 5;
 CONNECTION cc37 from cp29 1 to rl 4;
 CONNECTION cc38 from rl 4 to cl 4;
 
-END LAYER
+END layer

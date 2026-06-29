@@ -1,14 +1,14 @@
 DEVICE grid_4_mixer
 
-LAYER FLOW
-H TREE m1 1 to 4 spacing=1200 flowChannelWidth=100;
-V MIXER n1 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
-V MIXER n2 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
-V MIXER n3 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
-V MIXER n4 numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
-H TREE m2 1 to 4 spacing=1200 flowChannelWidth=100;
-PORT p1, p2 portRadius=100;
-SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16 chamberWidth=100 chamberLength=100 channelWidth=100;
+LAYER flow
+H TREE m1 1 to 4spacing=1200 flowChannelWidth=100;
+V MIXER n1numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
+V MIXER n2numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
+V MIXER n3numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
+V MIXER n4numberOfBends=10 bendSpacing=100 bendLength=500 channelWidth=100;
+H TREE m2 1 to 4spacing=1200 flowChannelWidth=100;
+PORT p1, p2portRadius=100;
+SQUARE CELL TRAP ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8, ct9, ct10, ct11, ct12, ct13, ct14, ct15, ct16chamberWidth=100 chamberLength=100 channelWidth=100;
 
 CHANNEL c1 from p1 3 to m1 1 channelWidth=100;
 CHANNEL c2 from m1 2 to n1 1 channelWidth=100;
@@ -59,11 +59,11 @@ CHANNEL c33 from ct16 3 to m2 4 channelWidth=100;
 
 CHANNEL c34 from m2 5 to p2 1 channelWidth=100;
 
-END LAYER
+END layer
 
-LAYER CONTROL
-V BANK cpb1 of 4  PORT portRadius=100  spacing=1500 ;
-V BANK cpb2 of 3  PORT portRadius=100  spacing=1500 ;
+LAYER control
+V BANK cpb1 of 4  PORTportRadius=100  spacing=1500 ;
+V BANK cpb2 of 3  PORTportRadius=100  spacing=1500 ;
 
 VALVE v1 on c6 width=100 length=300;
 VALVE v2 on c7 width=100 length=300;
@@ -96,27 +96,27 @@ VALVE v22 on c27 width=100 length=300;
 VALVE v23 on c28 width=100 length=300;
 VALVE v24 on c29 width=100 length=300;
 
-NET n1 from cpb1_1 to v1 3, v2 3, v3 3 channelWidth=50;
+NET n1 from cpb1_1 to v1 3, v2 3, v3 3channelWidth=50;
 
 CHANNEL cc1 from v4 2 to v5 4 channelWidth=50;
 CHANNEL cc2 from v5 2 to v6 4 channelWidth=50;
 CHANNEL cc3 from v6 2 to v7 4 channelWidth=50;
 CHANNEL cc4 from v7 2 to cpb2_1 channelWidth=50;
 
-NET n2 from cpb1_2 to v8 3, v9 3, v10 3 channelWidth=50;
+NET n2 from cpb1_2 to v8 3, v9 3, v10 3channelWidth=50;
 
 CHANNEL cc5 from v11 2 to v12 4 channelWidth=50;
 CHANNEL cc6 from v12 2 to v13 4 channelWidth=50;
 CHANNEL cc7 from v13 2 to v14 4 channelWidth=50;
 CHANNEL cc8 from v14 2 to cpb2_2 channelWidth=50;
 
-NET n3 from cpb1_3 to v15 3, v16 3, v17 3 channelWidth=50;
+NET n3 from cpb1_3 to v15 3, v16 3, v17 3channelWidth=50;
 
 CHANNEL cc9 from v18 2 to v19 4 channelWidth=50;
 CHANNEL cc10 from v19 2 to v20 4 channelWidth=50;
 CHANNEL cc11 from v20 2 to v21 4 channelWidth=50;
 CHANNEL cc12 from v21 2 to cpb2_3 channelWidth=50;
 
-NET n4 from cpb1_4 to v22 3, v23 3, v24 3 channelWidth=50;
+NET n4 from cpb1_4 to v22 3, v23 3, v24 3channelWidth=50;
 
-END LAYER
+END layer

@@ -1,29 +1,29 @@
 //  multi-purpose lab-on-a-chip Ahmed M. Amin, Raviraj Thakur, Seth Madren, Han-Sheng Chuang, Mithuna Thottethodi, T. N. Vijaykumar, Steven T. Wereley, and Stephen C. Jacobson
 
 module incubator(
-    finput A, B, C, D, E,
-    foutput X, Y, Z,
+    finput a, b, c, d, e,
+    foutput x, y, z,
     control [16:0] valve
 );
 
-flow after_BCD, resorvoirs_out;
+flow after_bcd, resorvoirs_out;
 
 distribute@(valve[0:2]) begin 
     if (valve[0] == 1)
-        after_BCD <= B;
+        after_bcd <= b;
     if (valve[1] == 1)
-        after_BCD <= C;
+        after_bcd <= c;
     if (valve[2] == 1)
-        after_BCD <= D;
+        after_bcd <= d;
 end
 
 distribute@(valve[3:5]) begin 
     if (valve[3] == 1)
-        resorvoirs_out <= A;
+        resorvoirs_out <= a;
     if (valve[4] == 1)
-        resorvoirs_out <= after_BCD;
+        resorvoirs_out <= after_bcd;
     if (valve[5] == 1)
-        resorvoirs_out <= E;
+        resorvoirs_out <= e;
 end
 
 flow pump1_out;
@@ -87,11 +87,11 @@ assign pump2_out = ~pump2_in;
 
 distribute@(valve[14:16]) begin 
     if (valve[14] == 1)
-        X <= pump2_out;
+        x <= pump2_out;
     if (valve[15] == 1)
-        Y <= pump2_out;
+        y <= pump2_out;
     if (valve[16] == 1)
-        Z <= pump2_out;
+        z <= pump2_out;
 end
 
 endmodule

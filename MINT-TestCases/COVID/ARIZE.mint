@@ -3,7 +3,7 @@
 
 DEVICE expression1
 
-LAYER FLOW
+LAYER flow
 
 PORT in1a;
 PORT in2a;
@@ -44,4 +44,4 @@ CHANNEL c15 from in9b 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c16 from out1 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to out2 1 channelWidth=200;
 
-END LAYER
+END layer

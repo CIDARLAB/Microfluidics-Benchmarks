@@ -3,8 +3,8 @@
 
 DEVICE hv_storage_grid_04
 
-LAYER FLOW
+LAYER flow
 
 PORT placeholder;
 
-END LAYER
+END layer

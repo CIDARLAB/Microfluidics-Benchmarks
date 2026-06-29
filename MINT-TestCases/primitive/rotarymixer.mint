@@ -1,6 +1,6 @@
 DEVICE rotarymixer
 
-LAYER FLOW
+LAYER flow
 
 PORT p1;
 
@@ -13,4 +13,4 @@ CHANNEL c1 from p1 to r1 1;
 CHANNEL c2 from r1 2 to p2;
 
 
-END LAYER
+END layer

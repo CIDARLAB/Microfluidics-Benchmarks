@@ -2,12 +2,12 @@ DEVICE and_annotation_test
 
 
 
-LAYER FLOW 
+LAYER flow
 
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
 
 
@@ -17,23 +17,23 @@ CHANNEL channel_3 from port_4 1 to port_2 1 connectionSpacing=1000 channelWidth=
 
  
 
-END LAYER
+END layer
 
-LAYER CONTROL 
+LAYER control
 
-PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT Cport_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_0componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT cport_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
-VALVE3D valve_0 on channel_1 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_1 on channel_3 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
-VALVE3D valve_2 on channel_2 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_0 on channel_1componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_1 on channel_3componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
+VALVE3D valve_2 on channel_2componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0;
 
-CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
-CHANNEL Ctrlchannel_2 from Cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_0 from cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_1 from cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400;
+CHANNEL ctrlchannel_2 from cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400;
 
  
 
-END LAYER
+END layer
 

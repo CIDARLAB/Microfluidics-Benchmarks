@@ -1,6 +1,6 @@
 DEVICE nozzle_droplet_generator
 
-LAYER FLOW
+LAYER flow
 
 PORT p1, p2, p3, p4;
 
@@ -12,4 +12,4 @@ CHANNEL co3 from g 3 to p3 channelWidth=200;
 CHANNEL c04 from g 4 to p4 channelWidth=200;
 
 
-END LAYER
+END layer

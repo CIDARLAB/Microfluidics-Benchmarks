@@ -1,12 +1,12 @@
 module ligation (
-    finput B, C, D, E, F,
+    finput b, c, d, e, f,
     foutput g_out,
     control c1, c2
 );
 
 //  mix T4 DNA lygase buffer, vector DNA, insert DNA, Nuclease-free water, and T4 DNA lygase
     flow mixture;
-    assign mixture = B%500 + C%500 + D%500 + E%500 + F%500;
+    assign mixture = b%500 + c%500 + d%500 + e%500 + f%500;
 
 //  incubate
     flow incubated;

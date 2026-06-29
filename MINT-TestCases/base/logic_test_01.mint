@@ -1,9 +1,9 @@
 DEVICE logic_test_01
 
-LAYER FLOW
+LAYER flow
 
-LOGIC ARRAY la flowChannelWidth=100 controlChannelWidth=50 chamberLength=200 chamberWidth=200 r=200;
+LOGIC ARRAY laflowChannelWidth=100 controlChannelWidth=50 chamberLength=200 chamberWidth=200 r=200;
 
-END LAYER
+END layer
 
 
