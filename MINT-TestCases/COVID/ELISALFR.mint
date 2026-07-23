@@ -1,28 +1,25 @@
-# Mirrored from LFR-TestCases/COVID/ELISALFR.lfr
-# Paired LFR (when mirrored): same relative path under LFR-TestCases. Regenerate with: fluigi compile_lfr <design>.lfr
-
-DEVICE expression1
+DEVICE elisalfr
 
 
 
-LAYER flow
+LAYER FLOW 
 
-MIXER mixer_1componentSpacing=9000;
-PORT port_1componentSpacing=9000;
-MIXER mixer_2componentSpacing=9000;
-PORT port_2componentSpacing=9000;
-PORT port_3componentSpacing=9000;
-PORT port_4componentSpacing=9000;
-PORT port_5componentSpacing=9000;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
 
 
 
-CHANNEL channel_1 from mixer_1 2 to port_1 1 connectionSpacing=1000;
-CHANNEL channel_2 from port_2 1 to mixer_1 1 connectionSpacing=1000;
-CHANNEL channel_3 from port_3 1 to mixer_2 1 connectionSpacing=1000;
-CHANNEL channel_4 from port_5 1 to mixer_2 1 connectionSpacing=1000;
+CHANNEL channel_1 from mixer_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_4 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from port_5 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 
-END layer
+END LAYER
 

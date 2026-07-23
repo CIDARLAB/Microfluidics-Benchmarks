@@ -1,19 +1,50 @@
-# MINT-TestCases mirror for LFR-TestCases/ghissues/issue8.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE issue8
 
-LAYER flow
 
-PORT p;
-PORT q;
-PORT r;
-PORT out;
-MIXER mixer_stub;
 
-CHANNEL c0 from p 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from q 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from r 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+MIXER mixer_5 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+MIXER mixer_6 componentSpacing=9000 ;
+MIXER mixer_7 componentSpacing=9000 ;
+MIXER mixer_8 componentSpacing=9000 ;
+MIXER mixer_9 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+PORT port_12 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from mixer_1 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from mixer_4 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_5 2 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_6 2 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_9 2 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from mixer_7 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from mixer_8 2 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_3 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from port_3 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from port_6 1 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from port_10 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from port_10 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from port_10 1 to port_5 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

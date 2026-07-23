@@ -1,17 +1,43 @@
-# MINT-TestCases mirror for LFR-TestCases/distribute-library/transposer_02.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE transposer_02
 
-LAYER flow
 
-PORT inputs;
-PORT outputs;
-PORT c_select;
-MIXER mixer_stub;
 
-CHANNEL c0 from inputs 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from outputs 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to c_select 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_1 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_1 1 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_4 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from port_4 1 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
+PORT Cport_2 componentSpacing=9000 ;
+PORT Cport_3 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_4 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_1 on channel_1 controlPort=Cport_1 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_2 on channel_3 controlPort=Cport_2 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_3 on channel_2 controlPort=Cport_3 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_2 from Cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_3 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

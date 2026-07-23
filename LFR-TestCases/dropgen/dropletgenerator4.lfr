@@ -4,11 +4,11 @@ module dropletgenerator4(oilin1, oilin2, waterin1, waterin2, dropletout1, drople
     foutput dropletout1, dropletout2;
 
     #MAP "DROPLET GENERATOR" "&"
-    #CONSTRAIN "&" droplet_rate = 5 k_hz and droplet_size = 100 um
+    #CONSTRAIN "&" droplet_rate = 5 kHz AND droplet_size = 100 um
     assign dropletout1 = oilin1 & oilin2 & waterin1 ;
 
     #MAP "DROPLET GENERATOR" "&"
-    #CONSTRAIN "&" droplet_rate = 6 k_hz and droplet_size = 50 um
+    #CONSTRAIN "&" droplet_rate = 6 kHz AND droplet_size = 50 um
     assign dropletout2 = oilin1 & oilin2 & waterin2 ;
 
 endmodule

@@ -1,172 +1,99 @@
-DEVICE organic_chemical_synthesis
+DEVICE device6_organic_chemical_synthesis
 
-LAYER flow
 
-PORT p1, p2, p3;
-PORT p4, p5, p6, p7;
-PORT p8, p9, p10;
-PORT p11, p12, p13, p14;
 
-NODE n1;
+LAYER FLOW 
 
-CONNECTION c1 from p1 1 to n1;
-CONNECTION c2 from p2 1 to n1;
-CONNECTION c3 from p3 1 to n1;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+MIXER mixer_5 componentSpacing=9000 ;
+MIXER mixer_6 componentSpacing=9000 ;
+MIXER mixer_7 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+MIXER mixer_8 componentSpacing=9000 ;
+MIXER mixer_9 componentSpacing=9000 ;
+MIXER mixer_10 componentSpacing=9000 ;
+MIXER mixer_11 componentSpacing=9000 ;
+MIXER mixer_12 componentSpacing=9000 ;
+MIXER mixer_13 componentSpacing=9000 ;
+MIXER mixer_14 componentSpacing=9000 ;
+MIXER mixer_15 componentSpacing=9000 ;
+MIXER mixer_16 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+PORT port_12 componentSpacing=9000 ;
+PORT port_13 componentSpacing=9000 ;
+PORT port_14 componentSpacing=9000 ;
+PORT port_15 componentSpacing=9000 ;
+PORT port_16 componentSpacing=9000 ;
+PORT port_17 componentSpacing=9000 ;
+PORT port_18 componentSpacing=9000 ;
 
-NODE n2;
-CONNECTION c4 from p4 1 to n2;
-CONNECTION c5 from p5 1 to n2;
-CONNECTION c6 from p6 1 to n2;
 
-CONCENTRATION LOOP cl;
 
-CONNECTION c4 from n1 to cl 1;
+CHANNEL channel_1 from square_cell_trap_1 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_2 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_8 2 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_1 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_4 2 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_10 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from mixer_6 2 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from mixer_11 2 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from mixer_12 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from mixer_13 2 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from mixer_5 2 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from mixer_9 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from mixer_14 2 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from mixer_15 2 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from mixer_16 2 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from mixer_7 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_18 from mixer_3 2 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_19 from port_2 1 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_20 from port_3 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_21 from port_4 1 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_22 from port_5 1 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_23 from port_6 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_24 from port_7 1 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_25 from port_8 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_26 from port_9 1 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_27 from port_10 1 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_28 from port_11 1 to mixer_16 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_29 from port_12 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_30 from port_13 1 to mixer_16 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_31 from port_14 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_32 from port_15 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_33 from port_16 1 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_34 from port_17 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_35 from port_18 1 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
 
-PORT p15, p16, p17;
-NODE n3;
+ 
 
-CONNECTION c5 from p15 1 to n3 1;
-CONNECTION c6 from p16 1 to n3 1;
-CONNECTION c7 from p17 1 to n3 1;
-CONNECTION c8 from n3 1 to cl 2;
+END LAYER
 
-PORT p18;
-CONNECTION c9 from p18 1 to cl 9;
+LAYER CONTROL 
 
-PORT p19, p20, p21;
-NODE n4, n5;
-CONNECTION c10 from cl 7 to n4 1;
-CONNECTION c11 from p19 to n4 1;
-CONNECTION c12 from n4 1 to n5 1;
-CONNECTION c13 from p20 1 to n5 1;
-CONNECTION c14 from p21 1 to n5 1;
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
 
-REACTION LOOP rl;
-CONNECTION c15 from n5 1 to rl 1;
+VALVE3D valve_0 on channel_12 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
 
-PORT p22, p23;
-NODE n6;
-CONNECTION c16 from p22 1 to n6 1;
-CONNECTION c17 from p23 1 to n6 1;
-CONNECTION c18 from n6 1 to rl 5;
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
 
-PORT p24;
-CONNECTION c19 from p24 1 to rl 7;
+ 
 
-PORT p25;
-CONNECTION c20 from p25 1 to rl 6;
+END LAYER
 
-END layer
-
-LAYER control
-
-PORT cp1, cp2, cp3;
-
-VALVE pv1 on c1;
-VALVE pv2 on c1;
-VALVE pv3 on c1;
-
-VALVE pv4 on c2;
-VALVE pv5 on c2;
-VALVE pv6 on c2;
-
-VALVE pv7 on c3;
-VALVE pv8 on c3;
-VALVE pv9 on c3;
-
-CONNECTION cc1 from cp1 1 to pv1 1;
-CONNECTION cc2 from pv1 1 to pv4 1;
-CONNECTION cc3 from pv4 1 to pv7 1;
-
-CONNECTION cc4 from cp2 1 to pv2 1;
-CONNECTION cc5 from pv2 1 to pv5 1;
-CONNECTION cc6 from pv5 1 to pv8 1;
-
-CONNECTION cc7 from cp3 1 to pv3 1;
-CONNECTION cc8 from pv3 1 to pv6 1;
-CONNECTION cc9 from pv6 1 to pv9 1;
-
-VALVE rv10 on c1;
-VALVE rv11 on c2;
-VALVE rv12 on c3;
-VALVE rv13 on c4;
-
-PORT cp4, cp5, cp6, cp7;
-CONNECTION cc10 from cp4 1 to rv10 1;
-CONNECTION cc11 from cp5 1 to rv11 1;
-CONNECTION cc12 from cp6 1 to rv12 1;
-CONNECTION cc13 from cp7 1 to rv13 1;
-
-VALVE rv14 on c5;
-VALVE rv15 on c6;
-VALVE rv16 on c7;
-VALVE rv17 on c8;
-
-PORT cp8, cp9, cp10, cp11;
-CONNECTION cc14 from cp8 1 to rv14 1;
-CONNECTION cc15 from cp9 1 to rv15 1;
-CONNECTION cc16 from cp10 1 to rv16 1;
-CONNECTION cc17 from cp11 1 to rv17 1;
-
-VALVE rv18 on c9;
-PORT cp12;
-CONNECTION cc18 from cp12 1 to rv18 1;
-
-PORT cp13, cp14;
-CONNECTION cc19 from cp13 1 to cl 3;
-CONNECTION cc20 from cp14 1 to cl 8;
-
-VALVE rv19 on c11;
-PORT cp15;
-CONNECTION cc21 from cp15 1 to rv19 1;
-
-VALVE rv20 on c12;
-PORT cp16;
-CONNECTION cc22 from cp16 1 to rv20 1;
-
-VALVE rv21 on c13;
-PORT cp17;
-CONNECTION cc23 from cp17 1 to rv21 1;
-
-VALVE rv22 on c14;
-PORT cp18;
-CONNECTION cc24 from cp18 1 to rv22 1;
-
-VALVE rv23 on c15;
-PORT cp19;
-CONNECTION cc25 from cp19 1 to rv23 1;
-
-VALVE rv24 on c16;
-PORT cp20;
-CONNECTION cc26 from cp20 1 to rv24 1;
-
-VALVE rv25 on c17;
-PORT cp21;
-CONNECTION cc27 from cp21 1 to rv25 1;
-
-VALVE rv26 on c18;
-PORT cp22;
-CONNECTION cc28 from cp22 1 to rv26 1;
-
-VALVE rv27 on c19;
-VALVE rv28 on c19;
-PORT cp23, cp24;
-CONNECTION cc29 from cp23 1 to rv27 1;
-CONNECTION cc30 from cp24 1 to rv28 1;
-
-VALVE rv29 on c20;
-VALVE rv30 on c20;
-PORT cp25, cp26;
-CONNECTION cc31 from cp25 1 to rv29 1;
-CONNECTION cc32 from cp26 1 to rv30 1;
-
-PORT cp27, cp28, cp29;
-
-CONNECTION cc33 from cp27 1 to rl 2;
-CONNECTION cc34 from rl 2 to cl 6;
-CONNECTION cc35 from cp28 1 to rl 3;
-CONNECTION cc36 from rl 3 to cl 5;
-CONNECTION cc37 from cp29 1 to rl 4;
-CONNECTION cc38 from rl 4 to cl 4;
-
-END layer

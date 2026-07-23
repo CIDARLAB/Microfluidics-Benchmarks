@@ -1,19 +1,20 @@
-# MINT-TestCases mirror for LFR-TestCases/GraphCoverage/cycle.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE cycle
 
-LAYER flow
 
-PORT input1;
-PORT input2;
-PORT input3;
-PORT out;
-MIXER mixer_stub;
 
-CHANNEL c0 from input1 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from input2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from input3 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+
+
+
+
+
+ 
+
+END LAYER
+

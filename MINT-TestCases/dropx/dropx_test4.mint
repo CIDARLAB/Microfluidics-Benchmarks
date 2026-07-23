@@ -1,19 +1,31 @@
-# MINT-TestCases mirror for LFR-TestCases/dropx/dropx_test4.lfr
-# Source: hand-authored template
-
+# Please add default length and width to reaction chamber component
 DEVICE dropx_test4
 
-LAYER flow
 
-PORT port_1portRadius=2000;
-PORT port_2portRadius=2000;
-PORT port_3portRadius=2000;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1;
-MIXER mixer_1;
 
-CHANNEL channel_1 from port_1 to nozzle_droplet_generator_1 2channelWidth=400;
-CHANNEL channel_2 from nozzle_droplet_generator_1 1 to mixer_1 1 channelWidth=400;
-CHANNEL channel_3 from port_2 to mixer_1 2channelWidth=400;
-CHANNEL channel_4 from mixer_1 3 to port_3 1 channelWidth=400;
+LAYER FLOW 
 
-END layer
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+REACTION CHAMBER reaction_chamber_1 droplet_size=50.0 droplet_sizeUnit=um generation_rate=70.0 generation_rateUnit=hz componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from mixer_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from reaction_chamber_1 4 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_4 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_3 1 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_3 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

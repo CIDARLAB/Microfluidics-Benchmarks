@@ -1,15 +1,23 @@
-# MINT-TestCases mirror for LFR-TestCases/ghissues/issue3.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
+DEVICE issue3
 
-DEVICE design3
 
-LAYER flow
 
-PORT in;
-PORT out;
-MIXER mixer_stub;
+LAYER FLOW 
 
-CHANNEL c0 from in 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out 1 channelWidth=200;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
 
-END layer
+
+
+CHANNEL channel_1 from port_5 1 to port_6 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

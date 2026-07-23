@@ -1,17 +1,26 @@
-# MINT-TestCases mirror for LFR-TestCases/expresstest.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
+# Please add default length and width to reaction chamber component
+DEVICE expresstest
 
-DEVICE expressiontest
 
-LAYER flow
 
-PORT plasmid;
-PORT cell_suspension;
-PORT result;
-MIXER mixer_stub;
+LAYER FLOW 
 
-CHANNEL c0 from plasmid 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from cell_suspension 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to result 1 channelWidth=200;
+REACTION CHAMBER reaction_chamber_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
 
-END layer
+
+
+CHANNEL channel_1 from reaction_chamber_1 4 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_1 2 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from port_2 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from port_3 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

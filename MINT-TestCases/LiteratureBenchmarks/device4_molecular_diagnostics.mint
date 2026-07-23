@@ -1,26 +1,34 @@
-DEVICE molecular_diagnostics
+DEVICE device4_molecular_diagnostics
 
-LAYER flow
 
-PORT p1, p2, p3, p4, p5;
 
-MIXER m1numberOfBends=3;
-MIP BIOSENSOR bs1, bs2;
+LAYER FLOW 
 
-NODE n1, n2;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_3 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
 
-CONNECTION c1 from p1 to m1 1;
-CONNECTION c2 from m1 2 to n1;
-CONNECTION c3 from p2 to n2;
-CONNECTION c4 from n1 to n2;
-CONNECTION c5 from n1 to bs1 1;
-CONNECTION c6 from n2 to bs2 1;
 
-NODE n3;
 
-CONNECTION c7 from bs1 2 to p3;
-CONNECTION c8 from bs2 2 to n3;
-CONNECTION c9 from n3 to p4;
-CONNECTION c10 from n3 to p5;
+CHANNEL channel_1 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_1 2 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from square_cell_trap_2 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from square_cell_trap_3 2 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_1 2 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_2 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_4 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_4 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_5 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_5 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 
-END layer
+ 
+
+END LAYER
+

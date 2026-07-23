@@ -10,7 +10,7 @@ water, sample, nebuffer, foutput solution);
     assign mixer1 = iab + mgso4 + dntps + primer + bst + warmstart + water + sample;
 
     assign mixer2 = ~mixer1;
-    assign mixer2 = nebuffer;
+    assign mixer2 = mixer2 + nebuffer;
 
     assign mixer3 = ~mixer2;
 

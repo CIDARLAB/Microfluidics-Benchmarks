@@ -1,9 +1,8 @@
 DEVICE mux8
-
-LAYER flow
- H BANK b1 of 8  PORTportRadius=100  spacing=1200 ;
-H MUX m0 1 to 8spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
- PORT p1portRadius=100;
+LAYER FLOW 
+ H BANK b1 of 8  PORT portRadius=100  spacing=1200 ;
+H MUX m0 1 to 8 spacing=1200 flowChannelWidth=100 controlChannelWidth=50;
+ PORT p1 portRadius=100;
 CHANNEL ca from b1 1 to m0 1 channelWidth=100;
 CHANNEL cb from b1 2 to m0 2 channelWidth=100;
 CHANNEL cc from b1 3 to m0 3 channelWidth=100;
@@ -13,15 +12,14 @@ CHANNEL cf from b1 6 to m0 6 channelWidth=100;
 CHANNEL cg from b1 7 to m0 7 channelWidth=100;
 CHANNEL ch from b1 8 to m0 8 channelWidth=100;
 CHANNEL c1 from m0 9 to p1 1 channelWidth=100;
-END layer
-
-LAYER control
- V BANK cb3 of 3  PORTportRadius=100  spacing=1200 ;
- V BANK cb4 of 3  PORTportRadius=100  spacing=1200 ;
+END LAYER
+LAYER CONTROL 
+ V BANK cb3 of 3  PORT portRadius=100  spacing=1200 ;
+ V BANK cb4 of 3  PORT portRadius=100  spacing=1200 ;
 CHANNEL cc57 from m0 10 to cb3 1 channelWidth=50;
 CHANNEL cc58 from m0 12 to cb3 2 channelWidth=50;
 CHANNEL cc59 from m0 14 to cb3 3 channelWidth=50;
 CHANNEL cc60 from m0 11 to cb4 1 channelWidth=50;
 CHANNEL cc61 from m0 13 to cb4 2 channelWidth=50;
 CHANNEL cc62 from m0 15 to cb4 3 channelWidth=50;
-END layer
+END LAYER

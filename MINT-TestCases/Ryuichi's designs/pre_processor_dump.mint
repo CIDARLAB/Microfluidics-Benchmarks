@@ -2,9 +2,7 @@
 # Source: minimal stub from module port list; fluigi emitted no variant
 
 DEVICE seeding
-
-LAYER flow
-
+LAYER FLOW 
 PORT c0;
 PORT c1;
 PORT c2;
@@ -31,5 +29,4 @@ CHANNEL c8 from seeding1 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c9 from buffer 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c10 from stimuli 1 to mixer_stub 2 channelWidth=200;
 CHANNEL c_out from mixer_stub 3 to waste 1 channelWidth=200;
-
-END layer
+END LAYER

@@ -1,31 +1,52 @@
-# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/microdroplet.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE microdroplet
 
-LAYER flow
 
-PORT oil_inlet1;
-PORT oil_inlet2;
-PORT aqueous_inlet_1;
-PORT aqueous_inlet_2;
-PORT reservoir_inlet_1;
-PORT reservoir_inlet_2;
-PORT reservoir_outlet_1;
-PORT reservoir_outlet_2;
-PORT waste_outlet;
-PORT c;
-MIXER mixer_stub;
 
-CHANNEL c0 from oil_inlet1 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from oil_inlet2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from aqueous_inlet_1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c3 from aqueous_inlet_2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c4 from reservoir_inlet_1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c5 from reservoir_inlet_2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c6 from reservoir_outlet_1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c7 from reservoir_outlet_2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c8 from waste_outlet 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to c 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+PORT port_1 portRadius=2000 componentSpacing=9000 ;
+PORT port_2 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_3 portRadius=2000 componentSpacing=9000 ;
+PORT port_4 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+PORT port_12 componentSpacing=9000 ;
+PORT port_13 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_1 1 to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_2 from port_2 1 to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_3 from port_3 1 to nozzle_droplet_generator_2 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_4 from port_4 1 to nozzle_droplet_generator_2 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_5 from nozzle_droplet_generator_1 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from nozzle_droplet_generator_2 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from square_cell_trap_1 2 to port_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_11 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_12 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+
+
+
+
+
+
+ 
+
+END LAYER
+

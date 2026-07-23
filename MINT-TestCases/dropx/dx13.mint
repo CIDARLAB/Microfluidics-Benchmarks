@@ -1,43 +1,49 @@
 DEVICE dx13
 
-LAYER flow
 
-PORT port_1portRadius=2000 ;
-PORT port_2portRadius=2000 ;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1;
-MIXER mixer_1;
-PICOINJECTOR picoinjector_1;
-MIXER mixer_2;
-DROPLET SORTER droplet_sorter_1;
-PICOINJECTOR picoinjector_2;
-MIXER mixer_3;
-DROPLET SORTER droplet_sorter_2;
-DROPLET SPLITTER droplet_splitter_1;
-PORT port_3portRadius=2000 ;
-PORT port_4portRadius=2000 ;
-PORT port_5portRadius=2000 ;
-PORT port_6portRadius=2000 ;
-PORT port_7portRadius=2000 ;
-PORT port_8portRadius=2000 ;
-PORT port_9portRadius=2000 ;
 
-CHANNEL channel_1 from port_1  to nozzle_droplet_generator_1 2channelWidth=400  ;
-CHANNEL channel_2 from port_2  to nozzle_droplet_generator_1 4channelWidth=400  ;
-CHANNEL channel_3 from port_3  to nozzle_droplet_generator_1 1channelWidth=400  ;
-CHANNEL channel_4 from nozzle_droplet_generator_1 3 to mixer_1 1 channelWidth=400  ;
-CHANNEL channel_5 from port_4  to picoinjector_1 1channelWidth=400  ;
-CHANNEL channel_6 from mixer_1 2 to picoinjector_1 2 channelWidth=400  ;
-CHANNEL channel_7 from picoinjector_1 3 to mixer_2 1 channelWidth=400  ;
-CHANNEL channel_8 from mixer_2 2 to droplet_sorter_1 1 channelWidth=400  ;
-CHANNEL channel_9 from port_5  to picoinjector_2 1channelWidth=400  ;
-CHANNEL channel_10 from droplet_sorter_1 2 to picoinjector_2 2 channelWidth=400  ;
-CHANNEL channel_11 from picoinjector_2 3 to mixer_3 1 channelWidth=400  ;
-CHANNEL channel_12 from mixer_3 2 to droplet_sorter_2 1 channelWidth=400  ;
-CHANNEL channel_13 from droplet_sorter_2 2 to droplet_splitter_1 1 channelWidth=400  ;
-CHANNEL channel_14 from droplet_sorter_1 3 to port_6  channelWidth=400  ;
-CHANNEL channel_15 from droplet_sorter_2 3 to port_7  channelWidth=400  ;
-CHANNEL channel_16 from droplet_splitter_1 2 to port_8  channelWidth=400  ;
-CHANNEL channel_17 from droplet_splitter_1 3 to port_9  channelWidth=400  ; 
+LAYER FLOW 
 
-END layer
+MIXER mixer_1 componentSpacing=9000 ;
+DROPLET SORTER droplet_sorter_1 componentSpacing=9000 ;
+DROPLET SPLITTER droplet_splitter_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+DROPLET SORTER droplet_sorter_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+MIXER mixer_5 componentSpacing=9000 ;
+PORT port_5 portRadius=2000 componentSpacing=9000 ;
+PORT port_6 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_5 1 to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_2 from port_6 1 to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_3 from mixer_1 2 to droplet_sorter_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_2 2 to droplet_sorter_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_4 2 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from nozzle_droplet_generator_1 3 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from droplet_splitter_1 3 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from droplet_splitter_1 3 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from droplet_sorter_2 3 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from droplet_sorter_2 3 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from droplet_sorter_1 3 to droplet_splitter_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from droplet_sorter_1 3 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from mixer_3 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from mixer_5 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from port_7 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from port_8 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from port_9 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
 

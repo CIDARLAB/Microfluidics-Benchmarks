@@ -1,40 +1,37 @@
-# Mirrored from LFR-TestCases/mars/antibiotic_resistance.lfr
-# Paired LFR (when mirrored): same relative path under LFR-TestCases. Regenerate with: fluigi compile_lfr <design>.lfr
-
 DEVICE antibiotic_resistance
 
 
 
-LAYER flow
+LAYER FLOW 
 
-SQUARE CELL TRAP square_cell_trap_1componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_2componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_3componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_4componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_5componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_6componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_7componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_8componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_9componentSpacing=9000;
-SQUARE CELL TRAP square_cell_trap_10componentSpacing=9000;
-PORT port_1componentSpacing=9000;
-PORT port_2componentSpacing=9000;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_3 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_4 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_5 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_6 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_7 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_8 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_9 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_10 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
 
 
 
-CHANNEL channel_1 from port_2 1 to square_cell_trap_1 1 connectionSpacing=1000;
-CHANNEL channel_2 from port_2 1 to square_cell_trap_2 1 connectionSpacing=1000;
-CHANNEL channel_3 from port_2 1 to square_cell_trap_3 1 connectionSpacing=1000;
-CHANNEL channel_4 from port_2 1 to square_cell_trap_4 1 connectionSpacing=1000;
-CHANNEL channel_5 from port_2 1 to square_cell_trap_5 1 connectionSpacing=1000;
-CHANNEL channel_6 from port_2 1 to square_cell_trap_6 1 connectionSpacing=1000;
-CHANNEL channel_7 from port_2 1 to square_cell_trap_7 1 connectionSpacing=1000;
-CHANNEL channel_8 from port_2 1 to square_cell_trap_8 1 connectionSpacing=1000;
-CHANNEL channel_9 from port_2 1 to square_cell_trap_9 1 connectionSpacing=1000;
-CHANNEL channel_10 from port_2 1 to square_cell_trap_10 1 connectionSpacing=1000;
-CHANNEL channel_11 from port_2 1 to port_1 1 connectionSpacing=1000;
+CHANNEL channel_1 from port_2 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_2 1 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_2 1 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from port_2 1 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from port_2 1 to square_cell_trap_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_2 1 to square_cell_trap_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_2 1 to square_cell_trap_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_2 1 to square_cell_trap_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_2 1 to square_cell_trap_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_2 1 to square_cell_trap_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from port_2 1 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 
-END layer
+END LAYER
 

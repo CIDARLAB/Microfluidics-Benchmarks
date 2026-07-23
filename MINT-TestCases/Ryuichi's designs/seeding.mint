@@ -1,21 +1,37 @@
-# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/seeding.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE seeding
 
-LAYER flow
 
-PORT c;
-PORT buffer;
-PORT stimuli;
-PORT seeding_out;
-PORT waste;
-MIXER mixer_stub;
 
-CHANNEL c0 from c 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from buffer 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from stimuli 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c3 from seeding_out 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to waste 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_2 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_3 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_3 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_1 on channel_2 controlPort=Cport_1 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

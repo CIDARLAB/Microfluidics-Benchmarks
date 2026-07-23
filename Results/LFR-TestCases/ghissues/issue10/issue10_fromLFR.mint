@@ -2,28 +2,16 @@ DEVICE issue10
 
 
 
-LAYER flow
+LAYER FLOW 
 
-PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_3componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_4componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_5componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_6componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_7componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_8componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-
-
-
-
-
- 
-
-END layer
-
-LAYER control
-
-
+PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 
 
 
@@ -31,5 +19,17 @@ LAYER control
 
  
 
-END layer
+END LAYER
+
+LAYER CONTROL 
+
+
+
+
+
+
+
+ 
+
+END LAYER
 

@@ -41,6 +41,33 @@
             "y-span": 4860
         },
         {
+            "name": "port_1",
+            "id": "port_1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 9000,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
             "name": "mixer_2",
             "id": "mixer_2",
             "entity": "MIXER",
@@ -78,33 +105,6 @@
             ],
             "x-span": 4060,
             "y-span": 4860
-        },
-        {
-            "name": "port_1",
-            "id": "port_1",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 9000,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    -1,
-                    -1
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
         },
         {
             "name": "port_2",
@@ -192,7 +192,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -240,7 +240,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
@@ -288,7 +288,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
@@ -336,7 +336,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
@@ -384,7 +384,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],

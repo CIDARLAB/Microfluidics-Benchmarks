@@ -1,15 +1,20 @@
-# MINT-TestCases mirror for LFR-TestCases/dropgen/dropletgenerator.lfr
-# Source: hand-authored template
-
+# Please add default length and width to reaction chamber component
 DEVICE dropletgenerator
 
-LAYER flow
 
-PORT waterinportRadius=1500;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1;
-PORT dropletoutportRadius=1500;
 
-CHANNEL channel_1 from waterin 1 to nozzle_droplet_generator_1 2 channelWidth=300;
-CHANNEL channel_2 from nozzle_droplet_generator_1 1 to dropletout 1 channelWidth=300;
+LAYER FLOW 
 
-END layer
+REACTION CHAMBER reaction_chamber_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from reaction_chamber_1 4 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_2 1 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

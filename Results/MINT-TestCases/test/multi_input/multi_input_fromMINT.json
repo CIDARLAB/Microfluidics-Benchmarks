@@ -377,16 +377,18 @@
         {
             "name": "valve_0",
             "id": "valve_0",
-            "entity": "VALVE",
+            "entity": "VALVE3D",
             "layers": [
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "width": 1230.0,
-                "length": 4920.0,
-                "height": 250.0,
+                "gap": 600.0,
+                "width": 2400.0,
+                "length": 2400.0,
                 "position": [
                     -1,
                     -1
@@ -394,28 +396,30 @@
             },
             "ports": [
                 {
-                    "x": 615,
-                    "y": 2460,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 1230,
-            "y-span": 4920
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "valve_1",
             "id": "valve_1",
-            "entity": "VALVE",
+            "entity": "VALVE3D",
             "layers": [
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "width": 1230.0,
-                "length": 4920.0,
-                "height": 250.0,
+                "gap": 600.0,
+                "width": 2400.0,
+                "length": 2400.0,
                 "position": [
                     -1,
                     -1
@@ -423,14 +427,14 @@
             },
             "ports": [
                 {
-                    "x": 615,
-                    "y": 2460,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 1230,
-            "y-span": 4920
+            "x-span": 800,
+            "y-span": 800
         }
     ],
     "connections": [
@@ -581,14 +585,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "square_cell_trap_1",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "port_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -636,7 +640,7 @@
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_3",
+                "component": "port_4",
                 "port": "1"
             },
             "params": {
@@ -684,7 +688,7 @@
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_4",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -732,103 +736,7 @@
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "port_5",
-                "port": "1"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "square_cell_trap_1",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_8",
-            "id": "channel_8",
-            "source": {
                 "component": "port_6",
-                "port": "1"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_1",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_9",
-            "id": "channel_9",
-            "source": {
-                "component": "port_7",
                 "port": "1"
             },
             "params": {
@@ -994,7 +902,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_8",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN"
         }
     ],

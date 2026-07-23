@@ -1,15 +1,17 @@
-# MINT-TestCases mirror for LFR-TestCases/ParserTest/pumpstat.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE pumpstat
 
-LAYER flow
 
-PORT in_1;
-PORT out_1;
-MIXER mixer_stub;
 
-CHANNEL c0 from in_1 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out_1 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_1 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

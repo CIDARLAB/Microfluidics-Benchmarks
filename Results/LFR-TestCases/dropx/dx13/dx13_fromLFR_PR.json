@@ -1330,180 +1330,12 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_splitter_1",
+                    "component": "mixer_3",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
-            "source": {
-                "component": "droplet_sorter_1",
-                "port": "3"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    47510,
-                    29091
-                ],
-                "end": [
-                    52510,
-                    24000
-                ],
-                "wayPoints": [
-                    [
-                        47510,
-                        24000
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            47510,
-                            29091
-                        ],
-                        [
-                            47510,
-                            24000
-                        ]
-                    ],
-                    [
-                        [
-                            47510,
-                            24000
-                        ],
-                        [
-                            52510,
-                            24000
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "droplet_sorter_1",
-                        "port": "3"
-                    },
-                    "sink": {
-                        "component": "droplet_splitter_1",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            47510,
-                            29091
-                        ],
-                        [
-                            47510,
-                            24000
-                        ],
-                        [
-                            52510,
-                            24000
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "port_3",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_10",
-            "id": "channel_10",
-            "source": {
-                "component": "droplet_sorter_1",
-                "port": "3"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    47510,
-                    29091
-                ],
-                "end": [
-                    77010,
-                    20700
-                ],
-                "wayPoints": [
-                    [
-                        47510,
-                        20700
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            47510,
-                            29091
-                        ],
-                        [
-                            47510,
-                            20700
-                        ]
-                    ],
-                    [
-                        [
-                            47510,
-                            20700
-                        ],
-                        [
-                            77010,
-                            20700
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "droplet_sorter_1",
-                        "port": "3"
-                    },
-                    "sink": {
-                        "component": "port_3",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            47510,
-                            29091
-                        ],
-                        [
-                            47510,
-                            20700
-                        ],
-                        [
-                            77010,
-                            20700
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_3",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_11",
-            "id": "channel_11",
             "source": {
                 "component": "droplet_sorter_2",
                 "port": "3"
@@ -1586,8 +1418,8 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_12",
-            "id": "channel_12",
+            "name": "channel_10",
+            "id": "channel_10",
             "source": {
                 "component": "droplet_sorter_2",
                 "port": "3"
@@ -1666,53 +1498,53 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "droplet_splitter_1",
                     "port": "1"
                 }
             ],
-            "name": "channel_13",
-            "id": "channel_13",
+            "name": "channel_11",
+            "id": "channel_11",
             "source": {
-                "component": "mixer_5",
-                "port": "2"
+                "component": "droplet_sorter_1",
+                "port": "3"
             },
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    141770,
-                    24860
+                    47510,
+                    29091
                 ],
                 "end": [
-                    84740,
-                    20000
+                    52510,
+                    24000
                 ],
                 "wayPoints": [
                     [
-                        141770,
-                        20000
+                        47510,
+                        24000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            141770,
-                            24860
+                            47510,
+                            29091
                         ],
                         [
-                            141770,
-                            20000
+                            47510,
+                            24000
                         ]
                     ],
                     [
                         [
-                            141770,
-                            20000
+                            47510,
+                            24000
                         ],
                         [
-                            84740,
-                            20000
+                            52510,
+                            24000
                         ]
                     ]
                 ]
@@ -1721,25 +1553,109 @@
             "paths": [
                 {
                     "source": {
-                        "component": "mixer_5",
-                        "port": "2"
+                        "component": "droplet_sorter_1",
+                        "port": "3"
                     },
                     "sink": {
-                        "component": "mixer_2",
+                        "component": "droplet_splitter_1",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            141770,
-                            24860
+                            47510,
+                            29091
                         ],
                         [
-                            141770,
-                            20000
+                            47510,
+                            24000
                         ],
                         [
-                            84740,
-                            20000
+                            52510,
+                            24000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_3",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_12",
+            "id": "channel_12",
+            "source": {
+                "component": "droplet_sorter_1",
+                "port": "3"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    47510,
+                    29091
+                ],
+                "end": [
+                    77010,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        47510,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            47510,
+                            29091
+                        ],
+                        [
+                            47510,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            47510,
+                            20700
+                        ],
+                        [
+                            77010,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "droplet_sorter_1",
+                        "port": "3"
+                    },
+                    "sink": {
+                        "component": "port_3",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            47510,
+                            29091
+                        ],
+                        [
+                            47510,
+                            20700
+                        ],
+                        [
+                            77010,
+                            20700
                         ]
                     ],
                     "features": []
@@ -1754,8 +1670,8 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_14",
-            "id": "channel_14",
+            "name": "channel_13",
+            "id": "channel_13",
             "source": {
                 "component": "mixer_3",
                 "port": "2"
@@ -1823,6 +1739,90 @@
                         ],
                         [
                             22030,
+                            20000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_14",
+            "id": "channel_14",
+            "source": {
+                "component": "mixer_5",
+                "port": "2"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    141770,
+                    24860
+                ],
+                "end": [
+                    84740,
+                    20000
+                ],
+                "wayPoints": [
+                    [
+                        141770,
+                        20000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            141770,
+                            24860
+                        ],
+                        [
+                            141770,
+                            20000
+                        ]
+                    ],
+                    [
+                        [
+                            141770,
+                            20000
+                        ],
+                        [
+                            84740,
+                            20000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "mixer_5",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "mixer_2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            141770,
+                            24860
+                        ],
+                        [
+                            141770,
+                            20000
+                        ],
+                        [
+                            84740,
                             20000
                         ]
                     ],

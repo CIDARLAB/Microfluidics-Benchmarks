@@ -1,75 +1,73 @@
 DEVICE grid_08
-
-LAYER flow
-
-PORT port_inportRadius=100 ;
-TREE input_treespacing=1200 flowChannelWidth=100 in=1 out=8 ;
-SQUARE CELL TRAP ct_1_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_1_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_2_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_3_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_4_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_5_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_6_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_7_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_1chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_2chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_3chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_4chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_5chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_6chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_7chamberWidth=100 chamberLength=100 channelWidth=100 ;
-SQUARE CELL TRAP ct_8_8chamberWidth=100 chamberLength=100 channelWidth=100 ;
-TREE output_treespacing=1200 flowChannelWidth=100 in=1 out=8 ;
-PORT port_outportRadius=100 ;
+LAYER FLOW 
+PORT port_in portRadius=100 ;
+TREE input_tree spacing=1200 flowChannelWidth=100 in=1 out=8 ;
+SQUARE CELL TRAP ct_1_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_1_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_2_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_3_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_4_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_5_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_6_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_7_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_1 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_2 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_3 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_4 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_5 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_6 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_7 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+SQUARE CELL TRAP ct_8_8 chamberWidth=100 chamberLength=100 channelWidth=100 ;
+TREE output_tree spacing=1200 flowChannelWidth=100 in=1 out=8 ;
+PORT port_out portRadius=100 ;
 
 
 
@@ -203,26 +201,23 @@ CHANNEL channel_out_6 from ct_8_6 4 to output_tree 4 channelWidth=100  ;
 CHANNEL channel_out_7 from ct_8_7 4 to output_tree 3 channelWidth=100  ;
 CHANNEL channel_out_8 from ct_8_8 4 to output_tree 2 channelWidth=100  ;
 CHANNEL channel_out from output_tree 1 to port_out 1 channelWidth=100  ; 
-
-END layer
-
-LAYER control
-
-PORT port_ctrl_in_horizontal_1portRadius=100 ;
-PORT port_ctrl_in_horizontal_2portRadius=100 ;
-PORT port_ctrl_in_horizontal_3portRadius=100 ;
-PORT port_ctrl_in_horizontal_4portRadius=100 ;
-PORT port_ctrl_in_horizontal_5portRadius=100 ;
-PORT port_ctrl_in_horizontal_6portRadius=100 ;
-PORT port_ctrl_in_horizontal_7portRadius=100 ;
-PORT port_ctrl_in_horizontal_8portRadius=100 ;
-PORT port_ctrl_in_vertical_1portRadius=100 ;
-PORT port_ctrl_in_vertical_2portRadius=100 ;
-PORT port_ctrl_in_vertical_3portRadius=100 ;
-PORT port_ctrl_in_vertical_4portRadius=100 ;
-PORT port_ctrl_in_vertical_5portRadius=100 ;
-PORT port_ctrl_in_vertical_6portRadius=100 ;
-PORT port_ctrl_in_vertical_7portRadius=100 ;
+END LAYER
+LAYER CONTROL 
+PORT port_ctrl_in_horizontal_1 portRadius=100 ;
+PORT port_ctrl_in_horizontal_2 portRadius=100 ;
+PORT port_ctrl_in_horizontal_3 portRadius=100 ;
+PORT port_ctrl_in_horizontal_4 portRadius=100 ;
+PORT port_ctrl_in_horizontal_5 portRadius=100 ;
+PORT port_ctrl_in_horizontal_6 portRadius=100 ;
+PORT port_ctrl_in_horizontal_7 portRadius=100 ;
+PORT port_ctrl_in_horizontal_8 portRadius=100 ;
+PORT port_ctrl_in_vertical_1 portRadius=100 ;
+PORT port_ctrl_in_vertical_2 portRadius=100 ;
+PORT port_ctrl_in_vertical_3 portRadius=100 ;
+PORT port_ctrl_in_vertical_4 portRadius=100 ;
+PORT port_ctrl_in_vertical_5 portRadius=100 ;
+PORT port_ctrl_in_vertical_6 portRadius=100 ;
+PORT port_ctrl_in_vertical_7 portRadius=100 ;
 
 VALVE valve_horizontal_1_1 on channel_horizontal_1_1 width=300 length=100 ;
 VALVE valve_horizontal_1_2 on channel_horizontal_1_2 width=300 length=100 ;
@@ -352,6 +347,4 @@ CHANNEL channel_ctrl_in_vertical_4 from port_ctrl_in_vertical_4 1 to valve_verti
 CHANNEL channel_ctrl_in_vertical_5 from port_ctrl_in_vertical_5 1 to valve_vertical_5_1 1, valve_vertical_5_2 1, valve_vertical_5_3 1, valve_vertical_5_4 1, valve_vertical_5_5 1, valve_vertical_5_6 1, valve_vertical_5_7 1, valve_vertical_5_8 1 channelWidth=100  ;
 CHANNEL channel_ctrl_in_vertical_6 from port_ctrl_in_vertical_6 1 to valve_vertical_6_1 1, valve_vertical_6_2 1, valve_vertical_6_3 1, valve_vertical_6_4 1, valve_vertical_6_5 1, valve_vertical_6_6 1, valve_vertical_6_7 1, valve_vertical_6_8 1 channelWidth=100  ;
 CHANNEL channel_ctrl_in_vertical_7 from port_ctrl_in_vertical_7 1 to valve_vertical_7_1 1, valve_vertical_7_2 1, valve_vertical_7_3 1, valve_vertical_7_4 1, valve_vertical_7_5 1, valve_vertical_7_6 1, valve_vertical_7_7 1, valve_vertical_7_8 1 channelWidth=100  ; 
-
-END layer
-
+END LAYER

@@ -1,17 +1,38 @@
-# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/rootchip.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE rootchip
 
-LAYER flow
 
-PORT flow_in;
-PORT plant;
-PORT c;
-MIXER mixer_stub;
 
-CHANNEL c0 from flow_in 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from plant 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to c 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+
+
+
+
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+
+
+
+
+
+
+ 
+
+END LAYER
+

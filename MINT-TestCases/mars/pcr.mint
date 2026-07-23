@@ -1,36 +1,33 @@
-# Mirrored from LFR-TestCases/mars/pcr.lfr
-# Paired LFR (when mirrored): same relative path under LFR-TestCases. Regenerate with: fluigi compile_lfr <design>.lfr
-
 DEVICE pcr
 
 
 
-LAYER flow
+LAYER FLOW 
 
-DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1componentSpacing=9000;
-PORT port_1componentSpacing=9000;
-DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_2componentSpacing=9000;
-PORT port_2componentSpacing=9000;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1 componentSpacing=9000 ;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_2 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
 
 
 
-CHANNEL channel_1 from droplet_capacitance_sensor_1 2 to port_1 1 connectionSpacing=1000;
-CHANNEL channel_2 from droplet_capacitance_sensor_2 2 to droplet_capacitance_sensor_1 1 connectionSpacing=1000;
-CHANNEL channel_3 from port_2 1 to droplet_capacitance_sensor_2 1 connectionSpacing=1000;
-
- 
-
-END layer
-
-LAYER control
-
-PORT cport_3componentSpacing=9000;
-
-VALVE3D valve_0 on channel_1controlPort=Cport_3 componentSpacing=9000;
-
-CHANNEL ctrlchannel_3 from cport_3 1 to valve_0 1 connectionSpacing=1000;
+CHANNEL channel_1 from droplet_capacitance_sensor_1 2 to droplet_capacitance_sensor_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from droplet_capacitance_sensor_2 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_2 1 to droplet_capacitance_sensor_1 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 
-END layer
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_3 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_2 controlPort=Cport_3 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
 

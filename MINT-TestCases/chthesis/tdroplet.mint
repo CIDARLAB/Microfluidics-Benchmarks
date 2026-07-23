@@ -1,27 +1,52 @@
+# Please add default length and width to reaction chamber component
 DEVICE tdroplet
 
-LAYER flow
 
-PORT p1portRadius=100;
-H DROPLET GENERATOR T t1radius=100 oilChannelWidth=100 waterChannelWidth=20 length=2000 height=30;
-H MIXER x1numberOfBends=5 bendSpacing=100 bendLength=100 channelWidth=100;
-H DROPLET GENERATOR T t2radius=100 oilChannelWidth=100 waterChannelWidth=20 length=2000 height=30;
-H MIXER x2numberOfBends=5 bendSpacing=100 bendLength=100 channelWidth=100;
-V MUX m1 1 to 2spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-H LONG CELL TRAP ct1numberOfChambers=10 chamberWidth=100 chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
-CHANNEL c1 from t1 1 to x1 1 channelWidth=100;
-CHANNEL c2 from x1 2 to m1 1 channelWidth=100;
-CHANNEL c3 from t2 1 to x2 1 channelWidth=100;
-CHANNEL c4 from x2 2 to m1 2 channelWidth=100;
-CHANNEL c5 from m1 3 to ct1 1 channelWidth=100;
-CHANNEL c6 from ct1 2 to p1 channelWidth=100;
 
-END layer
+LAYER FLOW 
 
-LAYER control
+MIXER mixer_1 componentSpacing=9000 ;
+REACTION CHAMBER reaction_chamber_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+PORT port_1 portRadius=2000 componentSpacing=9000 ;
+PORT port_2 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=9000 ;
+PORT port_3 portRadius=2000 componentSpacing=9000 ;
+PORT port_4 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
 
-PORT cp1, cp2portRadius=100;
-CHANNEL cc1 from cp1 to m1 4channelWidth=100;
-CHANNEL cc2 from cp2 to m1 5channelWidth=100;
 
-END layer
+
+CHANNEL channel_1 from port_1 1 to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_2 from port_2 1 to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_3 from port_3 1 to nozzle_droplet_generator_2 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_4 from port_4 1 to nozzle_droplet_generator_2 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_5 from mixer_1 2 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_2 2 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from nozzle_droplet_generator_1 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from nozzle_droplet_generator_2 3 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_6 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_7 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_6 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_1 on channel_5 controlPort=Cport_1 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

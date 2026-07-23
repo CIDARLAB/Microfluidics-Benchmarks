@@ -1,29 +1,39 @@
-# MINT-TestCases mirror for LFR-TestCases/Ryuichi's designs/incubator.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
+# Please add default length and width to reaction chamber component
 DEVICE incubator
 
-LAYER flow
 
-PORT a;
-PORT b;
-PORT c;
-PORT d;
-PORT e;
-PORT x;
-PORT y;
-PORT z;
-PORT valve;
-MIXER mixer_stub;
 
-CHANNEL c0 from a 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from c 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c3 from d 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c4 from e 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c5 from x 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c6 from y 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c7 from z 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to valve 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+REACTION CHAMBER reaction_chamber_1 componentSpacing=9000 ;
+REACTION CHAMBER reaction_chamber_2 componentSpacing=9000 ;
+REACTION CHAMBER reaction_chamber_3 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+
+
+
+
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+
+
+
+
+
+
+ 
+
+END LAYER
+

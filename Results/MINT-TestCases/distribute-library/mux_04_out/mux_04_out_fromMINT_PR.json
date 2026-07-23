@@ -252,10 +252,10 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "valveRadius": 1200.0,
-                "height": 250.0,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
@@ -266,14 +266,14 @@
             },
             "ports": [
                 {
-                    "x": 1200,
-                    "y": 1200,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 2400,
-            "y-span": 2400
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "valve_1",
@@ -283,28 +283,28 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "valveRadius": 1200.0,
-                "height": 250.0,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
                 "position": [
-                    85000,
+                    83400,
                     20000
                 ]
             },
             "ports": [
                 {
-                    "x": 1200,
-                    "y": 1200,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 2400,
-            "y-span": 2400
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "valve_2",
@@ -314,28 +314,28 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "valveRadius": 1200.0,
-                "height": 250.0,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
                 "position": [
-                    92400,
+                    89200,
                     20000
                 ]
             },
             "ports": [
                 {
-                    "x": 1200,
-                    "y": 1200,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 2400,
-            "y-span": 2400
+            "x-span": 800,
+            "y-span": 800
         },
         {
             "name": "valve_3",
@@ -345,42 +345,42 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "rotation": 0.0,
-                "valveRadius": 1200.0,
-                "height": 250.0,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
                 "position": [
-                    99800,
+                    95000,
                     20000
                 ]
             },
             "ports": [
                 {
-                    "x": 1200,
-                    "y": 1200,
+                    "x": 400,
+                    "y": 400,
                     "label": "1",
                     "layer": "CONTROL"
                 }
             ],
-            "x-span": 2400,
-            "y-span": 2400
+            "x-span": 800,
+            "y-span": 800
         }
     ],
     "connections": [
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_3",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -388,37 +388,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    33500,
+                    20700,
                     20700
                 ],
                 "end": [
-                    20700,
+                    27100,
                     20700
                 ],
                 "wayPoints": [
                     [
-                        33500,
+                        20700,
                         20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ]
                     ],
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            20700,
+                            27100,
                             20700
                         ]
                     ]
@@ -428,24 +428,24 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_3",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "sink": {
-                        "component": "port_1",
+                        "component": "port_2",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            33500,
-                            20700
-                        ],
-                        [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
                             20700,
+                            20700
+                        ],
+                        [
+                            27100,
                             20700
                         ]
                     ],
@@ -457,14 +457,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_3",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -472,37 +472,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    33500,
+                    20700,
                     20700
                 ],
                 "end": [
-                    27100,
+                    33500,
                     20700
                 ],
                 "wayPoints": [
                     [
-                        33500,
+                        20700,
                         20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ]
                     ],
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            27100,
+                            33500,
                             20700
                         ]
                     ]
@@ -512,24 +512,24 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_3",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "sink": {
-                        "component": "port_2",
+                        "component": "port_3",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            33500,
+                            20700,
+                            20700
+                        ],
+                        [
+                            20700,
                             20700
                         ],
                         [
                             33500,
-                            20700
-                        ],
-                        [
-                            27100,
                             20700
                         ]
                     ],
@@ -548,7 +548,7 @@
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "port_3",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -556,7 +556,7 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    33500,
+                    20700,
                     20700
                 ],
                 "end": [
@@ -565,24 +565,24 @@
                 ],
                 "wayPoints": [
                     [
-                        33500,
+                        20700,
                         20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ]
                     ],
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
@@ -596,7 +596,7 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_3",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "sink": {
@@ -605,11 +605,11 @@
                     },
                     "wayPoints": [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
@@ -632,7 +632,7 @@
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "port_3",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -640,7 +640,7 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    33500,
+                    20700,
                     20700
                 ],
                 "end": [
@@ -649,24 +649,24 @@
                 ],
                 "wayPoints": [
                     [
-                        33500,
+                        20700,
                         20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ]
                     ],
                     [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
@@ -680,7 +680,7 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_3",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "sink": {
@@ -689,11 +689,11 @@
                     },
                     "wayPoints": [
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
-                            33500,
+                            20700,
                             20700
                         ],
                         [
@@ -728,13 +728,13 @@
                     20700
                 ],
                 "end": [
-                    78800,
-                    21200
+                    78000,
+                    20400
                 ],
                 "wayPoints": [
                     [
                         52700,
-                        21200
+                        20400
                     ]
                 ],
                 "segments": [
@@ -745,17 +745,17 @@
                         ],
                         [
                             52700,
-                            21200
+                            20400
                         ]
                     ],
                     [
                         [
                             52700,
-                            21200
+                            20400
                         ],
                         [
-                            78800,
-                            21200
+                            78000,
+                            20400
                         ]
                     ]
                 ]
@@ -778,11 +778,11 @@
                         ],
                         [
                             52700,
-                            21200
+                            20400
                         ],
                         [
-                            78800,
-                            21200
+                            78000,
+                            20400
                         ]
                     ],
                     "features": []
@@ -812,13 +812,13 @@
                     20700
                 ],
                 "end": [
-                    86200,
-                    21200
+                    83800,
+                    20400
                 ],
                 "wayPoints": [
                     [
                         59100,
-                        21200
+                        20400
                     ]
                 ],
                 "segments": [
@@ -829,17 +829,17 @@
                         ],
                         [
                             59100,
-                            21200
+                            20400
                         ]
                     ],
                     [
                         [
                             59100,
-                            21200
+                            20400
                         ],
                         [
-                            86200,
-                            21200
+                            83800,
+                            20400
                         ]
                     ]
                 ]
@@ -862,11 +862,11 @@
                         ],
                         [
                             59100,
-                            21200
+                            20400
                         ],
                         [
-                            86200,
-                            21200
+                            83800,
+                            20400
                         ]
                     ],
                     "features": []
@@ -896,13 +896,13 @@
                     20700
                 ],
                 "end": [
-                    93600,
-                    21200
+                    89600,
+                    20400
                 ],
                 "wayPoints": [
                     [
                         65500,
-                        21200
+                        20400
                     ]
                 ],
                 "segments": [
@@ -913,17 +913,17 @@
                         ],
                         [
                             65500,
-                            21200
+                            20400
                         ]
                     ],
                     [
                         [
                             65500,
-                            21200
+                            20400
                         ],
                         [
-                            93600,
-                            21200
+                            89600,
+                            20400
                         ]
                     ]
                 ]
@@ -946,11 +946,11 @@
                         ],
                         [
                             65500,
-                            21200
+                            20400
                         ],
                         [
-                            93600,
-                            21200
+                            89600,
+                            20400
                         ]
                     ],
                     "features": []
@@ -980,13 +980,13 @@
                     20700
                 ],
                 "end": [
-                    101000,
-                    21200
+                    95400,
+                    20400
                 ],
                 "wayPoints": [
                     [
                         71900,
-                        21200
+                        20400
                     ]
                 ],
                 "segments": [
@@ -997,17 +997,17 @@
                         ],
                         [
                             71900,
-                            21200
+                            20400
                         ]
                     ],
                     [
                         [
                             71900,
-                            21200
+                            20400
                         ],
                         [
-                            101000,
-                            21200
+                            95400,
+                            20400
                         ]
                     ]
                 ]
@@ -1030,11 +1030,11 @@
                         ],
                         [
                             71900,
-                            21200
+                            20400
                         ],
                         [
-                            101000,
-                            21200
+                            95400,
+                            20400
                         ]
                     ],
                     "features": []
@@ -1044,9 +1044,9 @@
         }
     ],
     "params": {
-        "x-span": 142200,
-        "y-span": 62400,
-        "length": 142200
+        "x-span": 135800,
+        "y-span": 61400,
+        "length": 135800
     },
     "layers": [
         {
@@ -1069,7 +1069,7 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_4",
+            "connectionid": "channel_2",
             "type": "NORMALLY_OPEN"
         },
         {
@@ -1084,7 +1084,7 @@
         },
         {
             "componentid": "valve_3",
-            "connectionid": "channel_2",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN"
         }
     ],

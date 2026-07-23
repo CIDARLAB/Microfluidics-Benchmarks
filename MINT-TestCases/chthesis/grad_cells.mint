@@ -1,40 +1,72 @@
+# Please add default length and width to reaction chamber component
 DEVICE grad_cells
 
-LAYER flow
 
-V BANK pb1, pb2 of PORTportRadius=100 spacing=1200 ;
-PORT p1portRadius=100;
-NODE n1;
-H GRADIENT GENERATOR g 1 to 4numberOfBends=10 bendSpacing=100 bendLength=500 
-    channelWidth=100 spacing=2000;
-V MUX m1 1 to 4spacing=500 width=400 length=100 stageLength=1000 flowChannelWidth=100 controlChannelWidth=50;
-V TREE t1 1 to 4spacing=500 flowChannelWidth=100 stageLength=500;
-V BANK ctb of 4 LONG CELL TRAPnumberOfChambers=20 chamberWidth=100 
-    chamberLength=100 chamberSpacing=30 feedingChannelWidth=100;
-CHANNEL c1 from pb1 to n1channelWidth=100;
-CHANNEL c2 from pb2 to n1channelWidth=100;
-CHANNEL c3 from n1 to g 1channelWidth=100;
-CHANNEL c4 from g 2 to m1 1 channelWidth=100;
-CHANNEL c5 from m1 2 to ctb_1 channelWidth=100;
-CHANNEL c6 from m1 3 to ctb_2 channelWidth=100;
-CHANNEL c7 from m1 4 to ctb_3 channelWidth=100;
-CHANNEL c8 from m1 5 to ctb_4 channelWidth=100;
-CHANNEL c9 from ctb_1 to t1 5channelWidth=100;
-CHANNEL c10 from ctb_2 to t1 4channelWidth=100;
-CHANNEL c11 from ctb_3 to t1 3channelWidth=100;
-CHANNEL c12 from ctb_4 to t1 2channelWidth=100;
-CHANNEL c13 from t1 1 to p1 channelWidth=100;
 
-END layer
+LAYER FLOW 
 
-LAYER control
+REACTION CHAMBER reaction_chamber_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_3 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_4 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+MIXER mixer_5 componentSpacing=9000 ;
+MIXER mixer_6 componentSpacing=9000 ;
+MIXER mixer_7 componentSpacing=9000 ;
+MIXER mixer_8 componentSpacing=9000 ;
+MIXER mixer_9 componentSpacing=9000 ;
+MIXER mixer_10 componentSpacing=9000 ;
+MIXER mixer_11 componentSpacing=9000 ;
+MIXER mixer_12 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
 
-H BANK cpb1_1, cpb1_2 of   PORTportRadius=100 spacing=1200 ;
-H BANK cpb2_1, cpb2_2 of   PORTportRadius=100 spacing=1200 ;
-CHANNEL cc1 from cpb1_1 to m1 7channelWidth=50;
-CHANNEL cc2 from cpb1_2 to m1 9channelWidth=50;
-CHANNEL cc3 from cpb2_1 to m1 6channelWidth=50;
-CHANNEL cc4 from cpb2_2 to m1 8channelWidth=50;
 
-END layer
+
+CHANNEL channel_1 from reaction_chamber_1 4 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from reaction_chamber_1 4 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from reaction_chamber_1 4 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from reaction_chamber_1 4 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from reaction_chamber_1 4 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_1 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from mixer_3 2 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from mixer_5 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from mixer_6 2 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from mixer_7 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from mixer_9 2 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from mixer_11 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from mixer_12 2 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from port_2 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from port_2 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from port_2 1 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from port_2 1 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_18 from port_3 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_19 from port_3 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_20 from port_3 1 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_21 from port_3 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_22 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_23 from square_cell_trap_2 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_24 from square_cell_trap_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_25 from square_cell_trap_4 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+
+
+
+
+
+
+ 
+
+END LAYER
 

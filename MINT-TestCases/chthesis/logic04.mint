@@ -1,67 +1,79 @@
 DEVICE logic04
 
-LAYER flow
 
-LOGIC ARRAY laflowChannelWidth=100 controlChannelWidth=50 
-    chamberLength=100 chamberWidth=100 portRadius=100          
-        componentSpacing=300;
-V BANK b0_1, b0_2, b0_3, b0_3, b0_4, b0_5, b0_6, b0_7, b0_8 of  PORTportRadius=100 
-    spacing=1500;
-V MUX m1 1 to 8spacing=500 width=400 length=100 stageLength=1000 
-    flowChannelWidth=100 controlChannelWidth=50;
 
-NODE n1;
-CHANNEL c0 from m1 9 to n1 channelWidth=100;
-CHANNEL c1 from n1 to la 3channelWidth=100;
-CHANNEL c2 from n1 to la 2channelWidth=100;
-CHANNEL c3 from la 1 to n1 channelWidth=100;
-CHANNEL c4 from b0_1 to m1 1channelWidth=100;
-CHANNEL c5 from b0_2 to m1 2channelWidth=100;
-CHANNEL c6 from b0_3 to m1 3channelWidth=100;
-CHANNEL c7 from b0_4 to m1 4channelWidth=100;
-CHANNEL c8 from b0_5 to m1 5channelWidth=100;
-CHANNEL c9 from b0_6 to m1 6channelWidth=100;
-CHANNEL c10 from b0_7 to m1 7channelWidth=100;
-CHANNEL c11 from b0_8 to m1 8channelWidth=100;
+LAYER FLOW 
 
-END layer
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_3 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_4 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+PORT port_12 componentSpacing=9000 ;
 
-LAYER control
 
-H BANK b4_1, b4_2, b4_3, b4_4, b4_5 of  PORTportRadius=100 spacing=1200;
-H BANK b5_1, b5_2, b5_3, b5_4 of   PORTportRadius=100 spacing=1200 ;
-CHANNEL cc21 from m1 10 to b4_1 channelWidth=50;
-CHANNEL cc22 from m1 11 to b5_1 channelWidth=50;
-CHANNEL cc23 from m1 12 to b4_2 channelWidth=50;
-CHANNEL cc24 from m1 13 to b5_2 channelWidth=50;
-CHANNEL cc25 from m1 14 to b4_3 channelWidth=50;
-CHANNEL cc26 from m1 15 to b5_3 channelWidth=50;
-CHANNEL cca from la 24 to b4_4 channelWidth=50;
-CHANNEL ccb from la 25 to b4_5 channelWidth=50;
-CHANNEL ccc from la 26 to b5_4 channelWidth=50;
-H BANK b1_1, b1_2, b1_3, b1_4, b1_5 of   PORTportRadius=100 spacing=1200 ;
-H BANK b3_1, b3_2, b3_3, b3_4, b3_5 of   PORTportRadius=100 spacing=1200 ;
-V BANK b2_1, b2_2, b2_3, b2_4, b2_5, 
-    b2_6, b2_7, b2_8, b2_9, b2_10 of PORT portRadius=100 spacing=1200;
-CHANNEL cc10 from la 13 to b2_5 channelWidth=50;
-CHANNEL cc11 from la 14 to b2_6 channelWidth=50;
-CHANNEL cc9 from la 12 to b2_4 channelWidth=50;
-CHANNEL cc12 from la 15 to b2_7 channelWidth=50;
-CHANNEL cc8 from la 11 to b2_3 channelWidth=50;
-CHANNEL cc13 from la 16 to b2_8 channelWidth=50;
-CHANNEL cc7 from la 10 to b2_2 channelWidth=50;
-CHANNEL cc14 from la 17 to b2_9 channelWidth=50;
-CHANNEL cc6 from la 9 to b2_1 channelWidth=50;
-CHANNEL cc15 from la 18 to b2_10 channelWidth=50;
-CHANNEL cc1 from b1_1 to la 4channelWidth=50;
-CHANNEL cc5 from b1_5 to la 8channelWidth=50;
-CHANNEL cc2 from b1_2 to la 5channelWidth=50;
-CHANNEL cc4 from b1_4 to la 7channelWidth=50;
-CHANNEL cc3 from b1_3 to la 6channelWidth=50;
-CHANNEL cc16 from b3_1 to la 19channelWidth=50;
-CHANNEL cc17 from b3_2 to la 20channelWidth=50;
-CHANNEL cc18 from b3_3 to la 21channelWidth=50;
-CHANNEL cc19 from b3_4 to la 22channelWidth=50;
-CHANNEL cc20 from b3_5 to la 23channelWidth=50;
 
-END layer
+CHANNEL channel_1 from square_cell_trap_1 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_1 2 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from square_cell_trap_1 2 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from square_cell_trap_1 2 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from square_cell_trap_2 2 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from square_cell_trap_2 2 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from square_cell_trap_2 2 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from square_cell_trap_3 2 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from square_cell_trap_3 2 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from square_cell_trap_4 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_12 componentSpacing=9000 ;
+PORT Cport_13 componentSpacing=9000 ;
+PORT Cport_14 componentSpacing=9000 ;
+PORT Cport_15 componentSpacing=9000 ;
+PORT Cport_16 componentSpacing=9000 ;
+PORT Cport_17 componentSpacing=9000 ;
+PORT Cport_18 componentSpacing=9000 ;
+PORT Cport_19 componentSpacing=9000 ;
+PORT Cport_20 componentSpacing=9000 ;
+PORT Cport_21 componentSpacing=9000 ;
+
+VALVE3D valve_4 on channel_1 controlPort=Cport_12 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_5 on channel_2 controlPort=Cport_13 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_6 on channel_3 controlPort=Cport_14 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_7 on channel_5 controlPort=Cport_15 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_8 on channel_6 controlPort=Cport_16 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_9 on channel_8 controlPort=Cport_17 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_10 on channel_4 controlPort=Cport_18 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_11 on channel_7 controlPort=Cport_19 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_12 on channel_9 controlPort=Cport_20 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_13 on channel_10 controlPort=Cport_21 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_12 from Cport_12 1 to valve_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_13 from Cport_13 1 to valve_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_14 from Cport_14 1 to valve_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_15 from Cport_15 1 to valve_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_16 from Cport_16 1 to valve_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_17 from Cport_17 1 to valve_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_18 from Cport_18 1 to valve_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_19 from Cport_19 1 to valve_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_20 from Cport_20 1 to valve_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_21 from Cport_21 1 to valve_13 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

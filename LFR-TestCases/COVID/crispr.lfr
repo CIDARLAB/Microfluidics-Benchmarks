@@ -9,7 +9,7 @@ foutput complex);
     assign mixer1 = water + nebuffer + lbcas12a + grna;
 
     assign mixer2 = ~mixer1;
-    assign mixer2 = reporter;
+    assign mixer2 = mixer2 + reporter;
 
     assign complex = ~mixer2;
 

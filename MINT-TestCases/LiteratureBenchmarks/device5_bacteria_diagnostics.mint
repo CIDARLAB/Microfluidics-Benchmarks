@@ -1,31 +1,43 @@
-DEVICE bacteria_diagnostics
+DEVICE device5_bacteria_diagnostics
 
-LAYER flow
 
-PORT p1, p2, p3, p4;
 
-MIXING CHAMBER mc;
-DETECTION CHAMBER dc;
+LAYER FLOW 
 
-CONNECTION c1 from p1 to mc 1;
-CONNECTION c2 from p2 to mc 2;
-CONNECTION c3 from p3 to dc 1;
-CONNECTION c4 from dc 2 to mc 3;
-CONNECTION c5 from mc 4 to p4;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+SQUARE CELL TRAP square_cell_trap_2 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
 
-END layer
 
-LAYER control
 
-PORT cp1, cp2;
+CHANNEL channel_1 from square_cell_trap_1 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_2 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_2 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_3 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_4 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 
-VALVE v1 on c1;
-VALVE v2 on c2;
-VALVE v3 on c4;
-VALVE v4 on c5;
+ 
 
-CONNECTION cn1 from cp1 to v1, v4;
-CONNECTION cc1 from v1 to v2;
-CONNECTION cc2 from cp2 to v3;
+END LAYER
 
-END layer
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_4 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

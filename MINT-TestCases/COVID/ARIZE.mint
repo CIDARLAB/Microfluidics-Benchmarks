@@ -1,47 +1,79 @@
-# MINT-TestCases mirror for LFR-TestCases/COVID/ARIZE.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
+DEVICE arize
 
-DEVICE expression1
 
-LAYER flow
 
-PORT in1a;
-PORT in2a;
-PORT in3a;
-PORT in4a;
-PORT in5a;
-PORT in6a;
-PORT in7a;
-PORT in1b;
-PORT in2b;
-PORT in3b;
-PORT in4b;
-PORT in5b;
-PORT in6b;
-PORT in7b;
-PORT in8b;
-PORT in9b;
-PORT out1;
-PORT out2;
-MIXER mixer_stub;
+LAYER FLOW 
 
-CHANNEL c0 from in1a 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from in2a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from in3a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c3 from in4a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c4 from in5a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c5 from in6a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c6 from in7a 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c7 from in1b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c8 from in2b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c9 from in3b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c10 from in4b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c11 from in5b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c12 from in6b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c13 from in7b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c14 from in8b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c15 from in9b 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c16 from out1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out2 1 channelWidth=200;
+DROPLET SPLITTER droplet_splitter_1 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+MIXER mixer_5 componentSpacing=9000 ;
+MIXER mixer_6 componentSpacing=9000 ;
+MIXER mixer_7 componentSpacing=9000 ;
+MIXER mixer_8 componentSpacing=9000 ;
+MIXER mixer_9 componentSpacing=9000 ;
+MIXER mixer_10 componentSpacing=9000 ;
+MIXER mixer_11 componentSpacing=9000 ;
+MIXER mixer_12 componentSpacing=9000 ;
+MIXER mixer_13 componentSpacing=9000 ;
+MIXER mixer_14 componentSpacing=9000 ;
+MIXER mixer_15 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
+PORT port_10 componentSpacing=9000 ;
+PORT port_11 componentSpacing=9000 ;
+PORT port_12 componentSpacing=9000 ;
+PORT port_13 componentSpacing=9000 ;
+PORT port_14 componentSpacing=9000 ;
+PORT port_15 componentSpacing=9000 ;
+PORT port_16 componentSpacing=9000 ;
+PORT port_17 componentSpacing=9000 ;
+PORT port_18 componentSpacing=9000 ;
 
-END layer
+
+
+CHANNEL channel_1 from droplet_splitter_1 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from mixer_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_7 2 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_13 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_3 2 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from mixer_11 2 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from mixer_14 2 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from mixer_15 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from mixer_5 2 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from mixer_12 2 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from mixer_9 2 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from mixer_8 2 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from mixer_4 2 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from mixer_10 2 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from port_2 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from port_3 1 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_18 from port_4 1 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_19 from port_5 1 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_20 from port_6 1 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_21 from port_7 1 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_22 from port_8 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_23 from port_9 1 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_24 from port_11 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_25 from port_12 1 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_26 from port_13 1 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_27 from port_14 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_28 from port_15 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_29 from port_16 1 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_30 from port_17 1 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_31 from port_18 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

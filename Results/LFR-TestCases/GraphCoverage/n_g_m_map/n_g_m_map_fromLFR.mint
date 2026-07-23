@@ -2,10 +2,10 @@ DEVICE n_g_m_map
 
 
 
-LAYER flow
+LAYER FLOW 
 
-PORT port_1componentSpacing=1000.0 portRadius=700.0 height=1100.0;
-PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
+PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 
 
 
@@ -13,5 +13,5 @@ PORT port_2componentSpacing=1000.0 portRadius=700.0 height=1100.0;
 
  
 
-END layer
+END LAYER
 

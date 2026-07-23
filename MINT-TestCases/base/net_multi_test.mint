@@ -1,7 +1,6 @@
 DEVICE net_multi_test
-
-LAYER flow
- V BANK b1 of 3  PORTportRadius=100  spacing=1500 ;
+LAYER FLOW 
+ V BANK b1 of 3  PORT portRadius=100  spacing=1500 ;
 NODE n1, n2, n3;
 
 CHANNEL c1 from b1 1 to n1 4 channelWidth=100;
@@ -10,17 +9,14 @@ CHANNEL c3 from b1 3 to n3 4 channelWidth=100;
 
 CHANNEL c9 from n1 3 to n2 1 channelWidth=100;
 CHANNEL c10 from n2 3 to n3 1 channelWidth=100;
-
-END layer
-
-LAYER control
- PORT cp1, cp2portRadius=100;
+END LAYER
+LAYER CONTROL 
+ PORT cp1, cp2 portRadius=100;
 
 VALVE v10 on c9 width=200 length=100;
 VALVE v11 on c10 width=200 length=100;
 
-NET cntrlnet1 from cp1 1 to v11 2, v10 2channelWidth=50;
+NET cntrlnet1 from cp1 1 to v11 2, v10 2 channelWidth=50;
 
-NET cntrlnet2 from cp2 1 to v11 4, v10 4channelWidth=50;
-
-END layer
+NET cntrlnet2 from cp2 1 to v11 4, v10 4 channelWidth=50;
+END LAYER

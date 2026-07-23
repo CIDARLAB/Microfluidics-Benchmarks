@@ -15,9 +15,9 @@
                 "numberOfBends": 1.0,
                 "bendLength": 2460.0,
                 "height": 250.0,
-                "rotation": 0.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "rotation": 0.0,
                 "position": [
                     -1,
                     -1
@@ -210,13 +210,13 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 1000.0,
-                "valveRadius": 400.0,
-                "height": 250.0,
-                "rotation": 0.0,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
+                "rotation": 0.0,
                 "position": [
                     -1,
                     -1
@@ -241,13 +241,13 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 1000.0,
-                "valveRadius": 400.0,
-                "height": 250.0,
-                "rotation": 0.0,
+                "componentSpacing": 1000,
+                "valveRadius": 400,
+                "height": 250,
                 "gap": 600.0,
                 "width": 2400.0,
                 "length": 2400.0,
+                "rotation": 0.0,
                 "position": [
                     -1,
                     -1
@@ -281,6 +281,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -316,7 +317,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -328,6 +329,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -375,6 +377,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -410,7 +413,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
@@ -422,6 +425,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -469,6 +473,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -516,6 +521,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     "Point",
                     -1,
@@ -580,7 +586,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_4",
+            "connectionid": "channel_2",
             "type": "NORMALLY_OPEN"
         }
     ],

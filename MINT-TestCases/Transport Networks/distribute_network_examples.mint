@@ -1,29 +1,64 @@
-# MINT-TestCases mirror for LFR-TestCases/Transport Networks/distribute_network_examples.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
+DEVICE distribute_network_examples
 
-DEVICE one_to_n
 
-LAYER flow
 
-PORT in;
-PORT out;
-PORT c1;
-PORT c2;
-PORT begin;
-PORT out;
-PORT in;
-PORT c2;
-PORT c2;
-MIXER mixer_stub;
+LAYER FLOW 
 
-CHANNEL c0 from in 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from out 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c2 from c1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c3 from c2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c4 from begin 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c5 from out 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c6 from in 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c7 from c2 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to c2 1 channelWidth=200;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
 
-END layer
+
+
+CHANNEL channel_1 from port_1 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_1 1 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_1 1 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from port_1 1 to port_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from port_1 1 to port_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_1 1 to port_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_1 1 to port_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_1 1 to port_9 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=9000 ;
+PORT Cport_1 componentSpacing=9000 ;
+PORT Cport_2 componentSpacing=9000 ;
+PORT Cport_3 componentSpacing=9000 ;
+PORT Cport_4 componentSpacing=9000 ;
+PORT Cport_5 componentSpacing=9000 ;
+PORT Cport_6 componentSpacing=9000 ;
+PORT Cport_7 componentSpacing=9000 ;
+
+VALVE3D valve_0 on channel_7 controlPort=Cport_0 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_1 on channel_6 controlPort=Cport_1 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_2 on channel_8 controlPort=Cport_2 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_3 on channel_1 controlPort=Cport_3 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_4 on channel_4 controlPort=Cport_4 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_5 on channel_2 controlPort=Cport_5 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_6 on channel_5 controlPort=Cport_6 componentSpacing=1000 valveRadius=400 height=250 ;
+VALVE3D valve_7 on channel_3 controlPort=Cport_7 componentSpacing=1000 valveRadius=400 height=250 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_2 from Cport_2 1 to valve_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_4 from Cport_4 1 to valve_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_5 from Cport_5 1 to valve_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_6 from Cport_6 1 to valve_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_7 from Cport_7 1 to valve_7 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

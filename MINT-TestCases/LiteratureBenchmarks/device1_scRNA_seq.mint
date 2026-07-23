@@ -1,36 +1,32 @@
-DEVICE sc_rna_seq
+DEVICE device1_sc_rna_seq
 
-LAYER flow
 
-PORT p1, p2, p3;
 
-PORT p4, p5;
+LAYER FLOW 
 
-MICROARRAY ma1height = 10000 width = 10000;
-MICROARRAY ma2, ma3, ma4;
+SQUARE CELL TRAP square_cell_trap_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
 
-CONNECTION c1 from p1 1 to ma1 1;
-CONNECTION c2 from p1 1 to ma2 1;
 
-CONNECTION c3 from p2 1 to ma3 1;
-CONNECTION c4 from p3 1 to ma4 1;
 
-NODE n1;
-CONNECTION c5 from ma3 2 to n1 1;
-CONNECTION c6 from ma4 2 to n1 1;
+CHANNEL channel_1 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from square_cell_trap_1 2 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from mixer_1 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from mixer_3 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_3 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_3 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_4 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_5 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 
-MIXER m1;
-CONNECTION c7 from n1 1 to m1 1;
+ 
 
-NOZZLE DROPLET GENERATOR dg;
-CONNECTION c8 from ma1 2 to dg 1;
-CONNECTION c9 from ma2 2 to dg 3;
-CONNECTION c10 from m1 2 to dg 2;
+END LAYER
 
-DIAMOND REACTION CHAMBER drc;
-CONNECTION c11 from dg 4 to drc 2;
-CONNECTION c12 from drc 1 to p5 1; 
-CONNECTION c14 from drc 3 to p5 1; 
-CONNECTION c15 from drc 4 to p4 1; 
-
-END layer

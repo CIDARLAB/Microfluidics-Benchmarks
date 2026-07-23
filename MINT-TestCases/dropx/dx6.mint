@@ -1,25 +1,31 @@
 DEVICE dx6
 
-LAYER flow
 
-PICOINJECTOR picoinjector_1;
-PORT port_1portRadius=2000 ;
-PORT port_2portRadius=2000 ;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1;
-DROPLET SPLITTER droplet_splitter_1;
-PORT port_3portRadius=2000 ;
-PORT port_4portRadius=2000 ;
-PORT port_5portRadius=2000 ;
-PORT port_6portRadius=2000 ;
 
-CHANNEL channel_1 from port_1  to nozzle_droplet_generator_1 2channelWidth=400  ;
-CHANNEL channel_2 from port_2  to nozzle_droplet_generator_1 4channelWidth=400  ;
-CHANNEL channel_3 from port_3  to picoinjector_1 1channelWidth=400  ;
-CHANNEL channel_4 from port_4  to picoinjector_1 2channelWidth=400  ;
-CHANNEL channel_5 from picoinjector_1 3 to nozzle_droplet_generator_1 1 channelWidth=400  ;
-CHANNEL channel_6 from nozzle_droplet_generator_1 3 to droplet_splitter_1 1 channelWidth=400  ;
-CHANNEL channel_7 from droplet_splitter_1 2 to port_5  channelWidth=400  ;
-CHANNEL channel_8 from droplet_splitter_1 3 to port_6  channelWidth=400  ; 
+LAYER FLOW 
 
-END layer
+PORT port_1 portRadius=2000 componentSpacing=9000 ;
+PORT port_2 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=9000 ;
+DROPLET SPLITTER droplet_splitter_1 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+PORT port_4 componentSpacing=9000 ;
+MIXER mixer_1 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_1 1 to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_2 from port_2 1 to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_3 from nozzle_droplet_generator_1 3 to droplet_splitter_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_4 from droplet_splitter_1 3 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_5 from droplet_splitter_1 3 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from mixer_1 2 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_5 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_6 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
 

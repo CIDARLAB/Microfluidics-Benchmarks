@@ -8,7 +8,7 @@ module mfd005chip(
     flow waste_in, shm, daw, daw_out;
 
     assign daw = inlet1;
-    assign daw = inlet2;
+    assign daw = daw + inlet2;
 
 #MAP "DAW junction" "~"
     assign daw_out = ~daw;
@@ -24,7 +24,7 @@ module mfd005chip(
     
     flow trap;
     assign trap = outlet;
-    assign trap = port;
+    assign trap = trap + port;
 
     flow shm_integ, trap_out;
     
@@ -33,7 +33,7 @@ module mfd005chip(
     assign trap_out = ~trap;
     assign trap = ~trap_out;
     assign shm_integ = trap_out;
-    assign shm_integ = shm;
+    assign shm_integ = shm_integ + shm;
 
-    assign waste = shm_integ;
+    assign waste = waste + shm_integ;
 endmodule

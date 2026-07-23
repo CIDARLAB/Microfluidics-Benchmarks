@@ -1,17 +1,21 @@
-# MINT-TestCases mirror for LFR-TestCases/Expressions/expression13.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE expression13
 
-LAYER flow
 
-PORT in1;
-PORT out1;
-PORT out2;
-MIXER mixer_stub;
 
-CHANNEL c0 from in1 1 to mixer_stub 1 channelWidth=200;
-CHANNEL c1 from out1 1 to mixer_stub 2 channelWidth=200;
-CHANNEL c_out from mixer_stub 3 to out2 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+DROPLET SPLITTER droplet_splitter_1 componentSpacing=9000 ;
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+PORT port_3 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from droplet_splitter_1 3 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from droplet_splitter_1 3 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_3 from port_3 1 to droplet_splitter_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

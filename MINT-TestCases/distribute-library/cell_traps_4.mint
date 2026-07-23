@@ -1,13 +1,17 @@
-# MINT-TestCases mirror for LFR-TestCases/distribute-library/cell_traps_4.lfr
-# Source: minimal stub from module port list; fluigi emitted no variant
-
 DEVICE cell_traps_4
 
-LAYER flow
 
-PORT in1;
-MIXER mixer_stub;
 
-CHANNEL c0 from in1 1 to mixer_stub 1 channelWidth=200;
+LAYER FLOW 
 
-END layer
+PORT port_1 componentSpacing=9000 ;
+PORT port_2 componentSpacing=9000 ;
+
+
+
+CHANNEL channel_1 from port_2 1 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

@@ -1,8 +1,6 @@
 DEVICE test_mux_02 
-
-LAYER flow
-
- PORT p1, p2, p3, p4, p5portRadius=100;
+LAYER FLOW 
+ PORT p1, p2, p3, p4, p5 portRadius=100;
 NODE n1, n2, n3, n4, n5, n6, n7, n8, n9;
 
 CHANNEL c13 from n8 2 to p5 4 channelWidth=100;
@@ -19,6 +17,4 @@ CHANNEL c1 from p1 2 to n1 4 channelWidth=100;
 CHANNEL c2 from p2 2 to n3 4 channelWidth=100;
 CHANNEL c3 from p3 2 to n4 4 channelWidth=100;
 CHANNEL c4 from p4 2 to n6 4 channelWidth=100;
-
-END layer
-
+END LAYER

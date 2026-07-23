@@ -1,76 +1,46 @@
-# MINT-TestCases mirror for LFR-TestCases/dropx/dx14.lfr
-# Source: dropx_ref/dx14_ref.mint
-
 DEVICE dx14
 
-LAYER flow
 
-PORT port_in1, port_in2, port_in3portRadius=2000;
-MIXER mixer_inbendSpacing=600
-numberOfBends=5
-channelWidth=300
-bendLength=2000
-height=300;
 
-CHANNEL channel_1 from port_in1 to mixer_in 1channelWidth=300;
-CHANNEL channel_2 from port_in2 to mixer_in 1channelWidth=300;
-CHANNEL channel_3 from port_in3 to mixer_in 1channelWidth=300;
+LAYER FLOW 
 
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator1orificeSize=150
-orificeLength=375
-oilInputWidth=600
-waterInputWidth=375
-outputWidth=300
-outputLength=5000
-height=300;
-NOZZLE DROPLET GENERATOR nozzle_droplet_generator2orificeSize=150
-orificeLength=375
-oilInputWidth=600
-waterInputWidth=375
-outputWidth=300
-outputLength=5000
-height=300;
+MIXER mixer_1 componentSpacing=9000 ;
+MIXER mixer_2 componentSpacing=9000 ;
+DROPLET CAPACITANCE SENSOR droplet_capacitance_sensor_1 componentSpacing=9000 ;
+PORT port_1 portRadius=2000 componentSpacing=9000 ;
+PORT port_2 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=9000 ;
+PORT port_3 portRadius=2000 componentSpacing=9000 ;
+PORT port_4 portRadius=2000 componentSpacing=9000 ;
+NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2 componentSpacing=9000 ;
+DROPLET SORTER droplet_sorter_1 componentSpacing=9000 ;
+PORT port_5 componentSpacing=9000 ;
+PORT port_6 componentSpacing=9000 ;
+MIXER mixer_3 componentSpacing=9000 ;
+MIXER mixer_4 componentSpacing=9000 ;
+PORT port_7 componentSpacing=9000 ;
+PORT port_8 componentSpacing=9000 ;
+PORT port_9 componentSpacing=9000 ;
 
-CHANNEL channel_mixed_1 from mixer_in 2 to nozzle_droplet_generator1 4 channelWidth=300;
-CHANNEL channel_mixed_2 from mixer_in 2 to nozzle_droplet_generator2 4 channelWidth=300;
 
-PORT port_oil1, port_oil2, port_oil3, port_oil4portRadius=2000;
-CHANNEL channel_oil1 from port_oil1 to nozzle_droplet_generator1 1channelWidth=300;
-CHANNEL channel_oil2 from port_oil2 to nozzle_droplet_generator1 3channelWidth=300;
-CHANNEL channel_oil3 from port_oil3 to nozzle_droplet_generator2 1channelWidth=300;
-CHANNEL channel_oil4 from port_oil4 to nozzle_droplet_generator2 3channelWidth=300;
 
-MIXER mixer_incubate1, mixer_incubate2bendSpacing=600
-numberOfBends=5
-channelWidth=300
-bendLength=2000
-height=300;
-CHANNEL channel_incubate1 from nozzle_droplet_generator1 2 to mixer_incubate1 1 channelWidth=300;
-CHANNEL channel_incubate2 from nozzle_droplet_generator2 2 to mixer_incubate2 1 channelWidth=300;
+CHANNEL channel_1 from port_1 1 to nozzle_droplet_generator_1 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_2 from port_2 1 to nozzle_droplet_generator_1 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_3 from port_3 1 to nozzle_droplet_generator_2 2 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_4 from port_4 1 to nozzle_droplet_generator_2 4 channelWidth=400 connectionSpacing=1000  ;
+CHANNEL channel_5 from droplet_capacitance_sensor_1 2 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from droplet_capacitance_sensor_1 2 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from nozzle_droplet_generator_1 3 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from nozzle_droplet_generator_2 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from droplet_sorter_1 3 to port_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from droplet_sorter_1 3 to port_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from mixer_3 2 to droplet_capacitance_sensor_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from mixer_4 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from port_7 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from port_8 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from port_9 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
 
-DROPLET SORTER droplet_sorter1height=300
-inletWidth=300
-inletLength=4000
-inletLength=4000
-electrodeDistance=1000
-electrodeWidth=700
-electrodeLength=5000
-outletWidth=300
-angle=45
-wasteWidth=600
-outputLength=4000
-keepWidth=600
-pressureWidth=1000
-numberofDistributors=5
-channelDepth=300
-electrodeDepth=300
-pressureDepth=200 ;
-CHANNEL channel_incubate3 from mixer_incubate1 1 to droplet_sorter1 1 channelWidth=300;
-CHANNEL channel_incubate4 from mixer_incubate2 1 to droplet_sorter1 1 channelWidth=300;
+ 
 
-PORT port_out1, port_out2portRadius=2000;
-CHANNEL channel_out1 from droplet_sorter1 2 to port_out1 channelWidth=300;
-CHANNEL channel_out2 from droplet_sorter1 3 to port_out2 channelWidth=300;
-
-END layer
+END LAYER
 
