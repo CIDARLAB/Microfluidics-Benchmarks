@@ -11,4 +11,21 @@ module transposer_04(
     assign o1 = i0 + i1 + i2 + i3;  // FLOW merge / mix
     assign o2 = i0 + i1 + i2 + i3;  // FLOW merge / mix
     assign o3 = i0 + i1 + i2 + i3;  // FLOW merge / mix
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = i0 + i1 + i2 + i3;
+    distribute@(c_select[0]) begin
+        if (c_select[0] == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_select[1]) begin
+        if (c_select[1] == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_select[2]) begin
+        if (c_select[2] == 1)
+            o0 <= __ctrl_emit_src;
+    end
+
 endmodule

@@ -24,4 +24,21 @@ module directed_evolution(
     assign waste2 = genes + pcr_mastermix + tx_tl_sol + ethanol;           // waste2 from shared merge
     assign candidate_pool = genes + pcr_mastermix + tx_tl_sol + ethanol;  // candidates from shared merge
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = genes + pcr_mastermix + tx_tl_sol + ethanol;
+    distribute@(initial) begin
+        if (initial == 1)
+            result <= __ctrl_emit_src;
+    end
+    distribute@(found_candidate) begin
+        if (found_candidate == 1)
+            result <= __ctrl_emit_src;
+    end
+    distribute@(found_result) begin
+        if (found_result == 1)
+            result <= __ctrl_emit_src;
+    end
+
 endmodule

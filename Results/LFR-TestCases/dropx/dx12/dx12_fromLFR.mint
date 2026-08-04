@@ -2,6 +2,18 @@ DEVICE dx12
 
 
 
+
+
+// === PORT COUNT CORRECTION ===
+// Physical port counts in this file are authoritative for the synthesized device.
+// FLOW ports: 7 (LFR module IO declared 5)
+// CONTROL ports (Cport_*): 0
+// Port counts differ from the original LFR IO / control bit-width.
+// The physical counts above are authoritative. Common causes include
+// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
+//   - FLOW port count differs from LFR IO (declared 5 → physical FLOW ports 7; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)
+// === END PORT COUNT CORRECTION ===
+
 LAYER FLOW 
 
 MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;

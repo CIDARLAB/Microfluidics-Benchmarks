@@ -9,7 +9,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "inletWidth": 1000.0,
@@ -53,7 +53,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "inletWidth": 1000.0,
@@ -97,7 +97,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -124,7 +124,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -144,14 +144,14 @@
             "y-span": 1400
         },
         {
-            "name": "Cport_3",
-            "id": "Cport_3",
+            "name": "Cport_0",
+            "id": "Cport_0",
             "entity": "PORT",
             "layers": [
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -200,6 +200,33 @@
             ],
             "x-span": 800,
             "y-span": 800
+        },
+        {
+            "name": "Cport_1",
+            "id": "Cport_1",
+            "entity": "PORT",
+            "layers": [
+                "1"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         }
     ],
     "connections": [
@@ -354,13 +381,69 @@
                     "port": "1"
                 }
             ],
-            "name": "Ctrlchannel_3",
-            "id": "Ctrlchannel_3",
+            "name": "Ctrlchannel_0",
+            "id": "Ctrlchannel_0",
             "source": {
-                "component": "Cport_3",
+                "component": "Cport_0",
                 "port": "1"
             },
             "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "1",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "valve_0",
+                    "port": "1"
+                }
+            ],
+            "name": "Ctrlchannel_1",
+            "id": "Ctrlchannel_1",
+            "source": {
+                "component": "Cport_1",
+                "port": "1"
+            },
+            "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
                 "start": [
@@ -399,7 +482,11 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "controlPortCount": 2,
+        "logicalControlBits": 2,
+        "flowPortCount": 2,
+        "logicalFlowIo": 2
     },
     "layers": [
         {
@@ -407,14 +494,14 @@
             "id": "0",
             "type": "FLOW",
             "params": {},
-            "group": "0"
+            "group": 0
         },
         {
-            "name": "FLOW_0",
+            "name": "FLOW_control",
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": "0"
+            "group": 1
         }
     ],
     "features": [],
@@ -423,7 +510,8 @@
         {
             "componentid": "valve_0",
             "connectionid": "channel_2",
-            "type": "NORMALLY_OPEN"
+            "type": "NORMALLY_OPEN",
+            "controlportid": "Cport_1"
         }
     ],
     "isPnR": false,

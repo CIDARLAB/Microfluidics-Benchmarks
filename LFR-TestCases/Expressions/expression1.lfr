@@ -11,11 +11,11 @@ module expression1(
 
     flow drop1, drop2, merged;  // metered lanes and their merge result
 
-    #MAP "DROPLET GENERATOR" "%"  // map % to DROPLET GENERATOR
+    #MAP "NOZZLE DROPLET GENERATOR" "%"  // map % to DROPLET GENERATOR
     // Meter: generate droplets from in1 at volume 50.88
     assign drop1 = in1 % 50.88;
 
-    #MAP "DROPLET GENERATOR" "%"  // map % to DROPLET GENERATOR
+    #MAP "NOZZLE DROPLET GENERATOR" "%"  // map % to DROPLET GENERATOR
     // Meter: generate droplets from in2 at volume 100
     assign drop2 = in2 % 100;
 

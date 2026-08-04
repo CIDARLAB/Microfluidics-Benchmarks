@@ -5,7 +5,7 @@
 module dropletgenerator(waterin, dropletout);
     finput waterin;  // FLOW inlet(s)
     foutput dropletout;  // FLOW outlet(s)
-    #MAP "DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
+    #MAP "NOZZLE DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
     #CONSTRAIN "&" droplet_rate = 30 hz  // constraint on mapped operator (rate/size/etc.)
     assign dropletout = waterin%100 ;  // meter / dropletize (FLOW)
 endmodule

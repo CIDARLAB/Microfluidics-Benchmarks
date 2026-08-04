@@ -21,4 +21,41 @@ module logic04(
     assign cell_traps = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7;  // FLOW merge / mix
     #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
     assign out[0:3] = in1[0];  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1[0] + in1[1] + in1[2] + in1[3] + in1[4] + in1[5] + in1[6] + in1[7];
+    distribute@(c_mux_in[0]) begin
+        if (c_mux_in[0] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_mux_in[1]) begin
+        if (c_mux_in[1] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_mux_in[2]) begin
+        if (c_mux_in[2] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[0]) begin
+        if (c_logic_array[0] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[1]) begin
+        if (c_logic_array[1] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[2]) begin
+        if (c_logic_array[2] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[3]) begin
+        if (c_logic_array[3] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[4]) begin
+        if (c_logic_array[4] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+
 endmodule

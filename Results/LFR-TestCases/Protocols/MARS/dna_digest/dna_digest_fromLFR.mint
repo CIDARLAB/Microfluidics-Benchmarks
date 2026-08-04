@@ -2,6 +2,7 @@ DEVICE dna_digest
 
 
 
+
 LAYER FLOW 
 
 PORT port_1 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;

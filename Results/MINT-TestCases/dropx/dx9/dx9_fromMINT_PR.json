@@ -10,7 +10,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     20000,
@@ -37,7 +37,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     29000,
@@ -63,7 +63,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "orificeSize": 200.0,
                 "orificeLength": 400.0,
                 "oilInputWidth": 800.0,
@@ -116,7 +116,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
@@ -155,7 +155,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
@@ -194,7 +194,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "inletWidth": 800.0,
@@ -251,7 +251,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -278,7 +278,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -306,7 +306,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     99170,
@@ -333,7 +333,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     108170,
@@ -359,7 +359,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "orificeSize": 200.0,
                 "orificeLength": 400.0,
                 "oilInputWidth": 800.0,
@@ -412,7 +412,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -439,7 +439,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -466,7 +466,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -1162,96 +1162,12 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_sorter_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
-            "source": {
-                "component": "mixer_2",
-                "port": "2"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    55890,
-                    24860
-                ],
-                "end": [
-                    62920,
-                    24845
-                ],
-                "wayPoints": [
-                    [
-                        55890,
-                        24845
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            55890,
-                            24860
-                        ],
-                        [
-                            55890,
-                            24845
-                        ]
-                    ],
-                    [
-                        [
-                            55890,
-                            24845
-                        ],
-                        [
-                            62920,
-                            24845
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "mixer_2",
-                        "port": "2"
-                    },
-                    "sink": {
-                        "component": "droplet_sorter_1",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            55890,
-                            24860
-                        ],
-                        [
-                            55890,
-                            24845
-                        ],
-                        [
-                            62920,
-                            24845
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_2",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_10",
-            "id": "channel_10",
             "source": {
                 "component": "mixer_1",
                 "port": "2"
@@ -1330,7 +1246,91 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "droplet_sorter_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_10",
+            "id": "channel_10",
+            "source": {
+                "component": "mixer_2",
+                "port": "2"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    55890,
+                    24860
+                ],
+                "end": [
+                    62920,
+                    24845
+                ],
+                "wayPoints": [
+                    [
+                        55890,
+                        24845
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            55890,
+                            24860
+                        ],
+                        [
+                            55890,
+                            24845
+                        ]
+                    ],
+                    [
+                        [
+                            55890,
+                            24845
+                        ],
+                        [
+                            62920,
+                            24845
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "mixer_2",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "droplet_sorter_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            55890,
+                            24860
+                        ],
+                        [
+                            55890,
+                            24845
+                        ],
+                        [
+                            62920,
+                            24845
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "nozzle_droplet_generator_2",
                     "port": "1"
                 }
             ],
@@ -1349,7 +1349,7 @@
                     20700
                 ],
                 "end": [
-                    55890,
+                    117570,
                     20000
                 ],
                 "wayPoints": [
@@ -1375,7 +1375,7 @@
                             20000
                         ],
                         [
-                            55890,
+                            117570,
                             20000
                         ]
                     ]
@@ -1389,7 +1389,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "mixer_2",
+                        "component": "nozzle_droplet_generator_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1402,7 +1402,7 @@
                             20000
                         ],
                         [
-                            55890,
+                            117570,
                             20000
                         ]
                     ],
@@ -1414,7 +1414,7 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_2",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
@@ -1433,7 +1433,7 @@
                     20700
                 ],
                 "end": [
-                    117570,
+                    55890,
                     20000
                 ],
                 "wayPoints": [
@@ -1459,7 +1459,7 @@
                             20000
                         ],
                         [
-                            117570,
+                            55890,
                             20000
                         ]
                     ]
@@ -1473,7 +1473,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "nozzle_droplet_generator_2",
+                        "component": "mixer_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1486,7 +1486,7 @@
                             20000
                         ],
                         [
-                            117570,
+                            55890,
                             20000
                         ]
                     ],
@@ -1591,7 +1591,7 @@
             "id": "0",
             "type": "FLOW",
             "params": {},
-            "group": "0"
+            "group": 0
         }
     ],
     "features": [],

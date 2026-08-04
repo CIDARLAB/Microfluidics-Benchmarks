@@ -59,7 +59,7 @@ module device7_enzyme_screening(
     assign mix_c = mix_b + gated6 + gated7;                       // third mix stage (+ reagents 6–7)
     assign aqueous = mix_c;                                       // aqueous phase alias after full merge
 
-    #MAP "DROPLET GENERATOR" "%"                                  // map % to droplet generator
+    #MAP "NOZZLE DROPLET GENERATOR" "%"                                  // map % to droplet generator
     assign metered = aqueous % 50;                                // meter aqueous into droplets (vol 50)
     assign droplets = metered + oil_in;                           // combine metered aqueous with oil
 
@@ -67,5 +67,38 @@ module device7_enzyme_screening(
     incubator incubator_2(drop_inc1, drop_inc2);                  // second incubation stage
 
     assign outlet = drop_inc2;                                    // drive final outlet from second incubator
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1 + in2 + in3 + in4 + in5 + in6 + in7 + oil_in;
+    distribute@(c1) begin
+        if (c1 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c2) begin
+        if (c2 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c3) begin
+        if (c3 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c4) begin
+        if (c4 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c5) begin
+        if (c5 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c6) begin
+        if (c6 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c7) begin
+        if (c7 == 1)
+            outlet <= __ctrl_emit_src;
+    end
 
 endmodule

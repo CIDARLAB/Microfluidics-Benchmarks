@@ -2,6 +2,7 @@ DEVICE chemostat_chip
 
 
 
+
 LAYER FLOW 
 
 MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
@@ -23,6 +24,14 @@ MIXER mixer_6 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numb
 MIXER mixer_7 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_8 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_9 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_10 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_11 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_12 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_13 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_14 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_15 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_16 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_17 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
@@ -45,30 +54,104 @@ CHANNEL channel_7 from mixer_7 2 to square_cell_trap_1 1 connectionSpacing=1000 
 CHANNEL channel_8 from mixer_8 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_9 from mixer_9 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_10 from square_cell_trap_2 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_11 from square_cell_trap_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_12 from square_cell_trap_4 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_13 from square_cell_trap_5 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_14 from square_cell_trap_1 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_15 from square_cell_trap_1 2 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_16 from square_cell_trap_1 2 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_17 from square_cell_trap_1 2 to square_cell_trap_5 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_18 from square_cell_trap_1 2 to square_cell_trap_6 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_19 from square_cell_trap_1 2 to square_cell_trap_7 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_20 from square_cell_trap_1 2 to square_cell_trap_8 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_21 from square_cell_trap_1 2 to square_cell_trap_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from square_cell_trap_1 2 to square_cell_trap_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from square_cell_trap_1 2 to square_cell_trap_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from square_cell_trap_1 2 to square_cell_trap_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from square_cell_trap_1 2 to square_cell_trap_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from square_cell_trap_1 2 to square_cell_trap_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from square_cell_trap_1 2 to square_cell_trap_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from square_cell_trap_1 2 to square_cell_trap_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_18 from square_cell_trap_1 2 to square_cell_trap_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_19 from square_cell_trap_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_20 from square_cell_trap_4 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_21 from square_cell_trap_5 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_22 from square_cell_trap_6 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_23 from square_cell_trap_7 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_24 from square_cell_trap_8 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_25 from square_cell_trap_9 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_26 from port_2 1 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_27 from port_3 1 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_28 from port_4 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_29 from port_5 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_30 from port_6 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_31 from port_7 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_32 from port_8 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_33 from port_9 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_34 from port_10 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_26 from mixer_10 2 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_27 from mixer_11 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_28 from mixer_12 2 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_29 from mixer_14 2 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_30 from mixer_15 2 to mixer_16 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_31 from mixer_17 2 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_32 from mixer_13 2 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_33 from mixer_16 2 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_34 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_35 from port_3 1 to mixer_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_36 from port_4 1 to mixer_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_37 from port_4 1 to mixer_10 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_38 from port_4 1 to mixer_11 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_39 from port_4 1 to mixer_12 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_40 from port_4 1 to mixer_14 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_41 from port_4 1 to mixer_15 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_42 from port_4 1 to mixer_17 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_43 from port_4 1 to mixer_13 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_44 from port_4 1 to mixer_16 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_45 from port_5 1 to mixer_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_46 from port_6 1 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_47 from port_7 1 to mixer_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_48 from port_8 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_49 from port_9 1 to mixer_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_50 from port_10 1 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_10 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_11 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_12 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_13 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_14 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_15 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_16 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_17 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_18 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_19 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_20 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_21 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_22 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_23 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+
+VALVE3D valve_0 on channel_27 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_2 from Cport_2 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_3 from Cport_3 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_4 from Cport_4 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_5 from Cport_5 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_6 from Cport_6 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_7 from Cport_7 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_8 from Cport_8 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_9 from Cport_9 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_10 from Cport_10 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_11 from Cport_11 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_12 from Cport_12 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_13 from Cport_13 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_14 from Cport_14 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_15 from Cport_15 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_16 from Cport_16 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_17 from Cport_17 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_18 from Cport_18 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_19 from Cport_19 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_20 from Cport_20 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_21 from Cport_21 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_22 from Cport_22 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_23 from Cport_23 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

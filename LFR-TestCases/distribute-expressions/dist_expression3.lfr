@@ -9,4 +9,13 @@ module dist_expression3(
 );
     assign out1 = in;  // continuous FLOW assign
     assign out2 = in;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in;
+    distribute@(c1) begin
+        if (c1 == 1)
+            out1 <= __ctrl_emit_src;
+    end
+
 endmodule

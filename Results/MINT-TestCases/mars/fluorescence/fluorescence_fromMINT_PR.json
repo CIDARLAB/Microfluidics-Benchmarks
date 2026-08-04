@@ -10,7 +10,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     20000,
@@ -37,7 +37,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     29000,
@@ -63,7 +63,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "orificeSize": 200.0,
                 "orificeLength": 400.0,
                 "oilInputWidth": 800.0,
@@ -116,7 +116,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
@@ -155,7 +155,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "channelWidth": 1000.0,
@@ -208,7 +208,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     62860,
@@ -235,7 +235,7 @@
             ],
             "params": {
                 "portRadius": 2000,
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "height": 1100.0,
                 "position": [
                     71860,
@@ -261,7 +261,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "orificeSize": 200.0,
                 "orificeLength": 400.0,
                 "oilInputWidth": 800.0,
@@ -314,7 +314,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -341,7 +341,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -368,7 +368,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -395,7 +395,7 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -1038,7 +1038,7 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_2",
+                    "component": "nozzle_droplet_generator_1",
                     "port": "1"
                 }
             ],
@@ -1057,7 +1057,7 @@
                     20700
                 ],
                 "end": [
-                    81260,
+                    38400,
                     20000
                 ],
                 "wayPoints": [
@@ -1083,7 +1083,7 @@
                             20000
                         ],
                         [
-                            81260,
+                            38400,
                             20000
                         ]
                     ]
@@ -1097,7 +1097,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "nozzle_droplet_generator_2",
+                        "component": "nozzle_droplet_generator_1",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1110,7 +1110,7 @@
                             20000
                         ],
                         [
-                            81260,
+                            38400,
                             20000
                         ]
                     ],
@@ -1122,7 +1122,7 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "nozzle_droplet_generator_2",
                     "port": "1"
                 }
             ],
@@ -1141,7 +1141,7 @@
                     20700
                 ],
                 "end": [
-                    38400,
+                    81260,
                     20000
                 ],
                 "wayPoints": [
@@ -1167,7 +1167,7 @@
                             20000
                         ],
                         [
-                            38400,
+                            81260,
                             20000
                         ]
                     ]
@@ -1181,7 +1181,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "nozzle_droplet_generator_1",
+                        "component": "nozzle_droplet_generator_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1194,7 +1194,7 @@
                             20000
                         ],
                         [
-                            38400,
+                            81260,
                             20000
                         ]
                     ],
@@ -1301,6 +1301,10 @@
                 "port": "1"
             },
             "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
                 "start": [
@@ -1383,14 +1387,14 @@
             "id": "0",
             "type": "FLOW",
             "params": {},
-            "group": "0"
+            "group": 0
         },
         {
-            "name": "FLOW_0",
+            "name": "FLOW_control",
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": "0"
+            "group": 1
         }
     ],
     "features": [],
@@ -1399,7 +1403,8 @@
         {
             "componentid": "valve_0",
             "connectionid": "channel_10",
-            "type": "NORMALLY_OPEN"
+            "type": "NORMALLY_OPEN",
+            "controlportid": "Cport_0"
         }
     ],
     "isPnR": false

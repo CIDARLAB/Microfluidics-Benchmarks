@@ -30,4 +30,13 @@ module aj_rtpcr_8primer(
     // Fan-out: distribute rtmix across all 8 amplified outlets
     assign amplifiedout[0:7] = rtmix;
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = primerin[0] + primerin[1] + primerin[2] + primerin[3] + primerin[4] + primerin[5] + primerin[6] + primerin[7] + pcrmix + rtmix;
+    distribute@(cprimer) begin
+        if (cprimer == 1)
+            amplifiedout[0] <= __ctrl_emit_src;
+    end
+
 endmodule

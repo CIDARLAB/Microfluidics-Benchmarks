@@ -10,7 +10,7 @@ module tdroplet(
     flow [0:1] temp_inputs;  // intermediate FLOW net(s)
     flow [0:1] delayed_outputs;  // intermediate FLOW net(s)
     flow trapped;  // intermediate FLOW net(s)
-    #MAP "DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
+    #MAP "NOZZLE DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
     assign temp_inputs = inputs % 50;  // meter / dropletize (FLOW)
     #MAP "MIXER" "~"  // tech-map: operator/keyword → component
     assign delayed_outputs = ~temp_inputs;  // mapped unary op on FLOW (e.g. mixer/incubator)
@@ -26,4 +26,6 @@ module tdroplet(
     end
     assign trapped = cell_trap;  // continuous FLOW assign
     assign output = trapped;  // continuous FLOW assign
+
+
 endmodule

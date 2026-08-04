@@ -22,4 +22,13 @@ module olfactory(
     assign worm = junction;                                        // route junction into worm channel
     assign left_outlet = junction;                                 // route same junction to left outlet
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = stimulus + buffer + left_dye + right_dye;
+    distribute@(c) begin
+        if (c == 1)
+            worm <= __ctrl_emit_src;
+    end
+
 endmodule

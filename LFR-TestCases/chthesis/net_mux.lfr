@@ -1,18 +1,50 @@
-// net_mux — dual-inlet cell-trap array fanning to dual outlets.
-// Purpose: Merge in1 with both in2 lanes into traps; YTREE-fan in1 to out1; drive out2 from shared merge.
-// Topology: FLOW: `in1,in2[*]` → `cell_traps`; `in1` → (#MAP YTREE) `out1[0:7]`; merge → `out2`. CONTROLs interface-only.
-// Collaborator takeaway: Linearized net-mux: no distribute, all ports on one island.
+// net_mux — dual-inlet fan-out device with a combined product outlet.
+// Purpose: three inlets merge; the product is mirrored to eight fan-out
+//   outlets plus `out2`, keeping one connected netlist (LFR PORT count =
+//   MINT PORT count = 12).
+// Topology: FLOW: in1,in2a,in2b → (o0..o7, out2). CONTROL: interface-only.
+// Collaborator takeaway: Prefer driving outlets directly from shared inlet
+//   expressions; unused `storage` nodes become floating components in MINT.
 module net_mux(
-    finput in1, [0:1] in2,  // FLOW inlet(s)
-    foutput [0:7] out1, out2,  // FLOW outlet(s)
-    control c_in1, c_in2, c_in_connect, c_out_connect, c_out1  // CONTROL select/gate — does not carry fluid
+    finput in1, in2a, in2b,                          // three FLOW inlets
+    foutput o0, o1, o2, o3, o4, o5, o6, o7, out2,    // eight fan-outs + product
+    control c_in1, c_in2, c_in_connect, c_out_connect, c_out1  // interface-only
 );
-    flow in2_0, in2_1;  // intermediate FLOW net(s)
-    storage [0:7] cell_traps;  // STORAGE / chamber node(s)
-    assign in2_0 = in2[0];  // continuous FLOW assign
-    assign in2_1 = in2[1];  // continuous FLOW assign
-    assign cell_traps = in1 + in2_0 + in2_1;  // FLOW merge / mix
-    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
-    assign out1[0:7] = in1;  // continuous FLOW assign
-    assign out2 = in1 + in2_0 + in2_1;  // FLOW merge / mix
+
+    // Each outlet reuses all three inlets → single connected island
+    assign o0 = in1 + in2a + in2b;
+    assign o1 = in1 + in2a + in2b;
+    assign o2 = in1 + in2a + in2b;
+    assign o3 = in1 + in2a + in2b;
+    assign o4 = in1 + in2a + in2b;
+    assign o5 = in1 + in2a + in2b;
+    assign o6 = in1 + in2a + in2b;
+    assign o7 = in1 + in2a + in2b;
+    assign out2 = in1 + in2a + in2b;
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1 + in2a + in2b;
+    distribute@(c_in1) begin
+        if (c_in1 == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_in2) begin
+        if (c_in2 == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_in_connect) begin
+        if (c_in_connect == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_out_connect) begin
+        if (c_out_connect == 1)
+            o0 <= __ctrl_emit_src;
+    end
+    distribute@(c_out1) begin
+        if (c_out1 == 1)
+            o0 <= __ctrl_emit_src;
+    end
+
 endmodule

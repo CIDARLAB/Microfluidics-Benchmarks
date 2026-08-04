@@ -2,6 +2,18 @@ DEVICE dropx_test2
 
 
 
+
+
+// === PORT COUNT CORRECTION ===
+// Physical port counts in this file are authoritative for the synthesized device.
+// FLOW ports: 7 (LFR module IO declared 3)
+// CONTROL ports (Cport_*): 0
+// Port counts differ from the original LFR IO / control bit-width.
+// The physical counts above are authoritative. Common causes include
+// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
+//   - FLOW port count differs from LFR IO (declared 3 → physical FLOW ports 7; metering / NOZZLE DROPLET GENERATOR auxiliaries)
+// === END PORT COUNT CORRECTION ===
+
 LAYER FLOW 
 
 PORT port_1 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;

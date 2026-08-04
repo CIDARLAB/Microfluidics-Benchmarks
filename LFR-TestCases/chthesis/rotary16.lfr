@@ -28,4 +28,41 @@ module rotary16(
                + b8 + b9 + b10 + b11 + b12 + b13 + b14 + b15;
     #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
     assign bank_out[0:15] = bank_in[0];  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = bank_in[0] + bank_in[1] + bank_in[2] + bank_in[3] + bank_in[4] + bank_in[5] + bank_in[6] + bank_in[7] + bank_in[8] + bank_in[9] + bank_in[10] + bank_in[11] + bank_in[12] + bank_in[13] + bank_in[14] + bank_in[15];
+    distribute@(c_in[0]) begin
+        if (c_in[0] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_in[1]) begin
+        if (c_in[1] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_in[2]) begin
+        if (c_in[2] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_in[3]) begin
+        if (c_in[3] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_out[0]) begin
+        if (c_out[0] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_out[1]) begin
+        if (c_out[1] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_out[2]) begin
+        if (c_out[2] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_out[3]) begin
+        if (c_out[3] == 1)
+            bank_out[0] <= __ctrl_emit_src;
+    end
+
 endmodule

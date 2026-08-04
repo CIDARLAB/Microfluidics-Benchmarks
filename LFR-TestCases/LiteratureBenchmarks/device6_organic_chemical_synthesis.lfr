@@ -17,4 +17,33 @@ module device6_organic_chemical_synthesis(
                    + p15 + p16 + p17 + p18
                    + p19 + p20 + p21 + p22 + p23 + p24 + p25;
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = p1 + p2 + p3 + p4 + p5 + p6 + p15 + p16 + p17 + p18 + p19 + p20 + p21 + p22 + p23 + p24 + p25;
+    distribute@(c_mix[0]) begin
+        if (c_mix[0] == 1)
+            product <= __ctrl_emit_src;
+    end
+    distribute@(c_mix[1]) begin
+        if (c_mix[1] == 1)
+            product <= __ctrl_emit_src;
+    end
+    distribute@(c_mix[2]) begin
+        if (c_mix[2] == 1)
+            product <= __ctrl_emit_src;
+    end
+    distribute@(c_react[0]) begin
+        if (c_react[0] == 1)
+            product <= __ctrl_emit_src;
+    end
+    distribute@(c_react[1]) begin
+        if (c_react[1] == 1)
+            product <= __ctrl_emit_src;
+    end
+    distribute@(c_react[2]) begin
+        if (c_react[2] == 1)
+            product <= __ctrl_emit_src;
+    end
+
 endmodule

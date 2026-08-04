@@ -9,7 +9,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -36,7 +36,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -63,7 +63,7 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -118,14 +118,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -177,6 +177,10 @@
                 "port": "1"
             },
             "params": {
+                "position": [
+                    -1,
+                    -1
+                ],
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
                 "start": [
@@ -215,7 +219,11 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "controlPortCount": 1,
+        "logicalControlBits": 1,
+        "flowPortCount": 2,
+        "logicalFlowIo": 2
     },
     "layers": [
         {
@@ -223,14 +231,14 @@
             "id": "0",
             "type": "FLOW",
             "params": {},
-            "group": "0"
+            "group": 0
         },
         {
-            "name": "FLOW_0",
+            "name": "FLOW_control",
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": "0"
+            "group": 1
         }
     ],
     "features": [],
@@ -239,7 +247,8 @@
         {
             "componentid": "valve_0",
             "connectionid": "channel_1",
-            "type": "NORMALLY_OPEN"
+            "type": "NORMALLY_OPEN",
+            "controlportid": "Cport_0"
         }
     ],
     "isPnR": false,

@@ -15,4 +15,25 @@ module rotary_cells(
     assign i3 = in_1[3];  // continuous FLOW assign
     assign cell_traps = i0 + i1 + i2 + i3;  // FLOW merge / mix
     assign out_1 = cell_traps;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in_1[0] + in_1[1] + in_1[2] + in_1[3];
+    distribute@(c_inputs[0]) begin
+        if (c_inputs[0] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_inputs[1]) begin
+        if (c_inputs[1] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_cell_traps[0]) begin
+        if (c_cell_traps[0] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_cell_traps[1]) begin
+        if (c_cell_traps[1] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+
 endmodule

@@ -33,4 +33,37 @@ module inlet16(
 
     assign out = flow_out;                          // drive the single outlet
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = inlet[0] + inlet[1] + inlet[2] + inlet[3] + inlet[4] + inlet[5] + inlet[6] + inlet[7] + inlet[8] + inlet[9] + inlet[10] + inlet[11] + inlet[12] + inlet[13] + inlet[14] + inlet[15] + rinse + side_inlet;
+    distribute@(x[0]) begin
+        if (x[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[1]) begin
+        if (x[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[2]) begin
+        if (x[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[3]) begin
+        if (x[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[4]) begin
+        if (x[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[5]) begin
+        if (x[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(x[6]) begin
+        if (x[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+
 endmodule

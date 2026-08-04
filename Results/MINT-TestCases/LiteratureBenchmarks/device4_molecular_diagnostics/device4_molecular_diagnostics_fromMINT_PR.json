@@ -9,7 +9,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "channelWidth": 1000.0,
@@ -61,7 +61,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -88,7 +88,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -115,7 +115,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "channelWidth": 1000.0,
@@ -160,6 +160,33 @@
             "y-span": 4000
         },
         {
+            "name": "port_3",
+            "id": "port_3",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    50800,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
             "name": "square_cell_trap_3",
             "id": "square_cell_trap_3",
             "entity": "SQUARE CELL TRAP",
@@ -167,7 +194,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "rotation": 0.0,
                 "height": 250.0,
                 "channelWidth": 1000.0,
@@ -178,7 +205,7 @@
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "position": [
-                    50800,
+                    57200,
                     20000
                 ]
             },
@@ -212,33 +239,6 @@
             "y-span": 4000
         },
         {
-            "name": "port_3",
-            "id": "port_3",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 9000,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    59800,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
             "name": "mixer_1",
             "id": "mixer_1",
             "entity": "MIXER",
@@ -246,7 +246,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
@@ -285,7 +285,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
@@ -324,7 +324,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -351,7 +351,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 9000,
+                "componentSpacing": 1000.0,
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
@@ -543,7 +543,7 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_1",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
@@ -562,13 +562,13 @@
                     22000
                 ],
                 "end": [
-                    20000,
-                    22000
+                    51500,
+                    20700
                 ],
                 "wayPoints": [
                     [
                         45800,
-                        22000
+                        20700
                     ]
                 ],
                 "segments": [
@@ -579,17 +579,17 @@
                         ],
                         [
                             45800,
-                            22000
+                            20700
                         ]
                     ],
                     [
                         [
                             45800,
-                            22000
+                            20700
                         ],
                         [
-                            20000,
-                            22000
+                            51500,
+                            20700
                         ]
                     ]
                 ]
@@ -602,7 +602,7 @@
                         "port": "2"
                     },
                     "sink": {
-                        "component": "square_cell_trap_1",
+                        "component": "port_3",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -612,11 +612,11 @@
                         ],
                         [
                             45800,
-                            22000
+                            20700
                         ],
                         [
-                            20000,
-                            22000
+                            51500,
+                            20700
                         ]
                     ],
                     "features": []
@@ -627,7 +627,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "square_cell_trap_1",
                     "port": "1"
                 }
             ],
@@ -642,38 +642,38 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    54800,
+                    61200,
                     22000
                 ],
                 "end": [
-                    60500,
-                    20700
+                    20000,
+                    22000
                 ],
                 "wayPoints": [
                     [
-                        54800,
-                        20700
+                        61200,
+                        22000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            54800,
+                            61200,
                             22000
                         ],
                         [
-                            54800,
-                            20700
+                            61200,
+                            22000
                         ]
                     ],
                     [
                         [
-                            54800,
-                            20700
+                            61200,
+                            22000
                         ],
                         [
-                            60500,
-                            20700
+                            20000,
+                            22000
                         ]
                     ]
                 ]
@@ -686,21 +686,21 @@
                         "port": "2"
                     },
                     "sink": {
-                        "component": "port_3",
+                        "component": "square_cell_trap_1",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            54800,
+                            61200,
                             22000
                         ],
                         [
-                            54800,
-                            20700
+                            61200,
+                            22000
                         ],
                         [
-                            60500,
-                            20700
+                            20000,
+                            22000
                         ]
                     ],
                     "features": []
@@ -730,7 +730,7 @@
                     24860
                 ],
                 "end": [
-                    50800,
+                    57200,
                     22000
                 ],
                 "wayPoints": [
@@ -756,7 +756,7 @@
                             22000
                         ],
                         [
-                            50800,
+                            57200,
                             22000
                         ]
                     ]
@@ -783,7 +783,7 @@
                             22000
                         ],
                         [
-                            50800,
+                            57200,
                             22000
                         ]
                     ],
@@ -1224,7 +1224,7 @@
             "id": "0",
             "type": "FLOW",
             "params": {},
-            "group": "0"
+            "group": 0
         }
     ],
     "features": [],

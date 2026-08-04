@@ -2,6 +2,19 @@ DEVICE mux_64_in
 
 
 
+
+
+// === PORT COUNT CORRECTION ===
+// Physical port counts in this file are authoritative for the synthesized device.
+// FLOW ports: 65 (LFR module IO declared 65)
+// CONTROL ports (Cport_*): 64 (LFR control bit width declared 6)
+// VALVE/VALVE3D count: 64
+// Port counts differ from the original LFR IO / control bit-width.
+// The physical counts above are authoritative. Common causes include
+// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
+//   - CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 6 → physical Cports 64, valves 64)
+// === END PORT COUNT CORRECTION ===
+
 LAYER FLOW 
 
 PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;

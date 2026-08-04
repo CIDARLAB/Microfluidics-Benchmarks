@@ -28,4 +28,105 @@ module chemostat_chip (
 
     assign out = reactor;                     // collect reactors to the single outlet
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in[0] + in[1] + in[2] + in[3] + in[4] + in[5] + in[6] + in[7] + in[8];
+    distribute@(c1[0]) begin
+        if (c1[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[1]) begin
+        if (c1[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[2]) begin
+        if (c1[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[3]) begin
+        if (c1[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[4]) begin
+        if (c1[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[5]) begin
+        if (c1[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[0]) begin
+        if (c2[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[1]) begin
+        if (c2[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[2]) begin
+        if (c2[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[3]) begin
+        if (c2[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[4]) begin
+        if (c2[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[5]) begin
+        if (c2[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[6]) begin
+        if (c2[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[7]) begin
+        if (c2[7] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[0]) begin
+        if (c3[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[1]) begin
+        if (c3[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[2]) begin
+        if (c3[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[3]) begin
+        if (c3[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[4]) begin
+        if (c3[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[5]) begin
+        if (c3[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[6]) begin
+        if (c3[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[7]) begin
+        if (c3[7] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[8]) begin
+        if (c3[8] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c4) begin
+        if (c4 == 1)
+            out <= __ctrl_emit_src;
+    end
+
 endmodule

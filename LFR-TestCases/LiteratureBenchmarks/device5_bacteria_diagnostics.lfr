@@ -14,4 +14,17 @@ module device5_bacteria_diagnostics(
     // Merge all three inlets onto the single product outlet.
     assign p4 = p1 + p2 + p3;
 
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = p1 + p2 + p3;
+    distribute@(cp1) begin
+        if (cp1 == 1)
+            p4 <= __ctrl_emit_src;
+    end
+    distribute@(cp2) begin
+        if (cp2 == 1)
+            p4 <= __ctrl_emit_src;
+    end
+
 endmodule

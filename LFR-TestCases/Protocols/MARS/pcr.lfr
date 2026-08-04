@@ -1,17 +1,29 @@
-// pcr — MARS PCR incubation of cell suspension.
-// Purpose: map cell suspension into a PCR chamber storage, then route the
-// incubated product to `result`.
-// Topology: cell_suspension → incubation_chamber (PCR CHAMBER MAP) → result.
-// Collaborators: #MAP remaps the storage decl to a PCR CHAMBER process type.
-// Single-inlet / single-outlet protocol building block for MARS pipelines.
+// pcr — control-gated PCR mix and incubate.
+// Purpose: Load PCR solution, mix and incubate, release product to `a_out`.
+// Topology: FLOW: `a` → mix(+) → incubate(~) → `a_out`. CONTROL: `c1`,`c2` gate emission edges.
+// Collaborator takeaway: #MAP binds `+`/`~` to MIX/Incubator; controls emit as Cports.
+module pcr(
+    finput a,  // FLOW inlet(s)
+    foutput a_out,  // FLOW outlet(s)
+    control c1, c2  // CONTROL select/gate — does not carry fluid
+);
+    flow mixer_in, mixed, incubated;  // intermediate FLOW net(s)
+    #MAP "MIX" "+"  // tech-map: operator/keyword → component
+    #MAP "Incubator" "~"  // tech-map: operator/keyword → component
+    assign mixer_in = a;  // continuous FLOW assign
+    assign mixed = +mixer_in;  // mapped unary/binary op on FLOW
+    assign incubated = ~mixed;  // mapped unary op on FLOW
 
-module pcr(finput cell_suspension, foutput result);  // cell suspension in → PCR product out
-
-    storage incubation_chamber;                       // PCR incubation chamber (storage)
-
-    #MAP "PCR CHAMBER" "storage"                      // map storage type to PCR CHAMBER process
-    assign incubation_chamber = cell_suspension;      // load chamber from cell suspension
-
-    assign result = incubation_chamber;               // route incubated product to result
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = incubated;
+    distribute@(c1) begin
+        if (c1 == 1)
+            a_out <= __ctrl_emit_src;
+    end
+    distribute@(c2) begin
+        if (c2 == 1)
+            a_out <= __ctrl_emit_src;
+    end
 
 endmodule

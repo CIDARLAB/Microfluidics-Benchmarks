@@ -9,4 +9,17 @@ module grad_cells(finput [0:1] in1, foutput out1, control [0:1] c);  // FLOW IO 
     assign in1s = in1[1];  // continuous FLOW assign
     assign celltraps = in0 + in1s;  // FLOW merge / mix
     assign out1 = celltraps;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1[0] + in1[1];
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+
 endmodule
