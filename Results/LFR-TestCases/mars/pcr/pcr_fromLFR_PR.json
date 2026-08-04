@@ -46,33 +46,6 @@
             "y-span": 14000
         },
         {
-            "name": "port_1",
-            "id": "port_1",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    35000,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
             "name": "droplet_capacitance_sensor_2",
             "id": "droplet_capacitance_sensor_2",
             "entity": "DROPLET CAPACITANCE SENSOR",
@@ -95,7 +68,7 @@
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "position": [
-                    41400,
+                    35000,
                     20000
                 ]
             },
@@ -115,6 +88,33 @@
             ],
             "x-span": 10000,
             "y-span": 14000
+        },
+        {
+            "name": "port_1",
+            "id": "port_1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    50000,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "port_2",
@@ -206,7 +206,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "droplet_capacitance_sensor_2",
                     "port": "1"
                 }
             ],
@@ -225,13 +225,13 @@
                     27000
                 ],
                 "end": [
-                    35700,
-                    20700
+                    35000,
+                    27000
                 ],
                 "wayPoints": [
                     [
                         30000,
-                        20700
+                        27000
                     ]
                 ],
                 "segments": [
@@ -242,17 +242,17 @@
                         ],
                         [
                             30000,
-                            20700
+                            27000
                         ]
                     ],
                     [
                         [
                             30000,
-                            20700
+                            27000
                         ],
                         [
-                            35700,
-                            20700
+                            35000,
+                            27000
                         ]
                     ]
                 ]
@@ -265,7 +265,7 @@
                         "port": "2"
                     },
                     "sink": {
-                        "component": "port_1",
+                        "component": "droplet_capacitance_sensor_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -275,11 +275,11 @@
                         ],
                         [
                             30000,
-                            20700
+                            27000
                         ],
                         [
-                            35700,
-                            20700
+                            35000,
+                            27000
                         ]
                     ],
                     "features": []
@@ -290,7 +290,7 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_capacitance_sensor_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -305,38 +305,38 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    51400,
+                    45000,
                     27000
                 ],
                 "end": [
-                    20000,
-                    27000
+                    50700,
+                    20700
                 ],
                 "wayPoints": [
                     [
-                        51400,
-                        27000
+                        45000,
+                        20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            51400,
+                            45000,
                             27000
                         ],
                         [
-                            51400,
-                            27000
+                            45000,
+                            20700
                         ]
                     ],
                     [
                         [
-                            51400,
-                            27000
+                            45000,
+                            20700
                         ],
                         [
-                            20000,
-                            27000
+                            50700,
+                            20700
                         ]
                     ]
                 ]
@@ -349,21 +349,21 @@
                         "port": "2"
                     },
                     "sink": {
-                        "component": "droplet_capacitance_sensor_1",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            51400,
+                            45000,
                             27000
                         ],
                         [
-                            51400,
-                            27000
+                            45000,
+                            20700
                         ],
                         [
-                            20000,
-                            27000
+                            50700,
+                            20700
                         ]
                     ],
                     "features": []
@@ -374,7 +374,7 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_capacitance_sensor_2",
+                    "component": "droplet_capacitance_sensor_1",
                     "port": "1"
                 }
             ],
@@ -393,7 +393,7 @@
                     20700
                 ],
                 "end": [
-                    41400,
+                    20000,
                     27000
                 ],
                 "wayPoints": [
@@ -419,7 +419,7 @@
                             27000
                         ],
                         [
-                            41400,
+                            20000,
                             27000
                         ]
                     ]
@@ -433,7 +433,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "droplet_capacitance_sensor_2",
+                        "component": "droplet_capacitance_sensor_1",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -446,7 +446,7 @@
                             27000
                         ],
                         [
-                            41400,
+                            20000,
                             27000
                         ]
                     ],
@@ -570,7 +570,7 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_1",
+            "connectionid": "channel_2",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_3"
         }

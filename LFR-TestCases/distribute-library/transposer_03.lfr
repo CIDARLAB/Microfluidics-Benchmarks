@@ -1,37 +1,40 @@
+// transposer_03 — 3-lane controlled permutation.
+// Purpose: Under 2-bit `c_select`, permute three flow inlet lanes onto three outlets (identity and pairwise swaps).
+// Topology: FLOW: `inputs[0:2]` → `outputs[0:2]`. CONTROL: `c_select` case table inside `distribute`.
+// Collaborator takeaway: Case arms only rewire flow indices; control bits never carry fluid.
 module transposer_03(
-    finput [0:2] inputs,
-    foutput [0:2] outputs, 
-    control [0:1] c_select
+    finput [0:2] inputs,  // FLOW inlet(s)
+    foutput [0:2] outputs,  // FLOW outlet(s)
+    control [0:1] c_select  // CONTROL select/gate — does not carry fluid
 );
-
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
     distribute@(c_select)
     begin
-        case(c_select)
-            2'b00 : 
+        case(c_select)  // CONTROL value selects which FLOW arm runs
+            2'b00 :
             begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[1];
-                outputs[2] <= inputs[2];
+                outputs[0] <= inputs[0];  // FLOW edge enabled in this control arm
+                outputs[1] <= inputs[1];  // FLOW edge enabled in this control arm
+                outputs[2] <= inputs[2];  // FLOW edge enabled in this control arm
             end
             2'b01 :
             begin
-                outputs[0] <= inputs[1];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[2];
+                outputs[0] <= inputs[1];  // FLOW edge enabled in this control arm
+                outputs[1] <= inputs[0];  // FLOW edge enabled in this control arm
+                outputs[2] <= inputs[2];  // FLOW edge enabled in this control arm
             end
             2'b10 :
             begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[2];
-                outputs[2] <= inputs[1];
+                outputs[0] <= inputs[0];  // FLOW edge enabled in this control arm
+                outputs[1] <= inputs[2];  // FLOW edge enabled in this control arm
+                outputs[2] <= inputs[1];  // FLOW edge enabled in this control arm
             end
             2'b11 :
             begin
-                outputs[0] <= inputs[2];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[1];
-            end        
+                outputs[0] <= inputs[2];  // FLOW edge enabled in this control arm
+                outputs[1] <= inputs[0];  // FLOW edge enabled in this control arm
+                outputs[2] <= inputs[1];  // FLOW edge enabled in this control arm
+            end
         endcase
     end
-
 endmodule

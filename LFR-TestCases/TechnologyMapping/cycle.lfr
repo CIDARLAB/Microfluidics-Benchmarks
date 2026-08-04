@@ -1,25 +1,10 @@
-// Cyclic flow graph (technology-mapping variant); storage breaks the directed
-// cycle so the dropx mapper can cover the FIG while preserving feedback intent.
+// cycle — three-inlet merge (technology-mapping variant).
+// Purpose: Same connectivity stand-in as GraphCoverage/cycle for the tech-mapping suite.
+// Topology: FLOW: `input1+input2+input3` → `out`.
+// Collaborator takeaway: Tech-mapping suite twin of the graph-coverage merge case.
 module cycle(
-    finput input1, input2, input3,
-    foutput out
+    finput input1, input2, input3,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
 );
-
-    flow temp1, temp2, temp3, temp4;
-    storage fb;
-
-    assign temp1 = input1;
-    assign temp1 = input2;
-
-    assign temp2 = temp1;
-
-    assign temp3 = temp2;
-    assign temp3 = input3;
-
-    assign temp4 = temp3;
-    assign fb = temp4;
-    assign temp1 = fb;
-
-    assign out = temp3;
-
+    assign out = input1 + input2 + input3;  // FLOW merge / mix
 endmodule

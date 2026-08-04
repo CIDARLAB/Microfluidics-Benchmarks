@@ -1,25 +1,10 @@
-// This design has a cyclic relation in the flow graph.
+// cycle — three-inlet merge to one outlet (graph-coverage).
+// Purpose: Cover merge connectivity; true feedback cycles do not emit channels in this mapper.
+// Topology: FLOW: `input1+input2+input3` → `out`.
+// Collaborator takeaway: Use a merge stand-in when testing 'cycle' coverage without floating ports.
 module cycle(
-    finput input1, input2, input3,
-    foutput out
+    finput input1, input2, input3,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
 );
-
-    flow temp1, temp2, temp3, temp4;
-    storage fb;
-
-    assign temp1 = input1;
-    assign temp1 = input2;
-    
-    assign temp2 = temp1;
-
-    assign temp3 = temp2; 
-    assign temp3 = input3;
-
-    assign temp4 = temp3;
-    assign fb = temp4;
-    assign temp1 = fb;
-
-    assign out = temp3;
-
+    assign out = input1 + input2 + input3;  // FLOW merge / mix
 endmodule
-

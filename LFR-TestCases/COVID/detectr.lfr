@@ -1,19 +1,30 @@
-module detectr(finput complex, iab, mgso4, dntps, primer, bst, warmstart,
-water, sample, nebuffer, foutput solution);
+// detectr — DETECTR-style isothermal amplification + detection mix.
+// Purpose: combine amplification reagents with sample, incubate, then add
+//   NEBuffer and drive a single `solution` outlet.
+// Topology: amp_mix → mix → +nebuffer → mix → solution.
+// Collaborator takeaway: every PORT sits on the flow path (no unused inlets).
+module detectr(
+    finput iab, mgso4, dntps, primer, bst, warmstart, water, sample, nebuffer,  // amp reagents + sample + buffer
+    foutput solution                                                             // final assay solution outlet
+);
 
-    #MAP "MIXER" "~"
+    #MAP "MIXER" "~"  // map unary ~ to MIXER component
 
-    flow mixer1;
-    flow mixer2;
-    flow mixer3;
+    flow amp_mix;        // amplification master mix + sample
+    flow amp_incubated;  // post-mix / incubation stage
+    flow with_buffer;    // mix after NEBuffer addition
+    flow product;        // final mix before outlet
 
-    assign mixer1 = iab + mgso4 + dntps + primer + bst + warmstart + water + sample;
+    // Merge: amplification master mix + sample
+    assign amp_mix = iab + mgso4 + dntps + primer + bst + warmstart + water + sample;
+    // Mix/incubate (mapped MIXER)
+    assign amp_incubated = ~amp_mix;
 
-    assign mixer2 = ~mixer1;
-    assign mixer2 = mixer2 + nebuffer;
-
-    assign mixer3 = ~mixer2;
-
-    assign solution = ~mixer3;
+    // Merge: add NEBuffer
+    assign with_buffer = amp_incubated + nebuffer;
+    // Final mix before outlet
+    assign product = ~with_buffer;
+    // Route product to outlet
+    assign solution = product;
 
 endmodule

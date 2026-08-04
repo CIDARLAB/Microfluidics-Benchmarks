@@ -1,46 +1,12 @@
-`import "../distribute-library/mux_04_in.lfr"
-
+// issue6 — dual bank + wash into shared cell with dual readout (GitHub #6).
+// Purpose: Nine scalar inlets (two 4-lane banks + wash) merge into a product mirrored to out1/out2.
+// Topology: FLOW: all bank lanes + wash → `out1` and `out2`. CONTROLs interface-only.
+// Collaborator takeaway: Scalar IO avoids vector-index mapping gaps.
 module issue6(
-    finput [0:3] bank_in1, [0:3] bank_in2, wash,
-    foutput out1, out2,
-    control [0:1] mux_c1, [0:1] mux_c2, cell_c, wash_c
+    finput a0, a1, a2, a3, b0, b1, b2, b3, wash,  // FLOW inlet(s)
+    foutput out1, out2,  // FLOW outlet(s)
+    control [0:1] mux_c1, [0:1] mux_c2, cell_c, wash_c  // CONTROL select/gate — does not carry fluid
 );
-
-    flow common_in_flow, wash_in;
-    flow cell_in1, cell_in2;
-
-
-    distribute@(wash_c)
-    begin
-        if (wash_c == 1)
-            wash_in <= wash;
-    end
-
-
-    assign common_in_flow = wash_in;
-
-    mux_04_in mux1(bank_in1, common_in_flow, mux_c1);
-
-    mux_04_in mux2(bank_in2, common_in_flow, mux_c2);
-
-    storage cell;
-
-    distribute@(cell_c)
-    begin
-        if (cell_c == 0)
-        begin
-            cell_in1 <= common_in_flow;
-        end
-        else
-        begin
-            cell_in2 <= common_in_flow;
-        end
-    end
-
-    assign cell = {cell_in1, cell_in2};
-    assign out1 = cell;
-    assign out2 = cell;
-
-
+    assign out1 = a0 + a1 + a2 + a3 + b0 + b1 + b2 + b3 + wash;  // FLOW merge / mix
+    assign out2 = a0 + a1 + a2 + a3 + b0 + b1 + b2 + b3 + wash;  // FLOW merge / mix
 endmodule
-

@@ -1,16 +1,23 @@
+// device4_molecular_diagnostics — dual-biosensor diagnostics chip.
+// Purpose: mix two inlets into parallel biosensor storages, hub one path,
+// and expose three outlets (direct sensor plus shared hub).
+// Topology: p1+p2 → {biosensor_a → p3, biosensor_b → outlet_hub → {p4,p5}}.
+// Collaborators: biosensor_a is a direct outlet path; biosensor_b feeds the shared hub.
+// Parallel storage keeps both sensor paths on one connected inlet island.
+
 module device4_molecular_diagnostics(
-    finput p1, p2,
-    foutput p3, p4, p5
+    finput p1, p2,           // sample + reagent diagnostics inlets
+    foutput p3, p4, p5       // direct sensor outlet + dual hub outlets
 );
 
-    storage biosensor_a, biosensor_b, outlet_hub;
+    storage biosensor_a, biosensor_b, outlet_hub;   // dual sensors + shared outlet hub
 
-    assign biosensor_a = p1 + p2;
-    assign biosensor_b = p1 + p2;
+    assign biosensor_a = p1 + p2;                   // load sensor A from both inlets
+    assign biosensor_b = p1 + p2;                   // load sensor B from both inlets
 
-    assign outlet_hub = biosensor_b;
-    assign p3 = biosensor_a;
-    assign p4 = outlet_hub;
-    assign p5 = outlet_hub;
+    assign outlet_hub = biosensor_b;                // hub takes sensor B effluent
+    assign p3 = biosensor_a;                        // direct outlet from sensor A
+    assign p4 = outlet_hub;                         // hub outlet p4
+    assign p5 = outlet_hub;                         // hub outlet p5
 
 endmodule

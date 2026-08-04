@@ -1,13 +1,12 @@
-// Mix inputs, then incubate and route to result.
-module expresstest(finput plasmid, cell_suspension, foutput result);
-
-    flow reaction_mix;
-    storage incubator;
-
-    assign reaction_mix = plasmid + cell_suspension;
-
-    #MAP "INCUBATOR" "&"
-    assign incubator = &reaction_mix;
-    assign result = incubator;
-
+// expresstest — mix inputs, incubate, route to result.
+// Purpose: Mix plasmid and cell suspension, INCUBATOR-map into storage, drive `result`.
+// Topology: FLOW: mix → (& INCUBATOR storage) → `result`.
+// Collaborator takeaway: Expression/operator mapping smoke test.
+module expresstest(finput plasmid, cell_suspension, foutput result);  // FLOW IO ports
+    flow reaction_mix;  // intermediate FLOW net(s)
+    storage incubator;  // STORAGE / chamber node(s)
+    assign reaction_mix = plasmid + cell_suspension;  // FLOW merge / mix
+    #MAP "INCUBATOR" "&"  // tech-map: operator/keyword → component
+    assign incubator = &reaction_mix;  // continuous FLOW assign
+    assign result = incubator;  // continuous FLOW assign
 endmodule

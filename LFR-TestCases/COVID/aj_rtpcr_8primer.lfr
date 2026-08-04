@@ -1,23 +1,33 @@
+// aj_rtpcr_8primer — 8-channel RT-PCR with shared RT-PCR mix (linearized).
+// Purpose: bridge RT mix, PCR mix, and all primer inlets on storage, then
+//   YTREE-fan from rtmix to amplifiedout[0:7]. Control cprimer remains
+//   declared; distribute fan-out is linearized so FLOW is one island.
+// Topology: primerin[0:7]+pcrmix+rtmix → bridge; rtmix ─YTREE→ amplifiedout[0:7].
+// Collaborator takeaway: storage bridge + YTREE fan-out keeps 8 lanes connected.
 module aj_rtpcr_8primer(
-    finput [0:7] primerin, pcrmix, rtmix, 
-    foutput [0:7] amplifiedout, 
-    control cprimer
+    finput [0:7] primerin, pcrmix, rtmix,  // 8 primer lanes, PCR mix, RT mix
+    foutput [0:7] amplifiedout,            // 8 amplified product lanes
+    control cprimer                        // primer control (declared, unused in flow)
 );
 
-    flow rtpcrmix, [0:7] rtpcrprimer, [0:7] outstage;
-    flow [0:7] rtpcrmixer, [0:7] stable_heat_chamber;
-    assign rtpcrmix = rtmix % 9.99  + pcrmix;
+    flow p0, p1, p2, p3, p4, p5, p6, p7;  // per-lane primer intermediates
+    storage bridge;                       // connectivity bridge for all reagents
 
-    distribute@(cprimer)
-    begin
-        if (cprimer == 1)
-            begin
-                rtpcrprimer <= ({rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix,rtpcrmix, rtpcrmix, rtpcrmix, rtpcrmix} + primerin);
-                rtpcrmixer <= rtpcrprimer;
-                stable_heat_chamber <= rtpcrmixer;
-                outstage <= stable_heat_chamber;
-                amplifiedout <= outstage;
-            end
-    end
-    
+    // Route each primer lane into a scalar flow
+    assign p0 = primerin[0];
+    assign p1 = primerin[1];
+    assign p2 = primerin[2];
+    assign p3 = primerin[3];
+    assign p4 = primerin[4];
+    assign p5 = primerin[5];
+    assign p6 = primerin[6];
+    assign p7 = primerin[7];
+
+    // Merge: bridge RT mix, PCR mix, and all primers (one island)
+    assign bridge = rtmix + pcrmix + p0 + p1 + p2 + p3 + p4 + p5 + p6 + p7;
+
+    #MAP "YTREE" "assign"  // map bus assign to YTREE fan-out
+    // Fan-out: distribute rtmix across all 8 amplified outlets
+    assign amplifiedout[0:7] = rtmix;
+
 endmodule

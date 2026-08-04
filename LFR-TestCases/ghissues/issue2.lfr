@@ -1,14 +1,14 @@
-// GH issue: linear chain temp1 -> temp2 -> out (valid module header).
+// issue2 — linear chain temp1 → temp2 → out (GitHub #2).
+// Purpose: Valid module header with a two-stage pass-through (regression).
+// Topology: FLOW: `in` → `temp1` → `temp2` → `out`.
+// Collaborator takeaway: Minimal header/assign regression from GH issue #2.
 module issue2(
-    finput in,
-    foutput out
+    finput in,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
 );
-
-    flow temp1;
-    flow temp2;
-
-    assign temp1 = in;
-    assign temp2 = temp1;
-    assign out = temp2;
-
+    flow temp1;  // intermediate FLOW net(s)
+    flow temp2;  // intermediate FLOW net(s)
+    assign temp1 = in;  // continuous FLOW assign
+    assign temp2 = temp1;  // continuous FLOW assign
+    assign out = temp2;  // continuous FLOW assign
 endmodule

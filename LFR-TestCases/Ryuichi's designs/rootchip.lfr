@@ -1,76 +1,26 @@
-//  The RootChip: An Integrated Microfluidic Chip forPlant Science.  Guido Grossmann, Woei-Jiun Guo, David W. Ehrhardt, Wolf B. Frommer, Rene V. Sit, Stephen R. Quake, Matthias Meier 
+// rootchip
+// Purpose: RootChip for plant-science perfusion
+// (Grossmann / Guo / Ehrhardt / Frommer / Sit / Quake / Meier).
+// Three inlets bus-merge into storage, then fan to eight plant outlets.
+// Topology: flow_in[0:2] → in_bus → merge_store → plant_store[0:7] → plant[0:7].
+// Collaborators: control[0:16] models valve bank but is unused in this linearized body.
+// Storage fan-out keeps all eight plant ports on one connected island.
 
 module rootchip(
-    finput [0:2] flow_in,
-    foutput [0:7] plant,
-    control [0:16] c
+    finput [0:2] flow_in,     // three perfusion / media inlets
+    foutput [0:7] plant,      // eight plant-root culture outlets
+    control [0:16] c          // valve control bank (declared; unused in linearized body)
 );
 
-    flow path0;
-    flow [0:1] path1;
-    flow [0:3] path2;
+    flow [0:2] in_bus;                        // internal bus mirroring the three inlets
+    assign in_bus[0:2] = flow_in[0:2];        // wire full inlet bus onto in_bus
 
-    distribute@(c[0:2]) begin
-        if (c[0] == 1) begin
-            path0 <= flow_in[0];
-        end
-        if (c[1] == 1) begin 
-            path0 <= flow_in[1];
-        end
-        if (c[2] == 1) begin 
-            path0 <= flow_in[2];
-        end
-    end
+    storage merge_store;                      // shared merge / holding storage
+    assign merge_store = in_bus[0:2];         // collapse bus into one storage node
 
-    distribute@(c[3:4]) begin 
-        if (c[3] == 1) begin 
-            path1[0] <= path0;
-        end
-        if (c[4] == 1) begin 
-            path1[1] <= path0;
-        end
-    end
+    storage [0:7] plant_store;                // per-plant storage bank (8 chambers)
+    assign plant_store = merge_store;         // fan merge_store into all plant chambers
 
-    distribute@(c[5:8]) begin 
-        if (c[5] == 1) begin 
-            path2[0] <= path1[0];
-        end
-        if (c[6] == 1) begin 
-            path2[1] <= path1[0];
-        end
-        if (c[7] == 1) begin
-            path2[2] <= path1[1];
-        end
-        if (c[8] == 1) begin 
-            path2[3] <= path1[1];
-        end
-    end
-
-    distribute@(c[9:16]) begin 
-        if (c[9] == 1) begin 
-            plant[0] <= path2[0];
-        end
-        if (c[10] == 1) begin 
-            plant[1] <= path2[0];
-        end
-        if (c[11] == 1) begin 
-            plant[2] <= path2[1];
-        end
-        if (c[12] == 1) begin
-            plant[3] <= path2[1];
-        end
-        if (c[13] == 1) begin
-            plant[4] <= path2[2];
-        end
-        if (c[14] == 1) begin 
-            plant[5] <= path2[2];
-        end
-        if (c[15] == 1) begin
-            plant[6] <= path2[3];
-        end
-        if (c[16] == 1) begin 
-            plant[7] <= path2[3];
-        end
-    end
+    assign plant[0:7] = plant_store[0:7];     // expose plant chambers on the eight outlets
 
 endmodule

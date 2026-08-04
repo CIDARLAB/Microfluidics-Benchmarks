@@ -1,11 +1,9 @@
+// tree_fanout — scalar fan-out to a vector outlet (graph-coverage).
+// Purpose: Broadcast inlet onto a 9-wide outlet bus (implicit split tree).
+// Topology: FLOW: `i1` → `out[0:8]`.
+// Collaborator takeaway: Scalar-to-wide-bus assign implies a fan-out tree at mapping time.
 module tree_fanout(i1, out [0:8]);
-
-    finput i1;
-    foutput [0:8] out;
-
-// This implicitly means that 
-// we can generate a tree
-    assign out[0:8] = i1;
-
+    finput i1;  // FLOW inlet(s)
+    foutput [0:8] out;  // FLOW outlet(s)
+    assign out[0:8] = i1;  // continuous FLOW assign
 endmodule
-

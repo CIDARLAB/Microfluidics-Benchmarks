@@ -1,9 +1,21 @@
-module expression12(finput [0:7] in1, [0:7] in2, foutput out);
+// expression12 — dual 8-wide buses merged then tree-reduced to one outlet.
+// Purpose: element-wise merge of in1/in2 on a full bus assign (keeps every
+//   lane connected), then YTREE-reduce the bus to scalar `out`. Avoids
+//   per-bit indexing that left most bus PORTs floating.
+// Topology: in1[0:7]+in2[0:7] → paired[0:7] ─YTREE→ out.
+// Collaborator takeaway: full-bus assign + YTREE keeps all lanes connected.
+module expression12(
+    finput [0:7] in1, [0:7] in2,  // dual 8-wide inlet buses
+    foutput out                   // YTREE-reduced scalar outlet
+);
 
-    flow temp_out;
+    flow [0:7] paired;  // element-wise merge of both buses
 
-    assign temp_out = in1 + in2;
+    // Merge: element-wise add across the full 8-wide bus
+    assign paired[0:7] = in1[0:7] + in2[0:7];
 
-    assign out = temp_out;
+    #MAP "YTREE" "assign"  // map bus assign to YTREE reduce
+    // Reduce: YTREE-collapse 8-wide bus to scalar outlet
+    assign out = paired[0:7];
 
 endmodule

@@ -1,16 +1,15 @@
-module n_l_m_map(i1, out);
-
-    finput i1;
-    foutput out;
-
-    flow [0:3] temp1;
-    flow [0:4] temp2;
-
-    assign temp1[0:3] = i1;
-    assign temp2[0:4] = temp1[0:3];
-    assign out = temp2[0:4];
-
+// n_l_m_map — N→M expand bus map (graph-coverage).
+// Purpose: Copy a 4-wide inlet bus, GRADIENT GENERATOR-map onto a 5-wide bus, drive the outlet bus.
+// Topology: FLOW: `i1[0:3]` → `temp1` → (#MAP) `temp2[0:4]` → `out[0:4]`.
+// Collaborator takeaway: Expanding N→M still needs matched bus assigns, not scalar-in hacks.
+module n_l_m_map(
+    finput [0:3] i1,  // FLOW inlet(s)
+    foutput [0:4] out  // FLOW outlet(s)
+);
+    flow [0:3] temp1;  // intermediate FLOW net(s)
+    flow [0:4] temp2;  // intermediate FLOW net(s)
+    assign temp1[0:3] = i1[0:3];  // continuous FLOW assign
+    #MAP "GRADIENT GENERATOR" "assign"  // tech-map: operator/keyword → component
+    assign temp2[0:4] = temp1[0:3];  // continuous FLOW assign
+    assign out[0:4] = temp2[0:4];  // continuous FLOW assign
 endmodule
-
-
-

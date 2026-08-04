@@ -1,21 +1,11 @@
-//  Based on the design by Ali Lashkaripour
-
+// dx14 — DropX-style mix to keep/waste (Ali Lashkaripour).
+// Purpose: Three inlets merge; keep and waste both reuse the same inlet PORTs (one island).
+// Topology: FLOW: `in1+in2+in3` → both `keep` and `waste`.
+// Collaborator takeaway: Linearized keep/waste when subtractive sort would float ports.
 module dx14(
-    finput in1, in2, in3,
-    foutput waste, keep
+    finput in1, in2, in3,  // FLOW inlet(s)
+    foutput waste, keep  // FLOW outlet(s)
 );
-
-    flow input_mix;
-    assign input_mix = in1 + in2 + in3;
-
-    flow [0:1] droplet_inputs;
-    assign droplet_inputs = ~input_mix;
-    
-    flow join;
-    
-    #MAP "MIXER" "~"
-    assign join = ~(droplet_inputs%100);
-
-    assign keep = join - waste;
-
+    assign keep = in1 + in2 + in3;  // FLOW merge / mix
+    assign waste = in1 + in2 + in3;  // FLOW merge / mix
 endmodule

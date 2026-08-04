@@ -83,7 +83,176 @@
             "y-span": 1400
         }
     ],
-    "connections": [],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "port_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_1",
+            "id": "channel_1",
+            "source": {
+                "component": "port_2",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    27100,
+                    20700
+                ],
+                "end": [
+                    20700,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        27100,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            20700,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            20700,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_3",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_2",
+            "id": "channel_2",
+            "source": {
+                "component": "port_2",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    27100,
+                    20700
+                ],
+                "end": [
+                    33500,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        27100,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            33500,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "port_3",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            27100,
+                            20700
+                        ],
+                        [
+                            33500,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
     "params": {
         "x-span": 74200,
         "y-span": 61400,
@@ -96,13 +265,6 @@
             "type": "FLOW",
             "params": {},
             "group": 0
-        },
-        {
-            "name": "FLOW_control",
-            "id": "1",
-            "type": "CONTROL",
-            "params": {},
-            "group": 1
         }
     ],
     "features": [],

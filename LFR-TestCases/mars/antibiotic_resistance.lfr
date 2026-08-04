@@ -1,13 +1,12 @@
+// antibiotic_resistance — multi-chamber antibiotic screening.
+// Purpose: Broadcast suspended cells into ten antibiotic chambers; route excess cells out.
+// Topology: FLOW: `a` → `chamber[0:9]`; also `a` → `a_out`.
+// Collaborator takeaway: Broadcast into storage array plus excess bypass.
 module antibiotic_resistance (
-    finput a,
-    foutput a_out
+    finput a,  // FLOW inlet(s)
+    foutput a_out  // FLOW outlet(s)
 );
-    storage [0:9] chamber;
-
-//  send suspended cells to each chambers that contain different concentrations of antibiotics
-    assign chamber[0:9] = a;
-
-//  excess cells out
-    assign a_out = a;
-
+    storage [0:9] chamber;  // STORAGE / chamber node(s)
+    assign chamber[0:9] = a;  // continuous FLOW assign
+    assign a_out = a;  // continuous FLOW assign
 endmodule

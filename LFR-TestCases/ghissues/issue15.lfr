@@ -1,9 +1,10 @@
-//  Based on the design by Helen Huang
-
+// issue15 — meter, incubate, keep/waste (Helen Huang / GH #15).
+// Purpose: Same compact DropX idiom as dx15: meter, MIXER, subtract waste.
+// Topology: FLOW: `collection = ~(in1%100) − waste`.
+// Collaborator takeaway: Issue regression twin of dx15.
 module issue15(
-    finput in1, 
-    foutput collection, waste
+    finput in1,  // FLOW inlet(s)
+    foutput collection, waste  // FLOW outlet(s)
 );
-    assign collection = ~(in1%100) - waste;
-
+    assign collection = ~(in1%100) - waste;  // meter / dropletize (FLOW)
 endmodule

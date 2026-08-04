@@ -1,27 +1,23 @@
-
+// part2_lfr — COVID assay fragment (part 2 / RT step).
+// Purpose: merge four reagent inlets into one product outlet.
+// Topology: (p1+p2) and (p3+p4) mix in parallel, then merge to `out`.
+// Collaborator takeaway: balanced two-branch merge before a single outlet.
 module part2_lfr(
-    finput p1, p2, p3, p4, 
-    foutput out
+    finput p1, p2, p3, p4,  // four RT-step reagent inlets
+    foutput out             // combined product outlet
 );
 
-    flow left1;
-    flow left2;
-    flow leftside;
-    flow right1;
-    flow right2;
-    flow rightside;
-    flow final;
+    flow leftside;   // left pair mix result
+    flow rightside;  // right pair mix result
+    flow final;      // merged product before outlet
 
-    assign left1 = p1;
-    assign left2 = p2;
-    assign leftside = left1 + left2;
-
-    assign right1 = p3;
-    assign right2 = p4;
-    assign rightside = right1 + right2;
-
-    final = leftside + rightside;
-
+    // Merge: left reagent pair
+    assign leftside = p1 + p2;
+    // Merge: right reagent pair
+    assign rightside = p3 + p4;
+    // Merge: join both branches
+    assign final = leftside + rightside;
+    // Route product to outlet
     assign out = final;
 
 endmodule

@@ -1,22 +1,29 @@
-//  Development of Microfluidic Dilution Network-Based System for Lab-on-a-Chip Microalgal Bioassays
-//  Yunhua Wang
+// microalgal_bioassay
+// Purpose: microfluidic dilution-network bioassay for microalgae
+// (Yunhua Wang). Buffer and sample merge and mix into a storage feed,
+// fan across five chambers, then collect to one output.
+// Topology: buffer+sample → feed → MIXER(~) → feed_store → chamber[0:4] → out.
+// Collaborators: scalar storage bridge avoids islanding from bare-flow vector fan-out.
+// Five chambers model the dilution / assay array before single-outlet collection.
 
 module microalgal_bioassay(
-    finput buffer, sample,
-    foutput output
+    finput buffer, sample,   // dilution buffer + microalgal sample inlets
+    foutput out              // collected assay product outlet
 );
 
-    flow [0:4]channel;
-    assign channel[0:4] = buffer;
+    flow feed;                               // merged buffer+sample stream
+    assign feed = buffer + sample;           // merge the two inlets
 
-    storage [0:4] chamber;
+    flow mixed;                              // post-mixer stream
+    #MAP "MIXER" "~"                         // map unary ~ to a MIXER process
+    assign mixed = ~feed;                    // mix the merged feed
 
-    assign chamber[0] = channel[0] + sample;
-    assign chamber[1] = channel[1] + sample;
-    assign chamber[2] = channel[2] + sample;
-    assign chamber[3] = channel[3] + sample;
-    assign chamber[4] = channel[4] + sample;
+    // Scalar storage bridge (vector fan-out from a bare flow can island).
+    storage feed_store;                      // scalar bridge before chamber fan-out
+    assign feed_store = mixed;               // load bridge from mixed stream
 
-    assign output = chamber[0:4];
+    storage [0:4] chamber;                   // five assay / dilution chambers
+    assign chamber = feed_store;             // fan feed_store into all five chambers
+    assign out = chamber;                    // collect chambers to the single outlet
 
 endmodule

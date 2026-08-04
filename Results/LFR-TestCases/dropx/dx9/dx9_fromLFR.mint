@@ -31,9 +31,9 @@ CHANNEL channel_7 from droplet_sorter_1 3 to port_3 1 connectionSpacing=1000 cha
 CHANNEL channel_8 from droplet_sorter_1 3 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_9 from mixer_1 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_10 from mixer_2 2 to droplet_sorter_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_11 from port_7 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_12 from port_8 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_13 from port_9 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from port_7 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from port_8 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from port_9 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

@@ -1,16 +1,25 @@
+// part3_gel — COVID assay gel / electrophoresis fragment (part 3).
+// Purpose: combine six gel/buffer/sample lines into one outlet for
+//   downstream gel loading. All six inlets are intentionally used so no
+//   floating PORT remains in the compiled netlist.
+// Topology: (p1+p2+p3) || (p4+p5+p6) → final → out.
+// Collaborator takeaway: parallel mix trees keep every inlet on one graph.
 module part3_gel(
-    finput p1, p2, p3, p4, p5, p6, 
-    foutput out
+    finput p1, p2, p3, p4, p5, p6,  // gel/buffer/sample inlets
+    foutput out                     // gel-load product outlet
 );
 
-    flow n1;
-    flow n2;
-    flow final;
+    flow left;   // left triad mix result
+    flow right;  // right triad mix result
+    flow final;  // merged product before outlet
 
-    assign n1 = p4;
-    assign n2 = p5;
-    assign final = n1 + n2;
-
+    // Merge: left three-inlet tree
+    assign left = p1 + p2 + p3;
+    // Merge: right three-inlet tree
+    assign right = p4 + p5 + p6;
+    // Merge: join both trees
+    assign final = left + right;
+    // Route product to outlet
     assign out = final;
 
 endmodule

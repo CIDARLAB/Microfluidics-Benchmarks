@@ -15,10 +15,10 @@ PORT port_5 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_2 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_3 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-MIXER mixer_4 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 PORT port_6 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
 PORT port_7 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_3 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_4 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 PORT port_8 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
 PORT port_9 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_4 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
@@ -47,17 +47,17 @@ CHANNEL channel_11 from droplet_capacitance_sensor_1 2 to port_1 1 connectionSpa
 CHANNEL channel_12 from nozzle_droplet_generator_1 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_13 from nozzle_droplet_generator_2 3 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_14 from nozzle_droplet_generator_3 3 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_15 from nozzle_droplet_generator_4 3 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_16 from nozzle_droplet_generator_5 3 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_17 from mixer_3 2 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_18 from mixer_4 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_19 from mixer_1 2 to droplet_capacitance_sensor_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_20 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_21 from port_12 1 to nozzle_droplet_generator_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_22 from port_13 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_23 from port_14 1 to nozzle_droplet_generator_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from nozzle_droplet_generator_4 3 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from nozzle_droplet_generator_5 3 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from mixer_1 2 to droplet_capacitance_sensor_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_18 from mixer_4 2 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_19 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_20 from mixer_3 2 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_21 from port_12 1 to nozzle_droplet_generator_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_22 from port_13 1 to nozzle_droplet_generator_3 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_23 from port_14 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_24 from port_15 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_25 from port_16 1 to nozzle_droplet_generator_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_25 from port_16 1 to nozzle_droplet_generator_4 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

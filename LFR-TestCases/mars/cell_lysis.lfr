@@ -1,22 +1,16 @@
+// cell_lysis — lysis, neutralize, magnetic capture, elute.
+// Purpose: Mix cells with lysing buffer, neutralize, process in diamond chamber, elute DNA with buffer `d`.
+// Topology: FLOW: `a+b` → +`c` → (~ DIAMOND) → +`d` → `a_out`.
+// Collaborator takeaway: Protocol chain: mix → neutralize → mapped chamber → elute.
 module cell_lysis (
-    finput a, b, c, d,
-    foutput a_out
+    finput a, b, c, d,  // FLOW inlet(s)
+    foutput a_out  // FLOW outlet(s)
 );
-
-    flow mixture1, mixture2;
-
-//  mix suspended cells and lysing buffer
-    assign mixture1 = a + b;
-
-//  mix mixture1 with neutralization buffer to prevent DNA degradation
-    assign mixture2 = mixture1 + c;
-
-//  move to diamond chamber so DNA can bind to magnetic particles
-    #MAP "DIAMOND REACTION CHAMBER" "~"
-    flow processed_mix;
-    assign processed_mix = ~mixture2;
-    
-//  clean and release DNA from magnetic particles
-    assign a_out = d + processed_mix;
-    
+    flow mixture1, mixture2;  // intermediate FLOW net(s)
+    assign mixture1 = a + b;  // FLOW merge / mix
+    assign mixture2 = mixture1 + c;  // FLOW merge / mix
+    #MAP "DIAMOND REACTION CHAMBER" "~"  // tech-map: operator/keyword → component
+    flow processed_mix;  // intermediate FLOW net(s)
+    assign processed_mix = ~mixture2;  // mapped unary op on FLOW (e.g. mixer/incubator)
+    assign a_out = d + processed_mix;  // FLOW merge / mix
 endmodule

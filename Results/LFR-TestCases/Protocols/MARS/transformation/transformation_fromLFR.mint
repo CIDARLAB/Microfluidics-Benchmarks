@@ -28,8 +28,8 @@ CHANNEL channel_6 from nozzle_droplet_generator_1 3 to mixer_1 1 connectionSpaci
 CHANNEL channel_7 from nozzle_droplet_generator_2 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_8 from square_cell_trap_1 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_9 from mixer_1 2 to droplet_capacitance_sensor_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_10 from port_6 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_11 from port_7 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_6 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from port_7 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

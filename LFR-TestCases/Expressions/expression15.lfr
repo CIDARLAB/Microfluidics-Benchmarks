@@ -1,8 +1,14 @@
+// expression15 — weighted six-inlet mix.
+// Purpose: form a single outlet as a linear combination of six inlets with
+//   fixed volume fractions (0.2, 0.4, and four 0.1 shares).
+// Topology: f1*0.2 + f2*0.4 + f3*0.1 + f4*0.1 + f5*0.1 + f6*0.1 → fout.
+// Collaborator takeaway: `*` scales inlet volumes before a multi-way merge.
 module expression15(
-    finput f1, f2, f3, f4, f5, f6,
-    foutput fout
+    finput f1, f2, f3, f4, f5, f6,  // six weighted fluid inlets
+    foutput fout                    // weighted-mix product outlet
 );
 
+    // Weighted merge: linear combination with fixed volume fractions
     assign fout = f1*0.2 + f2*0.4 + f3*0.1 + f4*0.1 + f5*0.1 + f6*0.1;
 
 

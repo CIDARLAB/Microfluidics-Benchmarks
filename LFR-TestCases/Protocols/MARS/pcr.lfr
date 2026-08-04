@@ -1,11 +1,17 @@
-module pcr(finput cell_suspension, foutput result);
+// pcr — MARS PCR incubation of cell suspension.
+// Purpose: map cell suspension into a PCR chamber storage, then route the
+// incubated product to `result`.
+// Topology: cell_suspension → incubation_chamber (PCR CHAMBER MAP) → result.
+// Collaborators: #MAP remaps the storage decl to a PCR CHAMBER process type.
+// Single-inlet / single-outlet protocol building block for MARS pipelines.
 
-    storage incubation_chamber;
+module pcr(finput cell_suspension, foutput result);  // cell suspension in → PCR product out
 
-    #MAP "PCR CHAMBER" "storage"
-    assign incubation_chamber = cell_suspension;
+    storage incubation_chamber;                       // PCR incubation chamber (storage)
 
-    assign result = incubation_chamber;
+    #MAP "PCR CHAMBER" "storage"                      // map storage type to PCR CHAMBER process
+    assign incubation_chamber = cell_suspension;      // load chamber from cell suspension
+
+    assign result = incubation_chamber;               // route incubated product to result
 
 endmodule
-

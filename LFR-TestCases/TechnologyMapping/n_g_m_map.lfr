@@ -1,18 +1,15 @@
+// n_g_m_map — N→M gradient map (technology-mapping).
+// Purpose: Copy 5-wide inlet, GRADIENT GENERATOR-map to 4-wide intermediate, drive outlet bus.
+// Topology: FLOW: `i1[0:4]` → `temp1` → (#MAP) `temp2[0:3]` → `out[0:3]`.
+// Collaborator takeaway: Tech-mapping twin of GraphCoverage/n_g_m_map.
 module n_g_m_map(
-    finput [0:4] i1, 
-    foutput [0:3] out
+    finput [0:4] i1,  // FLOW inlet(s)
+    foutput [0:3] out  // FLOW outlet(s)
 );
-
-    flow [0:4] temp1;
-    flow [0:3] temp2;
-
-    assign temp1[0:4] = i1[0:4];
-
-    #MAP "GRADIENT GENERATOR" "assign"
-    assign temp2[0:3] = temp1[0:4];
-    assign out[0:3] = temp2[0:3];
-
+    flow [0:4] temp1;  // intermediate FLOW net(s)
+    flow [0:3] temp2;  // intermediate FLOW net(s)
+    assign temp1[0:4] = i1[0:4];  // continuous FLOW assign
+    #MAP "GRADIENT GENERATOR" "assign"  // tech-map: operator/keyword → component
+    assign temp2[0:3] = temp1[0:4];  // continuous FLOW assign
+    assign out[0:3] = temp2[0:3];  // continuous FLOW assign
 endmodule
-
-
-

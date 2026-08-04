@@ -1,12 +1,25 @@
+// elisalfr — ELISA-style sequential mixing with two readout ports.
+// Purpose: combine buffer+syringe (diluent), then form an assay that also
+//   includes sample. Both the diluent tap (out1) and the final assay (out2)
+//   stay on one graph by sharing the same inlet PORTs in both mix expressions.
+// Topology: buffer+syringe → out1; buffer+syringe+sample → out2.
+// Collaborator takeaway: shared inlets keep two outlets in one connected island.
+module elisalfr(
+    finput buffer, syringe, sample,  // diluent reagents + sample
+    foutput out1, out2               // diluent tap and final assay outlets
+);
 
-module elisalfr(finput buffer, syringe, sample, foutput out1, out2);
+    flow diluent;  // buffer + syringe mix
+    flow assay;    // diluent + sample mix
 
-    flow temp_out1; 
-    flow temp_out;
-    assign temp_out1 = buffer + syringe; //Output of first 3way valve
-    assign out1 = temp_out1;
-    assign temp_out = temp_out1 + sample; //Output of last 3 way valve
+    // Merge: diluent path (exposed on out1)
+    assign diluent = buffer + syringe;
+    // Route diluent to first outlet
+    assign out1 = diluent;
 
-    assign out2 = temp_out;
+    // Merge: assay reuses same inlets plus sample (keeps one island)
+    assign assay = buffer + syringe + sample;
+    // Route assay to second outlet
+    assign out2 = assay;
 
 endmodule

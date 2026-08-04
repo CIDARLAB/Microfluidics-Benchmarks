@@ -2,58 +2,6 @@
     "name": "cell_lysis",
     "components": [
         {
-            "name": "square_cell_trap_1",
-            "id": "square_cell_trap_1",
-            "entity": "SQUARE CELL TRAP",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "rotation": 0.0,
-                "height": 250.0,
-                "channelWidth": 1000.0,
-                "channelLength": 4000.0,
-                "chamberWidth": 2500.0,
-                "chamberLength": 2500.0,
-                "chamberHeight": 250.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "position": [
-                    20000,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 0,
-                    "y": 2000,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 4000,
-                    "y": 2000,
-                    "label": "2",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2000,
-                    "y": 0,
-                    "label": "3",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2000,
-                    "y": 4000,
-                    "label": "4",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 4000,
-            "y-span": 4000
-        },
-        {
             "name": "mixer_1",
             "id": "mixer_1",
             "entity": "MIXER",
@@ -71,7 +19,46 @@
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "position": [
-                    29000,
+                    20000,
+                    20000
+                ]
+            },
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
+        },
+        {
+            "name": "mixer_2",
+            "id": "mixer_2",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    29060,
                     20000
                 ]
             },
@@ -104,7 +91,7 @@
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
-                    38060,
+                    38120,
                     20000
                 ]
             },
@@ -118,45 +105,6 @@
             ],
             "x-span": 1400,
             "y-span": 1400
-        },
-        {
-            "name": "mixer_2",
-            "id": "mixer_2",
-            "entity": "MIXER",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "channelWidth": 800.0,
-                "bendSpacing": 1230.0,
-                "numberOfBends": 1.0,
-                "rotation": 0.0,
-                "bendLength": 2460.0,
-                "height": 250.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "position": [
-                    44460,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 2030,
-                    "y": 0,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2030,
-                    "y": 4860,
-                    "label": "2",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 4060,
-            "y-span": 4860
         },
         {
             "name": "mixer_3",
@@ -176,7 +124,7 @@
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "position": [
-                    53520,
+                    44520,
                     20000
                 ]
             },
@@ -209,7 +157,7 @@
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
-                    62580,
+                    53580,
                     20000
                 ]
             },
@@ -236,7 +184,7 @@
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
-                    68980,
+                    59980,
                     20000
                 ]
             },
@@ -263,7 +211,7 @@
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
-                    75380,
+                    66380,
                     20000
                 ]
             },
@@ -290,115 +238,7 @@
                 "portRadius": 700.0,
                 "height": 1100.0,
                 "position": [
-                    81780,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
-            "name": "port_6",
-            "id": "port_6",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    88180,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
-            "name": "port_7",
-            "id": "port_7",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    94580,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
-            "name": "port_8",
-            "id": "port_8",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    100980,
-                    20000
-                ]
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
-        },
-        {
-            "name": "port_9",
-            "id": "port_9",
-            "entity": "PORT",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "portRadius": 700.0,
-                "height": 1100.0,
-                "position": [
-                    107380,
+                    72780,
                     20000
                 ]
             },
@@ -418,14 +258,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "square_cell_trap_1",
+                "component": "mixer_1",
                 "port": "2"
             },
             "params": {
@@ -433,37 +273,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    24000,
-                    22000
+                    22030,
+                    24860
                 ],
                 "end": [
-                    31030,
+                    31090,
                     20000
                 ],
                 "wayPoints": [
                     [
-                        24000,
+                        22030,
                         20000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            24000,
-                            22000
+                            22030,
+                            24860
                         ],
                         [
-                            24000,
+                            22030,
                             20000
                         ]
                     ],
                     [
                         [
-                            24000,
+                            22030,
                             20000
                         ],
                         [
-                            31030,
+                            31090,
                             20000
                         ]
                     ]
@@ -473,193 +313,25 @@
             "paths": [
                 {
                     "source": {
-                        "component": "square_cell_trap_1",
-                        "port": "2"
-                    },
-                    "sink": {
                         "component": "mixer_1",
-                        "port": "1"
+                        "port": "2"
                     },
-                    "wayPoints": [
-                        [
-                            24000,
-                            22000
-                        ],
-                        [
-                            24000,
-                            20000
-                        ],
-                        [
-                            31030,
-                            20000
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_3",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_2",
-            "id": "channel_2",
-            "source": {
-                "component": "mixer_2",
-                "port": "2"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    46490,
-                    24860
-                ],
-                "end": [
-                    55550,
-                    20000
-                ],
-                "wayPoints": [
-                    [
-                        46490,
-                        20000
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            46490,
-                            24860
-                        ],
-                        [
-                            46490,
-                            20000
-                        ]
-                    ],
-                    [
-                        [
-                            46490,
-                            20000
-                        ],
-                        [
-                            55550,
-                            20000
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
+                    "sink": {
                         "component": "mixer_2",
-                        "port": "2"
-                    },
-                    "sink": {
-                        "component": "mixer_3",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            46490,
+                            22030,
                             24860
                         ],
                         [
-                            46490,
+                            22030,
                             20000
                         ],
                         [
-                            55550,
+                            31090,
                             20000
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "square_cell_trap_1",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_3",
-            "id": "channel_3",
-            "source": {
-                "component": "mixer_3",
-                "port": "2"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    55550,
-                    24860
-                ],
-                "end": [
-                    20000,
-                    22000
-                ],
-                "wayPoints": [
-                    [
-                        55550,
-                        22000
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            55550,
-                            24860
-                        ],
-                        [
-                            55550,
-                            22000
-                        ]
-                    ],
-                    [
-                        [
-                            55550,
-                            22000
-                        ],
-                        [
-                            20000,
-                            22000
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "mixer_3",
-                        "port": "2"
-                    },
-                    "sink": {
-                        "component": "square_cell_trap_1",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            55550,
-                            24860
-                        ],
-                        [
-                            55550,
-                            22000
-                        ],
-                        [
-                            20000,
-                            22000
                         ]
                     ],
                     "features": []
@@ -674,10 +346,10 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_4",
-            "id": "channel_4",
+            "name": "channel_2",
+            "id": "channel_2",
             "source": {
-                "component": "mixer_1",
+                "component": "mixer_2",
                 "port": "2"
             },
             "params": {
@@ -685,37 +357,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    31030,
+                    31090,
                     24860
                 ],
                 "end": [
-                    38760,
+                    38820,
                     20700
                 ],
                 "wayPoints": [
                     [
-                        31030,
+                        31090,
                         20700
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            31030,
+                            31090,
                             24860
                         ],
                         [
-                            31030,
+                            31090,
                             20700
                         ]
                     ],
                     [
                         [
-                            31030,
+                            31090,
                             20700
                         ],
                         [
-                            38760,
+                            38820,
                             20700
                         ]
                     ]
@@ -725,7 +397,7 @@
             "paths": [
                 {
                     "source": {
-                        "component": "mixer_1",
+                        "component": "mixer_2",
                         "port": "2"
                     },
                     "sink": {
@@ -734,16 +406,100 @@
                     },
                     "wayPoints": [
                         [
-                            31030,
+                            31090,
                             24860
                         ],
                         [
-                            31030,
+                            31090,
                             20700
                         ],
                         [
-                            38760,
+                            38820,
                             20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_3",
+            "id": "channel_3",
+            "source": {
+                "component": "mixer_3",
+                "port": "2"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    46550,
+                    24860
+                ],
+                "end": [
+                    22030,
+                    20000
+                ],
+                "wayPoints": [
+                    [
+                        46550,
+                        20000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            46550,
+                            24860
+                        ],
+                        [
+                            46550,
+                            20000
+                        ]
+                    ],
+                    [
+                        [
+                            46550,
+                            20000
+                        ],
+                        [
+                            22030,
+                            20000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "mixer_3",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "mixer_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            46550,
+                            24860
+                        ],
+                        [
+                            46550,
+                            20000
+                        ],
+                        [
+                            22030,
+                            20000
                         ]
                     ],
                     "features": []
@@ -758,8 +514,8 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_5",
-            "id": "channel_5",
+            "name": "channel_4",
+            "id": "channel_4",
             "source": {
                 "component": "port_2",
                 "port": "1"
@@ -769,37 +525,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    63280,
+                    54280,
                     20700
                 ],
                 "end": [
-                    55550,
+                    46550,
                     20000
                 ],
                 "wayPoints": [
                     [
-                        63280,
+                        54280,
                         20000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            63280,
+                            54280,
                             20700
                         ],
                         [
-                            63280,
+                            54280,
                             20000
                         ]
                     ],
                     [
                         [
-                            63280,
+                            54280,
                             20000
                         ],
                         [
-                            55550,
+                            46550,
                             20000
                         ]
                     ]
@@ -818,15 +574,99 @@
                     },
                     "wayPoints": [
                         [
-                            63280,
+                            54280,
                             20700
                         ],
                         [
-                            63280,
+                            54280,
                             20000
                         ],
                         [
-                            55550,
+                            46550,
+                            20000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_5",
+            "id": "channel_5",
+            "source": {
+                "component": "port_3",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    60680,
+                    20700
+                ],
+                "end": [
+                    31090,
+                    20000
+                ],
+                "wayPoints": [
+                    [
+                        60680,
+                        20000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            60680,
+                            20700
+                        ],
+                        [
+                            60680,
+                            20000
+                        ]
+                    ],
+                    [
+                        [
+                            60680,
+                            20000
+                        ],
+                        [
+                            31090,
+                            20000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_3",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "mixer_2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            60680,
+                            20700
+                        ],
+                        [
+                            60680,
+                            20000
+                        ],
+                        [
+                            31090,
                             20000
                         ]
                     ],
@@ -845,7 +685,7 @@
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_3",
+                "component": "port_4",
                 "port": "1"
             },
             "params": {
@@ -853,37 +693,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    69680,
+                    67080,
                     20700
                 ],
                 "end": [
-                    31030,
+                    22030,
                     20000
                 ],
                 "wayPoints": [
                     [
-                        69680,
+                        67080,
                         20000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            69680,
+                            67080,
                             20700
                         ],
                         [
-                            69680,
+                            67080,
                             20000
                         ]
                     ],
                     [
                         [
-                            69680,
+                            67080,
                             20000
                         ],
                         [
-                            31030,
+                            22030,
                             20000
                         ]
                     ]
@@ -893,7 +733,7 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_3",
+                        "component": "port_4",
                         "port": "1"
                     },
                     "sink": {
@@ -902,15 +742,15 @@
                     },
                     "wayPoints": [
                         [
-                            69680,
+                            67080,
                             20700
                         ],
                         [
-                            69680,
+                            67080,
                             20000
                         ],
                         [
-                            31030,
+                            22030,
                             20000
                         ]
                     ],
@@ -922,14 +762,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "mixer_3",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "port_7",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -937,37 +777,37 @@
                 "channelWidth": 400,
                 "start": [
                     "Point",
-                    95280,
+                    73480,
                     20700
                 ],
                 "end": [
-                    46490,
+                    46550,
                     20000
                 ],
                 "wayPoints": [
                     [
-                        95280,
+                        73480,
                         20000
                     ]
                 ],
                 "segments": [
                     [
                         [
-                            95280,
+                            73480,
                             20700
                         ],
                         [
-                            95280,
+                            73480,
                             20000
                         ]
                     ],
                     [
                         [
-                            95280,
+                            73480,
                             20000
                         ],
                         [
-                            46490,
+                            46550,
                             20000
                         ]
                     ]
@@ -977,108 +817,24 @@
             "paths": [
                 {
                     "source": {
-                        "component": "port_7",
+                        "component": "port_5",
                         "port": "1"
                     },
                     "sink": {
-                        "component": "mixer_2",
+                        "component": "mixer_3",
                         "port": "1"
                     },
                     "wayPoints": [
                         [
-                            95280,
+                            73480,
                             20700
                         ],
                         [
-                            95280,
+                            73480,
                             20000
                         ],
                         [
-                            46490,
-                            20000
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_2",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_8",
-            "id": "channel_8",
-            "source": {
-                "component": "port_9",
-                "port": "1"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    108080,
-                    20700
-                ],
-                "end": [
-                    46490,
-                    20000
-                ],
-                "wayPoints": [
-                    [
-                        108080,
-                        20000
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            108080,
-                            20700
-                        ],
-                        [
-                            108080,
-                            20000
-                        ]
-                    ],
-                    [
-                        [
-                            108080,
-                            20000
-                        ],
-                        [
-                            46490,
-                            20000
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_9",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "mixer_2",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            108080,
-                            20700
-                        ],
-                        [
-                            108080,
-                            20000
-                        ],
-                        [
-                            46490,
+                            46550,
                             20000
                         ]
                     ],
@@ -1089,9 +845,9 @@
         }
     ],
     "params": {
-        "x-span": 148780,
+        "x-span": 114180,
         "y-span": 64860,
-        "length": 148780
+        "length": 114180
     },
     "layers": [
         {

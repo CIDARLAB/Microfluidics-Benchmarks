@@ -25,9 +25,9 @@ CHANNEL channel_4 from port_4 1 to nozzle_droplet_generator_2 4 channelWidth=400
 CHANNEL channel_5 from nozzle_droplet_generator_1 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_6 from nozzle_droplet_generator_2 3 to mixer_1 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_7 from mixer_1 2 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_8 from port_5 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_9 from port_6 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_10 from port_7 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_8 from port_5 1 to nozzle_droplet_generator_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_9 from port_6 1 to nozzle_droplet_generator_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_7 1 to square_cell_trap_1 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 
@@ -37,7 +37,7 @@ LAYER CONTROL
 
 PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 
-VALVE3D valve_0 on channel_8 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
+VALVE3D valve_0 on channel_10 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
 

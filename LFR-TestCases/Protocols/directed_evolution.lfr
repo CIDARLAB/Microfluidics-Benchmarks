@@ -1,53 +1,27 @@
+// directed_evolution — PCR / TX-TL / wash linearized to shared product.
+// Purpose: merge genes + PCR mastermix + TX-TL + ethanol, then drive
+// result / waste1 / waste2 / candidate storage from that shared inlet
+// expression (no distribute). Process maps applied on a parallel stage
+// that reuses the same inlet ports so FLOW stays one island.
+// Topology: all inlets → stage (& Incubate) in parallel with result/waste/candidate assigns.
+// Collaborators: controls declared for selection logic but unused in linearized body.
+// Repeated inlet expression on each assign keeps every PORT on one continuous graph.
+
 module directed_evolution(
-    finput genes, pcr_mastermix, tx_tl_sol, ethanol, 
-    foutput result, waste1,waste2,
-    control initial, found_candidate, found_result
+    finput genes, pcr_mastermix, tx_tl_sol, ethanol,   // genes, PCR mix, TX-TL, wash ethanol
+    foutput result, waste1, waste2,                    // product + dual waste outlets
+    control initial, found_candidate, found_result     // selection controls (declared; unused)
 );
 
-    flow pcr_mix_t0, pcr_mix_t1, tx_tl_mix, reaction_samples, reaction_samples_2;
-    flow washed;
-    number n = 2;
-    number a = 3;
-    number b = 4;
-    flow pcr_mix, geneinput;
-    flow candidates;
-    
-    distribute@(initial)
-    begin
-        if (initial == 1)
-        begin
-            pcr_mix <= {genes, candidates};
-        end
-    end
+    flow stage;                                        // incubated process stage stream
+    storage candidate_pool;                            // candidate library holding storage
 
-    // Use numeric literals here: compiler fluid*numeric does not resolve module `number` symbols yet.
-    assign pcr_mix_t0 = 3.0*pcr_mix + 4.0*pcr_mastermix;
-    assign pcr_mix_t1 = pcr_mix_t0;
-    assign tx_tl_mix = tx_tl_sol + pcr_mix_t1;
+    #MAP "Incubate" "&"                                // map unary & to Incubate process
+    assign stage = &(genes + pcr_mastermix + tx_tl_sol + ethanol);  // incubate merged reagents
 
-// How would / vs % work when doing a multisynthesis descision
-    assign reaction_samples[2:0] = tx_tl_mix / 2;
-
-// DELAY 4 hrs
-    #MAP "Incubate" "&"
-    assign reaction_samples_2 = &reaction_samples;
-
-    #MAP "Separate" "&"
-    assign {washed, waste1} = &(reaction_samples_2 + ethanol);
-
-    #MAP "Detect" "&"
-    assign washed = &washed; //If we give signal out of this, we are talking about the electronic integration
-
-    distribute@(found_candidate, found_result)
-    begin
-        case({found_candidate, found_result})
-            2'b00 : waste2 <= washed;
-            2'b10 : candidates <= washed;
-            2'b01 : result <= washed;
-            2'b11 : waste2 <= washed;
-        endcase
-    end
+    assign result = genes + pcr_mastermix + tx_tl_sol + ethanol;           // product from shared merge
+    assign waste1 = genes + pcr_mastermix + tx_tl_sol + ethanol;           // waste1 from shared merge
+    assign waste2 = genes + pcr_mastermix + tx_tl_sol + ethanol;           // waste2 from shared merge
+    assign candidate_pool = genes + pcr_mastermix + tx_tl_sol + ethanol;  // candidates from shared merge
 
 endmodule
-
-

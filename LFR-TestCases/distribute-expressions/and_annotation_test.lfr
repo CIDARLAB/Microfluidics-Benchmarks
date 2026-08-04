@@ -1,22 +1,23 @@
+// and_annotation_test — control-gated multi-source outlet.
+// Purpose: When `c` is asserted, route `in_1` and `in_2` to `out` (dual assign); else route `in_3` to `out`.
+// Topology: FLOW: three inlets → one outlet under CONTROL `c` via `distribute@(c)`.
+// Collaborator takeaway: Shows control-gated dual write to one outlet (AND-style annotation test).
 module and_annotation_test(
-    finput in_1, in_2, in_3,
-    foutput out,
-    control c
+    finput in_1, in_2, in_3,  // FLOW inlet(s)
+    foutput out,  // FLOW outlet(s)
+    control c  // CONTROL select/gate — does not carry fluid
 );
-
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
     distribute@(c)
     begin
-        if(c == 1)
+        if(c == 1)  // CONTROL predicate for this FLOW arm
         begin
-            out <= in_1;
-            out <= in_2;
+            out <= in_1;  // gated FLOW assign in this control arm
+            out <= in_2;  // gated FLOW assign in this control arm
         end
-        else
+        else  // alternate CONTROL arm
         begin
-            out <= in_3;
+            out <= in_3;  // gated FLOW assign in this control arm
         end
-    
     end
-
-
 endmodule

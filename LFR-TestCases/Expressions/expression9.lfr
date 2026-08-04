@@ -1,9 +1,18 @@
-module expression9(finput in1, in2, foutput out);
+// expression9 — metered inlet plus sieved inlet.
+// Purpose: meter `in1` at 50.88, add sieved `in2`, and assign the mix to `out`.
+// Topology: (in1 % 50.88) + (&in2) → temp_out → out.
+// Collaborator takeaway: `%` metering and `&` sieve combine in one expression.
+module expression9(
+    finput in1, in2,  // inlet to meter and inlet to sieve
+    foutput out       // combined product outlet
+);
 
-    flow temp_out;
+    flow temp_out;  // metered+sieved mix before outlet
 
+    // Meter + sieve merge: percent-meter in1, sieve in2, then add
     assign temp_out = in1 % 50.88 + &in2;
 
+    // Route product to outlet
     assign out = temp_out;
 
 endmodule

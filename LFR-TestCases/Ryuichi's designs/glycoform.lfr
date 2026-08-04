@@ -1,21 +1,30 @@
-//  Integrated Lectin Affinity Microfluidic Chip for Glycoform Separation
-//   Xiuli Mao, Yong Luo, Zhongpeng Dai, Keyi Wang, Yuguang Du, and Bingcheng Lin
+// glycoform
+// Purpose: lectin-affinity microfluidic chip for glycoform separation
+// (Mao / Luo / Dai / Wang / Du / Lin).
+// Sample, wash, and elution reagents merge into an affinity stage, then
+// split to two collection ports — every IO on one continuous flow path.
+// Topology: r1+r2+r3+r5+r6 → feed → MIXER(~) → collect → {r4, r7}.
+// Collaborators: r4/r7 are dual collection outlets; inlet numbering follows the paper.
+// Unary affinity mix then storage dual-outlet keeps FLOW as one island.
 
 module glycoform (
-    finput r1, r2, r3, r5, r6,
-    foutput r4, r7
+    finput r1, r2, r3, r5, r6,   // sample / wash / elution reagent inlets (paper IDs)
+    foutput r4, r7               // dual collection / fraction outlets
 );
-//  sample injection 1
-    assign r4 = r3;
 
-//  sample injection 2 and washing
-    assign r7 = r1;
-    assign r4 = r1;
-    assign r3 = r1;
+    // Injection / wash / elution reagents merge into one feed.
+    flow feed;                                         // merged reagent feed
+    assign feed = r1 + r2 + r3 + r5 + r6;              // sum-merge all five inlets
 
-//  elution 1 and elution 2
-    assign r7 = r2;
-    assign r4 = r2;
-    assign r3 = r2;
+    // Affinity / separation stage (unary mix).
+    flow after_affinity;                               // post-affinity stream
+    #MAP "MIXER" "~"                                   // map unary ~ to MIXER (affinity stage)
+    assign after_affinity = ~feed;                     // process feed through affinity mix
+
+    // Collect into storage, then dual outlets (avoids floating foutputs).
+    storage collect;                                   // shared collection storage
+    assign collect = after_affinity;                   // load collect from affinity stage
+    assign r4 = collect;                               // route collect to first outlet
+    assign r7 = collect;                               // route collect to second outlet
 
 endmodule

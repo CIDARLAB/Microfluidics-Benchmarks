@@ -1,9 +1,16 @@
-//  Millisecond Kinetics on a Microfluidics Chip Using nanoliters of Reagents. Helen Song and Rustem F. Ismagilov
+// kinetics
+// Purpose: millisecond kinetics chip using nanoliter reagents
+// (Song / Ismagilov). Buffer, substrate, and RNase A merge to one out.
+// Topology: three finputs sum-merge directly onto a single foutput (star merge).
+// Collaborators: note typo `subtrate` is intentional in the netlist; do not rename.
+// All reagents share one continuous assign path — no storage or MAP stages.
+
 module kinetics(
-    finput buffer, subtrate, r_nase_a,
-    foutput out
+    finput buffer, subtrate, r_nase_a,   // buffer, substrate (typo preserved), RNase A inlets
+    foutput out                          // single merged kinetics product outlet
 );
 
+    // Merge all three reagent streams into the outlet on one continuous path.
     assign out = buffer + subtrate + r_nase_a;
 
 endmodule

@@ -1,16 +1,32 @@
-module crispr(finput water, nebuffer, lbcas12a, grna, reporter,
-foutput complex);
+// crispr — CRISPR/Cas12a reagent formulation (SHERLOCK-style prep).
+// Purpose: mix water, NEBuffer, LbCas12a, and gRNA, incubate, then add
+//   reporter and drive the complex to the outlet. Unary `~` maps to MIXER.
+// Topology: reagents → mix → +reporter → mix → complex.
+// Collaborator takeaway: unique intermediate names avoid double-assign on
+//   the same LHS (which previously split the netlist).
+module crispr(
+    finput water, nebuffer, lbcas12a, grna, reporter,  // CRISPR reagents + reporter
+    foutput complex                                    // formulated complex outlet
+);
 
-    #MAP "MIXER" "~"
+    #MAP "MIXER" "~"  // map unary ~ to MIXER component
 
-    flow mixer1;
-    flow mixer2;
+    flow reagents;       // core CRISPR reagent mix
+    flow incubated;      // post-mix / incubation stage
+    flow with_reporter;  // complex after reporter addition
+    flow product;        // final mix before outlet
 
-    assign mixer1 = water + nebuffer + lbcas12a + grna;
+    // Merge: combine core CRISPR reagents
+    assign reagents = water + nebuffer + lbcas12a + grna;
 
-    assign mixer2 = ~mixer1;
-    assign mixer2 = mixer2 + reporter;
+    // Mix/incubate (mapped MIXER)
+    assign incubated = ~reagents;
 
-    assign complex = ~mixer2;
+    // Merge: add reporter to incubated reagents
+    assign with_reporter = incubated + reporter;
+    // Mix again before outlet
+    assign product = ~with_reporter;
+    // Route product to outlet
+    assign complex = product;
 
 endmodule

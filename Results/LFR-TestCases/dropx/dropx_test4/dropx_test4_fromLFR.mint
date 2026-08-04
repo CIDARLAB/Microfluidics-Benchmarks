@@ -21,8 +21,8 @@ CHANNEL channel_2 from reaction_chamber_1 4 to mixer_1 1 connectionSpacing=1000 
 CHANNEL channel_3 from mixer_2 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_4 from mixer_4 2 to mixer_3 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_5 from mixer_3 2 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_6 from port_2 1 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_7 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_6 from port_2 1 to mixer_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_7 from port_3 1 to reaction_chamber_1 2 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_8 from port_3 1 to mixer_4 1 connectionSpacing=1000 channelWidth=400  ;
 
  

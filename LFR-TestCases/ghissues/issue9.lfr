@@ -1,54 +1,12 @@
+// issue9 — 16-lane bus reduce to one outlet (GitHub #9).
+// Purpose: Every bus lane appears in the outlet expression (distribute left lanes floating).
+// Topology: FLOW: sum of `i0..i15` → `out`. CONTROLs interface-only.
+// Collaborator takeaway: Prefer explicit sum over distribute when reducing a wide bus.
 module issue9(
-    finput [0:15] in,
-    foutput out,
-    control x9, x1,
-    control inlet
+    finput i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15,  // FLOW inlet(s)
+    foutput out,  // FLOW outlet(s)
+    control x9, x1, inlet  // CONTROL select/gate — does not carry fluid
 );
-
-    flow mux;
-    flow mixer;
-    flow mixer_in, mixer_out;
-    flow bypass1, bypass2;
-    flow bypass_in, bypass_out;
-
-    flow chamber;
-
-    flow flowcontroller;
-
-//  assign temp1[15:0] = in;
-
-//  mux here
-    assign mux = in[0:15] ;
-    assign mux = x9;
-
-//  mixer
-//  distribution block
-    #MAP "MIXER" "~"
-    assign mixer_out = ~mixer_in;
-
-    distribute@(x1)
-    begin
-        if (x1 == 1) 
-        begin
-            bypass_out <= bypass_in;
-        end
-        else 
-        begin
-            mixer_in <= bypass_in;
-            bypass_out <= mixer_out;
-        end
-    end
-
-//  assign temp3 = temp2 + cout;
-
-    flow valve1_in, valve1_out;
-
-    assign valve1_in = mux + bypass_out;
-
-    distribute@(x1) 
-    begin
-        if (x1 == 1) begin
-            valve1_out <= valve1_in;
-        end
-    end
+    assign out = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7  // FLOW merge / mix
+               + i8 + i9 + i10 + i11 + i12 + i13 + i14 + i15;
 endmodule

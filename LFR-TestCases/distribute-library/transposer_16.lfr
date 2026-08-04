@@ -1,8 +1,10 @@
-// Upstream file was empty; minimal pass-through shell so library imports and batch synthesis succeed.
-// Replace with full storage/grid topology when available.
+// transposer_16 — placeholder transposer shell.
+// Purpose: Minimal pass-through so library imports and batch synthesis succeed until a full N-lane permute is authored.
+// Topology: Single flow path `in0` → `out0` (no controlled lane permutation yet).
+// Collaborator takeaway: Stub only; a real transposer needs flow buses + control select bits.
 module transposer_16(
-    finput in0,
-    foutput out0
+    finput in0,  // FLOW inlet(s)
+    foutput out0  // FLOW outlet(s)
 );
-    assign out0 = in0;
+    assign out0 = in0;  // continuous FLOW assign
 endmodule

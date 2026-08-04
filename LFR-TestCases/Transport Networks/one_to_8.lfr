@@ -1,27 +1,28 @@
-// This example has 1 to 8 mux (same decode table as distribute_network_examples.lfr).
-module one_to_8(finput in, foutput [0:7] out, control [0:2] c1, [0:2] c2);
-
+// one_to_8 — 1-to-8 transport mux.
+// Purpose: Same 6-bit decode table as distribute_network_examples: steer `in` to one of eight outs.
+// Topology: FLOW: `in` → selected `out[i]`. CONTROL: `{c2,c1}` case arms inside `distribute`.
+// Collaborator takeaway: Canonical 1→8 transport network using control decode, not continuous fan-out.
+module one_to_8(finput in, foutput [0:7] out, control [0:2] c1, [0:2] c2);  // FLOW IO + CONTROL ports
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
     distribute@(c1, c2)
     begin
-        case({c2, c1})
+        case({c2, c1})  // CONTROL value selects which FLOW arm runs
             6'b111000 :
-                out[0] <= in;
+                out[0] <= in;  // gated FLOW assign in this control arm
             6'b110001 :
-                out[1] <= in;
+                out[1] <= in;  // gated FLOW assign in this control arm
             6'b101010 :
-                out[2] <= in;
+                out[2] <= in;  // gated FLOW assign in this control arm
             6'b100011 :
-                out[3] <= in;
+                out[3] <= in;  // gated FLOW assign in this control arm
             6'b011100 :
-                out[4] <= in;
+                out[4] <= in;  // gated FLOW assign in this control arm
             6'b010101 :
-                out[5] <= in;
+                out[5] <= in;  // gated FLOW assign in this control arm
             6'b001110 :
-                out[6] <= in;
+                out[6] <= in;  // gated FLOW assign in this control arm
             6'b000111 :
-                out[7] <= in;
+                out[7] <= in;  // gated FLOW assign in this control arm
         endcase
     end
-
 endmodule
-

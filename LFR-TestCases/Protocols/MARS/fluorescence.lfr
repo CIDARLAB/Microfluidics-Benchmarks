@@ -1,16 +1,21 @@
-module fluorescence(finput toehold, trigger_rna, mastermix);
+// fluorescence — MARS toehold / trigger RNA fluorescence assay.
+// Purpose: meter toehold and trigger RNA into a mix, load a fluorescence
+// chamber, then add mastermix into the same storage for readout.
+// Topology: toehold%vol1 → + trigger%vol2 → fchamber; then fchamber += mastermix.
+// Collaborators: module has no foutput (assay chamber is the endpoint); double-assign to fchamber is intentional.
+// Metering volumes are both 50; % performs sampling via metering.
 
-    flow toehold_vol, trigger_toehold_mix; 
-    number volume1 = 50, volume2 = 50;
-    storage fchamber;
+module fluorescence(finput toehold, trigger_rna, mastermix);  // toehold RNA, trigger RNA, mastermix (no foutput)
+
+    flow toehold_vol, trigger_toehold_mix;              // metered toehold + combined mix streams
+    number volume1 = 50, volume2 = 50;                  // metering volumes for toehold and trigger
+    storage fchamber;                                   // fluorescence assay chamber
 
 //  % does sampling via metering
-    assign toehold_vol = toehold % volume1;
-    assign trigger_toehold_mix = trigger_rna % volume2 + toehold_vol;
-    assign fchamber = trigger_toehold_mix;
+    assign toehold_vol = toehold % volume1;                             // meter toehold (vol 50)
+    assign trigger_toehold_mix = trigger_rna % volume2 + toehold_vol;   // meter trigger and merge with toehold
+    assign fchamber = trigger_toehold_mix;                              // load fluorescence chamber from mix
 
-    assign fchamber = mastermix;
+    assign fchamber = mastermix;                                        // add mastermix into same chamber (readout)
 
 endmodule
-
-

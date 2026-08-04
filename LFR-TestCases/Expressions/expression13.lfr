@@ -1,11 +1,21 @@
-// This design tests the DIVIDE interaction
-module expression13(finput in1, foutput out1, out2);
+// expression13 — DIVIDE interaction (1→2 split).
+// Purpose: test the `/` divide operator that splits one inlet into two
+//   equal streams and drives each half to its own outlet.
+// Topology: in1 / 2 → {temp_1, temp_2} → out1, out2.
+// Collaborator takeaway: `{lhs, rhs} = in/N` is the split/fan-out pattern.
+module expression13(
+    finput in1,          // single inlet to split
+    foutput out1, out2   // two half-stream outlets
+);
 
-    flow temp_1, temp_2;
+    flow temp_1, temp_2;  // two halves from the divide
 
+    // Split: divide in1 into two equal flows
     assign {temp_1, temp_2} = in1/2;
 
+    // Route first half to out1
     assign out1 = temp_1;
+    // Route second half to out2
     assign out2 = temp_2;
 
 endmodule

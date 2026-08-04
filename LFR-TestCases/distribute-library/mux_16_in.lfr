@@ -1,29 +1,32 @@
+// mux_16_in — 16-to-1 multiplexer (library primitive).
+// Purpose: Under 4-bit control `c_select`, select one of sixteen flow inlets onto a single outlet.
+// Topology: FLOW: selected `inputs[i]` → `output`. CONTROL: `c_select` chooses which inlet is connected.
+// Collaborator takeaway: Classic mux: many flow inlets, one flow outlet, control selects the source.
 module mux_16_in(
-    finput [0:15] inputs, 
-    foutput output, 
-    control [0:3] c_select
+    finput [0:15] inputs,  // FLOW inlet(s)
+    foutput output,  // FLOW outlet(s)
+    control [0:3] c_select  // CONTROL select/gate — does not carry fluid
 );
-
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
     distribute@(c_select)
     begin
-        case(c_select)
-            4'b0000 : output <= inputs[0] ;
-            4'b0001 : output <= inputs[1] ;
-            4'b0010 : output <= inputs[2] ;
-            4'b0011 : output <= inputs[3] ;
-            4'b0100 : output <= inputs[4] ;
-            4'b0101 : output <= inputs[5] ;
-            4'b0110 : output <= inputs[6] ;
-            4'b0111 : output <= inputs[7] ;
-            4'b1000 : output <= inputs[8] ;
-            4'b1001 : output <= inputs[9] ;
-            4'b1010 : output  <= inputs[10];
-            4'b1011 : output  <= inputs[11];
-            4'b1100 : output  <= inputs[12];
-            4'b1101 : output  <= inputs[13];
-            4'b1110 : output  <= inputs[14];
-            4'b1111 : output  <= inputs[15];
+        case(c_select)  // CONTROL value selects which FLOW arm runs
+            4'b0000 : output <= inputs[0] ;  // FLOW edge enabled in this control arm
+            4'b0001 : output <= inputs[1] ;  // FLOW edge enabled in this control arm
+            4'b0010 : output <= inputs[2] ;  // FLOW edge enabled in this control arm
+            4'b0011 : output <= inputs[3] ;  // FLOW edge enabled in this control arm
+            4'b0100 : output <= inputs[4] ;  // FLOW edge enabled in this control arm
+            4'b0101 : output <= inputs[5] ;  // FLOW edge enabled in this control arm
+            4'b0110 : output <= inputs[6] ;  // FLOW edge enabled in this control arm
+            4'b0111 : output <= inputs[7] ;  // FLOW edge enabled in this control arm
+            4'b1000 : output <= inputs[8] ;  // FLOW edge enabled in this control arm
+            4'b1001 : output <= inputs[9] ;  // FLOW edge enabled in this control arm
+            4'b1010 : output  <= inputs[10];  // FLOW edge enabled in this control arm
+            4'b1011 : output  <= inputs[11];  // FLOW edge enabled in this control arm
+            4'b1100 : output  <= inputs[12];  // FLOW edge enabled in this control arm
+            4'b1101 : output  <= inputs[13];  // FLOW edge enabled in this control arm
+            4'b1110 : output  <= inputs[14];  // FLOW edge enabled in this control arm
+            4'b1111 : output  <= inputs[15];  // FLOW edge enabled in this control arm
         endcase
     end
-
 endmodule

@@ -1,47 +1,24 @@
-// Logic + trap routing benchmark (corrected bus / case syntax).
+// logic04 — eight inlets into a 4-trap logic array (linearized).
+// Purpose: Merge all inlets into cell traps, then YTREE-fan from `in1[0]` to four outlets.
+// Topology: FLOW: lanes `i0..i7` → `cell_traps`; `in1[0]` → (#MAP YTREE) `out[0:3]`. CONTROL ports interface-only.
+// Collaborator takeaway: Controls remain for call-sites; routing is continuous for connectivity.
 module logic04(
-    finput [0:7] in1,
-    foutput [0:3] out,
-    control [0:2] c_mux_in,
-    control [0:4] c_logic_array
+    finput [0:7] in1,  // FLOW inlet(s)
+    foutput [0:3] out,  // FLOW outlet(s)
+    control [0:2] c_mux_in,  // CONTROL select/gate — does not carry fluid
+    control [0:4] c_logic_array  // CONTROL select/gate — does not carry fluid
 );
-
-    storage [0:3] cell_traps;
-
-    flow trap_input;
-
-    distribute@(c_mux_in)
-    begin
-        case(c_mux_in)
-            3'b000: trap_input <= in1[0];
-            3'b001: trap_input <= in1[1];
-            3'b010: trap_input <= in1[2];
-            3'b011: trap_input <= in1[3];
-            3'b100: trap_input <= in1[4];
-            3'b101: trap_input <= in1[5];
-            3'b110: trap_input <= in1[6];
-            3'b111: trap_input <= in1[7];
-        endcase
-    end
-
-    distribute@(c_logic_array)
-    begin
-        case(c_logic_array)
-            5'b00000: cell_traps[0] <= trap_input;
-            5'b00001: cell_traps[1] <= trap_input;
-            5'b00010: cell_traps[2] <= trap_input;
-            5'b00011: cell_traps[3] <= trap_input;
-            5'b00100: cell_traps[1] <= cell_traps[0];
-            5'b00101: cell_traps[2] <= cell_traps[0];
-            5'b00110: cell_traps[3] <= cell_traps[0];
-            5'b00111: cell_traps[2] <= cell_traps[1];
-            5'b01000: cell_traps[3] <= cell_traps[1];
-            5'b01001: cell_traps[3] <= cell_traps[2];
-            5'b01010: out[0] <= cell_traps[0];
-            5'b01011: out[1] <= cell_traps[1];
-            5'b01100: out[2] <= cell_traps[2];
-            5'b01101: out[3] <= cell_traps[3];
-        endcase
-    end
-
+    storage [0:3] cell_traps;  // STORAGE / chamber node(s)
+    flow i0, i1, i2, i3, i4, i5, i6, i7;  // intermediate FLOW net(s)
+    assign i0 = in1[0];  // continuous FLOW assign
+    assign i1 = in1[1];  // continuous FLOW assign
+    assign i2 = in1[2];  // continuous FLOW assign
+    assign i3 = in1[3];  // continuous FLOW assign
+    assign i4 = in1[4];  // continuous FLOW assign
+    assign i5 = in1[5];  // continuous FLOW assign
+    assign i6 = in1[6];  // continuous FLOW assign
+    assign i7 = in1[7];  // continuous FLOW assign
+    assign cell_traps = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7;  // FLOW merge / mix
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign out[0:3] = in1[0];  // continuous FLOW assign
 endmodule

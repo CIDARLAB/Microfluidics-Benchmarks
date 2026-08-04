@@ -1,9 +1,10 @@
-//  Based on the design by Helen Huang
-
+// dx15 — meter, incubate, keep/waste (Helen Huang).
+// Purpose: Meter `in1`, MIXER-map, subtract `waste` to form `collection`.
+// Topology: FLOW: `collection = ~(in1%100) − waste`.
+// Collaborator takeaway: Single-expression DropX keep/waste.
 module dx15(
-    finput in1, 
-    foutput collection, waste
+    finput in1,  // FLOW inlet(s)
+    foutput collection, waste  // FLOW outlet(s)
 );
-    assign collection = ~(in1%100) - waste;
-
+    assign collection = ~(in1%100) - waste;  // meter / dropletize (FLOW)
 endmodule

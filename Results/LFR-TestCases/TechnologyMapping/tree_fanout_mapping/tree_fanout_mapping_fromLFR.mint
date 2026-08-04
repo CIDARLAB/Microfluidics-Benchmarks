@@ -26,14 +26,14 @@ CHANNEL channel_6 from ytree_1 9 to port_6 1 connectionSpacing=1000 channelWidth
 CHANNEL channel_7 from ytree_1 9 to port_7 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_8 from ytree_1 9 to port_8 1 connectionSpacing=1000 channelWidth=400  ;
 CHANNEL channel_9 from ytree_1 9 to port_9 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_10 from port_5 1 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_11 from port_5 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_12 from port_5 1 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_13 from port_5 1 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_14 from port_5 1 to port_6 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_15 from port_5 1 to port_7 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_16 from port_5 1 to port_8 1 connectionSpacing=1000 channelWidth=400  ;
-CHANNEL channel_17 from port_5 1 to port_9 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_10 from port_3 1 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_11 from port_3 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_12 from port_3 1 to port_4 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_13 from port_3 1 to port_5 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_14 from port_3 1 to port_6 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_15 from port_3 1 to port_7 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_16 from port_3 1 to port_8 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_17 from port_3 1 to port_9 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

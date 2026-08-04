@@ -1,16 +1,11 @@
-// Droplet-based assay: mix the three inputs through a mixer, then split the
-// mixed stream to two outputs (result and waste).
+// dropletx — three-reagent mix to result and waste.
+// Purpose: Both outlets reuse the same three inlet PORTs so the netlist stays one component.
+// Topology: FLOW: `analyte+reagent1+reagent2` → `result` and `waste`.
+// Collaborator takeaway: Linearized result/waste twin of DropX keep/waste.
 module dropletx(
-    finput analyte, reagent1, reagent2,
-    foutput result, waste
+    finput analyte, reagent1, reagent2,  // FLOW inlet(s)
+    foutput result, waste  // FLOW outlet(s)
 );
-
-    flow mixed;
-
-    #MAP "MIXER" "~"
-    assign mixed = ~(analyte + reagent1 + reagent2);
-
-    assign result = mixed;
-    assign waste = mixed;
-
+    assign result = analyte + reagent1 + reagent2;  // FLOW merge / mix
+    assign waste = analyte + reagent1 + reagent2;  // FLOW merge / mix
 endmodule

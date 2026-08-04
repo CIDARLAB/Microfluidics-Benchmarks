@@ -1,16 +1,13 @@
+// one_to_one — straight-through two-stage pass (graph-coverage).
+// Purpose: Wire a single inlet through two intermediate flows to one outlet.
+// Topology: FLOW: `in` → `temp1` → `temp2` → `out`.
+// Collaborator takeaway: Baseline one-to-one connectivity pattern for graph coverage.
 module one_to_one(in, out);
-
-    finput in;
-    foutput out;
-    
-    flow temp1;
-    flow temp2;
-    
-    assign temp1 = in;
-    assign temp2 = temp1;
-    assign out = temp2;
-
+    finput in;  // FLOW inlet(s)
+    foutput out;  // FLOW outlet(s)
+    flow temp1;  // intermediate FLOW net(s)
+    flow temp2;  // intermediate FLOW net(s)
+    assign temp1 = in;  // continuous FLOW assign
+    assign temp2 = temp1;  // continuous FLOW assign
+    assign out = temp2;  // continuous FLOW assign
 endmodule
-
-
-

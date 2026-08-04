@@ -1,11 +1,22 @@
-module expression10(finput in1, in2, foutput out);
+// expression10 — metering / sieve mix with scalar arithmetic side effect.
+// Purpose: meter `in1` (%), combine with sieved `in2` (&), and drive `out`;
+//   also exercises numeric expression evaluation on `val1` (non-flow).
+// Topology: (in1 % 50.88) + (&in2) → temp_out → out; val1 is pure arithmetic.
+// Collaborator takeaway: `number` vars co-exist with flow ops but stay off-graph.
+module expression10(
+    finput in1, in2,  // inlet to meter and inlet to sieve
+    foutput out       // combined product outlet
+);
 
-    flow temp_out;
-    number val1 = 9;
+    flow temp_out;       // metered+sieved mix before outlet
+    number val1 = 9;     // scalar numeric variable (non-flow)
 
+    // Arithmetic: reassign val1 with a numeric expression (side effect)
     val1 = 10 + 78 - 65 / 67 * 44;
+    // Meter + sieve merge: percent-meter in1, sieve in2, then add
     assign temp_out = in1 % 50.88 + &in2;
 
+    // Route product to outlet
     assign out = temp_out;
 
 endmodule

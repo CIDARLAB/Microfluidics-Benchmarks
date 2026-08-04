@@ -1,31 +1,18 @@
-`import "../distribute-library/mux_04_in.lfr"
-`import "../distribute-library/mux_04_out.lfr"
-
+// rotary_cells — 4-inlet rotary mix into cell traps (linearized).
+// Purpose: Merge all inlets into four traps and tree-reduce to one outlet.
+// Topology: FLOW: `in_1[*]` → `i*` → `cell_traps[0:3]` → `out_1`. CONTROLs interface-only.
+// Collaborator takeaway: Rotary map omitted so traps stay on the inlet island.
 module rotary_cells(
-    finput [0:3] in_1,
-    foutput out_1,
-    control [0:1] c_inputs, [0:1] c_cell_traps
+    finput [0:3] in_1,  // FLOW inlet(s)
+    foutput out_1,  // FLOW outlet(s)
+    control [0:1] c_inputs, [0:1] c_cell_traps  // CONTROL select/gate — does not carry fluid
 );
-
-    flow temp_input, temp_trap_input;
-    storage [0:3] cell_traps;
-
-    mux_04_in mux_in(
-        .inputs(in_1), 
-        .output(temp_input), 
-        .c_select(c_inputs)
-    );
-
-    #MAP "ROTARY MIXER" "&"
-    assign temp_trap_input = &temp_input;
-    
-    mux_04_out mux_traps(
-        .input(temp_trap_input), 
-        .outputs(cell_traps), 
-        .c_select(c_cell_traps)
-    );
-
-    #MAP "TREE" "assign"
-    assign out_1 =  cell_traps;
-
+    flow i0, i1, i2, i3;  // intermediate FLOW net(s)
+    storage [0:3] cell_traps;  // STORAGE / chamber node(s)
+    assign i0 = in_1[0];  // continuous FLOW assign
+    assign i1 = in_1[1];  // continuous FLOW assign
+    assign i2 = in_1[2];  // continuous FLOW assign
+    assign i3 = in_1[3];  // continuous FLOW assign
+    assign cell_traps = i0 + i1 + i2 + i3;  // FLOW merge / mix
+    assign out_1 = cell_traps;  // continuous FLOW assign
 endmodule

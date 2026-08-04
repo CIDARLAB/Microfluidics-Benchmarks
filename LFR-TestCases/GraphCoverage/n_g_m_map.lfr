@@ -1,16 +1,15 @@
-module n_g_m_map(i1, out);
-
-    finput i1;
-    foutput out;
-
-    flow [0:4] temp1;
-    flow [0:3] temp2;
-
-    assign temp1[0:3] = i1;
-    assign temp2[0:3] = temp1[0:4];
-    assign out = temp2[0:3];
-
+// n_g_m_map — N→M gradient / bus map (graph-coverage).
+// Purpose: Copy a 5-wide inlet bus, GRADIENT GENERATOR-map onto a 4-wide bus, drive the outlet bus.
+// Topology: FLOW: `i1[0:4]` → `temp1` → (#MAP) `temp2[0:3]` → `out[0:3]`.
+// Collaborator takeaway: Widths must be end-to-end consistent to avoid floating slices.
+module n_g_m_map(
+    finput [0:4] i1,  // FLOW inlet(s)
+    foutput [0:3] out  // FLOW outlet(s)
+);
+    flow [0:4] temp1;  // intermediate FLOW net(s)
+    flow [0:3] temp2;  // intermediate FLOW net(s)
+    assign temp1[0:4] = i1[0:4];  // continuous FLOW assign
+    #MAP "GRADIENT GENERATOR" "assign"  // tech-map: operator/keyword → component
+    assign temp2[0:3] = temp1[0:4];  // continuous FLOW assign
+    assign out[0:3] = temp2[0:3];  // continuous FLOW assign
 endmodule
-
-
-

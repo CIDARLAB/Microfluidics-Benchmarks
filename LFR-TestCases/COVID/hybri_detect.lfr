@@ -1,18 +1,28 @@
+// hybri_detect — HybriDetect / RPA–Cas13 lateral-flow style assay.
+// Purpose: sequential mix DNA sample + RPA mastermix, then MgAC, Cas13,
+//   and HybriDetect buffer, ending at a single readout outlet.
+// Topology: in1+in2 → +in3 → +in4 → +in5 → out (chain of merges).
+// Collaborator takeaway: sequential reagent addition as a linear mix chain.
 module hybri_detect(
-    finput in1, in2, in3, in4, in5,
-    foutput out
+    finput in1, in2, in3, in4, in5,  // DNA, RPA mix, MgAC, Cas13, HybriDetect buffer
+    foutput out                      // final lateral-flow readout outlet
 );
 
-    flow temp_out0;
-    flow temp_out1;
-    flow temp_out2;
-    flow temp_out3;
+    flow temp_out0;  // DNA + RPA mastermix
+    flow temp_out1;  // + MgAC
+    flow temp_out2;  // + Cas13
+    flow temp_out3;  // + HybriDetect buffer
 
-    assign temp_out0 = in1 + in2; // mix the first two inputs, i.e. DNA sample with RPA mastermix
-    assign temp_out1 = temp_out0 + in3; // mix the DNA+RPA assay with MgAC
-    assign temp_out2 = temp_out1 + in4; // mix the assay with Cas13
-    assign temp_out3 = temp_out2 + in5; // mix assay with HybriDetect Assay Buffer for final readout
+    // Merge: DNA sample with RPA mastermix
+    assign temp_out0 = in1 + in2;
+    // Merge: add MgAC
+    assign temp_out1 = temp_out0 + in3;
+    // Merge: add Cas13
+    assign temp_out2 = temp_out1 + in4;
+    // Merge: add HybriDetect Assay Buffer for readout
+    assign temp_out3 = temp_out2 + in5;
 
+    // Route final mix to outlet
     assign out = temp_out3;
 
 endmodule

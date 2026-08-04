@@ -836,12 +836,96 @@
         {
             "sinks": [
                 {
-                    "component": "port_8",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
+            "source": {
+                "component": "ytree_1",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    20024,
+                    20000
+                ],
+                "end": [
+                    32148,
+                    20700
+                ],
+                "wayPoints": [
+                    [
+                        20024,
+                        20700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            20024,
+                            20000
+                        ],
+                        [
+                            20024,
+                            20700
+                        ]
+                    ],
+                    [
+                        [
+                            20024,
+                            20700
+                        ],
+                        [
+                            32148,
+                            20700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "ytree_1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            20024,
+                            20000
+                        ],
+                        [
+                            20024,
+                            20700
+                        ],
+                        [
+                            32148,
+                            20700
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_8",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_8",
+            "id": "channel_8",
             "source": {
                 "component": "ytree_1",
                 "port": "1"
@@ -924,8 +1008,8 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_8",
-            "id": "channel_8",
+            "name": "channel_9",
+            "id": "channel_9",
             "source": {
                 "component": "ytree_1",
                 "port": "1"
@@ -993,90 +1077,6 @@
                         ],
                         [
                             76948,
-                            20700
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "port_2",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_9",
-            "id": "channel_9",
-            "source": {
-                "component": "ytree_1",
-                "port": "1"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    20024,
-                    20000
-                ],
-                "end": [
-                    32148,
-                    20700
-                ],
-                "wayPoints": [
-                    [
-                        20024,
-                        20700
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            20024,
-                            20000
-                        ],
-                        [
-                            20024,
-                            20700
-                        ]
-                    ],
-                    [
-                        [
-                            20024,
-                            20700
-                        ],
-                        [
-                            32148,
-                            20700
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "ytree_1",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "port_2",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            20024,
-                            20000
-                        ],
-                        [
-                            20024,
-                            20700
-                        ],
-                        [
-                            32148,
                             20700
                         ]
                     ],

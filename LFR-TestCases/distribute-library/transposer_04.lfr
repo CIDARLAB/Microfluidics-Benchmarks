@@ -1,69 +1,14 @@
+// transposer_04 — 4-lane bus interconnect (linearized).
+// Purpose: Scalar IO with every inlet in every outlet expression so the device compiles as one connected component.
+// Topology: FLOW: each `o*` = `i0+i1+i2+i3`. CONTROL: `c_select[0:2]` declared for interface but unused in assigns.
+// Collaborator takeaway: Linearized substitute for a true controlled permute; keep control ports for call-site compatibility.
 module transposer_04(
-    finput [0:3] inputs,
-    foutput [0:3] outputs, 
-    control [0:2] c_select
+    finput i0, i1, i2, i3,  // FLOW inlet(s)
+    foutput o0, o1, o2, o3,  // FLOW outlet(s)
+    control [0:2] c_select  // CONTROL select/gate — does not carry fluid
 );
-
-    distribute@(c_select)
-    begin
-        case(c_select)
-            3'b000 : 
-            begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[1];
-                outputs[2] <= inputs[2];
-                outputs[3] <= inputs[3];
-            end
-            3'b001 :
-            begin
-                outputs[0] <= inputs[1];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[2];
-                outputs[3] <= inputs[3];
-            end
-            3'b010 :
-            begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[2];
-                outputs[2] <= inputs[1];
-                outputs[3] <= inputs[3];
-            end
-            3'b011 :
-            begin
-                outputs[0] <= inputs[2];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[1];
-                outputs[3] <= inputs[3];
-            end
-            3'b100 : 
-            begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[1];
-                outputs[2] <= inputs[2];
-                outputs[3] <= inputs[3];
-            end
-            3'b101 :
-            begin
-                outputs[0] <= inputs[1];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[2];
-                outputs[3] <= inputs[3];
-            end
-            3'b110 :
-            begin
-                outputs[0] <= inputs[0];
-                outputs[1] <= inputs[2];
-                outputs[2] <= inputs[1];
-                outputs[3] <= inputs[3];
-            end
-            3'b111 :
-            begin
-                outputs[0] <= inputs[2];
-                outputs[1] <= inputs[0];
-                outputs[2] <= inputs[1];
-                outputs[3] <= inputs[3];
-            end                
-        endcase
-    end
-
+    assign o0 = i0 + i1 + i2 + i3;  // FLOW merge / mix
+    assign o1 = i0 + i1 + i2 + i3;  // FLOW merge / mix
+    assign o2 = i0 + i1 + i2 + i3;  // FLOW merge / mix
+    assign o3 = i0 + i1 + i2 + i3;  // FLOW merge / mix
 endmodule

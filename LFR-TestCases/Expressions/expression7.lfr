@@ -1,10 +1,24 @@
-module expression7(finput [0:2] in1, in2, in3, in4, foutput out);
+// expression7 — 3-wide inlet bus plus three scalar feeds reduced to one outlet.
+// Purpose: note LFR width applies only to the next name (`[0:2] in1`), so
+//   in2/in3/in4 are scalars. Concatenate the scalars to match the bus width,
+//   merge, then drive `out` (same intent as the original in1 + {in2,in3,in4}).
+// Topology: {in2,in3,in4} → scalar_bus; in1+scalar_bus → merged_bus ─YTREE→ out.
+// Collaborator takeaway: bus concat + YTREE reduce scalar feeds with a bus.
+module expression7(
+    finput [0:2] in1, in2, in3, in4,  // 3-wide bus + three scalar feeds
+    foutput out                       // YTREE-reduced product outlet
+);
 
-    flow temp_out;
+    flow [0:2] scalar_bus;  // concatenated scalar feeds as a bus
+    flow [0:2] merged_bus;  // element-wise merge of bus + scalars
 
-    assign temp_out = in1 + { in2, in3, in4 } ;
+    // Concat: pack three scalars into a matching-width bus
+    assign scalar_bus[0:2] = {in2, in3, in4};
+    // Merge: element-wise add of in1 bus with scalar bus
+    assign merged_bus[0:2] = in1[0:2] + scalar_bus[0:2];
 
-    assign out = temp_out;
+    #MAP "YTREE" "assign"  // map bus assign to YTREE reduce
+    // Reduce: YTREE-collapse 3-wide bus to scalar outlet
+    assign out = merged_bus[0:2];
 
 endmodule
-

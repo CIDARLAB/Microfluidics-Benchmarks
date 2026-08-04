@@ -1071,96 +1071,12 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_2",
+                    "component": "square_cell_trap_1",
                     "port": "1"
                 }
             ],
             "name": "channel_8",
             "id": "channel_8",
-            "source": {
-                "component": "mixer_2",
-                "port": "2"
-            },
-            "params": {
-                "connectionSpacing": 1000,
-                "channelWidth": 400,
-                "start": [
-                    "Point",
-                    64890,
-                    24860
-                ],
-                "end": [
-                    71920,
-                    22000
-                ],
-                "wayPoints": [
-                    [
-                        64890,
-                        22000
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            64890,
-                            24860
-                        ],
-                        [
-                            64890,
-                            22000
-                        ]
-                    ],
-                    [
-                        [
-                            64890,
-                            22000
-                        ],
-                        [
-                            71920,
-                            22000
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "mixer_2",
-                        "port": "2"
-                    },
-                    "sink": {
-                        "component": "square_cell_trap_2",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            64890,
-                            24860
-                        ],
-                        [
-                            64890,
-                            22000
-                        ],
-                        [
-                            71920,
-                            22000
-                        ]
-                    ],
-                    "features": []
-                }
-            ],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "square_cell_trap_1",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_9",
-            "id": "channel_9",
             "source": {
                 "component": "mixer_1",
                 "port": "2"
@@ -1239,7 +1155,91 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "square_cell_trap_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_9",
+            "id": "channel_9",
+            "source": {
+                "component": "mixer_2",
+                "port": "2"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    64890,
+                    24860
+                ],
+                "end": [
+                    71920,
+                    22000
+                ],
+                "wayPoints": [
+                    [
+                        64890,
+                        22000
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            64890,
+                            24860
+                        ],
+                        [
+                            64890,
+                            22000
+                        ]
+                    ],
+                    [
+                        [
+                            64890,
+                            22000
+                        ],
+                        [
+                            71920,
+                            22000
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "mixer_2",
+                        "port": "2"
+                    },
+                    "sink": {
+                        "component": "square_cell_trap_2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            64890,
+                            24860
+                        ],
+                        [
+                            64890,
+                            22000
+                        ],
+                        [
+                            71920,
+                            22000
+                        ]
+                    ],
+                    "features": []
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "nozzle_droplet_generator_2",
                     "port": "1"
                 }
             ],
@@ -1258,7 +1258,7 @@
                     20700
                 ],
                 "end": [
-                    64890,
+                    99320,
                     20000
                 ],
                 "wayPoints": [
@@ -1284,7 +1284,7 @@
                             20000
                         ],
                         [
-                            64890,
+                            99320,
                             20000
                         ]
                     ]
@@ -1298,7 +1298,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "mixer_2",
+                        "component": "nozzle_droplet_generator_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1311,7 +1311,7 @@
                             20000
                         ],
                         [
-                            64890,
+                            99320,
                             20000
                         ]
                     ],
@@ -1323,7 +1323,7 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
@@ -1342,7 +1342,7 @@
                     20700
                 ],
                 "end": [
-                    38400,
+                    64890,
                     20000
                 ],
                 "wayPoints": [
@@ -1368,7 +1368,7 @@
                             20000
                         ],
                         [
-                            38400,
+                            64890,
                             20000
                         ]
                     ]
@@ -1382,7 +1382,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "nozzle_droplet_generator_1",
+                        "component": "mixer_2",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1395,7 +1395,7 @@
                             20000
                         ],
                         [
-                            38400,
+                            64890,
                             20000
                         ]
                     ],
@@ -1407,7 +1407,7 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_2",
+                    "component": "nozzle_droplet_generator_1",
                     "port": "1"
                 }
             ],
@@ -1426,7 +1426,7 @@
                     20700
                 ],
                 "end": [
-                    99320,
+                    38400,
                     20000
                 ],
                 "wayPoints": [
@@ -1452,7 +1452,7 @@
                             20000
                         ],
                         [
-                            99320,
+                            38400,
                             20000
                         ]
                     ]
@@ -1466,7 +1466,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "nozzle_droplet_generator_2",
+                        "component": "nozzle_droplet_generator_1",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -1479,7 +1479,7 @@
                             20000
                         ],
                         [
-                            99320,
+                            38400,
                             20000
                         ]
                     ],

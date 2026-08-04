@@ -1,13 +1,12 @@
-module dropx_test2(finput in1, in2, foutput out1);
-
-    flow in1_metered, in2_metered;
-    
-    #CONSTRAIN "%" generation_rate = 400 hz
-    assign in1_metered = in1%0.1;
-
-    #CONSTRAIN "%" generation_rate = 400 hz
-    assign in2_metered = in2%0.1;
-
-    assign out1 = in1_metered + in2_metered;
-
+// dropx_test2 — dual metered inlets then merge.
+// Purpose: Independently meter two inlets, sum the metered streams, drive one outlet.
+// Topology: FLOW: `in1`,`in2` → metered temps → sum → `out1`.
+// Collaborator takeaway: Separate #CONSTRAIN per metering assign.
+module dropx_test2(finput in1, in2, foutput out1);  // FLOW IO ports
+    flow in1_metered, in2_metered;  // intermediate FLOW net(s)
+    #CONSTRAIN "%" generation_rate = 400 hz  // constraint on mapped operator (rate/size/etc.)
+    assign in1_metered = in1%0.1;  // meter / dropletize (FLOW)
+    #CONSTRAIN "%" generation_rate = 400 hz  // constraint on mapped operator (rate/size/etc.)
+    assign in2_metered = in2%0.1;  // meter / dropletize (FLOW)
+    assign out1 = in1_metered + in2_metered;  // FLOW merge / mix
 endmodule

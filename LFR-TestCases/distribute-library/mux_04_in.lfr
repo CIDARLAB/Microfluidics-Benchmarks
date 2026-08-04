@@ -1,17 +1,20 @@
+// mux_04_in — 4-to-1 multiplexer (library primitive).
+// Purpose: Under 2-bit control `c_select`, select one of four flow inlets onto a single outlet.
+// Topology: FLOW: selected `inputs[i]` → `output`. CONTROL: `c_select` chooses which inlet is connected.
+// Collaborator takeaway: Classic mux: many flow inlets, one flow outlet, control selects the source.
 module mux_04_in(
-    finput [0:3] inputs, 
-    foutput output, 
-    control [0:1] c_select
+    finput [0:3] inputs,  // FLOW inlet(s)
+    foutput output,  // FLOW outlet(s)
+    control [0:1] c_select  // CONTROL select/gate — does not carry fluid
 );
-
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
     distribute@(c_select)
     begin
-        case(c_select)
-            2'b00 : output <= inputs[0];
-            2'b01 : output <= inputs[1];
-            2'b10 : output <= inputs[2];
-            2'b11 : output <= inputs[3];
+        case(c_select)  // CONTROL value selects which FLOW arm runs
+            2'b00 : output <= inputs[0];  // FLOW edge enabled in this control arm
+            2'b01 : output <= inputs[1];  // FLOW edge enabled in this control arm
+            2'b10 : output <= inputs[2];  // FLOW edge enabled in this control arm
+            2'b11 : output <= inputs[3];  // FLOW edge enabled in this control arm
         endcase
     end
-
 endmodule

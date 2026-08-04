@@ -1,32 +1,31 @@
-`import "nine_to_one_mux.lfr"
-`import "microreactor.lfr"
+// chemostat_chip
+// Purpose: cell-free gene-expression chemostat array
+// (Laohakunakorn / Lavickova / Swank / Laurent / Maerkl).
+// Nine inlets bus-wire through a mixer into a storage feed that fans
+// into eight microreactor chambers and collects to one outlet.
+// Topology: in[0:8] → in_bus → MIXER(~) → feed → reactor[0:7] → out.
+// Collaborators: c1–c4 control banks model valves; unused in linearized body.
+// Companion to nine_to_one_mux / microreactor designs in the same paper family.
 
 module chemostat_chip (
-    finput [0:8] in,
-    foutput out,
-    control [0:5] c1, [0:7] c2, [0:8] c3, c4
+    finput [0:8] in,                              // nine reagent / media inlets
+    foutput out,                                  // collected chemostat product outlet
+    control [0:5] c1, [0:7] c2, [0:8] c3, c4     // valve control banks (declared; unused)
 );
 
-    flow after_mux;
+    flow [0:8] in_bus;                        // internal bus mirroring all nine inlets
+    assign in_bus[0:8] = in[0:8];             // wire full inlet bus onto in_bus
 
-    nine_to_one_mux nine_one_mux(in, after_mux, c1);
+    flow [0:8] mixed;                         // post-mixer reagent bus
+    #MAP "MIXER" "~"                          // map unary ~ to a MIXER process
+    assign mixed[0:8] = ~in_bus[0:8];         // mix every bus channel
 
-    flow [0:7] microreactor_out;
+    storage feed;                             // collapse mixed bus into one feed
+    assign feed = mixed[0:8];                 // merge mixed channels into feed
 
-    microreactor micro1(after_mux, microreactor_out[0], c3, c2[0]);
-    microreactor micro2(after_mux, microreactor_out[1], c3, c2[1]);
-    microreactor micro3(after_mux, microreactor_out[2], c3, c2[2]);
-    microreactor micro4(after_mux, microreactor_out[3], c3, c2[3]);
-    microreactor micro5(after_mux, microreactor_out[4], c3, c2[4]);
-    microreactor micro6(after_mux, microreactor_out[5], c3, c2[5]);
-    microreactor micro7(after_mux, microreactor_out[6], c3, c2[6]);
-    microreactor micro8(after_mux, microreactor_out[7], c3, c2[7]);
+    storage [0:7] reactor;                    // eight microreactor chambers
+    assign reactor = feed;                    // fan feed into all reactors
 
-    distribute@(c4)
-    begin 
-        if (c4 == 1)
-            out <= microreactor_out[0];
-    end
-    
+    assign out = reactor;                     // collect reactors to the single outlet
 
 endmodule

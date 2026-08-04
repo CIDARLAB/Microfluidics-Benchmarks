@@ -10,19 +10,8 @@ PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
 
 
 
-
-
- 
-
-END LAYER
-
-LAYER CONTROL 
-
-
-
-
-
-
+CHANNEL channel_1 from port_3 1 to port_1 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_3 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
 
  
 

@@ -1,15 +1,13 @@
+// issue10 — five inlets merged to three outlets (GitHub #10).
+// Purpose: Every inlet appears in every outlet expression so the graph is one component.
+// Topology: FLOW: `a+b+c+d+e` → `x`,`y`,`z`. CONTROL `valve` interface-only.
+// Collaborator takeaway: Long `+` chains keep all ports on one island.
 module issue10(
-    finput a, b, c, d, e,
-    foutput x, y, z,
-    control [0:16] valve
+    finput a, b, c, d, e,  // FLOW inlet(s)
+    foutput x, y, z,  // FLOW outlet(s)
+    control [0:16] valve  // CONTROL select/gate — does not carry fluid
 );
-
-    flow after_resorvoir;
-
-    distribute@(valve[0]) begin
-        if (valve[0] == 1) begin
-            after_resorvoir <= b;
-        end
-    end
-
+    assign x = a + b + c + d + e;  // FLOW merge / mix
+    assign y = a + b + c + d + e;  // FLOW merge / mix
+    assign z = a + b + c + d + e;  // FLOW merge / mix
 endmodule

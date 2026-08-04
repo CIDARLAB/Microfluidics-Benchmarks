@@ -1,29 +1,26 @@
+// pcr — control-gated PCR mix and incubate.
+// Purpose: Under `c1` load PCR solution, mix and incubate; under `c2` release product to `a_out`.
+// Topology: FLOW: (CONTROL `c1`) `a` → mix(+) → incubate(~) ; (CONTROL `c2`) → `a_out`.
+// Collaborator takeaway: #MAP binds `+`/`~` to MIX/Incubator; controls stage the protocol.
 module pcr(
-    finput a,
-    foutput a_out,
-    control c1, c2
+    finput a,  // FLOW inlet(s)
+    foutput a_out,  // FLOW outlet(s)
+    control c1, c2  // CONTROL select/gate — does not carry fluid
 );
-
-    flow mixer_in, mixed, incubated;
-    #MAP "MIX" "+"
-    #MAP "Incubator" "~"
-
-//  load PCR solution
-    distribute@(c1) begin 
-        if (c1 == 1) begin 
-            mixer_in <= a;
-//  mix
-            mixed <= +mixer_in;
-//  incubate
-            incubated <= ~mixed;
+    flow mixer_in, mixed, incubated;  // intermediate FLOW net(s)
+    #MAP "MIX" "+"  // tech-map: operator/keyword → component
+    #MAP "Incubator" "~"  // tech-map: operator/keyword → component
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c1) begin
+        if (c1 == 1) begin  // CONTROL predicate for this FLOW arm
+            mixer_in <= a;  // gated FLOW assign in this control arm
+            mixed <= +mixer_in;  // gated FLOW assign in this control arm
+            incubated <= ~mixed;  // gated FLOW assign in this control arm
         end
     end
-
-    
-//  out
-    distribute@(c2) begin 
-        if (c2 == 1)
-            a_out <= incubated;
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c2) begin
+        if (c2 == 1)  // CONTROL predicate for this FLOW arm
+            a_out <= incubated;  // gated FLOW assign in this control arm
     end
-
 endmodule

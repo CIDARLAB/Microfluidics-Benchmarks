@@ -1,19 +1,15 @@
+// tree_fanout_mapping2 — staged YTREE fan-out.
+// Purpose: Buffer the inlet, YTREE-map onto an 8-wide intermediate bus, assign to outlets.
+// Topology: FLOW: `i1` → `temp_i1` → (#MAP YTREE) `temp_out[0:7]` → `out`.
+// Collaborator takeaway: Staging before YTREE keeps the map site explicit.
 module tree_fanout_mapping2(
-    finput i1,
-    foutput [0:7] out
+    finput i1,  // FLOW inlet(s)
+    foutput [0:7] out  // FLOW outlet(s)
  );
-
-    flow temp_i1;
-    flow [0:7] temp_out;
-    
-    assign temp_i1 = i1;
-
-// This implicitly means that 
-// we can generate a tree
-    #MAP "YTREE" "assign"
-    assign temp_out[0:7] = temp_i1;
-
-    assign out = temp_out;
-
+    flow temp_i1;  // intermediate FLOW net(s)
+    flow [0:7] temp_out;  // intermediate FLOW net(s)
+    assign temp_i1 = i1;  // continuous FLOW assign
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign temp_out[0:7] = temp_i1;  // continuous FLOW assign
+    assign out = temp_out;  // continuous FLOW assign
 endmodule
-

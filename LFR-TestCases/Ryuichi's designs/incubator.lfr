@@ -1,97 +1,45 @@
-//  multi-purpose lab-on-a-chip Ahmed M. Amin, Raviraj Thakur, Seth Madren, Han-Sheng Chuang, Mithuna Thottethodi, T. N. Vijaykumar, Steven T. Wereley, and Stephen C. Jacobson
+// incubator
+// Purpose: multi-purpose lab-on-a-chip incubator (Amin / Thakur / et al.).
+// Five reagent inlets merge through pump / mixer / incubation stages into
+// a shared storage junction that fans to three outlets.
+// Topology: a+b+c+d+e → Pump1 → MIXER → Mixer_L→R → Incubator_L→R → Pump2 → junction → {x,y,z}.
+// Collaborators: sequential MAP stages model the published process chain; valve[16:0] unused.
+// Three outlets share junction storage so FLOW remains one connected island.
 
 module incubator(
-    finput a, b, c, d, e,
-    foutput x, y, z,
-    control [16:0] valve
+    finput a, b, c, d, e,     // five reagent / sample reservoir inlets
+    foutput x, y, z,          // three product / collection outlets
+    control [16:0] valve      // valve control bus (declared; unused in linearized body)
 );
 
-flow after_bcd, resorvoirs_out;
+    flow reservoirs_out;                              // merged reservoir feed
+    assign reservoirs_out = a + b + c + d + e;        // sum-merge all five inlets
 
-distribute@(valve[0:2]) begin 
-    if (valve[0] == 1)
-        after_bcd <= b;
-    if (valve[1] == 1)
-        after_bcd <= c;
-    if (valve[2] == 1)
-        after_bcd <= d;
-end
+    flow pump1_out;                                   // post-Pump1 stream
+    #MAP "Pump1" "~"                                  // map unary ~ to Pump1
+    assign pump1_out = ~reservoirs_out;               // pump the merged reservoirs
 
-distribute@(valve[3:5]) begin 
-    if (valve[3] == 1)
-        resorvoirs_out <= a;
-    if (valve[4] == 1)
-        resorvoirs_out <= after_bcd;
-    if (valve[5] == 1)
-        resorvoirs_out <= e;
-end
+    flow mixer_left;                                  // left mixer stage output
+    #MAP "MIXER" "~"                                  // map unary ~ to MIXER
+    assign mixer_left = ~pump1_out;                   // mix after Pump1
 
-flow pump1_out;
+    flow mixer_right;                                 // right mixer stage output
+    #MAP "Mixer_left_to_right" "~"                    // map unary ~ to left→right mixer transfer
+    assign mixer_right = ~mixer_left;                 // transfer / remix left → right
 
-#MAP "Pump1" "~"
-assign pump1_out = ~resorvoirs_out; 
+    flow incubator_right;                             // post-incubation stream
+    #MAP "Incubator_left_to_right" "~"                // map unary ~ to incubator L→R stage
+    assign incubator_right = ~mixer_right;            // incubate after mixer_right
 
-flow waitroom1, mixer_left, incubator_left, midpath;
+    flow pump2_out;                                   // post-Pump2 stream
+    #MAP "Pump2" "~"                                  // map unary ~ to Pump2
+    assign pump2_out = ~incubator_right;              // pump after incubation
 
-distribute@(valve[6:9]) begin 
-    if (valve[6] == 1)
-        waitroom1 <= pump1_out;
-    if (valve[7] == 1) begin 
-        mixer_left <= waitroom1;
-        waitroom1 <= mixer_left;
-    end
-    if (valve[8] == 1) begin 
-        midpath <= waitroom1;
-        waitroom1 <= midpath;
-    end
-    if (valve[9] == 1) begin 
-        incubator_left <= waitroom1;
-        waitroom1 <= incubator_left;
-    end
-end
+    storage junction;                                 // shared outlet junction storage
+    assign junction = pump2_out;                      // load junction from Pump2
 
-flow waitroom2, mixer_right, incubator_right, pump2_in;
-
-#MAP "Mixer_left_to_right" "~"
-assign mixer_right = ~mixer_left;
-
-#MAP "Mixer_right_to_left" "~"
-assign mixer_left = mixer_right;
-
-#MAP "Incubator_left_to_right" "~"
-assign incubator_right = incubator_left;
-
-#MAP "Incubator_right_to_left" "~"
-assign incubator_left = incubator_right;
-
-distribute@(valve[10:13]) begin
-    if (valve[10] == 1) begin 
-        waitroom2 <= midpath;
-        midpath <= waitroom2;
-    end
-    if (valve[11] == 1) begin
-        waitroom2 <= incubator_right;
-        incubator_right <= waitroom2;
-    end
-    if (valve[12] == 1) 
-        pump2_in <= waitroom2;
-    if (valve[13] == 1) 
-        waitroom2 <= incubator_right;
-        incubator_right <= waitroom2;
-end
-
-flow pump2_out;
-
-#MAP "Pump2" "~"
-assign pump2_out = ~pump2_in;
-
-distribute@(valve[14:16]) begin 
-    if (valve[14] == 1)
-        x <= pump2_out;
-    if (valve[15] == 1)
-        y <= pump2_out;
-    if (valve[16] == 1)
-        z <= pump2_out;
-end
+    assign x = junction;                              // route junction to outlet x
+    assign y = junction;                              // route junction to outlet y
+    assign z = junction;                              // route junction to outlet z
 
 endmodule

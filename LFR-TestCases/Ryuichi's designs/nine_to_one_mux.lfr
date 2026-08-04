@@ -1,25 +1,27 @@
-//  9-1 mux for steady state cell free gene expression with microfluidics chemostats
-//  by Nadanai Laohakunakorn, Barbora Lavickova, Zoe Swank, Julie Laurent, Sebastian J Maerkl  
+// nine_to_one_mux
+// Purpose: 9-to-1 reagent multiplexer for the cell-free chemostat
+// (Laohakunakorn / Lavickova / Swank / Laurent / Maerkl).
+// Full bus wiring through a mixer into storage so every inlet PORT
+// stays on one continuous graph with `out`.
+// Topology: in[0:8] → bus → MIXER(~) → mixed → feed storage → out.
+// Collaborators: control[0:5] models mux valves but is unused in this linearized body.
+// Bus-wide unary mix keeps all nine inlets connected before storage collapse.
 
 module nine_to_one_mux(
-    finput [0:8] in,
-    foutput out,
-    control [0:5] c
+    finput [0:8] in,      // nine reagent inlets (mux select sources)
+    foutput out,          // single multiplexed / mixed outlet
+    control [0:5] c       // mux valve controls (declared; unused in linearized body)
 );
 
-    distribute@(c)
-    begin
-        case (c)
-            6'b001001: out <= in[0];
-            6'b001010: out <= in[1];
-            6'b001100: out <= in[2];
-            6'b010001: out <= in[3];
-            6'b010010: out <= in[4];
-            6'b010100: out <= in[5];
-            6'b100001: out <= in[6];
-            6'b100010: out <= in[7];
-            6'b100100: out <= in[8];
-        endcase
-    end
+    flow [0:8] bus;                       // internal bus mirroring all nine inlets
+    assign bus[0:8] = in[0:8];            // wire full inlet bus onto bus
+
+    flow [0:8] mixed;                     // post-mixer bus
+    #MAP "MIXER" "~"                      // map unary ~ operator to a MIXER process
+    assign mixed[0:8] = ~bus[0:8];        // mix every bus channel (unary mix)
+
+    storage feed;                         // collapse mixed bus into one storage feed
+    assign feed = mixed[0:8];             // merge mixed channels into feed
+    assign out = feed;                    // drive single outlet from feed
 
 endmodule

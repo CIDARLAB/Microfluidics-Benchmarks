@@ -1,11 +1,9 @@
+// tree_fanin — vector fan-in to a single outlet (graph-coverage).
+// Purpose: Assign a 9-wide inlet bus directly to one outlet (implicit merge tree).
+// Topology: FLOW: `i1[0:8]` → `out`.
+// Collaborator takeaway: Wide-bus-to-scalar assign implies a fan-in tree at mapping time.
 module tree_fanin(i1[0:8], out);
-
-    finput [0:8] i1;
-    foutput out;
-
-//  This implicitly means that 
-//  we can generate a tree
-    assign out = i1 [0:8];
-
+    finput [0:8] i1;  // FLOW inlet(s)
+    foutput out;  // FLOW outlet(s)
+    assign out = i1 [0:8];  // continuous FLOW assign
 endmodule
-
