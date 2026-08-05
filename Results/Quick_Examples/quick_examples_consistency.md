@@ -4,6 +4,11 @@ Audit of `Quick_Examples/` against the same LFR↔MINT policy as TestCases:
 physical ports authoritative; PORT COUNT CORRECTION when LFR IO ≠ physical;
 required components/connections present for LFR function.
 
+**Port columns (`FLOW ports`, `CONTROL`):** values are `physical / LFR-declared`
+(FLOW IO count, or CONTROL bit-width). Equal means a match; unequal means synthesis
+expanded ports (if/else→one-hot Cports, NOZZLE metering auxiliaries, etc.) and a
+`PORT COUNT CORRECTION` block is expected (`correction=yes`).
+
 ## Summary
 
 - Top-level LFR demos: **5/5** validate OK (0 errors / 0 warnings).
@@ -22,21 +27,16 @@ required components/connections present for LFR function.
 | `import_mixer_and_incubator` | OK | 3/3 | 0/0 | no | 1 | — |
 | `import_parallel_premix` | OK | 6/6 | 0/0 | no | 1 | — |
 
-## Fixes applied
-
-1. **`library/droplet_generator.lfr`**: `#MAP "NOZZLE DROPLET GENERATOR" "&"` / binary `&` was wrong
-   (NOZZLE is InteractionType.METER → `%`). Rewrote as `aqueous % 100` then `+ oil`.
-   Recompile restored a connected netlist with a real NOZZLE (was disconnected mixer island
-   + orphan REACTION CHAMBER).
-2. **`flow_and_control_demo`**: annotated PORT COUNT CORRECTION (control 1 → 2 Cports);
-   synced native `.mint` to fromLFR body (correction comments omitted in native source
-   because the MINT parser rejects `//` comment blocks).
-3. **`user_components_demo/TopDesign.mint`**: fixed missing spaces in PORT decls;
-   added CONTROL channel to gadget terminal 4; now compiles with `--component-library lib/`.
-
 ## Library modules
 
-Pre-load only (`run_all_Quick_Examples.sh --pre-load`); not compiled as standalone devices.
-`two_in_mixer`, `three_in_mixer`, `incubator`, `droplet_generator` — comments present;
-incubator `#MAP "INCUBATOR"` realizes as REACTION CHAMBER (same as LFR-TestCases).
+Three top-level demos use `` `import `` from `library/`:
+`import_mixer_and_incubator.lfr`, `import_parallel_premix.lfr`, `import_droplet_reaction.lfr`.
+
+Example (same `--pre-load` as `run_all_Quick_Examples.sh`):
+
+```sh
+fluigi synthesize --outpath Results/Quick_Examples/import_droplet_reaction \
+  --pre-load Microfluidics-Benchmarks/Quick_Examples \
+  Microfluidics-Benchmarks/Quick_Examples/import_droplet_reaction.lfr
+```
 
