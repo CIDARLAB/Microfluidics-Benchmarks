@@ -317,7 +317,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
@@ -413,7 +413,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -558,7 +558,16 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 4,
+        "controlPortCount": 2,
+        "logicalControlBits": 1,
+        "logicalFlowIo": 4,
+        "portCountCorrected": true,
+        "portCorrectionReasons": [
+            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 \u2192 physical Cports 2, valves 2)"
+        ],
+        "controlExpansion": "distribute_one_hot"
     },
     "layers": [
         {
@@ -586,7 +595,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_2",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN"
         }
     ],

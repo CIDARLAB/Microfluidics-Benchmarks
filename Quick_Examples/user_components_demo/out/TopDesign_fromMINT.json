@@ -17,9 +17,16 @@
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "in_b",
@@ -37,9 +44,16 @@
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "out_1",
@@ -57,9 +71,16 @@
                     -1
                 ]
             },
-            "ports": [],
-            "x-span": -1,
-            "y-span": -1
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         },
         {
             "name": "gadget_1",
@@ -70,6 +91,8 @@
             ],
             "params": {
                 "componentSpacing": 1000.0,
+                "width": 20000.0,
+                "length": 10000.0,
                 "position": [
                     -1,
                     -1
@@ -103,6 +126,33 @@
             ],
             "x-span": 20000,
             "y-span": 10000
+        },
+        {
+            "name": "ctrl_port",
+            "id": "ctrl_port",
+            "entity": "PORT",
+            "layers": [
+                "1"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
         }
     ],
     "connections": [
@@ -252,6 +302,54 @@
             "layer": "0",
             "paths": [],
             "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "gadget_1",
+                    "port": "4"
+                }
+            ],
+            "name": "ch_ctrl",
+            "id": "ch_ctrl",
+            "source": {
+                "component": "ctrl_port",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1600,
+                "channelWidth": 400,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "1",
+            "paths": [],
+            "entity": "CHANNEL"
         }
     ],
     "params": {
@@ -264,6 +362,13 @@
             "name": "FLOW_0",
             "id": "0",
             "type": "FLOW",
+            "params": {},
+            "group": "0"
+        },
+        {
+            "name": "FLOW_0",
+            "id": "1",
+            "type": "CONTROL",
             "params": {},
             "group": "0"
         }
