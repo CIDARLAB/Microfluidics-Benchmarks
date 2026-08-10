@@ -1,0 +1,35 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\Expressions\expression13\expression13_fromLFR.json
+returncode: 0
+
+--- stdout ---
+Finish loading test case: expression13_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 6000, 8000, 'droplet_splitter_1', 0] [[0, 4000], [5500, 0], [5000, 8000]]
+[1, 1400, 1400, 'port_1', 0] [[700, 700]]
+[2, 1400, 1400, 'port_2', 0] [[700, 700]]
+[3, 1400, 1400, 'port_3', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0010044574737548828 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0, 1], [0], [0]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.0011107921600341797 s
+9/9, Finish compaction and connecting ports, time spent: 0.019808292388916016 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.021923542022705078 s
+Reordering Timeusage: 0.0 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.020919084548950195 s
+Please check the results under "./Benchmarks/LFR-TestCases/Expressions/expression13/expression13_fromLFR/result"
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression13\expression13_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression13\expression13_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression13\expression13_fromLFR\result\layer01_check.png
+
+--- stderr ---

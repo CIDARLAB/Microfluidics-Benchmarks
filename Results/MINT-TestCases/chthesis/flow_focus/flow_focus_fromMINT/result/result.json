@@ -1,0 +1,601 @@
+{
+    "name": "flow_focus",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "p",
+            "id": "p",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "portRadius": 100,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    485.0,
+                    0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 100,
+                    "y": 100,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 200,
+            "y-span": 200
+        },
+        {
+            "name": "ff",
+            "id": "ff",
+            "entity": "DROPLET GENERATOR FLOW FOCUS",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "radius": 100,
+                "oilChannelWidth": 100,
+                "waterChannelWidth": 40,
+                "angle": 30,
+                "length": 500.0,
+                "componentSpacing": 1000.0,
+                "height": 250.0,
+                "rotation": 270,
+                "mirrorByX": 0,
+                "mirrorByY": 0.0,
+                "position": [
+                    0.0,
+                    3400.0
+                ]
+            },
+            "ports": [
+                {
+                    "x": 1266,
+                    "y": 585,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1266,
+            "y-span": 1170
+        },
+        {
+            "name": "n1",
+            "id": "n1",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
+                "position": [
+                    585.0,
+                    2300.0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 100,
+            "y-span": 100
+        },
+        {
+            "name": "n2",
+            "id": "n2",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "height": 100.0,
+                "position": [
+                    585.0,
+                    1200.0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 100,
+            "y-span": 100
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "n1",
+                    "port": "1"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "ff",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "start": [
+                    585.0,
+                    3400.0
+                ],
+                "end": [
+                    585.0,
+                    2300.0
+                ],
+                "wayPoints": [
+                    [
+                        585.0,
+                        3400.0
+                    ],
+                    [
+                        585.0,
+                        3400.0
+                    ],
+                    [
+                        585.0,
+                        2900.0
+                    ],
+                    [
+                        585.0,
+                        2900.0
+                    ],
+                    [
+                        585.0,
+                        2400.0
+                    ],
+                    [
+                        585.0,
+                        2300.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            585.0,
+                            3400.0
+                        ],
+                        [
+                            585.0,
+                            3400.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            3400.0
+                        ],
+                        [
+                            585.0,
+                            2900.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            2900.0
+                        ],
+                        [
+                            585.0,
+                            2900.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            2900.0
+                        ],
+                        [
+                            585.0,
+                            2400.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            2400.0
+                        ],
+                        [
+                            585.0,
+                            2300.0
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "ff",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "n1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            585.0,
+                            3400.0
+                        ],
+                        [
+                            585.0,
+                            3400.0
+                        ],
+                        [
+                            585.0,
+                            2900.0
+                        ],
+                        [
+                            585.0,
+                            2900.0
+                        ],
+                        [
+                            585.0,
+                            2400.0
+                        ],
+                        [
+                            585.0,
+                            2300.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n2",
+                    "port": "1"
+                }
+            ],
+            "name": "c2",
+            "id": "c2",
+            "source": {
+                "component": "n1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 20,
+                "connectionSpacing": 1000,
+                "start": [
+                    585.0,
+                    2300.0
+                ],
+                "end": [
+                    585.0,
+                    1200.0
+                ],
+                "wayPoints": [
+                    [
+                        585.0,
+                        2300.0
+                    ],
+                    [
+                        585.0,
+                        2300.0
+                    ],
+                    [
+                        585.0,
+                        1800.0
+                    ],
+                    [
+                        585.0,
+                        1800.0
+                    ],
+                    [
+                        585.0,
+                        1300.0
+                    ],
+                    [
+                        585.0,
+                        1200.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            585.0,
+                            2300.0
+                        ],
+                        [
+                            585.0,
+                            2300.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            2300.0
+                        ],
+                        [
+                            585.0,
+                            1800.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            1800.0
+                        ],
+                        [
+                            585.0,
+                            1800.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            1800.0
+                        ],
+                        [
+                            585.0,
+                            1300.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            1300.0
+                        ],
+                        [
+                            585.0,
+                            1200.0
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "n2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            585.0,
+                            2300.0
+                        ],
+                        [
+                            585.0,
+                            2300.0
+                        ],
+                        [
+                            585.0,
+                            1800.0
+                        ],
+                        [
+                            585.0,
+                            1800.0
+                        ],
+                        [
+                            585.0,
+                            1300.0
+                        ],
+                        [
+                            585.0,
+                            1200.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "p",
+                    "port": "1"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "n2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "start": [
+                    585.0,
+                    1200.0
+                ],
+                "end": [
+                    585.0,
+                    100
+                ],
+                "wayPoints": [
+                    [
+                        585.0,
+                        1200.0
+                    ],
+                    [
+                        585.0,
+                        1200.0
+                    ],
+                    [
+                        585.0,
+                        700.0
+                    ],
+                    [
+                        585.0,
+                        700.0
+                    ],
+                    [
+                        585.0,
+                        200
+                    ],
+                    [
+                        585.0,
+                        100
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            585.0,
+                            1200.0
+                        ],
+                        [
+                            585.0,
+                            1200.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            1200.0
+                        ],
+                        [
+                            585.0,
+                            700.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            700.0
+                        ],
+                        [
+                            585.0,
+                            700.0
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            700.0
+                        ],
+                        [
+                            585.0,
+                            200
+                        ]
+                    ],
+                    [
+                        [
+                            585.0,
+                            200
+                        ],
+                        [
+                            585.0,
+                            100
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "n2",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "p",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            585.0,
+                            1200.0
+                        ],
+                        [
+                            585.0,
+                            1200.0
+                        ],
+                        [
+                            585.0,
+                            700.0
+                        ],
+                        [
+                            585.0,
+                            700.0
+                        ],
+                        [
+                            585.0,
+                            200
+                        ],
+                        [
+                            585.0,
+                            100
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 1170.0,
+        "y-span": 4666.0,
+        "length": 76200
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ff"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ff": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "ff",
+                "n2",
+                "p"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
+}

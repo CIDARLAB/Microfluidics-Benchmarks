@@ -1,0 +1,38 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\Expressions\expression3\expression3_fromLFR.json
+returncode: 0
+
+--- stdout ---
+Finish loading test case: expression3_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 10000, 14000, 'droplet_capacitance_sensor_1', 0] [[0, 7000], [10000, 7000]]
+[1, 1400, 1400, 'port_1', 0] [[700, 700]]
+[2, 4060, 4860, 'mixer_1', 0] [[2030, 0], [2030, 4860]]
+[3, 4060, 4860, 'mixer_2', 0] [[2030, 0], [2030, 4860]]
+[4, 1400, 1400, 'port_2', 0] [[700, 700]]
+[5, 1400, 1400, 'port_3', 0] [[700, 700]]
+[6, 1400, 1400, 'port_4', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.005992889404296875 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0], [0], [0], [0, 1], [0, 1]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0010077953338623047 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.00623011589050293 s
+9/9, Finish compaction and connecting ports, time spent: 0.025455236434936523 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.03868603706359863 s
+Reordering Timeusage: 0.0010077953338623047 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.03269314765930176 s
+Please check the results under "./Benchmarks/LFR-TestCases/Expressions/expression3/expression3_fromLFR/result"
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression3\expression3_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression3\expression3_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/Expressions/expression3\expression3_fromLFR\result\layer01_check.png
+
+--- stderr ---
