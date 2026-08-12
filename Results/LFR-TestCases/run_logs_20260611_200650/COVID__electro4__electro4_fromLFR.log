@@ -1,0 +1,50 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\COVID\electro4\electro4_fromLFR.json
+returncode: 0
+
+--- stdout ---
+Finish loading test case: electro4_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 10000, 14000, 'droplet_capacitance_sensor_1', 0] [[0, 7000], [10000, 7000]]
+[1, 10000, 14000, 'droplet_capacitance_sensor_2', 0] [[0, 7000], [10000, 7000]]
+[2, 10000, 14000, 'droplet_capacitance_sensor_3', 0] [[0, 7000], [10000, 7000]]
+[3, 10000, 14000, 'droplet_capacitance_sensor_4', 0] [[0, 7000], [10000, 7000]]
+[4, 10000, 14000, 'droplet_capacitance_sensor_5', 0] [[0, 7000], [10000, 7000]]
+[5, 10000, 14000, 'droplet_capacitance_sensor_6', 0] [[0, 7000], [10000, 7000]]
+[6, 10000, 14000, 'droplet_capacitance_sensor_7', 0] [[0, 7000], [10000, 7000]]
+[7, 1400, 1400, 'port_1', 0] [[700, 700]]
+[8, 10000, 14000, 'droplet_capacitance_sensor_8', 0] [[0, 7000], [10000, 7000]]
+[9, 10000, 14000, 'droplet_capacitance_sensor_9', 0] [[0, 7000], [10000, 7000]]
+[10, 10000, 14000, 'droplet_capacitance_sensor_10', 0] [[0, 7000], [10000, 7000]]
+[11, 4060, 4860, 'mixer_1', 0] [[2030, 0], [2030, 4860]]
+[12, 4060, 4860, 'mixer_2', 0] [[2030, 0], [2030, 4860]]
+[13, 1400, 1400, 'port_2', 0] [[700, 700]]
+[14, 1400, 1400, 'port_3', 0] [[700, 700]]
+[15, 1400, 1400, 'port_4', 0] [[700, 700]]
+[16, 1400, 1400, 'port_5', 0] [[700, 700]]
+[17, 1400, 1400, 'port_6', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0009968280792236328 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.03644394874572754 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[5, 0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3], [0], [0, 1], [0, 1]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.001130819320678711 s
+6/9, Finish shortening wirelength, time spent: 0.0006382465362548828 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.011383056640625 s
+9/9, Finish compaction and connecting ports, time spent: 0.04610872268676758 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.09670162200927734 s
+Reordering Timeusage: 0.001130819320678711 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.05926084518432617 s
+Compacted 10 disconnected layer-0 subgraph(s).
+Please check the results under "./Benchmarks/LFR-TestCases/COVID/electro4/electro4_fromLFR/result"
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/COVID/electro4\electro4_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/COVID/electro4\electro4_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/COVID/electro4\electro4_fromLFR\result\layer01_check.png
+
+--- stderr ---

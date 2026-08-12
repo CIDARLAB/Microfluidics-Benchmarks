@@ -1,0 +1,393 @@
+{
+    "name": "relative_orientation_constraint",
+    "components": [
+        {
+            "name": "pin",
+            "id": "pin",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
+        },
+        {
+            "name": "pout",
+            "id": "pout",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "portRadius": 2000,
+                "componentSpacing": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 2000,
+                    "y": 2000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4000,
+            "y-span": 4000
+        },
+        {
+            "name": "ct1",
+            "id": "ct1",
+            "entity": "LONG CELL TRAP",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
+        },
+        {
+            "name": "ct2",
+            "id": "ct2",
+            "entity": "LONG CELL TRAP",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
+        },
+        {
+            "name": "ct3",
+            "id": "ct3",
+            "entity": "LONG CELL TRAP",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "chamberLength": 1200.0,
+                "feedingChannelWidth": 410.0,
+                "rotation": 270.0,
+                "chamberWidth": 1230.0,
+                "numberOfChambers": 6.0,
+                "chamberSpacing": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ]
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 1405,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 13530,
+                    "y": 1405,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 13530,
+            "y-span": 2810
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "ct1",
+                    "port": "1"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "pin",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ct2",
+                    "port": "1"
+                }
+            ],
+            "name": "c2",
+            "id": "c2",
+            "source": {
+                "component": "ct1",
+                "port": "2"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ct3",
+                    "port": "1"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "ct2",
+                "port": "2"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 76200,
+        "y-span": 76200,
+        "length": 76200
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\Protocols\MARS\dna_digest\dna_digest_fromLFR.json
+returncode: 1
+
+--- stdout ---
+
+--- stderr ---
+Traceback (most recent call last):
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 31, in <module>
+    main()
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 16, in main
+    gen_PR_developing(args.category, args.filename)
+  File "C:\Users\92010\Desktop\TREE-PLACE\flow_syn.py", line 143, in gen_PR_developing
+    connection=readconnection_with_rotation(componadd,compon,tree)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\readjson.py", line 201, in readconnection_with_rotation
+    connection[id_region].append([0,0,TREE[id_up][1],TREE[id_low][1],int(connect["source"]["port"])-1,int(connect["sinks"][0]["port"])-1])
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'

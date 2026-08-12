@@ -1,0 +1,50 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\chthesis\net_mux\net_mux_fromLFR.json
+returncode: 1
+
+--- stdout ---
+Finish loading test case: net_mux_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 4000, 4000, 'square_cell_trap_1', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[1, 4000, 4000, 'square_cell_trap_2', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[2, 4000, 4000, 'square_cell_trap_3', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[3, 4000, 4000, 'square_cell_trap_4', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[4, 4000, 4000, 'square_cell_trap_5', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[5, 4000, 4000, 'square_cell_trap_6', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[6, 4000, 4000, 'square_cell_trap_7', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[7, 4000, 4000, 'square_cell_trap_8', 0] [[0, 2000], [4000, 2000], [2000, 0], [2000, 4000]]
+[8, 1400, 1400, 'port_1', 0] [[700, 700]]
+[9, 1400, 1400, 'port_2', 0] [[700, 700]]
+[10, 1400, 1400, 'port_3', 0] [[700, 700]]
+[11, 1400, 1400, 'port_4', 0] [[700, 700]]
+[12, 1400, 1400, 'port_5', 0] [[700, 700]]
+[13, 1400, 1400, 'port_6', 0] [[700, 700]]
+[14, 1400, 1400, 'port_7', 0] [[700, 700]]
+[15, 1400, 1400, 'port_8', 0] [[700, 700]]
+[16, 1400, 1400, 'port_9', 0] [[700, 700]]
+[17, 1400, 1400, 'port_10', 0] [[700, 700]]
+[18, 1400, 1400, 'port_11', 0] [[700, 700]]
+[19, 1400, 1400, 'port_12', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0 s
+****************************************************
+
+--- stderr ---
+Traceback (most recent call last):
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 31, in <module>
+    main()
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 16, in main
+    gen_PR_developing(args.category, args.filename)
+  File "C:\Users\92010\Desktop\TREE-PLACE\flow_syn.py", line 254, in gen_PR_developing
+    new_order=reorder(R,connection,inrow_rela)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 673, in reorder
+    flag=dfs_order_generation(ROW,len(ROW)-2,CONNECTION,INROW_RELATION,ORDER_CUR,new_order)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 620, in dfs_order_generation
+    space,free_block=gen_sol_space(ROW,CONNECTION,ORDER_ABOVE,ID_R)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 318, in gen_sol_space
+    for con in CONNECTION[len(ROW)-ID_ROW-2]:
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range

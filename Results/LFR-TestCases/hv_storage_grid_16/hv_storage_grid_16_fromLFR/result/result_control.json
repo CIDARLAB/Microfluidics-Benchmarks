@@ -1,0 +1,227 @@
+{
+    "name": "hv_storage_grid_16",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "port_1",
+            "id": "port_1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    0.0,
+                    2400.0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "port_2",
+            "id": "port_2",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    0.0,
+                    0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "port_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_1",
+            "id": "channel_1",
+            "source": {
+                "component": "port_1",
+                "port": "1"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    700.0,
+                    3100.0
+                ],
+                "end": [
+                    700.0,
+                    700
+                ],
+                "wayPoints": [
+                    [
+                        700.0,
+                        3100.0
+                    ],
+                    [
+                        700.0,
+                        2400.0
+                    ],
+                    [
+                        700.0,
+                        1900.0
+                    ],
+                    [
+                        700.0,
+                        1900.0
+                    ],
+                    [
+                        700.0,
+                        1400
+                    ],
+                    [
+                        700.0,
+                        700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            700.0,
+                            3100.0
+                        ],
+                        [
+                            700.0,
+                            2400.0
+                        ]
+                    ],
+                    [
+                        [
+                            700.0,
+                            2400.0
+                        ],
+                        [
+                            700.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            700.0,
+                            1900.0
+                        ],
+                        [
+                            700.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            700.0,
+                            1900.0
+                        ],
+                        [
+                            700.0,
+                            1400
+                        ]
+                    ],
+                    [
+                        [
+                            700.0,
+                            1400
+                        ],
+                        [
+                            700.0,
+                            700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            700.0,
+                            3100.0
+                        ],
+                        [
+                            700.0,
+                            2400.0
+                        ],
+                        [
+                            700.0,
+                            1900.0
+                        ],
+                        [
+                            700.0,
+                            1900.0
+                        ],
+                        [
+                            700.0,
+                            1400
+                        ],
+                        [
+                            700.0,
+                            700
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 1400.0,
+        "y-span": 3800.0,
+        "length": 3800.0
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": 0
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

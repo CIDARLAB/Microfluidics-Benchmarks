@@ -1,0 +1,48 @@
+//  Example: two independent premix lanes merged into a single reaction stream.
+//  Demonstrates importing the SAME library module multiple times to build a
+//  parallel-lane topology.
+//
+//  Topology:
+//       lane_a_r1 ---\
+//                     two_in_mixer lane_a_mix ---\
+//       lane_a_r2 ---/                            \
+//                                                  three_in_mixer combine --> outlet
+//       lane_b_r1 ---\                            /
+//                     two_in_mixer lane_b_mix ---/
+//       lane_b_r2 ---/                            /
+//       carrier  --------------------------------/
+//
+//  The two two_in_mixer instances run in parallel, premixing two reagent pairs
+//  independently; the three_in_mixer at the end folds both premixes together
+//  with a carrier stream. Every primitive lives in a reusable library module.
+
+`import "library/two_in_mixer.lfr"
+`import "library/three_in_mixer.lfr"
+
+module import_parallel_premix(
+    finput lane_a_r1, lane_a_r2,
+           lane_b_r1, lane_b_r2,
+           carrier,
+    foutput outlet
+);
+    flow lane_a_premix, lane_b_premix;
+
+    two_in_mixer lane_a_mix(
+        .in_a(lane_a_r1),
+        .in_b(lane_a_r2),
+        .out_1(lane_a_premix)
+    );
+
+    two_in_mixer lane_b_mix(
+        .in_a(lane_b_r1),
+        .in_b(lane_b_r2),
+        .out_1(lane_b_premix)
+    );
+
+    three_in_mixer combine(
+        .in_a(lane_a_premix),
+        .in_b(lane_b_premix),
+        .in_c(carrier),
+        .out_1(outlet)
+    );
+endmodule
