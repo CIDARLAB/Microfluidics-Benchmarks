@@ -1,0 +1,34 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\distribute-library\mux_02_in\mux_02_in_fromLFR.json
+returncode: 0
+
+--- stdout ---
+Finish loading test case: mux_02_in_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 1400, 1400, 'port_1', 0] [[700, 700]]
+[1, 1400, 1400, 'port_2', 0] [[700, 700]]
+[2, 1400, 1400, 'port_3', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0009970664978027344 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0, 1], [0]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0009996891021728516 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.001005411148071289 s
+9/9, Finish compaction and connecting ports, time spent: 0.01247715950012207 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.015479326248168945 s
+Reordering Timeusage: 0.0009996891021728516 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.014482259750366211 s
+Please check the results under "./Benchmarks/LFR-TestCases/mux_02_in/mux_02_in_fromLFR/result"
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/mux_02_in\mux_02_in_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/mux_02_in\mux_02_in_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\LFR-TestCases/mux_02_in\mux_02_in_fromLFR\result\layer01_check.png
+
+--- stderr ---

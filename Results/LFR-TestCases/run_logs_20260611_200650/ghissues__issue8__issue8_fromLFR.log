@@ -1,0 +1,42 @@
+case: C:\Users\92010\Desktop\TREE-PLACE\New_Benchmarks\LFR-TestCases\ghissues\issue8\issue8_fromLFR.json
+returncode: 1
+
+--- stdout ---
+Finish loading test case: issue8_fromLFR
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 4060, 4860, 'mixer_1', 0] [[2030, 0], [2030, 4860]]
+[1, 4060, 4860, 'mixer_2', 0] [[2030, 0], [2030, 4860]]
+[2, 4060, 4860, 'mixer_3', 0] [[2030, 0], [2030, 4860]]
+[3, 4060, 4860, 'mixer_4', 0] [[2030, 0], [2030, 4860]]
+[4, 1400, 1400, 'port_1', 0] [[700, 700]]
+[5, 4060, 4860, 'mixer_5', 0] [[2030, 0], [2030, 4860]]
+[6, 1400, 1400, 'port_2', 0] [[700, 700]]
+[7, 4060, 4860, 'mixer_6', 0] [[2030, 0], [2030, 4860]]
+[8, 4060, 4860, 'mixer_7', 0] [[2030, 0], [2030, 4860]]
+[9, 4060, 4860, 'mixer_8', 0] [[2030, 0], [2030, 4860]]
+[10, 4060, 4860, 'mixer_9', 0] [[2030, 0], [2030, 4860]]
+[11, 1400, 1400, 'port_3', 0] [[700, 700]]
+[12, 1400, 1400, 'port_4', 0] [[700, 700]]
+[13, 1400, 1400, 'port_5', 0] [[700, 700]]
+[14, 1400, 1400, 'port_6', 0] [[700, 700]]
+[15, 1400, 1400, 'port_7', 0] [[700, 700]]
+[16, 1400, 1400, 'port_8', 0] [[700, 700]]
+[17, 1400, 1400, 'port_9', 0] [[700, 700]]
+[18, 1400, 1400, 'port_10', 0] [[700, 700]]
+[19, 1400, 1400, 'port_11', 0] [[700, 700]]
+[20, 1400, 1400, 'port_12', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.000997781753540039 s
+
+--- stderr ---
+Traceback (most recent call last):
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 64, in <module>
+    main()
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 49, in main
+    gen_PR_developing(args.category, args.filename)
+  File "C:\Users\92010\Desktop\TREE-PLACE\flow_syn.py", line 614, in gen_PR_developing
+    mid_x,max_rowid=make_symetric(L,B)
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\rowplace.py", line 152, in make_symetric
+    width.append(LOC[i][-1][0]+BLOCK[i][-1][0])
+                 ~~~~~~^^^^
+IndexError: list index out of range
