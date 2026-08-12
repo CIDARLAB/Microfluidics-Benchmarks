@@ -6,14 +6,16 @@ DEVICE import_droplet_reaction
 
 
 
+
+
 // === PORT COUNT CORRECTION ===
 // Physical port counts in this file are authoritative for the synthesized device.
-// FLOW ports: 7 (LFR module IO declared 5)
+// FLOW ports: 7 (LFR module IO declared 4)
 // CONTROL ports (Cport_*): 0
 // Port counts differ from the original LFR IO / control bit-width.
 // The physical counts above are authoritative. Common causes include
 // MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
-//   - FLOW port count differs from LFR IO (declared 5 → physical FLOW ports 7; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)
+//   - FLOW port count differs from LFR IO (declared 4 → physical FLOW ports 7; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)
 // === END PORT COUNT CORRECTION ===
 
 LAYER FLOW 

@@ -6,17 +6,6 @@ DEVICE flow_and_control_demo
 
 
 
-// === PORT COUNT CORRECTION ===
-// Physical port counts in this file are authoritative for the synthesized device.
-// FLOW ports: 4 (LFR module IO declared 4)
-// CONTROL ports (Cport_*): 2 (LFR control bit width declared 1)
-// VALVE/VALVE3D count: 2
-// Port counts differ from the original LFR IO / control bit-width.
-// The physical counts above are authoritative. Common causes include
-// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
-//   - CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 → physical Cports 2, valves 2)
-// === END PORT COUNT CORRECTION ===
-
 LAYER FLOW 
 
 MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
