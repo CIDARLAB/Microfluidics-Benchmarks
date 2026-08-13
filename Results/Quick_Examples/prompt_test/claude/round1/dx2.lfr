@@ -1,0 +1,25 @@
+module dx2(
+    finput in1, in2,
+    foutput out1, out2
+);
+
+flow drop1, drop2, merged, incubated;
+
+// Meter in1 into droplets with nominal volume 100
+assign drop1 = in1 % 100;
+
+// Meter in2 into droplets with nominal volume 200
+assign drop2 = in2 % 200;
+
+// Merge the two droplet streams
+assign merged = drop1 + drop2;
+
+// Mixer/incubation step (unary ~ tech-mapped to MIXER)
+#MAP "MIXER" "~"
+assign incubated = ~merged;
+
+// Split: out2 is the discard/side-branch, out1 is the remainder
+assign out2 = incubated / 2;
+assign out1 = incubated - out2;
+
+endmodule

@@ -1,0 +1,60 @@
+{
+    "name": "dx2",
+    "components": [
+        {
+            "name": "port_7",
+            "id": "port_7",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        }
+    ],
+    "connections": [],
+    "params": {
+        "x-span": 1400.0,
+        "y-span": 1400.0,
+        "length": 1400.0,
+        "flowPortCount": 8,
+        "controlPortCount": 0,
+        "logicalFlowIo": 4,
+        "portCountCorrected": true,
+        "portCorrectionReasons": [
+            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 8; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)"
+        ]
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": 0
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": [],
+    "IsPlacedAndRouted": true
+}

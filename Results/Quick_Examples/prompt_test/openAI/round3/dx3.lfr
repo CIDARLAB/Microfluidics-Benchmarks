@@ -1,0 +1,23 @@
+module dx3(
+    finput in1, in2, in3,
+    foutput out1, out2
+);
+
+flow droplets, daughter1, daughter2;
+flow mixed1, mixed2;
+
+// Meter in1 into droplets with nominal volume 100.
+assign droplets = in1 % 100;
+
+// Split the metered droplets equally into two daughter streams.
+assign {daughter1, daughter2} = droplets / 2;
+
+// Mix each daughter stream with its corresponding inlet.
+assign mixed1 = daughter1 + in2;
+assign mixed2 = daughter2 + in3;
+
+// Route the two mixed streams to the outputs.
+assign out1 = mixed1;
+assign out2 = mixed2;
+
+endmodule

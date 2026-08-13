@@ -231,6 +231,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     2500.0,
                     2400.0
@@ -374,6 +375,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     2500.0,
                     8400.0
@@ -517,6 +519,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     2500.0,
                     14260.0
@@ -660,6 +663,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     2500.0,
                     20820.0
@@ -803,6 +807,7 @@
             },
             "params": {
                 "connectionSpacing": 1000,
+                "channelWidth": 400,
                 "start": [
                     5900.0,
                     20820.0
@@ -935,7 +940,14 @@
     "params": {
         "x-span": 6600.0,
         "y-span": 21520.0,
-        "length": 21520.0
+        "length": 21520.0,
+        "flowPortCount": 3,
+        "controlPortCount": 0,
+        "logicalFlowIo": 4,
+        "portCountCorrected": true,
+        "portCorrectionReasons": [
+            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 3; technology mapping or auxiliary terminals introduced/removed PORTs)"
+        ]
     },
     "layers": [
         {

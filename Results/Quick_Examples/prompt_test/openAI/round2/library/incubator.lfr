@@ -1,0 +1,11 @@
+// Reusable building block: single-stream INCUBATOR (reaction chamber).
+// Holds the inbound flow for a reaction / incubation step and passes it to
+// the outgoing port. Mapped onto the `&` operator so the technology mapper
+// realizes it as a physical INCUBATOR primitive.
+module incubator(
+    finput in_1,
+    foutput out_1
+);
+    #MAP "INCUBATOR" "&"
+    assign out_1 = &in_1;
+endmodule

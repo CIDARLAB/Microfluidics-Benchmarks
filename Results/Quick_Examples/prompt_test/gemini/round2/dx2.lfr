@@ -1,0 +1,16 @@
+module dx2(
+    finput in1, in2,
+    foutput out1, out2
+);
+flow drop1, drop2, merged, incubated;
+
+assign drop1 = in1 % 100;
+assign drop2 = in2 % 200;
+assign merged = drop1 + drop2;
+
+#MAP "MIXER" "~"
+assign incubated = ~merged;
+
+assign out2 = incubated / 2; // ASSUMPTION: side-branch discard takes half of incubated mixture
+assign out1 = incubated - out2;
+endmodule

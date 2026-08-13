@@ -1,0 +1,626 @@
+{
+    "name": "dx2",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "droplet_splitter_1",
+            "id": "droplet_splitter_1",
+            "entity": "DROPLET SPLITTER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 0.0,
+                "height": 250.0,
+                "inletWidth": 2000.0,
+                "inletLength": 6000.0,
+                "outletWidth1": 1000.0,
+                "outletLength1": 3000.0,
+                "outletWidth2": 2000.0,
+                "outletLength2": 3000.0,
+                "mirrorByX": 0,
+                "mirrorByY": 0.0,
+                "position": [
+                    0.0,
+                    2400.0
+                ]
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 4000,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5500,
+                    "y": 0,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 5000,
+                    "y": 8000,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 6000,
+            "y-span": 8000
+        },
+        {
+            "name": "port_5",
+            "id": "port_5",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    4967.0,
+                    0
+                ],
+                "mirrorByX": 1
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "droplet_sorter_1",
+            "id": "droplet_sorter_1",
+            "entity": "DROPLET SORTER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "rotation": 270,
+                "height": 250.0,
+                "inletWidth": 800.0,
+                "inletLength": 4000.0,
+                "electrodeDistance": 1000.0,
+                "electrodeWidth": 700.0,
+                "electrodeLength": 5000.0,
+                "outletWidth": 800.0,
+                "angle": 45.0,
+                "wasteWidth": 1200.0,
+                "outputLength": 4000.0,
+                "keepWidth": 2000.0,
+                "pressureWidth": 400.0,
+                "pressureSpacing": 1500.0,
+                "numberofDistributors": 5.0,
+                "channelDepth": 1000.0,
+                "electrodeDepth": 1000.0,
+                "pressureDepth": 1000.0,
+                "mirrorByX": 1,
+                "mirrorByY": 0.0,
+                "position": [
+                    8000.0,
+                    2400.0
+                ]
+            },
+            "ports": [
+                {
+                    "x": 0,
+                    "y": 4845,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 600,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 18450,
+                    "y": 9091,
+                    "label": "3",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 18450,
+            "y-span": 11425
+        },
+        {
+            "name": "port_6",
+            "id": "port_6",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 700.0,
+                "height": 1100.0,
+                "position": [
+                    9634.0,
+                    0
+                ],
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "port_5",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_7",
+            "id": "channel_7",
+            "source": {
+                "component": "droplet_splitter_1",
+                "port": "3"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    1000.0,
+                    2400.0
+                ],
+                "end": [
+                    5667.0,
+                    700
+                ],
+                "wayPoints": [
+                    [
+                        1000.0,
+                        2400.0
+                    ],
+                    [
+                        1000.0,
+                        2400.0
+                    ],
+                    [
+                        1000.0,
+                        1900.0
+                    ],
+                    [
+                        5667.0,
+                        1900.0
+                    ],
+                    [
+                        5667.0,
+                        1400
+                    ],
+                    [
+                        5667.0,
+                        700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            1000.0,
+                            2400.0
+                        ],
+                        [
+                            1000.0,
+                            2400.0
+                        ]
+                    ],
+                    [
+                        [
+                            1000.0,
+                            2400.0
+                        ],
+                        [
+                            1000.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            1000.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            5667.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1400
+                        ]
+                    ],
+                    [
+                        [
+                            5667.0,
+                            1400
+                        ],
+                        [
+                            5667.0,
+                            700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "droplet_splitter_1",
+                        "port": "3"
+                    },
+                    "sink": {
+                        "component": "port_5",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            1000.0,
+                            2400.0
+                        ],
+                        [
+                            1000.0,
+                            2400.0
+                        ],
+                        [
+                            1000.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1400
+                        ],
+                        [
+                            5667.0,
+                            700
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_5",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_8",
+            "id": "channel_8",
+            "source": {
+                "component": "droplet_sorter_1",
+                "port": "3"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    10334.0,
+                    2400.0
+                ],
+                "end": [
+                    5667.0,
+                    700
+                ],
+                "wayPoints": [
+                    [
+                        10334.0,
+                        2400.0
+                    ],
+                    [
+                        10334.0,
+                        2400.0
+                    ],
+                    [
+                        10334.0,
+                        1900.0
+                    ],
+                    [
+                        5667.0,
+                        1900.0
+                    ],
+                    [
+                        5667.0,
+                        1400
+                    ],
+                    [
+                        5667.0,
+                        700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            2400.0
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            5667.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1400
+                        ]
+                    ],
+                    [
+                        [
+                            5667.0,
+                            1400
+                        ],
+                        [
+                            5667.0,
+                            700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "droplet_sorter_1",
+                        "port": "3"
+                    },
+                    "sink": {
+                        "component": "port_5",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1900.0
+                        ],
+                        [
+                            5667.0,
+                            1400
+                        ],
+                        [
+                            5667.0,
+                            700
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_6",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_9",
+            "id": "channel_9",
+            "source": {
+                "component": "droplet_sorter_1",
+                "port": "3"
+            },
+            "params": {
+                "connectionSpacing": 1000,
+                "channelWidth": 400,
+                "start": [
+                    10334.0,
+                    2400.0
+                ],
+                "end": [
+                    10334.0,
+                    700
+                ],
+                "wayPoints": [
+                    [
+                        10334.0,
+                        2400.0
+                    ],
+                    [
+                        10334.0,
+                        2400.0
+                    ],
+                    [
+                        10334.0,
+                        1900.0
+                    ],
+                    [
+                        10334.0,
+                        1900.0
+                    ],
+                    [
+                        10334.0,
+                        1400
+                    ],
+                    [
+                        10334.0,
+                        700
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            2400.0
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            10334.0,
+                            1400
+                        ]
+                    ],
+                    [
+                        [
+                            10334.0,
+                            1400
+                        ],
+                        [
+                            10334.0,
+                            700
+                        ]
+                    ]
+                ]
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "droplet_sorter_1",
+                        "port": "3"
+                    },
+                    "sink": {
+                        "component": "port_6",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            2400.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            10334.0,
+                            1900.0
+                        ],
+                        [
+                            10334.0,
+                            1400
+                        ],
+                        [
+                            10334.0,
+                            700
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 19425.0,
+        "y-span": 20850.0,
+        "length": 76200,
+        "flowPortCount": 8,
+        "controlPortCount": 0,
+        "logicalFlowIo": 4,
+        "portCountCorrected": true,
+        "portCorrectionReasons": [
+            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 8; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)"
+        ]
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": 0
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

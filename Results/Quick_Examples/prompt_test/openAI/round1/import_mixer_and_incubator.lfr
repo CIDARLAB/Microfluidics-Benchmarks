@@ -1,0 +1,25 @@
+import two_in_mixer from "library/two_in_mixer.lfr";
+import incubator from "library/incubator.lfr";
+
+module import_mixer_and_incubator(
+    finput reagent_a, reagent_b,
+    foutput outlet
+);
+
+flow mixed;
+flow incubated;
+
+two_in_mixer mixer(
+    .in_a(reagent_a),
+    .in_b(reagent_b),
+    .out_1(mixed)
+);
+
+incubator incubator_1(
+    .in_1(mixed),
+    .out_1(incubated)
+);
+
+assign outlet = incubated;
+
+endmodule
