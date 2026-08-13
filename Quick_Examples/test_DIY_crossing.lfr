@@ -1,0 +1,14 @@
+// test_DIY_crossing — cross-shaped DIYCOMPONENT: up/down in, right/left out.
+`import "library/DIYcomponent.lfr"
+
+module test_DIY_crossing(
+    finput in_up, in_down,
+    foutput out_right, out_left
+);
+    DIYcomponent #(length=10000, width=10000, height=2000) cross(
+        .up(in_up),
+        .right(out_right),
+        .down(in_down),
+        .left(out_left)
+    );
+endmodule

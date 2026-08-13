@@ -1,0 +1,63 @@
+// test_device — dual-bank 4-lane VALVE3D router with via bridge and aux branch.
+// Mirrors 3DuF Data/test_device.json: top/bottom I/O banks, side via path, aux gated inlet.
+// Control: c_top / c_bot select a lane in each bank; c_bridge gates the via bridge; c_aux gates aux onto out.
+module test_device(
+    finput [0:3] top,
+    finput [0:3] bot,
+    finput side_a, side_b,
+    finput aux,
+    foutput out,
+    control [0:1] c_top,
+    control [0:1] c_bot,
+    control [0:1] c_bridge,
+    control c_aux
+);
+    flow bus_top, bus_bot, bridge, bus;
+
+    // Top bank: binary select of top[i] onto the upper bus
+    distribute@(c_top)
+    begin
+        case(c_top)
+            2'b00 : bus_top <= top[0];
+            2'b01 : bus_top <= top[1];
+            2'b10 : bus_top <= top[2];
+            2'b11 : bus_top <= top[3];
+        endcase
+    end
+
+    // Bottom bank: binary select of bot[i] onto the lower bus
+    distribute@(c_bot)
+    begin
+        case(c_bot)
+            2'b00 : bus_bot <= bot[0];
+            2'b01 : bus_bot <= bot[1];
+            2'b10 : bus_bot <= bot[2];
+            2'b11 : bus_bot <= bot[3];
+        endcase
+    end
+
+    // Via bridge between side ports (matches via + Valve3D_17/18 path)
+    distribute@(c_bridge)
+    begin
+        case(c_bridge)
+            2'b01 : bridge <= side_a;
+            2'b10 : bridge <= side_b;
+            2'b11 : bridge <= side_a + side_b;
+        endcase
+    end
+
+    assign bus = bus_top + bus_bot + bridge;
+
+    // Auxiliary gated inlet onto the shared bus / outlet
+    distribute@(c_aux)
+    begin
+        if (c_aux == 1)
+        begin
+            out <= bus + aux;
+        end
+        else
+        begin
+            out <= bus;
+        end
+    end
+endmodule

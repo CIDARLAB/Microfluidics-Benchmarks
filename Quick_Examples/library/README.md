@@ -41,8 +41,8 @@ Rules that must be obeyed for imports to resolve:
 
 | File                       | Module               | Role                                            | Primitive mapping                   |
 |----------------------------|----------------------|-------------------------------------------------|-------------------------------------|
-| `two_in_mixer.lfr`         | `two_in_mixer`       | Mix two input streams                           | `MIXER` via `~`                     |
-| `three_in_mixer.lfr`       | `three_in_mixer`     | Mix three input streams                         | `MIXER` via `~`                     |
+| `two_in_mixer.lfr`         | `two_in_mixer`       | Mix two input streams                           | `MIXER` via binary `+`              |
+| `three_in_mixer.lfr`       | `three_in_mixer`     | Mix three input streams                         | `MIXER` via binary `+`              |
 | `incubator.lfr`            | `incubator`          | Hold a stream for a reaction / incubation       | `INCUBATOR` via `&`                 |
 | `droplet_generator.lfr`    | `droplet_generator`  | Emulsify aqueous (+ oil merge) into droplets    | `NOZZLE DROPLET GENERATOR` via `%`  |
 

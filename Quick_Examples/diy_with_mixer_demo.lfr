@@ -1,0 +1,23 @@
+// diy_with_mixer_demo — MIXER via +; DIY uses up/right/down/left (+ None).
+`import "library/DIYcomponent.lfr"
+`import "library/two_in_mixer.lfr"
+
+module diy_with_mixer_demo(
+    finput a, b,
+    foutput out
+);
+    flow mixed_flow;
+
+    two_in_mixer premix(
+        .in_a(a),
+        .in_b(b),
+        .out_1(mixed_flow)
+    );
+
+    DIYcomponent #(length=12000, width=6000, height=1500) custom(
+        .up(mixed_flow),
+        .right(None),
+        .down(out),
+        .left(None)
+    );
+endmodule
