@@ -28,6 +28,11 @@ def main() -> None:
         action="store_true",
         help="不把外部 PORT 端点的 null port 自动改为字符串 \"1\"",
     )
+    parser.add_argument(
+        "--no-normalize-connection-directions",
+        action="store_true",
+        help="Do not repair top/bottom source/sink conflicts before flow P&R",
+    )
     args = parser.parse_args()
 
     flow_json, control_json, plot = run_flow_control(
@@ -37,6 +42,7 @@ def main() -> None:
         output_json=_optional_absolute(args.output),
         output_png=_optional_absolute(args.plot),
         normalize_external_ports=not args.no_normalize_external_ports,
+        normalize_connection_directions=not args.no_normalize_connection_directions,
         overwrite=args.force,
     )
     print(f"Done. Layer-0 JSON: {flow_json}")

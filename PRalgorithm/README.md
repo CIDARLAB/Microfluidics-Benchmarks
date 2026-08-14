@@ -168,6 +168,33 @@ CLI 中相对路径统一按仓库根目录解析，而不是按当前终端目�
   --filename flow_and_control_demo_fromLFR
 ```
 
+## 11. Opposite-port direction normalization
+
+Before flow placement, `run_flow()` and `run_flow_control()` inspect one-to-one
+layer-0 connections between a device and an external `PORT`. If ports on the
+top and bottom sides of one device are both declared as sources or both as
+sinks, the DFS row builder would place their external ports on the same side.
+The normalizer reverses the minimum number of connections needed to make the
+top/bottom roles complementary.
+
+For a tied solution, the bottom device port is a source and the top device port
+is a sink. Left/right pairs are not changed by default because rows encode
+vertical hierarchy and component mirroring can otherwise introduce crossings.
+Ambiguous hyperedges and non-boundary ports are reported but not modified.
+
+Disable this preprocessing step from either flow CLI with:
+
+```powershell
+--no-normalize-connection-directions
+```
+
+The standalone detector is also available from the repository root:
+
+```powershell
+python normalize_connection_directions.py input.json --check
+python normalize_connection_directions.py input.json -o input_fixed.json
+```
+
 默认生成：
 
 ```text

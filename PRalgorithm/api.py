@@ -11,6 +11,11 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Iterator
 
+try:
+    from .normalize_connection_directions import repair_file as repair_connection_directions_file
+except ImportError:  # Support direct execution via PRalgorithm/run_*.py.
+    from normalize_connection_directions import repair_file as repair_connection_directions_file
+
 
 PACKAGE_DIR = Path(__file__).resolve().parent
 CORE_DIR = PACKAGE_DIR / "core"
@@ -231,6 +236,7 @@ def run_flow(
     *,
     input_json: str | Path | None = None,
     normalize_external_ports: bool = True,
+    normalize_connection_directions: bool = True,
     overwrite: bool = False,
 ) -> Path:
     """Run layer-0 placement/routing and return ``result.json``."""
@@ -244,6 +250,15 @@ def run_flow(
         changed = normalize_null_external_ports(paths["input"])
         if changed:
             print(f'Normalized {changed} null external PORT endpoint(s) to "1".')
+
+    if normalize_connection_directions:
+        direction_report = repair_connection_directions_file(paths["input"], in_place=True)
+        if direction_report["changes"]:
+            changed_ids = ", ".join(change["connection"] for change in direction_report["changes"])
+            print(
+                f"Reversed {len(direction_report['changes'])} connection(s) with opposite-port "
+                f"direction conflicts: {changed_ids}."
+            )
 
     _load_core()
     from flow_syn import gen_PR_developing
@@ -384,6 +399,7 @@ def run_flow_control(
     output_json: str | Path | None = None,
     output_png: str | Path | None = None,
     normalize_external_ports: bool = True,
+    normalize_connection_directions: bool = True,
     overwrite: bool = False,
 ) -> tuple[Path, Path, Path]:
     """Run layer 0 followed by layer 1 and return all principal outputs."""
@@ -394,6 +410,14 @@ def run_flow_control(
         raise FileNotFoundError(f"找不到 benchmark 输入: {paths['input']}")
     if normalize_external_ports:
         normalize_null_external_ports(paths["input"])
+    if normalize_connection_directions:
+        direction_report = repair_connection_directions_file(paths["input"], in_place=True)
+        if direction_report["changes"]:
+            changed_ids = ", ".join(change["connection"] for change in direction_report["changes"])
+            print(
+                f"Reversed {len(direction_report['changes'])} connection(s) with opposite-port "
+                f"direction conflicts: {changed_ids}."
+            )
 
     _load_core()
     from flow_syn import _json_is_layer0
@@ -412,7 +436,12 @@ def run_flow_control(
             shutil.copy2(default_plot, plot)
         return flow_json, control_json, plot
 
-    flow_json = run_flow(category, filename, normalize_external_ports=False)
+    flow_json = run_flow(
+        category,
+        filename,
+        normalize_external_ports=False,
+        normalize_connection_directions=False,
+    )
     control_json = Path(output_json).expanduser().resolve() if output_json else paths["control_json"]
     plot = Path(output_png).expanduser().resolve() if output_png else paths["plot"]
     control_json, plot = run_control(flow_json, control_json, plot)
