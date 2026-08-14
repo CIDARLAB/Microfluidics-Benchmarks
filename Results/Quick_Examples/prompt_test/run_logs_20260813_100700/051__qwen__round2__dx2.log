@@ -1,0 +1,71 @@
+status: OK
+source: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\qwen\round2\dx2\dx2_fromLFR.json
+target: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\qwen\round2\dx2\dx2_fromLFR\dx2_fromLFR.json
+
+--- stdout ---
+Detected 4 disconnected layer-0 cluster(s); running each independently.
+Running independent cluster 1/4: ['droplet_sorter_1', 'port_5']
+Finish loading test case: dx2_fromLFR__cluster_00
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 18450, 11425, 'droplet_sorter_1', 0] [[0, 4845], [18450, 600], [18450, 9091]]
+[1, 1400, 1400, 'port_5', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.001069784164428711 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0], [0]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0009992122650146484 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.002010345458984375 s
+9/9, Finish compaction and connecting ports, time spent: 0.012022733688354492 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.016102075576782227 s
+Reordering Timeusage: 0.0009992122650146484 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.015032291412353516 s
+Please check the results under "./Benchmarks/Quick_Examples/prompt_test/Results/qwen/round2/dx2/dx2_fromLFR/clusters/dx2_fromLFR__cluster_00/result"
+Running independent cluster 2/4: ['droplet_splitter_1']
+Running independent cluster 3/4: ['mixer_1', 'mixer_2', 'nozzle_droplet_generator_1', 'nozzle_droplet_generator_2', 'port_1', 'port_2', 'port_3', 'port_4', 'port_6', 'port_8']
+Finish loading test case: dx2_fromLFR__cluster_02
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 4060, 4860, 'mixer_1', 0] [[2030, 0], [2030, 4860]]
+[1, 4000, 4000, 'port_1', 0] [[2000, 2000]]
+[2, 4000, 4000, 'port_2', 0] [[2000, 2000]]
+[3, 1800, 600, 'nozzle_droplet_generator_1', 0] [[400, 0], [1800, 300], [400, 600], [0, 300]]
+[4, 4060, 4860, 'mixer_2', 0] [[2030, 0], [2030, 4860]]
+[5, 4000, 4000, 'port_3', 0] [[2000, 2000]]
+[6, 4000, 4000, 'port_4', 0] [[2000, 2000]]
+[7, 1800, 600, 'nozzle_droplet_generator_2', 0] [[400, 0], [1800, 300], [400, 600], [0, 300]]
+[8, 1400, 1400, 'port_6', 0] [[700, 700]]
+[9, 1400, 1400, 'port_8', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.04061698913574219 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0], [0], [0, 1], [0, 5, 1, 2, 4, 3]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0020051002502441406 s
+6/9, Finish shortening wirelength, time spent: 0.0006461143493652344 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.1100616455078125 s
+9/9, Finish compaction and connecting ports, time spent: 0.13164210319519043 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.2849719524383545 s
+Reordering Timeusage: 0.0020051002502441406 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.2443549633026123 s
+Please check the results under "./Benchmarks/Quick_Examples/prompt_test/Results/qwen/round2/dx2/dx2_fromLFR/clusters/dx2_fromLFR__cluster_02/result"
+Running independent cluster 4/4: ['port_7']
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\qwen\round2\dx2\dx2_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\qwen\round2\dx2\dx2_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\qwen\round2\dx2\dx2_fromLFR\result\layer01_check.png
+
+--- stderr ---

@@ -1,0 +1,12 @@
+module dx3(
+    finput in1, in2, in3,
+    foutput out1, out2
+);
+flow drop1, d1, d2;
+
+assign drop1 = in1 % 100;
+assign {d1, d2} = drop1 / 2; // ASSUMPTION: equal split of metered droplets into two daughter streams
+
+assign out1 = d1 + in2;
+assign out2 = d2 + in3;
+endmodule

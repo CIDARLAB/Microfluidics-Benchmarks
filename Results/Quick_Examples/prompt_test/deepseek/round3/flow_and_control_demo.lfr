@@ -1,0 +1,14 @@
+module flow_and_control_demo(
+    finput inlet1, inlet2, inlet3,
+    control c,
+    foutput outlet
+);
+flow mixed;
+// Mix inlet1 and inlet2 into intermediate stream
+assign mixed = inlet1 + inlet2;
+// Control-gated routing: when c=1, outlet gets mixed; otherwise inlet3
+distribute@(c) begin
+    if (c == 1'b1) outlet <= mixed;
+    else outlet <= inlet3;
+end
+endmodule

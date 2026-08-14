@@ -1,0 +1,11 @@
+module mixer_3to1(
+    finput in1, in2, in3,
+    foutput out
+);
+
+flow mixed12;
+
+assign mixed12 = in1 + in2;
+assign out = mixed12 + in3;
+
+endmodule

@@ -1,0 +1,43 @@
+status: OK
+source: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx3\dx3_fromLFR.json
+target: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx3\dx3_fromLFR\dx3_fromLFR.json
+
+--- stdout ---
+Finish loading test case: dx3_fromLFR
+1/9, Finish initial placement, time spent: 0.00099945068359375 s
+[0, 4000, 4000, 'port_1', 0] [[2000, 2000]]
+[1, 4000, 4000, 'port_2', 0] [[2000, 2000]]
+[2, 1800, 600, 'nozzle_droplet_generator_1', 0] [[400, 0], [1800, 300], [400, 600], [0, 300]]
+[3, 6000, 8000, 'droplet_splitter_1', 0] [[0, 4000], [5500, 0], [5000, 8000]]
+[4, 4060, 4860, 'mixer_1', 0] [[2030, 0], [2030, 4860]]
+[5, 1400, 1400, 'port_3', 0] [[700, 700]]
+[6, 4060, 4860, 'mixer_2', 0] [[2030, 0], [2030, 4860]]
+[7, 1400, 1400, 'port_4', 0] [[700, 700]]
+[8, 1400, 1400, 'port_5', 0] [[700, 700]]
+[9, 1400, 1400, 'port_6', 0] [[700, 700]]
+[10, 1400, 1400, 'port_7', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0070209503173828125 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0, 1], [0, 1], [2, 0, 1], [0], [0, 2, 1]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.001378774642944336 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.008950471878051758 s
+9/9, Finish compaction and connecting ports, time spent: 0.03958606719970703 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.05793571472167969 s
+Reordering Timeusage: 0.001378774642944336 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.049915313720703125 s
+Please check the results under "./Benchmarks/Quick_Examples/prompt_test/Results/deepseek/round1/dx3/dx3_fromLFR/result"
+Done. Layer-0 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx3\dx3_fromLFR\result\result.json
+Done. Layer-0 + layer-1 JSON: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx3\dx3_fromLFR\result\result_control.json
+Done. Layered plot: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx3\dx3_fromLFR\result\layer01_check.png
+
+--- stderr ---

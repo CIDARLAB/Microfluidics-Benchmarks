@@ -1,0 +1,525 @@
+ _____ _       _       _ 
+|  ___| |_   _(_) __ _(_)
+| |_  | | | | | |/ _` | |
+|  _| | | |_| | | (_| | |
+|_|   |_|\__,_|_|\__, |_|
+                 |___/   
+
+('/home/cidar-ron/Downloads/Neptune_2026/prompt_test/round3/deepseek/dx2.lfr',) /home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round3/deepseek/dx2 dropx /home/cidar-ron/Downloads/Neptune_2026/pylfr/library False False False ()
+['/home/cidar-ron/Downloads/Neptune_2026/pylfr/library']
+Loading all LFR Files from lib Directories:
+-- Loading form path /home/cidar-ron/Downloads/Neptune_2026/pylfr/library
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mux.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/tree.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/port.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/picoinjector.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mixer.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/valve.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/nozzle_droplet_generator.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/channel.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/reaction_chamber.lfr
+Input Path: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/round3/deepseek/dx2.lfr
+File: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/round3/deepseek/dx2.lfr
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+['dx2.lfr']
+output dir: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round3/deepseek/dx2
+('/home/cidar-ron/Downloads/Neptune_2026/prompt_test/round3/deepseek/dx2.lfr',)
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+Initialized the lfrcompiler
+Performing the operation: 
+ Operator - % 
+ Number - 100 
+ Fluid - <VectorRange::Vector - in1 [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - in1_METER_(%)_0 FLOW - metered1
+<class 'lfr.fig.interaction.FluidNumberInteraction'>
+%
+<class 'lfr.fig.fignode.ValueNode'>
+Performing the operation: 
+ Operator - % 
+ Number - 200 
+ Fluid - <VectorRange::Vector - in2 [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - in2_METER_(%)_1 FLOW - metered2
+<class 'lfr.fig.interaction.FluidNumberInteraction'>
+%
+<class 'lfr.fig.fignode.ValueNode'>
+Performing operation: <VectorRange::Vector - metered1 [0 : 0]> + <VectorRange::Vector - metered2 [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - metered1_MIX_(+)_metered2_2 FLOW - merged
+<class 'lfr.fig.interaction.FluidFluidInteraction'>
++
+Performing unary operation - Operator: ~ 
+ Operand: <VectorRange::Vector - merged [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - merged_PROCESS_(~)_3 FLOW - incubated
+<class 'lfr.fig.interaction.FluidProcessInteraction'>
+~
+Performing the operation: 
+ Operator - / 
+ Number - 2 
+ Fluid - <VectorRange::Vector - incubated [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - incubated_DIVIDE_(/)_4 FLOW - discard
+<class 'lfr.fig.interaction.FluidIntegerInteraction'>
+/
+<class 'lfr.fig.fignode.ValueNode'>
+Performing operation: <VectorRange::Vector - incubated [0 : 0]> - <VectorRange::Vector - discard [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - discard_SIEVE_(-)_incubated_5 IO - Name: out1, Type : IOType.FLOW_OUTPUT
+<class 'lfr.fig.interaction.FluidFluidInteraction'>
+-
+LHS, RHS sizes are equal
+FLOW - discard IO - Name: out2, Type : IOType.FLOW_OUTPUT
+Name : dx2
+Name: in1, Type : IOType.FLOW_INPUT
+Name: in2, Type : IOType.FLOW_INPUT
+Name: out1, Type : IOType.FLOW_OUTPUT
+Name: out2, Type : IOType.FLOW_OUTPUT
+
+---Top of Stack---
+---Bottom of Stack---
+Flow candidate: {'metered1'}
+Passthrough found: {'metered1'}
+Removing the component: {'metered1'}
+Flow candidate: {'metered2'}
+Passthrough found: {'metered2'}
+Removing the component: {'metered2'}
+Flow candidate: {'merged'}
+Passthrough found: {'merged'}
+Removing the component: {'merged'}
+Flow candidate: {'incubated'}
+Passthrough found: {'incubated'}
+Since its a single flow node, we are skipping the component: {'incubated'}
+Flow candidate: {'discard'}
+Passthrough found: {'discard'}
+Since its a single flow node, we are skipping the component: {'discard'}
+[]
+('6fc35c7c22084cae72e62a0163574d8c', 'REACTION CHAMBER', '{\n            v1: REACTION CHAMBER\n        }')
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', '{\n            v1:IO\n        }')
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', '{\n            v1:MIX\n        }')
+('d1781b16b1ea9b97644d83f5671ba40d', 'MIXER', '{\n            v1:DILUTE\n        }')
+('8330be665ac09c4b528fb673eaf54323', 'PICOINJECTOR', '{\n            v1:MIX\n        }')
+('588c06b63717d489f484abec4d043630', 'DROPLET MERGER', '{\n            v1:MIX\n        }')
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', '{\n            v1:SIEVE\n        }')
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', '{\n            v1:METER\n        }')
+('914238687115aa147b97e8d5533e886c', 'DROPLET MERGER JUNCTION', '{\n            v1:MIX\n        }')
+('d886b57db1ce64cdc693b482957a8fe2', 'DROPLET MERGER CHANNEL', '{\n            v1:MIX\n        }')
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', '{\n            v1:DIVIDE\n        }')
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', '{\n            v1:PROCESS\n        }')
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', '{\n            v1:STORAGE\n        }')
+('cd9f240e7e4fed74b91aa6e3b94eec01', 'LONG CELL TRAPPER', '{\n            v1:STORAGE\n        }')
+('26f0a16b9d1878f24029199874cd778b', 'FILTER', '{\n            v1:PROCESS\n        }')
+('c9770124d971f8583173f0dd28b4017b', 'DROPLET FLUORESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('09781c385e672251742ca6cc07e56759', 'DROPLET LUMINESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('1159f8c0f6837f1916dd1b43d142fa9d', 'DROPLET SPACER', '{\n            v1:PROCESS\n        }')
+('feb0fbd9a78edd7b903246b2de78427e', 'YTREE', '')
+('f52e9c50a060add65a035429b2a22229', 'CHANNEL', '')
+[]
+6fc35c7c22084cae72e62a0163574d8c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69db7ee0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+5b0789de1846a32aa239997c6b11eba8
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb7c0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in2': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'})]
+3888a3a085a0b78f43d9ad9257fb94cd
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb250>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 3888a3a085a0b78f43d9ad9257fb94cd
+{'metered1_MIX_(+)_metered2_2': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})]
+d1781b16b1ea9b97644d83f5671ba40d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb1f0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})]
+8330be665ac09c4b528fb673eaf54323
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddba90>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})]
+588c06b63717d489f484abec4d043630
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dcd30>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})]
+5cd84e8394bf8d6c20a6333d70b59771
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dcc10>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5cd84e8394bf8d6c20a6333d70b59771
+{'discard_SIEVE_(-)_incubated_5': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'})]
+9722844e53ed3f50c3e82c3f8015876f
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb340>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 9722844e53ed3f50c3e82c3f8015876f
+{'in1_METER_(%)_0': 'v1'}
+Found Match: 9722844e53ed3f50c3e82c3f8015876f
+{'in2_METER_(%)_1': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'})]
+914238687115aa147b97e8d5533e886c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb460>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'})]
+d886b57db1ce64cdc693b482957a8fe2
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddaf20>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'})]
+d949473e8c28c7624371eb1477dc026b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddada0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: d949473e8c28c7624371eb1477dc026b
+{'incubated_DIVIDE_(/)_4': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'})]
+cdea77c5343e10aa9ebcb993ab494b7b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dc7c0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: cdea77c5343e10aa9ebcb993ab494b7b
+{'merged_PROCESS_(~)_3': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+ddafeac84b5c1d4256c02be0327aad6b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dd6f0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+cd9f240e7e4fed74b91aa6e3b94eec01
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dd030>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+26f0a16b9d1878f24029199874cd778b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536dd780>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+c9770124d971f8583173f0dd28b4017b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba536de1a0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+09781c385e672251742ca6cc07e56759
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddb010>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+1159f8c0f6837f1916dd1b43d142fa9d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7aba69ddafe0>
+[('in1', 'in1_METER_(%)_0'), ('in2', 'in2_METER_(%)_1'), ('in1_METER_(%)_0', 'metered1_MIX_(+)_metered2_2'), ('val_1', 'in1_METER_(%)_0'), ('in2_METER_(%)_1', 'metered1_MIX_(+)_metered2_2'), ('val_2', 'in2_METER_(%)_1'), ('metered1_MIX_(+)_metered2_2', 'merged_PROCESS_(~)_3'), ('val_3', 'incubated_DIVIDE_(/)_4'), ('discard_SIEVE_(-)_incubated_5', 'out1')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+feb0fbd9a78edd7b903246b2de78427e
+Warning ! - Missing match string for mint- feb0fbd9a78edd7b903246b2de78427e
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+f52e9c50a060add65a035429b2a22229
+Warning ! - Missing match string for mint- f52e9c50a060add65a035429b2a22229
+Ret here
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'}), ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'}), ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'}), ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'}), ('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+Total Matches against library : 10
+Start of Matches
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'})
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'})
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'})
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'})
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'})
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})
+End of matches
+Eliminating match: [('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', {'merged_PROCESS_(~)_3': 'v1'})]
+Eliminating match: []
+Total matches against library after explicit mapping eliminations: 10
+{'out1'}
+{'in1'}
+{'out2'}
+{'in2'}
+{'metered1_MIX_(+)_metered2_2'}
+{'merged_PROCESS_(~)_3'}
+{'discard_SIEVE_(-)_incubated_5'}
+{'incubated_DIVIDE_(/)_4'}
+{'in1_METER_(%)_0'}
+{'in2_METER_(%)_1'}
+Moving Max Set Cover to the front: [{'out1'}, {'in1'}, {'out2'}, {'in2'}, {'metered1_MIX_(+)_metered2_2'}, {'merged_PROCESS_(~)_3'}, {'discard_SIEVE_(-)_incubated_5'}, {'incubated_DIVIDE_(/)_4'}, {'in1_METER_(%)_0'}, {'in2_METER_(%)_1'}]
+metered1_MIX_(+)_metered2_2
+out1
+in1
+merged_PROCESS_(~)_3
+discard_SIEVE_(-)_incubated_5
+in1_METER_(%)_0
+incubated_DIVIDE_(/)_4
+in2_METER_(%)_1
+out2
+in2
+Moving Explicit Matches to the front: [{'merged_PROCESS_(~)_3'}]
+Checking Match: ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'merged_PROCESS_(~)_3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_mixer_1 to variant variant_0
+Checking Match: ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in2_METER_(%)_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_nozzle_droplet_generator_1 to variant variant_0
+Checking Match: ('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', {'in1_METER_(%)_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_nozzle_droplet_generator_2 to variant variant_0
+Checking Match: ('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', {'incubated_DIVIDE_(/)_4': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_droplet_splitter_1 to variant variant_0
+Checking Match: ('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', {'discard_SIEVE_(-)_incubated_5': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_droplet_sorter_1 to variant variant_0
+Checking Match: ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'metered1_MIX_(+)_metered2_2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_mixer_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_1 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_3 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_4 to variant variant_0
+Variant variant_0:
+cn_mixer_1
+cn_nozzle_droplet_generator_1
+cn_nozzle_droplet_generator_2
+cn_droplet_splitter_1
+cn_droplet_sorter_1
+cn_mixer_2
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+Connected Nodes
+cn_nozzle_droplet_generator_1
+cn_mixer_2
+Connected Nodes
+cn_nozzle_droplet_generator_2
+cn_mixer_2
+Connected Nodes
+cn_droplet_sorter_1
+cn_port_4
+Connected Nodes
+cn_mixer_2
+cn_mixer_1
+Connected Nodes
+cn_port_1
+cn_nozzle_droplet_generator_1
+Connected Nodes
+cn_port_3
+cn_nozzle_droplet_generator_2
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x7aba536f1150>
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+Computing Constraints
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+Computing Constraints
+Pulling Default Values of Components
+Deleted unsupported param "position" from component mixer_1 : MIXER
+Deleted unsupported param "position" from component port_1 : PORT
+Deleted unsupported param "position" from component port_2 : PORT
+Deleted unsupported param "position" from component nozzle_droplet_generator_1 : NOZZLE DROPLET GENERATOR
+Deleted unsupported param "position" from component mixer_2 : MIXER
+Deleted unsupported param "position" from component port_3 : PORT
+Deleted unsupported param "position" from component port_4 : PORT
+Deleted unsupported param "position" from component nozzle_droplet_generator_2 : NOZZLE DROPLET GENERATOR
+Deleted unsupported param "position" from component droplet_splitter_1 : DROPLET SPLITTER
+Deleted unsupported param "position" from component droplet_sorter_1 : DROPLET SORTER
+Deleted unsupported param "position" from component port_5 : PORT
+Deleted unsupported param "position" from component port_6 : PORT
+Deleted unsupported param "position" from component port_7 : PORT
+Deleted unsupported param "position" from component port_8 : PORT
+Pulling Dimensions of Components
+Pulling Terminals of Components
+/home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round3/deepseek/dx2/dx2/variant_0
+[lfr-netlist-validate] dx2.lfr: OK (FLOW 8/4, CONTROL 0/0)
+[lfr-netlist-validate] dx2.lfr: OK (FLOW 8/4, CONTROL 0/0)
+
+line 2:25 extraneous input 'CHAMBER' expecting {',', '}'}

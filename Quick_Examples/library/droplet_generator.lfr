@@ -1,15 +1,13 @@
 // Reusable building block: nozzle-type droplet generator.
 // Combines a continuous oil phase with a dispersed aqueous phase to generate
-// a droplet stream. The library primitive NOZZLE DROPLET GENERATOR is a
-// single-inlet METER (%); oil is merged afterward with +. A #CONSTRAIN
-// directive hints at the target droplet rate for downstream sizing.
+// a droplet stream. Mapped onto the `&` operator so the technology mapper
+// instantiates a NOZZLE DROPLET GENERATOR primitive; a #CONSTRAIN directive
+// hints at the target droplet rate so downstream placement can size it.
 module droplet_generator(
     finput oil, aqueous,
     foutput droplets
 );
-    flow metered;
-    #MAP "NOZZLE DROPLET GENERATOR" "%"
-    #CONSTRAIN "%" droplet_rate = 30 hz
-    assign metered = aqueous % 100;
-    assign droplets = metered + oil;
+    #MAP "NOZZLE DROPLET GENERATOR" "&"
+    #CONSTRAIN "&" droplet_rate = 30 hz
+    assign droplets = oil & aqueous;
 endmodule

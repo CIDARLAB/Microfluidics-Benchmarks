@@ -1,0 +1,11 @@
+// Reusable building block: 3-inlet MIXER module.
+// Folds three inlets into one mixed flow. Useful whenever a protocol needs to
+// premix a reagent triplet (e.g. analyte + primer + buffer) before the next
+// stage of a pipeline.
+module three_in_mixer(
+    finput in_a, in_b, in_c,
+    foutput out_1
+);
+    #MAP "MIXER" "~"
+    assign out_1 = ~(in_a + in_b + in_c);
+endmodule

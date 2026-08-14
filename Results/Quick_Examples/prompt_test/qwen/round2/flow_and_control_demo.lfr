@@ -1,0 +1,19 @@
+module flow_and_control_demo(
+    finput inlet1, inlet2, inlet3,
+    control c,
+    foutput outlet
+);
+
+flow mixed, selected;
+
+assign mixed = inlet1 + inlet2;
+
+distribute@(c)
+begin
+    if (c == 1'b1) selected <= mixed;
+    else selected <= inlet3;
+end
+
+assign outlet = selected;
+
+endmodule

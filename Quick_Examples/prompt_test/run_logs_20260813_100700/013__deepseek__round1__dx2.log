@@ -1,0 +1,62 @@
+status: FAIL:1
+source: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx2\dx2_fromLFR.json
+target: C:\Users\92010\Desktop\TREE-PLACE\Benchmarks\Quick_Examples\prompt_test\Results\deepseek\round1\dx2\dx2_fromLFR\dx2_fromLFR.json
+
+--- stdout ---
+Detected 4 disconnected layer-0 cluster(s); running each independently.
+Running independent cluster 1/4: ['droplet_sorter_1', 'port_5']
+Finish loading test case: dx2_fromLFR__cluster_00
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 18450, 11425, 'droplet_sorter_1', 0] [[0, 4845], [18450, 600], [18450, 9091]]
+[1, 1400, 1400, 'port_5', 0] [[700, 700]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0015048980712890625 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0], [0]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0005049705505371094 s
+6/9, Finish shortening wirelength, time spent: 0.0 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.002004861831665039 s
+9/9, Finish compaction and connecting ports, time spent: 0.010565996170043945 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.014580726623535156 s
+Reordering Timeusage: 0.0005049705505371094 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.013075828552246094 s
+Please check the results under "./Benchmarks/Quick_Examples/prompt_test/Results/deepseek/round1/dx2/dx2_fromLFR/clusters/dx2_fromLFR__cluster_00/result"
+Running independent cluster 2/4: ['droplet_splitter_1']
+Finish loading test case: dx2_fromLFR__cluster_01
+1/9, Finish initial placement, time spent: 0.0 s
+[0, 6000, 8000, 'droplet_splitter_1', 0] [[0, 4000], [5500, 0], [5000, 8000]]
+2/9, Finish initial placement with rotation, time spent: 0.0 s
+3/9, Finish symmetricalization, time spent: 0.0 s
+4/9, Finish routing, time spent: 0.0 s
+****************************************************
+
+--- stderr ---
+Traceback (most recent call last):
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 306, in <module>
+    main()
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 284, in main
+    result_dir = run_clustered_design(repo_root, args.category, args.filename, input_case_json, clusters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\run_flow&control_syn.py", line 177, in run_clustered_design
+    gen_PR_developing(cluster_category, cluster_name)
+  File "C:\Users\92010\Desktop\TREE-PLACE\flow_syn.py", line 830, in gen_PR_developing
+    new_order=reorder(R,connection,inrow_rela)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 695, in reorder
+    flag=dfs_order_generation(ROW,len(ROW)-2,CONNECTION,INROW_RELATION,ORDER_CUR,new_order)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 642, in dfs_order_generation
+    space,free_block=gen_sol_space(ROW,CONNECTION,ORDER_ABOVE,ID_R)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\92010\Desktop\TREE-PLACE\order_and_mirror.py", line 340, in gen_sol_space
+    for con in CONNECTION[len(ROW)-ID_ROW-2]:
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range

@@ -1,0 +1,10 @@
+module mixer_3to1(
+    finput in1, in2, in3,
+    foutput out
+);
+flow stage1;
+
+assign stage1 = in1 + in2;
+assign out = stage1 + in3;
+
+endmodule

@@ -1,0 +1,472 @@
+ _____ _       _       _ 
+|  ___| |_   _(_) __ _(_)
+| |_  | | | | | |/ _` | |
+|  _| | | |_| | | (_| | |
+|_|   |_|\__,_|_|\__, |_|
+                 |___/   
+
+('/home/cidar-ron/Downloads/Neptune_2026/prompt_test/round1/openAI/flow_and_control_demo.lfr',) /home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round1/openai/flow_and_control_demo dropx /home/cidar-ron/Downloads/Neptune_2026/pylfr/library False False False ()
+['/home/cidar-ron/Downloads/Neptune_2026/pylfr/library']
+Loading all LFR Files from lib Directories:
+-- Loading form path /home/cidar-ron/Downloads/Neptune_2026/pylfr/library
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mux.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/tree.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/port.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/picoinjector.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mixer.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/valve.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/nozzle_droplet_generator.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/channel.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/reaction_chamber.lfr
+Input Path: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/round1/openAI/flow_and_control_demo.lfr
+File: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/round1/openAI/flow_and_control_demo.lfr
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+['flow_and_control_demo.lfr']
+output dir: /home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round1/openai/flow_and_control_demo
+('/home/cidar-ron/Downloads/Neptune_2026/prompt_test/round1/openAI/flow_and_control_demo.lfr',)
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10.1
+Initialized the lfrcompiler
+Performing operation: <VectorRange::Vector - inlet1 [0 : 0]> + <VectorRange::Vector - inlet2 [0 : 0]>
+Creating a vector of type [None]
+LHS, RHS sizes are equal
+FLOW - inlet1_MIX_(+)_inlet2_0 FLOW - mixer_stream
+<class 'lfr.fig.interaction.FluidFluidInteraction'>
++
+Entering the Distribution Block
+Entering the dis assign stat
+Exiting the dist assign stat
+LHS, RHS sizes are equal
+FLOW - mixer_stream IO - Name: outlet, Type : IOType.FLOW_OUTPUT
+Could not find source - mixer_stream in state table connectivity graph, adding node
+Could not find target - outlet in state table connectivity graph, adding node
+Added the edge mixer_stream -> outlet
+Entering the dis assign stat
+Exiting the dist assign stat
+LHS, RHS sizes are equal
+IO - Name: inlet3, Type : IOType.FLOW_INPUT IO - Name: outlet, Type : IOType.FLOW_OUTPUT
+Could not find source - inlet3 in state table connectivity graph, adding node
+Could not find target - outlet in state table connectivity graph, adding node
+Added the edge inlet3 -> outlet
+Exit the Distribution Block
+Implement the fig generation from this
+Connectivity table for the distribution block
+╒════════════════════════╤══════════════════╕
+│   mixer_stream->outlet │   inlet3->outlet │
+╞════════════════════════╪══════════════════╡
+│                      1 │                0 │
+├────────────────────────┼──────────────────┤
+│                      0 │                1 │
+╘════════════════════════╧══════════════════╛
+╒═════╕
+│   c │
+╞═════╡
+│   1 │
+├─────┤
+│   0 │
+╘═════╛
+╒════════════════════════╤══════════════════╤═════╕
+│   mixer_stream->outlet │   inlet3->outlet │   c │
+╞════════════════════════╪══════════════════╪═════╡
+│                      1 │                0 │   1 │
+├────────────────────────┼──────────────────┼─────┤
+│                      0 │                1 │   0 │
+╘════════════════════════╧══════════════════╧═════╛
+DISTRIBUTE-AND CANDIDATES:
+[]
+╒════════════════════════╤══════════════════╕
+│   mixer_stream->outlet │   inlet3->outlet │
+╞════════════════════════╪══════════════════╡
+│                      1 │                0 │
+├────────────────────────┼──────────────────┤
+│                      0 │                1 │
+╘════════════════════════╧══════════════════╛
+╒═════╕
+│   c │
+╞═════╡
+│   1 │
+├─────┤
+│   0 │
+╘═════╛
+╒════════════════════════╤══════════════════╤═════╕
+│   mixer_stream->outlet │   inlet3->outlet │   c │
+╞════════════════════════╪══════════════════╪═════╡
+│                      1 │                0 │   1 │
+├────────────────────────┼──────────────────┼─────┤
+│                      0 │                1 │   0 │
+╘════════════════════════╧══════════════════╧═════╛
+[[1 0]
+ [0 1]]
+[[1 0]
+ [0 1]]
+DISTRIBUTE-OR CANDIDATES
+[[0, 1]]
+Adding DIST-OR annotation 'DIST_OR_1f0c5f0e-e2fb-4991-8f92-853bede1ee91' for fig nodes:
+FLOW - mixer_stream->IO - Name: outlet, Type : IOType.FLOW_OUTPUT
+IO - Name: inlet3, Type : IOType.FLOW_INPUT->IO - Name: outlet, Type : IOType.FLOW_OUTPUT
+Control mapping: 2 edge(s) -> valve/control_port (1:1)
+  mixer_stream -> outlet  :  valve_0  <-  ctrl_0
+  inlet3 -> outlet  :  valve_1  <-  ctrl_1
+Name : flow_and_control_demo
+Name: inlet1, Type : IOType.FLOW_INPUT
+Name: inlet2, Type : IOType.FLOW_INPUT
+Name: inlet3, Type : IOType.FLOW_INPUT
+Name: c, Type : IOType.CONTROL
+Name: outlet, Type : IOType.FLOW_OUTPUT
+
+---Top of Stack---
+---Bottom of Stack---
+Flow candidate: {'mixer_stream'}
+Passthrough found: {'mixer_stream'}
+Removing the component: {'mixer_stream'}
+[]
+('6fc35c7c22084cae72e62a0163574d8c', 'REACTION CHAMBER', '{\n            v1: REACTION CHAMBER\n        }')
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', '{\n            v1:IO\n        }')
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', '{\n            v1:MIX\n        }')
+('d1781b16b1ea9b97644d83f5671ba40d', 'MIXER', '{\n            v1:DILUTE\n        }')
+('8330be665ac09c4b528fb673eaf54323', 'PICOINJECTOR', '{\n            v1:MIX\n        }')
+('588c06b63717d489f484abec4d043630', 'DROPLET MERGER', '{\n            v1:MIX\n        }')
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', '{\n            v1:SIEVE\n        }')
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', '{\n            v1:METER\n        }')
+('914238687115aa147b97e8d5533e886c', 'DROPLET MERGER JUNCTION', '{\n            v1:MIX\n        }')
+('d886b57db1ce64cdc693b482957a8fe2', 'DROPLET MERGER CHANNEL', '{\n            v1:MIX\n        }')
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', '{\n            v1:DIVIDE\n        }')
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', '{\n            v1:PROCESS\n        }')
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', '{\n            v1:STORAGE\n        }')
+('cd9f240e7e4fed74b91aa6e3b94eec01', 'LONG CELL TRAPPER', '{\n            v1:STORAGE\n        }')
+('26f0a16b9d1878f24029199874cd778b', 'FILTER', '{\n            v1:PROCESS\n        }')
+('c9770124d971f8583173f0dd28b4017b', 'DROPLET FLUORESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('09781c385e672251742ca6cc07e56759', 'DROPLET LUMINESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('1159f8c0f6837f1916dd1b43d142fa9d', 'DROPLET SPACER', '{\n            v1:PROCESS\n        }')
+('feb0fbd9a78edd7b903246b2de78427e', 'YTREE', '')
+('f52e9c50a060add65a035429b2a22229', 'CHANNEL', '')
+[]
+6fc35c7c22084cae72e62a0163574d8c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afdaf7da470>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+5b0789de1846a32aa239997c6b11eba8
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915df00>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'c': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'inlet3': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'outlet': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'inlet1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'inlet2': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'})]
+3888a3a085a0b78f43d9ad9257fb94cd
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915d0f0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 3888a3a085a0b78f43d9ad9257fb94cd
+{'inlet1_MIX_(+)_inlet2_0': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+d1781b16b1ea9b97644d83f5671ba40d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915ee90>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+8330be665ac09c4b528fb673eaf54323
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afdaf7db3d0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+588c06b63717d489f484abec4d043630
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915e6b0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+5cd84e8394bf8d6c20a6333d70b59771
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915d780>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+9722844e53ed3f50c3e82c3f8015876f
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915c9d0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+914238687115aa147b97e8d5533e886c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f100>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+d886b57db1ce64cdc693b482957a8fe2
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f1c0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+d949473e8c28c7624371eb1477dc026b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f6a0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+cdea77c5343e10aa9ebcb993ab494b7b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f5e0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+ddafeac84b5c1d4256c02be0327aad6b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915fe50>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+cd9f240e7e4fed74b91aa6e3b94eec01
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afdaf7da470>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+26f0a16b9d1878f24029199874cd778b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915ff70>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+c9770124d971f8583173f0dd28b4017b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f0d0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+09781c385e672251742ca6cc07e56759
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915f4c0>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+1159f8c0f6837f1916dd1b43d142fa9d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7afd9915e350>
+[('inlet1', 'inlet1_MIX_(+)_inlet2_0'), ('inlet2', 'inlet1_MIX_(+)_inlet2_0'), ('inlet3', 'outlet'), ('inlet1_MIX_(+)_inlet2_0', 'outlet')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+feb0fbd9a78edd7b903246b2de78427e
+Warning ! - Missing match string for mint- feb0fbd9a78edd7b903246b2de78427e
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+f52e9c50a060add65a035429b2a22229
+Warning ! - Missing match string for mint- f52e9c50a060add65a035429b2a22229
+Ret here
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'}), ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})]
+Total Matches against library : 6
+Start of Matches
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'})
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})
+End of matches
+Total matches against library after explicit mapping eliminations: 6
+{'c'}
+{'inlet3'}
+{'outlet'}
+{'inlet1'}
+{'inlet2'}
+{'inlet1_MIX_(+)_inlet2_0'}
+Moving Max Set Cover to the front: [{'c'}, {'inlet3'}, {'outlet'}, {'inlet1'}, {'inlet2'}, {'inlet1_MIX_(+)_inlet2_0'}]
+inlet1_MIX_(+)_inlet2_0
+c
+inlet3
+inlet2
+outlet
+inlet1
+Moving Explicit Matches to the front: []
+Checking Match: ('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', {'inlet1_MIX_(+)_inlet2_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_mixer_1 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_1 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'outlet': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_3 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'inlet3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_4 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'c': 'v1'})
+Variant variant_0:
+cn_mixer_1
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+Connected Nodes
+cn_mixer_1
+cn_port_3
+Connected Nodes
+cn_port_1
+cn_mixer_1
+Connected Nodes
+cn_port_2
+cn_mixer_1
+Connected Nodes
+cn_port_4
+cn_port_3
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x7afdaf7e11c0>
+Pulling Default Values of Components
+Deleted unsupported param "position" from component mixer_1 : MIXER
+Deleted unsupported param "position" from component port_1 : PORT
+Deleted unsupported param "position" from component port_2 : PORT
+Deleted unsupported param "position" from component port_3 : PORT
+Deleted unsupported param "position" from component port_4 : PORT
+Deleted unsupported param "position" from component Cport_0 : PORT
+Deleted unsupported param "position" from component valve_0 : VALVE3D
+Deleted unsupported param "controlPort" from component valve_0 : VALVE3D
+Deleted unsupported param "position" from component Cport_1 : PORT
+Deleted unsupported param "position" from component valve_1 : VALVE3D
+Deleted unsupported param "controlPort" from component valve_1 : VALVE3D
+Pulling Dimensions of Components
+Pulling Terminals of Components
+/home/cidar-ron/Downloads/Neptune_2026/prompt_test/Results/round1/openai/flow_and_control_demo/flow_and_control_demo/variant_0
+[lfr-netlist-validate] flow_and_control_demo.lfr: OK (FLOW 4/4, CONTROL 2/1)
+[lfr-netlist-validate] flow_and_control_demo.lfr: OK (FLOW 4/4, CONTROL 2/1)
+
+line 2:25 extraneous input 'CHAMBER' expecting {',', '}'}

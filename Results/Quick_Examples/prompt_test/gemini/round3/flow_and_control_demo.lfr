@@ -1,0 +1,19 @@
+module flow_and_control_demo(
+    finput inlet1, inlet2, inlet3,
+    control c,
+    foutput outlet
+);
+
+flow mixer;
+
+// Mix inlet1 and inlet2 into an intermediate stream
+assign mixer = inlet1 + inlet2;
+
+// Route fluid to outlet based on control signal c
+distribute@(c)
+begin
+  if (c == 1'b1) outlet <= mixer;
+  else outlet <= inlet3;
+end
+
+endmodule

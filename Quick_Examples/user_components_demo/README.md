@@ -16,15 +16,14 @@ design without modifying the 3DuF primitives server.
 
 ## Expected terminals
 
-`MyGadget.json` declares four ports. MINT `CHANNEL` endpoints use the
-numeric `name` of each PORT (the grammar accepts integer terminal IDs):
+`MyGadget.json` declares four ports (matched by their `name` field):
 
-| name | role | layer    | offset (x, y) |
-| ---- | ---- | -------- | ------------- |
-| 1    | inA  | FLOW     | (0, 2500)     |
-| 2    | inB  | FLOW     | (0, 7500)     |
-| 3    | out  | FLOW     | (20000, 5000) |
-| 4    | ctrl | CONTROL  | (10000, 0)    |
+| label | layer    | offset (x, y) |
+| ----- | -------- | ------------- |
+| inA   | FLOW     | (0, 2500)     |
+| inB   | FLOW     | (0, 7500)     |
+| out   | FLOW     | (20000, 5000) |
+| ctrl  | CONTROL  | (10000, 0)    |
 
 Bounding box: `x-span = 20000`, `y-span = 10000`.
 
@@ -60,6 +59,7 @@ all search paths consulted.
   merge the component's internal features into the top design. A later
   pass can be added to splice the user-supplied JSON into the final
   integration output.
-- Port IDs must match between the custom JSON and the top design: the
-  top design's `CHANNEL ... to gadget_1 1` reaches the terminal whose
-  `name` is `"1"` inside `MyGadget.json` (role inA at offset (0, 2500)).
+- Port labels must match between the custom JSON and the top design: the
+  top design's `CHANNEL ... to gadget_1 inA` reaches the terminal whose
+  label is `inA`, which is derived from the `name` of the PORT component
+  inside `MyGadget.json`.

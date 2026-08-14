@@ -1,0 +1,20 @@
+module dx2 (
+    input fluid in1,
+    input fluid in2,
+    output fluid out1,
+    output fluid out2
+);
+
+    // Meter in1 into droplets of volume 100
+    fluid d1 = in1 @ 100;
+
+    // Meter in2 into droplets of volume 200
+    fluid d2 = in2 @ 200;
+
+    // Merge droplet streams and pass through mixer (unary '~') for incubation
+    fluid incubated = ~(d1 + d2);
+
+    // Split incubated mixture: out1 is the kept stream minus the discard stream out2
+    out1 = incubated - out2;
+
+endmodule

@@ -1,0 +1,34 @@
+`import "library/three_in_mixer.lfr"
+`import "library/droplet_generator.lfr"
+`import "library/incubator.lfr"
+
+module import_droplet_reaction(
+    finput analyte, primer, buffer, oil_phase,
+    foutput outlet
+);
+flow aqueous, droplets, incubated;
+
+// Mix analyte, primer, and buffer
+three_in_mixer u_mix(
+    .in_a(analyte),
+    .in_b(primer),
+    .in_c(buffer),
+    .out_1(aqueous)
+);
+
+// Generate droplets: aqueous stream from mixer, oil from input
+droplet_generator u_drop(
+    .oil(oil_phase),
+    .aqueous(aqueous),
+    .droplets(droplets)
+);
+
+// Incubate the droplets
+incubator u_inc(
+    .in_1(droplets),
+    .out_1(incubated)
+);
+
+// Output
+assign outlet = incubated;
+endmodule
