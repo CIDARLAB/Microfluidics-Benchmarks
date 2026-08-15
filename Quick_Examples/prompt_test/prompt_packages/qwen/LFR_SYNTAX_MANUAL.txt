@@ -1,0 +1,203 @@
+Neptune 2026 — LFR Syntax Manual (Quick Reference)
+
+Aligned with Neptune GUI References and:
+  docs/LFR_READABLE_SYNTAX_SPEC_V2.md
+  docs/LFR-TestCases-wiki/ (Module Breakdown, Fluidic Operations,
+  Distribution Blocks, Imports and Module Reuse, Compiler Directives)
+Normative implementation: pylfr/lfrX.g4, pylfr/lfr/preprocessor.py
+
+If this summary and the compiler disagree, the compiler is authoritative.
+
+------------------------------------------------------------------------
+1) Module form
+------------------------------------------------------------------------
+module <module_name>(<io_block>);
+  <declarations and statements>
+endmodule
+
+Recommended convention: one module per .lfr file; module name equals file stem.
+
+------------------------------------------------------------------------
+2) IO (module header)
+------------------------------------------------------------------------
+Port kinds:
+  finput    fluid inputs
+  foutput   fluid outputs
+  control   control signals
+
+Example:
+module mux2(
+    finput a, b,
+    control sel,
+    foutput y
+);
+
+Module port list (header rules):
+- Separate port *groups* with commas inside module (...).
+- Do not put semicolons between finput / foutput / control inside the header.
+  Invalid: module bad(finput B, C; foutput A;);
+
+Vectors:
+  finput [0:15] inputs
+  control [0:3] route
+
+------------------------------------------------------------------------
+3) Declarations
+------------------------------------------------------------------------
+flow ...;       intermediate fluid nets
+storage ...;    storage-like state nodes
+number id = value, ...;
+signal ...;
+pump ...;
+
+Examples:
+flow a_to_mix, mix_out;
+storage stage_1;
+number ratio = 2, gain = 10;
+
+------------------------------------------------------------------------
+4) assign and fluidic operators
+------------------------------------------------------------------------
+assign <lhs> = <expression>;
+
+Common operators (see Fluidic Operations wiki):
+  +     merge / mix streams
+  -     branch / waste-style relation
+  %     metering / dropletize with a target-volume parameter
+  /N    equal split (often with brace LHS)
+  ~     unary mapped primitive / process step (optional #MAP), NOT default mix
+
+Mixing default (prefer this):
+  assign mid = a + b;
+  assign mid = a + b + c;
+
+Do NOT wrap ordinary mixes as ~(a + b) / #MAP "MIXER" "~" unless English
+explicitly asks for a named technology map or an extra unary process on an
+already-merged stream. Unary ~ is for process steps on one stream (e.g.
+chamber/incubate/DIY/#MAP), not for replacing binary +.
+
+#MAP (same unit as mix / unary ~ — both arguments quoted):
+  #MAP "<TECHNOLOGY STRING>" "<operator-or-mode>"
+  #MAP "MIXER" "~"
+  #MAP "CHAMBER" "~"
+  #MAP "NOZZLE DROPLET GENERATOR" "%"
+
+#MAP placement (critical; only when English requires #MAP):
+- Put `#MAP "MIXER" "~"` inside the module body, immediately above the
+  `assign` that uses `~`.
+- Never place `#MAP` before `module` (invalid: file-top `#MAP` then
+  `module ...`).
+Ordinary mix does not need #MAP or unary ~ — use binary +.
+
+Equal split:
+  assign {a, b} = stream / 2;
+  assign a = stream / 2; assign b = stream / 2;
+
+Kept vs discard / side-branch (common pattern):
+  assign discard = parent / 2;
+  assign kept = parent - discard;
+
+% metering (important):
+  assign droplets = aqueous % 100;
+means: meter/sample aqueous into droplets using 100 as the *target volume
+parameter*. It is NOT "make 100 droplets" and NOT arithmetic mod.
+The number is unitless in source; attach physical units with #CONSTRAIN when needed.
+Relative size still matters (% 200 asks for a larger target than % 100).
+
+Use the assign keyword for connections. Prefer Neptune port kinds
+(finput / foutput / control) and flow declarations for intermediates.
+
+------------------------------------------------------------------------
+5) distribute blocks (control-sensitive routing)
+------------------------------------------------------------------------
+Use distribute@(control_signals) with <= inside branches:
+
+distribute@(sel)
+begin
+  if (sel == 1'b0) out <= a;
+  else out <= b;
+end
+
+case form:
+distribute@(route)
+begin
+  case(route)
+    2'b00: y <= in0;
+    2'b01: y <= in1;
+    default: y <= in0;
+  endcase
+end
+
+Condition operators currently supported:
+  == != && || & | ^ ^~ ~^
+Chaining and parentheses are supported.
+Precedence (high to low): == !=, then &, then ^/^~/~^, then |, then &&, then ||.
+Signal-vs-signal ops with == != & | ^ ^~ ~^ require matching widths.
+
+Use = in normal assign; use <= inside distribute branches.
+Prefer distribute@(…) for control-gated fluid routing rather than C-style ternary.
+
+------------------------------------------------------------------------
+6) Directives
+------------------------------------------------------------------------
+#MAP          (form and placement: see section 4, next to mix / unary ~)
+#CONSTRAIN
+#MATERIAL
+
+Use #MAP / unary ~ only when English names a concrete technology or an
+extra unary process step on one stream. Do not invent file-top #MAP.
+
+------------------------------------------------------------------------
+7) Comments
+------------------------------------------------------------------------
+// line comment
+/* block comment */
+
+------------------------------------------------------------------------
+8) Imports and module reuse (Neptune 2026)
+------------------------------------------------------------------------
+Backtick import (one quoted .lfr path per line):
+  `import "Valve.lfr"
+  `import "library/Valve.lfr"
+  `import "/abs/path/Valve.lfr"
+
+Rules:
+- path must end with .lfr
+- transitive imports are followed
+- circular imports are rejected
+- import line carries only the path — never `from` and never a module name
+- Wrong (common LLM invent): import Name from "library/Name.lfr";
+  or backtick-import Name from "library/Name.lfr";
+- Correct shape: backtick-import "library/Name.lfr" then instantiate Name ...
+
+Instantiation (ordered or named ports):
+  Child u0(a, b, y);
+  Child u1(.in0(a), .in1(b), .out(y));
+
+Named port maps are preferred for clarity. Port names should match the
+imported module's declared IO. If the library .lfr is available, copy names
+from its module header.
+
+------------------------------------------------------------------------
+9) English phrasing → LFR constructs
+------------------------------------------------------------------------
+input port / fluid input / input fluid     →  finput
+output port / fluid output / output fluid →  foutput
+(Header keywords are the single tokens finput / foutput — not "input fluid".)
+control / select             →  control
+mix / mixer / merge          →  assign mid = a + b;   (default; no ~ wrap)
+meter / dropletize volume N  →  assign d = in % N;
+control-gated route          →  distribute@(c) begin ... <= ... end
+reuse library module         →  `import "….lfr"  then  Mod u0(.port(net));
+
+Natural-language “mixer” means the merge/mix operators above, unless the
+English explicitly asks to import a named library module.
+
+------------------------------------------------------------------------
+10) Practical authoring guidance
+------------------------------------------------------------------------
+- Keep source ASCII when possible.
+- Drive every declared foutput.
+- Prefer explicit intermediate flow nodes for multi-stage pipelines.
+- For route-selection, prefer full case coverage of control states.
+- Match module name and IO counts to the English specification.

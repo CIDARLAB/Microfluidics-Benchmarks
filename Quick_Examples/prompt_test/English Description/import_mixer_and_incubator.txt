@@ -4,4 +4,7 @@ Import these library modules (use these exact module names and port names):
 - two_in_mixer from "library/two_in_mixer.lfr": fluid inputs in_a, in_b; fluid output out_1.
 - incubator from "library/incubator.lfr": fluid input in_1; fluid output out_1.
 
+LFR import writing for this device (do not copy the English word "from" into LFR): each import line is one leading backtick, then import, then a quoted path only, e.g. `import "library/two_in_mixer.lfr"
+Forbidden: import Name from "...";  `import Name from "...";  or import "..." without the leading backtick. Put the module name only on the instantiation with named port maps, e.g. two_in_mixer u0(.in_a(net1), .in_b(net2), .out_1(mid));
+
 Wiring: connect reagent_a to two_in_mixer.in_a and reagent_b to two_in_mixer.in_b; take two_in_mixer.out_1 as a mixed intermediate flow; connect that mixed flow to incubator.in_1; connect incubator.out_1 to outlet. Write LFR code for this device.

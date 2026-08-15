@@ -1,0 +1,120 @@
+Write LFR (Liquid Flow Representation) code for all 11 devices below in a single reply.
+
+Output rules:
+- Produce exactly 11 separate Markdown code blocks, one device per block.
+- Before each code block, put a one-line heading with the device name, in this exact order:
+  1. flow_only_demo
+  2. mixer_3to1
+  3. flow_and_control_demo
+  4. dx2
+  5. dx3
+  6. import_mixer_and_incubator
+  7. import_parallel_premix
+  8. import_droplet_reaction
+  9. test_device
+  10. test_DIY_crossing
+  11. test_DIY_fork
+- Fence each block as ```lfr ... ```. Put only LFR source inside the fence (no English commentary inside the code).
+- Each block must be a complete, standalone LFR file for that device only. Do not merge devices into one module.
+- Use the device name as the top-level module name.
+- Do not skip, merge, or reorder devices. Do not invent extra devices.
+- Follow the writing note that sits next to each device's functional description (mix uses +; #MAP only where that brief asks; import lines are backtick + quoted path only).
+
+
+---
+
+## Device 1: flow_only_demo
+
+I want to have a device called ''flow_only_demo'' that consists of three ports: inlet_1, inlet_2, and outlet_1. Port inlet_1 and port inlet_2 are fluid input ports. Port outlet_1 is the fluid output port. Two liquids enter from inlet_1 and inlet_2, mix together, and the mixed liquid leaves the device through outlet_1. Mix with binary + only (assign mid = inlet_1 + inlet_2;); do not wrap as ~(a+b) and do not emit #MAP. There is no control layer. Write LFR code for this device.
+
+---
+
+## Device 2: mixer_3to1
+
+I want to have a device called ''mixer_3to1'' with three fluid inputs named in1, in2, and in3, and one fluid output named out. Merge the streams in two stages: first merge in1 with in2 into an intermediate mixed stream, then merge that intermediate stream with in3, and send the final mixture to out. Each merge uses binary + only (assign mid = in1 + in2; then assign out = mid + in3;); do not wrap as ~(a+b) and do not emit #MAP. There is no control layer. Write LFR code for this device.
+
+---
+
+## Device 3: flow_and_control_demo
+
+I want to have a device called ''flow_and_control_demo'' with three fluid inputs named inlet1, inlet2, and inlet3, one fluid output named outlet, and one control signal named c. Inlets inlet1 and inlet2 first mix into an intermediate mixer stream (binary + only: assign mixed = inlet1 + inlet2; do not wrap as ~(a+b) and do not emit #MAP). The device then uses a distribute block controlled by c: when c equals 1, the outlet receives liquid from the mixer; otherwise, the outlet receives liquid from inlet3. Write LFR code for this device.
+
+---
+
+## Device 4: dx2
+
+I want to have a device called ''dx2'' with two fluid inputs named in1 and in2, and two fluid outputs named out1 and out2. Liquid from in1 is metered into droplets with a nominal volume of 100, and liquid from in2 is metered into droplets with a nominal volume of 200. The two droplet streams then merge (that merge uses binary + only). The merged droplets pass through a mixer (tech-mapped from the unary operator "~" to a MIXER) for incubation. #MAP writing for this MIXER/`~` step: inside the module body, immediately above the assign that uses ~, write #MAP "MIXER" "~" (both arguments quoted). Never place #MAP before module. Finally, the incubated mixture is split so that out1 carries the kept stream and out2 is a discard or side-branch outlet (out1 equals the incubated mixture minus out2). Write LFR code for this device.
+
+---
+
+## Device 5: dx3
+
+I want to have a device called ''dx3'' with three fluid inputs named in1, in2, and in3, and two fluid outputs named out1 and out2. Liquid from in1 is metered into droplets with a nominal volume of 100. Those droplets are split equally into two daughter streams. The first daughter stream is mixed with inlet in2 and leaves through out1. The second daughter stream is mixed with inlet in3 and leaves through out2. Those mixes use binary + only (no ~(a+b), no #MAP). Write LFR code for this device.
+
+---
+
+## Device 6: import_mixer_and_incubator
+
+I want to have a device called ''import_mixer_and_incubator'' with two fluid inputs named reagent_a and reagent_b, and one fluid output named outlet. Build this device by importing and instantiating reusable library modules only — do not redefine those modules or invent their internal logic.
+
+Import these library modules (use these exact module names and port names):
+- two_in_mixer from "library/two_in_mixer.lfr": fluid inputs in_a, in_b; fluid output out_1.
+- incubator from "library/incubator.lfr": fluid input in_1; fluid output out_1.
+
+LFR import writing for this device (do not copy the English word "from" into LFR): each import line is one leading backtick, then import, then a quoted path only, e.g. `import "library/two_in_mixer.lfr"
+Forbidden: import Name from "...";  `import Name from "...";  or import "..." without the leading backtick. Put the module name only on the instantiation with named port maps, e.g. two_in_mixer u0(.in_a(net1), .in_b(net2), .out_1(mid));
+
+Wiring: connect reagent_a to two_in_mixer.in_a and reagent_b to two_in_mixer.in_b; take two_in_mixer.out_1 as a mixed intermediate flow; connect that mixed flow to incubator.in_1; connect incubator.out_1 to outlet. Write LFR code for this device.
+
+---
+
+## Device 7: import_parallel_premix
+
+I want to have a device called ''import_parallel_premix'' with five fluid inputs named lane_a_r1, lane_a_r2, lane_b_r1, lane_b_r2, and carrier, and one fluid output named outlet. Build this device by importing and instantiating reusable library modules only — do not redefine those modules or invent their internal logic.
+
+Import these library modules (use these exact module names and port names):
+- two_in_mixer from "library/two_in_mixer.lfr": fluid inputs in_a, in_b; fluid output out_1.
+- three_in_mixer from "library/three_in_mixer.lfr": fluid inputs in_a, in_b, in_c; fluid output out_1.
+
+LFR import writing for this device (do not copy the English word "from" into LFR): each import line is one leading backtick, then import, then a quoted path only, e.g. `import "library/two_in_mixer.lfr"
+Forbidden: import Name from "...";  `import Name from "...";  or import "..." without the leading backtick. Put the module name only on the instantiation with named port maps, e.g. two_in_mixer u0(.in_a(net1), .in_b(net2), .out_1(mid));
+
+Wiring: instantiate two_in_mixer twice in parallel — one instance connects lane_a_r1 to in_a and lane_a_r2 to in_b; the other connects lane_b_r1 to in_a and lane_b_r2 to in_b. Then feed both premixed out_1 streams together with carrier into one three_in_mixer instance (in_a, in_b, in_c in any consistent order that includes both premixes and carrier) whose out_1 is outlet. Write LFR code for this device.
+
+---
+
+## Device 8: import_droplet_reaction
+
+I want to have a device called ''import_droplet_reaction'' with four fluid inputs named analyte, primer, buffer, and oil_phase, and one fluid output named outlet. Build this device by importing and instantiating reusable library modules only — do not redefine those modules or invent their internal logic.
+
+Import these library modules (use these exact module names and port names):
+- three_in_mixer from "library/three_in_mixer.lfr": fluid inputs in_a, in_b, in_c; fluid output out_1.
+- droplet_generator from "library/droplet_generator.lfr": fluid inputs oil, aqueous; fluid output droplets.
+- incubator from "library/incubator.lfr": fluid input in_1; fluid output out_1.
+
+LFR import writing for this device (do not copy the English word "from" into LFR): each import line is one leading backtick, then import, then a quoted path only, e.g. `import "library/three_in_mixer.lfr"
+Forbidden: import Name from "...";  `import Name from "...";  or import "..." without the leading backtick. Put the module name only on the instantiation with named port maps, e.g. three_in_mixer u0(.in_a(net1), .in_b(net2), .in_c(net3), .out_1(mid));
+
+Wiring: connect analyte, primer, and buffer to three_in_mixer.in_a, in_b, and in_c; take three_in_mixer.out_1 as the aqueous stream; connect that aqueous stream to droplet_generator.aqueous and oil_phase to droplet_generator.oil; connect droplet_generator.droplets to incubator.in_1; connect incubator.out_1 to outlet. Write LFR code for this device.
+
+---
+
+## Device 9: test_device
+
+I want to have a device called ''test_device'' with four top fluid ports named top0, top1, top2, and top3, four bottom fluid ports named bot0, bot1, bot2, and bot3, two side fluid ports named side_a and side_b, one auxiliary fluid port named aux, and one shared fluid tap named out. The control interface has a 2-bit top-bank select c_top[0:1], a 2-bit bottom-bank select c_bot[0:1], a 2-bit via-bridge control c_bridge[0:1], and one auxiliary control c_aux.
+
+Functionally this is a dual-bank 4-lane valve router on a shared bus: c_top chooses which top[i] joins the upper bus, c_bot chooses which bot[i] joins the lower bus, and the two buses are tied together. Under c_bridge, side_a and/or side_b connect into that shared bus through a via-linked bridge. Finally, under c_aux the auxiliary port aux can be merged onto the bus that feeds out. Write LFR code for this device.
+
+---
+
+## Device 10: test_DIY_crossing
+
+I want a device called test_DIY_crossing with two fluid inputs named in_up and in_down, and two fluid outputs named out_right and out_left. Import library/DIYcomponent.lfr and place one DIYcomponent instance named cross with length=10000, width=10000, height=2000 (micrometers) so the footprint forms a crossing: bind up=in_up, down=in_down, right=out_right, left=out_left (all four sides used). LFR import writing for this device: `import "library/DIYcomponent.lfr"
+Forbidden: import DIYcomponent from "..."; or a bare import "..." without the leading backtick. Instantiate with named ports / parameter map; treat the component as a black-box footprint only. Write LFR code for this device.
+
+---
+
+## Device 11: test_DIY_fork
+
+I want a device called test_DIY_fork with two fluid inputs named in_up and in_left, and one fluid output named out_down. Import library/DIYcomponent.lfr and place one DIYcomponent instance named fork with length=10000, width=8000, height=2000 (micrometers) so the footprint forms a fork: bind up=in_up, left=in_left, down=out_down, and right=None. LFR import writing for this device: `import "library/DIYcomponent.lfr"
+Forbidden: import DIYcomponent from "..."; or a bare import "..." without the leading backtick. Instantiate with named ports / parameter map; treat the component as a black-box footprint only. Write LFR code for this device.
