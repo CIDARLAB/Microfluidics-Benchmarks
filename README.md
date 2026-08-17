@@ -6,6 +6,8 @@ This repository includes microfluidic test cases and benchmarks in different cat
 
 Each **category folder is flat**: one `Xxx_Yyy.lfr` / `Xxx_Yyy.mint` per case (no nested `Protocols/MARS/` trees). Former folders `Chthesis`, `Test`, `Hmlp`, `Parser_Test`, `Ryuichi's_Designs`, and `New_Grid` were merged into `CIDAR_Lab_Past_Devices/`. File-level rename map: `stat_plot/rename_map.md`.
 
+**Two groupings.** Folders below are **provenance** (source suite). Application function is a **multi-label** numbered map in [`CategoryMapping.md`](CategoryMapping.md): classes 1–9 literature assays, 10–11 structural (multiplexed addressing, transposer), then Other. Paths in more than one class are marked `(multi-function included)`. Plots: `stat_plot/benchmark_counts_by_category.png` (provenance) and `stat_plot/benchmark_counts_by_function.png` (function; bar heights are assignments and need not sum to 167). Original Device 10 (protein–DNA) is omitted; class 10 is multiplexed addressing. Contributions of additional devices and labels are welcome.
+
 Neptune batch scripts live in the parent repo (`Neptune_2026/scripts/`). From that repo root:
 
 ```bash
@@ -26,7 +28,7 @@ LFR (Liquid Flow Representation) design files (`.lfr`). **157** cases. Each subf
 | `COVID/` | COVID-related protocols (CRISPR, RT-PCR, ELISA, …) |
 | `Distribute_Expressions/`, `Distribute_Library/` | Distribution expressions and reusable mux / grid / transposer library |
 | `Expressions/` | Expression benchmarks |
-| `Literature_Benchmarks/` | Literature-derived LFR benchmarks (e.g. scRNA-seq, molecular diagnostics) |
+| `Literature_Benchmarks/` | Encoded literature devices (scRNA-seq, artificial cells, molecular diagnostics, bacteria diagnostics, organic synthesis, enzyme screening). Numbered functional remap (assays 1–9, structural 10–11, Other): `CategoryMapping.md` |
 | `Graph_Coverage/` | Leftover coverage cases (`Tree_Fanin`, `Tree_Fanout`) |
 | `Technology_Mapping/` | Technology-mapping benchmarks |
 | `Mars/` | MARS / iGEM 2017 BostonU devices (PCR, sorting, transformation, …) |
