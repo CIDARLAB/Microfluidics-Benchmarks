@@ -1,0 +1,39 @@
+// rotary_cells — 4-inlet rotary mix into cell traps (linearized).
+// Purpose: Merge all inlets into four traps and tree-reduce to one outlet.
+// Topology: FLOW: `in_1[*]` → `i*` → `cell_traps[0:3]` → `out_1`. CONTROLs interface-only.
+// Collaborator takeaway: Rotary map omitted so traps stay on the inlet island.
+module Rotary_Cells(
+    finput [0:3] in_1,  // FLOW inlet(s)
+    foutput out_1,  // FLOW outlet(s)
+    control [0:1] c_inputs, [0:1] c_cell_traps  // CONTROL select/gate — does not carry fluid
+);
+    flow i0, i1, i2, i3;  // intermediate FLOW net(s)
+    storage [0:3] cell_traps;  // STORAGE / chamber node(s)
+    assign i0 = in_1[0];  // continuous FLOW assign
+    assign i1 = in_1[1];  // continuous FLOW assign
+    assign i2 = in_1[2];  // continuous FLOW assign
+    assign i3 = in_1[3];  // continuous FLOW assign
+    assign cell_traps = i0 + i1 + i2 + i3;  // FLOW merge / mix
+    assign out_1 = cell_traps;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in_1[0] + in_1[1] + in_1[2] + in_1[3];
+    distribute@(c_inputs[0]) begin
+        if (c_inputs[0] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_inputs[1]) begin
+        if (c_inputs[1] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_cell_traps[0]) begin
+        if (c_cell_traps[0] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+    distribute@(c_cell_traps[1]) begin
+        if (c_cell_traps[1] == 1)
+            out_1 <= __ctrl_emit_src;
+    end
+
+endmodule

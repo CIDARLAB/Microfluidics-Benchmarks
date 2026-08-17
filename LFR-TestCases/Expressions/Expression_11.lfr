@@ -1,0 +1,18 @@
+// expression11 — simple two-inlet merge.
+// Purpose: add `in1` and `in2` into an intermediate flow and assign it to `out`.
+// Topology: in1 + in2 → temp_out → out.
+// Collaborator takeaway: minimal merge pattern used as a baseline expression.
+module Expression_11(
+    finput in1, in2,  // two fluid inlets
+    foutput out       // merged product outlet
+);
+
+    flow temp_out;  // merge result before outlet
+
+    // Merge: combine two inlets
+    assign temp_out = in1 + in2;
+
+    // Route product to outlet
+    assign out = temp_out;
+
+endmodule

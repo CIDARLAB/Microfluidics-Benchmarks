@@ -1,0 +1,17 @@
+// dx3 — droplet split with dual pico-injection.
+// Purpose: Meter droplets from `in1`, split 1:1, inject `in2`/`in3` into each half.
+// Topology: FLOW: `in1`% → /2 → (+in2)/(+in3) → `out1`/`out2`.
+// Collaborator takeaway: Parallel pico-injection after an equal split.
+module Dx_3(
+    finput in1, in2, in3,  // FLOW inlet(s)
+    foutput out1, out2  // FLOW outlet(s)
+);
+    flow droplets, split1, split2;  // intermediate FLOW net(s)
+    assign droplets = in1%100;  // meter / dropletize (FLOW)
+    assign {split1, split2} = droplets/2;  // equal FLOW split into parts
+    flow injected_droplets1, injected_droplets2;  // intermediate FLOW net(s)
+    assign injected_droplets1 = split1 + in2;  // FLOW merge / mix
+    assign injected_droplets2 = split2 + in3;  // FLOW merge / mix
+    assign out1 = injected_droplets1;  // continuous FLOW assign
+    assign out2 = injected_droplets2;  // continuous FLOW assign
+endmodule

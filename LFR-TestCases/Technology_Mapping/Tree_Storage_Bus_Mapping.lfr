@@ -1,0 +1,12 @@
+// tree_storage_bus_mapping — fan into cell traps then fan out.
+// Purpose: YTREE-distribute inlet into eight LONG CELL TRAP storages, then YTREE-merge back to one outlet.
+// Topology: FLOW: `input` → (#MAP YTREE) `cell_traps[0:7]` → (#MAP YTREE) `output`; storage typed via #MAP.
+// Collaborator takeaway: Combines storage technology with tree routing maps.
+module Tree_Storage_Bus_Mapping(finput input, foutput output);  // FLOW IO ports
+    #MAP "LONG CELL TRAP" "storage"  // tech-map: operator/keyword → component
+    storage [0:7] cell_traps;  // STORAGE / chamber node(s)
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign cell_traps = input;  // continuous FLOW assign
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign output = cell_traps;  // continuous FLOW assign
+endmodule

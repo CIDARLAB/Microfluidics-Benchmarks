@@ -1,0 +1,10 @@
+// hv_storage_grid_16 — placeholder HV storage grid shell.
+// Purpose: Minimal pass-through so library imports and batch synthesis succeed until a full grid is authored.
+// Topology: Single flow path `in0` → `out0` (no storage grid of size 16 yet).
+// Collaborator takeaway: Stub only; replace with real HV storage topology when available. Control is unused here.
+module Hv_Storage_Grid_16(
+    finput in0,  // FLOW inlet(s)
+    foutput out0  // FLOW outlet(s)
+);
+    assign out0 = in0;  // continuous FLOW assign
+endmodule

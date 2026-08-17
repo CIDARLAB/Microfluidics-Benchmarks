@@ -1,0 +1,24 @@
+// transposer_02 — 2-lane swap / identity under control.
+// Purpose: Under 1-bit `c_select`, either pass two flow inlets straight through or swap them onto the two outlets.
+// Topology: FLOW: `inputs[0:1]` → `outputs[0:1]`. CONTROL: `c_select` chooses identity (1) vs swap (0) inside `distribute`.
+// Collaborator takeaway: Control selects routing; flow buses carry sample. Never mix control into `+`/`assign` fluid expressions.
+module Transposer_02(
+    finput [0:1] inputs,  // FLOW inlet(s)
+    foutput [0:1] outputs,  // FLOW outlet(s)
+    control c_select  // CONTROL select/gate — does not carry fluid
+);
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c_select)
+    begin
+        if(c_select == 1) begin  // CONTROL predicate for this FLOW arm
+            outputs[0] <= inputs [0];  // FLOW edge enabled in this control arm
+            outputs[1] <= inputs [1];  // FLOW edge enabled in this control arm
+        end
+        else begin  // alternate CONTROL arm
+            outputs[0] <= inputs [1];  // FLOW edge enabled in this control arm
+            outputs[1] <= inputs [0];  // FLOW edge enabled in this control arm
+        end
+    end
+
+
+endmodule

@@ -1,0 +1,10 @@
+// transposer_08 — placeholder transposer shell.
+// Purpose: Minimal pass-through so library imports and batch synthesis succeed until a full N-lane permute is authored.
+// Topology: Single flow path `in0` → `out0` (no controlled lane permutation yet).
+// Collaborator takeaway: Stub only; a real transposer needs flow buses + control select bits.
+module Transposer_08(
+    finput in0,  // FLOW inlet(s)
+    foutput out0  // FLOW outlet(s)
+);
+    assign out0 = in0;  // continuous FLOW assign
+endmodule

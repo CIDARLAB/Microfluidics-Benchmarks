@@ -1,0 +1,17 @@
+// dx6 — mix, dropletize, and 1:1 split.
+// Purpose: Merge two inlets, meter droplets from the mix, split equally to two outlets.
+// Topology: FLOW: `in1+in2` → % → /2 → `out1`/`out2`.
+// Collaborator takeaway: Mix-first droplet generator pattern.
+module Dx_6(
+    finput in1, in2,  // FLOW inlet(s)
+    foutput out1, out2  // FLOW outlet(s)
+);
+    flow mix;  // intermediate FLOW net(s)
+    assign mix = in1 + in2;  // FLOW merge / mix
+    flow droplets;  // intermediate FLOW net(s)
+    assign droplets = mix%50;  // meter / dropletize (FLOW)
+    flow split1, split2;  // intermediate FLOW net(s)
+    assign {split1, split2} = droplets/2;  // equal FLOW split into parts
+    assign out1 = split1;  // continuous FLOW assign
+    assign out2 = split2;  // continuous FLOW assign
+endmodule

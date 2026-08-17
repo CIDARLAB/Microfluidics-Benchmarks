@@ -1,0 +1,27 @@
+// expression8 — four scalar inlets to two outlets via pairwise mixes.
+// Purpose: mix `in1` with each of in2/in3/in4 on unique intermediates,
+//   then drive out1 from the first two mixes and out2 from the third.
+// Topology: (in1+in2)+(in1+in3) → out1; (in1+in4) → out2.
+// Collaborator takeaway: shared inlet fans into parallel pairwise merges.
+module Expression_8(
+    finput in1, in2, in3, in4,  // shared in1 plus three partner inlets
+    foutput out1, out2          // dual product outlets
+);
+
+    flow mix_a, mix_b, mix_c, out1_feed;  // pairwise mixes and out1 feed
+
+    // Merge: in1 with in2
+    assign mix_a = in1 + in2;
+    // Merge: in1 with in3
+    assign mix_b = in1 + in3;
+    // Merge: in1 with in4
+    assign mix_c = in1 + in4;
+
+    // Merge: combine first two pairwise mixes for out1
+    assign out1_feed = mix_a + mix_b;
+    // Route combined feed to out1
+    assign out1 = out1_feed;
+    // Route third pairwise mix to out2
+    assign out2 = mix_c;
+
+endmodule

@@ -10,18 +10,16 @@ LFR (Liquid Flow Representation) format design files (`.lfr`). Each subfolder is
 
 | Folder | Description |
 |--------|-------------|
-| `test/` | Minimal test (e.g. `multi_input.lfr`) for quick runs |
-| `dropx/` | DropX designs (dx1–dx15, dropx_test1–4) |
-| `chthesis/` | Thesis benchmarks (grad_cells, hasty, logic04, multi_input, net_mux, rotary_cells, rotary16, tdroplet, etc.) |
+| `CIDAR_Lab_Past_Devices/` | CIDAR historical devices (former Chthesis, Test, Hmlp, Parser_Test, Ryuichi's_Designs) |
+| `Drop_Ref/` | DropX + droplet-generator designs (Dx_1–Dx_15, Dropx_Test_1–4, Droplet_Generator*) |
 | `COVID/` | COVID-related protocols (CRISPR, rt_pcr, etc.) |
-| `distribute-expressions/`, `distribute-library/` | Distribution and library tests |
+| `Distribute_Expressions/`, `Distribute_Library/` | Distribution and library tests |
 | `Expressions/` | Expression benchmarks |
-| `LiteratureBenchmarks/` | Literature-derived LFR benchmarks (e.g. scRNA-seq, molecular diagnostics, bacteria diagnostics) |
-| `GraphCoverage/`, `TechnologyMapping/` | Graph coverage and technology mapping |
-| `mars/` | MARS platform designs (PCR, sorting, transformation, etc.) |
-| `Protocols/`, `Transport Networks/` | Protocols and transport networks |
-| `ghissues/`, `ParserTest/` | Parser and issue regression tests |
-| `Ryuichi's designs/` | Assorted research designs |
+| `Literature_Benchmarks/` | Literature-derived LFR benchmarks (e.g. scRNA-seq, molecular diagnostics, bacteria diagnostics) |
+| `Graph_Coverage/`, `Technology_Mapping/` | Graph coverage and technology mapping |
+| `Mars/` | MARS / iGEM 2017 BostonU devices (PCR, sorting, transformation, etc.) |
+| `Protocols/`, `Transport_Networks/` | Protocols and transport networks |
+| `Ghissues/` | Issue regression tests |
 
 ### MINT-TestCases/
 
@@ -29,15 +27,13 @@ MINT format design files (`.mint`). Used when the pipeline starts from MINT inst
 
 | Folder | Description |
 |--------|-------------|
-| `test/` | Minimal test (e.g. `multi_input_fromLFR.mint` or hand-written MINT) |
-| `dropx/` | DropX MINT (dx1–dx15, dropx_test1–3) |
-| `dropx_ref/` | DropX reference cases (dx*_ref.mint) |
-| `chthesis/` | Thesis benchmarks (flow_focus, grad_cells, hasty, logic04, multi_input, etc.) |
-| `base/` | Base components and small nets (mux, transposer, tree tests, etc.) |
-| `grid/`, `new_grid/` | Grid-based designs |
-| `constraints/` | Layout constraint tests |
-| `primitive/` | Primitive-level devices (mixer, valve, pump, etc.) |
-| `LiteratureBenchmarks/` | Literature-based device benchmarks |
+| `CIDAR_Lab_Past_Devices/` | CIDAR historical devices (including former New_Grid leftovers) |
+| `Drop_Ref/` | DropX, DropX reference (`dx*_ref`), and droplet-generator MINT |
+| `Base/` | Base components and small nets (mux, transposer, tree tests, etc.) |
+| `Grid/` | Grid-based designs |
+| `Constraints/` | Layout constraint tests |
+| `Primitive/` | Primitive-level devices (mixer, valve, pump, etc.) |
+| `Literature_Benchmarks/` | Literature-based device benchmarks |
 
 ### Quick_Examples/
 

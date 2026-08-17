@@ -1,0 +1,26 @@
+// mux_08_out — 1-to-8 demultiplexer (library primitive).
+// Purpose: Under 3-bit control `c_select`, steer a single flow inlet onto one of eight outlet lanes.
+// Topology: FLOW: `input` → selected `outputs[i]`. CONTROL: `c_select` chooses the active lane inside `distribute`/`case`.
+// Collaborator takeaway: Control picks the lane; only flow ports carry fluid. Inactive outlets are not driven in that arm.
+module Mux_08_Out(
+    finput input,  // FLOW inlet(s)
+    foutput [0:7] outputs,  // FLOW outlet(s)
+    control [0:2] c_select  // CONTROL select/gate — does not carry fluid
+);
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c_select)
+    begin
+        case(c_select)  // CONTROL value selects which FLOW arm runs
+            3'b000 : outputs[0] <= input;  // FLOW edge enabled in this control arm
+            3'b001 : outputs[1] <= input;  // FLOW edge enabled in this control arm
+            3'b010 : outputs[2] <= input;  // FLOW edge enabled in this control arm
+            3'b011 : outputs[3] <= input;  // FLOW edge enabled in this control arm
+            3'b100 : outputs[4] <= input;  // FLOW edge enabled in this control arm
+            3'b101 : outputs[5] <= input;  // FLOW edge enabled in this control arm
+            3'b110 : outputs[6] <= input;  // FLOW edge enabled in this control arm
+            3'b111 : outputs[7] <= input;  // FLOW edge enabled in this control arm
+        endcase
+    end
+
+
+endmodule

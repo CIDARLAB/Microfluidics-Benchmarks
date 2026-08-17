@@ -1,0 +1,14 @@
+// instance_mapping — single mixer technology-mapping case.
+// Purpose: Pass inlet through an intermediate, map MIXER (~), drive one outlet.
+// Topology: FLOW: `in` → `temp_in` → (~ MIXER) `temp_out` → `out`.
+// Collaborator takeaway: #MAP binds the `~` operator to a MIXER technology instance.
+module Instance_Mapping(
+    finput in,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
+);
+    flow temp_in, temp_out;  // intermediate FLOW net(s)
+    assign temp_in = in;  // continuous FLOW assign
+    #MAP  "MIXER" "~"  // tech-map: operator/keyword → component
+    assign temp_out = ~temp_in;  // mapped unary op on FLOW (e.g. mixer/incubator)
+    assign out = temp_out;  // continuous FLOW assign
+endmodule

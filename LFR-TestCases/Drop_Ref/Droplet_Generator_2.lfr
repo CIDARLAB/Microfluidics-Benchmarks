@@ -1,0 +1,17 @@
+// dropletgenerator2 — dual nozzle droplet generator.
+// Purpose: Two independent water-in-oil generators, each with its own oil pair and outlet.
+// Topology: FLOW: shared `waterin` metered twice; each drop merges with its oil pair → `dropletout*`.
+// Collaborator takeaway: Use live #MAP + `%` so tech-mapping emits DROPLET GENERATOR components.
+module Droplet_Generator_2(
+    finput oilin1, oilin2, oilin3, oilin4, waterin,  // FLOW inlet(s)
+    foutput dropletout1, dropletout2  // FLOW outlet(s)
+);
+    #MAP "DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
+    #CONSTRAIN "%" droplet_rate = 5 hz  // constraint on mapped operator (rate/size/etc.)
+    flow drop1;  // intermediate FLOW net(s)
+    flow drop2;  // intermediate FLOW net(s)
+    assign drop1 = waterin % 100;  // meter / dropletize (FLOW)
+    assign dropletout1 = drop1 + oilin1 + oilin2;  // FLOW merge / mix
+    assign drop2 = waterin % 50;  // meter / dropletize (FLOW)
+    assign dropletout2 = drop2 + oilin3 + oilin4;  // FLOW merge / mix
+endmodule

@@ -1,0 +1,47 @@
+DEVICE Mux_02_Out
+
+
+
+
+
+// === PORT COUNT CORRECTION ===
+// Physical port counts in this file are authoritative for the synthesized device.
+// FLOW ports: 3 (LFR module IO declared 3)
+// CONTROL ports (Cport_*): 2 (LFR control bit width declared 1)
+// VALVE/VALVE3D count: 2
+// Port counts differ from the original LFR IO / control bit-width.
+// The physical counts above are authoritative. Common causes include
+// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
+//   - CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 → physical Cports 2, valves 2)
+// === END PORT COUNT CORRECTION ===
+
+LAYER FLOW 
+
+PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+
+
+
+CHANNEL channel_1 from port_1 1 to port_2 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL channel_2 from port_1 1 to port_3 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+
+LAYER CONTROL 
+
+PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+
+VALVE3D valve_0 on channel_1 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
+VALVE3D valve_1 on channel_2 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
+
+CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 connectionSpacing=1000 channelWidth=400  ;
+CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 connectionSpacing=1000 channelWidth=400  ;
+
+ 
+
+END LAYER
+

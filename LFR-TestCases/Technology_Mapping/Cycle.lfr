@@ -1,0 +1,10 @@
+// cycle — three-inlet merge (technology-mapping variant).
+// Purpose: Same connectivity stand-in as GraphCoverage/cycle for the tech-mapping suite.
+// Topology: FLOW: `input1+input2+input3` → `out`.
+// Collaborator takeaway: Tech-mapping suite twin of the graph-coverage merge case.
+module Cycle(
+    finput input1, input2, input3,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
+);
+    assign out = input1 + input2 + input3;  // FLOW merge / mix
+endmodule

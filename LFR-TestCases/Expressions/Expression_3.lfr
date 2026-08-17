@@ -1,0 +1,19 @@
+// expression3 — three-inlet mix with sieve.
+// Purpose: merge `in1`–`in3`, apply the sieve operator (&) to the sum, and
+//   drive a single outlet.
+// Topology: &(in1 + in2 + in3) → temp_out → out.
+// Collaborator takeaway: unary `&` sieves a multi-inlet merge result.
+module Expression_3(
+    finput in1, in2, in3,  // three fluid inlets
+    foutput out            // sieved mix outlet
+);
+
+    flow temp_out;  // sieved merge result before outlet
+
+    // Merge then sieve: combine three inlets and apply &
+    assign temp_out = &(in1 + in2 + in3) ;
+
+    // Route product to outlet
+    assign out = temp_out;
+
+endmodule

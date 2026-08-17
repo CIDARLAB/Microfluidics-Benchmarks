@@ -1,0 +1,19 @@
+// Cell sorting / plasma separation benchmark (FIG uses explicit MAP; avoid
+// unsupported fluid-vector subtraction on the RHS).
+// Purpose: model blood separator that splits a cell suspension into plasma
+// and two cell fractions, all driven from the same inlet for connectivity.
+// Topology: cell_suspension → {plasma, cells[0], cells[1]} (MAP labels separator).
+// Collaborators: assignments are pass-through (no real "-" split) because fluid-vector
+// subtraction is unsupported; #MAP documents the intended BLOOD SEPARATOR process.
+
+module Cell_Sorting(
+    finput cell_suspension,     // whole blood / cell suspension inlet
+    foutput plasma, [0:1] cells // plasma outlet + two cell-fraction outlets
+);
+
+    #MAP "BLOOD SEPARATOR" "-"              // document intended separator process (op "-")
+    assign plasma = cell_suspension;        // plasma path (pass-through; no vector subtract)
+    assign cells[0] = cell_suspension;      // cell fraction 0 (pass-through for connectivity)
+    assign cells[1] = cell_suspension;      // cell fraction 1 (pass-through for connectivity)
+
+endmodule

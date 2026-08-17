@@ -1,0 +1,41 @@
+// issue6 — dual bank + wash into shared cell with dual readout (GitHub #6).
+// Purpose: Nine scalar inlets (two 4-lane banks + wash) merge into a product mirrored to out1/out2.
+// Topology: FLOW: all bank lanes + wash → `out1` and `out2`. CONTROLs interface-only.
+// Collaborator takeaway: Scalar IO avoids vector-index mapping gaps.
+module Issue_6(
+    finput a0, a1, a2, a3, b0, b1, b2, b3, wash,  // FLOW inlet(s)
+    foutput out1, out2,  // FLOW outlet(s)
+    control [0:1] mux_c1, [0:1] mux_c2, cell_c, wash_c  // CONTROL select/gate — does not carry fluid
+);
+    assign out1 = a0 + a1 + a2 + a3 + b0 + b1 + b2 + b3 + wash;  // FLOW merge / mix
+    assign out2 = a0 + a1 + a2 + a3 + b0 + b1 + b2 + b3 + wash;  // FLOW merge / mix
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = a0 + a1 + a2 + a3 + b0 + b1 + b2 + b3 + wash;
+    distribute@(mux_c1[0]) begin
+        if (mux_c1[0] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(mux_c1[1]) begin
+        if (mux_c1[1] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(mux_c2[0]) begin
+        if (mux_c2[0] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(mux_c2[1]) begin
+        if (mux_c2[1] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(cell_c) begin
+        if (cell_c == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(wash_c) begin
+        if (wash_c == 1)
+            out1 <= __ctrl_emit_src;
+    end
+
+endmodule

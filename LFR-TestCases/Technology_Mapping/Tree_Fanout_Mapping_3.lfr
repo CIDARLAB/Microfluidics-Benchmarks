@@ -1,0 +1,11 @@
+// tree_fanout_mapping3 — YTREE explicit assign on a fan-out bus.
+// Purpose: Minimal regression: YTREE-map a single inlet onto an 8-wide outlet bus.
+// Topology: FLOW: `i1` → (#MAP YTREE) `out[0:7]`.
+// Collaborator takeaway: Slimmest YTREE fan-out mapping case.
+module Tree_Fanout_Mapping_3(
+    finput i1,  // FLOW inlet(s)
+    foutput [0:7] out  // FLOW outlet(s)
+);
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign out[0:7] = i1;  // continuous FLOW assign
+endmodule

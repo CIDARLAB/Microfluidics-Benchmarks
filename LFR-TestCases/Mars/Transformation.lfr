@@ -1,0 +1,13 @@
+// transformation — plasmid / cell heat-shock mix.
+// Purpose: Meter plasmid and cell suspension, INCUBATOR-map (heat-shock), emit at `d_out`.
+// Topology: FLOW: `b%+c%` → (~ INCUBATOR) → `d_out`.
+// Collaborator takeaway: Oil carrier is ignored in this linearized protocol fragment.
+module Transformation (
+    finput b, c,  // FLOW inlet(s)
+    foutput d_out  // FLOW outlet(s)
+);
+    flow mixture;  // intermediate FLOW net(s)
+    assign mixture = b%500 + c%500;  // meter / dropletize (FLOW)
+    #MAP "INCUBATOR" "~"  // tech-map: operator/keyword → component
+    assign d_out = ~mixture;  // mapped unary op on FLOW (e.g. mixer/incubator)
+endmodule

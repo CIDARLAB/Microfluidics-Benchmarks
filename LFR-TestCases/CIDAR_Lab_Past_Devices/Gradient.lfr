@@ -1,0 +1,25 @@
+// gradient
+// Purpose: microfluidic concentration-gradient generator
+// (Dertinger / Chiu / Jeon / Whitesides, Anal. Chem. 2001).
+// Three inlets (p, q, r) produce nine weighted outlet streams.
+// Coefficients use floating literals so fluid×numeric lowering is unambiguous.
+// Topology: combinatorial weighted sum from {p,q,r} → out[0]…out[8] (no storage).
+// Collaborators: out[0] is pure p, out[8] is pure r; middle ports are blends.
+// Preserve floating coefficients exactly — they encode the published network ratios.
+
+module Gradient(
+    finput p, q, r,       // three source concentration inlets (high → mid → low typical)
+    foutput [0:8] out     // nine gradient outlets spanning p-rich to r-rich
+);
+
+    assign out[0] = p;                                              // pure p (leftmost)
+    assign out[1] = (1.0/9.0)*(6.0*p + 3.0*q);                      // mostly p with some q
+    assign out[2] = (1.0/36.0)*(15.0*p + 18.0*q + r);               // p/q-dominant blend + little r
+    assign out[3] = (5.0/84.0)*(4.0*p + 9.0*q + 2.0*r);             // mid-left weighted mix
+    assign out[4] = (1.0/42.0)*(5.0*p + 20.0*q + 9.0*r);            // center blend (q-heavy)
+    assign out[5] = (1.0/126.0)*(6.0*p + 45.0*q + 40.0*r);          // mid-right weighted mix
+    assign out[6] = (1.0/84.0)*(p + 18.0*q + 37.0*r);               // mostly r with some q
+    assign out[7] = (1.0/12.0)*(q + 6.0*r);                         // q + r (no p)
+    assign out[8] = (1.0/3.0)*r;                                    // pure-scaled r (rightmost)
+
+endmodule

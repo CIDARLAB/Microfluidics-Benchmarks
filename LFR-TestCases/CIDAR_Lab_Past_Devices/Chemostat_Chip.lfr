@@ -1,0 +1,132 @@
+// chemostat_chip
+// Purpose: cell-free gene-expression chemostat array
+// (Laohakunakorn / Lavickova / Swank / Laurent / Maerkl).
+// Nine inlets bus-wire through a mixer into a storage feed that fans
+// into eight microreactor chambers and collects to one outlet.
+// Topology: in[0:8] → in_bus → MIXER(~) → feed → reactor[0:7] → out.
+// Collaborators: c1–c4 control banks model valves; unused in linearized body.
+// Companion to nine_to_one_mux / microreactor designs in the same paper family.
+
+module Chemostat_Chip (
+    finput [0:8] in,                              // nine reagent / media inlets
+    foutput out,                                  // collected chemostat product outlet
+    control [0:5] c1, [0:7] c2, [0:8] c3, c4     // valve control banks (declared; unused)
+);
+
+    flow [0:8] in_bus;                        // internal bus mirroring all nine inlets
+    assign in_bus[0:8] = in[0:8];             // wire full inlet bus onto in_bus
+
+    flow [0:8] mixed;                         // post-mixer reagent bus
+    #MAP "MIXER" "~"                          // map unary ~ to a MIXER process
+    assign mixed[0:8] = ~in_bus[0:8];         // mix every bus channel
+
+    storage feed;                             // collapse mixed bus into one feed
+    assign feed = mixed[0:8];                 // merge mixed channels into feed
+
+    storage [0:7] reactor;                    // eight microreactor chambers
+    assign reactor = feed;                    // fan feed into all reactors
+
+    assign out = reactor;                     // collect reactors to the single outlet
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in[0] + in[1] + in[2] + in[3] + in[4] + in[5] + in[6] + in[7] + in[8];
+    distribute@(c1[0]) begin
+        if (c1[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[1]) begin
+        if (c1[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[2]) begin
+        if (c1[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[3]) begin
+        if (c1[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[4]) begin
+        if (c1[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c1[5]) begin
+        if (c1[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[0]) begin
+        if (c2[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[1]) begin
+        if (c2[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[2]) begin
+        if (c2[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[3]) begin
+        if (c2[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[4]) begin
+        if (c2[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[5]) begin
+        if (c2[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[6]) begin
+        if (c2[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c2[7]) begin
+        if (c2[7] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[0]) begin
+        if (c3[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[1]) begin
+        if (c3[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[2]) begin
+        if (c3[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[3]) begin
+        if (c3[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[4]) begin
+        if (c3[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[5]) begin
+        if (c3[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[6]) begin
+        if (c3[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[7]) begin
+        if (c3[7] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c3[8]) begin
+        if (c3[8] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c4) begin
+        if (c4 == 1)
+            out <= __ctrl_emit_src;
+    end
+
+endmodule

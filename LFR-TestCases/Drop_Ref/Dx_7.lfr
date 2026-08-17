@@ -1,0 +1,13 @@
+// dx7 — dual droplet merge, pico inject, and 1:1 split.
+// Purpose: Meter and merge two droplet inlets, inject two pico streams, split equally.
+// Topology: FLOW: `in1%+in2%` → +(pico*) → /2 → `out1`/`out2`.
+// Collaborator takeaway: Pico inject after dual metering, before equal split.
+module Dx_7(
+    finput in1, in2, pico_in1, pico_in2,  // FLOW inlet(s)
+    foutput out1, out2  // FLOW outlet(s)
+);
+    flow merged_droplets, injected_droplets;  // intermediate FLOW net(s)
+    assign merged_droplets = in1%100 + in2%100;  // meter / dropletize (FLOW)
+    assign injected_droplets = (pico_in1 + pico_in2) + merged_droplets;  // FLOW merge / mix
+    assign {out1, out2} = injected_droplets/2;  // equal FLOW split into parts
+endmodule

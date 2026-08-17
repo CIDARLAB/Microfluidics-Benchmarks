@@ -1,0 +1,27 @@
+// genetic_clock_testing_tool
+// Purpose: synchronized quorum genetic-clock chip
+// (Danino / Mondragon-Palomino / Tsimring / Hasty).
+// Media seeds three sized cell traps; trap effluents merge in a shared
+// chamber and drain to both waste outlets on one continuous path.
+// Topology: media → {trap1,trap2,trap3} → chamber → {waste1,waste2}.
+// Collaborators: trap sizes differ in the paper; LFR models them as identical storage.
+// Dual waste outlets share the chamber so FLOW remains one island.
+
+module Genetic_Clock_Testing_Tool (
+    finput media,              // growth / quorum media inlet
+    foutput waste1, waste2     // dual waste drains from the shared chamber
+);
+
+    // Each trap has different dimensions in the paper; modeled as storage.
+    storage trap1, trap2, trap3;   // three cell traps (paper: distinct geometries)
+    assign trap1 = media;          // seed trap1 from media
+    assign trap2 = media;          // seed trap2 from media
+    assign trap3 = media;          // seed trap3 from media
+
+    storage chamber;                               // shared collection / mixing chamber
+    assign chamber = trap1 + trap2 + trap3;        // merge all trap effluents
+
+    assign waste1 = chamber;                       // drain chamber to waste1
+    assign waste2 = chamber;                       // drain chamber to waste2 (same island)
+
+endmodule

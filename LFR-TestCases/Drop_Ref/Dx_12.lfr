@@ -1,0 +1,17 @@
+// dx12 — plasmid digest droplet protocol (Rita Chen).
+// Purpose: Meter plasmids, inject digests, incubate, peel discarded droplets to waste.
+// Topology: FLOW: plasmids% → +digs → ~ → digest−discard → `dig_plasmids`/`waste`.
+// Collaborator takeaway: Digest assay expressed as DropX meter/inject/incubate/sort.
+module Dx_12(
+    finput plasmids, dig1, dig2,  // FLOW inlet(s)
+    foutput dig_plasmids, waste  // FLOW outlet(s)
+);
+    flow enc_plasmids, injected_dig, incubated_plasmids, digest_plasmids, discarded_droplets;  // intermediate FLOW net(s)
+    assign enc_plasmids = plasmids%100;  // meter / dropletize (FLOW)
+    assign injected_dig = enc_plasmids + dig1 + dig2;  // FLOW merge / mix
+    #MAP "MIXER" "~"  // tech-map: operator/keyword → component
+    assign incubated_plasmids = ~injected_dig;  // mapped unary op on FLOW (e.g. mixer/incubator)
+    assign digest_plasmids = incubated_plasmids - discarded_droplets;  // FLOW difference / sort peel
+    assign dig_plasmids = digest_plasmids;  // continuous FLOW assign
+    assign waste = discarded_droplets;  // continuous FLOW assign
+endmodule

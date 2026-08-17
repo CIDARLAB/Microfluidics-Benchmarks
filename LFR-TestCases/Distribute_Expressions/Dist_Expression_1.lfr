@@ -1,0 +1,21 @@
+// dist_expression1 — control-gated pass-through with staging.
+// Purpose: Stage inlet into `temp1`, under `c1` latch into `temp2`, then drive `out` from that gated intermediate.
+// Topology: FLOW: `in` → `temp1` → (CONTROL `c1`) → `temp2` → `out`.
+// Collaborator takeaway: Continuous `assign` for always-on paths; `distribute` only for control-gated latch.
+module Dist_Expression_1(in, out, c1);
+    finput in;  // FLOW inlet(s)
+    foutput out;  // FLOW outlet(s)
+    control c1;  // CONTROL select/gate — does not carry fluid
+    flow temp1;  // intermediate FLOW net(s)
+    flow temp2;  // intermediate FLOW net(s)
+    assign temp1 = in;  // continuous FLOW assign
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c1)
+    begin
+        if(c1 == 1)  // CONTROL predicate for this FLOW arm
+            begin
+                temp2 <= temp1;  // gated FLOW assign in this control arm
+            end
+    end
+    assign out = temp2;  // continuous FLOW assign
+endmodule

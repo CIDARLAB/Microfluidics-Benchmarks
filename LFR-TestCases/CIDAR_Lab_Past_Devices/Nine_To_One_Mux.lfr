@@ -1,0 +1,56 @@
+// nine_to_one_mux
+// Purpose: 9-to-1 reagent multiplexer for the cell-free chemostat
+// (Laohakunakorn / Lavickova / Swank / Laurent / Maerkl).
+// Full bus wiring through a mixer into storage so every inlet PORT
+// stays on one continuous graph with `out`.
+// Topology: in[0:8] → bus → MIXER(~) → mixed → feed storage → out.
+// Collaborators: control[0:5] models mux valves but is unused in this linearized body.
+// Bus-wide unary mix keeps all nine inlets connected before storage collapse.
+
+module Nine_To_One_Mux(
+    finput [0:8] in,      // nine reagent inlets (mux select sources)
+    foutput out,          // single multiplexed / mixed outlet
+    control [0:5] c       // mux valve controls (declared; unused in linearized body)
+);
+
+    flow [0:8] bus;                       // internal bus mirroring all nine inlets
+    assign bus[0:8] = in[0:8];            // wire full inlet bus onto bus
+
+    flow [0:8] mixed;                     // post-mixer bus
+    #MAP "MIXER" "~"                      // map unary ~ operator to a MIXER process
+    assign mixed[0:8] = ~bus[0:8];        // mix every bus channel (unary mix)
+
+    storage feed;                         // collapse mixed bus into one storage feed
+    assign feed = mixed[0:8];             // merge mixed channels into feed
+    assign out = feed;                    // drive single outlet from feed
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in[0] + in[1] + in[2] + in[3] + in[4] + in[5] + in[6] + in[7] + in[8];
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[2]) begin
+        if (c[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[3]) begin
+        if (c[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[4]) begin
+        if (c[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[5]) begin
+        if (c[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+
+endmodule

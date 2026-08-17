@@ -1,0 +1,76 @@
+// microdroplet
+// Purpose: microdroplet compartments for simultaneous gene-expression and
+// enzymatic-activity readout (Shim / Olguin / Whyte / et al.).
+// Oil and aqueous inlets form droplets; storage feeds reservoirs and waste.
+// Topology: oils → oil; aqueous_% → drops; oil+drops+reservoirs → storage → 3 foutputs.
+// Collaborators: `% 30` meters aqueous into droplet generators; control[0:8] unused here.
+// Dual DROPLET GENERATOR maps produce drop1/drop2 before oil merge and storage fan-out.
+
+module Microdroplet (
+    finput oil_inlet1, oil_inlet2, aqueous_inlet_1, aqueous_inlet_2,  // oil + aqueous droplet feeds
+        reservoir_inlet_1, reservoir_inlet_2,                         // reservoir fill inlets
+    foutput reservoir_outlet_1, reservoir_outlet_2, waste_outlet,     // dual reservoirs + waste
+    control [0:8] c                                                   // valve controls (declared; unused)
+);
+
+    flow oil;                                          // combined continuous oil phase
+    assign oil = oil_inlet1 + oil_inlet2;              // merge both oil inlets
+
+    flow drop1, drop2;                                 // two aqueous droplet streams
+    #MAP "NOZZLE DROPLET GENERATOR" "%"                       // map % to droplet generator (channel 1)
+    assign drop1 = aqueous_inlet_1 % 30;               // meter aqueous_1 into droplets (vol 30)
+    #MAP "NOZZLE DROPLET GENERATOR" "%"                       // map % to droplet generator (channel 2)
+    assign drop2 = aqueous_inlet_2 % 30;               // meter aqueous_2 into droplets (vol 30)
+
+    flow droplet_flow;                                 // oil + droplet emulsion stream
+    assign droplet_flow = oil + drop1 + drop2;         // combine oil carrier with both drop streams
+
+    storage storage_area;                              // shared storage / holding region
+    assign storage_area = droplet_flow + reservoir_inlet_1 + reservoir_inlet_2;  // load with emulsion + reservoirs
+
+    assign reservoir_outlet_1 = storage_area;          // route storage to reservoir outlet 1
+    assign reservoir_outlet_2 = storage_area;          // route storage to reservoir outlet 2
+    assign waste_outlet = storage_area;                // route storage to waste
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = oil_inlet1 + oil_inlet2 + aqueous_inlet_1 + aqueous_inlet_2 + reservoir_inlet_1 + reservoir_inlet_2;
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[2]) begin
+        if (c[2] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[3]) begin
+        if (c[3] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[4]) begin
+        if (c[4] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[5]) begin
+        if (c[5] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[6]) begin
+        if (c[6] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[7]) begin
+        if (c[7] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+    distribute@(c[8]) begin
+        if (c[8] == 1)
+            reservoir_outlet_1 <= __ctrl_emit_src;
+    end
+
+endmodule

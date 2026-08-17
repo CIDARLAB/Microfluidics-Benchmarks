@@ -1,0 +1,21 @@
+// dist_expression3 — two-outlet fan from a single inlet (linearized).
+// Purpose: Originally case-distribute under `c1`; continuous assigns keep both outs connected.
+// Topology: FLOW: `in` fans to `out1` and `out2`. CONTROL: `c1` interface-only.
+// Collaborator takeaway: Same connectivity lesson as dist_expression2 with a case-style ancestry.
+module Dist_Expression_3(
+    finput in,  // FLOW inlet(s)
+    foutput out1, out2,  // FLOW outlet(s)
+    control c1  // CONTROL select/gate — does not carry fluid
+);
+    assign out1 = in;  // continuous FLOW assign
+    assign out2 = in;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in;
+    distribute@(c1) begin
+        if (c1 == 1)
+            out1 <= __ctrl_emit_src;
+    end
+
+endmodule

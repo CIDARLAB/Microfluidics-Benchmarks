@@ -1,0 +1,18 @@
+// expression5 — nested four-inlet mix with terminal sieve.
+// Purpose: nest-add `in1`–`in3` with sieved `in4` and emit the combined flow.
+// Topology: in1+(in2+(in3+&in4)) → temp_out → out.
+// Collaborator takeaway: unary `&` can apply to a single leaf inside a nest.
+module Expression_5(
+    finput in1, in2, in3, in4,  // four fluid inlets (in4 is sieved)
+    foutput out                 // nested-mix product outlet
+);
+
+    flow temp_out;  // nested merge result before outlet
+
+    // Merge: nested tree with sieve on innermost in4
+    assign temp_out = in1 + (in2 + (in3 + &in4)) ;
+
+    // Route product to outlet
+    assign out = temp_out;
+
+endmodule

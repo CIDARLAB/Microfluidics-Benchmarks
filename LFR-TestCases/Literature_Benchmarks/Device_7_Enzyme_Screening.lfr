@@ -1,0 +1,104 @@
+// device7_enzyme_screening — gated multi-reagent mix, droplet gen, dual incubate.
+// Purpose: valve each of seven enzyme/reagent inlets into a merge tree, form
+// droplets with oil, then pass through two incubators to a single outlet.
+// Every finput/foutput/control is used; unique stage names avoid double-assign.
+// Topology: distribute gates → mix tree → % droplet → +oil → incubator_1 → incubator_2 → outlet.
+// Collaborators: imports incubator.lfr; both if/else branches pass through (connectivity, not selection).
+// Metering volume 50 on %; dual incubator instances are named uniquely.
+`import "../../Quick_Examples/library/incubator.lfr"
+
+module Device_7_Enzyme_Screening(
+    finput in1, in2, in3, in4, in5, in6, in7, oil_in,  // seven enzyme/reagent inlets + oil
+    foutput outlet,                                      // final incubated product outlet
+    control c1, c2, c3, c4, c5, c6, c7                   // per-inlet gate valves (all used)
+);
+
+    flow gated1, gated2, gated3, gated4, gated5, gated6, gated7;  // gated reagent streams
+    flow mix_a, mix_b, mix_c, aqueous, metered, droplets;         // mix tree + droplet path
+    flow drop_inc1, drop_inc2;                                    // dual incubator outputs
+
+    // Pass-through valves: both branches drive the gated stream so reagents
+    // stay connected regardless of control state (no floating internals).
+    distribute@(c1)                                               // gate inlet 1 with c1
+    begin
+        if (c1 == 1) gated1 <= in1; else gated1 <= in1;           // pass-through (both branches = in1)
+    end
+
+    distribute@(c2)                                               // gate inlet 2 with c2
+    begin
+        if (c2 == 1) gated2 <= in2; else gated2 <= in2;           // pass-through (both branches = in2)
+    end
+
+    distribute@(c3)                                               // gate inlet 3 with c3
+    begin
+        if (c3 == 1) gated3 <= in3; else gated3 <= in3;           // pass-through (both branches = in3)
+    end
+
+    distribute@(c4)                                               // gate inlet 4 with c4
+    begin
+        if (c4 == 1) gated4 <= in4; else gated4 <= in4;           // pass-through (both branches = in4)
+    end
+
+    distribute@(c5)                                               // gate inlet 5 with c5
+    begin
+        if (c5 == 1) gated5 <= in5; else gated5 <= in5;           // pass-through (both branches = in5)
+    end
+
+    distribute@(c6)                                               // gate inlet 6 with c6
+    begin
+        if (c6 == 1) gated6 <= in6; else gated6 <= in6;           // pass-through (both branches = in6)
+    end
+
+    distribute@(c7)                                               // gate inlet 7 with c7
+    begin
+        if (c7 == 1) gated7 <= in7; else gated7 <= in7;           // pass-through (both branches = in7)
+    end
+
+    assign mix_a = gated1 + gated2 + gated3;                      // first mix stage (reagents 1–3)
+    assign mix_b = mix_a + gated4 + gated5;                       // second mix stage (+ reagents 4–5)
+    assign mix_c = mix_b + gated6 + gated7;                       // third mix stage (+ reagents 6–7)
+    assign aqueous = mix_c;                                       // aqueous phase alias after full merge
+
+    #MAP "NOZZLE DROPLET GENERATOR" "%"                                  // map % to droplet generator
+    assign metered = aqueous % 50;                                // meter aqueous into droplets (vol 50)
+    assign droplets = metered + oil_in;                           // combine metered aqueous with oil
+
+    incubator incubator_1(droplets, drop_inc1);                   // first incubation stage
+    incubator incubator_2(drop_inc1, drop_inc2);                  // second incubation stage
+
+    assign outlet = drop_inc2;                                    // drive final outlet from second incubator
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1 + in2 + in3 + in4 + in5 + in6 + in7 + oil_in;
+    distribute@(c1) begin
+        if (c1 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c2) begin
+        if (c2 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c3) begin
+        if (c3 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c4) begin
+        if (c4 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c5) begin
+        if (c5 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c6) begin
+        if (c6 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+    distribute@(c7) begin
+        if (c7 == 1)
+            outlet <= __ctrl_emit_src;
+    end
+
+endmodule

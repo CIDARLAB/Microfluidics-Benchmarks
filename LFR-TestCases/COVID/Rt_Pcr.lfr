@@ -1,0 +1,42 @@
+// rt_pcr — SPE → RT chamber → PCR chamber pipeline.
+// Purpose: pass sample through solid-phase extraction, map into an RT
+//   chamber, then a PCR chamber, and emit the amplified product at `output`.
+// Topology: input → SPE → RTChamber(-) → PCRChamber(~) → output.
+// Collaborator takeaway: unary ops remapped to named chamber components.
+module Rt_Pcr(
+    finput input,    // raw sample inlet
+    foutput output   // amplified product outlet
+);
+
+    flow spe_input;           // feed into SPE stage
+    flow rt_chamber_input;    // feed into RT chamber
+    flow pcr_chamber_input;   // feed into PCR chamber
+
+    flow spe_output;          // SPE stage result
+    flow rt_chamber_output;   // RT chamber result
+    flow pcr_chamber_output;  // PCR chamber result
+
+    // Route sample into SPE
+    assign spe_input = input;
+
+    // SPE passthrough (extraction stage)
+    assign spe_output = spe_input;
+
+    // Feed SPE output into RT chamber
+    assign rt_chamber_input = spe_output;
+
+    #MAP "RTChamber" "-"  // map unary - to RTChamber
+    // Reverse-transcription chamber op
+    assign rt_chamber_output = -rt_chamber_input;
+
+    // Feed RT output into PCR chamber
+    assign pcr_chamber_input = rt_chamber_output;
+
+    #MAP "PCRChamber" "~"  // map unary ~ to PCRChamber
+    // PCR amplification chamber op
+    assign pcr_chamber_output = ~pcr_chamber_input;
+
+    // Route amplified product to outlet
+    assign output = pcr_chamber_output;
+
+endmodule

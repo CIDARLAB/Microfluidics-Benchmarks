@@ -1,0 +1,10 @@
+// single_storage_grid_16 — placeholder single storage grid shell.
+// Purpose: Minimal pass-through so library imports and batch synthesis succeed until a full grid is authored.
+// Topology: Single flow path `in0` → `out0` (no 16-cell storage array yet).
+// Collaborator takeaway: Stub only; replace with real single-storage-grid topology when available.
+module Single_Storage_Grid_16(
+    finput in0,  // FLOW inlet(s)
+    foutput out0  // FLOW outlet(s)
+);
+    assign out0 = in0;  // continuous FLOW assign
+endmodule

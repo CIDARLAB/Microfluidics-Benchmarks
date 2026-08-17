@@ -1,0 +1,61 @@
+// logic04 — eight inlets into a 4-trap logic array (linearized).
+// Purpose: Merge all inlets into cell traps, then YTREE-fan from `in1[0]` to four outlets.
+// Topology: FLOW: lanes `i0..i7` → `cell_traps`; `in1[0]` → (#MAP YTREE) `out[0:3]`. CONTROL ports interface-only.
+// Collaborator takeaway: Controls remain for call-sites; routing is continuous for connectivity.
+module Logic_04(
+    finput [0:7] in1,  // FLOW inlet(s)
+    foutput [0:3] out,  // FLOW outlet(s)
+    control [0:2] c_mux_in,  // CONTROL select/gate — does not carry fluid
+    control [0:4] c_logic_array  // CONTROL select/gate — does not carry fluid
+);
+    storage [0:3] cell_traps;  // STORAGE / chamber node(s)
+    flow i0, i1, i2, i3, i4, i5, i6, i7;  // intermediate FLOW net(s)
+    assign i0 = in1[0];  // continuous FLOW assign
+    assign i1 = in1[1];  // continuous FLOW assign
+    assign i2 = in1[2];  // continuous FLOW assign
+    assign i3 = in1[3];  // continuous FLOW assign
+    assign i4 = in1[4];  // continuous FLOW assign
+    assign i5 = in1[5];  // continuous FLOW assign
+    assign i6 = in1[6];  // continuous FLOW assign
+    assign i7 = in1[7];  // continuous FLOW assign
+    assign cell_traps = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7;  // FLOW merge / mix
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign out[0:3] = in1[0];  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1[0] + in1[1] + in1[2] + in1[3] + in1[4] + in1[5] + in1[6] + in1[7];
+    distribute@(c_mux_in[0]) begin
+        if (c_mux_in[0] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_mux_in[1]) begin
+        if (c_mux_in[1] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_mux_in[2]) begin
+        if (c_mux_in[2] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[0]) begin
+        if (c_logic_array[0] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[1]) begin
+        if (c_logic_array[1] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[2]) begin
+        if (c_logic_array[2] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[3]) begin
+        if (c_logic_array[3] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c_logic_array[4]) begin
+        if (c_logic_array[4] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+
+endmodule

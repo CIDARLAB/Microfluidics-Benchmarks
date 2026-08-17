@@ -1,0 +1,72 @@
+// microreactor
+// Purpose: steady-state cell-free gene-expression microreactor / chemostat
+// (Laohakunakorn / Lavickova / Swank / Laurent / Maerkl).
+// Inlet feeds DNA, protein, and energy storage chambers; their mixture
+// drives the outlet on one continuous assign path.
+// Topology: in → {dna, proteins, energy} storages; mix_all = in+storages → out.
+// Collaborators: control[0:8] and c_start are declared for valving but unused here.
+// Re-including `in` in mix_all keeps the inlet PORT on the continuous graph.
+
+module Microreactor (
+    finput in,                 // shared reagent / media inlet
+    foutput out,               // mixed microreactor product outlet
+    control [0:8] c, c_start   // valve bank + start control (declared; unused in body)
+);
+
+    storage dna, proteins, energy;   // DNA template, protein, and energy chambers
+
+    assign dna = in;                 // load DNA chamber from inlet
+    assign proteins = in;            // load protein chamber from inlet
+    assign energy = in;              // load energy chamber from inlet
+
+    flow mix_all;                                      // combined reactor stream
+    assign mix_all = in + dna + proteins + energy;     // merge inlet + all three chambers
+
+    assign out = mix_all;                              // drive outlet from the mix
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in;
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[2]) begin
+        if (c[2] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[3]) begin
+        if (c[3] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[4]) begin
+        if (c[4] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[5]) begin
+        if (c[5] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[6]) begin
+        if (c[6] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[7]) begin
+        if (c[7] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c[8]) begin
+        if (c[8] == 1)
+            out <= __ctrl_emit_src;
+    end
+    distribute@(c_start) begin
+        if (c_start == 1)
+            out <= __ctrl_emit_src;
+    end
+
+endmodule

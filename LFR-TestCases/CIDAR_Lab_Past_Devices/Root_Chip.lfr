@@ -1,0 +1,99 @@
+// rootchip
+// Purpose: RootChip for plant-science perfusion
+// (Grossmann / Guo / Ehrhardt / Frommer / Sit / Quake / Meier).
+// Three inlets bus-merge into storage, then fan to eight plant outlets.
+// Topology: flow_in[0:2] → in_bus → merge_store → plant_store[0:7] → plant[0:7].
+// Collaborators: control[0:16] models valve bank but is unused in this linearized body.
+// Storage fan-out keeps all eight plant ports on one connected island.
+
+module Root_Chip(
+    finput [0:2] flow_in,     // three perfusion / media inlets
+    foutput [0:7] plant,      // eight plant-root culture outlets
+    control [0:16] c          // valve control bank (declared; unused in linearized body)
+);
+
+    flow [0:2] in_bus;                        // internal bus mirroring the three inlets
+    assign in_bus[0:2] = flow_in[0:2];        // wire full inlet bus onto in_bus
+
+    storage merge_store;                      // shared merge / holding storage
+    assign merge_store = in_bus[0:2];         // collapse bus into one storage node
+
+    storage [0:7] plant_store;                // per-plant storage bank (8 chambers)
+    assign plant_store = merge_store;         // fan merge_store into all plant chambers
+
+    assign plant[0:7] = plant_store[0:7];     // expose plant chambers on the eight outlets
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = flow_in[0] + flow_in[1] + flow_in[2];
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[2]) begin
+        if (c[2] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[3]) begin
+        if (c[3] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[4]) begin
+        if (c[4] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[5]) begin
+        if (c[5] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[6]) begin
+        if (c[6] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[7]) begin
+        if (c[7] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[8]) begin
+        if (c[8] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[9]) begin
+        if (c[9] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[10]) begin
+        if (c[10] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[11]) begin
+        if (c[11] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[12]) begin
+        if (c[12] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[13]) begin
+        if (c[13] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[14]) begin
+        if (c[14] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[15]) begin
+        if (c[15] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[16]) begin
+        if (c[16] == 1)
+            plant[0] <= __ctrl_emit_src;
+    end
+
+endmodule

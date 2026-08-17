@@ -1,0 +1,63 @@
+// expression14 — N-wide water-in-oil droplet metering to a matching outlet bus.
+// Purpose: meter water lane 0, bridge all water/oil lanes on storage, and
+//   YTREE-fan from in[0] to out[0:7] so the eight lanes form one connected
+//   graph instead of parallel islands.
+// Topology: in/oil lanes → bridge; w0 % 50 → m0; in[0] ─YTREE→ out[0:7].
+// Collaborator takeaway: storage bridge + YTREE keeps multi-lane droplet graphs connected.
+module Expression_14(
+    finput [0:7] in, [0:7] oil1, [0:7] oil2,  // water + two oil buses
+    foutput [0:7] out                         // 8-wide droplet outlet bus
+);
+
+    flow w0, w1, w2, w3, w4, w5, w6, w7, m0;           // water lanes + metered lane 0
+    flow o10, o11, o12, o13, o14, o15, o16, o17;       // oil1 lane intermediates
+    flow o20, o21, o22, o23, o24, o25, o26, o27;       // oil2 lane intermediates
+    storage bridge;                                    // connectivity bridge for all lanes
+
+    // Route each water lane into a scalar flow
+    assign w0 = in[0];
+    assign w1 = in[1];
+    assign w2 = in[2];
+    assign w3 = in[3];
+    assign w4 = in[4];
+    assign w5 = in[5];
+    assign w6 = in[6];
+    assign w7 = in[7];
+
+    // Route each oil1 lane into a scalar flow
+    assign o10 = oil1[0];
+    assign o11 = oil1[1];
+    assign o12 = oil1[2];
+    assign o13 = oil1[3];
+    assign o14 = oil1[4];
+    assign o15 = oil1[5];
+    assign o16 = oil1[6];
+    assign o17 = oil1[7];
+
+    // Route each oil2 lane into a scalar flow
+    assign o20 = oil2[0];
+    assign o21 = oil2[1];
+    assign o22 = oil2[2];
+    assign o23 = oil2[3];
+    assign o24 = oil2[4];
+    assign o25 = oil2[5];
+    assign o26 = oil2[6];
+    assign o27 = oil2[7];
+
+    #MAP "NOZZLE DROPLET GENERATOR" "%"  // map % to DROPLET GENERATOR
+    // Meter: generate droplets from water lane 0 at volume 50
+    assign m0 = w0 % 50;
+
+    // Merge: bridge metered lane + remaining water/oil lanes (one island)
+    assign bridge = m0 + w1 + w2 + w3 + w4 + w5 + w6 + w7
+                  + o10 + o11 + o12 + o13 + o14 + o15 + o16 + o17
+                  + o20 + o21 + o22 + o23 + o24 + o25 + o26 + o27;
+
+    // Route bridge onto outlet lane 0
+    assign out[0] = bridge;
+
+    #MAP "YTREE" "assign"  // map bus assign to YTREE fan-out
+    // Fan-out: distribute in[0] across all 8 outlet lanes
+    assign out[0:7] = in[0];
+
+endmodule

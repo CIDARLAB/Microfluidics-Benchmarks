@@ -1,0 +1,26 @@
+// part1_rna — COVID RNA prep fragment (part 1 of a multi-part assay).
+// Purpose: merge five reagent inlets into one product outlet.
+// Topology: (p1+p2+p3) and (p4+p5) mix in parallel branches, then merge
+//   to `final` and drive `out`. Every declared IO is used.
+// Collaborator takeaway: two-branch merge trees; use `assign` (not bare `=`).
+module Part_1_Rna_Prep(
+    finput p1, p2, p3, p4, p5,  // five RNA-prep reagent inlets
+    foutput out                 // combined product outlet
+);
+
+    flow leftside;   // left triad mix result
+    flow rightside;  // right pair mix result
+    flow final;      // merged product before outlet
+
+    // Merge: left reagent triad
+    assign leftside = p1 + p2 + p3;
+
+    // Merge: right reagent pair
+    assign rightside = p4 + p5;
+
+    // Merge: join both branches
+    assign final = leftside + rightside;
+    // Route product to outlet
+    assign out = final;
+
+endmodule

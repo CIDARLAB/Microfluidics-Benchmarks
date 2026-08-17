@@ -1,0 +1,12 @@
+// declarations — parser smoke test for `number` literals / bases.
+// Purpose: Exercise decimal, sized binary, and float number decls; keep a trivial fluid path.
+// Topology: FLOW: `in` → `out`. Numbers `aa`..`e` are parser coverage only (not on the fluid graph).
+// Collaborator takeaway: Always keep IO connected so parser tests still yield a valid netlist.
+module Number_Declarations(
+    finput in,  // FLOW inlet(s)
+    foutput out  // FLOW outlet(s)
+);
+    number aa = 1, bb = 2, cc = 3;  // NUMBER decls (parser coverage)
+    number a = 1, b = 2, c = 3, d = 3'b100, e = 5.5;  // NUMBER decls (parser coverage)
+    assign out = in;  // continuous FLOW assign
+endmodule

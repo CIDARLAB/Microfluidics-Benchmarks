@@ -1,0 +1,19 @@
+// expression4 — nested four-inlet mixing tree.
+// Purpose: left-associated nested adds of four inlets into one intermediate,
+//   then to `out`.
+// Topology: in1+(in2+(in3+in4)) → temp_out → out.
+// Collaborator takeaway: nested `+` builds a right-deep merge tree.
+module Expression_4(
+    finput in1, in2, in3, in4,  // four fluid inlets
+    foutput out                 // nested-mix product outlet
+);
+
+    flow temp_out;  // nested merge result before outlet
+
+    // Merge: right-deep nested four-inlet tree
+    assign temp_out = in1 + (in2 + (in3 + in4)) ;
+
+    // Route product to outlet
+    assign out = temp_out;
+
+endmodule

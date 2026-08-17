@@ -1,0 +1,8 @@
+// dropx_test1 — constrained single-inlet metering test.
+// Purpose: Meter `in1` with a generation-rate constraint and assign droplets to `out1`.
+// Topology: FLOW: `in1` → (% constrained) `out1`.
+// Collaborator takeaway: Minimal #CONSTRAIN + `%` smoke test.
+module Dropx_Test_1(finput in1, foutput out1);  // FLOW IO ports
+    #CONSTRAIN "%" generation_rate = 400 hz  // constraint on mapped operator (rate/size/etc.)
+    assign out1 = in1%0.1;  // meter / dropletize (FLOW)
+endmodule

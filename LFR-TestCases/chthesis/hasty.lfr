@@ -1,9 +1,0 @@
-// hasty — Hasty-style multi cell-trap bus.
-// Purpose: Broadcast a single inlet into four cell-trap storages and merge back to one outlet.
-// Topology: FLOW: `in1` → `cell_traps[0:3]` → `out1`.
-// Collaborator takeaway: Storage-bus fan-in/out without control routing.
-module hasty(finput in1, foutput out1);  // FLOW IO ports
-    storage [0:3] cell_traps;  // STORAGE / chamber node(s)
-    assign cell_traps = in1;  // continuous FLOW assign
-    assign out1 = cell_traps;  // continuous FLOW assign
-endmodule

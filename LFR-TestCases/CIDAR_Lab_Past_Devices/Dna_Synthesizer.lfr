@@ -1,0 +1,99 @@
+// dnasynthesizer
+// Purpose: multi-reagent DNA synthesizer / reactor array.
+// Eleven reagent inlets bus-wire through a mixer into a storage feed
+// that fans into 16 reactors and 16 outlets.
+// Topology: in[0:10] → in_bus → MIXER(~) → feed → reactor[0:15] → out[0:15].
+// Collaborators: control[0:15] models per-reactor valves but is unused in linearized body.
+// Bus-wide mix then storage collapse keeps all reagent PORTs on one island.
+
+module Dna_Synthesizer(
+    finput[0:10] in,          // eleven synthesis reagent inlets
+    foutput [0:15] out,       // sixteen reactor product outlets
+    control [0:15] c          // per-reactor valve controls (declared; unused in body)
+);
+
+    flow [0:10] in_bus;                       // internal bus mirroring all reagent inlets
+    assign in_bus[0:10] = in[0:10];           // wire full inlet bus onto in_bus
+
+    flow [0:10] mixed;                        // post-mixer reagent bus
+    #MAP "MIXER" "~"                          // map unary ~ to a MIXER process
+    assign mixed[0:10] = ~in_bus[0:10];       // mix every bus channel
+
+    storage feed;                             // collapse mixed bus into one feed
+    assign feed = mixed[0:10];                // merge mixed channels into feed
+
+    storage [0:15] reactor;                   // sixteen synthesis reactor chambers
+    assign reactor = feed;                    // fan feed into all reactors
+
+    assign out[0:15] = reactor[0:15];         // expose each reactor on its outlet
+
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in[0] + in[1] + in[2] + in[3] + in[4] + in[5] + in[6] + in[7] + in[8] + in[9] + in[10];
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[2]) begin
+        if (c[2] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[3]) begin
+        if (c[3] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[4]) begin
+        if (c[4] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[5]) begin
+        if (c[5] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[6]) begin
+        if (c[6] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[7]) begin
+        if (c[7] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[8]) begin
+        if (c[8] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[9]) begin
+        if (c[9] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[10]) begin
+        if (c[10] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[11]) begin
+        if (c[11] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[12]) begin
+        if (c[12] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[13]) begin
+        if (c[13] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[14]) begin
+        if (c[14] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+    distribute@(c[15]) begin
+        if (c[15] == 1)
+            out[0] <= __ctrl_emit_src;
+    end
+
+endmodule

@@ -1,0 +1,10 @@
+// tree_fanout_mapping — YTREE fan-out to eight outlets.
+// Purpose: Map a single inlet through a YTREE assign onto an 8-wide outlet bus.
+// Topology: FLOW: `i1` → (#MAP YTREE) `out[0:7]`.
+// Collaborator takeaway: Fan-out counterpart of tree_fanin_mapping.
+module Tree_Fanout_Mapping(i1, out [0:7]);
+    finput i1;  // FLOW inlet(s)
+    foutput [0:7] out;  // FLOW outlet(s)
+    #MAP "YTREE" "assign"  // tech-map: operator/keyword → component
+    assign out[0:7] = i1;  // continuous FLOW assign
+endmodule

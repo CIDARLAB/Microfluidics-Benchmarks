@@ -1,0 +1,82 @@
+// mux_64_out — 1-to-64 demultiplexer (library primitive).
+// Purpose: Under 6-bit control `c_select`, steer a single flow inlet onto one of sixty-four outlet lanes.
+// Topology: FLOW: `input` → selected `outputs[i]`. CONTROL: `c_select` chooses the active lane inside `distribute`/`case`.
+// Collaborator takeaway: Control picks the lane; only flow ports carry fluid. Inactive outlets are not driven in that arm.
+module Mux_64_Out(
+    finput input,  // FLOW inlet(s)
+    foutput [0:63] outputs,  // FLOW outlet(s)
+    control [0:5] c_select  // CONTROL select/gate — does not carry fluid
+);
+    // DISTRIBUTE: control-gated flow routing (control selects arms; flow carries fluid)
+    distribute@(c_select)
+    begin
+        case(c_select)  // CONTROL value selects which FLOW arm runs
+            6'b000000 : outputs[0] <= input;  // FLOW edge enabled in this control arm
+            6'b000001 : outputs[1] <= input;  // FLOW edge enabled in this control arm
+            6'b000010 : outputs[2] <= input;  // FLOW edge enabled in this control arm
+            6'b000011 : outputs[3] <= input;  // FLOW edge enabled in this control arm
+            6'b000100 : outputs[4] <= input;  // FLOW edge enabled in this control arm
+            6'b000101 : outputs[5] <= input;  // FLOW edge enabled in this control arm
+            6'b000110 : outputs[6] <= input;  // FLOW edge enabled in this control arm
+            6'b000111 : outputs[7] <= input;  // FLOW edge enabled in this control arm
+            6'b001000 : outputs[8] <= input;  // FLOW edge enabled in this control arm
+            6'b001001 : outputs[9] <= input;  // FLOW edge enabled in this control arm
+            6'b001010 : outputs[10] <= input;  // FLOW edge enabled in this control arm
+            6'b001011 : outputs[11] <= input;  // FLOW edge enabled in this control arm
+            6'b001100 : outputs[12] <= input;  // FLOW edge enabled in this control arm
+            6'b001101 : outputs[13] <= input;  // FLOW edge enabled in this control arm
+            6'b001110 : outputs[14] <= input;  // FLOW edge enabled in this control arm
+            6'b001111 : outputs[15] <= input;  // FLOW edge enabled in this control arm
+            6'b010000 : outputs[16] <= input;  // FLOW edge enabled in this control arm
+            6'b010001 : outputs[17] <= input;  // FLOW edge enabled in this control arm
+            6'b010010 : outputs[18] <= input;  // FLOW edge enabled in this control arm
+            6'b010011 : outputs[19] <= input;  // FLOW edge enabled in this control arm
+            6'b010100 : outputs[20] <= input;  // FLOW edge enabled in this control arm
+            6'b010101 : outputs[21] <= input;  // FLOW edge enabled in this control arm
+            6'b010110 : outputs[22] <= input;  // FLOW edge enabled in this control arm
+            6'b010111 : outputs[23] <= input;  // FLOW edge enabled in this control arm
+            6'b011000 : outputs[24] <= input;  // FLOW edge enabled in this control arm
+            6'b011001 : outputs[25] <= input;  // FLOW edge enabled in this control arm
+            6'b011010 : outputs[26] <= input;  // FLOW edge enabled in this control arm
+            6'b011011 : outputs[27] <= input;  // FLOW edge enabled in this control arm
+            6'b011100 : outputs[28] <= input;  // FLOW edge enabled in this control arm
+            6'b011101 : outputs[29] <= input;  // FLOW edge enabled in this control arm
+            6'b011110 : outputs[30] <= input;  // FLOW edge enabled in this control arm
+            6'b011111 : outputs[31] <= input;  // FLOW edge enabled in this control arm
+            6'b100000 : outputs[32] <= input;  // FLOW edge enabled in this control arm
+            6'b100001 : outputs[33] <= input;  // FLOW edge enabled in this control arm
+            6'b100010 : outputs[34] <= input;  // FLOW edge enabled in this control arm
+            6'b100011 : outputs[35] <= input;  // FLOW edge enabled in this control arm
+            6'b100100 : outputs[36] <= input;  // FLOW edge enabled in this control arm
+            6'b100101 : outputs[37] <= input;  // FLOW edge enabled in this control arm
+            6'b100110 : outputs[38] <= input;  // FLOW edge enabled in this control arm
+            6'b100111 : outputs[39] <= input;  // FLOW edge enabled in this control arm
+            6'b101000 : outputs[40] <= input;  // FLOW edge enabled in this control arm
+            6'b101001 : outputs[41] <= input;  // FLOW edge enabled in this control arm
+            6'b101010 : outputs[42] <= input;  // FLOW edge enabled in this control arm
+            6'b101011 : outputs[43] <= input;  // FLOW edge enabled in this control arm
+            6'b101100 : outputs[44] <= input;  // FLOW edge enabled in this control arm
+            6'b101101 : outputs[45] <= input;  // FLOW edge enabled in this control arm
+            6'b101110 : outputs[46] <= input;  // FLOW edge enabled in this control arm
+            6'b101111 : outputs[47] <= input;  // FLOW edge enabled in this control arm
+            6'b110000 : outputs[48] <= input;  // FLOW edge enabled in this control arm
+            6'b110001 : outputs[49] <= input;  // FLOW edge enabled in this control arm
+            6'b110010 : outputs[50] <= input;  // FLOW edge enabled in this control arm
+            6'b110011 : outputs[51] <= input;  // FLOW edge enabled in this control arm
+            6'b110100 : outputs[52] <= input;  // FLOW edge enabled in this control arm
+            6'b110101 : outputs[53] <= input;  // FLOW edge enabled in this control arm
+            6'b110110 : outputs[54] <= input;  // FLOW edge enabled in this control arm
+            6'b110111 : outputs[55] <= input;  // FLOW edge enabled in this control arm
+            6'b111000 : outputs[56] <= input;  // FLOW edge enabled in this control arm
+            6'b111001 : outputs[57] <= input;  // FLOW edge enabled in this control arm
+            6'b111010 : outputs[58] <= input;  // FLOW edge enabled in this control arm
+            6'b111011 : outputs[59] <= input;  // FLOW edge enabled in this control arm
+            6'b111100 : outputs[60] <= input;  // FLOW edge enabled in this control arm
+            6'b111101 : outputs[61] <= input;  // FLOW edge enabled in this control arm
+            6'b111110 : outputs[62] <= input;  // FLOW edge enabled in this control arm
+            6'b111111 : outputs[63] <= input;  // FLOW edge enabled in this control arm
+        endcase
+    end
+
+
+endmodule

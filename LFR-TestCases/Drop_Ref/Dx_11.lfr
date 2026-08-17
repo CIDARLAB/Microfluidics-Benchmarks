@@ -1,0 +1,18 @@
+// dx11 — inject, dual incubate/sort cascade (Eric South).
+// Purpose: Meter+inject, MIXER-sort with waste1, reinject `in3`, MIXER-sort with waste2 to winners.
+// Topology: FLOW: inject → ~ −waste1 → +in3 → ~ −waste2 → `final_winners`.
+// Collaborator takeaway: Two-stage winner selection with intermediate reinjection.
+module Dx_11(
+    finput in1, in2, in3,  // FLOW inlet(s)
+    foutput waste1, waste2, final_winners  // FLOW outlet(s)
+);
+    flow injected_droplets;  // intermediate FLOW net(s)
+    assign injected_droplets = in1 % 100  + in2;  // meter / dropletize (FLOW)
+    flow sort_candidates1, sort_candidates2, temp_winners;  // intermediate FLOW net(s)
+    #MAP "MIXER" "~"  // tech-map: operator/keyword → component
+    assign sort_candidates1 = ~(injected_droplets);  // mapped unary op on FLOW (e.g. mixer/incubator)
+    assign temp_winners = sort_candidates1 - waste1;  // FLOW difference / sort peel
+    #MAP "MIXER" "~"  // tech-map: operator/keyword → component
+    assign sort_candidates2 = ~(in3 + temp_winners);  // mapped unary op on FLOW (e.g. mixer/incubator)
+    assign final_winners = sort_candidates2 - waste2;  // FLOW difference / sort peel
+endmodule

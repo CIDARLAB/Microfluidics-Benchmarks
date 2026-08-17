@@ -1,0 +1,31 @@
+// device1_sc_rna_seq — single-cell RNA-seq literature benchmark.
+// Purpose: duplicate/split sequencing inputs, merge cell streams into a
+// droplet feed, hold in a reaction chamber, and branch to two outlets.
+// Topology: p1→{ma1,ma2}, p2→ma3, p3→ma4; ma3+ma4→merged_cells; +ma1+ma2→droplet → chamber → {p4,p5}.
+// Collaborators: p1 is duplicated into two preprocessing streams (ma1/ma2) for barcode/reagent path.
+// Linearized droplet path (no MAP/%) keeps reaction_chamber on one connected island.
+
+module Device_1_Sc_Rna_Seq(
+    finput p1, p2, p3,   // sequencing reagents / cell inputs (paper ports p1–p3)
+    foutput p4, p5       // dual reaction-chamber collection outlets
+);
+
+    flow ma1, ma2, ma3, ma4;                              // preprocessing / split streams
+    flow merged_cells, droplet_feed, droplet_stream;      // cell merge + droplet path
+    storage reaction_chamber;                             // shared reaction / holding chamber
+
+    // Split the sequencing-related inputs into dedicated preprocessing streams.
+    assign ma1 = p1;                                      // first copy of p1 (reagent path A)
+    assign ma2 = p1;                                      // second copy of p1 (reagent path B)
+    assign ma3 = p2;                                      // cell / sample stream from p2
+    assign ma4 = p3;                                      // cell / sample stream from p3
+
+    assign merged_cells = ma3 + ma4;                      // merge the two cell streams
+    assign droplet_feed = merged_cells + ma1 + ma2;       // combine cells with duplicated p1 paths
+    assign droplet_stream = droplet_feed;                 // pass-through droplet stream (linearized)
+
+    assign reaction_chamber = droplet_stream;             // load reaction chamber from droplet stream
+    assign p5 = reaction_chamber;                         // route chamber to outlet p5
+    assign p4 = reaction_chamber;                         // route chamber to outlet p4
+
+endmodule

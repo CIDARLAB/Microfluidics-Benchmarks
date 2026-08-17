@@ -1,0 +1,25 @@
+// grad_cells — four-step concentration gradient into cell traps.
+// Purpose: Blend both inlets, broadcast into four cell traps, merge traps to `out1`.
+// Topology: FLOW: `in1[0],in1[1]` → mix → `celltraps[0:3]` → `out1`. CONTROL: `c` interface-only (linearized).
+// Collaborator takeaway: Linearized gradient+traps; coefficient mixes can drop ports in this compiler.
+module Grad_Cells(finput [0:1] in1, foutput out1, control [0:1] c);  // FLOW IO + CONTROL ports
+    flow in0, in1s;  // intermediate FLOW net(s)
+    storage [0:3] celltraps;  // STORAGE / chamber node(s)
+    assign in0 = in1[0];  // continuous FLOW assign
+    assign in1s = in1[1];  // continuous FLOW assign
+    assign celltraps = in0 + in1s;  // FLOW merge / mix
+    assign out1 = celltraps;  // continuous FLOW assign
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = in1[0] + in1[1];
+    distribute@(c[0]) begin
+        if (c[0] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+    distribute@(c[1]) begin
+        if (c[1] == 1)
+            out1 <= __ctrl_emit_src;
+    end
+
+endmodule

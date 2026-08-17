@@ -1,0 +1,86 @@
+// issue10 — five inlets merged to three outlets (GitHub #10).
+// Purpose: Every inlet appears in every outlet expression so the graph is one component.
+// Topology: FLOW: `a+b+c+d+e` → `x`,`y`,`z`. CONTROL `valve` interface-only.
+// Collaborator takeaway: Long `+` chains keep all ports on one island.
+module Issue_10(
+    finput a, b, c, d, e,  // FLOW inlet(s)
+    foutput x, y, z,  // FLOW outlet(s)
+    control [0:16] valve  // CONTROL select/gate — does not carry fluid
+);
+    assign x = a + b + c + d + e;  // FLOW merge / mix
+    assign y = a + b + c + d + e;  // FLOW merge / mix
+    assign z = a + b + c + d + e;  // FLOW merge / mix
+
+    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow __ctrl_emit_src;
+    assign __ctrl_emit_src = a + b + c + d + e;
+    distribute@(valve[0]) begin
+        if (valve[0] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[1]) begin
+        if (valve[1] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[2]) begin
+        if (valve[2] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[3]) begin
+        if (valve[3] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[4]) begin
+        if (valve[4] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[5]) begin
+        if (valve[5] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[6]) begin
+        if (valve[6] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[7]) begin
+        if (valve[7] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[8]) begin
+        if (valve[8] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[9]) begin
+        if (valve[9] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[10]) begin
+        if (valve[10] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[11]) begin
+        if (valve[11] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[12]) begin
+        if (valve[12] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[13]) begin
+        if (valve[13] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[14]) begin
+        if (valve[14] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[15]) begin
+        if (valve[15] == 1)
+            x <= __ctrl_emit_src;
+    end
+    distribute@(valve[16]) begin
+        if (valve[16] == 1)
+            x <= __ctrl_emit_src;
+    end
+
+endmodule

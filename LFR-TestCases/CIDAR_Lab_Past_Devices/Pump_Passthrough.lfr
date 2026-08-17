@@ -1,0 +1,12 @@
+// pumpstat — trivial pump / pass-through parser test.
+// Purpose: Assign inlet through intermediate `pump1` flow to outlet.
+// Topology: FLOW: `in_1` → `pump1` → `out_1`.
+// Collaborator takeaway: Minimal declaration/assign coverage for the parser suite.
+module Pump_Passthrough(
+    finput in_1,  // FLOW inlet(s)
+    foutput out_1  // FLOW outlet(s)
+);
+    flow pump1;  // intermediate FLOW net(s)
+    assign pump1 = in_1;  // continuous FLOW assign
+    assign out_1 = pump1;  // continuous FLOW assign
+endmodule

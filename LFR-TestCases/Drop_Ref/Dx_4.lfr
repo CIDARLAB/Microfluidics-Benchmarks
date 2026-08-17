@@ -1,0 +1,19 @@
+// dx4 — pico-mix injection with dual keep/waste sort.
+// Purpose: Mix pico inlets, inject into metered droplets, cascade keep/waste sorts onto four outlets.
+// Topology: FLOW: pico mix + `in1`% → injected → cascaded `-` sorts → keep/waste outs.
+// Collaborator takeaway: Sort uses subtraction against waste temps/outlets.
+module Dx_4(
+    finput in1, pico_in1, pico_in2, pico_in3, pico_in4,  // FLOW inlet(s)
+    foutput sort_keep1, sort_keep2, sort_waste1, sort_waste2  // FLOW outlet(s)
+);
+    flow pico_mix;  // intermediate FLOW net(s)
+    assign pico_mix = pico_in1 + pico_in2 + pico_in3 + pico_in3 + pico_in4;  // FLOW merge / mix
+    flow droplets;  // intermediate FLOW net(s)
+    assign droplets = in1%100;  // meter / dropletize (FLOW)
+    flow injected_droplets;  // intermediate FLOW net(s)
+    assign injected_droplets = droplets + pico_mix;  // FLOW merge / mix
+    flow sort_keep_temp, sort_waste_temp;  // intermediate FLOW net(s)
+    assign sort_keep_temp = injected_droplets - sort_waste_temp;  // FLOW difference / sort peel
+    assign sort_keep1 = sort_keep_temp - sort_waste1;  // FLOW difference / sort peel
+    assign sort_keep2 = sort_waste_temp - sort_waste2;  // FLOW difference / sort peel
+endmodule

@@ -1,0 +1,13 @@
+// dropletgenerator3 — dual water-in-oil generators (one island).
+// Purpose: Share all oil/water inlets across both outlet expressions so both generators stay connected.
+// Topology: FLOW: each `dropletout*` includes both waters + all oils (shared island).
+// Collaborator takeaway: Cross-include inlets when two nozzles must remain one connected graph.
+module Droplet_Generator_3(
+    finput oilin1, oilin2, oilin3, oilin4, waterin1, waterin2,  // FLOW inlet(s)
+    foutput dropletout1, dropletout2  // FLOW outlet(s)
+);
+    #MAP "DROPLET GENERATOR" "%"  // tech-map: operator/keyword → component
+    #CONSTRAIN "%" droplet_rate = 5 hz  // constraint on mapped operator (rate/size/etc.)
+    assign dropletout1 = waterin1 % 100 + oilin1 + oilin2 + oilin3 + oilin4 + waterin2;  // meter / dropletize (FLOW)
+    assign dropletout2 = waterin2 % 50 + oilin1 + oilin2 + oilin3 + oilin4 + waterin1;  // meter / dropletize (FLOW)
+endmodule
