@@ -41,6 +41,7 @@ Rules that must be obeyed for imports to resolve:
 
 | File                       | Module               | Role                                            | Primitive mapping                   |
 |----------------------------|----------------------|-------------------------------------------------|-------------------------------------|
+| `DIYcomponent.lfr`         | `DIYcomponent`       | User black box (size + keepout, four sides)     | `DIYCOMPONENT` via `~`              |
 | `two_in_mixer.lfr`         | `two_in_mixer`       | Mix two input streams                           | `MIXER` via `~`                     |
 | `three_in_mixer.lfr`       | `three_in_mixer`     | Mix three input streams                         | `MIXER` via `~`                     |
 | `incubator.lfr`            | `incubator`          | Hold a stream for a reaction / incubation       | `INCUBATOR` via `&`                 |
@@ -48,8 +49,11 @@ Rules that must be obeyed for imports to resolve:
 
 ## Example compositions
 
-The top-level examples under `Quick_Examples/` demonstrate how to compose
-these blocks:
+- `test_DIY_fork.lfr` / `test_DIY_crossing.lfr` / `diy_with_mixer_demo.lfr`
+  — `DIYcomponent` black box. Instance parameters (µm): `length`, `width`,
+  `height`, and `componentSpacing` (keepout halo, **default 1000**). Override
+  with e.g. `#(length=10000, width=8000, height=2000, componentSpacing=3000)`.
+  See `library/DIYcomponent.lfr`.
 
 - `import_mixer_and_incubator.lfr` — premix + incubate, smallest example.
 - `import_parallel_premix.lfr`     — two parallel premix lanes merged into a

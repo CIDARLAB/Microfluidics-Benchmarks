@@ -61,7 +61,7 @@ Small LFR/MINT demos for one-off runs. Neptune `run_all_Quick_Examples.sh` compi
 | `flow_only_demo.lfr` | Flow layer only |
 | `flow_and_control_demo.lfr` / `.mint` | Flow + control (default `testLFR.sh` / `testMINT.sh` input) |
 | `import_mixer_and_incubator.lfr`, `import_parallel_premix.lfr`, `import_droplet_reaction.lfr` | Compose `library/` modules via `` `import "library/..." `` |
-| `mixer_3to1.lfr`, `diy_with_mixer_demo.lfr`, `test_device.lfr`, `test_DIY_fork.lfr`, `test_DIY_crossing.lfr` | Mixer / DIY demos |
+| `mixer_3to1.lfr`, `diy_with_mixer_demo.lfr`, `test_device_MUX4to1.lfr`, `test_DIY_fork.lfr`, `test_DIY_crossing.lfr` | Mixer / DIY / 4-to-1 MUX demos. DIY keepout: `componentSpacing`, default **1000** µm (`library/DIYcomponent.lfr`) |
 | `library/` | Reusable LFR blocks (`two_in_mixer`, `three_in_mixer`, `incubator`, `droplet_generator`) — `--pre-load`, not a standalone case. See `library/README.md` |
 | `user_components_demo/` | `--component-library` black-box JSON demo. See `user_components_demo/README.md` |
 | `prompt_test/` | LLM prompt experiments (not part of the batch suite) |

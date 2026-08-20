@@ -1,7 +1,0 @@
-I want to have a device called ''import_mixer_and_incubator'' with two fluid inputs named reagent_a and reagent_b, and one fluid output named outlet. Build this device by importing and instantiating reusable library modules only — do not redefine those modules or invent their internal logic.
-
-Import these library modules (use these exact module names and port names):
-- two_in_mixer from "library/two_in_mixer.lfr": fluid inputs in_a, in_b; fluid output out_1.
-- incubator from "library/incubator.lfr": fluid input in_1; fluid output out_1.
-
-Wiring: connect reagent_a to two_in_mixer.in_a and reagent_b to two_in_mixer.in_b; take two_in_mixer.out_1 as a mixed intermediate flow; connect that mixed flow to incubator.in_1; connect incubator.out_1 to outlet. Write LFR code for this device.

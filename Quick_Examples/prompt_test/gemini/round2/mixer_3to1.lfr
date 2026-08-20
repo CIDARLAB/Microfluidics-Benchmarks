@@ -1,9 +1,0 @@
-module mixer_3to1(
-    finput in1, in2, in3,
-    foutput out
-);
-flow mix1;
-
-assign mix1 = in1 + in2;
-assign out = mix1 + in3;
-endmodule

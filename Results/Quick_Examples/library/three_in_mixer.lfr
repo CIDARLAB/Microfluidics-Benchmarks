@@ -1,9 +1,0 @@
-// Reusable building block: 3-inlet MIXER module.
-// Folds three inlets into one mixed flow with binary + (MIX).
-// Do not wrap with unary ~ / #MAP — that would add an extra MIXER stage.
-module three_in_mixer(
-    finput in_a, in_b, in_c,
-    foutput out_1
-);
-    assign out_1 = in_a + in_b + in_c;
-endmodule

@@ -1,7 +1,0 @@
-I want to have a device called ''import_parallel_premix'' with five fluid inputs named lane_a_r1, lane_a_r2, lane_b_r1, lane_b_r2, and carrier, and one fluid output named outlet. Build this device by importing and instantiating reusable library modules only — do not redefine those modules or invent their internal logic.
-
-Import these library modules (use these exact module names and port names):
-- two_in_mixer from "library/two_in_mixer.lfr": fluid inputs in_a, in_b; fluid output out_1.
-- three_in_mixer from "library/three_in_mixer.lfr": fluid inputs in_a, in_b, in_c; fluid output out_1.
-
-Wiring: instantiate two_in_mixer twice in parallel — one instance connects lane_a_r1 to in_a and lane_a_r2 to in_b; the other connects lane_b_r1 to in_a and lane_b_r2 to in_b. Then feed both premixed out_1 streams together with carrier into one three_in_mixer instance (in_a, in_b, in_c in any consistent order that includes both premixes and carrier) whose out_1 is outlet. Write LFR code for this device.

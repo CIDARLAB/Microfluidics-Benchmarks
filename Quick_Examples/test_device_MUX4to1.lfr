@@ -1,0 +1,20 @@
+// test_device — single 4-to-1 MUX.
+//
+//   in0..in3 --(c_select)--> out
+//
+// The 1-port is foutput so distribute/case emits channels.
+module test_device(
+    finput in0, in1, in2, in3,
+    foutput out,
+    control [0:1] c_select
+);
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : out <= in0;
+            2'b01 : out <= in1;
+            2'b10 : out <= in2;
+            2'b11 : out <= in3;
+        endcase
+    end
+endmodule

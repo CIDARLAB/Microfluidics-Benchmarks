@@ -282,6 +282,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -317,7 +318,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -330,6 +331,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -378,6 +380,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -413,7 +416,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
@@ -426,6 +429,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -474,6 +478,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -522,6 +527,7 @@
             "params": {
                 "connectionSpacing": 1000,
                 "channelWidth": 400,
+                "crossSection": 1,
                 "start": [
                     "Point",
                     -1,
@@ -558,11 +564,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 4,
-        "controlPortCount": 2,
-        "logicalControlBits": 1,
-        "logicalFlowIo": 4
+        "length": 76200
     },
     "layers": [
         {
@@ -590,7 +592,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_4",
+            "connectionid": "channel_2",
             "type": "NORMALLY_OPEN"
         }
     ],
