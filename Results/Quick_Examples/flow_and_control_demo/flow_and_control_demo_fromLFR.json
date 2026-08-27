@@ -21,7 +21,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_1"
             },
             "ports": [
                 {
@@ -54,7 +55,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -81,7 +83,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -108,7 +111,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -135,7 +139,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_4"
             },
             "ports": [
                 {
@@ -162,7 +167,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_0"
             },
             "ports": [
                 {
@@ -193,7 +199,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_0"
             },
             "ports": [
                 {
@@ -220,7 +227,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_1"
             },
             "ports": [
                 {
@@ -251,7 +259,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_1"
             },
             "ports": [
                 {
@@ -309,7 +318,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -318,7 +328,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
@@ -358,7 +368,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -407,7 +418,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -416,7 +428,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -456,7 +468,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_4"
             },
             "layer": "0",
             "paths": [],
@@ -481,8 +494,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -509,7 +522,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_0"
             },
             "layer": "1",
             "paths": [],
@@ -534,8 +548,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -562,7 +576,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_1"
             },
             "layer": "1",
             "paths": [],
@@ -610,7 +625,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_2",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"
         }

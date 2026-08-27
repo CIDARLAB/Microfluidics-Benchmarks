@@ -1,5 +1,5 @@
 {
-    "name": "test_device",
+    "name": "test_device_MUX4to1",
     "components": [
         {
             "name": "port_1",
@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_4"
             },
             "ports": [
                 {
@@ -123,7 +127,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_5"
             },
             "ports": [
                 {
@@ -150,7 +155,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_0"
             },
             "ports": [
                 {
@@ -181,7 +187,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_0"
             },
             "ports": [
                 {
@@ -208,7 +215,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_1"
             },
             "ports": [
                 {
@@ -239,7 +247,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_1"
             },
             "ports": [
                 {
@@ -266,7 +275,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_2"
             },
             "ports": [
                 {
@@ -297,7 +307,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_2"
             },
             "ports": [
                 {
@@ -324,7 +335,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_3"
             },
             "ports": [
                 {
@@ -355,7 +367,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_3"
             },
             "ports": [
                 {
@@ -413,7 +426,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -462,7 +476,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -511,7 +526,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -560,7 +576,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_4"
             },
             "layer": "0",
             "paths": [],
@@ -613,7 +630,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_0"
             },
             "layer": "1",
             "paths": [],
@@ -666,7 +684,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_1"
             },
             "layer": "1",
             "paths": [],
@@ -719,7 +738,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_2"
             },
             "layer": "1",
             "paths": [],
@@ -772,7 +792,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_3"
             },
             "layer": "1",
             "paths": [],
@@ -783,14 +804,15 @@
         "x-span": 76200,
         "y-span": 76200,
         "controlPortCount": 4,
-        "logicalControlBits": 2,
+        "logicalControlBits": 1,
         "controlExpansion": "distribute_one_hot",
         "length": 76200,
         "flowPortCount": 5,
-        "logicalFlowIo": 5,
+        "logicalFlowIo": 4,
         "portCountCorrected": true,
         "portCorrectionReasons": [
-            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 2 \u2192 physical Cports 4, valves 4)"
+            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 \u2192 physical Cports 4, valves 4)",
+            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 5; technology mapping or auxiliary terminals introduced/removed PORTs)"
         ]
     },
     "layers": [
@@ -814,7 +836,7 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_4",
+            "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
@@ -826,7 +848,7 @@
         },
         {
             "componentid": "valve_2",
-            "connectionid": "channel_1",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_2"
         },

@@ -1,13 +1,33 @@
-// Reusable building block: nozzle-type droplet generator.
-// Combines a continuous oil phase with a dispersed aqueous phase to generate
-// a droplet stream. Mapped onto the `&` operator so the technology mapper
-// instantiates a NOZZLE DROPLET GENERATOR primitive; a #CONSTRAIN directive
-// hints at the target droplet rate so downstream placement can size it.
+// Reusable building block: 4-port nozzle droplet generator.
+//
+// 3DuF NOZZLE DROPLET GENERATOR is two parts:
+//   - 3-port junction (three inlets): facing pair = oil, remaining = water
+//   - 1-port horn (one outlet): droplets
+//
+// Local terminals (rotation 0):
+//              1 (top of junction)
+//     4 ------[ junction ]========== 2  (droplets)
+//    (water)   3 (bottom of junction)
+//
+// Default rotation 90 is the vertical flow-focusing pose (mixers below,
+// chamber above). This is a 180° flip of the previous 270 pose so the
+// 3DuF side oil holes sit on the left/right:
+//
+//                     droplets (2, horn up)
+//                          |
+//        oil_left (3) ----[ nozzle ]---- oil_right (1)
+//                          |
+//                 aqueous (4, middle water channel)
+//
+// Do not put #MAP "NOZZLE DROPLET GENERATOR" in the parent — the map stays
+// here. Parent instances use instantiate_droplet_generator (like DIY).
 module droplet_generator(
-    finput oil, aqueous,
+    finput oil_left, oil_right, aqueous,
     foutput droplets
 );
-    #MAP "NOZZLE DROPLET GENERATOR" "&"
-    #CONSTRAIN "&" droplet_rate = 30 hz
-    assign droplets = oil & aqueous;
+    #MAP "NOZZLE DROPLET GENERATOR" "~"
+    #CONSTRAIN "~" droplet_rate = 30 hz
+    #CONSTRAIN "~" rotation = 90
+    // Seed assign so #MAP attaches; parent instances rebind all four nets.
+    assign droplets = ~aqueous;
 endmodule

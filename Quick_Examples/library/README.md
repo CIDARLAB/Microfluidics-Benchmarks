@@ -45,7 +45,7 @@ Rules that must be obeyed for imports to resolve:
 | `two_in_mixer.lfr`         | `two_in_mixer`       | Mix two input streams                           | `MIXER` via `~`                     |
 | `three_in_mixer.lfr`       | `three_in_mixer`     | Mix three input streams                         | `MIXER` via `~`                     |
 | `incubator.lfr`            | `incubator`          | Hold a stream for a reaction / incubation       | `INCUBATOR` via `&`                 |
-| `droplet_generator.lfr`    | `droplet_generator`  | Emulsify an aqueous stream into droplets        | `NOZZLE DROPLET GENERATOR` via `&`  |
+| `droplet_generator.lfr`    | `droplet_generator`  | 4-port nozzle (3-port oil/oil/water junction → 1-port droplet horn) | `NOZZLE DROPLET GENERATOR` via `~` |
 
 ## Example compositions
 
@@ -58,17 +58,36 @@ Rules that must be obeyed for imports to resolve:
 - `import_mixer_and_incubator.lfr` — premix + incubate, smallest example.
 - `import_parallel_premix.lfr`     — two parallel premix lanes merged into a
   single 3-inlet mixer (same module imported twice).
-- `import_droplet_reaction.lfr`    — 3-inlet mix -> droplet generator ->
-  incubator, three separate library imports in one pipeline.
+- `import_droplet_reaction.lfr`    — 3-inlet mix -> 4-port droplet generator
+  (facing oil pair + water on the 3-port junction, droplets out the horn) ->
+  one pipe into a reaction chamber (`c_in` valve) -> one pipe out to
+  `outlet` (`c_out` valve).
 
-Compile any of them with the Quick_Examples flow:
+Compile from the **repo root**. `--pre-load Quick_Examples` is enough for
+any top-level demo that does `` `import "library/...." ``. `--variant`
+defaults to `0`. Do not add `--pre-load LFR-TestCases` here.
+
+One-shot LFR → placed `*_fromLFR_PR.json` (open this in 3DuF):
+
+```sh
+poetry run fluigi synthesize \
+  --pre-load Microfluidics-Benchmarks/Quick_Examples \
+  Microfluidics-Benchmarks/Quick_Examples/import_droplet_reaction.lfr
+# → Results/Quick_Examples/import_droplet_reaction/import_droplet_reaction_fromLFR_PR.json
+```
+
+Compile only (unplaced JSON, no P&R):
+
+```sh
+poetry run fluigi compile_lfr \
+  --pre-load Microfluidics-Benchmarks/Quick_Examples \
+  -o Microfluidics-Benchmarks/Results/Quick_Examples/import_droplet_reaction \
+  Microfluidics-Benchmarks/Quick_Examples/import_droplet_reaction.lfr
+```
+
+or the scripts:
 
 ```sh
 ./scripts/testLFR.sh Microfluidics-Benchmarks/Quick_Examples/import_droplet_reaction.lfr
-```
-
-or the batch driver:
-
-```sh
-./scripts/compile_lfr.sh     # compiles every *.lfr at the top of Quick_Examples
+./scripts/run_all_Quick_Examples.sh   # every top-level *.lfr / *.mint → *_PR.json
 ```

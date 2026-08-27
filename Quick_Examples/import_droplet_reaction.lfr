@@ -1,33 +1,43 @@
-//  Example: 3-reagent droplet reaction pipeline, built entirely from library
-//  modules. Demonstrates composing a multi-stage design graph via three
-//  separate library imports:
+//  Example: 3-reagent droplet reaction pipeline, built from library
+//  modules plus two control valves on the chamber.
 //
 //  Topology:
 //       analyte ---\
-//       primer  --- three_in_mixer premix --\
-//       buffer  ---/                         \
-//                                             droplet_generator gen --> incubator react --> outlet
-//       oil_phase ---------------------------/
+//       primer  --- three_in_mixer premix -- aqueous (term 4, from below)
+//       buffer  ---/                         |
+//                    oil_left (3) ---- droplet_generator ---- oil_right (1)
+//                                            |   (JSON rotation 90)
+//                                       droplets (term 2, horn up)
+//                                            |
+//                                      [valve c_in]
+//                                            |
+//                                    chamber (in 1 / out 3)
+//                                            |
+//                                      [valve c_out]
+//                                            |
+//                                          outlet
+//
+//  After the nozzle, there is exactly one pipe into the chamber and
+//  exactly one pipe out to the outlet port. c_in gates filling the
+//  chamber; c_out gates release to the outlet.
 //
 //  Stages:
 //    1. three_in_mixer    : folds three reagents into a single aqueous stream.
-//    2. droplet_generator : emulsifies the aqueous stream with the oil phase
-//                           into a monodisperse droplet train.
-//    3. incubator         : holds the droplet train long enough for the
-//                           reaction inside each droplet to complete.
-//
-//  All three modules live in Quick_Examples/library/ and can be reused from
-//  any other design.
+//    2. droplet_generator : 4-port nozzle; side oil squeezes aqueous into droplets.
+//    3. chamber           : holds the droplet train (REACTION CHAMBER).
+//    4. c_in / c_out      : valves on the single inlet and outlet pipes.
 
 `import "library/three_in_mixer.lfr"
 `import "library/droplet_generator.lfr"
-`import "library/incubator.lfr"
 
 module import_droplet_reaction(
-    finput analyte, primer, buffer, oil_phase,
-    foutput outlet
+    finput analyte, primer, buffer, oil_left, oil_right,
+    foutput outlet,
+    control c_in, c_out
 );
     flow aqueous, droplets;
+    #MAP "REACTION CHAMBER" "storage"
+    storage chamber;
 
     three_in_mixer premix(
         .in_a(analyte),
@@ -37,13 +47,24 @@ module import_droplet_reaction(
     );
 
     droplet_generator gen(
-        .oil(oil_phase),
+        .oil_left(oil_left),
+        .oil_right(oil_right),
         .aqueous(aqueous),
         .droplets(droplets)
     );
 
-    incubator react(
-        .in_1(droplets),
-        .out_1(outlet)
-    );
+    // Valve on the single nozzle → chamber pipe.
+    // distribute must write a port or storage, or the valve is dropped.
+    distribute@(c_in)
+    begin
+        if (c_in == 1)
+            chamber <= droplets;
+    end
+
+    // Valve on the single chamber → outlet pipe.
+    distribute@(c_out)
+    begin
+        if (c_out == 1)
+            outlet <= chamber;
+    end
 endmodule

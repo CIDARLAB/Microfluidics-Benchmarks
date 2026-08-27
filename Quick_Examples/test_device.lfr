@@ -1,0 +1,78 @@
+// test_device — dual-bank 4-lane valve router matching
+// Neptune_nature_CS/figures/test_device.json connectivity (not the hand
+// placement). Nature JSON is ports + Valve3D + Via + channels:
+//
+//   in0..in3 --(c_in)--> bus --(c_out)--> out0..out3
+//                 |--(c_via0)--> via0 --> collect0
+//                 |--(c_via1)--> via1 --> collect1
+//                 |--(c_clean)--> clean
+//
+//   * Top 4-port tree  = input 4-to-1 MUX (distribute / one-hot valves)
+//   * Bottom 4-port tree = output 1-to-4 MUX
+//   * Vertical trunk   = shared storage bus (Nature mid-trunk)
+//   * Via_3/4/6/7      = gated via lanes; #MAP "VIA" "storage" emits
+//                        VIA primitives (bus + via0 + via1)
+//   * Port_8 / Port_9  = collect0 / collect1
+//   * Port_28          = clean fork off the bus
+//
+// distribute must write a port or storage (not a bare flow net) or
+// valves/Cports are dropped. Do not wrap the vias in DIYcomponent — the
+// Nature figure is four vias, not a 4-port black box.
+
+module test_device(
+    finput in0, in1, in2, in3,
+    foutput out0, out1, out2, out3,
+    foutput collect0, collect1,
+    foutput clean,
+    control [0:1] c_in,
+    control [0:1] c_out,
+    control c_via0, c_via1,
+    control c_clean
+);
+    #MAP "VIA" "storage"
+    storage via0, via1, bus;
+
+    // Input MUX: 4-to-1 onto the shared bus (JSON top tree)
+    distribute@(c_in)
+    begin
+        case(c_in)
+            2'b00 : bus <= in0;
+            2'b01 : bus <= in1;
+            2'b10 : bus <= in2;
+            2'b11 : bus <= in3;
+        endcase
+    end
+
+    // Output MUX: 1-to-4 from the bus (JSON bottom tree)
+    distribute@(c_out)
+    begin
+        case(c_out)
+            2'b00 : out0 <= bus;
+            2'b01 : out1 <= bus;
+            2'b10 : out2 <= bus;
+            2'b11 : out3 <= bus;
+        endcase
+    end
+
+    // Clean / wash fork off the bus (JSON Port_28, Valve3D_19)
+    distribute@(c_clean)
+    begin
+        if (c_clean == 1)
+            clean <= bus;
+    end
+
+    // Mid-trunk gated via lanes (JSON Valve3D_17 / Valve3D_18)
+    distribute@(c_via0)
+    begin
+        if (c_via0 == 1)
+            via0 <= bus;
+    end
+    distribute@(c_via1)
+    begin
+        if (c_via1 == 1)
+            via1 <= bus;
+    end
+
+    assign collect0 = via0;
+    assign collect1 = via1;
+endmodule

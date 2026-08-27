@@ -1,9 +1,12 @@
-// test_device — single 4-to-1 MUX.
+// test_device_MUX4to1 — single 4-to-1 MUX (JSON 里上下两头各一个这样的树).
 //
 //   in0..in3 --(c_select)--> out
 //
-// The 1-port is foutput so distribute/case emits channels.
-module test_device(
+// Syntax matches LFR-TestCases/Distribute_Library/Mux_04_In.lfr:
+//   distribute@(bus) + case(bus) + 2'bxx 选路.
+// The 1-port must be foutput (a real component). Writing a bare `flow` net
+// does not emit valves/Cports.
+module test_device_MUX4to1(
     finput in0, in1, in2, in3,
     foutput out,
     control [0:1] c_select

@@ -1,4 +1,6 @@
-DEVICE test_device
+DEVICE test_device_MUX4to1
+
+
 
 
 
@@ -6,13 +8,14 @@ DEVICE test_device
 
 // === PORT COUNT CORRECTION ===
 // Physical port counts in this file are authoritative for the synthesized device.
-// FLOW ports: 5 (LFR module IO declared 5)
-// CONTROL ports (Cport_*): 4 (LFR control bit width declared 2)
+// FLOW ports: 5 (LFR module IO declared 4)
+// CONTROL ports (Cport_*): 4 (LFR control bit width declared 1)
 // VALVE/VALVE3D count: 4
 // Port counts differ from the original LFR IO / control bit-width.
 // The physical counts above are authoritative. Common causes include
 // MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
-//   - CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 2 → physical Cports 4, valves 4)
+//   - CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 → physical Cports 4, valves 4)
+//   - FLOW port count differs from LFR IO (declared 4 → physical FLOW ports 5; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)
 // === END PORT COUNT CORRECTION ===
 
 LAYER FLOW 
@@ -41,9 +44,9 @@ PORT Cport_1 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 PORT Cport_2 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 PORT Cport_3 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 
-VALVE3D valve_0 on channel_4 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_0 on channel_1 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
 VALVE3D valve_1 on channel_3 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_2 on channel_1 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_2 on channel_4 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
 VALVE3D valve_3 on channel_2 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 crossSection=1 connectionSpacing=1000 channelWidth=800  ;

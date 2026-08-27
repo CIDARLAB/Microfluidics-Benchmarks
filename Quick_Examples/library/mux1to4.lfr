@@ -1,0 +1,21 @@
+// mux1to4 — syntax template for the 1-to-4 tree (Mux_04_Out).
+//
+//   in --(c_select)--> out0..out3
+//
+// Do not instantiate this from a parent: distribute inside an imported
+// module does not emit valves. Copy the case block into the parent.
+module mux1to4(
+    finput in,
+    foutput out0, out1, out2, out3,
+    control [0:1] c_select
+);
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : out0 <= in;
+            2'b01 : out1 <= in;
+            2'b10 : out2 <= in;
+            2'b11 : out3 <= in;
+        endcase
+    end
+endmodule

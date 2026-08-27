@@ -2,6 +2,19 @@ DEVICE test_DIY_fork
 
 
 
+
+
+// === PORT COUNT CORRECTION ===
+// Physical port counts in this file are authoritative for the synthesized device.
+// FLOW ports: 3 (LFR module IO declared 4)
+// CONTROL ports (Cport_*): 0 (LFR control bit width declared 1)
+// Port counts differ from the original LFR IO / control bit-width.
+// The physical counts above are authoritative. Common causes include
+// MUX/distribute one-hot valves, metering nozzles, droplet sorters, and other mapped primitives:
+//   - CONTROL port count differs from LFR (declared 1 → physical Cports 0)
+//   - FLOW port count differs from LFR IO (declared 4 → physical FLOW ports 3; metering / NOZZLE DROPLET GENERATOR auxiliaries, DROPLET SORTER waste/discard ports)
+// === END PORT COUNT CORRECTION ===
+
 LAYER FLOW 
 
 DIYCOMPONENT diycomponent_1 componentSpacing=1000.0 length=10000.0 width=8000.0 height=2000.0 cornerRadius=200.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
