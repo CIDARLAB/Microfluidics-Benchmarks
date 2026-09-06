@@ -126,9 +126,27 @@
             },
             "ports": [
                 {
-                    "x": 0,
-                    "y": 0,
+                    "x": 50.0,
+                    "y": 0.0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 100.0,
+                    "y": 50.0,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 50.0,
+                    "y": 100.0,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0.0,
+                    "y": 50.0,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -197,7 +215,7 @@
             "id": "c_south",
             "source": {
                 "component": "n1",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "channelWidth": 400,
@@ -246,7 +264,7 @@
             "id": "c_east",
             "source": {
                 "component": "n1",
-                "port": "1"
+                "port": "3"
             },
             "params": {
                 "channelWidth": 400,
@@ -295,7 +313,7 @@
             "id": "c_west",
             "source": {
                 "component": "n1",
-                "port": "1"
+                "port": "4"
             },
             "params": {
                 "channelWidth": 400,

@@ -151,6 +151,8 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
@@ -191,6 +193,8 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
@@ -479,20 +483,20 @@
         {
             "sinks": [
                 {
-                    "component": "reaction_chamber_1",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "nozzle_droplet_generator_1",
-                "port": "2"
+                "component": "reaction_chamber_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -529,20 +533,20 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
+                    "component": "reaction_chamber_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "reaction_chamber_1",
-                "port": "3"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -579,20 +583,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "component": "mixer_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "mixer_2",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -629,20 +633,20 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "4"
+                    "component": "mixer_2",
+                    "port": "2"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
+                "component": "nozzle_droplet_generator_1",
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -679,20 +683,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_2",
+                "component": "mixer_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -729,20 +733,20 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_3",
+                "component": "mixer_2",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -779,7 +783,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "nozzle_droplet_generator_1",
                     "port": "1"
                 }
             ],
@@ -792,7 +796,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -829,8 +833,8 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_8",
@@ -842,7 +846,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -879,20 +883,20 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "3"
+                    "component": "port_6",
+                    "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
             "source": {
-                "component": "port_6",
+                "component": "mixer_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -945,8 +949,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -999,8 +1003,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -1039,16 +1043,10 @@
         "x-span": 76200,
         "y-span": 76200,
         "controlPortCount": 2,
-        "logicalControlBits": 1,
+        "logicalControlBits": 2,
         "length": 76200,
         "flowPortCount": 6,
-        "logicalFlowIo": 4,
-        "portCountCorrected": true,
-        "portCorrectionReasons": [
-            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 \u2192 physical Cports 2, valves 2)",
-            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 6; metering / NOZZLE DROPLET GENERATOR auxiliaries)"
-        ],
-        "controlExpansion": "distribute_one_hot"
+        "logicalFlowIo": 6
     },
     "layers": [
         {
@@ -1063,7 +1061,7 @@
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": 1
+            "group": 0
         }
     ],
     "features": [],

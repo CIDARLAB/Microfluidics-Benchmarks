@@ -26,7 +26,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_capacitance_sensor_1"
             },
             "ports": [
                 {
@@ -59,7 +60,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -97,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_capacitance_sensor_2"
             },
             "ports": [
                 {
@@ -130,7 +133,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -157,7 +161,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_0"
             },
             "ports": [
                 {
@@ -188,7 +193,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_0"
             },
             "ports": [
                 {
@@ -215,7 +221,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_1"
             },
             "ports": [
                 {
@@ -227,6 +234,38 @@
             ],
             "x-span": 2000,
             "y-span": 2000
+        },
+        {
+            "name": "valve_1",
+            "id": "valve_1",
+            "entity": "VALVE3D",
+            "layers": [
+                "1"
+            ],
+            "params": {
+                "componentSpacing": 1000,
+                "valveRadius": 1200,
+                "gap": 600,
+                "width": 2400,
+                "length": 2400,
+                "height": 250,
+                "rotation": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "valve_1"
+            },
+            "ports": [
+                {
+                    "x": 1200,
+                    "y": 1200,
+                    "label": "1",
+                    "layer": "CONTROL"
+                }
+            ],
+            "x-span": 2400,
+            "y-span": 2400
         }
     ],
     "connections": [
@@ -246,7 +285,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -273,7 +312,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -295,7 +335,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -322,7 +362,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -344,7 +385,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -371,7 +412,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -396,8 +438,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -424,7 +466,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_0"
             },
             "layer": "1",
             "paths": [],
@@ -433,7 +476,7 @@
         {
             "sinks": [
                 {
-                    "component": "valve_0",
+                    "component": "valve_1",
                     "port": "1"
                 }
             ],
@@ -449,8 +492,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -477,7 +520,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_1"
             },
             "layer": "1",
             "paths": [],
@@ -506,7 +550,7 @@
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": 1
+            "group": 0
         }
     ],
     "features": [],
@@ -514,6 +558,12 @@
     "valves": [
         {
             "componentid": "valve_0",
+            "connectionid": "channel_1",
+            "type": "NORMALLY_OPEN",
+            "controlportid": "Cport_0"
+        },
+        {
+            "componentid": "valve_1",
             "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"

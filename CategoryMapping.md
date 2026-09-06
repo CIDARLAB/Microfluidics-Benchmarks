@@ -8,7 +8,7 @@ A second grouping is **by application function**, numbered sequentially:
 - **Classes 10–11** — structural functions promoted from the former Other bin, filling that slot: multiplexed addressing and transposer. Tree networks and storage grids are **not** separate bins: they are already fully covered by classes 1, 6, and 9, so adding them would not change Other.
 - **Other** — remaining compiler, expression, and issue-regression cases that match none of 1–11.
 
-Every current LFR case — `LFR-TestCases/**/*.lfr` plus top-level `Quick_Examples/*.lfr` (**167** unique files) — is assigned to one or more of these classes. MINT files are not remapped here; they follow the same provenance folders as LFR.
+Every current LFR case — `LFR-TestCases/**/*.lfr` plus top-level `Quick_Examples/*.lfr` (**176** unique files) — is assigned to one or more of these classes. MINT files are not remapped here; they follow the same provenance folders as LFR.
 
 Plot: `stat_plot/benchmark_counts_by_function.png` (machine-readable map: `stat_plot/functional_mapping.py`). Provenance census: `stat_plot/benchmark_counts_by_category.png`.
 
@@ -96,7 +96,7 @@ Counts are **assignments**. A whole provenance folder is listed when every file 
 - `LFR-TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
 - `LFR-TestCases/Mars/Sorting.lfr` (multi-function included)
 
-### 2. Artificial cells (28)
+### 2. Artificial cells (29)
 
 - `LFR-TestCases/Drop_Ref/` (entire folder) (multi-function included)
 - `LFR-TestCases/Literature_Benchmarks/Device_2_Artificial_Cells.lfr` (multi-function included)
@@ -104,8 +104,7 @@ Counts are **assignments**. A whole provenance folder is listed when every file 
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
 - `Quick_Examples/import_droplet_reaction.lfr` (multi-function included)
-
-### 3. Directed evolution (4)
+- `Quick_Examples/droplet_generator.lfr` (multi-function included)
 
 - `LFR-TestCases/Protocols/Directed_Evolution.lfr`
 - `LFR-TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
@@ -128,7 +127,7 @@ Counts are **assignments**. A whole provenance folder is listed when every file 
 - `LFR-TestCases/Mars/Antibiotic_Resistance.lfr`
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Microalgal_Bioassay.lfr`
 
-### 6. Organic synthesis (22)
+### 6. Organic synthesis (25)
 
 Lee / deMello literature device (not dual-labeled with crystallization):
 
@@ -142,6 +141,9 @@ Mix / incubate / synthesizer demos:
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Dna_Synthesizer.lfr`
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Incubator.lfr`
 - `Quick_Examples/mixer_3to1.lfr`
+- `Quick_Examples/two_in_mixer.lfr`
+- `Quick_Examples/three_in_mixer.lfr`
+- `Quick_Examples/incubator.lfr`
 - `Quick_Examples/import_mixer_and_incubator.lfr`
 - `Quick_Examples/import_parallel_premix.lfr`
 - `Quick_Examples/diy_with_mixer_demo.lfr`
@@ -155,7 +157,7 @@ Tree / gradient plumbing (also class 9):
 - `LFR-TestCases/Technology_Mapping/N_Greater_M_Map.lfr` (multi-function included)
 - `LFR-TestCases/Transport_Networks/One_To_8.lfr` (multi-function included)
 
-### 7. Enzyme screening (29)
+### 7. Enzyme screening (30)
 
 - `LFR-TestCases/Literature_Benchmarks/Device_7_Enzyme_Screening.lfr` (multi-function included)
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Kinetics.lfr`
@@ -164,6 +166,7 @@ Tree / gradient plumbing (also class 9):
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
 - `Quick_Examples/import_droplet_reaction.lfr` (multi-function included)
+- `Quick_Examples/droplet_generator.lfr` (multi-function included)
 
 ### 8. Nucleic acid extraction (3)
 
@@ -185,7 +188,7 @@ The MEMS extraction chip of Chen et al. (2008) is not present as an LFR file.
 - `LFR-TestCases/Distribute_Library/Hv_Storage_Grid_*.lfr` (multi-function included)
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` (multi-function included)
 
-### 10. Multiplexed addressing (19)
+### 10. Multiplexed addressing (23)
 
 - `LFR-TestCases/Distribute_Library/Mux_*.lfr`
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Inlet_16.lfr`
@@ -195,6 +198,10 @@ The MEMS extraction chip of Chen et al. (2008) is not present as an LFR file.
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Hmlp_Dual_Bank.lfr`
 - `LFR-TestCases/CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` (multi-function included)
 - `Quick_Examples/test_device_MUX4to1.lfr`
+- `Quick_Examples/test_device_two_MUX4to1.lfr`
+- `Quick_Examples/test_device.lfr`
+- `Quick_Examples/mux4to1.lfr`
+- `Quick_Examples/mux1to4.lfr`
 
 ### 11. Transposer (7)
 
@@ -222,29 +229,29 @@ Remaining `CIDAR_Lab_Past_Devices/`:
 
 Remaining `Quick_Examples/` demos:
 
-- `flow_only_demo.lfr`, `flow_and_control_demo.lfr`, `test_DIY_crossing.lfr`, `test_DIY_fork.lfr`
+- `flow_only_demo.lfr`, `flow_and_control_demo.lfr`, `test_DIY_crossing.lfr`, `test_DIY_fork.lfr`, `DIYcomponent.lfr`
 
 ---
 
 ## Summary counts
 
-Unique LFR files: **167**. Assignments: **226**. Multi-function files: **58**.
+Unique LFR files: **176**. Assignments: **236**. Multi-function files: **59**.
 
 | # | Functional class | Assignments | Of which multi-function |
 |---|------------------|------------:|------------------------:|
 | 1 | scRNA-seq | 21 | 15 |
-| 2 | Artificial cells | 28 | 28 |
+| 2 | Artificial cells | 29 | 29 |
 | 3 | Directed evolution | 4 | 2 |
 | 4 | Molecular diagnostics | 18 | 3 |
 | 5 | Bacteria diagnostics | 3 | 0 |
-| 6 | Organic synthesis | 22 | 12 |
-| 7 | Enzyme screening | 29 | 28 |
+| 6 | Organic synthesis | 25 | 12 |
+| 7 | Enzyme screening | 30 | 29 |
 | 8 | Nucleic acid extraction | 3 | 3 |
 | 9 | Protein crystallization | 25 | 25 |
-| 10 | Multiplexed addressing | 19 | 1 |
+| 10 | Multiplexed addressing | 23 | 1 |
 | 11 | Transposer | 7 | 0 |
-| — | Other | 47 | 0 |
-| | **Assignment total** | **226** | |
-| | **Unique files** | **167** | |
+| — | Other | 48 | 0 |
+| | **Assignment total** | **236** | |
+| | **Unique files** | **176** | |
 
 Original Device 10 (protein–DNA interaction) is not a row: it has no LFR case; class 10 is multiplexed addressing.

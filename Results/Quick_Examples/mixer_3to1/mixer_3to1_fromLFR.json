@@ -18,6 +18,8 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
@@ -58,6 +60,8 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
@@ -198,20 +202,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "component": "mixer_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "mixer_2",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -248,20 +252,20 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
+                    "component": "mixer_2",
+                    "port": "2"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -298,20 +302,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "port_2",
+                "component": "mixer_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -348,20 +352,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "port_3",
+                "component": "mixer_2",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -398,20 +402,20 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_4",
                     "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_4",
+                "component": "mixer_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -452,12 +456,7 @@
         "length": 76200,
         "flowPortCount": 4,
         "controlPortCount": 0,
-        "logicalFlowIo": 4,
-        "logicalControlBits": 1,
-        "portCountCorrected": true,
-        "portCorrectionReasons": [
-            "CONTROL port count differs from LFR (declared 1 \u2192 physical Cports 0)"
-        ]
+        "logicalFlowIo": 4
     },
     "layers": [
         {

@@ -1,48 +1,44 @@
-// test_device_two_MUX4to1 — next step after test_device_MUX4to1:
-// two 4-port valve trees joined by one trunk.
+// test_device_two_MUX4to1 — two 4-port valve trees joined by one main channel.
 //
-//   in0..in3 --(c_in)--> mux_1 ----pipe---- demux_1 --(c_out)--> out0..out3
+//   in0..in3 --(c_in)--> [mux hub] ==== main ==== [demux hub] --(c_out)--> out0..out3
 //
-// Same distribute/case syntax as test_device_MUX4to1 (and Mux_04_In / Mux_04_Out).
-// Do not wrap the MUX in a library instance: distribute inside an imported
-// module does not emit valves/Cports. The 1-ports must be real module IO
-// (foutput / finput), not a bare flow net.
+// No middle IO ports. The MUX 1-port ends are internal storages mapped to VIA;
+// ``assign demux_hub = mux_hub`` is the main channel that joins them.
 //
-// mux_1 and demux_1 stay as PORT components so the trunk is one CHANNEL
-// between two hubs. `assign lhs = rhs` drives lhs from rhs, so
-// `assign demux_1 = mux_1` is mux_1 → demux_1. Both hubs are foutput
-// (a finput hub is treated as a flow source and flips the trunk).
-// No via / collect / clean yet.
+// distribute must write a port or storage (not a bare flow net) or
+// valves/Cports are dropped.
 
 module test_device_two_MUX4to1(
     finput in0, in1, in2, in3,
-    foutput mux_1, demux_1,
     foutput out0, out1, out2, out3,
     control [0:1] c_in,
     control [0:1] c_out
 );
-    // Input 4-to-1 (JSON top tree; identical to test_device_MUX4to1)
+    #MAP "VIA" "storage"
+    storage mux_hub, demux_hub;
+
+    // Input 4-to-1 onto the mux hub (single-port end of the input tree)
     distribute@(c_in)
     begin
         case(c_in)
-            2'b00 : mux_1 <= in0;
-            2'b01 : mux_1 <= in1;
-            2'b10 : mux_1 <= in2;
-            2'b11 : mux_1 <= in3;
+            2'b00 : mux_hub <= in0;
+            2'b01 : mux_hub <= in1;
+            2'b10 : mux_hub <= in2;
+            2'b11 : mux_hub <= in3;
         endcase
     end
 
-    // Output 1-to-4 (JSON bottom tree)
+    // Main channel: connect the two MUX 1-port ends
+    assign demux_hub = mux_hub;
+
+    // Output 1-to-4 from the demux hub (single-port end of the output tree)
     distribute@(c_out)
     begin
         case(c_out)
-            2'b00 : out0 <= demux_1;
-            2'b01 : out1 <= demux_1;
-            2'b10 : out2 <= demux_1;
-            2'b11 : out3 <= demux_1;
+            2'b00 : out0 <= demux_hub;
+            2'b01 : out1 <= demux_hub;
+            2'b10 : out2 <= demux_hub;
+            2'b11 : out3 <= demux_hub;
         endcase
     end
-
-    // Main trunk: mux_1 → demux_1
-    assign demux_1 = mux_1;
 endmodule

@@ -1,0 +1,22 @@
+// mux4to1 — syntax template matching test_device_MUX4to1.
+//
+//   in0..in3 --(c_select)--> out
+//
+// Do not instantiate this from a parent: distribute inside an imported
+// module does not emit valves. Copy the case block into the parent
+// (see test_device_two_MUX4to1.lfr). The 1-port must be a real foutput.
+module mux4to1(
+    finput in0, in1, in2, in3,
+    foutput out,
+    control [0:1] c_select
+);
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : out <= in0;
+            2'b01 : out <= in1;
+            2'b10 : out <= in2;
+            2'b11 : out <= in3;
+        endcase
+    end
+endmodule

@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_0"
             },
             "ports": [
                 {
@@ -127,7 +131,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_0"
             },
             "ports": [
                 {
@@ -154,7 +159,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_1"
             },
             "ports": [
                 {
@@ -185,7 +191,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_1"
             },
             "ports": [
                 {
@@ -203,20 +210,20 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_2",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -243,7 +250,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -259,13 +267,13 @@
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -292,7 +300,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -317,8 +326,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -345,7 +354,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_0"
             },
             "layer": "1",
             "paths": [],
@@ -370,8 +380,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -398,7 +408,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_1"
             },
             "layer": "1",
             "paths": [],
@@ -432,7 +443,7 @@
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": 1
+            "group": 0
         }
     ],
     "features": [],

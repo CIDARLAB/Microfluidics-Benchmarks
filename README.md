@@ -6,14 +6,16 @@ This repository includes microfluidic test cases and benchmarks in different cat
 
 Each **category folder is flat**: one `Xxx_Yyy.lfr` / `Xxx_Yyy.mint` per case (no nested `Protocols/MARS/` trees). Former folders `Chthesis`, `Test`, `Hmlp`, `Parser_Test`, `Ryuichi's_Designs`, and `New_Grid` were merged into `CIDAR_Lab_Past_Devices/`. File-level rename map: `stat_plot/rename_map.md`.
 
-**Two groupings.** Folders below are **provenance** (source suite). Application function is a **multi-label** numbered map in [`CategoryMapping.md`](CategoryMapping.md): classes 1–9 literature assays, 10–11 structural (multiplexed addressing, transposer), then Other. Paths in more than one class are marked `(multi-function included)`. Plots: `stat_plot/benchmark_counts_by_category.png` (provenance) and `stat_plot/benchmark_counts_by_function.png` (function; bar heights are assignments and need not sum to 167). Original Device 10 (protein–DNA) is omitted; class 10 is multiplexed addressing. Contributions of additional devices and labels are welcome.
+**Two groupings.** Folders below are **provenance** (source suite). Application function is a **multi-label** numbered map in [`CategoryMapping.md`](CategoryMapping.md): classes 1–9 literature assays, 10–11 structural (multiplexed addressing, transposer), then Other. Paths in more than one class are marked `(multi-function included)`. Plots: `stat_plot/benchmark_counts_by_category.png` (provenance) and `stat_plot/benchmark_counts_by_function.png` (function; bar heights are assignments and need not sum to 176). Original Device 10 (protein–DNA) is omitted; class 10 is multiplexed addressing. Contributions of additional devices and labels are welcome.
 
 Neptune batch scripts live in the parent repo (`Neptune_2026/scripts/`). From that repo root:
 
 ```bash
-poetry run ./scripts/run_all_LFR.sh              # every LFR-TestCases/**/*.lfr
-poetry run ./scripts/run_all_MINT.sh             # every MINT-TestCases/**/*.mint
+poetry run ./scripts/run_all_LFR.sh              # every LFR-TestCases/**/*.lfr → *_PR.json
+poetry run ./scripts/run_all_MINT.sh             # every MINT-TestCases/**/*.mint → *_PR.json
 poetry run ./scripts/run_all_Quick_Examples.sh   # top-level Quick_Examples demos only
+poetry run ./scripts/run_all_LFR_no_PR.sh        # LFR compile only (no TREE-PLACE)
+poetry run ./scripts/run_all_MINT_no_PR.sh       # MINT compile only (no TREE-PLACE)
 ONLY_SUBFOLDER=Drop_Ref poetry run ./scripts/run_all_LFR.sh
 ```
 
@@ -54,15 +56,17 @@ MINT design files (`.mint`). **257** cases. Used when the pipeline starts from M
 
 ### Quick_Examples/
 
-Small LFR/MINT demos for one-off runs. Neptune `run_all_Quick_Examples.sh` compiles **top-level** `*.lfr` / `*.mint` only.
+Small LFR/MINT demos for one-off runs. Neptune `run_all_Quick_Examples.sh` synthesizes **top-level** `*.lfr` / `*.mint` only (latest batch: **19** LFR + **2** native MINT → `*_PR.json`).
 
 | Path | Role |
 |------|------|
-| `flow_only_demo.lfr` | Flow layer only |
-| `flow_and_control_demo.lfr` / `.mint` | Flow + control (default `testLFR.sh` / `testMINT.sh` input). The `.mint` sets MIXER `channelWidth` to match FLOW pipes and `edgeBend1`/`edgeBend2` to half that width so mixer ends meet the pipes flush in 3DuF. |
+| `flow_only_demo.lfr` / `.mint` | Flow layer only |
+| `flow_and_control_demo.lfr` / `.mint` | Flow + control (default `testLFR.sh` / `testMINT.sh` input). Native `.mint` may set MIXER `channelWidth` / `edgeBend*` for flush pipe ends in 3DuF. |
 | `import_mixer_and_incubator.lfr`, `import_parallel_premix.lfr`, `import_droplet_reaction.lfr` | Compose `library/` modules via `` `import "library/..." `` |
-| `mixer_3to1.lfr`, `diy_with_mixer_demo.lfr`, `test_device_MUX4to1.lfr`, `test_DIY_fork.lfr`, `test_DIY_crossing.lfr` | Mixer / DIY / 4-to-1 MUX demos. DIY keepout: `componentSpacing`, default **1000** µm (`library/DIYcomponent.lfr`) |
-| `library/` | Reusable LFR blocks (`two_in_mixer`, `three_in_mixer`, `incubator`, `droplet_generator`) — `--pre-load`, not a standalone case. See `library/README.md` |
+| `mixer_3to1.lfr`, `diy_with_mixer_demo.lfr`, `test_DIY_fork.lfr`, `test_DIY_crossing.lfr` | Mixer / DIY demos. DIY keepout: `componentSpacing`, default **1000** µm (`library/DIYcomponent.lfr`) |
+| `test_device.lfr`, `test_device_MUX4to1.lfr`, `test_device_two_MUX4to1.lfr` | Distribute/MUX demos (`mux_hub`/`demux_hub` VIA storages on the two-MUX case) |
+| `DIYcomponent.lfr`, `two_in_mixer.lfr`, `three_in_mixer.lfr`, `incubator.lfr`, `droplet_generator.lfr`, `mux4to1.lfr`, `mux1to4.lfr` | Standalone copies of `library/` modules (also synthesized by the batch) |
+| `library/` | Canonical reusable LFR blocks for `` `import "library/..." `` — see `library/README.md` |
 | `user_components_demo/` | `--component-library` black-box JSON demo. See `user_components_demo/README.md` |
 | `prompt_test/` | LLM prompt experiments (not part of the batch suite) |
 

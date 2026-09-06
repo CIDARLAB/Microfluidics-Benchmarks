@@ -20,7 +20,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "reaction_chamber_1"
             },
             "ports": [
                 {
@@ -72,7 +73,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "square_cell_trap_1"
             },
             "ports": [
                 {
@@ -117,7 +119,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -147,10 +150,13 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_1"
             },
             "ports": [
                 {
@@ -183,7 +189,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -210,7 +217,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -236,12 +244,12 @@
             "id": "channel_1",
             "source": {
                 "component": "reaction_chamber_1",
-                "port": "4"
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -268,7 +276,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -290,7 +299,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -317,7 +326,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -327,7 +337,7 @@
             "sinks": [
                 {
                     "component": "reaction_chamber_1",
-                    "port": "2"
+                    "port": "1"
                 }
             ],
             "name": "channel_3",
@@ -339,7 +349,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -366,7 +376,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -388,7 +399,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -415,7 +426,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_4"
             },
             "layer": "0",
             "paths": [],
@@ -437,7 +449,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -464,7 +476,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_5"
             },
             "layer": "0",
             "paths": [],

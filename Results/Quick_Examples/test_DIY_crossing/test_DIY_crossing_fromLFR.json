@@ -177,12 +177,12 @@
             "id": "channel_1",
             "source": {
                 "component": "diycomponent_1",
-                "port": "2"
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -227,12 +227,12 @@
             "id": "channel_2",
             "source": {
                 "component": "diycomponent_1",
-                "port": "4"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -282,7 +282,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -319,20 +319,20 @@
         {
             "sinks": [
                 {
-                    "component": "diycomponent_1",
+                    "component": "port_4",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "port_4",
+                "component": "diycomponent_1",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -373,12 +373,7 @@
         "length": 76200,
         "flowPortCount": 4,
         "controlPortCount": 0,
-        "logicalFlowIo": 4,
-        "logicalControlBits": 1,
-        "portCountCorrected": true,
-        "portCorrectionReasons": [
-            "CONTROL port count differs from LFR (declared 1 \u2192 physical Cports 0)"
-        ]
+        "logicalFlowIo": 4
     },
     "layers": [
         {

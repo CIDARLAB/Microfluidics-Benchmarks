@@ -20,7 +20,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "reaction_chamber_1"
             },
             "ports": [
                 {
@@ -68,10 +69,13 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_1"
             },
             "ports": [
                 {
@@ -104,7 +108,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -134,10 +139,13 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_2"
             },
             "ports": [
                 {
@@ -173,10 +181,13 @@
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_3"
             },
             "ports": [
                 {
@@ -209,7 +220,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -236,7 +248,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -263,7 +276,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_4"
             },
             "ports": [
                 {
@@ -290,7 +304,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_5"
             },
             "ports": [
                 {
@@ -316,12 +331,12 @@
             "id": "channel_1",
             "source": {
                 "component": "reaction_chamber_1",
-                "port": "4"
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -348,7 +363,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -357,7 +373,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_3",
+                    "component": "reaction_chamber_1",
                     "port": "1"
                 }
             ],
@@ -370,7 +386,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -397,7 +413,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_3",
+            "id": "channel_3",
+            "source": {
+                "component": "mixer_3",
+                "port": "2"
+            },
+            "params": {
+                "crossSection": 1,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -410,8 +477,8 @@
                     "port": "1"
                 }
             ],
-            "name": "channel_3",
-            "id": "channel_3",
+            "name": "channel_4",
+            "id": "channel_4",
             "source": {
                 "component": "mixer_1",
                 "port": "2"
@@ -419,7 +486,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -446,56 +513,8 @@
                             -1
                         ]
                     ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "reaction_chamber_1",
-                    "port": "2"
-                }
-            ],
-            "name": "channel_4",
-            "id": "channel_4",
-            "source": {
-                "component": "mixer_3",
-                "port": "2"
-            },
-            "params": {
-                "crossSection": 1,
-                "connectionSpacing": 1000,
-                "channelWidth": 800,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
                 ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
+                "ID": "channel_4"
             },
             "layer": "0",
             "paths": [],
@@ -517,7 +536,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -544,7 +563,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_5"
             },
             "layer": "0",
             "paths": [],
@@ -553,7 +573,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
+                    "component": "mixer_3",
                     "port": "1"
                 }
             ],
@@ -566,7 +586,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -593,7 +613,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_6"
             },
             "layer": "0",
             "paths": [],
@@ -615,7 +636,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -642,7 +663,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_7"
             },
             "layer": "0",
             "paths": [],
@@ -664,7 +686,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -691,7 +713,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_8"
             },
             "layer": "0",
             "paths": [],

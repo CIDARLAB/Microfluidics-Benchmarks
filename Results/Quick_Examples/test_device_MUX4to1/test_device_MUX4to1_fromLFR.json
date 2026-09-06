@@ -386,20 +386,20 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -436,7 +436,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -449,7 +449,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -486,7 +486,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -499,7 +499,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -536,7 +536,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
@@ -549,7 +549,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -602,8 +602,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -656,8 +656,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -710,8 +710,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -764,8 +764,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -804,15 +804,14 @@
         "x-span": 76200,
         "y-span": 76200,
         "controlPortCount": 4,
-        "logicalControlBits": 1,
+        "logicalControlBits": 2,
         "controlExpansion": "distribute_one_hot",
         "length": 76200,
         "flowPortCount": 5,
-        "logicalFlowIo": 4,
+        "logicalFlowIo": 5,
         "portCountCorrected": true,
         "portCorrectionReasons": [
-            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 1 \u2192 physical Cports 4, valves 4)",
-            "FLOW port count differs from LFR IO (declared 4 \u2192 physical FLOW ports 5; technology mapping or auxiliary terminals introduced/removed PORTs)"
+            "CONTROL expansion via distribute/MUX/transposer/if-else (LFR control bits 2 \u2192 physical Cports 4, valves 4)"
         ]
     },
     "layers": [
@@ -828,7 +827,7 @@
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": 1
+            "group": 0
         }
     ],
     "features": [],
@@ -836,25 +835,25 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_1",
+            "connectionid": "channel_2",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_3",
+            "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"
         },
         {
             "componentid": "valve_2",
-            "connectionid": "channel_4",
+            "connectionid": "channel_3",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_2"
         },
         {
             "componentid": "valve_3",
-            "connectionid": "channel_2",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_3"
         }

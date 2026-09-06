@@ -59,8 +59,8 @@
                     "layer": "FLOW"
                 }
             ],
-            "x-span": 1266,
-            "y-span": 1170
+            "x-span": 1267,
+            "y-span": 1171
         },
         {
             "name": "n1",
@@ -79,9 +79,27 @@
             },
             "ports": [
                 {
-                    "x": 0,
-                    "y": 0,
+                    "x": 50.0,
+                    "y": 0.0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 100.0,
+                    "y": 50.0,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 50.0,
+                    "y": 100.0,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0.0,
+                    "y": 50.0,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -105,9 +123,27 @@
             },
             "ports": [
                 {
-                    "x": 0,
-                    "y": 0,
+                    "x": 50.0,
+                    "y": 0.0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 100.0,
+                    "y": 50.0,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 50.0,
+                    "y": 100.0,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0.0,
+                    "y": 50.0,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -176,7 +212,7 @@
             "id": "c2",
             "source": {
                 "component": "n1",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "channelWidth": 20,
@@ -225,7 +261,7 @@
             "id": "c3",
             "source": {
                 "component": "n2",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "channelWidth": 100,

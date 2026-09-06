@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_4"
             },
             "ports": [
                 {
@@ -123,7 +127,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_0"
             },
             "ports": [
                 {
@@ -154,7 +159,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_0"
             },
             "ports": [
                 {
@@ -181,7 +187,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_1"
             },
             "ports": [
                 {
@@ -212,7 +219,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_1"
             },
             "ports": [
                 {
@@ -239,7 +247,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "Cport_2"
             },
             "ports": [
                 {
@@ -270,7 +279,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "valve_2"
             },
             "ports": [
                 {
@@ -301,7 +311,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -328,7 +338,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -350,7 +361,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -377,7 +388,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -399,7 +411,7 @@
             "params": {
                 "crossSection": 1,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
+                "channelWidth": 600,
                 "start": [
                     "Point",
                     -1,
@@ -426,7 +438,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_3"
             },
             "layer": "0",
             "paths": [],
@@ -451,8 +464,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -479,7 +492,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_0"
             },
             "layer": "1",
             "paths": [],
@@ -504,8 +518,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -532,7 +546,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_1"
             },
             "layer": "1",
             "paths": [],
@@ -557,8 +572,8 @@
                     -1
                 ],
                 "crossSection": 1,
+                "channelWidth": 600,
                 "connectionSpacing": 1000,
-                "channelWidth": 800,
                 "start": [
                     "Point",
                     -1,
@@ -585,7 +600,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "Ctrlchannel_2"
             },
             "layer": "1",
             "paths": [],
@@ -619,7 +635,7 @@
             "id": "1",
             "type": "CONTROL",
             "params": {},
-            "group": 1
+            "group": 0
         }
     ],
     "features": [],
@@ -627,13 +643,13 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_1",
+            "connectionid": "channel_3",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_3",
+            "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"
         },
