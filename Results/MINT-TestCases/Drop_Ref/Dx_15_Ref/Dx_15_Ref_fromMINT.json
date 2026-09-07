@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_in1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_in2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_in3"
             },
             "ports": [
                 {
@@ -104,7 +107,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer1"
             },
             "ports": [
                 {
@@ -155,7 +159,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter1"
             },
             "ports": [
                 {
@@ -194,7 +199,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_keep"
             },
             "ports": [
                 {
@@ -221,7 +227,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_waste"
             },
             "ports": [
                 {
@@ -239,14 +246,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer1",
+                    "component": "port_in1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "port_in1",
+                "component": "mixer1",
                 "port": "1"
             },
             "params": {
@@ -279,7 +286,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -288,14 +296,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer1",
+                    "component": "port_in2",
                     "port": "1"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
-                "component": "port_in2",
+                "component": "mixer1",
                 "port": "1"
             },
             "params": {
@@ -328,7 +336,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_in3",
+                    "port": "1"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "mixer1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 300,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -338,13 +397,13 @@
             "sinks": [
                 {
                     "component": "mixer1",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
-            "name": "c3",
-            "id": "c3",
+            "name": "c4",
+            "id": "c4",
             "source": {
-                "component": "port_in3",
+                "component": "droplet_sorter1",
                 "port": "1"
             },
             "params": {
@@ -377,56 +436,8 @@
                             -1
                         ]
                     ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "droplet_sorter1",
-                    "port": "1"
-                }
-            ],
-            "name": "c4",
-            "id": "c4",
-            "source": {
-                "component": "mixer1",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 300,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
                 ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -475,7 +486,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "0",
             "paths": [],
@@ -524,7 +536,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c6"
             },
             "layer": "0",
             "paths": [],
@@ -534,7 +547,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 5,
+        "controlPortCount": 0
     },
     "layers": [
         {

@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p2"
             },
             "ports": [
                 {
@@ -68,7 +70,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n"
             },
             "ports": [
                 {
@@ -104,14 +107,14 @@
         {
             "sinks": [
                 {
-                    "component": "n",
+                    "component": "p1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "p1",
+                "component": "n",
                 "port": "1"
             },
             "params": {
@@ -144,7 +147,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -193,7 +197,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -203,7 +208,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 2,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -218,5 +225,18 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n",
+                "p1",
+                "p2"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

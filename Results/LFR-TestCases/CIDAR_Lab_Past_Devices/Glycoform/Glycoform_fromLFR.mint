@@ -27,10 +27,10 @@ CHANNEL channel_4 from mixer_2 2 to mixer_3 1 crossSection=1 connectionSpacing=1
 CHANNEL channel_5 from mixer_4 2 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_6 from mixer_5 2 to mixer_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_7 from mixer_3 2 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_8 from port_3 1 to mixer_5 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_8 from port_3 1 to mixer_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_9 from port_4 1 to mixer_3 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_10 from port_5 1 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_11 from port_6 1 to mixer_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_10 from port_5 1 to mixer_5 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_11 from port_6 1 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_12 from port_7 1 to mixer_5 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 
  

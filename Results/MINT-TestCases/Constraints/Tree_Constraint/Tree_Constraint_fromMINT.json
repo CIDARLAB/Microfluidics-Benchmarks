@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b1"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b2"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b3"
             },
             "ports": [
                 {
@@ -123,7 +127,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b4"
             },
             "ports": [
                 {
@@ -158,7 +163,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "t1"
             },
             "ports": [
                 {
@@ -200,14 +206,14 @@
         {
             "sinks": [
                 {
-                    "component": "t1",
+                    "component": "p1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "p1",
+                "component": "t1",
                 "port": "1"
             },
             "params": {
@@ -240,7 +246,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -249,15 +256,15 @@
         {
             "sinks": [
                 {
-                    "component": "b1",
-                    "port": "1"
+                    "component": "t1",
+                    "port": "2"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
-                "component": "t1",
-                "port": "2"
+                "component": "b1",
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -289,7 +296,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -298,15 +306,15 @@
         {
             "sinks": [
                 {
-                    "component": "b2",
-                    "port": "1"
+                    "component": "t1",
+                    "port": "3"
                 }
             ],
             "name": "c3",
             "id": "c3",
             "source": {
-                "component": "t1",
-                "port": "3"
+                "component": "b2",
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -338,7 +346,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -347,15 +356,15 @@
         {
             "sinks": [
                 {
-                    "component": "b3",
-                    "port": "1"
+                    "component": "t1",
+                    "port": "4"
                 }
             ],
             "name": "c4",
             "id": "c4",
             "source": {
-                "component": "t1",
-                "port": "4"
+                "component": "b3",
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -387,7 +396,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -396,15 +406,15 @@
         {
             "sinks": [
                 {
-                    "component": "b4",
-                    "port": "1"
+                    "component": "t1",
+                    "port": "5"
                 }
             ],
             "name": "c5",
             "id": "c5",
             "source": {
-                "component": "t1",
-                "port": "5"
+                "component": "b4",
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -436,7 +446,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "0",
             "paths": [],
@@ -446,7 +457,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 5,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -461,5 +474,54 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ARRAY_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "b1",
+                "b2",
+                "b3",
+                "b4"
+            ],
+            "connections": [],
+            "params": {
+                "horizontalSpacing": 0,
+                "verticalSpacing": 0,
+                "xdim": 4,
+                "ydim": 1
+            },
+            "relationships": {}
+        },
+        {
+            "type": "MIRROR_CONSTRAINT",
+            "operation_type": "SYMMETRY_OPERATION",
+            "components": [
+                "b1",
+                "b2",
+                "b3",
+                "b4"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "source": "t1",
+                "mirror_count": 4,
+                "mirror_groups": [
+                    [
+                        "b1"
+                    ],
+                    [
+                        "b2"
+                    ],
+                    [
+                        "b3"
+                    ],
+                    [
+                        "b4"
+                    ]
+                ]
+            }
+        }
+    ]
 }

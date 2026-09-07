@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_water1"
             },
             "ports": [
                 {
@@ -104,7 +107,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "nozzle_droplet_generator_1"
             },
             "ports": [
                 {
@@ -157,7 +161,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_1"
             },
             "ports": [
                 {
@@ -190,7 +195,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector1"
             },
             "ports": [
                 {
@@ -228,7 +234,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pico_injector_1"
             },
             "ports": [
                 {
@@ -275,7 +282,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_2"
             },
             "ports": [
                 {
@@ -308,7 +316,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_waste1"
             },
             "ports": [
                 {
@@ -353,7 +362,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter_1"
             },
             "ports": [
                 {
@@ -392,7 +402,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector2"
             },
             "ports": [
                 {
@@ -430,7 +441,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pico_injector_2"
             },
             "ports": [
                 {
@@ -477,7 +489,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_3"
             },
             "ports": [
                 {
@@ -510,7 +523,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_waste2"
             },
             "ports": [
                 {
@@ -555,7 +569,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter_2"
             },
             "ports": [
                 {
@@ -602,7 +617,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_splitter_1"
             },
             "ports": [
                 {
@@ -641,7 +657,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out1"
             },
             "ports": [
                 {
@@ -668,7 +685,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out2"
             },
             "ports": [
                 {
@@ -686,14 +704,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_oil1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "port_oil1",
+                "component": "nozzle_droplet_generator_1",
                 "port": "1"
             },
             "params": {
@@ -726,7 +744,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -775,7 +794,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -824,7 +844,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -873,7 +894,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -882,14 +904,64 @@
         {
             "sinks": [
                 {
-                    "component": "pico_injector_1",
-                    "port": "3"
+                    "component": "port_injector1",
+                    "port": "1"
                 }
             ],
             "name": "c5",
             "id": "c5",
             "source": {
-                "component": "port_injector1",
+                "component": "pico_injector_1",
+                "port": "3"
+            },
+            "params": {
+                "channelWidth": 300,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c5"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_1",
+                    "port": "2"
+                }
+            ],
+            "name": "c6",
+            "id": "c6",
+            "source": {
+                "component": "pico_injector_1",
                 "port": "1"
             },
             "params": {
@@ -922,7 +994,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c6"
             },
             "layer": "0",
             "paths": [],
@@ -932,63 +1005,14 @@
             "sinks": [
                 {
                     "component": "pico_injector_1",
-                    "port": "1"
-                }
-            ],
-            "name": "c6",
-            "id": "c6",
-            "source": {
-                "component": "mixer_1",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 300,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
             "name": "c7",
             "id": "c7",
             "source": {
-                "component": "pico_injector_1",
-                "port": "2"
+                "component": "mixer_2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 300,
@@ -1020,7 +1044,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c7"
             },
             "layer": "0",
             "paths": [],
@@ -1069,7 +1094,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c11"
             },
             "layer": "0",
             "paths": [],
@@ -1078,63 +1104,14 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_sorter_1",
-                    "port": "1"
+                    "component": "mixer_2",
+                    "port": "2"
                 }
             ],
             "name": "c8",
             "id": "c8",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 300,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "pico_injector_2",
-                    "port": "3"
-                }
-            ],
-            "name": "c9",
-            "id": "c9",
-            "source": {
-                "component": "port_injector2",
+                "component": "droplet_sorter_1",
                 "port": "1"
             },
             "params": {
@@ -1167,7 +1144,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c8"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_injector2",
+                    "port": "1"
+                }
+            ],
+            "name": "c9",
+            "id": "c9",
+            "source": {
+                "component": "pico_injector_2",
+                "port": "3"
+            },
+            "params": {
+                "channelWidth": 300,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c9"
             },
             "layer": "0",
             "paths": [],
@@ -1216,7 +1244,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c10"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "pico_injector_2",
+                    "port": "2"
+                }
+            ],
+            "name": "c10",
+            "id": "c10",
+            "source": {
+                "component": "mixer_3",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 300,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c10"
             },
             "layer": "0",
             "paths": [],
@@ -1226,63 +1305,14 @@
             "sinks": [
                 {
                     "component": "mixer_3",
-                    "port": "1"
-                }
-            ],
-            "name": "c10",
-            "id": "c10",
-            "source": {
-                "component": "pico_injector_2",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 300,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "droplet_sorter_2",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
             "name": "c12",
             "id": "c12",
             "source": {
-                "component": "mixer_3",
-                "port": "2"
+                "component": "droplet_sorter_2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 300,
@@ -1314,7 +1344,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c12"
             },
             "layer": "0",
             "paths": [],
@@ -1363,7 +1394,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c13"
             },
             "layer": "0",
             "paths": [],
@@ -1412,7 +1444,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c14"
             },
             "layer": "0",
             "paths": [],
@@ -1461,7 +1494,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c15"
             },
             "layer": "0",
             "paths": [],
@@ -1470,15 +1504,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_out2",
-                    "port": "1"
+                    "component": "droplet_splitter_1",
+                    "port": "3"
                 }
             ],
             "name": "c16",
             "id": "c16",
             "source": {
-                "component": "droplet_splitter_1",
-                "port": "3"
+                "component": "port_out2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 300,
@@ -1510,7 +1544,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c16"
             },
             "layer": "0",
             "paths": [],
@@ -1520,7 +1555,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 9,
+        "controlPortCount": 0
     },
     "layers": [
         {

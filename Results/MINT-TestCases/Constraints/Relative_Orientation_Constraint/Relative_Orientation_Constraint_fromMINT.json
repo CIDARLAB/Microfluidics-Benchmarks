@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pin"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pout"
             },
             "ports": [
                 {
@@ -76,7 +78,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct1"
             },
             "ports": [
                 {
@@ -116,7 +119,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct2"
             },
             "ports": [
                 {
@@ -156,7 +160,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct3"
             },
             "ports": [
                 {
@@ -180,14 +185,14 @@
         {
             "sinks": [
                 {
-                    "component": "ct1",
+                    "component": "pin",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "pin",
+                "component": "ct1",
                 "port": "1"
             },
             "params": {
@@ -220,7 +225,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ct1",
+                    "port": "2"
+                }
+            ],
+            "name": "c2",
+            "id": "c2",
+            "source": {
+                "component": "ct2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -230,63 +286,14 @@
             "sinks": [
                 {
                     "component": "ct2",
-                    "port": "1"
-                }
-            ],
-            "name": "c2",
-            "id": "c2",
-            "source": {
-                "component": "ct1",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 100,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "ct3",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
             "name": "c3",
             "id": "c3",
             "source": {
-                "component": "ct2",
-                "port": "2"
+                "component": "ct3",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -318,7 +325,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -328,7 +336,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 2,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -343,5 +353,54 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1",
+                "ct2",
+                "ct3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "VERTICAL",
+                "ct2": "HORIZONTAL",
+                "ct3": "VERTICAL"
+            }
+        }
+    ]
 }

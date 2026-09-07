@@ -275,6 +275,90 @@
             "y-span": 4860
         },
         {
+            "name": "mixer_3",
+            "id": "mixer_3",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "mixer_3"
+            },
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
+        },
+        {
+            "name": "mixer_4",
+            "id": "mixer_4",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 800.0,
+                "bendSpacing": 1230.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2460.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "mixer_4"
+            },
+            "ports": [
+                {
+                    "x": 2030,
+                    "y": 0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2030,
+                    "y": 4860,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 4060,
+            "y-span": 4860
+        },
+        {
             "name": "port_4",
             "id": "port_4",
             "entity": "PORT",
@@ -383,90 +467,6 @@
             ],
             "x-span": 1800,
             "y-span": 600
-        },
-        {
-            "name": "mixer_3",
-            "id": "mixer_3",
-            "entity": "MIXER",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "channelWidth": 800.0,
-                "bendSpacing": 1230.0,
-                "numberOfBends": 1.0,
-                "rotation": 0.0,
-                "bendLength": 2460.0,
-                "height": 250.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "edgeBend1": 300.0,
-                "edgeBend2": 300.0,
-                "position": [
-                    -1,
-                    -1
-                ],
-                "ID": "mixer_3"
-            },
-            "ports": [
-                {
-                    "x": 2030,
-                    "y": 0,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2030,
-                    "y": 4860,
-                    "label": "2",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 4060,
-            "y-span": 4860
-        },
-        {
-            "name": "mixer_4",
-            "id": "mixer_4",
-            "entity": "MIXER",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "channelWidth": 800.0,
-                "bendSpacing": 1230.0,
-                "numberOfBends": 1.0,
-                "rotation": 0.0,
-                "bendLength": 2460.0,
-                "height": 250.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "edgeBend1": 300.0,
-                "edgeBend2": 300.0,
-                "position": [
-                    -1,
-                    -1
-                ],
-                "ID": "mixer_4"
-            },
-            "ports": [
-                {
-                    "x": 2030,
-                    "y": 0,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2030,
-                    "y": 4860,
-                    "label": "2",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 4060,
-            "y-span": 4860
         },
         {
             "name": "port_6",
@@ -1563,15 +1563,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
+                    "component": "reaction_chamber_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_11",
             "id": "channel_11",
             "source": {
-                "component": "reaction_chamber_1",
-                "port": "3"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1613,15 +1613,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_12",
             "id": "channel_12",
             "source": {
-                "component": "nozzle_droplet_generator_1",
-                "port": "3"
+                "component": "mixer_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1663,15 +1663,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_3",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_2",
+                    "port": "3"
                 }
             ],
             "name": "channel_13",
             "id": "channel_13",
             "source": {
-                "component": "nozzle_droplet_generator_2",
-                "port": "3"
+                "component": "mixer_3",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1713,15 +1713,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_3",
+                    "port": "3"
                 }
             ],
             "name": "channel_14",
             "id": "channel_14",
             "source": {
-                "component": "nozzle_droplet_generator_3",
-                "port": "3"
+                "component": "mixer_2",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1763,15 +1763,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_4",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_4",
+                    "port": "3"
                 }
             ],
             "name": "channel_15",
             "id": "channel_15",
             "source": {
-                "component": "nozzle_droplet_generator_4",
-                "port": "3"
+                "component": "mixer_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1813,15 +1813,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_3",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_5",
+                    "port": "3"
                 }
             ],
             "name": "channel_16",
             "id": "channel_16",
             "source": {
-                "component": "nozzle_droplet_generator_5",
-                "port": "3"
+                "component": "mixer_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1863,15 +1863,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_4",
-                    "port": "1"
+                    "component": "mixer_3",
+                    "port": "2"
                 }
             ],
             "name": "channel_17",
             "id": "channel_17",
             "source": {
-                "component": "mixer_3",
-                "port": "2"
+                "component": "mixer_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1913,15 +1913,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "component": "mixer_4",
+                    "port": "2"
                 }
             ],
             "name": "channel_18",
             "id": "channel_18",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "reaction_chamber_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -1964,14 +1964,14 @@
             "sinks": [
                 {
                     "component": "mixer_1",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
             "name": "channel_19",
             "id": "channel_19",
             "source": {
-                "component": "mixer_4",
-                "port": "2"
+                "component": "mixer_2",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -2013,15 +2013,15 @@
         {
             "sinks": [
                 {
-                    "component": "reaction_chamber_1",
-                    "port": "1"
+                    "component": "mixer_2",
+                    "port": "2"
                 }
             ],
             "name": "channel_20",
             "id": "channel_20",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
+                "component": "mixer_3",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -2063,14 +2063,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_3",
+                    "component": "port_12",
                     "port": "1"
                 }
             ],
             "name": "channel_21",
             "id": "channel_21",
             "source": {
-                "component": "port_12",
+                "component": "nozzle_droplet_generator_3",
                 "port": "1"
             },
             "params": {
@@ -2113,14 +2113,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_13",
                     "port": "1"
                 }
             ],
             "name": "channel_22",
             "id": "channel_22",
             "source": {
-                "component": "port_13",
+                "component": "nozzle_droplet_generator_5",
                 "port": "1"
             },
             "params": {
@@ -2163,14 +2163,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_2",
+                    "component": "port_14",
                     "port": "1"
                 }
             ],
             "name": "channel_23",
             "id": "channel_23",
             "source": {
-                "component": "port_14",
+                "component": "nozzle_droplet_generator_1",
                 "port": "1"
             },
             "params": {
@@ -2213,14 +2213,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_4",
+                    "component": "port_15",
                     "port": "1"
                 }
             ],
             "name": "channel_24",
             "id": "channel_24",
             "source": {
-                "component": "port_15",
+                "component": "nozzle_droplet_generator_2",
                 "port": "1"
             },
             "params": {
@@ -2263,14 +2263,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_5",
+                    "component": "port_16",
                     "port": "1"
                 }
             ],
             "name": "channel_25",
             "id": "channel_25",
             "source": {
-                "component": "port_16",
+                "component": "nozzle_droplet_generator_4",
                 "port": "1"
             },
             "params": {

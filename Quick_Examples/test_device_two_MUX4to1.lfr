@@ -1,9 +1,16 @@
-// test_device_two_MUX4to1 — two 4-port valve trees joined by one main channel.
+// test_device_two_MUX4to1 — two 4-port valve trees on one main bus,
+// with a mid-trunk spur that forks to two vias.
 //
-//   in0..in3 --(c_in)--> [mux hub] ==== main ==== [demux hub] --(c_out)--> out0..out3
+//   in0..in3 --(c_in)--> ==== bus (main) ==== --(c_out)--> out0..out3
+//                              |
+//                          spur_node
+//                            / \
+//                        via0   via1
 //
-// No middle IO ports. The MUX 1-port ends are internal storages mapped to VIA;
-// ``assign demux_hub = mux_hub`` is the main channel that joins them.
+// The two leaf vias are not the MUX hubs. One channel is probed from
+// ``bus`` into ``spur_node``, then fans to ``via0`` / ``via1``.
+// (Use storage for the fork — a bare ``flow`` spur does not emit channels.
+//  Avoid ``/2`` — that maps to DROPLET SPLITTER.)
 //
 // distribute must write a port or storage (not a bare flow net) or
 // valves/Cports are dropped.
@@ -15,30 +22,32 @@ module test_device_two_MUX4to1(
     control [0:1] c_out
 );
     #MAP "VIA" "storage"
-    storage mux_hub, demux_hub;
+    storage bus, spur_node, via0, via1;
 
-    // Input 4-to-1 onto the mux hub (single-port end of the input tree)
+    // Input 4-to-1 onto the main bus
     distribute@(c_in)
     begin
         case(c_in)
-            2'b00 : mux_hub <= in0;
-            2'b01 : mux_hub <= in1;
-            2'b10 : mux_hub <= in2;
-            2'b11 : mux_hub <= in3;
+            2'b00 : bus <= in0;
+            2'b01 : bus <= in1;
+            2'b10 : bus <= in2;
+            2'b11 : bus <= in3;
         endcase
     end
 
-    // Main channel: connect the two MUX 1-port ends
-    assign demux_hub = mux_hub;
-
-    // Output 1-to-4 from the demux hub (single-port end of the output tree)
+    // Output 1-to-4 from the main bus
     distribute@(c_out)
     begin
         case(c_out)
-            2'b00 : out0 <= demux_hub;
-            2'b01 : out1 <= demux_hub;
-            2'b10 : out2 <= demux_hub;
-            2'b11 : out3 <= demux_hub;
+            2'b00 : out0 <= bus;
+            2'b01 : out1 <= bus;
+            2'b10 : out2 <= bus;
+            2'b11 : out3 <= bus;
         endcase
     end
+
+    // Probe one channel off the main bus, then fan to the two vias
+    assign spur_node = bus;
+    assign via0 = spur_node;
+    assign via1 = spur_node;
 endmodule

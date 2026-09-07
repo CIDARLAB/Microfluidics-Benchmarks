@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p"
             },
             "ports": [
                 {
@@ -49,7 +50,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ff"
             },
             "ports": [
                 {
@@ -75,7 +77,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n1"
             },
             "ports": [
                 {
@@ -119,7 +122,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n2"
             },
             "ports": [
                 {
@@ -155,14 +159,14 @@
         {
             "sinks": [
                 {
-                    "component": "n1",
+                    "component": "ff",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "ff",
+                "component": "n1",
                 "port": "1"
             },
             "params": {
@@ -195,7 +199,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -204,15 +209,15 @@
         {
             "sinks": [
                 {
-                    "component": "n2",
-                    "port": "1"
+                    "component": "n1",
+                    "port": "2"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
-                "component": "n1",
-                "port": "2"
+                "component": "n2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 20,
@@ -244,7 +249,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -293,7 +299,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -303,7 +310,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 1,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -318,5 +327,31 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ff"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ff": "VERTICAL"
+            }
+        },
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "ff",
+                "n2",
+                "p"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

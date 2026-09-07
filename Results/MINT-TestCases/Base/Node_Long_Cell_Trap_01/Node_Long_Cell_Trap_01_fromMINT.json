@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p3"
             },
             "ports": [
                 {
@@ -95,7 +98,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n1"
             },
             "ports": [
                 {
@@ -147,7 +151,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct1"
             },
             "ports": [
                 {
@@ -180,7 +185,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -207,7 +213,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp2"
             },
             "ports": [
                 {
@@ -236,7 +243,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v1"
             },
             "ports": [
                 {
@@ -265,7 +273,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v2"
             },
             "ports": [
                 {
@@ -283,15 +292,15 @@
         {
             "sinks": [
                 {
-                    "component": "n1",
-                    "port": "1"
+                    "component": "p1",
+                    "port": "3"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "p1",
-                "port": "3"
+                "component": "n1",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 500,
@@ -323,7 +332,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -372,7 +382,58 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "n1",
+                    "port": "2"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "ct1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 500,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -382,63 +443,14 @@
             "sinks": [
                 {
                     "component": "ct1",
-                    "port": "1"
-                }
-            ],
-            "name": "c3",
-            "id": "c3",
-            "source": {
-                "component": "n1",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 500,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "p3",
-                    "port": "4"
+                    "port": "2"
                 }
             ],
             "name": "c4",
             "id": "c4",
             "source": {
-                "component": "ct1",
-                "port": "2"
+                "component": "p3",
+                "port": "4"
             },
             "params": {
                 "channelWidth": 500,
@@ -470,7 +482,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -519,7 +532,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "1",
             "paths": [],
@@ -568,7 +582,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c6"
             },
             "layer": "1",
             "paths": [],
@@ -578,7 +593,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 3,
+        "controlPortCount": 2
     },
     "layers": [
         {
@@ -611,5 +628,157 @@
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "ct1"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "ct1": "HORIZONTAL"
+            }
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2000,
+                "ypos": 0,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p2"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2000,
+                "ypos": 10000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "n1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2500,
+                "ypos": 5000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "ct1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 3500,
+                "ypos": 4250,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p3"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 12000,
+                "ypos": 4500,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 0,
+                "ypos": 3500,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp2"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 0,
+                "ypos": 6000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "v1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2000,
+                "ypos": 3750,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "v2"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2000,
+                "ypos": 6250,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "p1",
+                "p2",
+                "ct1"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

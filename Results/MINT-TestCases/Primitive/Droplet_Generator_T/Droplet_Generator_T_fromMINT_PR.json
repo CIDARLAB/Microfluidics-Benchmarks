@@ -1,0 +1,239 @@
+{
+    "name": "Droplet_Generator_T",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "p1",
+            "id": "p1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    6000.0,
+                    15100.0
+                ],
+                "ID": "p1",
+                "rotation": 0,
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 1000,
+                    "y": 1000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 2000,
+            "y-span": 2000
+        },
+        {
+            "name": "d",
+            "id": "d",
+            "entity": "DROPLET GENERATOR T",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "oilChannelWidth": 600.0,
+                "waterChannelWidth": 300.0,
+                "length": 5000.0,
+                "radius": 500.0,
+                "height": 250.0,
+                "rotation": 270,
+                "mirrorByX": 0,
+                "mirrorByY": 0.0,
+                "position": [
+                    8000.0,
+                    7950.0
+                ],
+                "ID": "d"
+            },
+            "ports": [
+                {
+                    "x": 5500,
+                    "y": 500,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 5500,
+            "y-span": 3500
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "d",
+                    "port": "1"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "p1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 400,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    6000.0,
+                    15100.0
+                ],
+                "end": [
+                    8500.0,
+                    10700.0
+                ],
+                "wayPoints": [
+                    [
+                        6000.0,
+                        15100.0
+                    ],
+                    [
+                        6000.0,
+                        5200.0
+                    ],
+                    [
+                        12700.0,
+                        5200.0
+                    ],
+                    [
+                        12700.0,
+                        12900.0
+                    ],
+                    [
+                        8500.0,
+                        12900.0
+                    ],
+                    [
+                        8500.0,
+                        10700.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            6000.0,
+                            15100.0
+                        ],
+                        [
+                            6000.0,
+                            5200.0
+                        ]
+                    ],
+                    [
+                        [
+                            6000.0,
+                            5200.0
+                        ],
+                        [
+                            12700.0,
+                            5200.0
+                        ]
+                    ],
+                    [
+                        [
+                            12700.0,
+                            5200.0
+                        ],
+                        [
+                            12700.0,
+                            12900.0
+                        ]
+                    ],
+                    [
+                        [
+                            12700.0,
+                            12900.0
+                        ],
+                        [
+                            8500.0,
+                            12900.0
+                        ]
+                    ],
+                    [
+                        [
+                            8500.0,
+                            12900.0
+                        ],
+                        [
+                            8500.0,
+                            10700.0
+                        ]
+                    ]
+                ],
+                "ID": "c1"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "p1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "d",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            6000.0,
+                            15100.0
+                        ],
+                        [
+                            6000.0,
+                            5200.0
+                        ],
+                        [
+                            12700.0,
+                            5200.0
+                        ],
+                        [
+                            12700.0,
+                            12900.0
+                        ],
+                        [
+                            8500.0,
+                            12900.0
+                        ],
+                        [
+                            8500.0,
+                            10700.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 17900.0,
+        "y-span": 21100.0,
+        "length": 21100.0,
+        "flowPortCount": 1,
+        "controlPortCount": 0
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

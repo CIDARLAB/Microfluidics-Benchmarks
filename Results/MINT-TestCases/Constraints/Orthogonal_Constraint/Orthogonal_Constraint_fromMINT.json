@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "north"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "east"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "west"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "south"
             },
             "ports": [
                 {
@@ -122,7 +126,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n1"
             },
             "ports": [
                 {
@@ -198,7 +203,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c_north"
             },
             "layer": "0",
             "paths": [],
@@ -247,7 +253,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c_south"
             },
             "layer": "0",
             "paths": [],
@@ -296,7 +303,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c_east"
             },
             "layer": "0",
             "paths": [],
@@ -345,7 +353,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c_west"
             },
             "layer": "0",
             "paths": [],
@@ -355,7 +364,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 4,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -370,5 +381,20 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "north",
+                "south",
+                "east",
+                "west"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

@@ -1,0 +1,168 @@
+{
+    "name": "Flow_Focus_Droplet_Generator",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "p1",
+            "id": "p1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "portRadius": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    10100.0,
+                    16900.0
+                ],
+                "ID": "p1",
+                "rotation": 0,
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 1000,
+                    "y": 1000,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 2000,
+            "y-span": 2000
+        },
+        {
+            "name": "d",
+            "id": "d",
+            "entity": "DROPLET GENERATOR FLOW FOCUS",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "oilChannelWidth": 400.0,
+                "waterChannelWidth": 200.0,
+                "length": 3000.0,
+                "radius": 500.0,
+                "angle": 45.0,
+                "height": 250.0,
+                "rotation": 270,
+                "mirrorByX": 0,
+                "mirrorByY": 0.0,
+                "position": [
+                    6500.0,
+                    8750.0
+                ],
+                "ID": "d"
+            },
+            "ports": [
+                {
+                    "x": 7500,
+                    "y": 5100,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 7500,
+            "y-span": 10200
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "d",
+                    "port": "1"
+                }
+            ],
+            "name": "c1",
+            "id": "c1",
+            "source": {
+                "component": "p1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 400,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    10100.0,
+                    16900.0
+                ],
+                "end": [
+                    10100.0,
+                    12484.0
+                ],
+                "wayPoints": [
+                    [
+                        10100.0,
+                        16900.0
+                    ],
+                    [
+                        10100.0,
+                        12484.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            10100.0,
+                            16900.0
+                        ],
+                        [
+                            10100.0,
+                            12484.0
+                        ]
+                    ]
+                ],
+                "ID": "c1"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "p1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "d",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            10100.0,
+                            16900.0
+                        ],
+                        [
+                            10100.0,
+                            12484.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 16100.0,
+        "y-span": 22900.0,
+        "length": 22900.0,
+        "flowPortCount": 1,
+        "controlPortCount": 0
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": "0"
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

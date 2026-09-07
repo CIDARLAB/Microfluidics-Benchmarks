@@ -104,15 +104,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
+                    "component": "mixer_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -154,14 +154,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
+                "component": "mixer_1",
                 "port": "1"
             },
             "params": {

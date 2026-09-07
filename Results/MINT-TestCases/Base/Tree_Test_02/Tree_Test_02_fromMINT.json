@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pin"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pout_1"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pout_2"
             },
             "ports": [
                 {
@@ -104,7 +107,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "tr"
             },
             "ports": [
                 {
@@ -150,7 +154,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct0"
             },
             "ports": [
                 {
@@ -190,7 +195,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct1"
             },
             "ports": [
                 {
@@ -214,14 +220,14 @@
         {
             "sinks": [
                 {
-                    "component": "tr",
+                    "component": "pin",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "pin",
+                "component": "tr",
                 "port": "1"
             },
             "params": {
@@ -254,7 +260,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -303,7 +310,108 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "tr",
+                    "port": "2"
+                }
+            ],
+            "name": "c3",
+            "id": "c3",
+            "source": {
+                "component": "ct1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c3"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ct0",
+                    "port": "2"
+                }
+            ],
+            "name": "c4",
+            "id": "c4",
+            "source": {
+                "component": "pout_1",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 100,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -313,112 +421,14 @@
             "sinks": [
                 {
                     "component": "ct1",
-                    "port": "1"
-                }
-            ],
-            "name": "c3",
-            "id": "c3",
-            "source": {
-                "component": "tr",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 100,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "pout_1",
-                    "port": "1"
-                }
-            ],
-            "name": "c4",
-            "id": "c4",
-            "source": {
-                "component": "ct0",
-                "port": "2"
-            },
-            "params": {
-                "channelWidth": 100,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "pout_2",
-                    "port": "1"
+                    "port": "2"
                 }
             ],
             "name": "c5",
             "id": "c5",
             "source": {
-                "component": "ct1",
-                "port": "2"
+                "component": "pout_2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 100,
@@ -450,7 +460,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "0",
             "paths": [],
@@ -460,7 +471,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 3,
+        "controlPortCount": 0
     },
     "layers": [
         {
@@ -475,5 +488,80 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "tr",
+                "ct0",
+                "ct1"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "tr": "HORIZONTAL",
+                "ct0": "HORIZONTAL",
+                "ct1": "HORIZONTAL"
+            }
+        },
+        {
+            "type": "ARRAY_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "ct0",
+                "ct1"
+            ],
+            "connections": [],
+            "params": {
+                "horizontalSpacing": 0,
+                "verticalSpacing": 0,
+                "xdim": 2,
+                "ydim": 1
+            },
+            "relationships": {}
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "tr",
+                "ct0",
+                "ct1"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "tr": "HORIZONTAL",
+                "ct0": "HORIZONTAL",
+                "ct1": "HORIZONTAL"
+            }
+        },
+        {
+            "type": "MIRROR_CONSTRAINT",
+            "operation_type": "SYMMETRY_OPERATION",
+            "components": [
+                "ct0",
+                "pout_1",
+                "ct1",
+                "pout_2"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "source": "tr",
+                "mirror_count": 2,
+                "mirror_groups": [
+                    [
+                        "ct0",
+                        "pout_1"
+                    ],
+                    [
+                        "ct1",
+                        "pout_2"
+                    ]
+                ]
+            }
+        }
+    ]
 }

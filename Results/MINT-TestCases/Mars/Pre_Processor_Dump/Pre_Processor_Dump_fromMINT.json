@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "c"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "d"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "c1"
             },
             "ports": [
                 {
@@ -131,7 +135,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_stub"
             },
             "ports": [
                 {
@@ -155,14 +160,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_stub",
+                    "component": "b",
                     "port": "1"
                 }
             ],
             "name": "c0",
             "id": "c0",
             "source": {
-                "component": "b",
+                "component": "mixer_stub",
                 "port": "1"
             },
             "params": {
@@ -195,7 +200,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c0"
             },
             "layer": "0",
             "paths": [],
@@ -244,7 +250,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -293,7 +300,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -342,7 +350,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c_out"
             },
             "layer": "0",
             "paths": [],
@@ -352,7 +361,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 4,
+        "controlPortCount": 0
     },
     "layers": [
         {

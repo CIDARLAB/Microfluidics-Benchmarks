@@ -32,6 +32,96 @@
             "y-span": 1400
         },
         {
+            "name": "via_2",
+            "id": "via_2",
+            "entity": "VIA",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "radius": 700.0,
+                "height": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "via_2"
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "via_3",
+            "id": "via_3",
+            "entity": "VIA",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "radius": 700.0,
+                "height": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "via_3"
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "via_4",
+            "id": "via_4",
+            "entity": "VIA",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "radius": 700.0,
+                "height": 0.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "via_4"
+            },
+            "ports": [
+                {
+                    "x": 700,
+                    "y": 700,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
             "name": "port_1",
             "id": "port_1",
             "entity": "PORT",
@@ -142,36 +232,6 @@
             ],
             "x-span": 2000,
             "y-span": 2000
-        },
-        {
-            "name": "via_2",
-            "id": "via_2",
-            "entity": "VIA",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 1000.0,
-                "radius": 700.0,
-                "height": 0.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "position": [
-                    -1,
-                    -1
-                ],
-                "ID": "via_2"
-            },
-            "ports": [
-                {
-                    "x": 700,
-                    "y": 700,
-                    "label": "1",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 1400,
-            "y-span": 1400
         },
         {
             "name": "port_5",
@@ -770,14 +830,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "via_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "via_1",
+                "component": "via_3",
                 "port": "1"
             },
             "params": {
@@ -820,14 +880,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "via_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "via_1",
+                "component": "via_3",
                 "port": "1"
             },
             "params": {
@@ -870,14 +930,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "via_3",
                     "port": "1"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "via_1",
+                "component": "via_4",
                 "port": "1"
             },
             "params": {
@@ -920,14 +980,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_4",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "via_1",
+                "component": "via_4",
                 "port": "1"
             },
             "params": {
@@ -970,14 +1030,14 @@
         {
             "sinks": [
                 {
-                    "component": "via_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "via_2",
+                "component": "via_4",
                 "port": "1"
             },
             "params": {
@@ -1020,14 +1080,14 @@
         {
             "sinks": [
                 {
-                    "component": "via_2",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_5",
+                "component": "via_4",
                 "port": "1"
             },
             "params": {
@@ -1070,14 +1130,14 @@
         {
             "sinks": [
                 {
-                    "component": "via_2",
+                    "component": "port_4",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "port_6",
+                "component": "via_4",
                 "port": "1"
             },
             "params": {
@@ -1120,14 +1180,14 @@
         {
             "sinks": [
                 {
-                    "component": "via_2",
+                    "component": "via_4",
                     "port": "1"
                 }
             ],
             "name": "channel_8",
             "id": "channel_8",
             "source": {
-                "component": "port_7",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -1170,12 +1230,112 @@
         {
             "sinks": [
                 {
-                    "component": "via_2",
+                    "component": "via_4",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
+            "source": {
+                "component": "port_6",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_9"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "via_4",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_10",
+            "id": "channel_10",
+            "source": {
+                "component": "port_7",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_10"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "via_4",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_11",
+            "id": "channel_11",
             "source": {
                 "component": "port_8",
                 "port": "1"
@@ -1211,7 +1371,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_9"
+                "ID": "channel_11"
             },
             "layer": "0",
             "paths": [],
@@ -1685,49 +1845,49 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_6",
+            "connectionid": "channel_8",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_7",
+            "connectionid": "channel_11",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"
         },
         {
             "componentid": "valve_2",
-            "connectionid": "channel_9",
+            "connectionid": "channel_10",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_2"
         },
         {
             "componentid": "valve_3",
-            "connectionid": "channel_8",
+            "connectionid": "channel_9",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_3"
         },
         {
             "componentid": "valve_4",
-            "connectionid": "channel_4",
+            "connectionid": "channel_7",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_4"
         },
         {
             "componentid": "valve_5",
-            "connectionid": "channel_2",
+            "connectionid": "channel_5",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_5"
         },
         {
             "componentid": "valve_6",
-            "connectionid": "channel_1",
+            "connectionid": "channel_6",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_6"
         },
         {
             "componentid": "valve_7",
-            "connectionid": "channel_3",
+            "connectionid": "channel_4",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_7"
         }

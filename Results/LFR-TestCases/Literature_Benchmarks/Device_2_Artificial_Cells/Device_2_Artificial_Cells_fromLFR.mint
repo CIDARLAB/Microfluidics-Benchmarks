@@ -42,15 +42,15 @@ CHANNEL channel_5 from droplet_capacitance_sensor_4 2 to port_5 1 crossSection=1
 CHANNEL channel_6 from droplet_capacitance_sensor_5 2 to port_6 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_7 from droplet_capacitance_sensor_6 2 to port_7 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_8 from droplet_capacitance_sensor_7 2 to port_8 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_9 from mixer_2 2 to droplet_capacitance_sensor_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_10 from mixer_3 2 to droplet_capacitance_sensor_7 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_11 from mixer_4 2 to port_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_12 from mixer_5 2 to droplet_capacitance_sensor_3 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_13 from mixer_6 2 to droplet_capacitance_sensor_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_14 from mixer_7 2 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_15 from mixer_8 2 to droplet_capacitance_sensor_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_16 from mixer_9 2 to droplet_capacitance_sensor_6 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_17 from mixer_10 2 to droplet_capacitance_sensor_5 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_9 from mixer_2 2 to droplet_capacitance_sensor_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_10 from mixer_3 2 to droplet_capacitance_sensor_6 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_11 from mixer_4 2 to droplet_capacitance_sensor_5 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_12 from mixer_5 2 to droplet_capacitance_sensor_7 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_13 from mixer_6 2 to port_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_14 from mixer_7 2 to droplet_capacitance_sensor_3 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_15 from mixer_8 2 to droplet_capacitance_sensor_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_16 from mixer_9 2 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_17 from mixer_10 2 to droplet_capacitance_sensor_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_18 from port_9 1 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_19 from port_9 1 to mixer_3 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_20 from port_9 1 to mixer_4 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
@@ -80,9 +80,9 @@ PORT Cport_0 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 PORT Cport_1 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 PORT Cport_2 componentSpacing=1000.0 portRadius=1000.0 height=1100.0 ;
 
-VALVE3D valve_0 on channel_11 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_1 on channel_11 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_2 on channel_11 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_0 on channel_13 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_1 on channel_13 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_2 on channel_13 componentSpacing=1000 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 crossSection=1 channelWidth=600 connectionSpacing=1000  ;
 CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 crossSection=1 channelWidth=600 connectionSpacing=1000  ;

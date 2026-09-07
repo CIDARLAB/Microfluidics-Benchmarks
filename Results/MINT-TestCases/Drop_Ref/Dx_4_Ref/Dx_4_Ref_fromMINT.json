@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_water"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector1"
             },
             "ports": [
                 {
@@ -123,7 +127,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector2"
             },
             "ports": [
                 {
@@ -150,7 +155,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector3"
             },
             "ports": [
                 {
@@ -177,7 +183,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector4"
             },
             "ports": [
                 {
@@ -212,7 +219,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mix_1"
             },
             "ports": [
                 {
@@ -253,7 +261,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "nozzle_droplet_generator_1"
             },
             "ports": [
                 {
@@ -309,7 +318,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pico_injector_1"
             },
             "ports": [
                 {
@@ -366,7 +376,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter_1"
             },
             "ports": [
                 {
@@ -423,7 +434,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter_2"
             },
             "ports": [
                 {
@@ -480,7 +492,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_sorter_3"
             },
             "ports": [
                 {
@@ -519,7 +532,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_waste1"
             },
             "ports": [
                 {
@@ -546,7 +560,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_waste2"
             },
             "ports": [
                 {
@@ -573,7 +588,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_keep1"
             },
             "ports": [
                 {
@@ -600,7 +616,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out_keep2"
             },
             "ports": [
                 {
@@ -618,14 +635,14 @@
         {
             "sinks": [
                 {
-                    "component": "mix_1",
+                    "component": "port_injector1",
                     "port": "1"
                 }
             ],
             "name": "connection_4",
             "id": "connection_4",
             "source": {
-                "component": "port_injector1",
+                "component": "mix_1",
                 "port": "1"
             },
             "params": {
@@ -658,7 +675,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_4"
             },
             "layer": "0",
             "paths": [],
@@ -667,14 +685,14 @@
         {
             "sinks": [
                 {
-                    "component": "mix_1",
+                    "component": "port_injector2",
                     "port": "1"
                 }
             ],
             "name": "connection_5",
             "id": "connection_5",
             "source": {
-                "component": "port_injector2",
+                "component": "mix_1",
                 "port": "1"
             },
             "params": {
@@ -707,7 +725,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_5"
             },
             "layer": "0",
             "paths": [],
@@ -716,14 +735,14 @@
         {
             "sinks": [
                 {
-                    "component": "mix_1",
+                    "component": "port_injector3",
                     "port": "1"
                 }
             ],
             "name": "connection_6",
             "id": "connection_6",
             "source": {
-                "component": "port_injector3",
+                "component": "mix_1",
                 "port": "1"
             },
             "params": {
@@ -756,7 +775,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_6"
             },
             "layer": "0",
             "paths": [],
@@ -765,14 +785,14 @@
         {
             "sinks": [
                 {
-                    "component": "mix_1",
+                    "component": "port_injector4",
                     "port": "1"
                 }
             ],
             "name": "connection_7",
             "id": "connection_7",
             "source": {
-                "component": "port_injector4",
+                "component": "mix_1",
                 "port": "1"
             },
             "params": {
@@ -805,7 +825,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_7"
             },
             "layer": "0",
             "paths": [],
@@ -814,14 +835,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_oil1",
                     "port": "1"
                 }
             ],
             "name": "connection_1",
             "id": "connection_1",
             "source": {
-                "component": "port_oil1",
+                "component": "nozzle_droplet_generator_1",
                 "port": "1"
             },
             "params": {
@@ -854,7 +875,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_1"
             },
             "layer": "0",
             "paths": [],
@@ -903,7 +925,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_2"
             },
             "layer": "0",
             "paths": [],
@@ -952,7 +975,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_3"
             },
             "layer": "0",
             "paths": [],
@@ -1001,7 +1025,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_8"
             },
             "layer": "0",
             "paths": [],
@@ -1010,15 +1035,15 @@
         {
             "sinks": [
                 {
-                    "component": "pico_injector_1",
-                    "port": "3"
+                    "component": "mix_1",
+                    "port": "2"
                 }
             ],
             "name": "connection_9",
             "id": "connection_9",
             "source": {
-                "component": "mix_1",
-                "port": "2"
+                "component": "pico_injector_1",
+                "port": "3"
             },
             "params": {
                 "channelWidth": 50,
@@ -1050,7 +1075,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_9"
             },
             "layer": "0",
             "paths": [],
@@ -1099,7 +1125,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_10"
             },
             "layer": "0",
             "paths": [],
@@ -1148,7 +1175,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_11"
             },
             "layer": "0",
             "paths": [],
@@ -1197,7 +1225,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_12"
             },
             "layer": "0",
             "paths": [],
@@ -1246,7 +1275,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_13"
             },
             "layer": "0",
             "paths": [],
@@ -1295,7 +1325,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_14"
             },
             "layer": "0",
             "paths": [],
@@ -1344,7 +1375,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_15"
             },
             "layer": "0",
             "paths": [],
@@ -1393,7 +1425,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_16"
             },
             "layer": "0",
             "paths": [],
@@ -1403,7 +1436,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 11,
+        "controlPortCount": 0
     },
     "layers": [
         {

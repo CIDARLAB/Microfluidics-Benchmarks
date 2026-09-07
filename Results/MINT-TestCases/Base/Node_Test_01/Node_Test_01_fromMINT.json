@@ -25,7 +25,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "m1"
             },
             "ports": [
                 {
@@ -135,7 +136,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "n1"
             },
             "ports": [
                 {
@@ -180,7 +182,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -207,7 +210,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p2"
             },
             "ports": [
                 {
@@ -234,7 +238,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p3"
             },
             "ports": [
                 {
@@ -263,7 +268,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v1"
             },
             "ports": [
                 {
@@ -292,7 +298,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v2"
             },
             "ports": [
                 {
@@ -321,7 +328,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v3"
             },
             "ports": [
                 {
@@ -348,7 +356,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -375,7 +384,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp2"
             },
             "ports": [
                 {
@@ -402,7 +412,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp3"
             },
             "ports": [
                 {
@@ -460,7 +471,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c0"
             },
             "layer": "0",
             "paths": [],
@@ -509,7 +521,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -518,15 +531,15 @@
         {
             "sinks": [
                 {
-                    "component": "p2",
-                    "port": "4"
+                    "component": "n1",
+                    "port": "3"
                 }
             ],
             "name": "c2",
             "id": "c2",
             "source": {
-                "component": "n1",
-                "port": "3"
+                "component": "p2",
+                "port": "4"
             },
             "params": {
                 "channelWidth": 100,
@@ -558,7 +571,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -607,7 +621,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -656,7 +671,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cca"
             },
             "layer": "1",
             "paths": [],
@@ -705,7 +721,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "ccb"
             },
             "layer": "1",
             "paths": [],
@@ -754,7 +771,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "ccc"
             },
             "layer": "1",
             "paths": [],
@@ -764,7 +782,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 3,
+        "controlPortCount": 3
     },
     "layers": [
         {
@@ -802,5 +822,32 @@
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "m1"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "m1": "HORIZONTAL"
+            }
+        },
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "n1",
+                "m1",
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

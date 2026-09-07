@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p_in"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p_out1"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p_out2"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p_out3"
             },
             "ports": [
                 {
@@ -123,7 +127,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p_out4"
             },
             "ports": [
                 {
@@ -161,7 +166,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "m"
             },
             "ports": [
                 {
@@ -236,7 +242,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -263,7 +270,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp2"
             },
             "ports": [
                 {
@@ -290,7 +298,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp3"
             },
             "ports": [
                 {
@@ -317,7 +326,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp4"
             },
             "ports": [
                 {
@@ -335,14 +345,14 @@
         {
             "sinks": [
                 {
-                    "component": "m",
+                    "component": "p_in",
                     "port": "1"
                 }
             ],
             "name": "ci1",
             "id": "ci1",
             "source": {
-                "component": "p_in",
+                "component": "m",
                 "port": "1"
             },
             "params": {
@@ -375,7 +385,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "ci1"
             },
             "layer": "0",
             "paths": [],
@@ -424,7 +435,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "co1"
             },
             "layer": "0",
             "paths": [],
@@ -473,7 +485,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "co2"
             },
             "layer": "0",
             "paths": [],
@@ -522,7 +535,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "co3"
             },
             "layer": "0",
             "paths": [],
@@ -531,15 +545,15 @@
         {
             "sinks": [
                 {
-                    "component": "p_out4",
-                    "port": "1"
+                    "component": "m",
+                    "port": "5"
                 }
             ],
             "name": "co4",
             "id": "co4",
             "source": {
-                "component": "m",
-                "port": "5"
+                "component": "p_out4",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 200,
@@ -571,7 +585,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "co4"
             },
             "layer": "0",
             "paths": [],
@@ -620,7 +635,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc1"
             },
             "layer": "1",
             "paths": [],
@@ -669,7 +685,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc2"
             },
             "layer": "1",
             "paths": [],
@@ -718,7 +735,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc3"
             },
             "layer": "1",
             "paths": [],
@@ -767,7 +785,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc4"
             },
             "layer": "1",
             "paths": [],
@@ -777,7 +796,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 5,
+        "controlPortCount": 4
     },
     "layers": [
         {
@@ -799,5 +820,36 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "MIRROR_CONSTRAINT",
+            "operation_type": "SYMMETRY_OPERATION",
+            "components": [
+                "p_out1",
+                "p_out2",
+                "p_out3",
+                "p_out4"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "source": "m",
+                "mirror_count": 4,
+                "mirror_groups": [
+                    [
+                        "p_out1"
+                    ],
+                    [
+                        "p_out2"
+                    ],
+                    [
+                        "p_out3"
+                    ],
+                    [
+                        "p_out4"
+                    ]
+                ]
+            }
+        }
+    ]
 }

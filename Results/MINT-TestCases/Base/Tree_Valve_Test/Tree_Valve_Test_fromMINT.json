@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b1_1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b1_2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b1_3"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "b1_4"
             },
             "ports": [
                 {
@@ -131,7 +135,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "m2"
             },
             "ports": [
                 {
@@ -182,7 +187,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -211,7 +217,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v1"
             },
             "ports": [
                 {
@@ -240,7 +247,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v2"
             },
             "ports": [
                 {
@@ -269,7 +277,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v3"
             },
             "ports": [
                 {
@@ -298,7 +307,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v4"
             },
             "ports": [
                 {
@@ -325,7 +335,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -343,14 +354,14 @@
         {
             "sinks": [
                 {
-                    "component": "m2",
+                    "component": "b1_1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "b1_1",
+                "component": "m2",
                 "port": "1"
             },
             "params": {
@@ -383,7 +394,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -432,7 +444,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -481,7 +494,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -530,7 +544,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -579,7 +594,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "0",
             "paths": [],
@@ -628,7 +644,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc1"
             },
             "layer": "1",
             "paths": [],
@@ -677,7 +694,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc2"
             },
             "layer": "1",
             "paths": [],
@@ -726,7 +744,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc3"
             },
             "layer": "1",
             "paths": [],
@@ -775,7 +794,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc4"
             },
             "layer": "1",
             "paths": [],
@@ -785,7 +805,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 5,
+        "controlPortCount": 1
     },
     "layers": [
         {
@@ -828,5 +850,34 @@
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "b1_1",
+                "m2"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "b1_1": "HORIZONTAL",
+                "m2": "HORIZONTAL"
+            }
+        },
+        {
+            "type": "ORIENTATION_CONSTRAINT",
+            "operation_type": "RELATIVE_OPERATIONS",
+            "components": [
+                "b1_1",
+                "m2"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {
+                "b1_1": "HORIZONTAL",
+                "m2": "HORIZONTAL"
+            }
+        }
+    ]
 }

@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_oil2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_water"
             },
             "ports": [
                 {
@@ -104,7 +107,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "nozzle_droplet_generator_1"
             },
             "ports": [
                 {
@@ -157,7 +161,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "droplet_splitter_1"
             },
             "ports": [
                 {
@@ -196,7 +201,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector1"
             },
             "ports": [
                 {
@@ -223,7 +229,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_injector2"
             },
             "ports": [
                 {
@@ -261,7 +268,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "picoinjector_1"
             },
             "ports": [
                 {
@@ -311,7 +319,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "picoinjector_2"
             },
             "ports": [
                 {
@@ -350,7 +359,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out1"
             },
             "ports": [
                 {
@@ -377,7 +387,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_out2"
             },
             "ports": [
                 {
@@ -395,14 +406,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_oil1",
                     "port": "1"
                 }
             ],
             "name": "connection_1",
             "id": "connection_1",
             "source": {
-                "component": "port_oil1",
+                "component": "nozzle_droplet_generator_1",
                 "port": "1"
             },
             "params": {
@@ -435,7 +446,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_1"
             },
             "layer": "0",
             "paths": [],
@@ -484,7 +496,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_2"
             },
             "layer": "0",
             "paths": [],
@@ -533,7 +546,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_3"
             },
             "layer": "0",
             "paths": [],
@@ -582,7 +596,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_4"
             },
             "layer": "0",
             "paths": [],
@@ -631,7 +646,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_5"
             },
             "layer": "0",
             "paths": [],
@@ -640,14 +656,64 @@
         {
             "sinks": [
                 {
-                    "component": "picoinjector_2",
-                    "port": "1"
+                    "component": "droplet_splitter_1",
+                    "port": "3"
                 }
             ],
             "name": "connection_6",
             "id": "connection_6",
             "source": {
-                "component": "droplet_splitter_1",
+                "component": "picoinjector_2",
+                "port": "1"
+            },
+            "params": {
+                "channelWidth": 300,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "connection_6"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_injector1",
+                    "port": "1"
+                }
+            ],
+            "name": "connection_7",
+            "id": "connection_7",
+            "source": {
+                "component": "picoinjector_1",
                 "port": "3"
             },
             "params": {
@@ -680,7 +746,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_7"
             },
             "layer": "0",
             "paths": [],
@@ -689,64 +756,15 @@
         {
             "sinks": [
                 {
-                    "component": "picoinjector_1",
-                    "port": "3"
-                }
-            ],
-            "name": "connection_7",
-            "id": "connection_7",
-            "source": {
-                "component": "port_injector1",
-                "port": "1"
-            },
-            "params": {
-                "channelWidth": 300,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ]
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "picoinjector_2",
-                    "port": "3"
+                    "component": "port_injector2",
+                    "port": "1"
                 }
             ],
             "name": "connection_8",
             "id": "connection_8",
             "source": {
-                "component": "port_injector2",
-                "port": "1"
+                "component": "picoinjector_2",
+                "port": "3"
             },
             "params": {
                 "channelWidth": 300,
@@ -778,7 +796,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_8"
             },
             "layer": "0",
             "paths": [],
@@ -827,7 +846,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_9"
             },
             "layer": "0",
             "paths": [],
@@ -836,15 +856,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_out2",
-                    "port": "1"
+                    "component": "picoinjector_2",
+                    "port": "2"
                 }
             ],
             "name": "connection_10",
             "id": "connection_10",
             "source": {
-                "component": "picoinjector_2",
-                "port": "2"
+                "component": "port_out2",
+                "port": "1"
             },
             "params": {
                 "channelWidth": 300,
@@ -876,7 +896,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "connection_10"
             },
             "layer": "0",
             "paths": [],
@@ -886,7 +907,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 7,
+        "controlPortCount": 0
     },
     "layers": [
         {

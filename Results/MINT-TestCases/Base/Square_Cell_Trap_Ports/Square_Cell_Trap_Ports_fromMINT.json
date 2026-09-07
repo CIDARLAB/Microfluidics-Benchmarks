@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p2"
             },
             "ports": [
                 {
@@ -69,7 +71,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p3"
             },
             "ports": [
                 {
@@ -96,7 +99,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p4"
             },
             "ports": [
                 {
@@ -130,7 +134,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "ct1"
             },
             "ports": [
                 {
@@ -175,7 +180,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -202,7 +208,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp2"
             },
             "ports": [
                 {
@@ -229,7 +236,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp3"
             },
             "ports": [
                 {
@@ -256,7 +264,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp4"
             },
             "ports": [
                 {
@@ -285,7 +294,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v1"
             },
             "ports": [
                 {
@@ -314,7 +324,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v3"
             },
             "ports": [
                 {
@@ -343,7 +354,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v2"
             },
             "ports": [
                 {
@@ -372,7 +384,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "v4"
             },
             "ports": [
                 {
@@ -430,7 +443,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -479,7 +493,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -488,15 +503,15 @@
         {
             "sinks": [
                 {
-                    "component": "ct1",
-                    "port": "3"
+                    "component": "p3",
+                    "port": "1"
                 }
             ],
             "name": "c3",
             "id": "c3",
             "source": {
-                "component": "p3",
-                "port": "1"
+                "component": "ct1",
+                "port": "3"
             },
             "params": {
                 "channelWidth": 500,
@@ -528,7 +543,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c3"
             },
             "layer": "0",
             "paths": [],
@@ -577,7 +593,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c4"
             },
             "layer": "0",
             "paths": [],
@@ -626,7 +643,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c5"
             },
             "layer": "1",
             "paths": [],
@@ -675,7 +693,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c6"
             },
             "layer": "1",
             "paths": [],
@@ -724,7 +743,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c7"
             },
             "layer": "1",
             "paths": [],
@@ -773,7 +793,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c8"
             },
             "layer": "1",
             "paths": [],
@@ -783,7 +804,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 4,
+        "controlPortCount": 4
     },
     "layers": [
         {
@@ -826,5 +849,132 @@
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "ct1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 4250,
+                "ypos": 4250,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 4500,
+                "ypos": 0,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p3"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 4500,
+                "ypos": 9000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p2"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 9000,
+                "ypos": 4500,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "p4"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 0,
+                "ypos": 4500,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp1"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 9000,
+                "ypos": 2000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp2"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 7000,
+                "ypos": 9000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp3"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 0,
+                "ypos": 7000,
+                "zpos": 0
+            },
+            "relationships": {}
+        },
+        {
+            "type": "POSITION_CONSTRAINT",
+            "operation_type": "EXPLICIT_OPERATION",
+            "components": [
+                "cp4"
+            ],
+            "connections": [],
+            "params": {
+                "xpos": 2000,
+                "ypos": 0,
+                "zpos": 0
+            },
+            "relationships": {}
+        }
+    ]
 }

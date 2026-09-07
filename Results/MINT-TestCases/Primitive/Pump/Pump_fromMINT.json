@@ -15,7 +15,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p1"
             },
             "ports": [
                 {
@@ -42,7 +43,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "p2"
             },
             "ports": [
                 {
@@ -75,7 +77,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "pump"
             },
             "ports": [
                 {
@@ -126,7 +129,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp1"
             },
             "ports": [
                 {
@@ -153,7 +157,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp2"
             },
             "ports": [
                 {
@@ -180,7 +185,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "cp3"
             },
             "ports": [
                 {
@@ -198,14 +204,14 @@
         {
             "sinks": [
                 {
-                    "component": "pump",
+                    "component": "p1",
                     "port": "1"
                 }
             ],
             "name": "c1",
             "id": "c1",
             "source": {
-                "component": "p1",
+                "component": "pump",
                 "port": "1"
             },
             "params": {
@@ -238,7 +244,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c1"
             },
             "layer": "0",
             "paths": [],
@@ -287,7 +294,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "c2"
             },
             "layer": "0",
             "paths": [],
@@ -336,7 +344,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc1"
             },
             "layer": "1",
             "paths": [],
@@ -385,7 +394,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc2"
             },
             "layer": "1",
             "paths": [],
@@ -434,7 +444,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "cc3"
             },
             "layer": "1",
             "paths": [],
@@ -444,7 +455,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 2,
+        "controlPortCount": 3
     },
     "layers": [
         {

@@ -13,7 +13,8 @@
                     -1,
                     -1
                 ],
-                "componentSpacing": 1000
+                "componentSpacing": 1000,
+                "ID": "cell_trapper_1"
             },
             "ports": [],
             "x-span": -1,
@@ -33,7 +34,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_1"
             },
             "ports": [
                 {
@@ -68,7 +70,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "mixer_1"
             },
             "ports": [
                 {
@@ -101,7 +104,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_2"
             },
             "ports": [
                 {
@@ -128,7 +132,8 @@
                 "position": [
                     -1,
                     -1
-                ]
+                ],
+                "ID": "port_3"
             },
             "ports": [
                 {
@@ -186,7 +191,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [],
@@ -195,15 +201,15 @@
         {
             "sinks": [
                 {
-                    "component": "cell_trapper_1",
-                    "port": "1"
+                    "component": "mixer_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "cell_trapper_1",
+                "port": "1"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -235,7 +241,8 @@
                             -1
                         ]
                     ]
-                ]
+                ],
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [],
@@ -245,7 +252,9 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200
+        "length": 76200,
+        "flowPortCount": 3,
+        "controlPortCount": 0
     },
     "layers": [
         {
