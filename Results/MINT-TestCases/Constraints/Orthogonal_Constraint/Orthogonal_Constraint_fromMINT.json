@@ -15,14 +15,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "north"
+                ]
             },
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -43,14 +60,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "east"
+                ]
             },
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -71,14 +105,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "west"
+                ]
             },
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -99,14 +150,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "south"
+                ]
             },
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -126,31 +194,30 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "n1"
+                ]
             },
             "ports": [
                 {
-                    "x": 50.0,
+                    "x": 200.0,
                     "y": 0.0,
                     "label": "1",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 100.0,
-                    "y": 50.0,
+                    "x": 400.0,
+                    "y": 200.0,
                     "label": "2",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 50.0,
-                    "y": 100.0,
+                    "x": 200.0,
+                    "y": 400.0,
                     "label": "3",
                     "layer": "FLOW"
                 },
                 {
                     "x": 0.0,
-                    "y": 50.0,
+                    "y": 200.0,
                     "label": "4",
                     "layer": "FLOW"
                 }
@@ -203,8 +270,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c_north"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -253,8 +319,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c_south"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -303,8 +368,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c_east"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -353,8 +417,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c_west"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -364,9 +427,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 4,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {
@@ -381,20 +442,5 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": [
-        {
-            "type": "ORTHOGONAL_CONSTRAINT",
-            "operation_type": "ALIGNMENT_OPERATION",
-            "components": [
-                "n1",
-                "north",
-                "south",
-                "east",
-                "west"
-            ],
-            "connections": [],
-            "params": {},
-            "relationships": {}
-        }
-    ]
+    "layoutConstraints": []
 }

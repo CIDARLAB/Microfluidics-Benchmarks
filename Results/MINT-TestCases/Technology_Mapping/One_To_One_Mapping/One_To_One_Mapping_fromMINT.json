@@ -13,18 +13,17 @@
                 "channelWidth": 800.0,
                 "bendSpacing": 1230.0,
                 "numberOfBends": 1.0,
+                "rotation": 0.0,
                 "bendLength": 2460.0,
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
-                "rotation": 0.0,
                 "edgeBend1": 200.0,
                 "edgeBend2": 200.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "mixer_1"
+                ]
             },
             "ports": [
                 {
@@ -57,14 +56,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_1"
+                ]
             },
             "ports": [
                 {
                     "x": 700,
-                    "y": 700,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1400,
+                    "y": 700,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 700,
+                    "y": 1400,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 700,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -85,14 +101,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_2"
+                ]
             },
             "ports": [
                 {
                     "x": 700,
-                    "y": 700,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1400,
+                    "y": 700,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 700,
+                    "y": 1400,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 700,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -104,15 +137,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "port_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -144,8 +177,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_1"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -154,14 +186,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "mixer_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -194,8 +226,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_2"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -205,9 +236,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 2,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {

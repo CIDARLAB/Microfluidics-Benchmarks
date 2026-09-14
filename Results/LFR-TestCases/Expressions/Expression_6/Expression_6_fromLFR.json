@@ -192,8 +192,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -262,8 +280,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -290,8 +326,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -318,8 +372,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -346,8 +418,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -374,8 +464,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -387,15 +495,15 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_capacitance_sensor_1",
-                    "port": "2"
+                    "component": "mixer_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "mixer_1",
-                "port": "1"
+                "component": "droplet_capacitance_sensor_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -437,15 +545,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "mixer_3",
+                    "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
                 "component": "mixer_2",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -487,15 +595,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_4",
-                    "port": "2"
+                    "component": "droplet_capacitance_sensor_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "droplet_capacitance_sensor_1",
-                "port": "1"
+                "component": "mixer_4",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -537,15 +645,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "2"
+                    "component": "port_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
                 "component": "mixer_3",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -587,15 +695,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_3",
-                    "port": "2"
+                    "component": "mixer_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -637,14 +745,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "mixer_4",
                     "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "mixer_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -687,14 +795,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "mixer_4",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "mixer_4",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -737,14 +845,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_4",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
             "name": "channel_8",
             "id": "channel_8",
             "source": {
-                "component": "mixer_4",
+                "component": "port_4",
                 "port": "1"
             },
             "params": {
@@ -787,14 +895,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_5",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
             "source": {
-                "component": "mixer_3",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -837,14 +945,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_6",
+                    "component": "mixer_3",
                     "port": "1"
                 }
             ],
             "name": "channel_10",
             "id": "channel_10",
             "source": {
-                "component": "mixer_2",
+                "component": "port_6",
                 "port": "1"
             },
             "params": {

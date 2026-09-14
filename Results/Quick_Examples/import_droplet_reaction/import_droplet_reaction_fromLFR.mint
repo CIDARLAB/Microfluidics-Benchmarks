@@ -21,10 +21,10 @@ CHANNEL channel_1 from nozzle_droplet_generator_1 2 to reaction_chamber_1 1 cros
 CHANNEL channel_2 from reaction_chamber_1 3 to port_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_3 from mixer_1 2 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_4 from mixer_2 2 to nozzle_droplet_generator_1 4 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_5 from port_2 1 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_6 from port_3 1 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_7 from port_4 1 to nozzle_droplet_generator_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
-CHANNEL channel_8 from port_5 1 to nozzle_droplet_generator_1 3 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_5 from port_2 1 to mixer_2 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_6 from port_3 1 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_7 from port_4 1 to nozzle_droplet_generator_1 3 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
+CHANNEL channel_8 from port_5 1 to nozzle_droplet_generator_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 CHANNEL channel_9 from port_6 1 to mixer_1 1 crossSection=1 connectionSpacing=1000 channelWidth=600  ;
 
  

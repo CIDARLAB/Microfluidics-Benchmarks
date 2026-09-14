@@ -169,8 +169,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -451,8 +469,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -479,8 +515,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -492,15 +546,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "square_cell_trap_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "square_cell_trap_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -692,14 +746,14 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_2",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "square_cell_trap_1",
+                "component": "square_cell_trap_5",
                 "port": "2"
             },
             "params": {
@@ -742,14 +796,14 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_3",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "square_cell_trap_1",
+                "component": "square_cell_trap_6",
                 "port": "2"
             },
             "params": {
@@ -792,7 +846,7 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_4",
+                    "component": "square_cell_trap_2",
                     "port": "1"
                 }
             ],
@@ -842,7 +896,7 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_5",
+                    "component": "square_cell_trap_3",
                     "port": "1"
                 }
             ],
@@ -892,7 +946,7 @@
         {
             "sinks": [
                 {
-                    "component": "square_cell_trap_6",
+                    "component": "square_cell_trap_4",
                     "port": "1"
                 }
             ],
@@ -942,14 +996,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "square_cell_trap_5",
                     "port": "1"
                 }
             ],
             "name": "channel_10",
             "id": "channel_10",
             "source": {
-                "component": "square_cell_trap_5",
+                "component": "square_cell_trap_1",
                 "port": "2"
             },
             "params": {
@@ -992,14 +1046,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "square_cell_trap_6",
                     "port": "1"
                 }
             ],
             "name": "channel_11",
             "id": "channel_11",
             "source": {
-                "component": "square_cell_trap_6",
+                "component": "square_cell_trap_1",
                 "port": "2"
             },
             "params": {
@@ -1042,15 +1096,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "2"
+                    "component": "mixer_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_12",
             "id": "channel_12",
             "source": {
-                "component": "mixer_1",
-                "port": "1"
+                "component": "mixer_2",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -1092,14 +1146,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_13",
             "id": "channel_13",
             "source": {
-                "component": "mixer_2",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -1142,14 +1196,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_14",
             "id": "channel_14",
             "source": {
-                "component": "mixer_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {

@@ -121,8 +121,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -149,8 +167,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -177,8 +213,26 @@
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -205,8 +259,26 @@
             "ports": [
                 {
                     "x": 2000,
-                    "y": 2000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 4000,
+                    "y": 2000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 4000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 2000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -329,8 +401,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -357,8 +447,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -470,15 +578,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "droplet_sorter_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "droplet_sorter_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -520,15 +628,15 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "3"
+                    "component": "mixer_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "mixer_2",
-                "port": "1"
+                "component": "nozzle_droplet_generator_1",
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
@@ -670,15 +778,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "2"
+                    "component": "mixer_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "mixer_1",
-                "port": "1"
+                "component": "mixer_2",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -720,14 +828,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_5",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_8",
             "id": "channel_8",
             "source": {
-                "component": "nozzle_droplet_generator_1",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -770,14 +878,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_6",
+                    "component": "nozzle_droplet_generator_1",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
             "source": {
-                "component": "mixer_2",
+                "component": "port_6",
                 "port": "1"
             },
             "params": {

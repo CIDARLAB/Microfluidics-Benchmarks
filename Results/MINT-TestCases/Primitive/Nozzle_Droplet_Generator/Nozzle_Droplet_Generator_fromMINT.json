@@ -15,14 +15,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p1"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -43,14 +60,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p2"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -71,14 +105,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p3"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -99,14 +150,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p4"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -135,8 +203,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "g"
+                ]
             },
             "ports": [
                 {
@@ -212,8 +279,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co1"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -262,8 +328,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co2"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -272,15 +337,15 @@
         {
             "sinks": [
                 {
-                    "component": "g",
-                    "port": "3"
+                    "component": "p3",
+                    "port": "1"
                 }
             ],
             "name": "co3",
             "id": "co3",
             "source": {
-                "component": "p3",
-                "port": "1"
+                "component": "g",
+                "port": "3"
             },
             "params": {
                 "channelWidth": 200,
@@ -312,8 +377,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co3"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -362,8 +426,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c04"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -373,9 +436,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 4,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {

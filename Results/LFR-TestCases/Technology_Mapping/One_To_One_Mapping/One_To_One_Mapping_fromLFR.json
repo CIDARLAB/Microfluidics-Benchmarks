@@ -63,8 +63,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -91,8 +109,26 @@
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -104,15 +140,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "port_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -154,14 +190,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "mixer_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {

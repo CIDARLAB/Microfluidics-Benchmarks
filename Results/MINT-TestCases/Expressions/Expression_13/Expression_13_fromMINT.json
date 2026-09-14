@@ -10,6 +10,7 @@
             ],
             "params": {
                 "componentSpacing": 1000.0,
+                "rotation": 0.0,
                 "height": 250.0,
                 "inletWidth": 2000.0,
                 "inletLength": 6000.0,
@@ -19,12 +20,10 @@
                 "outletLength2": 3000.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
-                "rotation": 0.0,
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "droplet_splitter_1"
+                ]
             },
             "ports": [
                 {
@@ -63,14 +62,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_1"
+                ]
             },
             "ports": [
                 {
                     "x": 700,
-                    "y": 700,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1400,
+                    "y": 700,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 700,
+                    "y": 1400,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 700,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -91,14 +107,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_2"
+                ]
             },
             "ports": [
                 {
                     "x": 700,
-                    "y": 700,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1400,
+                    "y": 700,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 700,
+                    "y": 1400,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 700,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -119,14 +152,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_3"
+                ]
             },
             "ports": [
                 {
                     "x": 700,
-                    "y": 700,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1400,
+                    "y": 700,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 700,
+                    "y": 1400,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 700,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -138,15 +188,15 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_splitter_1",
-                    "port": "3"
+                    "component": "port_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "droplet_splitter_1",
+                "port": "3"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -178,8 +228,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_1"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -188,15 +237,15 @@
         {
             "sinks": [
                 {
-                    "component": "droplet_splitter_1",
-                    "port": "3"
+                    "component": "port_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "droplet_splitter_1",
+                "port": "3"
             },
             "params": {
                 "connectionSpacing": 1000,
@@ -228,8 +277,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_2"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -278,8 +326,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_3"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -289,9 +336,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 3,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {

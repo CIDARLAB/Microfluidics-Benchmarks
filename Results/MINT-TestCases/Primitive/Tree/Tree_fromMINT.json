@@ -15,14 +15,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p_in"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -43,14 +60,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p_out1"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -71,14 +105,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p_out2"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -99,14 +150,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p_out3"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -127,14 +195,31 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "p_out4"
+                ]
             },
             "ports": [
                 {
                     "x": 1000,
-                    "y": 1000,
+                    "y": 0,
                     "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 2000,
+                    "y": 1000,
+                    "label": "2",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1000,
+                    "y": 2000,
+                    "label": "3",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 0,
+                    "y": 1000,
+                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -163,8 +248,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "t"
+                ]
             },
             "ports": [
                 {
@@ -206,14 +290,14 @@
         {
             "sinks": [
                 {
-                    "component": "p_in",
+                    "component": "t",
                     "port": "1"
                 }
             ],
             "name": "ci1",
             "id": "ci1",
             "source": {
-                "component": "t",
+                "component": "p_in",
                 "port": "1"
             },
             "params": {
@@ -246,8 +330,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "ci1"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -256,15 +339,15 @@
         {
             "sinks": [
                 {
-                    "component": "t",
-                    "port": "2"
+                    "component": "p_out1",
+                    "port": "1"
                 }
             ],
             "name": "co1",
             "id": "co1",
             "source": {
-                "component": "p_out1",
-                "port": "1"
+                "component": "t",
+                "port": "2"
             },
             "params": {
                 "channelWidth": 200,
@@ -296,8 +379,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co1"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -306,15 +388,15 @@
         {
             "sinks": [
                 {
-                    "component": "t",
-                    "port": "3"
+                    "component": "p_out2",
+                    "port": "1"
                 }
             ],
             "name": "co2",
             "id": "co2",
             "source": {
-                "component": "p_out2",
-                "port": "1"
+                "component": "t",
+                "port": "3"
             },
             "params": {
                 "channelWidth": 200,
@@ -346,8 +428,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co2"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -356,15 +437,15 @@
         {
             "sinks": [
                 {
-                    "component": "t",
-                    "port": "4"
+                    "component": "p_out3",
+                    "port": "1"
                 }
             ],
             "name": "co3",
             "id": "co3",
             "source": {
-                "component": "p_out3",
-                "port": "1"
+                "component": "t",
+                "port": "4"
             },
             "params": {
                 "channelWidth": 200,
@@ -396,8 +477,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "co3"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -406,15 +486,15 @@
         {
             "sinks": [
                 {
-                    "component": "t",
-                    "port": "5"
+                    "component": "p_out4",
+                    "port": "1"
                 }
             ],
             "name": "c04",
             "id": "c04",
             "source": {
-                "component": "p_out4",
-                "port": "1"
+                "component": "t",
+                "port": "5"
             },
             "params": {
                 "channelWidth": 200,
@@ -446,8 +526,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "c04"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -457,9 +536,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 5,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {
@@ -474,36 +551,5 @@
     "version": "1.2",
     "valves": [],
     "isPnR": false,
-    "layoutConstraints": [
-        {
-            "type": "MIRROR_CONSTRAINT",
-            "operation_type": "SYMMETRY_OPERATION",
-            "components": [
-                "p_out1",
-                "p_out2",
-                "p_out3",
-                "p_out4"
-            ],
-            "connections": [],
-            "params": {},
-            "relationships": {
-                "source": "t",
-                "mirror_count": 4,
-                "mirror_groups": [
-                    [
-                        "p_out1"
-                    ],
-                    [
-                        "p_out2"
-                    ],
-                    [
-                        "p_out3"
-                    ],
-                    [
-                        "p_out4"
-                    ]
-                ]
-            }
-        }
-    ]
+    "layoutConstraints": []
 }

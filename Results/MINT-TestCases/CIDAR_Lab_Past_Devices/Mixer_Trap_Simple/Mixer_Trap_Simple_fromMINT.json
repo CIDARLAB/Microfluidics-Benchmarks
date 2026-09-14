@@ -15,8 +15,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_in"
+                ]
             },
             "ports": [
                 {
@@ -69,8 +68,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "mixer_1"
+                ]
             },
             "ports": [
                 {
@@ -110,8 +108,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "cell_trapper_1"
+                ]
             },
             "ports": [
                 {
@@ -156,8 +153,7 @@
                 "position": [
                     -1,
                     -1
-                ],
-                "ID": "port_out"
+                ]
             },
             "ports": [
                 {
@@ -193,15 +189,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_in",
-                    "port": "2"
+                    "component": "mixer_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "mixer_1",
-                "port": "1"
+                "component": "port_in",
+                "port": "2"
             },
             "params": {
                 "channelWidth": 400,
@@ -233,58 +229,7 @@
                             -1
                         ]
                     ]
-                ],
-                "ID": "channel_1"
-            },
-            "layer": "0",
-            "paths": [],
-            "entity": "CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "mixer_1",
-                    "port": "2"
-                }
-            ],
-            "name": "channel_2",
-            "id": "channel_2",
-            "source": {
-                "component": "cell_trapper_1",
-                "port": "1"
-            },
-            "params": {
-                "channelWidth": 400,
-                "connectionSpacing": 1000,
-                "crossSection": 1,
-                "start": [
-                    "Point",
-                    -1,
-                    -1
-                ],
-                "end": [
-                    -1,
-                    -1
-                ],
-                "wayPoints": [
-                    [
-                        -1,
-                        -1
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            -1,
-                            -1
-                        ],
-                        [
-                            -1,
-                            -1
-                        ]
-                    ]
-                ],
-                "ID": "channel_2"
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -294,14 +239,14 @@
             "sinks": [
                 {
                     "component": "cell_trapper_1",
-                    "port": "2"
+                    "port": "1"
                 }
             ],
-            "name": "channel_3",
-            "id": "channel_3",
+            "name": "channel_2",
+            "id": "channel_2",
             "source": {
-                "component": "port_out",
-                "port": "4"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "channelWidth": 400,
@@ -333,8 +278,56 @@
                             -1
                         ]
                     ]
+                ]
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_out",
+                    "port": "4"
+                }
+            ],
+            "name": "channel_3",
+            "id": "channel_3",
+            "source": {
+                "component": "cell_trapper_1",
+                "port": "2"
+            },
+            "params": {
+                "channelWidth": 400,
+                "connectionSpacing": 1000,
+                "crossSection": 1,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
                 ],
-                "ID": "channel_3"
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ]
             },
             "layer": "0",
             "paths": [],
@@ -344,9 +337,7 @@
     "params": {
         "x-span": 76200,
         "y-span": 76200,
-        "length": 76200,
-        "flowPortCount": 2,
-        "controlPortCount": 0
+        "length": 76200
     },
     "layers": [
         {
