@@ -32,5 +32,5 @@ NET n1 from cp1 4 to v3d1 1, v3d6 3 channelWidth=500;
 NET n2 from cp2 4 to v3d3 2, v3d5 2 channelWidth=500;
 CHANNEL cc1 from v3d2 2 to v3d4 4 channelWidth=500;
 CHANNEL cc2 from v3d4 2 to v3d5 4 channelWidth=500;
-CHANNEL cc3 from v1 6 to v2 8 channelWidth=500;
+CHANNEL cc3 from v1 1 to v2 1 channelWidth=500;
 END LAYER
