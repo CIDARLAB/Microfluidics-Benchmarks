@@ -1,58 +1,105 @@
 DEVICE Logic_Test_03
-LAYER FLOW 
-LOGIC ARRAY la flowChannelWidth=100 controlChannelWidth=20 chamberLength=100 chamberWidth=100 r=100;
- V BANK b1 of 8  PORT portRadius=100  spacing=1500 ;
-H IN MUX m1 1 to 8 r=100 flowChannelWidth=100 controlChannelWidth=20;
+LAYER FLOW
 
+LOGIC ARRAY logic_array_1 flowChannelWidth=200 controlChannelWidth=100 chamberLength=100 chamberWidth=100;
+LOGIC ARRAY logic_array_2 flowChannelWidth=200 controlChannelWidth=100 chamberLength=100 chamberWidth=100;
+LOGIC ARRAY logic_array_3 flowChannelWidth=200 controlChannelWidth=100 chamberLength=100 chamberWidth=100;
 
-NODE n1;
+PORT logic_array_1_flow_1, logic_array_1_flow_3, logic_array_2_flow_3, logic_array_3_flow_2, logic_array_3_flow_3 portRadius=1000;
 
-CHANNEL c0 from m1 1 to n1 4 channelWidth=100;
-CHANNEL c1 from n1 2 to la 3 channelWidth=100;
-CHANNEL c2 from n1 3 to la 2 channelWidth=100;
-CHANNEL c3 from la 1 to n1 1 channelWidth=100;
+CHANNEL channel_flow_1_1 from logic_array_1_flow_1 2 to logic_array_1 1 channelWidth=200;
+CHANNEL channel_flow_1_3 from logic_array_1_flow_3 2 to logic_array_1 3 channelWidth=200;
+CHANNEL channel_mid_1 from logic_array_1 2 to logic_array_2 1 channelWidth=200;
+CHANNEL channel_mid_2 from logic_array_2 2 to logic_array_3 1 channelWidth=200;
+CHANNEL channel_flow_2_3 from logic_array_2_flow_3 2 to logic_array_2 3 channelWidth=200;
+CHANNEL channel_flow_3_2 from logic_array_3 2 to logic_array_3_flow_2 4 channelWidth=200;
+CHANNEL channel_flow_3_3 from logic_array_3_flow_3 2 to logic_array_3 3 channelWidth=200;
+
 END LAYER
-LAYER CONTROL 
- H BANK b4 of 5  PORT portRadius=100  ;
- H BANK b5 of 4  PORT portRadius=100  ;
+LAYER CONTROL
 
-CHANNEL cc21 from b4 1 to m1 2 channelWidth=20;
-CHANNEL cc22 from b5 1 to m1 3 channelWidth=20;
-CHANNEL cc23 from b4 2 to m1 4 channelWidth=20;
-CHANNEL cc24 from b5 2 to m1 5 channelWidth=20;
-CHANNEL cc25 from b4 3 to m1 6 channelWidth=20;
-CHANNEL cc26 from b5 3 to m1 7 channelWidth=20;
+H BANK logic_array_1_control_a of 10 PORT portRadius=1000 spacing=3000;
+H BANK logic_array_1_control_b of 10 PORT portRadius=1000 spacing=3000;
+PORT logic_array_1_control_24, logic_array_1_control_25, logic_array_1_control_26 portRadius=1000;
 
-CHANNEL cca from la 24 to b4 4 channelWidth=20;
-CHANNEL ccb from la 25 to b4 5 channelWidth=20;
-CHANNEL ccc from la 26 to b5 4 channelWidth=20;
+CHANNEL cc_1_a1 from logic_array_1_control_a 1 to logic_array_1 4 channelWidth=100;
+CHANNEL cc_1_a2 from logic_array_1_control_a 2 to logic_array_1 5 channelWidth=100;
+CHANNEL cc_1_a3 from logic_array_1_control_a 3 to logic_array_1 6 channelWidth=100;
+CHANNEL cc_1_a4 from logic_array_1_control_a 4 to logic_array_1 7 channelWidth=100;
+CHANNEL cc_1_a5 from logic_array_1_control_a 5 to logic_array_1 8 channelWidth=100;
+CHANNEL cc_1_a6 from logic_array_1_control_a 6 to logic_array_1 9 channelWidth=100;
+CHANNEL cc_1_a7 from logic_array_1_control_a 7 to logic_array_1 10 channelWidth=100;
+CHANNEL cc_1_a8 from logic_array_1_control_a 8 to logic_array_1 11 channelWidth=100;
+CHANNEL cc_1_a9 from logic_array_1_control_a 9 to logic_array_1 12 channelWidth=100;
+CHANNEL cc_1_a10 from logic_array_1_control_a 10 to logic_array_1 13 channelWidth=100;
+CHANNEL cc_1_b1 from logic_array_1_control_b 1 to logic_array_1 14 channelWidth=100;
+CHANNEL cc_1_b2 from logic_array_1_control_b 2 to logic_array_1 15 channelWidth=100;
+CHANNEL cc_1_b3 from logic_array_1_control_b 3 to logic_array_1 16 channelWidth=100;
+CHANNEL cc_1_b4 from logic_array_1_control_b 4 to logic_array_1 17 channelWidth=100;
+CHANNEL cc_1_b5 from logic_array_1_control_b 5 to logic_array_1 18 channelWidth=100;
+CHANNEL cc_1_b6 from logic_array_1_control_b 6 to logic_array_1 19 channelWidth=100;
+CHANNEL cc_1_b7 from logic_array_1_control_b 7 to logic_array_1 20 channelWidth=100;
+CHANNEL cc_1_b8 from logic_array_1_control_b 8 to logic_array_1 21 channelWidth=100;
+CHANNEL cc_1_b9 from logic_array_1_control_b 9 to logic_array_1 22 channelWidth=100;
+CHANNEL cc_1_b10 from logic_array_1_control_b 10 to logic_array_1 23 channelWidth=100;
+CHANNEL cc_1_24 from logic_array_1_control_24 3 to logic_array_1 24 channelWidth=100;
+CHANNEL cc_1_25 from logic_array_1_control_25 3 to logic_array_1 25 channelWidth=100;
+CHANNEL cc_1_26 from logic_array_1_control_26 1 to logic_array_1 26 channelWidth=100;
 
+H BANK logic_array_2_control_a of 10 PORT portRadius=1000 spacing=3000;
+H BANK logic_array_2_control_b of 10 PORT portRadius=1000 spacing=3000;
+PORT logic_array_2_control_24, logic_array_2_control_25, logic_array_2_control_26 portRadius=1000;
 
- H BANK b1 of 5  PORT portRadius=100  ;
- H BANK b3 of 5  PORT portRadius=100  ;
- V BANK b2 of 10  PORT portRadius=100  ;
+CHANNEL cc_2_a1 from logic_array_2_control_a 1 to logic_array_2 4 channelWidth=100;
+CHANNEL cc_2_a2 from logic_array_2_control_a 2 to logic_array_2 5 channelWidth=100;
+CHANNEL cc_2_a3 from logic_array_2_control_a 3 to logic_array_2 6 channelWidth=100;
+CHANNEL cc_2_a4 from logic_array_2_control_a 4 to logic_array_2 7 channelWidth=100;
+CHANNEL cc_2_a5 from logic_array_2_control_a 5 to logic_array_2 8 channelWidth=100;
+CHANNEL cc_2_a6 from logic_array_2_control_a 6 to logic_array_2 9 channelWidth=100;
+CHANNEL cc_2_a7 from logic_array_2_control_a 7 to logic_array_2 10 channelWidth=100;
+CHANNEL cc_2_a8 from logic_array_2_control_a 8 to logic_array_2 11 channelWidth=100;
+CHANNEL cc_2_a9 from logic_array_2_control_a 9 to logic_array_2 12 channelWidth=100;
+CHANNEL cc_2_a10 from logic_array_2_control_a 10 to logic_array_2 13 channelWidth=100;
+CHANNEL cc_2_b1 from logic_array_2_control_b 1 to logic_array_2 14 channelWidth=100;
+CHANNEL cc_2_b2 from logic_array_2_control_b 2 to logic_array_2 15 channelWidth=100;
+CHANNEL cc_2_b3 from logic_array_2_control_b 3 to logic_array_2 16 channelWidth=100;
+CHANNEL cc_2_b4 from logic_array_2_control_b 4 to logic_array_2 17 channelWidth=100;
+CHANNEL cc_2_b5 from logic_array_2_control_b 5 to logic_array_2 18 channelWidth=100;
+CHANNEL cc_2_b6 from logic_array_2_control_b 6 to logic_array_2 19 channelWidth=100;
+CHANNEL cc_2_b7 from logic_array_2_control_b 7 to logic_array_2 20 channelWidth=100;
+CHANNEL cc_2_b8 from logic_array_2_control_b 8 to logic_array_2 21 channelWidth=100;
+CHANNEL cc_2_b9 from logic_array_2_control_b 9 to logic_array_2 22 channelWidth=100;
+CHANNEL cc_2_b10 from logic_array_2_control_b 10 to logic_array_2 23 channelWidth=100;
+CHANNEL cc_2_24 from logic_array_2_control_24 3 to logic_array_2 24 channelWidth=100;
+CHANNEL cc_2_25 from logic_array_2_control_25 3 to logic_array_2 25 channelWidth=100;
+CHANNEL cc_2_26 from logic_array_2_control_26 1 to logic_array_2 26 channelWidth=100;
 
-CHANNEL cc10 from la 13 to b2 5 channelWidth=20;
-CHANNEL cc11 from la 14 to b2 6 channelWidth=20;
-CHANNEL cc9 from la 12 to b2 4 channelWidth=20;
-CHANNEL cc12 from la 15 to b2 7 channelWidth=20;
-CHANNEL cc8 from la 11 to b2 3 channelWidth=20;
-CHANNEL cc13 from la 16 to b2 8 channelWidth=20;
-CHANNEL cc7 from la 10 to b2 2 channelWidth=20;
-CHANNEL cc14 from la 17 to b2 9 channelWidth=20;
-CHANNEL cc6 from la 9 to b2 1 channelWidth=20;
-CHANNEL cc15 from la 18 to b2 10 channelWidth=20;
+H BANK logic_array_3_control_a of 10 PORT portRadius=1000 spacing=3000;
+H BANK logic_array_3_control_b of 10 PORT portRadius=1000 spacing=3000;
+PORT logic_array_3_control_24, logic_array_3_control_25, logic_array_3_control_26 portRadius=1000;
 
-CHANNEL cc1 from b1 1 to la 4 channelWidth=20;
-CHANNEL cc5 from b1 5 to la 8 channelWidth=20;
-CHANNEL cc2 from b1 2 to la 5 channelWidth=20;
-CHANNEL cc4 from b1 4 to la 7 channelWidth=20;
-CHANNEL cc3 from b1 3 to la 6 channelWidth=20;
+CHANNEL cc_3_a1 from logic_array_3_control_a 1 to logic_array_3 4 channelWidth=100;
+CHANNEL cc_3_a2 from logic_array_3_control_a 2 to logic_array_3 5 channelWidth=100;
+CHANNEL cc_3_a3 from logic_array_3_control_a 3 to logic_array_3 6 channelWidth=100;
+CHANNEL cc_3_a4 from logic_array_3_control_a 4 to logic_array_3 7 channelWidth=100;
+CHANNEL cc_3_a5 from logic_array_3_control_a 5 to logic_array_3 8 channelWidth=100;
+CHANNEL cc_3_a6 from logic_array_3_control_a 6 to logic_array_3 9 channelWidth=100;
+CHANNEL cc_3_a7 from logic_array_3_control_a 7 to logic_array_3 10 channelWidth=100;
+CHANNEL cc_3_a8 from logic_array_3_control_a 8 to logic_array_3 11 channelWidth=100;
+CHANNEL cc_3_a9 from logic_array_3_control_a 9 to logic_array_3 12 channelWidth=100;
+CHANNEL cc_3_a10 from logic_array_3_control_a 10 to logic_array_3 13 channelWidth=100;
+CHANNEL cc_3_b1 from logic_array_3_control_b 1 to logic_array_3 14 channelWidth=100;
+CHANNEL cc_3_b2 from logic_array_3_control_b 2 to logic_array_3 15 channelWidth=100;
+CHANNEL cc_3_b3 from logic_array_3_control_b 3 to logic_array_3 16 channelWidth=100;
+CHANNEL cc_3_b4 from logic_array_3_control_b 4 to logic_array_3 17 channelWidth=100;
+CHANNEL cc_3_b5 from logic_array_3_control_b 5 to logic_array_3 18 channelWidth=100;
+CHANNEL cc_3_b6 from logic_array_3_control_b 6 to logic_array_3 19 channelWidth=100;
+CHANNEL cc_3_b7 from logic_array_3_control_b 7 to logic_array_3 20 channelWidth=100;
+CHANNEL cc_3_b8 from logic_array_3_control_b 8 to logic_array_3 21 channelWidth=100;
+CHANNEL cc_3_b9 from logic_array_3_control_b 9 to logic_array_3 22 channelWidth=100;
+CHANNEL cc_3_b10 from logic_array_3_control_b 10 to logic_array_3 23 channelWidth=100;
+CHANNEL cc_3_24 from logic_array_3_control_24 3 to logic_array_3 24 channelWidth=100;
+CHANNEL cc_3_25 from logic_array_3_control_25 3 to logic_array_3 25 channelWidth=100;
+CHANNEL cc_3_26 from logic_array_3_control_26 1 to logic_array_3 26 channelWidth=100;
 
-
-CHANNEL cc16 from b3 1 to la 19 channelWidth=20;
-CHANNEL cc17 from b3 2 to la 20 channelWidth=20;
-CHANNEL cc18 from b3 3 to la 21 channelWidth=20;
-CHANNEL cc19 from b3 4 to la 22 channelWidth=20;
-CHANNEL cc20 from b3 5 to la 23 channelWidth=20;
 END LAYER

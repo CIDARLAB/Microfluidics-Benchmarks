@@ -30,8 +30,8 @@ TEXT_COLOR = "#1A1A1A"
 AXIS_COLOR = "#333333"
 GRID_COLOR = "#E6E6E6"
 
-# Directories that are not benchmark groups (JSON router tests, empty placeholders).
-SKIP_CATEGORY_DIRS = {"Aarf_Router_Test"}
+# Directories that are not benchmark groups (empty placeholders).
+SKIP_CATEGORY_DIRS = set()
 
 # Folder name on disk -> label used in the plot and printed table.
 # Multiple folders may map to one display name; their counts are summed.

@@ -40,7 +40,7 @@ LFR (Liquid Flow Representation) design files (`.lfr`). **157** cases. Each subf
 
 ### MINT-TestCases/
 
-MINT design files (`.mint`). **257** cases. Used when the pipeline starts from MINT instead of LFR. Shared category names match LFR-TestCases; extra MINT-only groups:
+MINT design files (`.mint`). **265** cases. Used when the pipeline starts from MINT instead of LFR. Shared category names match LFR-TestCases; extra MINT-only groups:
 
 | Folder | Description |
 |--------|-------------|
@@ -52,7 +52,6 @@ MINT design files (`.mint`). **257** cases. Used when the pipeline starts from M
 | `Primitive/` | Primitive-level devices (mixer, valve, pump, …) |
 | `COVID/`, `Distribute_Expressions/`, `Distribute_Library/`, `Expressions/` | Same groups as LFR |
 | `Literature_Benchmarks/`, `Mars/`, `Protocols/`, `Technology_Mapping/`, `Transport_Networks/`, `Ghissues/`, `Graph_Coverage/` | Same groups as LFR |
-| `Aarf_Router_Test/` | Router JSON fixtures (`test0.json`, …) — **not** `.mint`; skipped by `run_all_MINT.sh` |
 
 ### Quick_Examples/
 
