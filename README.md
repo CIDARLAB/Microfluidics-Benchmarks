@@ -11,8 +11,8 @@ Each **category folder is flat**: one `Xxx_Yyy.lfr` / `Xxx_Yyy.mint` per case (n
 Neptune batch scripts live in the parent repo (`Neptune_2026/scripts/`). From that repo root:
 
 ```bash
-poetry run ./scripts/run_all_LFR.sh              # every LFR-TestCases/**/*.lfr → *_PR.json
-poetry run ./scripts/run_all_MINT.sh             # every MINT-TestCases/**/*.mint → *_PR.json
+poetry run ./scripts/run_all_LFR.sh              # every LFR_TestCases/**/*.lfr → *_PR.json
+poetry run ./scripts/run_all_MINT.sh             # every MINT_TestCases/**/*.mint → *_PR.json
 poetry run ./scripts/run_all_Quick_Examples.sh   # top-level Quick_Examples demos only
 poetry run ./scripts/run_all_LFR_no_PR.sh        # LFR compile only (no TREE-PLACE)
 poetry run ./scripts/run_all_MINT_no_PR.sh       # MINT compile only (no TREE-PLACE)
@@ -20,7 +20,7 @@ poetry run ./scripts/run_all_Quick_Examples_no_PR.sh  # Quick_Examples compile o
 ONLY_SUBFOLDER=Drop_Ref poetry run ./scripts/run_all_LFR.sh
 ```
 
-### LFR-TestCases/
+### LFR_TestCases/
 
 LFR (Liquid Flow Representation) design files (`.lfr`). **157** cases. Each subfolder is a benchmark group:
 
@@ -39,9 +39,9 @@ LFR (Liquid Flow Representation) design files (`.lfr`). **157** cases. Each subf
 | `Transport_Networks/` | Transport-network examples |
 | `Ghissues/` | Issue regression tests |
 
-### MINT-TestCases/
+### MINT_TestCases/
 
-MINT design files (`.mint`). **265** cases. Used when the pipeline starts from MINT instead of LFR. Shared category names match LFR-TestCases; extra MINT-only groups:
+MINT design files (`.mint`). **265** cases. Used when the pipeline starts from MINT instead of LFR. Shared category names match LFR_TestCases; extra MINT-only groups:
 
 | Folder | Description |
 |--------|-------------|
@@ -64,8 +64,8 @@ Small LFR/MINT demos for one-off runs. Neptune `run_all_Quick_Examples.sh` synth
 | `flow_and_control_demo.lfr` / `.mint` | Flow + control (default `testLFR.sh` / `testMINT.sh` input). Native `.mint` may set MIXER `channelWidth` / `edgeBend*` for flush pipe ends in 3DuF. |
 | `import_mixer_and_incubator.lfr`, `import_parallel_premix.lfr`, `import_droplet_reaction.lfr` | Compose `library/` modules via `` `import "library/..." `` |
 | `mixer_3to1.lfr`, `diy_with_mixer_demo.lfr`, `test_DIY_fork.lfr`, `test_DIY_crossing.lfr` | Mixer / DIY demos. DIY keepout: `componentSpacing`, default **1000** µm (`library/DIYcomponent.lfr`) |
-| `test_device.lfr`, `test_device_MUX4to1.lfr`, `test_device_two_MUX4to1.lfr` | Distribute/MUX demos (`mux_hub`/`demux_hub` VIA storages on the two-MUX case) |
-| `DIYcomponent.lfr`, `two_in_mixer.lfr`, `three_in_mixer.lfr`, `incubator.lfr`, `droplet_generator.lfr`, `mux4to1.lfr`, `mux1to4.lfr` | Standalone copies of `library/` modules (also synthesized by the batch) |
+| `test_device.lfr`, `test_device_MUX_4to1.lfr`, `test_device_two_MUX_4to1.lfr` | Distribute/MUX demos (`mux_hub`/`demux_hub` VIA storages on the two-MUX case) |
+| `DIYcomponent.lfr`, `two_in_mixer.lfr`, `three_in_mixer.lfr`, `incubator.lfr`, `droplet_generator.lfr`, `MUX_4to1.lfr`, `MUX_1to4.lfr` | Standalone copies of `library/` modules (also synthesized by the batch). Library files keep snake_case stems (`library/mux4to1.lfr`, `library/mux1to4.lfr`) to match their module names. |
 | `library/` | Canonical reusable LFR blocks for `` `import "library/..." `` — see `library/README.md` |
 | `user_components_demo/` | `--component-library` black-box JSON demo. See `user_components_demo/README.md` |
 | `prompt_test/` | LLM prompt experiments (not part of the batch suite) |
@@ -76,13 +76,15 @@ Consistency notes: `Quick_Examples/quick_examples_consistency.md`.
 
 Generated outputs (MINT, JSON, placed/routed JSON, logs, SVG) produced by Neptune 2026 scripts. Structure mirrors the test cases:
 
-- `Results/LFR-TestCases/<Category>/<Stem>/`
-- `Results/MINT-TestCases/<Category>/<Stem>/`
+- `Results/LFR_TestCases/<Category>/<Stem>/`
+- `Results/MINT_TestCases/<Category>/<Stem>/`
 - `Results/Quick_Examples/<stem>/`
 
 `<Stem>` matches the source filename (`Dx_1`, `Mfd_005_Chip`, …). Inner artifacts (`dx1_fromLFR.json`, …) may still use the original module id until that case is recompiled. Neptune scripts glob `*_fromLFR.json` / `*_fromMINT.json` / `*_PR.json` so both names work.
 
 **Port conventions in sources:** `CIDAR_Lab_Past_Devices/Rotary_16` YTREE leaves use ports 2–17 (trunk 1). `Base/Transposer_Test.mint` VIA control uses port 1. `Mars/Pre_Processor_Dump.mint` MIXER uses ports 1–2.
+
+**Super_MUX series:** sources are `MINT_TestCases/Base/Super_MUX_{2,4,8,16,32,64,128,256,512,1024}.mint` (leafPitch 4000). TREE-PLACE order search is capped (`PRalgorithm/order_and_mirror.py`, `MAX_ORDER_SEARCH=4096`); n≥8 skips the n! permutation walk. Placed outputs live under `Results/MINT_TestCases/Base/Super_MUX_<n>/` as `Super_MUX_<n>_fromMINT.json`, `Super_MUX_<n>_fromMINT_PR.json`, and `Super_MUX_<n>_fromMINT_topology.pdf`. Batch logs are not kept in git.
 
 ---
 

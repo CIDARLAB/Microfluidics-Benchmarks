@@ -29,7 +29,7 @@ from functional_mapping import (  # noqa: E402
 )
 
 BENCHMARK_ROOT = SCRIPT_DIR.parent
-LFR_ROOT = BENCHMARK_ROOT / "LFR-TestCases"
+LFR_ROOT = BENCHMARK_ROOT / "LFR_TestCases"
 QUICK_ROOT = BENCHMARK_ROOT / "Quick_Examples"
 
 LFR_COLOR = "#6FA2C4"

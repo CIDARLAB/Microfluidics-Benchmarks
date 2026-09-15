@@ -11,10 +11,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 NEPTUNE = ROOT.parent
-LFR = ROOT / "LFR-TestCases"
-MINT = ROOT / "MINT-TestCases"
-RES_LFR = ROOT / "Results" / "LFR-TestCases"
-RES_MINT = ROOT / "Results" / "MINT-TestCases"
+LFR = ROOT / "LFR_TestCases"
+MINT = ROOT / "MINT_TestCases"
+RES_LFR = ROOT / "Results" / "LFR_TestCases"
+RES_MINT = ROOT / "Results" / "MINT_TestCases"
 FLUIGI = Path("/home/cidar-ron/.cache/pypoetry/virtualenvs/fluigi-1YeczOhn-py3.10/bin/fluigi")
 
 SEMANTIC = {
@@ -28,7 +28,7 @@ SEMANTIC = {
     "mfd005chip": "Mfd_005_Chip",
     "dnasynthesizer": "Dna_Synthesizer",
     "dna_digest": "Dna_Digest",
-    "mux96chambers": "Mux_96_Chambers",
+    "mux96chambers": "MUX_96_Chambers",
     "inlet16": "Inlet_16",
     "rotary16": "Rotary_16",
     "logic04": "Logic_04",
@@ -57,16 +57,16 @@ SEMANTIC = {
     "test05": "Long_Cell_Trap_Two_Port",
     "test06": "Node_Long_Cell_Trap_04",
     "test_chambers": "Square_Cell_Trap_Chambers",
-    "hmux01": "Horizontal_Mux_01",
+    "hmux01": "Horizontal_MUX_01",
     "xing_h": "Crossing_H",
     "xing_v": "Crossing_V",
     "portbank01": "Port_Bank_01",
-    "mux8": "Mux_8",
+    "mux8": "MUX_8",
     "simple": "Droplet_Merger_Simple",
     "simple_var0": "Mixer_Trap_Simple",
     "port": "Single_Port",
     "pre_processor_dump": "Pre_Processor_Dump",
-    "mux3d": "Mux_3d",
+    "mux3d": "MUX_3d",
     "pump3d": "Pump_3d",
     "ytree": "Y_Tree",
     "rotarymixer": "Rotary_Mixer",

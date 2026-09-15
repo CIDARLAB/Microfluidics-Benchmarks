@@ -44,7 +44,7 @@ FOLDER_TO_FUNCTION: dict[str, tuple[str, ...]] = {
 
 # Longest-prefix wins (checked before folder default).
 PREFIX_TO_FUNCTION: dict[str, tuple[str, ...]] = {
-    "Distribute_Library/Mux_": (MUX,),
+    "Distribute_Library/MUX_": (MUX,),
     "Distribute_Library/Transposer_": ("Transposer",),
     "Distribute_Library/Single_Storage_Grid_": (
         "Protein crystallization",
@@ -65,7 +65,7 @@ PREFIX_TO_FUNCTION: dict[str, tuple[str, ...]] = {
     ),
 }
 
-# Per-file overrides. Keys are paths relative to LFR-TestCases/ or Quick_Examples/.
+# Per-file overrides. Keys are paths relative to LFR_TestCases/ or Quick_Examples/.
 FILE_TO_FUNCTION: dict[str, tuple[str, ...]] = {
     # Literature exemplars
     "Literature_Benchmarks/Device_1_Sc_Rna_Seq.lfr": ("scRNA-seq",),
@@ -106,14 +106,14 @@ FILE_TO_FUNCTION: dict[str, tuple[str, ...]] = {
     "CIDAR_Lab_Past_Devices/Grad_Cells.lfr": ("scRNA-seq",),
     "CIDAR_Lab_Past_Devices/Rotary_Cells.lfr": ("scRNA-seq",),
     "CIDAR_Lab_Past_Devices/Seeding.lfr": ("scRNA-seq",),
-    "CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr": (
+    "CIDAR_Lab_Past_Devices/MUX_96_Chambers.lfr": (
         MUX,
         "scRNA-seq",
         "Protein crystallization",
     ),
     "CIDAR_Lab_Past_Devices/Inlet_16.lfr": (MUX,),
-    "CIDAR_Lab_Past_Devices/Nine_To_One_Mux.lfr": (MUX,),
-    "CIDAR_Lab_Past_Devices/Net_Mux.lfr": (MUX,),
+    "CIDAR_Lab_Past_Devices/Nine_To_One_MUX.lfr": (MUX,),
+    "CIDAR_Lab_Past_Devices/Net_MUX.lfr": (MUX,),
     "CIDAR_Lab_Past_Devices/Multi_Input.lfr": (MUX,),
     "CIDAR_Lab_Past_Devices/Hmlp_Dual_Bank.lfr": (MUX,),
     "CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr": (
@@ -173,7 +173,7 @@ def _normalize(labels: tuple[str, ...]) -> tuple[str, ...]:
 
 
 def classify_lfr(rel_posix: str) -> tuple[str, ...]:
-    """Return one or more functional classes for a path relative to LFR-TestCases
+    """Return one or more functional classes for a path relative to LFR_TestCases
     or prefixed Quick_Examples/."""
     if rel_posix in FILE_TO_FUNCTION:
         return _normalize(FILE_TO_FUNCTION[rel_posix])

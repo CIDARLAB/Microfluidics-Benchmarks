@@ -49,10 +49,11 @@ Rules that must be obeyed for imports to resolve:
 | `mux4to1.lfr`              | `mux4to1`            | 4→1 distribute tree (control bits → one-hot valves) | distribute / `VALVE3D`          |
 | `mux1to4.lfr`              | `mux1to4`            | 1→4 distribute tree                             | distribute / `VALVE3D`              |
 
-The same stems are also copied to top-level `Quick_Examples/*.lfr` so
-`run_all_Quick_Examples.sh` can synthesize them standalone. Prefer
-`` `import "library/...." `` from composition demos; edit the canonical copy
-under `library/` first.
+Top-level batch copies of the MUX trees use `MUX_1to4.lfr` / `MUX_4to1.lfr`
+so `run_all_Quick_Examples.sh` can synthesize them standalone; library files
+keep snake_case stems (`mux1to4.lfr` / `mux4to1.lfr`) to match their module
+names. Prefer `` `import "library/...." `` from composition demos; edit the
+canonical copy under `library/` first.
 
 ## Example compositions
 
@@ -69,13 +70,13 @@ under `library/` first.
   (facing oil pair + water on the 3-port junction, droplets out the horn) ->
   one pipe into a reaction chamber (`c_in` valve) -> one pipe out to
   `outlet` (`c_out` valve).
-- `test_device_MUX4to1.lfr` / `test_device_two_MUX4to1.lfr` — inline distribute
+- `test_device_MUX_4to1.lfr` / `test_device_two_MUX_4to1.lfr` — inline distribute
   MUX demos (not library instances; distribute inside an imported module does
   not emit valves/Cports).
 
 Compile from the **repo root**. `--pre-load Quick_Examples` is enough for
 any top-level demo that does `` `import "library/...." ``. `--variant`
-defaults to `0`. Do not add `--pre-load LFR-TestCases` here.
+defaults to `0`. Do not add `--pre-load LFR_TestCases` here.
 
 One-shot LFR → placed `*_fromLFR_PR.json` (open this in 3DuF):
 

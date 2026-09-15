@@ -23,9 +23,9 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | LFR | `CIDAR_Lab_Past_Devices/microdroplet.lfr` | `CIDAR_Lab_Past_Devices/Microdroplet.lfr` |
 | LFR | `CIDAR_Lab_Past_Devices/microreactor.lfr` | `CIDAR_Lab_Past_Devices/Microreactor.lfr` |
 | LFR | `CIDAR_Lab_Past_Devices/multi_input.lfr` | `CIDAR_Lab_Past_Devices/Multi_Input.lfr` |
-| LFR | `CIDAR_Lab_Past_Devices/mux96chambers.lfr` | `CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` |
-| LFR | `CIDAR_Lab_Past_Devices/net_mux.lfr` | `CIDAR_Lab_Past_Devices/Net_Mux.lfr` |
-| LFR | `CIDAR_Lab_Past_Devices/nine_to_one_mux.lfr` | `CIDAR_Lab_Past_Devices/Nine_To_One_Mux.lfr` |
+| LFR | `CIDAR_Lab_Past_Devices/mux96chambers.lfr` | `CIDAR_Lab_Past_Devices/MUX_96_Chambers.lfr` |
+| LFR | `CIDAR_Lab_Past_Devices/net_mux.lfr` | `CIDAR_Lab_Past_Devices/Net_MUX.lfr` |
+| LFR | `CIDAR_Lab_Past_Devices/nine_to_one_mux.lfr` | `CIDAR_Lab_Past_Devices/Nine_To_One_MUX.lfr` |
 | LFR | `CIDAR_Lab_Past_Devices/olfactory.lfr` | `CIDAR_Lab_Past_Devices/Olfactory.lfr` |
 | LFR | `CIDAR_Lab_Past_Devices/pumpstat.lfr` | `CIDAR_Lab_Past_Devices/Pump_Passthrough.lfr` |
 | LFR | `CIDAR_Lab_Past_Devices/ring.lfr` | `CIDAR_Lab_Past_Devices/Ring.lfr` |
@@ -57,18 +57,18 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | LFR | `Distribute_Library/hv_storage_grid_16.lfr` | `Distribute_Library/Hv_Storage_Grid_16.lfr` |
 | LFR | `Distribute_Library/hv_storage_grid_32.lfr` | `Distribute_Library/Hv_Storage_Grid_32.lfr` |
 | LFR | `Distribute_Library/hv_storage_grid_64.lfr` | `Distribute_Library/Hv_Storage_Grid_64.lfr` |
-| LFR | `Distribute_Library/mux_02_in.lfr` | `Distribute_Library/Mux_02_In.lfr` |
-| LFR | `Distribute_Library/mux_02_out.lfr` | `Distribute_Library/Mux_02_Out.lfr` |
-| LFR | `Distribute_Library/mux_04_in.lfr` | `Distribute_Library/Mux_04_In.lfr` |
-| LFR | `Distribute_Library/mux_04_out.lfr` | `Distribute_Library/Mux_04_Out.lfr` |
-| LFR | `Distribute_Library/mux_08_in.lfr` | `Distribute_Library/Mux_08_In.lfr` |
-| LFR | `Distribute_Library/mux_08_out.lfr` | `Distribute_Library/Mux_08_Out.lfr` |
-| LFR | `Distribute_Library/mux_16_in.lfr` | `Distribute_Library/Mux_16_In.lfr` |
-| LFR | `Distribute_Library/mux_16_out.lfr` | `Distribute_Library/Mux_16_Out.lfr` |
-| LFR | `Distribute_Library/mux_32_in.lfr` | `Distribute_Library/Mux_32_In.lfr` |
-| LFR | `Distribute_Library/mux_32_out.lfr` | `Distribute_Library/Mux_32_Out.lfr` |
-| LFR | `Distribute_Library/mux_64_in.lfr` | `Distribute_Library/Mux_64_In.lfr` |
-| LFR | `Distribute_Library/mux_64_out.lfr` | `Distribute_Library/Mux_64_Out.lfr` |
+| LFR | `Distribute_Library/mux_02_in.lfr` | `Distribute_Library/MUX_02_In.lfr` |
+| LFR | `Distribute_Library/mux_02_out.lfr` | `Distribute_Library/MUX_02_Out.lfr` |
+| LFR | `Distribute_Library/mux_04_in.lfr` | `Distribute_Library/MUX_04_In.lfr` |
+| LFR | `Distribute_Library/mux_04_out.lfr` | `Distribute_Library/MUX_04_Out.lfr` |
+| LFR | `Distribute_Library/mux_08_in.lfr` | `Distribute_Library/MUX_08_In.lfr` |
+| LFR | `Distribute_Library/mux_08_out.lfr` | `Distribute_Library/MUX_08_Out.lfr` |
+| LFR | `Distribute_Library/mux_16_in.lfr` | `Distribute_Library/MUX_16_In.lfr` |
+| LFR | `Distribute_Library/mux_16_out.lfr` | `Distribute_Library/MUX_16_Out.lfr` |
+| LFR | `Distribute_Library/mux_32_in.lfr` | `Distribute_Library/MUX_32_In.lfr` |
+| LFR | `Distribute_Library/mux_32_out.lfr` | `Distribute_Library/MUX_32_Out.lfr` |
+| LFR | `Distribute_Library/mux_64_in.lfr` | `Distribute_Library/MUX_64_In.lfr` |
+| LFR | `Distribute_Library/mux_64_out.lfr` | `Distribute_Library/MUX_64_Out.lfr` |
 | LFR | `Distribute_Library/single_storage_grid_01.lfr` | `Distribute_Library/Single_Storage_Grid_01.lfr` |
 | LFR | `Distribute_Library/single_storage_grid_02.lfr` | `Distribute_Library/Single_Storage_Grid_02.lfr` |
 | LFR | `Distribute_Library/single_storage_grid_04.lfr` | `Distribute_Library/Single_Storage_Grid_04.lfr` |
@@ -164,11 +164,11 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `Base/grad_gen_h.mint` | `Base/Grad_Gen_H.mint` |
 | MINT | `Base/grad_gen_v.mint` | `Base/Grad_Gen_V.mint` |
 | MINT | `Base/grid_4_mixer.mint` | `Base/Grid_4_Mixer.mint` |
-| MINT | `Base/hmux01.mint` | `Base/Horizontal_Mux_01.mint` |
+| MINT | `Base/hmux01.mint` | `Base/Horizontal_MUX_01.mint` |
 | MINT | `Base/logic_test_01.mint` | `Base/Logic_Test_01.mint` |
 | MINT | `Base/logic_test_02.mint` | `Base/Logic_Test_02.mint` |
 | MINT | `Base/logic_test_03.mint` | `Base/Logic_Test_03.mint` |
-| MINT | `Base/mux8.mint` | `Base/Mux_8.mint` |
+| MINT | `Base/mux8.mint` | `Base/MUX_8.mint` |
 | MINT | `Base/net_multi_test.mint` | `Base/Net_Multi_Test.mint` |
 | MINT | `Base/net_test.mint` | `Base/Net_Test.mint` |
 | MINT | `Base/net_valve_test.mint` | `Base/Net_Valve_Test.mint` |
@@ -176,8 +176,8 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `Base/nonplanar.mint` | `Base/Nonplanar.mint` |
 | MINT | `Base/port_multi_connection.mint` | `Base/Port_Multi_Connection.mint` |
 | MINT | `Base/portbank01.mint` | `Base/Port_Bank_01.mint` |
-| MINT | `Base/super_mux_01.mint` | `Base/Super_Mux_01.mint` |
-| MINT | `Base/super_mux_03.mint` | `Base/Super_Mux_03.mint` |
+| MINT | `Base/super_mux_01.mint` | `Base/Super_MUX_01.mint` |
+| MINT | `Base/super_mux_03.mint` | `Base/Super_MUX_03.mint` |
 | MINT | `Base/test.mint` | `Base/Three_Port_Channel.mint` |
 | MINT | `Base/test01.mint` | `Base/Node_Long_Cell_Trap_01.mint` |
 | MINT | `Base/test02.mint` | `Base/Square_Cell_Trap_Ports.mint` |
@@ -186,8 +186,8 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `Base/test05.mint` | `Base/Long_Cell_Trap_Two_Port.mint` |
 | MINT | `Base/test06.mint` | `Base/Node_Long_Cell_Trap_06.mint` |
 | MINT | `Base/test_chambers.mint` | `Base/Square_Cell_Trap_Chambers.mint` |
-| MINT | `Base/test_mux_01.mint` | `Base/Test_Mux_01.mint` |
-| MINT | `Base/test_mux_02.mint` | `Base/Test_Mux_02.mint` |
+| MINT | `Base/test_mux_01.mint` | `Base/Test_MUX_01.mint` |
+| MINT | `Base/test_mux_02.mint` | `Base/Test_MUX_02.mint` |
 | MINT | `Base/transposer_test.mint` | `Base/Transposer_Test.mint` |
 | MINT | `Base/tree_test_01.mint` | `Base/Tree_Test_01.mint` |
 | MINT | `Base/tree_test_02.mint` | `Base/Tree_Test_02.mint` |
@@ -215,9 +215,9 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `CIDAR_Lab_Past_Devices/microdroplet.mint` | `CIDAR_Lab_Past_Devices/Microdroplet.mint` |
 | MINT | `CIDAR_Lab_Past_Devices/microreactor.mint` | `CIDAR_Lab_Past_Devices/Microreactor.mint` |
 | MINT | `CIDAR_Lab_Past_Devices/multi_input.mint` | `CIDAR_Lab_Past_Devices/Multi_Input.mint` |
-| MINT | `CIDAR_Lab_Past_Devices/mux96chambers.mint` | `CIDAR_Lab_Past_Devices/Mux_96_Chambers.mint` |
-| MINT | `CIDAR_Lab_Past_Devices/net_mux.mint` | `CIDAR_Lab_Past_Devices/Net_Mux.mint` |
-| MINT | `CIDAR_Lab_Past_Devices/nine_to_one_mux.mint` | `CIDAR_Lab_Past_Devices/Nine_To_One_Mux.mint` |
+| MINT | `CIDAR_Lab_Past_Devices/mux96chambers.mint` | `CIDAR_Lab_Past_Devices/MUX_96_Chambers.mint` |
+| MINT | `CIDAR_Lab_Past_Devices/net_mux.mint` | `CIDAR_Lab_Past_Devices/Net_MUX.mint` |
+| MINT | `CIDAR_Lab_Past_Devices/nine_to_one_mux.mint` | `CIDAR_Lab_Past_Devices/Nine_To_One_MUX.mint` |
 | MINT | `CIDAR_Lab_Past_Devices/olfactory.mint` | `CIDAR_Lab_Past_Devices/Olfactory.mint` |
 | MINT | `CIDAR_Lab_Past_Devices/port.mint` | `CIDAR_Lab_Past_Devices/Single_Port.mint` |
 | MINT | `CIDAR_Lab_Past_Devices/pumpstat.mint` | `CIDAR_Lab_Past_Devices/Pump_Passthrough.mint` |
@@ -258,18 +258,18 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `Distribute_Library/hv_storage_grid_16.mint` | `Distribute_Library/Hv_Storage_Grid_16.mint` |
 | MINT | `Distribute_Library/hv_storage_grid_32.mint` | `Distribute_Library/Hv_Storage_Grid_32.mint` |
 | MINT | `Distribute_Library/hv_storage_grid_64.mint` | `Distribute_Library/Hv_Storage_Grid_64.mint` |
-| MINT | `Distribute_Library/mux_02_in.mint` | `Distribute_Library/Mux_02_In.mint` |
-| MINT | `Distribute_Library/mux_02_out.mint` | `Distribute_Library/Mux_02_Out.mint` |
-| MINT | `Distribute_Library/mux_04_in.mint` | `Distribute_Library/Mux_04_In.mint` |
-| MINT | `Distribute_Library/mux_04_out.mint` | `Distribute_Library/Mux_04_Out.mint` |
-| MINT | `Distribute_Library/mux_08_in.mint` | `Distribute_Library/Mux_08_In.mint` |
-| MINT | `Distribute_Library/mux_08_out.mint` | `Distribute_Library/Mux_08_Out.mint` |
-| MINT | `Distribute_Library/mux_16_in.mint` | `Distribute_Library/Mux_16_In.mint` |
-| MINT | `Distribute_Library/mux_16_out.mint` | `Distribute_Library/Mux_16_Out.mint` |
-| MINT | `Distribute_Library/mux_32_in.mint` | `Distribute_Library/Mux_32_In.mint` |
-| MINT | `Distribute_Library/mux_32_out.mint` | `Distribute_Library/Mux_32_Out.mint` |
-| MINT | `Distribute_Library/mux_64_in.mint` | `Distribute_Library/Mux_64_In.mint` |
-| MINT | `Distribute_Library/mux_64_out.mint` | `Distribute_Library/Mux_64_Out.mint` |
+| MINT | `Distribute_Library/mux_02_in.mint` | `Distribute_Library/MUX_02_In.mint` |
+| MINT | `Distribute_Library/mux_02_out.mint` | `Distribute_Library/MUX_02_Out.mint` |
+| MINT | `Distribute_Library/mux_04_in.mint` | `Distribute_Library/MUX_04_In.mint` |
+| MINT | `Distribute_Library/mux_04_out.mint` | `Distribute_Library/MUX_04_Out.mint` |
+| MINT | `Distribute_Library/mux_08_in.mint` | `Distribute_Library/MUX_08_In.mint` |
+| MINT | `Distribute_Library/mux_08_out.mint` | `Distribute_Library/MUX_08_Out.mint` |
+| MINT | `Distribute_Library/mux_16_in.mint` | `Distribute_Library/MUX_16_In.mint` |
+| MINT | `Distribute_Library/mux_16_out.mint` | `Distribute_Library/MUX_16_Out.mint` |
+| MINT | `Distribute_Library/mux_32_in.mint` | `Distribute_Library/MUX_32_In.mint` |
+| MINT | `Distribute_Library/mux_32_out.mint` | `Distribute_Library/MUX_32_Out.mint` |
+| MINT | `Distribute_Library/mux_64_in.mint` | `Distribute_Library/MUX_64_In.mint` |
+| MINT | `Distribute_Library/mux_64_out.mint` | `Distribute_Library/MUX_64_Out.mint` |
 | MINT | `Distribute_Library/single_storage_grid_01.mint` | `Distribute_Library/Single_Storage_Grid_01.mint` |
 | MINT | `Distribute_Library/single_storage_grid_02.mint` | `Distribute_Library/Single_Storage_Grid_02.mint` |
 | MINT | `Distribute_Library/single_storage_grid_04.mint` | `Distribute_Library/Single_Storage_Grid_04.mint` |
@@ -388,8 +388,8 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 | MINT | `Primitive/long_cell_trap.mint` | `Primitive/Long_Cell_Trap.mint` |
 | MINT | `Primitive/mixer.mint` | `Primitive/Mixer.mint` |
 | MINT | `Primitive/mixer_to_mixer.mint` | `Primitive/Mixer_To_Mixer.mint` |
-| MINT | `Primitive/mux.mint` | `Primitive/Mux.mint` |
-| MINT | `Primitive/mux3d.mint` | `Primitive/Mux_3d.mint` |
+| MINT | `Primitive/mux.mint` | `Primitive/MUX.mint` |
+| MINT | `Primitive/mux3d.mint` | `Primitive/MUX_3d.mint` |
 | MINT | `Primitive/node.mint` | `Primitive/Node.mint` |
 | MINT | `Primitive/nozzle_droplet_generator.mint` | `Primitive/Nozzle_Droplet_Generator.mint` |
 | MINT | `Primitive/picoinjector.mint` | `Primitive/Picoinjector.mint` |
@@ -449,8 +449,8 @@ Cryptic stems were given semantic `Xxx_Yyy` names; remaining files were converte
 
 ## Results sync
 
-- LFR-TestCases: 157 sources, 157 result dirs, 0 missing, 0 extra.
-- MINT-TestCases: 257 sources, 257 result dirs, 0 missing, 0 extra.
+- LFR_TestCases: 157 sources, 157 result dirs, 0 missing, 0 extra.
+- MINT_TestCases: 257 sources, 257 result dirs, 0 missing, 0 extra.
 - Duplicate `MFD005chip` / `mfd005chip` result dirs merged into `CIDAR_Lab_Past_Devices/Mfd_005_Chip`.
 - Nested `Protocols/MARS/cell_sorting` flattened to `Protocols/Cell_Sorting`.
 - No empty result dirs remained, so no recompile was required.

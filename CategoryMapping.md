@@ -8,7 +8,7 @@ A second grouping is **by application function**, numbered sequentially:
 - **Classes 10–11** — structural functions promoted from the former Other bin, filling that slot: multiplexed addressing and transposer. Tree networks and storage grids are **not** separate bins: they are already fully covered by classes 1, 6, and 9, so adding them would not change Other.
 - **Other** — remaining compiler, expression, and issue-regression cases that match none of 1–11.
 
-Every current LFR case — `LFR-TestCases/**/*.lfr` plus top-level `Quick_Examples/*.lfr` (**176** unique files) — is assigned to one or more of these classes. MINT files are not remapped here; they follow the same provenance folders as LFR.
+Every current LFR case — `LFR_TestCases/**/*.lfr` plus top-level `Quick_Examples/*.lfr` (**176** unique files) — is assigned to one or more of these classes. MINT files are not remapped here; they follow the same provenance folders as LFR.
 
 Plot: `stat_plot/benchmark_counts_by_function.png` (machine-readable map: `stat_plot/functional_mapping.py`). Provenance census: `stat_plot/benchmark_counts_by_category.png`.
 
@@ -62,7 +62,7 @@ Actuated nanowell / crystallization-chamber arrays and the tree / bus / gradient
 
 ### 10. Multiplexed addressing
 
-Independently addressing many flow channels with few control lines (Thorsen’s fluidic multiplexor). Class exemplars are **experimental chips**, not CAD synthesizers: Thorsen, Maerkl, and Quake, *Science* **298**, 580–584 (2002) fabricated an mLSI multiplexor (\(n\) flow channels from \(2\log_2 n\) control lines) and a 1000-chamber memory; Cooksey, Sip, and Folch, *Lab Chip* **9**, 417–426 (2009) ran a 16-inlet binary mux into a culture chamber; Lee and Cho, *Lab Chip* **9**, 1681–1686 (2009) fabricated high-radix muxes that address \(3\times3\) and \(4\times4\) well arrays. Gómez-Sjöberg et al., *Anal. Chem.* **79**, 8557–8563 (2007) is the experimental 96-chamber mux culture chip matching `Mux_96_Chambers.lfr`. Chamber-array chips that include a mux are multi-labeled with scRNA-seq and/or protein crystallization.
+Independently addressing many flow channels with few control lines (Thorsen’s fluidic multiplexor). Class exemplars are **experimental chips**, not CAD synthesizers: Thorsen, Maerkl, and Quake, *Science* **298**, 580–584 (2002) fabricated an mLSI multiplexor (\(n\) flow channels from \(2\log_2 n\) control lines) and a 1000-chamber memory; Cooksey, Sip, and Folch, *Lab Chip* **9**, 417–426 (2009) ran a 16-inlet binary mux into a culture chamber; Lee and Cho, *Lab Chip* **9**, 1681–1686 (2009) fabricated high-radix muxes that address \(3\times3\) and \(4\times4\) well arrays. Gómez-Sjöberg et al., *Anal. Chem.* **79**, 8557–8563 (2007) is the experimental 96-chamber mux culture chip matching `MUX_96_Chambers.lfr`. Chamber-array chips that include a mux are multi-labeled with scRNA-seq and/or protein crystallization.
 
 ### 11. Transposer
 
@@ -84,62 +84,62 @@ Counts are **assignments**. A whole provenance folder is listed when every file 
 
 ### 1. scRNA-seq (21)
 
-- `LFR-TestCases/Literature_Benchmarks/Device_1_Sc_Rna_Seq.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Hasty_Cell_Traps.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Grad_Cells.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Rotary_Cells.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Seeding.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` (multi-function included)
-- `LFR-TestCases/Distribute_Library/Cell_Traps_4.lfr`
-- `LFR-TestCases/Distribute_Library/Single_Storage_Grid_*.lfr` (multi-function included)
-- `LFR-TestCases/Distribute_Library/Hv_Storage_Grid_*.lfr` (multi-function included)
-- `LFR-TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
-- `LFR-TestCases/Mars/Sorting.lfr` (multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_1_Sc_Rna_Seq.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Hasty_Cell_Traps.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Grad_Cells.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Rotary_Cells.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Seeding.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/MUX_96_Chambers.lfr` (multi-function included)
+- `LFR_TestCases/Distribute_Library/Cell_Traps_4.lfr`
+- `LFR_TestCases/Distribute_Library/Single_Storage_Grid_*.lfr` (multi-function included)
+- `LFR_TestCases/Distribute_Library/Hv_Storage_Grid_*.lfr` (multi-function included)
+- `LFR_TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
+- `LFR_TestCases/Mars/Sorting.lfr` (multi-function included)
 
 ### 2. Artificial cells (29)
 
-- `LFR-TestCases/Drop_Ref/` (entire folder) (multi-function included)
-- `LFR-TestCases/Literature_Benchmarks/Device_2_Artificial_Cells.lfr` (multi-function included)
-- `LFR-TestCases/Literature_Benchmarks/Device_7_Enzyme_Screening.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
+- `LFR_TestCases/Drop_Ref/` (entire folder) (multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_2_Artificial_Cells.lfr` (multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_7_Enzyme_Screening.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
 - `Quick_Examples/import_droplet_reaction.lfr` (multi-function included)
 - `Quick_Examples/droplet_generator.lfr` (multi-function included)
 
-- `LFR-TestCases/Protocols/Directed_Evolution.lfr`
-- `LFR-TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
-- `LFR-TestCases/Mars/Transformation.lfr`
-- `LFR-TestCases/Mars/Sorting.lfr` (multi-function included)
+- `LFR_TestCases/Protocols/Directed_Evolution.lfr`
+- `LFR_TestCases/Protocols/Cell_Sorting.lfr` (multi-function included)
+- `LFR_TestCases/Mars/Transformation.lfr`
+- `LFR_TestCases/Mars/Sorting.lfr` (multi-function included)
 
 ### 4. Molecular diagnostics (18)
 
-- `LFR-TestCases/COVID/` (entire folder; `Part_1_Rna_Prep.lfr` is multi-function included)
-- `LFR-TestCases/Literature_Benchmarks/Device_4_Molecular_Diagnostics.lfr`
-- `LFR-TestCases/Mars/Pcr.lfr`
-- `LFR-TestCases/Mars/Fluorescence.lfr`
-- `LFR-TestCases/Mars/Ligation.lfr`
-- `LFR-TestCases/Mars/Cell_Lysis.lfr` (multi-function included)
-- `LFR-TestCases/Mars/Dna_Digest.lfr` (multi-function included)
+- `LFR_TestCases/COVID/` (entire folder; `Part_1_Rna_Prep.lfr` is multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_4_Molecular_Diagnostics.lfr`
+- `LFR_TestCases/Mars/Pcr.lfr`
+- `LFR_TestCases/Mars/Fluorescence.lfr`
+- `LFR_TestCases/Mars/Ligation.lfr`
+- `LFR_TestCases/Mars/Cell_Lysis.lfr` (multi-function included)
+- `LFR_TestCases/Mars/Dna_Digest.lfr` (multi-function included)
 
 ### 5. Bacteria diagnostics (3)
 
-- `LFR-TestCases/Literature_Benchmarks/Device_5_Bacteria_Diagnostics.lfr`
-- `LFR-TestCases/Mars/Antibiotic_Resistance.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Microalgal_Bioassay.lfr`
+- `LFR_TestCases/Literature_Benchmarks/Device_5_Bacteria_Diagnostics.lfr`
+- `LFR_TestCases/Mars/Antibiotic_Resistance.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Microalgal_Bioassay.lfr`
 
 ### 6. Organic synthesis (25)
 
 Lee / deMello literature device (not dual-labeled with crystallization):
 
-- `LFR-TestCases/Literature_Benchmarks/Device_6_Organic_Chemical_Synthesis.lfr`
+- `LFR_TestCases/Literature_Benchmarks/Device_6_Organic_Chemical_Synthesis.lfr`
 
 Mix / incubate / synthesizer demos:
 
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Microreactor.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Mix_Incubate_Express.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Three_Reagent_Mix.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Dna_Synthesizer.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Incubator.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Microreactor.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Mix_Incubate_Express.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Three_Reagent_Mix.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Dna_Synthesizer.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Incubator.lfr`
 - `Quick_Examples/mixer_3to1.lfr`
 - `Quick_Examples/two_in_mixer.lfr`
 - `Quick_Examples/three_in_mixer.lfr`
@@ -150,21 +150,21 @@ Mix / incubate / synthesizer demos:
 
 Tree / gradient plumbing (also class 9):
 
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Gradient.lfr` (multi-function included)
-- `LFR-TestCases/Graph_Coverage/` (entire folder) (multi-function included)
-- `LFR-TestCases/Technology_Mapping/Tree_*.lfr` (multi-function included)
-- `LFR-TestCases/Technology_Mapping/N_Less_M_Map.lfr` (multi-function included)
-- `LFR-TestCases/Technology_Mapping/N_Greater_M_Map.lfr` (multi-function included)
-- `LFR-TestCases/Transport_Networks/One_To_8.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Gradient.lfr` (multi-function included)
+- `LFR_TestCases/Graph_Coverage/` (entire folder) (multi-function included)
+- `LFR_TestCases/Technology_Mapping/Tree_*.lfr` (multi-function included)
+- `LFR_TestCases/Technology_Mapping/N_Less_M_Map.lfr` (multi-function included)
+- `LFR_TestCases/Technology_Mapping/N_Greater_M_Map.lfr` (multi-function included)
+- `LFR_TestCases/Transport_Networks/One_To_8.lfr` (multi-function included)
 
 ### 7. Enzyme screening (30)
 
-- `LFR-TestCases/Literature_Benchmarks/Device_7_Enzyme_Screening.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Kinetics.lfr`
-- `LFR-TestCases/Drop_Ref/` (entire folder) (multi-function included)
-- `LFR-TestCases/Literature_Benchmarks/Device_2_Artificial_Cells.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_7_Enzyme_Screening.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Kinetics.lfr`
+- `LFR_TestCases/Drop_Ref/` (entire folder) (multi-function included)
+- `LFR_TestCases/Literature_Benchmarks/Device_2_Artificial_Cells.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Dual_Lane_Droplet.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Microdroplet.lfr` (multi-function included)
 - `Quick_Examples/import_droplet_reaction.lfr` (multi-function included)
 - `Quick_Examples/droplet_generator.lfr` (multi-function included)
 
@@ -172,48 +172,48 @@ Tree / gradient plumbing (also class 9):
 
 The MEMS extraction chip of Chen et al. (2008) is not present as an LFR file.
 
-- `LFR-TestCases/Mars/Cell_Lysis.lfr` (multi-function included)
-- `LFR-TestCases/Mars/Dna_Digest.lfr` (multi-function included)
-- `LFR-TestCases/COVID/Part_1_Rna_Prep.lfr` (multi-function included)
+- `LFR_TestCases/Mars/Cell_Lysis.lfr` (multi-function included)
+- `LFR_TestCases/Mars/Dna_Digest.lfr` (multi-function included)
+- `LFR_TestCases/COVID/Part_1_Rna_Prep.lfr` (multi-function included)
 
 ### 9. Protein crystallization (25)
 
-- `LFR-TestCases/Technology_Mapping/Tree_*.lfr` (multi-function included)
-- `LFR-TestCases/Technology_Mapping/N_Less_M_Map.lfr` (multi-function included)
-- `LFR-TestCases/Technology_Mapping/N_Greater_M_Map.lfr` (multi-function included)
-- `LFR-TestCases/Graph_Coverage/` (entire folder) (multi-function included)
-- `LFR-TestCases/Transport_Networks/One_To_8.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Gradient.lfr` (multi-function included)
-- `LFR-TestCases/Distribute_Library/Single_Storage_Grid_*.lfr` (multi-function included)
-- `LFR-TestCases/Distribute_Library/Hv_Storage_Grid_*.lfr` (multi-function included)
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` (multi-function included)
+- `LFR_TestCases/Technology_Mapping/Tree_*.lfr` (multi-function included)
+- `LFR_TestCases/Technology_Mapping/N_Less_M_Map.lfr` (multi-function included)
+- `LFR_TestCases/Technology_Mapping/N_Greater_M_Map.lfr` (multi-function included)
+- `LFR_TestCases/Graph_Coverage/` (entire folder) (multi-function included)
+- `LFR_TestCases/Transport_Networks/One_To_8.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Gradient.lfr` (multi-function included)
+- `LFR_TestCases/Distribute_Library/Single_Storage_Grid_*.lfr` (multi-function included)
+- `LFR_TestCases/Distribute_Library/Hv_Storage_Grid_*.lfr` (multi-function included)
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/MUX_96_Chambers.lfr` (multi-function included)
 
 ### 10. Multiplexed addressing (23)
 
-- `LFR-TestCases/Distribute_Library/Mux_*.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Inlet_16.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Nine_To_One_Mux.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Net_Mux.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Multi_Input.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Hmlp_Dual_Bank.lfr`
-- `LFR-TestCases/CIDAR_Lab_Past_Devices/Mux_96_Chambers.lfr` (multi-function included)
-- `Quick_Examples/test_device_MUX4to1.lfr`
-- `Quick_Examples/test_device_two_MUX4to1.lfr`
+- `LFR_TestCases/Distribute_Library/MUX_*.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Inlet_16.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Nine_To_One_MUX.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Net_MUX.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Multi_Input.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/Hmlp_Dual_Bank.lfr`
+- `LFR_TestCases/CIDAR_Lab_Past_Devices/MUX_96_Chambers.lfr` (multi-function included)
+- `Quick_Examples/test_device_MUX_4to1.lfr`
+- `Quick_Examples/test_device_two_MUX_4to1.lfr`
 - `Quick_Examples/test_device.lfr`
-- `Quick_Examples/mux4to1.lfr`
-- `Quick_Examples/mux1to4.lfr`
+- `Quick_Examples/MUX_4to1.lfr`
+- `Quick_Examples/MUX_1to4.lfr`
 
 ### 11. Transposer (7)
 
-- `LFR-TestCases/Distribute_Library/Transposer_*.lfr`
+- `LFR_TestCases/Distribute_Library/Transposer_*.lfr`
 
 ### Other (47)
 
 Whole provenance folders:
 
-- `LFR-TestCases/Distribute_Expressions/`
-- `LFR-TestCases/Expressions/`
-- `LFR-TestCases/Ghissues/`
+- `LFR_TestCases/Distribute_Expressions/`
+- `LFR_TestCases/Expressions/`
+- `LFR_TestCases/Ghissues/`
 
 Remaining `Technology_Mapping/` (non-tree):
 

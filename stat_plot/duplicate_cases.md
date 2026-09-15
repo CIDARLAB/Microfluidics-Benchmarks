@@ -1,7 +1,7 @@
 # Duplicate LFR / MINT cases
 
 Same `stem` (case-insensitive) in more than one category folder.
-One copy kept (preferred category); extras deleted from `LFR-TestCases` / `MINT-TestCases`.
+One copy kept (preferred category); extras deleted from `LFR_TestCases` / `MINT_TestCases`.
 
 Removed **29** files across **29** duplicate stems (6 byte-identical, 23 same name with different content).
 

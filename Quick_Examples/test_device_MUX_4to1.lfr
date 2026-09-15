@@ -1,0 +1,23 @@
+// test_device_MUX4to1 — single 4-to-1 MUX (JSON 里上下两头各一个这样的树).
+//
+//   in0..in3 --(c_select)--> out
+//
+// Syntax matches LFR_TestCases/Distribute_Library/MUX_04_In.lfr:
+//   distribute@(bus) + case(bus) + 2'bxx 选路.
+// The 1-port must be foutput (a real component). Writing a bare `flow` net
+// does not emit valves/Cports.
+module test_device_MUX4to1(
+    finput in0, in1, in2, in3,
+    foutput out,
+    control [0:1] c_select
+);
+    distribute@(c_select)
+    begin
+        case(c_select)
+            2'b00 : out <= in0;
+            2'b01 : out <= in1;
+            2'b10 : out <= in2;
+            2'b11 : out <= in3;
+        endcase
+    end
+endmodule

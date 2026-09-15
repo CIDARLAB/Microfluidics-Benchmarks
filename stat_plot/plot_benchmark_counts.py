@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Count Neptune 2026 LFR/MINT benchmarks by category and plot grouped bars.
 
-Categories are the top-level folders under LFR-TestCases/ and MINT-TestCases/,
+Categories are the top-level folders under LFR_TestCases/ and MINT_TestCases/,
 plus Quick_Examples (top-level source files only). Generated copies under
 Results/, prompt_test/, and nested Quick_Examples run artifacts are excluded.
 
@@ -19,8 +19,8 @@ import numpy as np
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 BENCHMARK_ROOT = SCRIPT_DIR.parent
-LFR_ROOT = BENCHMARK_ROOT / "LFR-TestCases"
-MINT_ROOT = BENCHMARK_ROOT / "MINT-TestCases"
+LFR_ROOT = BENCHMARK_ROOT / "LFR_TestCases"
+MINT_ROOT = BENCHMARK_ROOT / "MINT_TestCases"
 QUICK_ROOT = BENCHMARK_ROOT / "Quick_Examples"
 
 # Nature CS bar-pair E (MAPLE): steel vs sand.

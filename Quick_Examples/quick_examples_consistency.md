@@ -35,13 +35,13 @@ Source run: `Results/Quick_Examples/run_all_Quick_Examples_20260906_034722.log`
 | `import_parallel_premix` | OK | 6/6 | 0/0 | no | 1 | — |
 | `incubator` | OK | 2/2 | 0/0 | no | 1 | — |
 | `mixer_3to1` | OK | 4/4 | 0/0 | no | 1 | — |
-| `mux1to4` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports |
-| `mux4to1` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports |
+| `MUX_1to4` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports (library: `mux1to4`) |
+| `MUX_4to1` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports (library: `mux4to1`) |
 | `test_DIY_crossing` | OK | 4/4 | 0/0 | no | 1 | library `DIYcomponent` |
 | `test_DIY_fork` | OK | 3/3 | 0/0 | no | 1 | library `DIYcomponent` |
 | `test_device` | OK | 11/11 | 11/7 | yes | 1 | ctrl expand (MUX/if) |
-| `test_device_MUX4to1` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports |
-| `test_device_two_MUX4to1` | OK | 10/10 | 8/4 | yes | 1 | MUX → one-hot Cports |
+| `test_device_MUX_4to1` | OK | 5/5 | 4/2 | yes | 1 | MUX → one-hot Cports |
+| `test_device_two_MUX_4to1` | OK | 10/10 | 8/4 | yes | 1 | MUX → one-hot Cports |
 | `three_in_mixer` | OK | 4/4 | 0/0 | no | 1 | — |
 | `two_in_mixer` | OK | 3/3 | 0/0 | no | 1 | — |
 
@@ -49,7 +49,7 @@ Native MINT (same batch): `flow_and_control_demo.mint`, `flow_only_demo.mint` �
 
 ## Library modules
 
-Reusable modules live under `library/` (also present as top-level `.lfr` so the batch synthesizes them standalone). Import demos:
+Reusable modules live under `library/` (also present as top-level `.lfr` so the batch synthesizes them standalone; MUX copies use `MUX_1to4.lfr` / `MUX_4to1.lfr` at the top level). Import demos:
 
 `import_mixer_and_incubator.lfr`, `import_parallel_premix.lfr`, `import_droplet_reaction.lfr`,
 plus DIY tests (`diy_with_mixer_demo`, `test_DIY_*`).
