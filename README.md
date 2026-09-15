@@ -16,6 +16,7 @@ poetry run ./scripts/run_all_MINT.sh             # every MINT-TestCases/**/*.min
 poetry run ./scripts/run_all_Quick_Examples.sh   # top-level Quick_Examples demos only
 poetry run ./scripts/run_all_LFR_no_PR.sh        # LFR compile only (no TREE-PLACE)
 poetry run ./scripts/run_all_MINT_no_PR.sh       # MINT compile only (no TREE-PLACE)
+poetry run ./scripts/run_all_Quick_Examples_no_PR.sh  # Quick_Examples compile only
 ONLY_SUBFOLDER=Drop_Ref poetry run ./scripts/run_all_LFR.sh
 ```
 
@@ -80,6 +81,8 @@ Generated outputs (MINT, JSON, placed/routed JSON, logs, SVG) produced by Neptun
 - `Results/Quick_Examples/<stem>/`
 
 `<Stem>` matches the source filename (`Dx_1`, `Mfd_005_Chip`, …). Inner artifacts (`dx1_fromLFR.json`, …) may still use the original module id until that case is recompiled. Neptune scripts glob `*_fromLFR.json` / `*_fromMINT.json` / `*_PR.json` so both names work.
+
+**Port conventions in sources:** `CIDAR_Lab_Past_Devices/Rotary_16` YTREE leaves use ports 2–17 (trunk 1). `Base/Transposer_Test.mint` VIA control uses port 1. `Mars/Pre_Processor_Dump.mint` MIXER uses ports 1–2.
 
 ---
 
