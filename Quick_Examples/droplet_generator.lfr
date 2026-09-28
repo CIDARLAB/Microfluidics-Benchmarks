@@ -18,15 +18,24 @@
 //                          |
 //                     droplets (2, horn down)
 //
-// Do not put #MAP "NOZZLE DROPLET GENERATOR" in the parent — the map stays
-// here. Parent instances use instantiate_droplet_generator (like DIY).
+// MAP-only designs (no instantiate): use #TERMINAL to bind arbitrary nets:
+//   #MAP "NOZZLE DROPLET GENERATOR" "~"
+//   #TERMINAL "~" oil_left = oil_1 AND oil_right = oil_r
+//   #TERMINAL "~" aqueous = aq AND droplets = drops
+//   assign drops = ~aq;
+// See Quick_Examples/map_droplet.lfr.
+//
+// Library instantiate path: parent uses droplet_generator inst(
+//   .oil_left(net), …) — do not put #MAP in the parent.
 module droplet_generator(
     finput oil_left, oil_right, aqueous,
     foutput droplets
 );
     #MAP "NOZZLE DROPLET GENERATOR" "~"
+    #TERMINAL "~" oil_left = oil_left AND oil_right = oil_right
+    #TERMINAL "~" aqueous = aqueous AND droplets = droplets
     #CONSTRAIN "~" droplet_rate = 30 hz
     #CONSTRAIN "~" rotation = 90
-    // Seed assign so #MAP attaches; parent instances rebind all four nets.
+    // Seed assign so #MAP attaches; #TERMINAL binds all four nets to terminals.
     assign droplets = ~aqueous;
 endmodule

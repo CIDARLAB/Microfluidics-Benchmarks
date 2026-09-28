@@ -1,26 +1,26 @@
 // device6_organic_chemical_synthesis — multi-feed merge to product.
-// Purpose: all reagent inlets feed one product outlet. Linearized from
-// concentration/reaction distribute loops so the netlist is one island.
-// Topology: star merge of 17 finputs (p1–p6, p15–p25) → product.
-// Collaborators: port numbering skips p7–p14 (paper IDs); c_mix/c_react unused here.
-// Controls remain declared for mix/react valve banks from the original distribute form.
+// Purpose: all reagent inlets feed one product outlet; c_mix/c_react emit as
+// valves on the shared merge→product edge (CONTROL without a second 17-way mix).
+// Topology: star-merge of 17 finputs → mixer tree → product; CONTROL on emit.
+// Port numbering skips p7–p14 (paper IDs).
 
 module Device_6_Organic_Chemical_Synthesis(
     finput p1, p2, p3, p4, p5, p6, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25,  // 17 reagent feeds
     foutput product,                // single organic synthesis product outlet
-    control [0:2] c_mix,            // mix-stage valve bank (declared; unused in linearized body)
-    control [0:2] c_react           // react-stage valve bank (declared; unused in linearized body)
+    control [0:2] c_mix,            // mix-stage valve bank on merge→product emit
+    control [0:2] c_react           // react-stage valve bank on merge→product emit
 );
 
-    // Collapse every reagent inlet onto the product (linearized from distribute loops).
-    assign product = p1 + p2 + p3 + p4 + p5 + p6
-                   + p15 + p16 + p17 + p18
-                   + p19 + p20 + p21 + p22 + p23 + p24 + p25;
-
-
-    // CONTROL emission: declared control bits gate a flow edge (Cport–valve subnetworks)
+    flow merged;
     flow __ctrl_emit_src;
-    assign __ctrl_emit_src = p1 + p2 + p3 + p4 + p5 + p6 + p15 + p16 + p17 + p18 + p19 + p20 + p21 + p22 + p23 + p24 + p25;
+
+    assign merged = p1 + p2 + p3 + p4 + p5 + p6
+                  + p15 + p16 + p17 + p18
+                  + p19 + p20 + p21 + p22 + p23 + p24 + p25;
+    assign product = merged;
+
+    // Alias only — no second 17-way MIX. Six distributes → six VALVE3D.
+    assign __ctrl_emit_src = merged;
     distribute@(c_mix[0]) begin
         if (c_mix[0] == 1)
             product <= __ctrl_emit_src;

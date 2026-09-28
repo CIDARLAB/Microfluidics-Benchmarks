@@ -16,24 +16,24 @@ DEVICE Dx_13
 
 LAYER FLOW 
 
-MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
+MIXER mixer_1 componentSpacing=2000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 DROPLET SORTER droplet_sorter_1 componentSpacing=1000.0 rotation=0.0 height=250.0 inletWidth=800.0 inletLength=4000.0 electrodeDistance=1000.0 electrodeWidth=700.0 electrodeLength=5000.0 outletWidth=800.0 angle=45.0 wasteWidth=1200.0 outputLength=4000.0 keepWidth=2000.0 pressureWidth=400.0 pressureSpacing=1500.0 numberofDistributors=5.0 channelDepth=1000.0 electrodeDepth=1000.0 pressureDepth=1000.0 mirrorByX=0.0 mirrorByY=0.0 ;
 DROPLET SPLITTER droplet_splitter_1 componentSpacing=1000.0 rotation=0.0 height=250.0 inletWidth=2000.0 inletLength=6000.0 outletWidth1=1000.0 outletLength1=3000.0 outletWidth2=2000.0 outletLength2=3000.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 DROPLET SORTER droplet_sorter_2 componentSpacing=1000.0 rotation=0.0 height=250.0 inletWidth=800.0 inletLength=4000.0 electrodeDistance=1000.0 electrodeWidth=700.0 electrodeLength=5000.0 outletWidth=800.0 angle=45.0 wasteWidth=1200.0 outputLength=4000.0 keepWidth=2000.0 pressureWidth=400.0 pressureSpacing=1500.0 numberofDistributors=5.0 channelDepth=1000.0 electrodeDepth=1000.0 pressureDepth=1000.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_3 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_4 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_5 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_5 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
-PORT port_6 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
+PORT port_5 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
+PORT port_6 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_7 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_8 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_9 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

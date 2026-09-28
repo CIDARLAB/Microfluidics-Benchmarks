@@ -1,0 +1,20 @@
+// mip_biosensor — DIYCOMPONENT rectangle placeholder for a MIP biosensor.
+// Same four-side interface as DIYcomponent (up/right/down/left; unused = None).
+// Terminals: up=1, right=2, down=3, left=4. User replaces geometry later.
+//
+// Parent designs import library/mip_biosensor.lfr, then instantiate:
+//   mip_biosensor #(length=8000, width=6000, height=250) s(
+//       .up(sample), .right(reagent), .down(out), .left(None));
+
+module mip_biosensor(
+    finput up, right,
+    foutput down, left
+);
+    #MAP "DIYCOMPONENT" "~"
+    #CONSTRAIN "~" length = 8000
+    #CONSTRAIN "~" width = 6000
+    #CONSTRAIN "~" height = 250
+    #CONSTRAIN "~" componentSpacing = 2000
+    // Seed assign so #MAP attaches; parent instances use instantiate_diy_component.
+    assign down = ~up;
+endmodule

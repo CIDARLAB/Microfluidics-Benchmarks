@@ -16,11 +16,11 @@ DEVICE Dropx_Test_1
 
 LAYER FLOW 
 
-PORT port_1 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
-PORT port_2 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
+PORT port_1 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
+PORT port_2 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

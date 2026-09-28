@@ -1,10 +1,26 @@
-// #MAP "NOZZLE DROPLET GENERATOR" "%": meter one aqueous stream.
-// For the 4-port oil/water nozzle, use droplet_generator.lfr instead.
+// 4-port nozzle via #MAP + #TERMINAL (no library instantiate required).
+//
+// Users who only know #MAP wire arbitrary net names to nozzle roles:
+//
+//                     aqueous (4)
+//                          |
+//        oil_left (3) ----[ nozzle ]---- oil_right (1)
+//                          |
+//                     droplets (2)
+//
+// #TERMINAL is separate from #CONSTRAIN (geometry). Roles may also be
+// written as bare numbers: #TERMINAL "~" 3 = oil_1
+//
+// Larger designs may still import library/droplet_generator.lfr and
+// instantiate with .oil_left(net) — same terminal map.
 module map_droplet(
-    finput aqueous,
+    finput oil_1, oil_r, aqueous,
     foutput droplets
 );
-    #MAP "NOZZLE DROPLET GENERATOR" "%"
-    #CONSTRAIN "%" rotation = 90
-    assign droplets = aqueous % 100;
+    #MAP "NOZZLE DROPLET GENERATOR" "~"
+    #TERMINAL "~" oil_left = oil_1 AND oil_right = oil_r
+    #TERMINAL "~" aqueous = aqueous AND droplets = droplets
+    #CONSTRAIN "~" droplet_rate = 30 hz
+    #CONSTRAIN "~" rotation = 90
+    assign droplets = ~aqueous;
 endmodule

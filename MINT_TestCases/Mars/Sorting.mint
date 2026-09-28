@@ -6,10 +6,10 @@ DEVICE Sorting
 LAYER FLOW 
 
 DROPLET SPLITTER droplet_splitter_1 componentSpacing=1000.0 rotation=0.0 height=250.0 inletWidth=2000.0 inletLength=6000.0 outletWidth1=1000.0 outletLength1=3000.0 outletWidth2=2000.0 outletLength2=3000.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

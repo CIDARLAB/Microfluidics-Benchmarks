@@ -17,9 +17,9 @@ DEVICE Expression_14
 
 LAYER FLOW 
 
-YTREE ytree_1 flowChannelWidth=5 leafSpace=5 width=5 height=5 stageSpace=5 componentSpacing=1000.0 rotation=0.0 in=1.0 out=8.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_1 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
-PORT port_2 portRadius=2000 componentSpacing=1000.0 height=1100.0 ;
+YTREE ytree_1 flowChannelWidth=5 leafSpace=5 width=5 height=5 stageSpace=5 componentSpacing=2000.0 rotation=0.0 in=1.0 out=8.0 mirrorByX=0.0 mirrorByY=0.0 ;
+PORT port_1 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
+PORT port_2 portRadius=2000 componentSpacing=2000.0 height=1100.0 ;
 NOZZLE DROPLET GENERATOR nozzle_droplet_generator_1 componentSpacing=1000.0 orificeSize=200.0 orificeLength=400.0 oilInputWidth=800.0 waterInputWidth=600.0 outputWidth=600.0 outputLength=600.0 height=250.0 rotation=0.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
@@ -45,38 +45,38 @@ MIXER mixer_21 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 num
 MIXER mixer_22 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_23 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 SQUARE CELL TRAP square_cell_trap_1 componentSpacing=1000.0 rotation=0.0 height=250.0 channelWidth=1000.0 channelLength=4000.0 chamberWidth=2500.0 chamberLength=2500.0 chamberHeight=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_10 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_11 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_12 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_13 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_14 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_15 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_16 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_17 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_18 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_19 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_20 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_21 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_22 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_23 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_24 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_25 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_26 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_27 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_28 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_29 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_30 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_31 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_32 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_33 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_34 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_5 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_6 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_7 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_8 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_9 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_10 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_11 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_12 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_13 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_14 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_15 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_16 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_17 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_18 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_19 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_20 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_21 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_22 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_23 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_24 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_25 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_26 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_27 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_28 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_29 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_30 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_31 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_32 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_33 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_34 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

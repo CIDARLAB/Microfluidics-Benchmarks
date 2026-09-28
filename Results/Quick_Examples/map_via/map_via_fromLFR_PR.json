@@ -1,0 +1,223 @@
+{
+    "name": "map_via",
+    "IsPlacedAndRouted": true,
+    "components": [
+        {
+            "name": "via_1",
+            "id": "via_1",
+            "entity": "VIA",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "radius": 700.0,
+                "height": 0.0,
+                "mirrorByX": 0,
+                "mirrorByY": 0.0,
+                "portRadius": 700.0,
+                "position": [
+                    8300.0,
+                    5700.0
+                ],
+                "ID": "via_1",
+                "rotation": 0
+            },
+            "ports": [
+                {
+                    "x": 700.0,
+                    "y": 700.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 1400,
+            "y-span": 1400
+        },
+        {
+            "name": "port_1",
+            "id": "port_1",
+            "entity": "PORT",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 2000.0,
+                "portRadius": 1000.0,
+                "height": 1100.0,
+                "position": [
+                    8300.0,
+                    13000.0
+                ],
+                "ID": "port_1",
+                "rotation": 0,
+                "mirrorByX": 0
+            },
+            "ports": [
+                {
+                    "x": 1000.0,
+                    "y": 1000.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 2000,
+            "y-span": 2000
+        }
+    ],
+    "connections": [
+        {
+            "sinks": [
+                {
+                    "component": "via_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_1",
+            "id": "channel_1",
+            "source": {
+                "component": "port_1",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    8300.0,
+                    13000.0
+                ],
+                "end": [
+                    8300.0,
+                    5700.0
+                ],
+                "wayPoints": [
+                    [
+                        8300.0,
+                        13000.0
+                    ],
+                    [
+                        8300.0,
+                        8700.0
+                    ],
+                    [
+                        5300.0,
+                        8700.0
+                    ],
+                    [
+                        5300.0,
+                        5700.0
+                    ],
+                    [
+                        8300.0,
+                        5700.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            8300.0,
+                            13000.0
+                        ],
+                        [
+                            8300.0,
+                            8700.0
+                        ]
+                    ],
+                    [
+                        [
+                            8300.0,
+                            8700.0
+                        ],
+                        [
+                            5300.0,
+                            8700.0
+                        ]
+                    ],
+                    [
+                        [
+                            5300.0,
+                            8700.0
+                        ],
+                        [
+                            5300.0,
+                            5700.0
+                        ]
+                    ],
+                    [
+                        [
+                            5300.0,
+                            5700.0
+                        ],
+                        [
+                            8300.0,
+                            5700.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_1"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "via_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            8300.0,
+                            13000.0
+                        ],
+                        [
+                            8300.0,
+                            8700.0
+                        ],
+                        [
+                            5300.0,
+                            8700.0
+                        ],
+                        [
+                            5300.0,
+                            5700.0
+                        ],
+                        [
+                            8300.0,
+                            5700.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        }
+    ],
+    "params": {
+        "x-span": 14300.0,
+        "y-span": 19000.0,
+        "length": 19000.0,
+        "flowPortCount": 1,
+        "controlPortCount": 0,
+        "logicalFlowIo": 1
+    },
+    "layers": [
+        {
+            "name": "FLOW_0",
+            "id": "0",
+            "type": "FLOW",
+            "params": {},
+            "group": 0
+        }
+    ],
+    "features": [],
+    "version": "1.2",
+    "valves": [],
+    "isPnR": false,
+    "layoutConstraints": []
+}

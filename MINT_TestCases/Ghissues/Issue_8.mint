@@ -9,18 +9,18 @@ MIXER mixer_1 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numb
 MIXER mixer_2 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_3 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_4 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_5 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_6 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_7 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_8 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_9 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_10 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_11 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_12 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_13 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_14 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_15 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
@@ -28,15 +28,15 @@ MIXER mixer_16 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 num
 MIXER mixer_17 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_18 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_19 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_5 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_20 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_21 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_6 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_22 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_23 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_7 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_24 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_8 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 MIXER mixer_25 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_26 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_27 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
@@ -49,10 +49,10 @@ MIXER mixer_33 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 num
 MIXER mixer_34 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_35 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
 MIXER mixer_36 componentSpacing=1000.0 channelWidth=800.0 bendSpacing=1230.0 numberOfBends=1.0 rotation=0.0 bendLength=2460.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_10 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_11 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_12 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_9 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_10 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_11 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_12 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

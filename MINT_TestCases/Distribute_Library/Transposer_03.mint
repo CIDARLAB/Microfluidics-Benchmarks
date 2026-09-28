@@ -17,12 +17,12 @@ DEVICE Transposer_03
 
 LAYER FLOW 
 
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_5 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_6 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 
@@ -41,14 +41,14 @@ END LAYER
 
 LAYER CONTROL 
 
-PORT Cport_0 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT Cport_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_0 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_5 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_6 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT Cport_7 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 VALVE3D valve_0 on channel_5 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;
 VALVE3D valve_1 on channel_4 componentSpacing=1000 valveRadius=400 height=250 rotation=0.0 gap=600.0 width=2400.0 length=2400.0 ;

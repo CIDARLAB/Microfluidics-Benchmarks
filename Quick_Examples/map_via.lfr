@@ -1,11 +1,11 @@
 // #MAP "VIA" "storage": next storage declaration becomes VIA.
+// A VIA is a through-hole that can talk to an off-chip / external component,
+// so it is a valid standalone outlet — no second PORT is required.
 // Following assign statements only wire the node; they are not part of the #MAP.
 module map_via(
-    finput in,
-    foutput out
+    finput in
 );
     #MAP "VIA" "storage"
     storage via0;
     assign via0 = in;
-    assign out = via0;
 endmodule

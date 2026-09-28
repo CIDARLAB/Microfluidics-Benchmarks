@@ -6,15 +6,15 @@ DEVICE Tree_Fanin_Mapping
 LAYER FLOW 
 
 YTREE ytree_1 flowChannelWidth=5 leafSpace=5 width=5 height=5 stageSpace=5 componentSpacing=1000.0 rotation=0.0 in=1.0 out=8.0 mirrorByX=0.0 mirrorByY=0.0 ;
-PORT port_1 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_2 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_3 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_4 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_5 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_6 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_7 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_8 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
-PORT port_9 componentSpacing=1000.0 portRadius=700.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_5 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_6 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_7 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_8 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
+PORT port_9 componentSpacing=2000.0 portRadius=700.0 height=1100.0 ;
 
 
 

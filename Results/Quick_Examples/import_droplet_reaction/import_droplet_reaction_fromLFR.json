@@ -10,7 +10,7 @@
             ],
             "params": {
                 "rotation": 90.0,
-                "componentSpacing": 2000.0,
+                "componentSpacing": 1000.0,
                 "orificeSize": 200.0,
                 "orificeLength": 400.0,
                 "oilInputWidth": 800.0,
@@ -63,7 +63,7 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 2000.0,
+                "componentSpacing": 1000.0,
                 "width": 5000.0,
                 "length": 5000.0,
                 "height": 250.0,
@@ -142,12 +142,12 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 2000.0,
-                "channelWidth": 800.0,
-                "bendSpacing": 1230.0,
+                "componentSpacing": 1000.0,
+                "channelWidth": 600.0,
+                "bendSpacing": 1400.0,
                 "numberOfBends": 1.0,
                 "rotation": 0.0,
-                "bendLength": 2460.0,
+                "bendLength": 2000.0,
                 "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
@@ -161,62 +161,20 @@
             },
             "ports": [
                 {
-                    "x": 2030,
-                    "y": 0,
+                    "x": 1600.0,
+                    "y": 300.0,
                     "label": "1",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 2030,
-                    "y": 4860,
+                    "x": 1600.0,
+                    "y": 4300.0,
                     "label": "2",
                     "layer": "FLOW"
                 }
             ],
-            "x-span": 4060,
-            "y-span": 4860
-        },
-        {
-            "name": "mixer_2",
-            "id": "mixer_2",
-            "entity": "MIXER",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 2000.0,
-                "channelWidth": 800.0,
-                "bendSpacing": 1230.0,
-                "numberOfBends": 1.0,
-                "rotation": 0.0,
-                "bendLength": 2460.0,
-                "height": 250.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "edgeBend1": 300.0,
-                "edgeBend2": 300.0,
-                "position": [
-                    -1,
-                    -1
-                ],
-                "ID": "mixer_2"
-            },
-            "ports": [
-                {
-                    "x": 2030,
-                    "y": 0,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2030,
-                    "y": 4860,
-                    "label": "2",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 4060,
-            "y-span": 4860
+            "x-span": 3200,
+            "y-span": 4600
         },
         {
             "name": "port_2",
@@ -301,6 +259,48 @@
             ],
             "x-span": 2000,
             "y-span": 2000
+        },
+        {
+            "name": "mixer_2",
+            "id": "mixer_2",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 1000.0,
+                "channelWidth": 600.0,
+                "bendSpacing": 1400.0,
+                "numberOfBends": 1.0,
+                "rotation": 0.0,
+                "bendLength": 2000.0,
+                "height": 250.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "mixer_2"
+            },
+            "ports": [
+                {
+                    "x": 1600.0,
+                    "y": 300.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1600.0,
+                    "y": 4300.0,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 3200,
+            "y-span": 4600
         },
         {
             "name": "port_5",
@@ -394,7 +394,7 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 2000.0,
+                "componentSpacing": 1000.0,
                 "valveRadius": 1200,
                 "gap": 600,
                 "width": 2400,
@@ -472,7 +472,7 @@
                 "1"
             ],
             "params": {
-                "componentSpacing": 2000.0,
+                "componentSpacing": 1000.0,
                 "valveRadius": 1200,
                 "gap": 600,
                 "width": 2400,
@@ -519,15 +519,15 @@
         {
             "sinks": [
                 {
-                    "component": "reaction_chamber_1",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "nozzle_droplet_generator_1",
-                "port": "2"
+                "component": "reaction_chamber_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -535,6 +535,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -571,15 +572,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
+                    "component": "mixer_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "reaction_chamber_1",
-                "port": "3"
+                "component": "nozzle_droplet_generator_1",
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
@@ -587,6 +588,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -623,15 +625,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_2",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "port_3",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -639,6 +641,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -676,14 +679,14 @@
             "sinks": [
                 {
                     "component": "nozzle_droplet_generator_1",
-                    "port": "4"
+                    "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
+                "component": "port_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -691,6 +694,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -727,14 +731,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "1"
+                    "component": "reaction_chamber_1",
+                    "port": "3"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_2",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -743,6 +747,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -779,15 +784,15 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "3"
+                    "component": "mixer_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_3",
-                "port": "1"
+                "component": "mixer_2",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -795,6 +800,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -831,14 +837,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "mixer_2",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "port_4",
+                "component": "port_5",
                 "port": "1"
             },
             "params": {
@@ -847,6 +853,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -890,7 +897,7 @@
             "name": "channel_8",
             "id": "channel_8",
             "source": {
-                "component": "port_5",
+                "component": "port_6",
                 "port": "1"
             },
             "params": {
@@ -899,6 +906,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -935,14 +943,14 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
             "name": "channel_9",
             "id": "channel_9",
             "source": {
-                "component": "port_6",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -951,6 +959,7 @@
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
                 "channelWidth": 600,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -1007,6 +1016,7 @@
                 "length": 1000.0,
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -1063,6 +1073,7 @@
                 "length": 1000.0,
                 "minChannelLength": 1000.0,
                 "connectionSpacing": 1000,
+                "width": 600,
                 "start": [
                     "Point",
                     -1,
@@ -1133,7 +1144,7 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_2",
+            "connectionid": "channel_5",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_1"
         }

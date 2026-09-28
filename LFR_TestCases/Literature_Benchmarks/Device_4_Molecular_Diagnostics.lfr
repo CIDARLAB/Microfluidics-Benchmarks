@@ -1,23 +1,50 @@
-// device4_molecular_diagnostics — dual-biosensor diagnostics chip.
-// Purpose: mix two inlets into parallel biosensor storages, hub one path,
-// and expose three outlets (direct sensor plus shared hub).
-// Topology: p1+p2 → {biosensor_a → p3, biosensor_b → outlet_hub → {p4,p5}}.
-// Collaborators: biosensor_a is a direct outlet path; biosensor_b feeds the shared hub.
-// Parallel storage keeps both sensor paths on one connected inlet island.
+// device4_molecular_diagnostics — dual MIP-biosensor diagnostics chip.
+//
+// Topology (propofol joins the trunk AFTER the mixer — not a second mixer inlet):
+//   gibbs_reagent → MIXER → mixed_reagent ─┐
+//                                          ├─ NODE trunk_join → feed ─┬─→ sensor1 → out1
+//   propofol ──────────────────────────────┘                         └─→ sensor2 ─┬─→ out2
+//                                                                                  └─→ out3
+//
+// NODE is a temporary same-layer meet (centre hole, default radius 0). Do not
+// use DIYCOMPONENT for this T-join, and do not write `gibbs + propofol` (that
+// maps both ports into a MIXER).
+
+`import "library/mip_biosensor.lfr"
 
 module Device_4_Molecular_Diagnostics(
-    finput p1, p2,           // sample + reagent diagnostics inlets
-    foutput p3, p4, p5       // direct sensor outlet + dual hub outlets
+    finput gibbs_reagent, propofol,
+    foutput out1, out2, out3
 );
 
-    storage biosensor_a, biosensor_b, outlet_hub;   // dual sensors + shared outlet hub
+    flow mixed_reagent, feed;
+    flow out_sensor1, out_sensor2;
 
-    assign biosensor_a = p1 + p2;                   // load sensor A from both inlets
-    assign biosensor_b = p1 + p2;                   // load sensor B from both inlets
+    #MAP "MIXER" "~"
+    assign mixed_reagent = ~gibbs_reagent;
 
-    assign outlet_hub = biosensor_b;                // hub takes sensor B effluent
-    assign p3 = biosensor_a;                        // direct outlet from sensor A
-    assign p4 = outlet_hub;                         // hub outlet p4
-    assign p5 = outlet_hub;                         // hub outlet p5
+    #MAP "NODE" "storage"
+    storage trunk_join;
+    assign trunk_join = mixed_reagent;
+    assign trunk_join = propofol;
+    assign feed = trunk_join;
+
+    mip_biosensor #(length=8000, width=6000, height=250, componentSpacing=2000) sensor1(
+        .up(out_sensor1),
+        .right(None),
+        .down(feed),
+        .left(None)
+    );
+
+    mip_biosensor #(length=8000, width=6000, height=250, componentSpacing=2000) sensor2(
+        .up(out_sensor2),
+        .right(None),
+        .down(feed),
+        .left(None)
+    );
+
+    assign out1 = out_sensor1;
+    assign out2 = out_sensor2;
+    assign out3 = out_sensor2;
 
 endmodule

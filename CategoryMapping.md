@@ -140,7 +140,6 @@ Mix / incubate / synthesizer demos:
 - `LFR_TestCases/CIDAR_Lab_Past_Devices/Three_Reagent_Mix.lfr`
 - `LFR_TestCases/CIDAR_Lab_Past_Devices/Dna_Synthesizer.lfr`
 - `LFR_TestCases/CIDAR_Lab_Past_Devices/Incubator.lfr`
-- `Quick_Examples/mixer_3to1.lfr`
 - `Quick_Examples/two_in_mixer.lfr`
 - `Quick_Examples/three_in_mixer.lfr`
 - `Quick_Examples/incubator.lfr`
