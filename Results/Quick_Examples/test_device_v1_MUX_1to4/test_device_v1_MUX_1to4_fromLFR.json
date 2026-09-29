@@ -163,7 +163,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -241,7 +241,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -319,7 +319,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -397,7 +397,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -465,7 +465,7 @@
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -511,14 +511,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -571,7 +571,7 @@
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "port_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -624,7 +624,7 @@
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "port_2",
+                "component": "port_3",
                 "port": "1"
             },
             "params": {
@@ -931,7 +931,7 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_1",
+            "connectionid": "channel_3",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
@@ -949,7 +949,7 @@
         },
         {
             "componentid": "valve_3",
-            "connectionid": "channel_3",
+            "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_3"
         }

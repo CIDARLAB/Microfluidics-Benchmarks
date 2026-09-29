@@ -252,7 +252,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -280,7 +280,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -308,7 +308,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -336,7 +336,7 @@
                     "x": 1000.0,
                     "y": 1000.0,
                     "label": "1",
-                    "layer": "FLOW"
+                    "layer": "CONTROL"
                 }
             ],
             "x-span": 2000,
@@ -355,7 +355,7 @@
             "id": "channel_1",
             "source": {
                 "component": "mux_1",
-                "port": "1"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -400,15 +400,15 @@
         {
             "sinks": [
                 {
-                    "component": "mux_1",
-                    "port": "5"
+                    "component": "port_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "mux_1",
+                "port": "5"
             },
             "params": {
                 "crossSection": 1,
@@ -453,15 +453,15 @@
         {
             "sinks": [
                 {
-                    "component": "mux_1",
-                    "port": "3"
+                    "component": "port_3",
+                    "port": "1"
                 }
             ],
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "port_3",
-                "port": "1"
+                "component": "mux_1",
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
@@ -507,7 +507,7 @@
             "sinks": [
                 {
                     "component": "mux_1",
-                    "port": "4"
+                    "port": "1"
                 }
             ],
             "name": "channel_4",
@@ -559,15 +559,15 @@
         {
             "sinks": [
                 {
-                    "component": "mux_1",
-                    "port": "2"
+                    "component": "port_5",
+                    "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_5",
-                "port": "1"
+                "component": "mux_1",
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
