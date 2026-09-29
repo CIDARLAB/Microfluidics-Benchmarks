@@ -9,11 +9,11 @@
                 "0"
             ],
             "params": {
-                "componentSpacing": 1000.0,
+                "componentSpacing": 2000.0,
+                "rotation": 0.0,
                 "channelWidth": 600.0,
                 "bendSpacing": 1400.0,
                 "numberOfBends": 1.0,
-                "rotation": 0.0,
                 "bendLength": 2000.0,
                 "height": 250.0,
                 "mirrorByX": 0.0,
@@ -104,15 +104,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "mixer_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "mixer_1",
-                "port": "2"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -157,15 +157,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,

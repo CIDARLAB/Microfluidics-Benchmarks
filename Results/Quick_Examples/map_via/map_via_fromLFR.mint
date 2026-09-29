@@ -4,7 +4,7 @@ DEVICE map_via
 
 LAYER FLOW 
 
-VIA via_1 componentSpacing=1000.0 radius=700.0 height=0.0 mirrorByX=0.0 mirrorByY=0.0 portRadius=700.0 ;
+VIA via_1 componentSpacing=2000.0 radius=700.0 height=0.0 mirrorByX=0.0 mirrorByY=0.0 portRadius=700.0 ;
 PORT port_1 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
 
 

@@ -10,7 +10,7 @@
             ],
             "params": {
                 "valveWidthY": 800.0,
-                "componentSpacing": 1000.0,
+                "componentSpacing": 2000.0,
                 "rotation": 0.0,
                 "width": 1600.0,
                 "length": 800.0,
@@ -206,15 +206,15 @@
         {
             "sinks": [
                 {
-                    "component": "pump_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "pump_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -259,15 +259,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "pump_1",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "pump_1",
-                "port": "2"
+                "component": "port_2",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,

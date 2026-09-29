@@ -29,37 +29,37 @@
             "ports": [
                 {
                     "x": 9300.0,
-                    "y": 300.0,
+                    "y": 0.0,
                     "label": "1",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 2325.0,
-                    "y": 12900.0,
+                    "x": 18300.0,
+                    "y": 8600.0,
                     "label": "2",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 6975.0,
-                    "y": 12900.0,
+                    "x": 12300.0,
+                    "y": 8600.0,
                     "label": "3",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 11625.0,
-                    "y": 12900.0,
+                    "x": 6300.0,
+                    "y": 8600.0,
                     "label": "4",
                     "layer": "FLOW"
                 },
                 {
-                    "x": 16275.0,
-                    "y": 12900.0,
+                    "x": 300.0,
+                    "y": 8600.0,
                     "label": "5",
                     "layer": "FLOW"
                 }
             ],
             "x-span": 18600,
-            "y-span": 13200
+            "y-span": 8600
         },
         {
             "name": "port_1",
@@ -206,15 +206,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "ytree_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "ytree_1",
-                "port": "5"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -267,7 +267,7 @@
             "id": "channel_2",
             "source": {
                 "component": "ytree_1",
-                "port": "3"
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
@@ -320,7 +320,7 @@
             "id": "channel_3",
             "source": {
                 "component": "ytree_1",
-                "port": "4"
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
@@ -373,7 +373,7 @@
             "id": "channel_4",
             "source": {
                 "component": "ytree_1",
-                "port": "2"
+                "port": "5"
             },
             "params": {
                 "crossSection": 1,
@@ -418,15 +418,15 @@
         {
             "sinks": [
                 {
-                    "component": "ytree_1",
+                    "component": "port_5",
                     "port": "1"
                 }
             ],
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_5",
-                "port": "1"
+                "component": "ytree_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
