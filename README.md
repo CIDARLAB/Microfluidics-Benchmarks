@@ -14,7 +14,7 @@ Neptune batch scripts live in the parent repo (`Neptune_2026/scripts/`). From th
 poetry run ./scripts/run_all_LFR.sh              # every LFR_TestCases/**/*.lfr → *_PR.json
 poetry run ./scripts/run_all_MINT.sh             # every MINT_TestCases/**/*.mint → *_PR.json
 poetry run ./scripts/run_all_Quick_Examples.sh   # top-level Quick_Examples demos only
-poetry run ./scripts/run_all_Quick_Test.sh       # Quick_Test Category-A fanin repairs (+ Super_MUX)
+poetry run ./scripts/run_all_Quick_Test.sh       # Quick_Test Literature_Benchmarks MINT subset
 poetry run ./scripts/run_all_LFR_no_PR.sh        # LFR compile only (no TREE-PLACE)
 poetry run ./scripts/run_all_MINT_no_PR.sh       # MINT compile only (no TREE-PLACE)
 poetry run ./scripts/run_all_Quick_Examples_no_PR.sh  # Quick_Examples compile only
@@ -74,14 +74,13 @@ Small LFR/MINT demos for one-off runs. Neptune `run_all_Quick_Examples.sh` synth
 
 ### Quick_Test/
 
-Re-run suite for the **27 Category-A control-fanin repairs** (copies of `MINT_Illegal_Control_Fanin/**/*.mint`, one `VALVE3D` per `Cport_*`) plus optional top-level probes (`Super_MUX_8.mint`, `Super_MUX_128.mint`). Details: `Quick_Test/README.md`. From Neptune root:
+Focused MINT re-run suite: **`Literature_Benchmarks/`** devices only (Device_2 / 4 / 5 / 6 / 7). Details: `Quick_Test/README.md`. From Neptune root:
 
 ```sh
 poetry run ./scripts/run_all_Quick_Test.sh
-# SKIP_TOPLEVEL=1  → only the 27 category-A cases
 ```
 
-Results: `Results/Quick_Test/<Category>/<Stem>/`. Not part of `run_all_Quick_Examples.sh`.
+Results: `Results/Quick_Test/Literature_Benchmarks/<Stem>/` (`*_PR.json` only; fluigi polish off). Not part of `run_all_Quick_Examples.sh`.
 
 ### MINT_Illegal_Control_Fanin/
 
