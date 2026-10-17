@@ -12,11 +12,11 @@
                 "componentSpacing": 2000.0,
                 "width": 5000.0,
                 "length": 5000.0,
-                "height": 250.0,
                 "cornerRadius": 200.0,
                 "rotation": 0.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "depth": 250.0,
                 "position": [
                     -1,
                     -1
@@ -62,7 +62,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -90,7 +90,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -113,15 +113,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "reaction_chamber_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "reaction_chamber_1",
-                "port": "3"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -166,15 +166,15 @@
         {
             "sinks": [
                 {
-                    "component": "reaction_chamber_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "reaction_chamber_1",
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,

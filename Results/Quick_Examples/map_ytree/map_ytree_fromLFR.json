@@ -14,10 +14,9 @@
                 "flowChannelWidth": 600.0,
                 "leafSpace": 4000.0,
                 "stageSpace": 4000.0,
-                "height": 250.0,
+                "depth": 250.0,
                 "componentSpacing": 1000.0,
                 "rotation": 0.0,
-                "width": 2460.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "position": [
@@ -71,7 +70,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -99,7 +98,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -127,7 +126,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -155,7 +154,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -183,7 +182,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -206,15 +205,15 @@
         {
             "sinks": [
                 {
-                    "component": "ytree_1",
+                    "component": "port_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "port_1",
-                "port": "1"
+                "component": "ytree_1",
+                "port": "3"
             },
             "params": {
                 "crossSection": 1,
@@ -320,7 +319,7 @@
             "id": "channel_3",
             "source": {
                 "component": "ytree_1",
-                "port": "3"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -365,15 +364,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_4",
+                    "component": "ytree_1",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "ytree_1",
-                "port": "5"
+                "component": "port_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -426,7 +425,7 @@
             "id": "channel_5",
             "source": {
                 "component": "ytree_1",
-                "port": "2"
+                "port": "5"
             },
             "params": {
                 "crossSection": 1,

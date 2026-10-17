@@ -1,35 +1,14 @@
 # Quick_Test
 
-Quick suite for re-running the **27 Category-A MINT control-fanin repairs**
-(plus optional top-level probes such as `Super_MUX_*.mint`).
+Small MINT subset for batch regression via `scripts/run_all_Quick_Test.sh`.
 
-Sources: copies of `MINT_Illegal_Control_Fanin/**/*.mint` (one `VALVE3D` per
-`Cport_*`, `Ctrlchannel_i → valve_i`). Same rewrite as under `MINT_TestCases/`.
+## Current contents
 
-## Run (from Neptune_2026 root)
+- `Literature_Benchmarks/` — five literature MINT devices used for quick end-to-end `synthesizeFromMINT` checks.
 
-```sh
-./scripts/run_all_Quick_Test.sh
-```
+Outputs land under `Results/Quick_Test/<Category>/<Stem>/` (`*_fromMINT.json`, `*_fromMINT_PR.json`, topology PDF). Fluigi polish is off: only pure TREE-PLACE `*_PR.json` is written.
 
-Results go to:
+Env for the batch script:
 
-```text
-Microfluidics-Benchmarks/Results/Quick_Test/<Category>/<Stem>/
-  <Stem>_fromMINT.json
-  <Stem>_fromMINT_PR.json
-  ...
-```
-
-Useful env vars:
-
-| Env | Effect |
-|-----|--------|
-| `SKIP_TOPLEVEL=1` | Only the 27 category-A cases (skip `Super_MUX_*`) |
-| `ONLY_SUBFOLDER=Mars` | Only one category folder |
-
-Example:
-
-```sh
-SKIP_TOPLEVEL=1 ./scripts/run_all_Quick_Test.sh
-```
+- `ONLY_SUBFOLDER` — restrict to one category folder
+- `SKIP_TOPLEVEL=1` — skip any `*.mint` directly under `Quick_Test/`

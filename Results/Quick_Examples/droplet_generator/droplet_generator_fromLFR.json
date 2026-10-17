@@ -17,9 +17,9 @@
                 "waterInputWidth": 600.0,
                 "outputWidth": 600.0,
                 "outputLength": 600.0,
-                "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
+                "depth": 250.0,
                 "position": [
                     -1,
                     -1
@@ -65,7 +65,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -93,7 +93,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -121,7 +121,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -149,7 +149,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -173,7 +173,7 @@
             "sinks": [
                 {
                     "component": "nozzle_droplet_generator_1",
-                    "port": "1"
+                    "port": "3"
                 }
             ],
             "name": "channel_1",
@@ -225,15 +225,15 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "4"
+                    "component": "port_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "nozzle_droplet_generator_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -279,7 +279,7 @@
             "sinks": [
                 {
                     "component": "nozzle_droplet_generator_1",
-                    "port": "3"
+                    "port": "1"
                 }
             ],
             "name": "channel_3",
@@ -331,15 +331,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_4",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "4"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "nozzle_droplet_generator_1",
-                "port": "2"
+                "component": "port_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,

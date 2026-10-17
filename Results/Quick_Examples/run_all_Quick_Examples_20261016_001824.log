@@ -1,0 +1,1278 @@
+Run-all Quick_Examples (synthesize* -> pure *_PR.json only; polish off)
+Input:   ./Microfluidics-Benchmarks/Quick_Examples
+Output:  ./Microfluidics-Benchmarks/Results/Quick_Examples
+Variant: 0
+Log:     ./Microfluidics-Benchmarks/Results/Quick_Examples/run_all_Quick_Examples_20261016_001824.log
+-----------------------
+--- Skip native MINT: no top-level *.mint (excluding *_fromLFR.mint) under ./Microfluidics-Benchmarks/Quick_Examples
+=== LFR (2 file(s)) ===
+>> synthesize: ./Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr (variant 0)
+line 2:22 extraneous input 'BOX' expecting {',', '}'}
+line 2:25 extraneous input 'CHAMBER' expecting {',', '}'}
+ _____ _       _       _ 
+|  ___| |_   _(_) __ _(_)
+| |_  | | | | | |/ _` | |
+|  _| | | |_| | | (_| | |
+|_|   |_|\__,_|_|\__, |_|
+                 |___/   
+
+synthesize output dir: Microfluidics-Benchmarks/Results/Quick_Examples
+['/home/cidar-ron/Downloads/Neptune_2026/pylfr/library', './Microfluidics-Benchmarks/Quick_Examples']
+Loading all LFR Files from lib Directories:
+-- Loading form path /home/cidar-ron/Downloads/Neptune_2026/pylfr/library
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mux.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/tree.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/port.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/DIYcomponent.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/picoinjector.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mixer.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/valve.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/nozzle_droplet_generator.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/channel.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/reaction_chamber.lfr
+-- Loading form path ./Microfluidics-Benchmarks/Quick_Examples
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr
+Input Path: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr
+File: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr
+['test_device_v2_2MUX.lfr']
+output dir: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX
+['./Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr']
+Initialized the lfrcompiler
+LHS not equal to RHS
+LHS not equal to RHS
+Name : test_device_v2_2MUX
+Name: in, Type : IOType.FLOW_INPUT
+Name: out, Type : IOType.FLOW_OUTPUT
+
+---Top of Stack---
+---Bottom of Stack---
+Flow candidate: {'mid'}
+Passthrough found: {'mid'}
+Since its a single flow node, we are skipping the component: {'mid'}
+[]
+('53c781a4bb83e5eef48bdb2303774f17', 'BLACK BOX', '{\n            v1: BLACK BOX\n        }')
+('c10d266fa911a88b1d6c2023b2990c4a', 'DIYCOMPONENT', '{\n            v1: DIYCOMPONENT\n        }')
+('6fc35c7c22084cae72e62a0163574d8c', 'REACTION CHAMBER', '{\n            v1: REACTION CHAMBER\n        }')
+('aff2625bc96e55b608a3c0f57ac223d9', 'VIA', '{\n            v1: VIA\n        }')
+('293f8a728c99ee1857bf7fb0bbb7cf0b', 'NODE', '{\n            v1: NODE\n        }')
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', '{\n            v1:IO\n        }')
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', '{\n            v1:MIX\n        }')
+('d1781b16b1ea9b97644d83f5671ba40d', 'MIXER', '{\n            v1:DILUTE\n        }')
+('d6fb8e84c82516578994ca10d986a92b', 'PUMP', '{\n            v1:PUMP\n        }')
+('8330be665ac09c4b528fb673eaf54323', 'PICOINJECTOR', '{\n            v1:MIX\n        }')
+('588c06b63717d489f484abec4d043630', 'DROPLET MERGER', '{\n            v1:MIX\n        }')
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', '{\n            v1:SIEVE\n        }')
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', '{\n            v1:METER\n        }')
+('914238687115aa147b97e8d5533e886c', 'DROPLET MERGER JUNCTION', '{\n            v1:MIX\n        }')
+('d886b57db1ce64cdc693b482957a8fe2', 'DROPLET MERGER CHANNEL', '{\n            v1:MIX\n        }')
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', '{\n            v1:DIVIDE\n        }')
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', '{\n            v1:PROCESS\n        }')
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', '{\n            v1:STORAGE\n        }')
+('cd9f240e7e4fed74b91aa6e3b94eec01', 'LONG CELL TRAPPER', '{\n            v1:STORAGE\n        }')
+('26f0a16b9d1878f24029199874cd778b', 'FILTER', '{\n            v1:PROCESS\n        }')
+('c9770124d971f8583173f0dd28b4017b', 'DROPLET FLUORESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('09781c385e672251742ca6cc07e56759', 'DROPLET LUMINESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('1159f8c0f6837f1916dd1b43d142fa9d', 'DROPLET SPACER', '{\n            v1:PROCESS\n        }')
+('feb0fbd9a78edd7b903246b2de78427e', 'YTREE', '')
+('07397b3a83839b04e1809bf2d49055ee', 'MUX', '')
+('22973a5c93f265b9aad83006fa89d2aa', 'ROUNDED CHANNEL', '')
+('f52e9c50a060add65a035429b2a22229', 'CHANNEL', '')
+[]
+53c781a4bb83e5eef48bdb2303774f17
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280c5e0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+c10d266fa911a88b1d6c2023b2990c4a
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280dc30>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+6fc35c7c22084cae72e62a0163574d8c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280d900>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+aff2625bc96e55b608a3c0f57ac223d9
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e380>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+293f8a728c99ee1857bf7fb0bbb7cf0b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e890>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+5b0789de1846a32aa239997c6b11eba8
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280ee60>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_3': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_3': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_0': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+3888a3a085a0b78f43d9ad9257fb94cd
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280f0a0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+d1781b16b1ea9b97644d83f5671ba40d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280f790>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+d6fb8e84c82516578994ca10d986a92b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280c6a0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+8330be665ac09c4b528fb673eaf54323
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280fd30>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+588c06b63717d489f484abec4d043630
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e830>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+5cd84e8394bf8d6c20a6333d70b59771
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280dff0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+9722844e53ed3f50c3e82c3f8015876f
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280f580>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+914238687115aa147b97e8d5533e886c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e650>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+d886b57db1ce64cdc693b482957a8fe2
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280d870>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+d949473e8c28c7624371eb1477dc026b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e4a0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+cdea77c5343e10aa9ebcb993ab494b7b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e590>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+ddafeac84b5c1d4256c02be0327aad6b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280e9e0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+cd9f240e7e4fed74b91aa6e3b94eec01
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280eec0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+26f0a16b9d1878f24029199874cd778b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280f370>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+c9770124d971f8583173f0dd28b4017b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280efe0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+09781c385e672251742ca6cc07e56759
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280d360>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+1159f8c0f6837f1916dd1b43d142fa9d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x7fb1c280dc30>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+feb0fbd9a78edd7b903246b2de78427e
+Warning ! - Missing match string for mint- feb0fbd9a78edd7b903246b2de78427e
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+07397b3a83839b04e1809bf2d49055ee
+Warning ! - Missing match string for mint- 07397b3a83839b04e1809bf2d49055ee
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+22973a5c93f265b9aad83006fa89d2aa
+Warning ! - Missing match string for mint- 22973a5c93f265b9aad83006fa89d2aa
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+f52e9c50a060add65a035429b2a22229
+Warning ! - Missing match string for mint- f52e9c50a060add65a035429b2a22229
+Ret here
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})]
+Total Matches against library : 8
+Start of Matches
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})
+End of matches
+Total matches against library after explicit mapping eliminations: 10
+{'in_1', 'in_0', 'mid', 'in_2', 'in_3'}
+{'out_1', 'out_2', 'mid', 'out_3', 'out_0'}
+{'out_1'}
+{'in_1'}
+{'in_0'}
+{'out_2'}
+{'out_3'}
+{'in_2'}
+{'in_3'}
+{'out_0'}
+Moving Max Set Cover to the front: [{'in_1', 'in_0', 'mid', 'in_2', 'in_3'}, {'out_1', 'out_2', 'mid', 'out_3', 'out_0'}]
+out_1
+in_1
+in_0
+mid
+out_2
+out_3
+in_2
+in_3
+out_0
+Moving Explicit Matches to the front: [{'in_2', 'in_3', 'in_1', 'in_0', 'mid'}, {'out_3', 'out_0', 'out_1', 'out_2', 'mid'}]
+Checking Match: ('07397b3a83839b04e1809bf2d49055ee', 'MUX', {'mid': 'vi0', 'out_0': 'vo0', 'out_1': 'vo1', 'out_2': 'vo2', 'out_3': 'vo3'})
+Adding node cn_mux_1 to variant variant_0
+Checking Match: ('07397b3a83839b04e1809bf2d49055ee', 'MUX', {'in_0': 'vi0', 'in_1': 'vi1', 'in_2': 'vi2', 'in_3': 'vi3', 'mid': 'vo0'})
+Adding node cn_mux_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_1 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_2 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_3 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_4 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_5 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_6 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_7 to variant variant_0
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_8 to variant variant_0
+Variant variant_0:
+cn_mux_1
+cn_mux_2
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+cn_port_5
+cn_port_6
+cn_port_7
+cn_port_8
+Connected Nodes
+cn_mux_1
+cn_mux_2
+Connected Nodes
+cn_mux_1
+cn_port_1
+Connected Nodes
+cn_mux_1
+cn_port_4
+Connected Nodes
+cn_mux_1
+cn_port_5
+Connected Nodes
+cn_mux_1
+cn_port_8
+Nodes cn_mux_2, cn_mux_1 has edge, skipping adding edge
+Connected Nodes
+cn_mux_2
+cn_port_2
+Connected Nodes
+cn_mux_2
+cn_port_3
+Connected Nodes
+cn_mux_2
+cn_port_6
+Connected Nodes
+cn_mux_2
+cn_port_7
+Nodes cn_port_1, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_2, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_3, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_4, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_5, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_6, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_7, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_8, cn_mux_1 has edge, skipping adding edge
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x7fb1c27df990>
+Pulling Default Values of Components
+Deleted unsupported param "leafs" from component mux_1 : MUX
+Deleted unsupported param "position" from component mux_1 : MUX
+Deleted unsupported param "leafs" from component mux_2 : MUX
+Deleted unsupported param "position" from component mux_2 : MUX
+Deleted unsupported param "position" from component port_1 : PORT
+Deleted unsupported param "position" from component port_2 : PORT
+Deleted unsupported param "position" from component port_3 : PORT
+Deleted unsupported param "position" from component port_4 : PORT
+Deleted unsupported param "position" from component port_5 : PORT
+Deleted unsupported param "position" from component port_6 : PORT
+Deleted unsupported param "position" from component port_7 : PORT
+Deleted unsupported param "position" from component port_8 : PORT
+Deleted unsupported param "position" from component mux_1_cp1 : PORT
+Deleted unsupported param "position" from component mux_1_cp2 : PORT
+Deleted unsupported param "position" from component mux_1_cp3 : PORT
+Deleted unsupported param "position" from component mux_1_cp4 : PORT
+Deleted unsupported param "position" from component mux_2_cp1 : PORT
+Deleted unsupported param "position" from component mux_2_cp2 : PORT
+Deleted unsupported param "position" from component mux_2_cp3 : PORT
+Deleted unsupported param "position" from component mux_2_cp4 : PORT
+Pulling Dimensions of Components
+Pulling Terminals of Components
+Remap PORT mux_1_cp1.4 → 1
+Remap PORT mux_1_cp2.2 → 1
+Remap PORT mux_1_cp3.4 → 1
+Remap PORT mux_1_cp4.2 → 1
+Remap PORT mux_2_cp1.4 → 1
+Remap PORT mux_2_cp2.2 → 1
+Remap PORT mux_2_cp3.4 → 1
+Remap PORT mux_2_cp4.2 → 1
+output: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX
+output: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX/test_device_v2_2MUX_fromLFR_topology.dot
+/home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX/test_device_v2_2MUX/variant_0
+[lfr-netlist-validate] test_device_v2_2MUX.lfr: OK (FLOW 8/8, CONTROL 8/0)
+[lfr-netlist-validate] test_device_v2_2MUX.lfr: OK (FLOW 8/8, CONTROL 8/0)
+output dir: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX
+Running File: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX/test_device_v2_2MUX_fromLFR.json
+Finish loading test case: test_device_v2_2MUX_fromLFR_2380085_d432fd6b
+1/9, Finish initial placement, time spent: 1.7881393432617188e-05 s
+[0, 15000, 19200, 'mux_1', 0] [[7500.0, 0.0], [13500.0, 19200.0], [9500.0, 19200.0], [5500.0, 19200.0], [1500.0, 19200.0], [0.0, 8600.0], [15000.0, 10600.0], [0.0, 15200.0], [15000.0, 17200.0]]
+[1, 15000, 19200, 'mux_2', 0] [[7500.0, 0.0], [13500.0, 19200.0], [9500.0, 19200.0], [5500.0, 19200.0], [1500.0, 19200.0], [0.0, 8600.0], [15000.0, 10600.0], [0.0, 15200.0], [15000.0, 17200.0]]
+[2, 2000, 2000, 'port_1', 0] [[1000.0, 1000.0]]
+[3, 2000, 2000, 'port_2', 0] [[1000.0, 1000.0]]
+[4, 2000, 2000, 'port_3', 0] [[1000.0, 1000.0]]
+[5, 2000, 2000, 'port_4', 0] [[1000.0, 1000.0]]
+[6, 2000, 2000, 'port_5', 0] [[1000.0, 1000.0]]
+[7, 2000, 2000, 'port_6', 0] [[1000.0, 1000.0]]
+[8, 2000, 2000, 'port_7', 0] [[1000.0, 1000.0]]
+[9, 2000, 2000, 'port_8', 0] [[1000.0, 1000.0]]
+2/9, Finish initial placement with rotation, time spent: 8.034706115722656e-05 s
+3/9, Finish symmetricalization, time spent: 1.0251998901367188e-05 s
+4/9, Finish routing, time spent: 0.00019860267639160156 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0, 1, 2, 3], [0], [0], [0, 1, 2, 3]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.0011942386627197266 s
+6/9, Finish shortening wirelength, time spent: 5.5789947509765625e-05 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.00021195411682128906 s
+9/9, Finish compaction and connecting ports, time spent: 0.028948068618774414 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.030717134475708008 s
+Reordering Timeusage: 0.0011942386627197266 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.030410051345825195 s
+Done. Combined PR JSON: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX/test_device_v2_2MUX_fromLFR_PR.json
+Completed PRalgorithm (TREE-PLACE) place-and-route.
+Wrote pure PR (polish off): /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX/test_device_v2_2MUX_fromLFR_PR.json
+✓ LFR synthesis + pure PR under ./Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v2_2MUX
+>> synthesize: ./Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr (variant 0)
+line 2:22 extraneous input 'BOX' expecting {',', '}'}
+line 2:25 extraneous input 'CHAMBER' expecting {',', '}'}
+ _____ _       _       _ 
+|  ___| |_   _(_) __ _(_)
+| |_  | | | | | |/ _` | |
+|  _| | | |_| | | (_| | |
+|_|   |_|\__,_|_|\__, |_|
+                 |___/   
+
+synthesize output dir: Microfluidics-Benchmarks/Results/Quick_Examples
+['/home/cidar-ron/Downloads/Neptune_2026/pylfr/library', './Microfluidics-Benchmarks/Quick_Examples']
+Loading all LFR Files from lib Directories:
+-- Loading form path /home/cidar-ron/Downloads/Neptune_2026/pylfr/library
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mux.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/tree.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/port.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/DIYcomponent.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/picoinjector.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/mixer.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/valve.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/nozzle_droplet_generator.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/channel.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/pylfr/library/default-modules/reaction_chamber.lfr
+-- Loading form path ./Microfluidics-Benchmarks/Quick_Examples
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr
+Storing into library: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v2_2MUX.lfr
+Input Path: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr
+File: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr
+['test_device_v3_2MUX_fork.lfr']
+output dir: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork
+['./Microfluidics-Benchmarks/Quick_Examples/test_device_v3_2MUX_fork.lfr']
+Initialized the lfrcompiler
+LHS not equal to RHS
+LHS not equal to RHS
+LHS, RHS sizes are equal
+FLOW - mid STORAGE - tap
+Name : test_device_v3_2MUX_fork
+Name: in, Type : IOType.FLOW_INPUT
+Name: out, Type : IOType.FLOW_OUTPUT
+
+---Top of Stack---
+---Bottom of Stack---
+Flow candidate: {'mid'}
+Passthrough found: {'mid'}
+Since its a single flow node, we are skipping the component: {'mid'}
+[]
+('53c781a4bb83e5eef48bdb2303774f17', 'BLACK BOX', '{\n            v1: BLACK BOX\n        }')
+('c10d266fa911a88b1d6c2023b2990c4a', 'DIYCOMPONENT', '{\n            v1: DIYCOMPONENT\n        }')
+('6fc35c7c22084cae72e62a0163574d8c', 'REACTION CHAMBER', '{\n            v1: REACTION CHAMBER\n        }')
+('aff2625bc96e55b608a3c0f57ac223d9', 'VIA', '{\n            v1: VIA\n        }')
+('293f8a728c99ee1857bf7fb0bbb7cf0b', 'NODE', '{\n            v1: NODE\n        }')
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', '{\n            v1:IO\n        }')
+('3888a3a085a0b78f43d9ad9257fb94cd', 'MIXER', '{\n            v1:MIX\n        }')
+('d1781b16b1ea9b97644d83f5671ba40d', 'MIXER', '{\n            v1:DILUTE\n        }')
+('d6fb8e84c82516578994ca10d986a92b', 'PUMP', '{\n            v1:PUMP\n        }')
+('8330be665ac09c4b528fb673eaf54323', 'PICOINJECTOR', '{\n            v1:MIX\n        }')
+('588c06b63717d489f484abec4d043630', 'DROPLET MERGER', '{\n            v1:MIX\n        }')
+('5cd84e8394bf8d6c20a6333d70b59771', 'DROPLET SORTER', '{\n            v1:SIEVE\n        }')
+('9722844e53ed3f50c3e82c3f8015876f', 'NOZZLE DROPLET GENERATOR', '{\n            v1:METER\n        }')
+('914238687115aa147b97e8d5533e886c', 'DROPLET MERGER JUNCTION', '{\n            v1:MIX\n        }')
+('d886b57db1ce64cdc693b482957a8fe2', 'DROPLET MERGER CHANNEL', '{\n            v1:MIX\n        }')
+('d949473e8c28c7624371eb1477dc026b', 'DROPLET SPLITTER', '{\n            v1:DIVIDE\n        }')
+('cdea77c5343e10aa9ebcb993ab494b7b', 'DROPLET CAPACITANCE SENSOR', '{\n            v1:PROCESS\n        }')
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', '{\n            v1:STORAGE\n        }')
+('cd9f240e7e4fed74b91aa6e3b94eec01', 'LONG CELL TRAPPER', '{\n            v1:STORAGE\n        }')
+('26f0a16b9d1878f24029199874cd778b', 'FILTER', '{\n            v1:PROCESS\n        }')
+('c9770124d971f8583173f0dd28b4017b', 'DROPLET FLUORESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('09781c385e672251742ca6cc07e56759', 'DROPLET LUMINESCENCE SENSOR', '{\n            v1:PROCESS\n        }')
+('1159f8c0f6837f1916dd1b43d142fa9d', 'DROPLET SPACER', '{\n            v1:PROCESS\n        }')
+('feb0fbd9a78edd7b903246b2de78427e', 'YTREE', '')
+('07397b3a83839b04e1809bf2d49055ee', 'MUX', '')
+('22973a5c93f265b9aad83006fa89d2aa', 'ROUNDED CHANNEL', '')
+('f52e9c50a060add65a035429b2a22229', 'CHANNEL', '')
+[]
+53c781a4bb83e5eef48bdb2303774f17
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc064a60>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+c10d266fa911a88b1d6c2023b2990c4a
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc064f10>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+6fc35c7c22084cae72e62a0163574d8c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc065cc0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+aff2625bc96e55b608a3c0f57ac223d9
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc066ef0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+293f8a728c99ee1857bf7fb0bbb7cf0b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc066da0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[]
+5b0789de1846a32aa239997c6b11eba8
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067370>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_2': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_3': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'out_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_1': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_0': 'v1'}
+Found Match: 5b0789de1846a32aa239997c6b11eba8
+{'in_3': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+3888a3a085a0b78f43d9ad9257fb94cd
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc0675b0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+d1781b16b1ea9b97644d83f5671ba40d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067ca0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+d6fb8e84c82516578994ca10d986a92b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc066410>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+8330be665ac09c4b528fb673eaf54323
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc064a00>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+588c06b63717d489f484abec4d043630
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067cd0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+5cd84e8394bf8d6c20a6333d70b59771
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc066cb0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+9722844e53ed3f50c3e82c3f8015876f
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067d30>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+914238687115aa147b97e8d5533e886c
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc065d80>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+d886b57db1ce64cdc693b482957a8fe2
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067fa0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+d949473e8c28c7624371eb1477dc026b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc0671c0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+cdea77c5343e10aa9ebcb993ab494b7b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc064b20>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})]
+ddafeac84b5c1d4256c02be0327aad6b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc065c30>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+Found Match: ddafeac84b5c1d4256c02be0327aad6b
+{'tap': 'v1'}
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+cd9f240e7e4fed74b91aa6e3b94eec01
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067880>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+26f0a16b9d1878f24029199874cd778b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc0667d0>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+c9770124d971f8583173f0dd28b4017b
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc066200>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+09781c385e672251742ca6cc07e56759
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc065e40>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+1159f8c0f6837f1916dd1b43d142fa9d
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+ANTLR runtime and generated code versions disagree: 4.13.2!=4.10
+<lfr.graphmatch.matchpattern.MatchPattern object at 0x75aebc067100>
+[('in_0', 'mid'), ('in_1', 'mid'), ('in_2', 'mid'), ('in_3', 'mid'), ('mid', 'out_0'), ('mid', 'out_1'), ('mid', 'out_2'), ('mid', 'out_3'), ('mid', 'tap')]
+Templates Here
+Structural Template Nodes: [('v1', {})]
+Structural Template Edges: []
+Node v1 has the following constraints:
+[]
+Templates End
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+feb0fbd9a78edd7b903246b2de78427e
+Warning ! - Missing match string for mint- feb0fbd9a78edd7b903246b2de78427e
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+07397b3a83839b04e1809bf2d49055ee
+Warning ! - Missing match string for mint- 07397b3a83839b04e1809bf2d49055ee
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+22973a5c93f265b9aad83006fa89d2aa
+Warning ! - Missing match string for mint- 22973a5c93f265b9aad83006fa89d2aa
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+f52e9c50a060add65a035429b2a22229
+Warning ! - Missing match string for mint- f52e9c50a060add65a035429b2a22229
+Ret here
+[('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'}), ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'}), ('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+Total Matches against library : 9
+Start of Matches
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'})
+('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})
+('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})
+End of matches
+Eliminating match: [('ddafeac84b5c1d4256c02be0327aad6b', 'SQUARE CELL TRAP', {'tap': 'v1'})]
+Eliminating match: []
+Eliminating match: []
+Eliminating match: []
+Total matches against library after explicit mapping eliminations: 12
+{'in_2', 'in_1', 'in_0', 'mid', 'in_3'}
+{'out_0', 'out_2', 'out_3', 'out_1', 'mid'}
+{'tap'}
+{'tap'}
+{'in_2'}
+{'out_0'}
+{'out_2'}
+{'out_3'}
+{'out_1'}
+{'in_1'}
+{'in_0'}
+{'in_3'}
+Moving Max Set Cover to the front: [{'in_2', 'in_1', 'in_0', 'mid', 'in_3'}, {'out_0', 'out_2', 'out_3', 'out_1', 'mid'}, {'tap'}]
+in_2
+out_0
+out_2
+out_3
+out_1
+in_1
+in_0
+mid
+in_3
+tap
+Moving Explicit Matches to the front: [{'in_2', 'in_1', 'in_0', 'mid', 'in_3'}, {'out_3', 'out_1', 'out_0', 'out_2', 'mid'}, {'tap'}, {'tap'}]
+Checking Match: ('aff2625bc96e55b608a3c0f57ac223d9', 'VIA', {'tap': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_via_1 to variant variant_0
+Checking Match: ('07397b3a83839b04e1809bf2d49055ee', 'MUX', {'mid': 'vi0', 'out_0': 'vo0', 'out_1': 'vo1', 'out_2': 'vo2', 'out_3': 'vo3'})
+Adding node cn_mux_1 to variant variant_0
+Checking Match: ('07397b3a83839b04e1809bf2d49055ee', 'MUX', {'in_0': 'vi0', 'in_1': 'vi1', 'in_2': 'vi2', 'in_3': 'vi3', 'mid': 'vo0'})
+Adding node cn_mux_2 to variant variant_0
+Checking Match: ('aff2625bc96e55b608a3c0f57ac223d9', 'VIA', {'tap': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Generating new variant for substitution cn_via_2
+Adding node cn_via_2 to variant variant_0
+Here
+frozenset({'tap'})
+Construction Graph: variant_0
+<lfr.netlistgenerator.constructiongraph.varianttree.VariantNode object at 0x75aebc0675e0>
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_1 to variant variant_0
+Adding node cn_port_1 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_2 to variant variant_0
+Adding node cn_port_2 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_2': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_3 to variant variant_0
+Adding node cn_port_3 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_4 to variant variant_0
+Adding node cn_port_4 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'out_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_5 to variant variant_0
+Adding node cn_port_5 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_1': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_6 to variant variant_0
+Adding node cn_port_6 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_0': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_7 to variant variant_0
+Adding node cn_port_7 to variant variant_1
+Checking Match: ('5b0789de1846a32aa239997c6b11eba8', 'PORT', {'in_3': 'v1'})
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Warning: Implment how the connecting option is mapped to match string node
+Adding node cn_port_8 to variant variant_0
+Adding node cn_port_8 to variant variant_1
+Variant variant_0:
+cn_via_1
+cn_mux_1
+cn_mux_2
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+cn_port_5
+cn_port_6
+cn_port_7
+cn_port_8
+Variant variant_1:
+cn_mux_1
+cn_mux_2
+cn_via_2
+cn_port_1
+cn_port_2
+cn_port_3
+cn_port_4
+cn_port_5
+cn_port_6
+cn_port_7
+cn_port_8
+Connected Nodes
+cn_via_1
+cn_mux_1
+Nodes cn_mux_1, cn_via_1 has edge, skipping adding edge
+Connected Nodes
+cn_mux_1
+cn_mux_2
+Connected Nodes
+cn_mux_1
+cn_port_2
+Connected Nodes
+cn_mux_1
+cn_port_3
+Connected Nodes
+cn_mux_1
+cn_port_4
+Connected Nodes
+cn_mux_1
+cn_port_5
+Nodes cn_mux_2, cn_mux_1 has edge, skipping adding edge
+Connected Nodes
+cn_mux_2
+cn_port_1
+Connected Nodes
+cn_mux_2
+cn_port_6
+Connected Nodes
+cn_mux_2
+cn_port_7
+Connected Nodes
+cn_mux_2
+cn_port_8
+Nodes cn_port_1, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_2, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_3, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_4, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_5, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_6, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_7, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_8, cn_mux_2 has edge, skipping adding edge
+Connected Nodes
+cn_mux_1
+cn_mux_2
+Connected Nodes
+cn_mux_1
+cn_via_2
+Connected Nodes
+cn_mux_1
+cn_port_2
+Connected Nodes
+cn_mux_1
+cn_port_3
+Connected Nodes
+cn_mux_1
+cn_port_4
+Connected Nodes
+cn_mux_1
+cn_port_5
+Nodes cn_mux_2, cn_mux_1 has edge, skipping adding edge
+Connected Nodes
+cn_mux_2
+cn_port_1
+Connected Nodes
+cn_mux_2
+cn_port_6
+Connected Nodes
+cn_mux_2
+cn_port_7
+Connected Nodes
+cn_mux_2
+cn_port_8
+Nodes cn_via_2, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_1, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_2, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_3, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_4, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_5, cn_mux_1 has edge, skipping adding edge
+Nodes cn_port_6, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_7, cn_mux_2 has edge, skipping adding edge
+Nodes cn_port_8, cn_mux_2 has edge, skipping adding edge
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x75aebc084510>
+Nodes to Traverse: <generator object dfs_preorder_nodes.<locals>.<genexpr> at 0x75aebc035a10>
+Pulling Default Values of Components
+Deleted unsupported param "position" from component via_1 : VIA
+Deleted unsupported param "leafs" from component mux_1 : MUX
+Deleted unsupported param "position" from component mux_1 : MUX
+Deleted unsupported param "leafs" from component mux_2 : MUX
+Deleted unsupported param "position" from component mux_2 : MUX
+Deleted unsupported param "position" from component port_1 : PORT
+Deleted unsupported param "position" from component port_2 : PORT
+Deleted unsupported param "position" from component port_3 : PORT
+Deleted unsupported param "position" from component port_4 : PORT
+Deleted unsupported param "position" from component port_5 : PORT
+Deleted unsupported param "position" from component port_6 : PORT
+Deleted unsupported param "position" from component port_7 : PORT
+Deleted unsupported param "position" from component port_8 : PORT
+Deleted unsupported param "position" from component mux_1_cp1 : PORT
+Deleted unsupported param "position" from component mux_1_cp2 : PORT
+Deleted unsupported param "position" from component mux_1_cp3 : PORT
+Deleted unsupported param "position" from component mux_1_cp4 : PORT
+Deleted unsupported param "position" from component mux_2_cp1 : PORT
+Deleted unsupported param "position" from component mux_2_cp2 : PORT
+Deleted unsupported param "position" from component mux_2_cp3 : PORT
+Deleted unsupported param "position" from component mux_2_cp4 : PORT
+Pulling Dimensions of Components
+Pulling Terminals of Components
+Remap PORT mux_1_cp1.4 → 1
+Remap PORT mux_1_cp2.2 → 1
+Remap PORT mux_1_cp3.4 → 1
+Remap PORT mux_1_cp4.2 → 1
+Remap PORT mux_2_cp1.4 → 1
+Remap PORT mux_2_cp2.2 → 1
+Remap PORT mux_2_cp3.4 → 1
+Remap PORT mux_2_cp4.2 → 1
+output: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork
+output: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork/test_device_v3_2MUX_fork_fromLFR_topology.dot
+/home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork/test_device_v3_2MUX_fork/variant_0
+[lfr-netlist-validate] test_device_v3_2MUX_fork.lfr: OK (FLOW 8/8, CONTROL 8/0)
+[lfr-netlist-validate] test_device_v3_2MUX_fork.lfr: OK (FLOW 8/8, CONTROL 8/0)
+output dir: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork
+Running File: Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork/test_device_v3_2MUX_fork_fromLFR.json
+Reversed 1 connection(s) with opposite-port direction conflicts: channel_1.
+Finish loading test case: test_device_v3_2MUX_fork_fromLFR_2380213_a0850946
+1/9, Finish initial placement, time spent: 1.5735626220703125e-05 s
+[0, 1400, 1400, 'via_1', 0] [[700.0, 700.0]]
+[1, 15000, 19200, 'mux_1', 0] [[7500.0, 0.0], [13500.0, 19200.0], [9500.0, 19200.0], [5500.0, 19200.0], [1500.0, 19200.0], [0.0, 8600.0], [15000.0, 10600.0], [0.0, 15200.0], [15000.0, 17200.0]]
+[2, 15000, 19200, 'mux_2', 0] [[7500.0, 0.0], [13500.0, 19200.0], [9500.0, 19200.0], [5500.0, 19200.0], [1500.0, 19200.0], [0.0, 8600.0], [15000.0, 10600.0], [0.0, 15200.0], [15000.0, 17200.0]]
+[3, 2000, 2000, 'port_1', 0] [[1000.0, 1000.0]]
+[4, 2000, 2000, 'port_2', 0] [[1000.0, 1000.0]]
+[5, 2000, 2000, 'port_3', 0] [[1000.0, 1000.0]]
+[6, 2000, 2000, 'port_4', 0] [[1000.0, 1000.0]]
+[7, 2000, 2000, 'port_5', 0] [[1000.0, 1000.0]]
+[8, 2000, 2000, 'port_6', 0] [[1000.0, 1000.0]]
+[9, 2000, 2000, 'port_7', 0] [[1000.0, 1000.0]]
+[10, 2000, 2000, 'port_8', 0] [[1000.0, 1000.0]]
+2/9, Finish initial placement with rotation, time spent: 9.942054748535156e-05 s
+3/9, Finish symmetricalization, time spent: 1.0967254638671875e-05 s
+4/9, Finish routing, time spent: 0.00020313262939453125 s
+****************************************************
+New valid order that can lead to planar graph found:
+[[0, 1, 2, 3], [0, 1], [0], [0, 1, 2, 3]]
+****************************************************
+--Finish applying new order
+--Finish mirroring related components
+5/9, Finish initialization of new orders, time spent: 0.001276254653930664 s
+6/9, Finish shortening wirelength, time spent: 6.008148193359375e-05 s
+Skip stage7 LP according to user's need
+8/9, Finish routing, time spent: 0.00023031234741210938 s
+9/9, Finish compaction and connecting ports, time spent: 0.07285690307617188 s
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< All P&R Done >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Total Timeusage: 0.0747528076171875 s
+Reordering Timeusage: 0.001276254653930664 s
+LP-based Optimization Timeusage: 0 s
+P&R for the new orders: 0.07442355155944824 s
+Done. Combined PR JSON: /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork/test_device_v3_2MUX_fork_fromLFR_PR.json
+Completed PRalgorithm (TREE-PLACE) place-and-route.
+Wrote pure PR (polish off): /home/cidar-ron/Downloads/Neptune_2026/Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork/test_device_v3_2MUX_fork_fromLFR_PR.json
+✓ LFR synthesis + pure PR under ./Microfluidics-Benchmarks/Results/Quick_Examples/test_device_v3_2MUX_fork
+-----------------------
+Summary: total=2 ok=2 fail=0
+Results under ./Microfluidics-Benchmarks/Results/Quick_Examples
+Log:     ./Microfluidics-Benchmarks/Results/Quick_Examples/run_all_Quick_Examples_20261016_001824.log

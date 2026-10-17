@@ -14,12 +14,12 @@
                 "rotation": 0.0,
                 "width": 1600.0,
                 "length": 800.0,
-                "height": 250.0,
                 "spacing": 2000.0,
                 "flowChannelWidth": 600.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "valveWidthX": 1600.0,
+                "depth": 250.0,
                 "position": [
                     -1,
                     -1
@@ -71,7 +71,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -99,7 +99,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -127,7 +127,7 @@
             "params": {
                 "portRadius": 1000,
                 "componentSpacing": 2000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -155,7 +155,7 @@
             "params": {
                 "portRadius": 1000,
                 "componentSpacing": 2000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -183,7 +183,7 @@
             "params": {
                 "portRadius": 1000,
                 "componentSpacing": 2000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -206,15 +206,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
+                    "component": "pump_1",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
             "source": {
-                "component": "pump_1",
-                "port": "2"
+                "component": "port_1",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -259,15 +259,15 @@
         {
             "sinks": [
                 {
-                    "component": "pump_1",
+                    "component": "port_2",
                     "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "pump_1",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,

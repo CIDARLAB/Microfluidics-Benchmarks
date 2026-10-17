@@ -17,11 +17,11 @@ DEVICE test_device_v1_MUX_4to1
 
 LAYER FLOW 
 
-PORT port_1 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT port_2 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT port_3 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT port_4 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT port_5 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
+PORT port_1 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT port_2 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT port_3 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT port_4 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT port_5 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
 
 
 
@@ -36,15 +36,15 @@ END LAYER
 
 LAYER CONTROL 
 
-PORT Cport_0 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT Cport_1 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT Cport_2 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
-PORT Cport_3 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
+PORT Cport_0 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT Cport_1 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT Cport_2 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
+PORT Cport_3 componentSpacing=2000.0 portRadius=1000.0 depth=1100.0 ;
 
-VALVE3D valve_0 on channel_4 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_1 on channel_3 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_2 on channel_1 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_3 on channel_2 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_0 on channel_4 componentSpacing=1000.0 valveRadius=1200 gap=600 depth=250 rotation=0.0 ;
+VALVE3D valve_1 on channel_2 componentSpacing=1000.0 valveRadius=1200 gap=600 depth=250 rotation=0.0 ;
+VALVE3D valve_2 on channel_1 componentSpacing=1000.0 valveRadius=1200 gap=600 depth=250 rotation=0.0 ;
+VALVE3D valve_3 on channel_3 componentSpacing=1000.0 valveRadius=1200 gap=600 depth=250 rotation=0.0 ;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 RoundedChannel=1 channelWidth=600 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 width=600  ;
 CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 RoundedChannel=1 channelWidth=600 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 width=600  ;

@@ -11,7 +11,6 @@
             "params": {
                 "length": 8000.0,
                 "width": 6000.0,
-                "height": 250.0,
                 "componentSpacing": 2000.0,
                 "cornerRadius": 200.0,
                 "rotation": 0.0,
@@ -21,6 +20,7 @@
                     -1,
                     -1
                 ],
+                "depth": 250.0,
                 "ID": "diycomponent_1"
             },
             "ports": [
@@ -62,7 +62,6 @@
             "params": {
                 "length": 8000.0,
                 "width": 6000.0,
-                "height": 250.0,
                 "componentSpacing": 2000.0,
                 "cornerRadius": 200.0,
                 "rotation": 0.0,
@@ -72,6 +71,7 @@
                     -1,
                     -1
                 ],
+                "depth": 250.0,
                 "ID": "diycomponent_2"
             },
             "ports": [
@@ -112,8 +112,8 @@
             ],
             "params": {
                 "componentSpacing": 1000.0,
-                "height": 100.0,
                 "radius": 0.0,
+                "depth": 100.0,
                 "position": [
                     -1,
                     -1
@@ -123,26 +123,8 @@
             "ports": [
                 {
                     "x": 1.0,
-                    "y": 0.0,
+                    "y": 1.0,
                     "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 2.0,
-                    "y": 1.0,
-                    "label": "2",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 1.0,
-                    "y": 2.0,
-                    "label": "3",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 0.0,
-                    "y": 1.0,
-                    "label": "4",
                     "layer": "FLOW"
                 }
             ],
@@ -163,11 +145,11 @@
                 "numberOfBends": 1.0,
                 "rotation": 0.0,
                 "bendLength": 2000.0,
-                "height": 250.0,
                 "mirrorByX": 0.0,
                 "mirrorByY": 0.0,
                 "edgeBend1": 300.0,
                 "edgeBend2": 300.0,
+                "depth": 250.0,
                 "position": [
                     -1,
                     -1
@@ -201,7 +183,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -229,7 +211,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -257,7 +239,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -285,7 +267,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -313,7 +295,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -601,15 +583,15 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
-                    "port": "2"
+                    "component": "node_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "node_1",
-                "port": "1"
+                "component": "mixer_1",
+                "port": "2"
             },
             "params": {
                 "minChannelLength": 1000.0,
@@ -654,14 +636,14 @@
         {
             "sinks": [
                 {
-                    "component": "port_2",
+                    "component": "node_1",
                     "port": "1"
                 }
             ],
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "node_1",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {

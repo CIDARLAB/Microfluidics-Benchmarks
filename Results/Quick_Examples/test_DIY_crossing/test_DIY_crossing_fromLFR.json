@@ -16,7 +16,7 @@
                 "componentSpacing": 2000.0,
                 "length": 10000.0,
                 "width": 10000.0,
-                "height": 2000.0,
+                "depth": 2000.0,
                 "cornerRadius": 200.0,
                 "rotation": 0.0,
                 "mirrorByX": 0.0,
@@ -62,7 +62,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -90,7 +90,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -118,7 +118,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -146,7 +146,7 @@
             "params": {
                 "componentSpacing": 2000.0,
                 "portRadius": 1000.0,
-                "height": 1100.0,
+                "depth": 1100.0,
                 "position": [
                     -1,
                     -1
@@ -177,7 +177,7 @@
             "id": "channel_1",
             "source": {
                 "component": "diycomponent_1",
-                "port": "4"
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -222,15 +222,15 @@
         {
             "sinks": [
                 {
-                    "component": "diycomponent_1",
-                    "port": "3"
+                    "component": "port_2",
+                    "port": "1"
                 }
             ],
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "diycomponent_1",
+                "port": "4"
             },
             "params": {
                 "crossSection": 1,
@@ -276,7 +276,7 @@
             "sinks": [
                 {
                     "component": "diycomponent_1",
-                    "port": "1"
+                    "port": "3"
                 }
             ],
             "name": "channel_3",
@@ -328,15 +328,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_4",
+                    "component": "diycomponent_1",
                     "port": "1"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "diycomponent_1",
-                "port": "2"
+                "component": "port_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
