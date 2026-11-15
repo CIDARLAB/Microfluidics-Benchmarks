@@ -211,107 +211,12 @@
         {
             "sinks": [
                 {
-                    "component": "port_1",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_1",
-            "id": "channel_1",
-            "source": {
-                "component": "pump_1",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    12900.0,
-                    13600.0
-                ],
-                "end": [
-                    12900.0,
-                    6000.0
-                ],
-                "wayPoints": [
-                    [
-                        12900.0,
-                        13600.0
-                    ],
-                    [
-                        12900.0,
-                        11300.0
-                    ],
-                    [
-                        12900.0,
-                        6000.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            12900.0,
-                            13600.0
-                        ],
-                        [
-                            12900.0,
-                            11300.0
-                        ]
-                    ],
-                    [
-                        [
-                            12900.0,
-                            11300.0
-                        ],
-                        [
-                            12900.0,
-                            6000.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_1"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "pump_1",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "port_1",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            12900.0,
-                            13600.0
-                        ],
-                        [
-                            12900.0,
-                            11300.0
-                        ],
-                        [
-                            12900.0,
-                            6000.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
                     "component": "pump_1",
                     "port": "2"
                 }
             ],
-            "name": "channel_2",
-            "id": "channel_2",
+            "name": "channel_1",
+            "id": "channel_1",
             "source": {
                 "component": "port_2",
                 "port": "1"
@@ -367,7 +272,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_2"
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [
@@ -392,6 +297,101 @@
                         [
                             12900.0,
                             18400.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_2",
+            "id": "channel_2",
+            "source": {
+                "component": "pump_1",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    12900.0,
+                    13600.0
+                ],
+                "end": [
+                    12900.0,
+                    6000.0
+                ],
+                "wayPoints": [
+                    [
+                        12900.0,
+                        13600.0
+                    ],
+                    [
+                        12900.0,
+                        11300.0
+                    ],
+                    [
+                        12900.0,
+                        6000.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            12900.0,
+                            13600.0
+                        ],
+                        [
+                            12900.0,
+                            11300.0
+                        ]
+                    ],
+                    [
+                        [
+                            12900.0,
+                            11300.0
+                        ],
+                        [
+                            12900.0,
+                            6000.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_2"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "pump_1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            12900.0,
+                            13600.0
+                        ],
+                        [
+                            12900.0,
+                            11300.0
+                        ],
+                        [
+                            12900.0,
+                            6000.0
                         ]
                     ]
                 }

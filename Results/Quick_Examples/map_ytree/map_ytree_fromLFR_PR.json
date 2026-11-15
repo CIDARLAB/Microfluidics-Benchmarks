@@ -73,8 +73,8 @@
                 "portRadius": 1000.0,
                 "depth": 1100.0,
                 "position": [
-                    12000.0,
-                    23200.0
+                    15000.0,
+                    6000.0
                 ],
                 "ID": "port_1",
                 "rotation": 0,
@@ -103,7 +103,7 @@
                 "portRadius": 1000.0,
                 "depth": 1100.0,
                 "position": [
-                    18000.0,
+                    6000.0,
                     23200.0
                 ],
                 "ID": "port_2",
@@ -133,7 +133,7 @@
                 "portRadius": 1000.0,
                 "depth": 1100.0,
                 "position": [
-                    6000.0,
+                    12000.0,
                     23200.0
                 ],
                 "ID": "port_3",
@@ -163,8 +163,8 @@
                 "portRadius": 1000.0,
                 "depth": 1100.0,
                 "position": [
-                    15000.0,
-                    6000.0
+                    18000.0,
+                    23200.0
                 ],
                 "ID": "port_4",
                 "rotation": 0,
@@ -216,297 +216,12 @@
         {
             "sinks": [
                 {
-                    "component": "ytree_1",
-                    "port": "3"
+                    "component": "port_1",
+                    "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
-            "source": {
-                "component": "port_1",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    12000.0,
-                    23200.0
-                ],
-                "end": [
-                    12000.0,
-                    18900.0
-                ],
-                "wayPoints": [
-                    [
-                        12000.0,
-                        23200.0
-                    ],
-                    [
-                        12000.0,
-                        20200.0
-                    ],
-                    [
-                        12000.0,
-                        18900.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            12000.0,
-                            23200.0
-                        ],
-                        [
-                            12000.0,
-                            20200.0
-                        ]
-                    ],
-                    [
-                        [
-                            12000.0,
-                            20200.0
-                        ],
-                        [
-                            12000.0,
-                            18900.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_1"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_1",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "ytree_1",
-                        "port": "3"
-                    },
-                    "wayPoints": [
-                        [
-                            12000.0,
-                            23200.0
-                        ],
-                        [
-                            12000.0,
-                            20200.0
-                        ],
-                        [
-                            12000.0,
-                            18900.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "ytree_1",
-                    "port": "4"
-                }
-            ],
-            "name": "channel_2",
-            "id": "channel_2",
-            "source": {
-                "component": "port_2",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    18000.0,
-                    23200.0
-                ],
-                "end": [
-                    18000.0,
-                    18900.0
-                ],
-                "wayPoints": [
-                    [
-                        18000.0,
-                        23200.0
-                    ],
-                    [
-                        18000.0,
-                        20200.0
-                    ],
-                    [
-                        18000.0,
-                        18900.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            18000.0,
-                            23200.0
-                        ],
-                        [
-                            18000.0,
-                            20200.0
-                        ]
-                    ],
-                    [
-                        [
-                            18000.0,
-                            20200.0
-                        ],
-                        [
-                            18000.0,
-                            18900.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_2"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_2",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "ytree_1",
-                        "port": "4"
-                    },
-                    "wayPoints": [
-                        [
-                            18000.0,
-                            23200.0
-                        ],
-                        [
-                            18000.0,
-                            20200.0
-                        ],
-                        [
-                            18000.0,
-                            18900.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "ytree_1",
-                    "port": "2"
-                }
-            ],
-            "name": "channel_3",
-            "id": "channel_3",
-            "source": {
-                "component": "port_3",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    6000.0,
-                    23200.0
-                ],
-                "end": [
-                    6000.0,
-                    18900.0
-                ],
-                "wayPoints": [
-                    [
-                        6000.0,
-                        23200.0
-                    ],
-                    [
-                        6000.0,
-                        20200.0
-                    ],
-                    [
-                        6000.0,
-                        18900.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            6000.0,
-                            23200.0
-                        ],
-                        [
-                            6000.0,
-                            20200.0
-                        ]
-                    ],
-                    [
-                        [
-                            6000.0,
-                            20200.0
-                        ],
-                        [
-                            6000.0,
-                            18900.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_3"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_3",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "ytree_1",
-                        "port": "2"
-                    },
-                    "wayPoints": [
-                        [
-                            6000.0,
-                            23200.0
-                        ],
-                        [
-                            6000.0,
-                            20200.0
-                        ],
-                        [
-                            6000.0,
-                            18900.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "port_4",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_4",
-            "id": "channel_4",
             "source": {
                 "component": "ytree_1",
                 "port": "1"
@@ -562,7 +277,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_4"
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [
@@ -572,7 +287,7 @@
                         "port": "1"
                     },
                     "sink": {
-                        "component": "port_4",
+                        "component": "port_1",
                         "port": "1"
                     },
                     "wayPoints": [
@@ -600,8 +315,8 @@
                     "port": "5"
                 }
             ],
-            "name": "channel_5",
-            "id": "channel_5",
+            "name": "channel_2",
+            "id": "channel_2",
             "source": {
                 "component": "port_5",
                 "port": "1"
@@ -657,7 +372,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_5"
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [
@@ -681,6 +396,291 @@
                         ],
                         [
                             24000.0,
+                            18900.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ytree_1",
+                    "port": "4"
+                }
+            ],
+            "name": "channel_3",
+            "id": "channel_3",
+            "source": {
+                "component": "port_4",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    18000.0,
+                    23200.0
+                ],
+                "end": [
+                    18000.0,
+                    18900.0
+                ],
+                "wayPoints": [
+                    [
+                        18000.0,
+                        23200.0
+                    ],
+                    [
+                        18000.0,
+                        20200.0
+                    ],
+                    [
+                        18000.0,
+                        18900.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            18000.0,
+                            23200.0
+                        ],
+                        [
+                            18000.0,
+                            20200.0
+                        ]
+                    ],
+                    [
+                        [
+                            18000.0,
+                            20200.0
+                        ],
+                        [
+                            18000.0,
+                            18900.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_3"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_4",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "ytree_1",
+                        "port": "4"
+                    },
+                    "wayPoints": [
+                        [
+                            18000.0,
+                            23200.0
+                        ],
+                        [
+                            18000.0,
+                            20200.0
+                        ],
+                        [
+                            18000.0,
+                            18900.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ytree_1",
+                    "port": "3"
+                }
+            ],
+            "name": "channel_4",
+            "id": "channel_4",
+            "source": {
+                "component": "port_3",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    12000.0,
+                    23200.0
+                ],
+                "end": [
+                    12000.0,
+                    18900.0
+                ],
+                "wayPoints": [
+                    [
+                        12000.0,
+                        23200.0
+                    ],
+                    [
+                        12000.0,
+                        20200.0
+                    ],
+                    [
+                        12000.0,
+                        18900.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            12000.0,
+                            23200.0
+                        ],
+                        [
+                            12000.0,
+                            20200.0
+                        ]
+                    ],
+                    [
+                        [
+                            12000.0,
+                            20200.0
+                        ],
+                        [
+                            12000.0,
+                            18900.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_4"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_3",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "ytree_1",
+                        "port": "3"
+                    },
+                    "wayPoints": [
+                        [
+                            12000.0,
+                            23200.0
+                        ],
+                        [
+                            12000.0,
+                            20200.0
+                        ],
+                        [
+                            12000.0,
+                            18900.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "ytree_1",
+                    "port": "2"
+                }
+            ],
+            "name": "channel_5",
+            "id": "channel_5",
+            "source": {
+                "component": "port_2",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    6000.0,
+                    23200.0
+                ],
+                "end": [
+                    6000.0,
+                    18900.0
+                ],
+                "wayPoints": [
+                    [
+                        6000.0,
+                        23200.0
+                    ],
+                    [
+                        6000.0,
+                        20200.0
+                    ],
+                    [
+                        6000.0,
+                        18900.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            6000.0,
+                            23200.0
+                        ],
+                        [
+                            6000.0,
+                            20200.0
+                        ]
+                    ],
+                    [
+                        [
+                            6000.0,
+                            20200.0
+                        ],
+                        [
+                            6000.0,
+                            18900.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_5"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_2",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "ytree_1",
+                        "port": "2"
+                    },
+                    "wayPoints": [
+                        [
+                            6000.0,
+                            23200.0
+                        ],
+                        [
+                            6000.0,
+                            20200.0
+                        ],
+                        [
+                            6000.0,
                             18900.0
                         ]
                     ]
