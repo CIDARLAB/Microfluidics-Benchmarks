@@ -184,6 +184,48 @@
             "y-span": 2000
         },
         {
+            "name": "mixer_4",
+            "id": "mixer_4",
+            "entity": "MIXER",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 2000.0,
+                "rotation": 0.0,
+                "channelWidth": 600.0,
+                "bendSpacing": 1400.0,
+                "numberOfBends": 1.0,
+                "bendLength": 2000.0,
+                "mirrorByX": 0.0,
+                "mirrorByY": 0.0,
+                "depth": 250.0,
+                "edgeBend1": 300.0,
+                "edgeBend2": 300.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "mixer_4"
+            },
+            "ports": [
+                {
+                    "x": 1600.0,
+                    "y": 300.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                },
+                {
+                    "x": 1600.0,
+                    "y": 4300.0,
+                    "label": "2",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 3200,
+            "y-span": 4600
+        },
+        {
             "name": "port_3",
             "id": "port_3",
             "entity": "PORT",
@@ -238,48 +280,6 @@
             ],
             "x-span": 2000,
             "y-span": 2000
-        },
-        {
-            "name": "mixer_4",
-            "id": "mixer_4",
-            "entity": "MIXER",
-            "layers": [
-                "0"
-            ],
-            "params": {
-                "componentSpacing": 2000.0,
-                "rotation": 0.0,
-                "channelWidth": 600.0,
-                "bendSpacing": 1400.0,
-                "numberOfBends": 1.0,
-                "bendLength": 2000.0,
-                "mirrorByX": 0.0,
-                "mirrorByY": 0.0,
-                "depth": 250.0,
-                "edgeBend1": 300.0,
-                "edgeBend2": 300.0,
-                "position": [
-                    -1,
-                    -1
-                ],
-                "ID": "mixer_4"
-            },
-            "ports": [
-                {
-                    "x": 1600.0,
-                    "y": 300.0,
-                    "label": "1",
-                    "layer": "FLOW"
-                },
-                {
-                    "x": 1600.0,
-                    "y": 4300.0,
-                    "label": "2",
-                    "layer": "FLOW"
-                }
-            ],
-            "x-span": 3200,
-            "y-span": 4600
         },
         {
             "name": "port_5",
@@ -402,7 +402,7 @@
             "name": "channel_2",
             "id": "channel_2",
             "source": {
-                "component": "port_4",
+                "component": "port_1",
                 "port": "1"
             },
             "params": {
@@ -455,7 +455,7 @@
             "name": "channel_3",
             "id": "channel_3",
             "source": {
-                "component": "port_3",
+                "component": "port_2",
                 "port": "1"
             },
             "params": {
@@ -508,7 +508,7 @@
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "mixer_4",
+                "component": "mixer_3",
                 "port": "2"
             },
             "params": {
@@ -561,8 +561,8 @@
             "name": "channel_5",
             "id": "channel_5",
             "source": {
-                "component": "port_2",
-                "port": "1"
+                "component": "mixer_2",
+                "port": "2"
             },
             "params": {
                 "crossSection": 1,
@@ -607,14 +607,14 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_4",
+                    "component": "mixer_3",
                     "port": "1"
                 }
             ],
             "name": "channel_6",
             "id": "channel_6",
             "source": {
-                "component": "port_1",
+                "component": "port_4",
                 "port": "1"
             },
             "params": {
@@ -667,8 +667,8 @@
             "name": "channel_7",
             "id": "channel_7",
             "source": {
-                "component": "mixer_2",
-                "port": "2"
+                "component": "port_3",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -713,7 +713,7 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_3",
+                    "component": "mixer_4",
                     "port": "1"
                 }
             ],
@@ -773,7 +773,7 @@
             "name": "channel_9",
             "id": "channel_9",
             "source": {
-                "component": "mixer_3",
+                "component": "mixer_4",
                 "port": "2"
             },
             "params": {

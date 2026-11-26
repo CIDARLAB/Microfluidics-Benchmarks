@@ -38,6 +38,11 @@ PORT port_16 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
 PORT port_17 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
 MIXER mixer_16 componentSpacing=1000.0 channelWidth=600.0 bendSpacing=1400.0 numberOfBends=1.0 rotation=0.0 bendLength=2000.0 height=250.0 mirrorByX=0.0 mirrorByY=0.0 edgeBend1=300.0 edgeBend2=300.0 ;
 PORT port_18 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
+NODE node_valve_1 componentSpacing=0.0 height=100.0 radius=0.0 ;
+NODE node_valve_2 componentSpacing=0.0 height=100.0 radius=0.0 ;
+NODE node_valve_3 componentSpacing=0.0 height=100.0 radius=0.0 ;
+NODE node_valve_4 componentSpacing=0.0 height=100.0 radius=0.0 ;
+NODE node_valve_5 componentSpacing=0.0 height=100.0 radius=0.0 ;
 
 
 
@@ -69,7 +74,12 @@ CHANNEL channel_25 from port_9 1 to mixer_10 1 RoundedChannel=1 length=1000.0 mi
 CHANNEL channel_26 from port_10 1 to mixer_10 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
 CHANNEL channel_27 from port_11 1 to mixer_11 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
 CHANNEL channel_28 from port_13 1 to mixer_13 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
-CHANNEL channel_29 from mixer_15 2 to port_15 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_29 from mixer_15 2 to node_valve_1 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_34 from node_valve_1 1 to node_valve_2 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_35 from node_valve_2 1 to node_valve_3 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_36 from node_valve_3 1 to node_valve_4 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_37 from node_valve_4 1 to node_valve_5 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
+CHANNEL channel_38 from node_valve_5 1 to port_15 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
 CHANNEL channel_30 from port_16 1 to mixer_15 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
 CHANNEL channel_31 from mixer_7 2 to mixer_6 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
 CHANNEL channel_32 from port_2 1 to mixer_6 1 RoundedChannel=1 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 channelWidth=600 width=600  ;
@@ -89,11 +99,11 @@ PORT Cport_4 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
 PORT Cport_5 componentSpacing=2000.0 portRadius=1000.0 height=1100.0 ;
 
 VALVE3D valve_0 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_1 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_2 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_3 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_4 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
-VALVE3D valve_5 on channel_29 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_1 on channel_34 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_2 on channel_35 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_3 on channel_36 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_4 on channel_37 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
+VALVE3D valve_5 on channel_38 componentSpacing=1000.0 valveRadius=1200 gap=600 width=2400 length=2400 height=250 rotation=0.0 ;
 
 CHANNEL Ctrlchannel_0 from Cport_0 1 to valve_0 1 RoundedChannel=1 channelWidth=600 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 width=600  ;
 CHANNEL Ctrlchannel_1 from Cport_1 1 to valve_1 1 RoundedChannel=1 channelWidth=600 length=1000.0 minChannelLength=1000.0 connectionSpacing=1000 width=600  ;

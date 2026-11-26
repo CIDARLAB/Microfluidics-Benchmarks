@@ -1178,6 +1178,146 @@
             "y-span": 2000
         },
         {
+            "name": "node_valve_1",
+            "id": "node_valve_1",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_1"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
+            "name": "node_valve_2",
+            "id": "node_valve_2",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_2"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
+            "name": "node_valve_3",
+            "id": "node_valve_3",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_3"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
+            "name": "node_valve_4",
+            "id": "node_valve_4",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_4"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
+            "name": "node_valve_5",
+            "id": "node_valve_5",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_5"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
             "name": "Cport_0",
             "id": "Cport_0",
             "entity": "PORT",
@@ -3122,7 +3262,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_15",
+                    "component": "node_valve_1",
                     "port": "1"
                 }
             ],
@@ -3167,6 +3307,271 @@
                     ]
                 ],
                 "ID": "channel_29"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "node_valve_2",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_34",
+            "id": "channel_34",
+            "source": {
+                "component": "node_valve_1",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_34"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "node_valve_3",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_35",
+            "id": "channel_35",
+            "source": {
+                "component": "node_valve_2",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_35"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "node_valve_4",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_36",
+            "id": "channel_36",
+            "source": {
+                "component": "node_valve_3",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_36"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "node_valve_5",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_37",
+            "id": "channel_37",
+            "source": {
+                "component": "node_valve_4",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_37"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_15",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_38",
+            "id": "channel_38",
+            "source": {
+                "component": "node_valve_5",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_38"
             },
             "layer": "0",
             "paths": [],
@@ -3736,30 +4141,47 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_29",
+            "connectionid": "channel_34",
             "type": "NORMALLY_OPEN"
         },
         {
             "componentid": "valve_2",
-            "connectionid": "channel_29",
+            "connectionid": "channel_35",
             "type": "NORMALLY_OPEN"
         },
         {
             "componentid": "valve_3",
-            "connectionid": "channel_29",
+            "connectionid": "channel_36",
             "type": "NORMALLY_OPEN"
         },
         {
             "componentid": "valve_4",
-            "connectionid": "channel_29",
+            "connectionid": "channel_37",
             "type": "NORMALLY_OPEN"
         },
         {
             "componentid": "valve_5",
-            "connectionid": "channel_29",
+            "connectionid": "channel_38",
             "type": "NORMALLY_OPEN"
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "node_valve_1",
+                "mixer_15",
+                "node_valve_2",
+                "node_valve_3",
+                "node_valve_4",
+                "node_valve_5",
+                "port_15"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }

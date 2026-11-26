@@ -198,6 +198,34 @@
             "y-span": 2000
         },
         {
+            "name": "node_valve_1",
+            "id": "node_valve_1",
+            "entity": "NODE",
+            "layers": [
+                "0"
+            ],
+            "params": {
+                "componentSpacing": 0.0,
+                "radius": 0.0,
+                "depth": 100.0,
+                "position": [
+                    -1,
+                    -1
+                ],
+                "ID": "node_valve_1"
+            },
+            "ports": [
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "label": "1",
+                    "layer": "FLOW"
+                }
+            ],
+            "x-span": 0,
+            "y-span": 0
+        },
+        {
             "name": "Cport_0",
             "id": "Cport_0",
             "entity": "PORT",
@@ -407,7 +435,7 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
+                    "component": "node_valve_1",
                     "port": "1"
                 }
             ],
@@ -452,6 +480,59 @@
                     ]
                 ],
                 "ID": "channel_2"
+            },
+            "layer": "0",
+            "paths": [],
+            "entity": "CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "port_3",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_6",
+            "id": "channel_6",
+            "source": {
+                "component": "node_valve_1",
+                "port": "1"
+            },
+            "params": {
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "crossSection": 1,
+                "length": 1000.0,
+                "start": [
+                    "Point",
+                    -1,
+                    -1
+                ],
+                "end": [
+                    -1,
+                    -1
+                ],
+                "wayPoints": [
+                    [
+                        -1,
+                        -1
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            -1,
+                            -1
+                        ],
+                        [
+                            -1,
+                            -1
+                        ]
+                    ]
+                ],
+                "ID": "channel_6"
             },
             "layer": "0",
             "paths": [],
@@ -756,10 +837,23 @@
         },
         {
             "componentid": "valve_1",
-            "connectionid": "channel_2",
+            "connectionid": "channel_6",
             "type": "NORMALLY_OPEN"
         }
     ],
     "isPnR": false,
-    "layoutConstraints": []
+    "layoutConstraints": [
+        {
+            "type": "ORTHOGONAL_CONSTRAINT",
+            "operation_type": "ALIGNMENT_OPERATION",
+            "components": [
+                "node_valve_1",
+                "mixer_1",
+                "port_3"
+            ],
+            "connections": [],
+            "params": {},
+            "relationships": {}
+        }
+    ]
 }
