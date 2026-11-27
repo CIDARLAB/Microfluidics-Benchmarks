@@ -181,12 +181,107 @@
         {
             "sinks": [
                 {
-                    "component": "nozzle_droplet_generator_1",
+                    "component": "port_3",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
+            "source": {
+                "component": "nozzle_droplet_generator_1",
+                "port": "4"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    13300.0,
+                    13600.0
+                ],
+                "end": [
+                    13300.0,
+                    6000.0
+                ],
+                "wayPoints": [
+                    [
+                        13300.0,
+                        13600.0
+                    ],
+                    [
+                        13300.0,
+                        11300.0
+                    ],
+                    [
+                        13300.0,
+                        6000.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            13300.0,
+                            13600.0
+                        ],
+                        [
+                            13300.0,
+                            11300.0
+                        ]
+                    ],
+                    [
+                        [
+                            13300.0,
+                            11300.0
+                        ],
+                        [
+                            13300.0,
+                            6000.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_1"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "nozzle_droplet_generator_1",
+                        "port": "4"
+                    },
+                    "sink": {
+                        "component": "port_3",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            13300.0,
+                            13600.0
+                        ],
+                        [
+                            13300.0,
+                            11300.0
+                        ],
+                        [
+                            13300.0,
+                            6000.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_2",
+            "id": "channel_2",
             "source": {
                 "component": "port_2",
                 "port": "1"
@@ -242,7 +337,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_1"
+                "ID": "channel_2"
             },
             "layer": "0",
             "paths": [
@@ -267,101 +362,6 @@
                         [
                             13600.0,
                             14000.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "nozzle_droplet_generator_1",
-                    "port": "2"
-                }
-            ],
-            "name": "channel_2",
-            "id": "channel_2",
-            "source": {
-                "component": "port_4",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    13300.0,
-                    23200.0
-                ],
-                "end": [
-                    13300.0,
-                    15400.0
-                ],
-                "wayPoints": [
-                    [
-                        13300.0,
-                        23200.0
-                    ],
-                    [
-                        13300.0,
-                        17700.0
-                    ],
-                    [
-                        13300.0,
-                        15400.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            13300.0,
-                            23200.0
-                        ],
-                        [
-                            13300.0,
-                            17700.0
-                        ]
-                    ],
-                    [
-                        [
-                            13300.0,
-                            17700.0
-                        ],
-                        [
-                            13300.0,
-                            15400.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_2"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_4",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "nozzle_droplet_generator_1",
-                        "port": "2"
-                    },
-                    "wayPoints": [
-                        [
-                            13300.0,
-                            23200.0
-                        ],
-                        [
-                            13300.0,
-                            17700.0
-                        ],
-                        [
-                            13300.0,
-                            15400.0
                         ]
                     ]
                 }
@@ -466,15 +466,15 @@
         {
             "sinks": [
                 {
-                    "component": "port_3",
-                    "port": "1"
+                    "component": "nozzle_droplet_generator_1",
+                    "port": "2"
                 }
             ],
             "name": "channel_4",
             "id": "channel_4",
             "source": {
-                "component": "nozzle_droplet_generator_1",
-                "port": "4"
+                "component": "port_4",
+                "port": "1"
             },
             "params": {
                 "crossSection": 1,
@@ -485,45 +485,45 @@
                 "width": 600,
                 "start": [
                     13300.0,
-                    13600.0
+                    23200.0
                 ],
                 "end": [
                     13300.0,
-                    6000.0
+                    15400.0
                 ],
                 "wayPoints": [
                     [
                         13300.0,
-                        13600.0
+                        23200.0
                     ],
                     [
                         13300.0,
-                        11300.0
+                        17700.0
                     ],
                     [
                         13300.0,
-                        6000.0
+                        15400.0
                     ]
                 ],
                 "segments": [
                     [
                         [
                             13300.0,
-                            13600.0
+                            23200.0
                         ],
                         [
                             13300.0,
-                            11300.0
+                            17700.0
                         ]
                     ],
                     [
                         [
                             13300.0,
-                            11300.0
+                            17700.0
                         ],
                         [
                             13300.0,
-                            6000.0
+                            15400.0
                         ]
                     ]
                 ],
@@ -533,25 +533,25 @@
             "paths": [
                 {
                     "source": {
-                        "component": "nozzle_droplet_generator_1",
-                        "port": "4"
+                        "component": "port_4",
+                        "port": "1"
                     },
                     "sink": {
-                        "component": "port_3",
-                        "port": "1"
+                        "component": "nozzle_droplet_generator_1",
+                        "port": "2"
                     },
                     "wayPoints": [
                         [
                             13300.0,
-                            13600.0
+                            23200.0
                         ],
                         [
                             13300.0,
-                            11300.0
+                            17700.0
                         ],
                         [
                             13300.0,
-                            6000.0
+                            15400.0
                         ]
                     ]
                 }

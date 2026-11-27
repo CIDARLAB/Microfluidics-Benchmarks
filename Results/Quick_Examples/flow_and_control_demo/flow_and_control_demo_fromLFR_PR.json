@@ -321,125 +321,12 @@
         {
             "sinks": [
                 {
-                    "component": "mixer_1",
+                    "component": "port_4",
                     "port": "1"
                 }
             ],
             "name": "channel_1",
             "id": "channel_1",
-            "source": {
-                "component": "port_1",
-                "port": "1"
-            },
-            "params": {
-                "crossSection": 1,
-                "length": 1000.0,
-                "minChannelLength": 1000.0,
-                "connectionSpacing": 1000,
-                "channelWidth": 600,
-                "width": 600,
-                "start": [
-                    12600.0,
-                    28100.0
-                ],
-                "end": [
-                    9300.0,
-                    22500.0
-                ],
-                "wayPoints": [
-                    [
-                        12600.0,
-                        28100.0
-                    ],
-                    [
-                        9300.0,
-                        28100.0
-                    ],
-                    [
-                        9300.0,
-                        25100.0
-                    ],
-                    [
-                        9300.0,
-                        22500.0
-                    ]
-                ],
-                "segments": [
-                    [
-                        [
-                            12600.0,
-                            28100.0
-                        ],
-                        [
-                            9300.0,
-                            28100.0
-                        ]
-                    ],
-                    [
-                        [
-                            9300.0,
-                            28100.0
-                        ],
-                        [
-                            9300.0,
-                            25100.0
-                        ]
-                    ],
-                    [
-                        [
-                            9300.0,
-                            25100.0
-                        ],
-                        [
-                            9300.0,
-                            22500.0
-                        ]
-                    ]
-                ],
-                "ID": "channel_1"
-            },
-            "layer": "0",
-            "paths": [
-                {
-                    "source": {
-                        "component": "port_1",
-                        "port": "1"
-                    },
-                    "sink": {
-                        "component": "mixer_1",
-                        "port": "1"
-                    },
-                    "wayPoints": [
-                        [
-                            12600.0,
-                            28100.0
-                        ],
-                        [
-                            9300.0,
-                            28100.0
-                        ],
-                        [
-                            9300.0,
-                            25100.0
-                        ],
-                        [
-                            9300.0,
-                            22500.0
-                        ]
-                    ]
-                }
-            ],
-            "entity": "ROUNDED CHANNEL"
-        },
-        {
-            "sinks": [
-                {
-                    "component": "port_4",
-                    "port": "1"
-                }
-            ],
-            "name": "channel_2",
-            "id": "channel_2",
             "source": {
                 "component": "mixer_1",
                 "port": "2"
@@ -523,7 +410,7 @@
                         ]
                     ]
                 ],
-                "ID": "channel_2"
+                "ID": "channel_1"
             },
             "layer": "0",
             "paths": [
@@ -556,6 +443,119 @@
                         [
                             11020.0,
                             6000.0
+                        ]
+                    ]
+                }
+            ],
+            "entity": "ROUNDED CHANNEL"
+        },
+        {
+            "sinks": [
+                {
+                    "component": "mixer_1",
+                    "port": "1"
+                }
+            ],
+            "name": "channel_2",
+            "id": "channel_2",
+            "source": {
+                "component": "port_1",
+                "port": "1"
+            },
+            "params": {
+                "crossSection": 1,
+                "length": 1000.0,
+                "minChannelLength": 1000.0,
+                "connectionSpacing": 1000,
+                "channelWidth": 600,
+                "width": 600,
+                "start": [
+                    12600.0,
+                    28100.0
+                ],
+                "end": [
+                    9300.0,
+                    22500.0
+                ],
+                "wayPoints": [
+                    [
+                        12600.0,
+                        28100.0
+                    ],
+                    [
+                        9300.0,
+                        28100.0
+                    ],
+                    [
+                        9300.0,
+                        25100.0
+                    ],
+                    [
+                        9300.0,
+                        22500.0
+                    ]
+                ],
+                "segments": [
+                    [
+                        [
+                            12600.0,
+                            28100.0
+                        ],
+                        [
+                            9300.0,
+                            28100.0
+                        ]
+                    ],
+                    [
+                        [
+                            9300.0,
+                            28100.0
+                        ],
+                        [
+                            9300.0,
+                            25100.0
+                        ]
+                    ],
+                    [
+                        [
+                            9300.0,
+                            25100.0
+                        ],
+                        [
+                            9300.0,
+                            22500.0
+                        ]
+                    ]
+                ],
+                "ID": "channel_2"
+            },
+            "layer": "0",
+            "paths": [
+                {
+                    "source": {
+                        "component": "port_1",
+                        "port": "1"
+                    },
+                    "sink": {
+                        "component": "mixer_1",
+                        "port": "1"
+                    },
+                    "wayPoints": [
+                        [
+                            12600.0,
+                            28100.0
+                        ],
+                        [
+                            9300.0,
+                            28100.0
+                        ],
+                        [
+                            9300.0,
+                            25100.0
+                        ],
+                        [
+                            9300.0,
+                            22500.0
                         ]
                     ]
                 }
@@ -1094,7 +1094,7 @@
     "valves": [
         {
             "componentid": "valve_0",
-            "connectionid": "channel_2",
+            "connectionid": "channel_1",
             "type": "NORMALLY_OPEN",
             "controlportid": "Cport_0"
         },
